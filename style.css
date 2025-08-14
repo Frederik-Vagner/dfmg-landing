@@ -1,0 +1,80 @@
+/* Simple, fast CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero */
+.hero {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.btn {
+    padding: 12px 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: #007cba;
+    color: white;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: #007cba;
+    border: 2px solid #007cba;
+}
+
+/* Sections */
+section {
+    padding: 3rem 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
