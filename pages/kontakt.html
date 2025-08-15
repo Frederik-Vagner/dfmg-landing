@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt DFMG - All-In-One Facility Service</title>
+    <meta name="description" content="Kontakt DFMG for professionel facility service. Ring på +45 50 48 02 73 eller send os en besked.">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            padding-top: 100px; 
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        .section { 
+            padding: 4rem 0; 
+        }
+        .text-center { 
+            text-align: center; 
+        }
+        h1 { 
+            font-size: 3rem; 
+            font-weight: 300; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        h2 { 
+            font-size: 2.5rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        h3 { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        p { 
+            color: #666; 
+            margin-bottom: 1rem; 
+        }
+        .btn { 
+            padding: 15px 30px; 
+            margin: 10px; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            display: inline-block; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn.primary { 
+            background: #22c55e; 
+            color: white; 
+        }
+        .btn.primary:hover { 
+            background: #16a34a; 
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .btn { padding: 12px 24px; margin: 5px; }
+        }
+
+        /* Hero image section */
+        .hero-image {
+            position: relative;
+            height: 50vh;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 4rem;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .contact-overlay {
+            position: absolute;
+            left: 10%;
+            bottom: 20%;
+            background: #344767;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 350px;
+        }
+        .contact-overlay h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .contact-overlay p {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Form styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #22c55e;
+        }
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Career section */
+        .career-section {
+            background: #f8fafc;
+        }
+        .career-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .job-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .job-benefits li {
+            padding: 0.5rem 0;
+            color: #344767;
+        }
+        .job-benefits li::before {
+            content: '✓';
+            color: #22c55e;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        .job-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .job-btn {
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .job-btn.primary {
+            background: #22c55e;
+            color: white;
+        }
+        .job-btn.secondary {
+            background: white;
+            color: #344767;
+            border: 2px solid #344767;
+        }
+        .job-visual {
+            background: #344767;
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .job-visual h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .job-visual p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        @media (max-width: 768px) {
+            .contact-overlay {
+                position: static;
+                margin: 2rem 1rem 0;
+                max-width: none;
+            }
+            .career-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .job-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+    
+    <!-- Non-critical CSS deferred -->
+    <link rel="preload" href="../css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="section">
+            <div class="container text-center">
+                <h1>Kontakt DFMG</h1>
+                <p style="font-size: 1.2rem;">Klar til at transformere jeres facility management? Tag kontakt til os i dag</p>
+            </div>
+            
+            <!-- Hero Image with Contact Info -->
+            <div class="hero-image">
+                <!-- Placeholder for landscape image -->
+                <div style="background: #e2e8f0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
+                    Office Landscape Image
+                </div>
+                
+                <!-- Contact Info Overlay -->
+                <div class="contact-overlay">
+                    <h3>DFMG</h3>
+                    <p>+45 50 48 02 73</p>
+                    <p>INFO@DFMG.DK</p>
+                    <p>BORUPS ALLE 21</p>
+                    <p>2200 KØBENHAVN N</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-form">
+                    <div style="margin-bottom: 2rem;">
+                        <small style="color: #4285f4; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">KONTAKT</small>
+                        <h2>VI HJÆLPER GERNE!</h2>
+                    </div>
+                    
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Navn" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="E-mail" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Telefonnummer" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Din besked" class="form-textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary" style="width: 100%;">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Section -->
+        <section class="section career-section">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>Karriere</h2>
+                    <p style="font-size: 1.2rem;">Søger du job hos DFMG? Bliv en del af et professionelt facility service team</p>
+                </div>
+
+                <div class="career-content">
+                    <div class="job-info">
+                        <h3>Søger du job?</h3>
+                        <p>Hvis du er interesseret i et job hos DFMG, kan du klikke på linket nedenfor for at komme til oprettelsesformularen i vores karriereportal. Se også vores ledige stillinger.</p>
+                        
+                        <ul class="job-benefits">
+                            <li>Konkurrencedygtige løn- og ansættelsesvilkår</li>
+                            <li>Mulighed for faglig og personlig udvikling</li>
+                            <li>Moderne arbejdsplads og teknologi</li>
+                            <li>Stærkt fællesskab og teamwork</li>
+                            <li>Fleksible arbejdstider</li>
+                        </ul>
+
+                        <div class="job-buttons">
+                            <a href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="job-btn primary">
+                                Søg job spontant
+                            </a>
+                            <a href="#" class="job-btn secondary">
+                                Se ledige stillinger
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="job-visual">
+                        <h4>Bliv en del af DFMG</h4>
+                        <p>Arbejd med en etableret facility service virksomhed og bidrag til pålidelig service for danske erhverv</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- Component loader -->
+    <script src="../js/components.js" defer></script>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', data);
+            alert('Tak for din besked! Vi kontakter dig inden for 24 timer.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

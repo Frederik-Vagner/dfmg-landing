@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFMG Services - All-In-One Facility Service</title>
+    <meta name="description" content="DFMG tilbyder professionel rengøring, ejendomsservice, handyman services og meget mere. Se alle vores facility services.">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            padding-top: 100px; 
+            line-height: 1.6;
+            color: #344767;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        .section { 
+            padding: 4rem 0; 
+        }
+        h1 { 
+            font-size: 3rem; 
+            font-weight: 300; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        h2 { 
+            font-size: 2.5rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        h3 { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        .btn { 
+            padding: 12px 24px; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            display: inline-flex; 
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-size: 0.9rem;
+        }
+        .btn-primary { 
+            background: #22c55e; 
+            color: white; 
+        }
+        .btn-primary:hover { 
+            background: #16a34a; 
+        }
+        .btn-secondary {
+            background: white;
+            color: #344767;
+            border-color: #e2e8f0;
+        }
+
+        /* Hero Services Carousel */
+        .services-hero {
+            height: 100vh;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-column {
+            flex: 1;
+            position: relative;
+            cursor: pointer;
+            transition: flex 0.4s ease;
+            color: white;
+            display: flex;
+            align-items: end;
+            padding: 2rem;
+            overflow: hidden;
+        }
+        .service-column:hover:not(.expanded) {
+            flex: 1.2;
+        }
+        .service-column.expanded {
+            flex: 3;
+        }
+        .service-column.collapsed {
+            flex: 0.2;
+        }
+        .service-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 2;
+        }
+        .service-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            white-space: nowrap;
+        }
+        .service-column.expanded .service-title {
+            writing-mode: initial;
+            text-orientation: initial;
+            transform: none;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .service-description {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease 0.2s;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .service-column.expanded .service-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .service-features {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease 0.3s;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        .service-column.expanded .service-features {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .service-features li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .service-features i {
+            color: #22c55e;
+        }
+        .service-actions {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease 0.4s;
+            display: flex;
+            gap: 1rem;
+        }
+        .service-column.expanded .service-actions {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            background: #f8fafc;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #22c55e;
+            margin-bottom: 1rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .subtitle {
+            color: #22c55e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #22c55e;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 auto 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            text-align: center;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .cta-buttons .btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border-color: rgba(255,255,255,0.3);
+        }
+        .cta-buttons .btn:first-child {
+            background: white;
+            color: #22c55e;
+        }
+
+        @media (max-width: 768px) {
+            .services-hero {
+                flex-direction: column;
+                height: auto;
+            }
+            .service-column {
+                height: 200px;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .service-column.expanded {
+                height: 400px;
+            }
+            .service-title {
+                writing-mode: initial;
+                text-orientation: initial;
+                transform: none;
+                font-size: 1.3rem;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    
+    <!-- Non-critical CSS deferred -->
+    <link rel="preload" href="../../css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Services Hero Carousel -->
+    <section class="services-hero">
+        <div class="service-column" data-service="cleaning">
+            <div class="service-bg" style="background-image: url('../../images/placeholder-office.jpg');"></div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3 class="service-title">Professionel Rengøring</h3>
+                <div class="service-description">
+                    Kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.
+                </div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Miljøvenlige produkter</li>
+                    <li><i class="fas fa-check"></i> Certificerede medarbejdere</li>
+                    <li><i class="fas fa-check"></i> 24/7 support</li>
+                    <li><i class="fas fa-check"></i> Digital rapportering</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Læs Mere
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> Få Tilbud
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-column" data-service="property">
+            <div class="service-bg" style="background-image: url('../../images/placeholder-building.jpg');"></div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3 class="service-title">Ejendomsservice</h3>
+                <div class="service-description">
+                    Vedligeholdelse af trapper, opgange, elevatorer og udendørs områder.
+                </div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Fællesarealer og opgange</li>
+                    <li><i class="fas fa-check"></i> Udendørs områder</li>
+                    <li><i class="fas fa-check"></i> 24/7 beredskab</li>
+                    <li><i class="fas fa-check"></i> Proaktiv vedligeholdelse</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Læs Mere
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> Få Tilbud
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-column" data-service="handyman">
+            <div class="service-bg" style="background-image: url('../../images/placeholder-handyman.jpg');"></div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3 class="service-title">Handyman Services</h3>
+                <div class="service-description">
+                    Reparationer, vedligeholdelse og møbelmontering med hurtig responstid.
+                </div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> VVS og el-arbejde</li>
+                    <li><i class="fas fa-check"></i> Maling og spartling</li>
+                    <li><i class="fas fa-check"></i> Møbelmontering</li>
+                    <li><i class="fas fa-check"></i> 2h responstid</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Læs Mere
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> Få Tilbud
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-column" data-service="supplies">
+            <div class="service-bg" style="background-image: url('../../images/placeholder-supplies.jpg');"></div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3 class="service-title">Supplies & Produkter</h3>
+                <div class="service-description">
+                    Hygiejneprodukter og office supplies med automatisk påfyldning.
+                </div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Automatisk påfyldning</li>
+                    <li><i class="fas fa-check"></i> Konkurrencedygtige priser</li>
+                    <li><i class="fas fa-check"></i> 24h leveringstid</li>
+                    <li><i class="fas fa-check"></i> Digital bestilling</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Læs Mere
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> Få Tilbud
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-column" data-service="piccoline">
+            <div class="service-bg" style="background-image: url('../../images/placeholder-admin.jpg');"></div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3 class="service-title">Piccoline Opgaver</h3>
+                <div class="service-description">
+                    Mindre administrative opgaver og specialopgaver der gør hverdagen nemmere.
+                </div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Administrative opgaver</li>
+                    <li><i class="fas fa-check"></i> Praktiske opgaver</li>
+                    <li><i class="fas fa-check"></i> Specialopgaver</li>
+                    <li><i class="fas fa-check"></i> Samme dag levering</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Læs Mere
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> Få Tilbud
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-column" data-service="windows">
+            <div class="service-bg" style="background-image: url('../../images/placeholder-windows.jpg');"></div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3 class="service-title">Vinduespolering</h3>
+                <div class="service-description">
+                    Professionel vinduesrens indvendig og udvendig med certificeret udstyr.
+                </div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Højdearbejde</li>
+                    <li><i class="fas fa-check"></i> Indvendig rengøring</li>
+                    <li><i class="fas fa-check"></i> Service-aftaler</li>
+                    <li><i class="fas fa-check"></i> Fuld forsikring</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Læs Mere
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> Få Tilbud
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">VORES FORDELE</div>
+                <h2>Hvorfor Vælge DFMG?</h2>
+                <p>Vi leverer ikke bare services - vi skaber værdi for jeres virksomhed gennem kvalitet, innovation og dedikeret service</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h4>Høj Kvalitet</h4>
+                    <p>Certificerede medarbejdere og strenge kvalitetskontroller sikrer konsistent høj standard</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>Bæredygtighed</h4>
+                    <p>Miljøvenlige produkter og processer der beskytter både miljø og medarbejderes sundhed</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h4>Digital Platform</h4>
+                    <p>Moderne teknologi giver jer fuld transparens og kontrol med alle services</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h4>24/7 Service</h4>
+                    <p>Akut service og beredskab når I har brug for det - hele døgnet, året rundt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">SÅDAN ARBEJDER VI</div>
+                <h2>Fra Første Kontakt til Løbende Samarbejde</h2>
+                <p>En struktureret tilgang der sikrer optimal service fra dag ét</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Behovsanalyse</h4>
+                    <p>Vi analyserer jeres specifikke behov og udarbejder en skræddersyet løsning</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Tilbud & Planlægning</h4>
+                    <p>Transparent prissætning og detaljeret plan for implementering</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Implementering</h4>
+                    <p>Smidig opstart med dedikerede teams og grundig introduktion</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Løbende Service</h4>
+                    <p>Kontinuerlig levering med kvalitetskontrol og optimering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Klar til at Optimere Jeres Facilities?</h2>
+            <p>Lad os vise jer hvordan vores services kan forbedre jeres arbejdsmiljø og reducere omkostninger</p>
+            <div class="cta-buttons">
+                <a href="../kontakt.html" class="btn">
+                    <i class="fas fa-envelope"></i>
+                    Kontakt Os
+                </a>
+                <a href="tel:+4550480273" class="btn">
+                    <i class="fas fa-phone"></i>
+                    Ring Nu: +45 50 48 02 73
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+    <script>
+        // Service pillar interaction
+        function toggleService(column) {
+            const allColumns = document.querySelectorAll('.service-column');
+            const isExpanded = column.classList.contains('expanded');
+            
+            // Reset all columns
+            allColumns.forEach(col => {
+                col.classList.remove('expanded', 'collapsed');
+            });
+            
+            if (!isExpanded) {
+                // Expand clicked column and collapse others
+                column.classList.add('expanded');
+                allColumns.forEach(col => {
+                    if (col !== column) {
+                        col.classList.add('collapsed');
+                    }
+                });
+            }
+        }
+
+        // Add click handlers to service columns
+        document.querySelectorAll('.service-column').forEach(column => {
+            column.addEventListener('click', () => toggleService(column));
+        });
+
+        // Close expanded service when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.service-column')) {
+                document.querySelectorAll('.service-column').forEach(col => {
+                    col.classList.remove('expanded', 'collapsed');
+                });
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

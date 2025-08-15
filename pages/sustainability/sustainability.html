@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bæredygtighed - DFMG</title>
+    <meta name="description" content="DFMG's tilgang til bæredygtighed - miljø, social ansvar og governance. Læs om vores engagement i en bæredygtig fremtid.">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            height: 100vh;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+        
+        /* Horizontal Scrolling Container */
+        .horizontal-container {
+            display: flex;
+            height: calc(100vh - 100px);
+            width: 400vw;
+            transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        
+        /* Base Slide */
+        .slide {
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-shrink: 0;
+            padding: 2rem;
+        }
+        
+        /* Slide Backgrounds */
+        .slide:nth-child(1) { background: linear-gradient(135deg, #f8fafc, #e2e8f0); }
+        .slide:nth-child(2) { background: linear-gradient(135deg, #f0fdf4, #dcfce7); }
+        .slide:nth-child(3) { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
+        .slide:nth-child(4) { background: linear-gradient(135deg, #faf5ff, #f3e8ff); }
+        
+        /* Slide Navigation */
+        .slide-nav {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            display: flex;
+            gap: 8px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slide-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .slide-dot.active {
+            background: #22c55e;
+        }
+        
+        .slide-dot:hover {
+            transform: scale(1.2);
+        }
+        
+        /* Slide Content Layouts */
+        .slide-content {
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            display: grid;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        /* Intro Slide */
+        .intro-content {
+            text-align: center;
+            grid-template-columns: 1fr;
+        }
+        
+        .intro-content h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            color: #344767;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+        
+        .intro-content p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .sustainability-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pillar {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .pillar-icon {
+            font-size: 2.5rem;
+            color: #22c55e;
+            margin-bottom: 1rem;
+        }
+        
+        .pillar h3 {
+            color: #344767;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .content-section h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: #344767;
+        }
+        
+        .content-section h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-text {
+            color: #344767;
+            font-weight: 600;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .feature-list i {
+            color: #22c55e;
+            font-size: 1.2rem;
+            width: 20px;
+        }
+        
+        .image-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .slide-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Three Column Layout for Governance */
+        .three-column {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .governance-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .governance-card h3 {
+            color: #344767;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .governance-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .governance-number {
+            color: #22c55e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 80px; }
+            .horizontal-container { height: calc(100vh - 80px); }
+            .slide { padding: 1rem; }
+            .slide-content { gap: 2rem; }
+            .intro-content h1 { font-size: 2.5rem; }
+            .content-section h1 { font-size: 2.5rem; }
+            .two-column { grid-template-columns: 1fr; gap: 2rem; }
+            .three-column { grid-template-columns: 1fr; }
+            .sustainability-pillars { grid-template-columns: 1fr; }
+            .slide-image { height: 250px; }
+        }
+    </style>
+    
+    <!-- Non-critical CSS deferred -->
+    <link rel="preload" href="../../css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Horizontal Scrolling Container -->
+    <div class="horizontal-container" id="horizontalContainer">
+        
+        <!-- Slide 1: Intro -->
+        <section class="slide">
+            <div class="slide-content intro-content">
+                <div>
+                    <h1>Bæredygtighed hos DFMG</h1>
+                    <p>Vi bygger fremtiden på et solidt fundament af miljøansvar, social ansvarlighed og god governance. Vores tilgang til bæredygtighed gennemsyrer alle aspekter af vores forretning.</p>
+                    
+                    <div class="sustainability-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+                            <h3>Miljø & Klima</h3>
+                            <p>Grøn omstilling og CO2-reduktion</p>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-users"></i></div>
+                            <h3>Social Bæredygtighed</h3>
+                            <p>Inklusion og lokalsamfund</p>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Governance</h3>
+                            <p>Ansvarlig ledelse og etik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Miljø & Klima -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="content-section">
+                    <h2>Miljø & Klima - Grøn Omstilling</h2>
+                    <h1>Bæredygtige Løsninger for Fremtiden</h1>
+                    <p>Vi er forpligtet til at minimere vores miljøpåvirkning gennem innovative løsninger og ansvarlig ressourcehåndtering. Vores grønne initiativer skaber værdi for både kunder og miljøet.</p>
+                    
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-recycle"></i>
+                            <span><span class="highlight-text">CO2-neutral drift:</span> Reducerer vores klimaaftryk gennem energioptimering og grønne teknologier</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-droplet"></i>
+                            <span><span class="highlight-text">Vandbesparelse:</span> Effektive systemer der minimerer vandforbrug og spild</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-leaf"></i>
+                            <span><span class="highlight-text">Miljøvenlige produkter:</span> Certificerede rengøringsmidler og bæredygtige materialer</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-trash-alt"></i>
+                            <span><span class="highlight-text">Affaldsreduktion:</span> Cirkulære løsninger og effektiv affaldssortering</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-section">
+                    <div style="background: #e2e8f0; width: 100%; height: 400px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 1.2rem;">
+                        Miljø & Klima Billede
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Social Bæredygtighed -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="image-section">
+                    <div style="background: #dbeafe; width: 100%; height: 400px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 1.2rem;">
+                        Social Bæredygtighed Billede
+                    </div>
+                </div>
+                <div class="content-section">
+                    <h2>Social Bæredygtighed - Mennesker i Centrum</h2>
+                    <h1>Inklusion og Mangfoldighed Skaber Værdi</h1>
+                    <p>Vores tilgang til social bæredygtighed bygger på tillid, respekt og fælles ansvar. Vi understøtter lokale uddannelsesprogrammer, fremmer ligestilling og sikrer faire arbejdsvilkår.</p>
+                    
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-heart"></i>
+                            <span><span class="highlight-text">Medarbejdervelfærd:</span> Sunde arbejdsforhold og personlig udvikling</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><span class="highlight-text">Uddannelse:</span> Kontinuerlig kompetenceudvikling og læring</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-handshake"></i>
+                            <span><span class="highlight-text">Lokalsamfund:</span> Aktiv støtte til lokale initiativer og organisationer</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-balance-scale"></i>
+                            <span><span class="highlight-text">Ligestilling:</span> Mangfoldighed og inklusion på alle niveauer</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Governance -->
+        <section class="slide">
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: #666; font-size: 1.3rem; font-weight: 300; margin-bottom: 1rem;">Governance - Ansvarlig Ledelse</h2>
+                    <h1 style="font-size: 3.5rem; font-weight: 300; color: #344767; margin-bottom: 2rem;">Transparens og Etik i Alt Vi Gør</h1>
+                    <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">God governance handler om at skabe tillid gennem åbenhed, etiske beslutninger og ansvarlig ledelse. Vi bygger bæredygtige forretningspraksisser.</p>
+                </div>
+                
+                <div class="three-column">
+                    <div class="governance-card">
+                        <div class="governance-number">01 - COMPLIANCE</div>
+                        <h3>Regeloverholdelse</h3>
+                        <p>Vi opretholder høje standarder gennem systematisk overvågning og rapportering. Fuld overholdelse af lovgivning og industristandarder.</p>
+                    </div>
+                    
+                    <div class="governance-card">
+                        <div class="governance-number">02 - TRANSPARENS</div>
+                        <h3>Åben Kommunikation</h3>
+                        <p>Ærlig kommunikation er grundlaget for tillid. Vi deler mål, fremskridt og udfordringer med alle interessenter.</p>
+                    </div>
+                    
+                    <div class="governance-card">
+                        <div class="governance-number">03 - ETIK</div>
+                        <h3>Etisk Forretningsførelse</h3>
+                        <p>Vi bygger vores forretning på stærke etiske principper og værdier. Ansvarlig beslutningstagning i alle relationer.</p>
+                    </div>
+                    
+                    <div class="governance-card">
+                        <div class="governance-number">04 - RISIKOSTYRING</div>
+                        <h3>Proaktiv Risikohåndtering</h3>
+                        <p>Gennem omfattende analyser identificerer vi potentielle trusler og implementerer effektive mitigeringsstrategier.</p>
+                    </div>
+                    
+                    <div class="governance-card">
+                        <div class="governance-number">05 - ANSVARLIGHED</div>
+                        <h3>Ansvarlig Ressourcestyring</h3>
+                        <p>Vi forvalter ressourcer med omtanke for fremtidige generationer. Balancerer kortsigtede behov med langsigtede konsekvenser.</p>
+                    </div>
+                    
+                    <div class="governance-card">
+                        <div class="governance-number">06 - FORBEDRING</div>
+                        <h3>Kontinuerlig Udvikling</h3>
+                        <p>Konstant udvikling gennem reviews, stakeholder feedback og benchmarking mod internationale standarder.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+        <div class="slide-dot active" data-slide="0"></div>
+        <div class="slide-dot" data-slide="1"></div>
+        <div class="slide-dot" data-slide="2"></div>
+        <div class="slide-dot" data-slide="3"></div>
+    </div>
+
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+    <script>
+        class SustainabilitySlider {
+            constructor() {
+                this.container = document.getElementById('horizontalContainer');
+                this.dots = document.querySelectorAll('.slide-dot');
+                this.currentSlide = 0;
+                this.totalSlides = 4;
+                this.isAnimating = false;
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupNavigation();
+                this.setupKeyboard();
+                this.setupWheel();
+                this.setupTouch();
+            }
+            
+            setupNavigation() {
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+            }
+            
+            setupKeyboard() {
+                document.addEventListener('keydown', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    switch(e.key) {
+                        case 'ArrowRight':
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            this.nextSlide();
+                            break;
+                        case 'ArrowLeft':
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            this.prevSlide();
+                            break;
+                    }
+                });
+            }
+            
+            setupWheel() {
+                this.container.addEventListener('wheel', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    e.preventDefault();
+                    
+                    if (e.deltaX > 50 || e.deltaY > 50) {
+                        this.nextSlide();
+                    } else if (e.deltaX < -50 || e.deltaY < -50) {
+                        this.prevSlide();
+                    }
+                }, { passive: false });
+            }
+            
+            setupTouch() {
+                let startX = 0;
+                
+                this.container.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.container.addEventListener('touchend', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+            }
+            
+            goToSlide(index) {
+                if (index === this.currentSlide || this.isAnimating) return;
+                
+                this.isAnimating = true;
+                this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+                
+                const translateX = -this.currentSlide * 100;
+                this.container.style.transform = `translateX(${translateX}vw)`;
+                
+                this.updateDots();
+                
+                setTimeout(() => {
+                    this.isAnimating = false;
+                }, 800);
+            }
+            
+            nextSlide() {
+                if (this.currentSlide < this.totalSlides - 1) {
+                    this.goToSlide(this.currentSlide + 1);
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.goToSlide(this.currentSlide - 1);
+                }
+            }
+            
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new SustainabilitySlider();
+        });
+    </script>
+</body>
+</html>

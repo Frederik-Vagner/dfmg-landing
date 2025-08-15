@@ -3,104 +3,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Professionel Rengøring & Facility Management</title>
+    <title>DFMG - All-In-One Facility Service</title>
     <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            padding-top: 100px; 
+            line-height: 1.6;
+        }
+        .hero { 
+            min-height: 80vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            background: #f8fafc;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        .btn { 
+            padding: 15px 30px; 
+            margin: 10px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            display: inline-block; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn.primary { 
+            background: #22c55e; 
+            color: white; 
+        }
+        .btn.secondary { 
+            background: transparent; 
+            color: #344767; 
+            border: 2px solid #344767; 
+        }
+        .section { 
+            padding: 4rem 0; 
+        }
+        h1 { 
+            font-size: 3rem; 
+            font-weight: 300; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        h2 { 
+            font-size: 2.5rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: #344767;
+        }
+        .subtitle { 
+            color: #4285f4; 
+            font-size: 0.9rem; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            margin-bottom: 1rem; 
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .btn { padding: 12px 24px; margin: 5px; }
+        }
+
+        .section-intro { 
+            text-align: center; 
+            margin-bottom: 3rem; 
+        }
+        .carousel-nav { 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            margin-top: 20px; 
+        }
+        .services-carousel { 
+            overflow: hidden; 
+        }
+        .services-track { 
+            display: flex; 
+            transition: transform 0.3s ease; 
+            gap: 20px; 
+        }
+        .service-card { 
+            min-width: calc(33.333% - 14px); 
+            height: 350px;
+            background: white; 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .service-card h3 { 
+            color: #344767; 
+            margin-bottom: 0.75rem; 
+            font-size: 1.2rem; 
+            font-weight: 600;
+        }
+        .service-card p { 
+            color: #666; 
+            margin: 0; 
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .carousel-btn { 
+            background: #4285f4; 
+            color: white; 
+            border: none; 
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            cursor: pointer; 
+            font-size: 18px; 
+        }
+        .carousel-btn:hover { 
+            background: #3367d6; 
+        }
+
+        .cta-box {
+            background: #344767;
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 2rem;
+        }
+        .cta-left {
+            text-align: left;
+        }
+        .cta-left h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .cta-left p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .cta-left .btn {
+            background: #22c55e;
+            color: white;
+            font-size: 1rem;
+            padding: 14px 28px;
+        }
+        .cta-left .btn:hover {
+            background: #16a34a;
+        }
+        .cta-right {
+            /* Empty space for future image */
+        }
+        @media (max-width: 768px) {
+            .cta-box {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .about-flex-layout {
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .photos-left,
+        .photos-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .content-center {
+            flex: 2;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .photo-placeholder {
+            height: 120px;
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .about-text p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .about-stats-small {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-small {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            min-width: 80px;
+        }
+
+        .stat-number-small {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #22c55e;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label-small {
+            color: #666;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .about-flex-layout {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .photos-left,
+            .photos-right {
+                display: none;
+            }
+            
+            .content-center {
+                padding: 0;
+            }
+            
+            .about-stats-small {
+                gap: 1rem;
+            }
+        }
+
+        .client-logos {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .logos-text {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .logos-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .client-logo {
+            height: 40px;
+            max-width: 120px;
+            object-fit: contain;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            filter: grayscale(100%);
+        }
+        .client-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+        @media (max-width: 768px) {
+            .logos-row {
+                gap: 2rem;
+            }
+            .client-logo {
+                height: 30px;
+                max-width: 100px;
+            }
+        }
+    </style>
+    
+    <!-- Non-critical CSS deferred -->
+    <link rel="preload" href="css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>DFMG</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Hjem</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">Om Os</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header Component -->
+    <div id="header"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Professionel Rengøring & Facility Management</h1>
-            <p>Vi leverer kvalitetsrengøring og facility management løsninger til erhverv i hele Danmark</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary">Få Tilbud</a>
-                <a href="#services" class="btn secondary">Se Services</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>All-In-One Facility Service</h1>
+                <p>Rengøring, vedligeholdelse og produkter til jeres facility</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">Få Gratis Analyse</a>
+                    <a href="#services" class="btn secondary">Udforsk Løsninger</a>
+                </div>
+                <div class="client-logos">
+                    <div class="logos-text">Betroet af</div>
+                    <div class="logos-row">
+                        <img src="images/logos/deas.png" alt="Deas" class="client-logo">
+                        <img src="images/logos/nybolig2.png" alt="Nybolig" class="client-logo">
+                        <img src="images/logos/soho.png" alt="SOHO" class="client-logo">
+                        <img src="images/logos/adnami.png" alt="Adnami" class="client-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-flex-layout">
+                <!-- Left column - Photos 1,3,5,7 -->
+                <div class="photos-left">
+                    <div class="photo-placeholder">Photo 1</div>
+                    <div class="photo-placeholder">Photo 3</div>
+                    <div class="photo-placeholder">Photo 5</div>
+                    <div class="photo-placeholder">Photo 7</div>
+                </div>
+                
+                <!-- Center column - Text and Stats -->
+                <div class="content-center">
+                    <div class="about-text">
+                        <div class="subtitle">OM DFMG</div>
+                        <h2>Menneskene bag jeres facility service</h2>
+                        <p>Grundlagt i 2023 af erfarne fagfolk, der ville gøre facility service mere personligt og pålideligt. Vi kombinerer etableret faglig ekspertise med moderne teknologi for at levere den bedste oplevelse til vores kunder.</p>
+                        <p>Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</p>
+                    </div>
+                    <div class="about-stats-small">
+                        <div class="stat-small">
+                            <div class="stat-number-small">1160</div>
+                            <div class="stat-label-small">Rengøringer</div>
+                        </div>
+                        <div class="stat-small">
+                            <div class="stat-number-small">0</div>
+                            <div class="stat-label-small">Udeblivelser</div>
+                        </div>
+                        <div class="stat-small">
+                            <div class="stat-number-small">24/7</div>
+                            <div class="stat-label-small">Support</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column - Photos 2,4,6,8 -->
+                <div class="photos-right">
+                    <div class="photo-placeholder">Photo 2</div>
+                    <div class="photo-placeholder">Photo 4</div>
+                    <div class="photo-placeholder">Photo 6</div>
+                    <div class="photo-placeholder">Photo 8</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="section">
         <div class="container">
-            <h2>Vores Services</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Erhvervsrengøring</h3>
-                    <p>Professionel rengøring af kontorer, butikker og institutioner</p>
-                </div>
-                <div class="service-card">
-                    <h3>Facility Management</h3>
-                    <p>Komplet ejendomsservice og vedligeholdelse</p>
-                </div>
-                <div class="service-card">
-                    <h3>Vinduespolering</h3>
-                    <p>Professionel vinduesrengøring for alle typer bygninger</p>
-                </div>
-                <div class="service-card">
-                    <h3>Specialrengøring</h3>
-                    <p>Dybderengøring og specialiserede rengøringsopgaver</p>
+            <div class="section-intro">
+                <div class="subtitle">VORES SERVICES</div>
+                <h2>Facility service på autopilot</h2>
+                <p>Færre leverandører at administrere, gennemsigtige omkostninger og garanteret service kvalitet. Fra daglig rengøring til akut vedligeholdelse leverer vi det hele med 99.5% rettidig udførelse.</p>
+                <div class="carousel-nav">
+                    <button class="carousel-btn" onclick="previousServices()">‹</button>
+                    <button class="carousel-btn" onclick="nextServices()">›</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Om DFMG</h2>
-            <p>DFMG er din pålidelige partner inden for professionel rengøring og facility management. Med mange års erfaring leverer vi kvalitetsløsninger til erhvervskunder i hele Danmark.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Kontakt Os</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Få et uforpligtende tilbud</h3>
-                    <p>Ring til os eller send en besked, så vender vi tilbage hurtigst muligt.</p>
-                    <div class="contact-details">
-                        <p><strong>Telefon:</strong> +45 XX XX XX XX</p>
-                        <p><strong>Email:</strong> kontakt@dfmg.dk</p>
+            
+            <div class="services-carousel">
+                <div class="services-track" id="servicesTrack">
+                    <div class="service-card">
+                        <h3>Professionel Rengøring</h3>
+                        <p>Kontorer, skoler, restauranter og eventlokaler</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Ejendomsservice</h3>
+                        <p>Vedligeholdelse af trapper, opgange og elevatorer</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Handyman Services</h3>
+                        <p>Reparationer, vedligeholdelse og møbelmontering</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Supplies & Produkter</h3>
+                        <p>Hygiejneprodukter og office supplies</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Piccoline Opgaver</h3>
+                        <p>Mindre administrative opgaver og specialopgaver</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Vinduespolering</h3>
+                        <p>Professionel vinduesrens indvendig og udvendig</p>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Dit navn" required>
-                        <input type="email" placeholder="Din email" required>
-                        <input type="tel" placeholder="Dit telefonnummer">
-                        <textarea placeholder="Besked" rows="4"></textarea>
-                        <button type="submit" class="btn primary">Send Besked</button>
-                    </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Stories Section -->
+    <section id="testimonials" class="section" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-intro">
+                <div class="subtitle">KLIENT SUCCESHISTORIER</div>
+                <h2>Dokumenterede Resultater fra Danske Erhverv</h2>
+                <p>Læs hvordan vores kunder har styrket deres facility drift</p>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte."</blockquote>
+                    <div class="author">
+                        <strong>Jørgen Gosvig</strong>
+                        <span>CFO & Operations Manager, Adnami</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte."</blockquote>
+                    <div class="author">
+                        <strong>Ossama Freije</strong>
+                        <span>Indehaver af Fire Nybolig-Afdelinger</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte."</blockquote>
+                    <div class="author">
+                        <strong>Cecilie Duedahl Nielsen</strong>
+                        <span>FO, SOHO</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Contact CTA Section -->
+    <section id="contact" class="section">
         <div class="container">
-            <p>&copy; 2025 DFMG. Alle rettigheder forbeholdes.</p>
+            <div class="cta-box">
+                <div class="cta-left">
+                    <h2>Få En Uforpligtet Facility Besparelsesanalyse</h2>
+                    <p>Arbejd sammen med DFMG som jeres facility service partner. Få en gratis gennemgang af jeres nuværende setup.</p>
+                    <a href="#" class="btn primary">Få Gratis Analyse</a>
+                </div>
+                <div class="cta-right">
+                    <!-- Empty space for future image -->
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- Component loader -->
+    <script src="js/components.js" defer></script>
+    <script>
+        let currentIndex = 0;
+        const totalCards = 6;
+        const cardsVisible = 3;
+        const maxIndex = totalCards - cardsVisible; // 3 (positions: 0,1,2,3)
+
+        function updateCarousel() {
+            const track = document.getElementById('servicesTrack');
+            const cardWidth = 33.333; // Each card is 1/3 of container
+            track.style.transform = `translateX(-${currentIndex * cardWidth}%)`;
+        }
+
+        function nextServices() {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        }
+
+        function previousServices() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        }
+    </script>
 </body>
 </html>

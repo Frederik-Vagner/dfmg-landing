@@ -1,0 +1,376 @@
+/* Header - Mobile-First Performance CSS */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 960px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.header, .header * {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact {
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.contact span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    animation: carousel 8s infinite ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    font-weight: 600;
+    color: #585858;
+    font-size: 1rem;
+}
+
+.contact span:nth-child(2) {
+    animation-delay: 4s;
+}
+
+
+.contact span:first-child {
+    animation-delay: 0s;
+}
+
+@keyframes carousel {
+    0% { opacity: 0; transform: translateY(25px); }
+    8%, 42% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0; transform: translateY(-25px); }
+    58%, 100% { opacity: 0; transform: translateY(25px); }
+}
+
+/* Simple mega menu - add after existing header CSS */
+.nav {
+    position: relative;
+}
+
+.nav a {
+    position: relative;
+}
+
+/* Dropdown menus */
+.nav-item { position: relative; }
+.dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+
+
+.nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown a {
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 10px;
+    color: #585858;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: rgba(255,255,255,0.5);
+    width: 200px;
+}
+.dropdown a:hover { 
+    color: #333; 
+    background: rgba(255,255,255,0.8);
+    transform: translateY(-2px);
+}
+.dropdown strong { color: #333; display: block; margin-bottom: 5px; }
+.dropdown small { color: #888; font-size: 0.85em; }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #585858;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Mobile-first: Hide desktop elements */
+.nav, .contact { display: none; }
+
+/* CSS-only mobile menu */
+.menu-checkbox { display: none; }
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #666;
+    padding: 10px 0;
+}
+
+/* Show mobile menu when checkbox checked */
+.menu-checkbox:checked ~ .mobile-nav {
+    display: flex;
+}
+
+/* Desktop enhancements */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+    
+    .nav { 
+        display: flex; 
+        gap: 30px;
+        align-items: center;
+        margin: 0 40px;
+    }
+    
+    .nav > a, .nav-item > a {
+        text-decoration: none;
+        color: #585858;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+    
+    .nav > a:hover, .nav-item > a:hover { color: #333; }
+    
+    .contact { 
+        display: block;
+        font-size: 0.9rem;
+        color: #666;
+        overflow: hidden;
+        height: 20px;
+        position: relative;
+        min-width: 150px;
+    }
+    
+    .menu-btn, .mobile-nav { display: none; }
+}
+
+
+/* Footer - Mobile-First Performance CSS */
+.footer {
+    background: #1a1f36;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-description {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links a:hover {
+    color: #94a3b8;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact a {
+    color: #94a3b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact a:hover {
+    color: white;
+}
+
+.footer-contact i {
+    width: 16px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: #334155;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    background: #4285f4;
+    color: white;
+}
+
+.footer-bottom a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 20px;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+.copyright {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    background-color: white;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Desktop enhancements */
+@media (min-width: 768px) {
+    .footer-main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .footer-section:nth-child(1) {
+        text-align: end;
+        align-self: center;
+    }
+    
+    .footer-section:nth-child(2) {
+        flex: 1.5;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .footer-section:nth-child(3) {
+        text-align: start;
+        align-self: center;
+    }
+}

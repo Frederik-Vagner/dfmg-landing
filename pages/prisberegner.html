@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisberegner - DFMG</title>
+    <meta name="description" content="Beregn prisen på professionel rengøring med DFMG's prisberegner. Få et øjeblikkeligt estimat baseret på jeres behov.">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Critical CSS inline for performance -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            line-height: 1.6;
+            color: #344767;
+            background: #fff;
+            height: 100vh;
+            overflow: hidden;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: none !important;
+            margin: 0 auto;
+            padding: 1rem;
+            height: 100vh;
+            padding-top: 100px;
+        }
+
+        /* Three Column Layout */
+        .calculator-content {
+            display: grid;
+            grid-template-columns: 0.8fr 2.5fr 1fr;
+            gap: 0.5rem;
+            margin: 0 auto;
+            height: 100vh;
+        }
+
+        h2{
+            padding-left: 0.5rem;
+        }
+
+        /* All Columns */
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 1rem;
+            padding-top: 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 0.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn{
+            padding: 0.5rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            align-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .active{
+            background: #344767;
+            color: white;
+        }
+
+
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 1rem;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        .flex{
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .form-input {
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            width: 80px;
+            text-align: center;
+        }
+
+        /* Planning Table */
+
+        .planning-table td {
+            padding: 0.15rem 0.5rem;
+        }
+
+        .planning-table td .flex {
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .planning-table td:last-child {
+            text-align: right;
+        }
+
+        .service-tasks {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 0.25rem 0.5rem;
+        }
+
+        .task-item {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            transition: all 0.2s ease;
+            align-items: center;
+        }
+
+        .task-item:hover {
+            background: #f1f5f9;
+            border-color: #e2e8f0;
+        }
+
+        .task-checkbox {
+            width: 18px;
+            height: 18px;
+            accent-color: #344767;
+            cursor: pointer;
+        }
+        /* Price Section (Right Column) */
+
+        .price-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-total {
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid #344767;
+        }
+
+        .price-total-line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        #monthly-price {
+            color: #344767;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- Non-critical CSS deferred -->
+    <link rel="preload" href="../../css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <section class="section">
+        <div class="container">
+            <div class="calculator-content">
+
+                <!-- Column 1: Information -->
+                <div class="column">
+                    <h2>Oplysninger</h2>
+                    <div class="info-card">
+                        <h4>Størrelse</h4>
+                        <label>Hvor stort er jeres kontor?</label>
+                        <table class="planning-table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn active" onclick="selectSizeMethod('area')">Areal</div>
+                                            <div class="btn" onclick="selectSizeMethod('employees')">Folk</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="area-input">
+                                            <div style="position: relative; display: inline-block;">
+                                                <input class="form-input" id="office-area" placeholder="500" value="500" style="padding-right: 25px;">
+                                                <span style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #64748b; font-size: 0.9rem;">m²</span>
+                                            </div>
+                                        </div>
+                                        <div id="employees-input" style="display: none;">
+                                            <input class="form-input" id="employee-count" placeholder="15" value="15">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="planning-table">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th style="padding-left: 1.5rem;">Antal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mødelokaler</td>
+                                    <td><input class="form-input" id="meeting-room-count" placeholder="4" value="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Toiletter</td>
+                                    <td><input class="form-input" id="toilet-count" placeholder="3" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>Køkkener</td>
+                                    <td><input class="form-input" id="kitchen-count" placeholder="2" value="2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Planning -->
+                    <div class="info-card">
+                        <h4>Planlægning</h4>
+                        <label>Hvilke dage skal der rengøres?</label>
+                        <table class="planning-table">
+                            <thead>
+                                <tr>
+                                    <th>Dag</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mandag</td>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn" data-day="monday" data-type="let">Let</div>
+                                            <div class="btn" data-day="monday" data-type="grundig">Grundig</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tirsdag</td>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn active" data-day="tuesday" data-type="let">Let</div>
+                                            <div class="btn" data-day="tuesday" data-type="grundig">Grundig</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Onsdag</td>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn" data-day="wednesday" data-type="let">Let</div>
+                                            <div class="btn" data-day="wednesday" data-type="grundig">Grundig</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Torsdag</td>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn active" data-day="thursday" data-type="let">Let</div>
+                                            <div class="btn" data-day="thursday" data-type="grundig">Grundig</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fredag</td>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn" data-day="friday" data-type="let">Let</div>
+                                            <div class="btn" data-day="friday" data-type="grundig">Grundig</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lørdag</td>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn" data-day="saturday" data-type="let">Let</div>
+                                            <div class="btn" data-day="saturday" data-type="grundig">Grundig</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Søndag</td>
+                                    <td>
+                                        <div class="flex">
+                                            <div class="btn" data-day="sunday" data-type="let">Let</div>
+                                            <div class="btn active" data-day="sunday" data-type="grundig">Grundig</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Documentation -->
+                    <div class="info-card">
+                        <h4>Dokumentation</h4>
+                        <label>Ønsker I billeder af rengøringen?</label>
+                        <div class="flex">
+                            <div class="btn" onclick="selectPhotoOption('none')">Ingen</div>
+                            <div class="btn active" onclick="selectPhotoOption('after')">Efter</div>
+                            <div class="btn" onclick="selectPhotoOption('before-after')">Før & efter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Service Templates -->
+                <div class="column">
+                    <div style="display: flex; justify-content: space-between;">
+                        <h2>Service Skema</h2>
+                        <div class="flex">
+                            <div class="btn active" onclick="toggleAllServiceTypes('let')">Let</div>
+                            <div class="btn" onclick="toggleAllServiceTypes('grundig')">Grundig</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Office -->
+                    <div class="info-card">
+                        <h4>Kontor, Mødelokaler</h4>
+                        <div class="service-tasks">
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="waste" data-section="office" checked>
+                                <span>Affaldsbeholder tømmes og poser udskiftes</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="light-meeting" data-section="office" checked>
+                                <span>Mødelokaler rengøres let</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="deep-meeting" data-section="office">
+                                <span>Mødelokaler rengøres grundigt</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="vacuum-floor" data-section="office">
+                                <span>Gulv støvsuges og vaskes/plejes</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="wipe-tables" data-section="office">
+                                <span>Borde/skriveborde tørres af</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="dust-surfaces" data-section="office">
+                                <span>Døre, stikkontakter, rammer og paneler afstøves</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="dust-shelves" data-section="office">
+                                <span>Frie hylder afstøves med candyfloss</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-glass" data-section="office">
+                                <span>Pletter/fedtfingre på internt glas fjernes</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-walls" data-section="office">
+                                <span>Synlige pletter på væggene fjernes</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="vacuum-furniture" data-section="office">
+                                <span>Polstrede møbler støvsuges</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kitchen -->
+                    <div class="info-card">
+                        <div class="service-header">
+                            <h4 class="service-title">Køkken</h4>
+                        </div>
+                        <div class="service-tasks">
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="waste" data-section="kitchen" checked>
+                                <span>Affaldsbeholder tømmes og poser udskiftes</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="vacuum-floor" data-section="kitchen" checked>
+                                <span>Gulv støvsuges og vaskes/plejes</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-sink" data-section="kitchen" checked>
+                                <span>Håndvask og sanitet rengøres</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="wipe-surfaces" data-section="kitchen" checked>
+                                <span>Bordplader og skabslåger aftørres</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="wipe-tables" data-section="kitchen" checked>
+                                <span>Spiseborde / loungeborde aftørres</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="dishwasher" data-section="kitchen" checked>
+                                <span>Tøm opvaskemaskine, fyld op og start om nødvendigt</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-filter" data-section="kitchen">
+                                <span>Rengør opvaskemaskine filter</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="wipe-chairs" data-section="kitchen">
+                                <span>Stole og lamper (<1,80m) & døkarme aftørres</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="check-supplies" data-section="kitchen">
+                                <span>Tjek maskine for salt og afspændingsmiddel</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-fridge" data-section="kitchen">
+                                <span>Køleskab rengøres udvendigt</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toilets -->
+                    <div class="info-card">
+                        <div class="service-header">
+                            <h4 class="service-title">Toiletter</h4>
+                        </div>
+                        <div class="service-tasks">
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="waste" data-section="toilet" checked>
+                                <span>Affaldsbeholder tømmes og poser udskiftes</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="vacuum-floor" data-section="toilet" checked>
+                                <span>Gulv støvsuges og vaskes/plejes</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-sanitary" data-section="toilet" checked>
+                                <span>Al sanitet (håndvask, armatur, toilet) rengøres</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-mirror" data-section="toilet" checked>
+                                <span>Spejl rengøres</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="wipe-dispensers" data-section="toilet" checked>
+                                <span>Papir- og sæbeholder aftørres</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="refill-supplies" data-section="toilet" checked>
+                                <span>Papir og sæbe fyldes op (hvis nødvendigt)</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="wipe-doors" data-section="toilet">
+                                <span>Døre, rammer og lamper (<1,80m) aftørres</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="dust-panels" data-section="toilet">
+                                <span>Gulvpaneler afstøves med candyfloss</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="check-ceiling" data-section="toilet">
+                                <span>Loft og hjørner kontrollers for spindelvæv</span>
+                            </div>
+                            <div class="task-item grundig-only">
+                                <input type="checkbox" class="task-checkbox" data-task="clean-glass" data-section="toilet">
+                                <span>Pletter/fedtfingre på internt glas fjernes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Price Summary -->
+                <div class="column">
+                    <h2>Månedlig Pris</h2>
+                    <div class="info-card" id="price-breakdown" style="padding: 2rem;">
+                        <div class="price-line">
+                            <span>Basispris (500 m²)</span>
+                            <span>6.240 kr</span>
+                        </div>
+                        <div class="price-line">
+                            <span>Mødelokaler (4 stk)</span>
+                            <span>867 kr</span>
+                        </div>
+                        <div class="price-line">
+                            <span>Toiletter (3 stk)</span>
+                            <span>1.300 kr</span>
+                        </div>
+                        <div class="price-line">
+                            <span>Køkkener (2 stk)</span>
+                            <span>650 kr</span>
+                        </div>
+                        <div class="price-line">
+                            <span>Billeder (efter)</span>
+                            <span>650 kr</span>
+                        </div>
+                        <div class="price-line" id="task-summary-line" style="font-size: 0.85rem; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 0.5rem; margin-top: 0.5rem;">
+                            <span id="task-summary-text">Standard opgaver inkluderet</span>
+                            <span id="task-summary-price">+0 kr</span>
+                        </div>
+                        <div class="price-line" style="border-bottom: 1px solid #f1f5f9; padding-bottom: 0.75rem;">
+                            <span style="color: #344767; font-weight: 600;">Rabat (3x ugentligt)</span>
+                            <span style="color: #344767; font-weight: 600;">-15%</span>
+                        </div>
+                        <div class="price-total-line">
+                            <span>Pris</span>
+                            <span id="monthly-price">8.450 kr</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="btn active" style="width: 100%; margin-top: 1.5rem; font-size: 1rem;">
+                        <i class="fas fa-envelope"></i>
+                        Kontakt os for tilbud
+                    </div>
+
+                    <p class="disclaimer">
+                        Dette er et estimat baseret på dine oplysninger. Den endelige pris kan variere afhængigt af specifikke forhold og krav. Kontakt os for et præcist tilbud.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+    <script>
+        // Price calculation data
+        const RATES = {
+            baseRatePerSqm: { let: 0.6, grundig: 0.9 },
+            toiletRate: { let: 100, grundig: 150 },
+            kitchenRate: { let: 75, grundig: 112.5 },
+            meetingRoomRate: { let: 50, grundig: 75 },
+            photoRate: { none: 0, after: 50, 'before-after': 100 },
+            discountRates: { 2: 0.10, 3: 0.15, 5: 0.20 },
+            // ADD THESE TASK RATES
+            taskRates: {
+                office: {
+                    'waste': { let: 5, grundig: 5 },
+                    'light-meeting': { let: 8, grundig: 0 },
+                    'deep-meeting': { let: 0, grundig: 15 },
+                    'vacuum-floor': { let: 0, grundig: 12 },
+                    'wipe-tables': { let: 0, grundig: 8 },
+                    'dust-surfaces': { let: 0, grundig: 10 },
+                    'dust-shelves': { let: 0, grundig: 6 },
+                    'clean-glass': { let: 0, grundig: 4 },
+                    'clean-walls': { let: 0, grundig: 3 },
+                    'vacuum-furniture': { let: 0, grundig: 5 }
+                },
+                kitchen: {
+                    'waste': { let: 3, grundig: 3 },
+                    'vacuum-floor': { let: 8, grundig: 8 },
+                    'clean-sink': { let: 5, grundig: 5 },
+                    'wipe-surfaces': { let: 6, grundig: 6 },
+                    'wipe-tables': { let: 4, grundig: 4 },
+                    'dishwasher': { let: 3, grundig: 3 },
+                    'clean-filter': { let: 0, grundig: 2 },
+                    'wipe-chairs': { let: 0, grundig: 4 },
+                    'check-supplies': { let: 0, grundig: 2 },
+                    'clean-fridge': { let: 0, grundig: 3 }
+                },
+                toilet: {
+                    'waste': { let: 2, grundig: 2 },
+                    'vacuum-floor': { let: 4, grundig: 4 },
+                    'clean-sanitary': { let: 8, grundig: 8 },
+                    'clean-mirror': { let: 2, grundig: 2 },
+                    'wipe-dispensers': { let: 2, grundig: 2 },
+                    'refill-supplies': { let: 1, grundig: 1 },
+                    'wipe-doors': { let: 0, grundig: 3 },
+                    'dust-panels': { let: 0, grundig: 2 },
+                    'check-ceiling': { let: 0, grundig: 2 },
+                    'clean-glass': { let: 0, grundig: 2 }
+                }
+            }
+        };
+        // State management
+        let state = {
+            sizeMethod: 'area',
+            area: 500,
+            employees: 15,
+            meetingRooms: 4,
+            toilets: 3,
+            kitchens: 2,
+            photos: 'after',
+            cleaningDays: ['tuesday', 'thursday', 'sunday'],
+            cleaningTypes: {
+                'tuesday': 'let',
+                'thursday': 'let', 
+                'sunday': 'grundig'
+            },
+            serviceMode: 'let'
+        };
+
+        function calculatePrice() {
+            const area = state.sizeMethod === 'area' ? state.area : state.employees * 25;
+            
+            let weeklyCost = 0;
+            let baseAreaCost = 0, toiletCost = 0, kitchenCost = 0, meetingRoomCost = 0;
+
+            // Calculate for each selected day (NO TASK COSTS)
+            state.cleaningDays.forEach(day => {
+                const cleaningType = state.cleaningTypes[day];
+                if (cleaningType) {
+                    const areaCost = area * RATES.baseRatePerSqm[cleaningType];
+                    const toiletDayCost = state.toilets * RATES.toiletRate[cleaningType];
+                    const kitchenDayCost = state.kitchens * RATES.kitchenRate[cleaningType];
+                    const meetingRoomDayCost = state.meetingRooms * RATES.meetingRoomRate[cleaningType];
+                    
+                    weeklyCost += areaCost + toiletDayCost + kitchenDayCost + meetingRoomDayCost;
+                    
+                    // Accumulate monthly costs (NO task costs added to base)
+                    baseAreaCost += areaCost * 4.33;
+                    toiletCost += toiletDayCost * 4.33;
+                    kitchenCost += kitchenDayCost * 4.33;
+                    meetingRoomCost += meetingRoomDayCost * 4.33;
+                }
+            });
+
+            // Photo costs
+            const photoMultiplier = RATES.photoRate[state.photos];
+            let photoCost = 0;
+            if (photoMultiplier > 0) {
+                photoCost = state.cleaningDays.length * photoMultiplier * 4.33;
+                weeklyCost += state.cleaningDays.length * photoMultiplier;
+            }
+
+            let monthlyCost = weeklyCost * 4.33;
+
+            // Frequency discount
+            let discount = 0;
+            const frequency = state.cleaningDays.length;
+            const sortedDiscounts = Object.entries(RATES.discountRates).sort((a, b) => b[0] - a[0]);
+            for (const [minFreq, rate] of sortedDiscounts) {
+                if (frequency >= parseInt(minFreq)) {
+                    discount = rate;
+                    break;
+                }
+            }
+
+            monthlyCost = monthlyCost * (1 - discount);
+            
+            return {
+                base: Math.round(baseAreaCost),
+                meetings: Math.round(meetingRoomCost),
+                toilets: Math.round(toiletCost),
+                kitchens: Math.round(kitchenCost),
+                photos: Math.round(photoCost),
+                discount: Math.round(discount * 100),
+                total: Math.round(monthlyCost)
+            };
+        }
+
+        function getTaskSummary() {
+            const checkedTasks = document.querySelectorAll('.task-checkbox:checked');
+            const totalTasks = checkedTasks.length;
+            
+            // Based on current default (14 tasks) being "Standard"
+            if (totalTasks >= 26) {
+                return { text: "Komplet pakke - alle opgaver", cost: 0 };
+            } else if (totalTasks >= 17) {  // 14 + 3
+                return { text: "Tilpasset pakke", cost: 0 };
+            } else if (totalTasks >= 12) {  // 14 ± 2 for some flexibility
+                return { text: "Standard pakke", cost: 0 };
+            } else {  // 11 or fewer (14 - 3)
+                return { text: "Minimal pakke", cost: 0 };
+            }
+        }
+
+        // Update UI efficiently
+        function updatePriceDisplay() {
+            const prices = calculatePrice();
+            const breakdown = document.getElementById('price-breakdown');
+            const lines = breakdown.querySelectorAll('.price-line');
+            
+            lines[0].lastElementChild.textContent = `${prices.base.toLocaleString('da-DK')} kr`;
+            lines[1].lastElementChild.textContent = `${prices.meetings.toLocaleString('da-DK')} kr`;
+            lines[2].lastElementChild.textContent = `${prices.toilets.toLocaleString('da-DK')} kr`;
+            lines[3].lastElementChild.textContent = `${prices.kitchens.toLocaleString('da-DK')} kr`;
+            lines[4].lastElementChild.textContent = `${prices.photos.toLocaleString('da-DK')} kr`;
+            lines[6].lastElementChild.textContent = `-${prices.discount}%`; // CHANGE FROM 6 TO 6
+            
+            document.getElementById('monthly-price').textContent = `${prices.total.toLocaleString('da-DK')} kr`;
+            
+            // Update descriptions
+            const area = state.sizeMethod === 'area' ? state.area : state.employees * 25;
+            lines[0].firstElementChild.textContent = `Basispris (${area} m²)`;
+            lines[1].firstElementChild.textContent = `Mødelokaler (${state.meetingRooms} stk)`;
+            lines[2].firstElementChild.textContent = `Toiletter (${state.toilets} stk)`;
+            lines[3].firstElementChild.textContent = `Køkkener (${state.kitchens} stk)`;
+            
+            // Update task summary
+            const taskSummary = getTaskSummary();
+            document.getElementById('task-summary-text').textContent = taskSummary.text;
+            document.getElementById('task-summary-price').textContent = taskSummary.cost > 0 ? 
+                `+${taskSummary.cost.toLocaleString('da-DK')} kr` : 'inkluderet';
+        }
+
+        // Event handlers
+        function selectSizeMethod(method) {
+            state.sizeMethod = method;
+            document.querySelectorAll('[onclick*="selectSizeMethod"]').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (method === 'area') {
+                document.getElementById('area-input').style.display = 'block';
+                document.getElementById('employees-input').style.display = 'none';
+            } else {
+                document.getElementById('area-input').style.display = 'none';
+                document.getElementById('employees-input').style.display = 'block';
+            }
+            updatePriceDisplay();
+        }
+
+        function selectPhotoOption(option) {
+            state.photos = option;
+            document.querySelectorAll('[onclick*="selectPhotoOption"]').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            updatePriceDisplay();
+        }
+
+        function toggleDayType(day, type) {
+            document.querySelectorAll(`[data-day="${day}"]`).forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (!state.cleaningDays.includes(day)) {
+                state.cleaningDays.push(day);
+            }
+            updatePriceDisplay();
+        }
+
+        function toggleAllServiceTypes(type) {
+            state.serviceMode = type; // UPDATE STATE
+            
+            // Update button states
+            document.querySelectorAll('[onclick*="toggleAllServiceTypes"]').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const serviceSections = document.querySelectorAll('.service-tasks');
+            
+            if (type === 'grundig') {
+                serviceSections.forEach(section => section.classList.add('grundig-mode'));
+                // Check all tasks in grundig mode
+                document.querySelectorAll('.task-checkbox').forEach(checkbox => {
+                    checkbox.checked = true;
+                });
+            } else {
+                serviceSections.forEach(section => section.classList.remove('grundig-mode'));
+                // Only check basic tasks
+                document.querySelectorAll('.task-item:not(.grundig-only) .task-checkbox').forEach(checkbox => {
+                    checkbox.checked = true;
+                });
+                document.querySelectorAll('.grundig-only .task-checkbox').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+            }
+        }
+
+        // Efficient input handling
+        document.addEventListener('DOMContentLoaded', function() {
+            // Debounced input updates
+            let timeout;
+            function debouncedUpdate(callback) {
+                clearTimeout(timeout);
+                timeout = setTimeout(callback, 150);
+            }
+            
+            // Input listeners
+            document.getElementById('office-area').addEventListener('input', e => {
+                state.area = parseInt(e.target.value) || 0;
+                debouncedUpdate(updatePriceDisplay);
+            });
+            
+            document.getElementById('employee-count').addEventListener('input', e => {
+                state.employees = parseInt(e.target.value) || 0;
+                debouncedUpdate(updatePriceDisplay);
+            });
+            
+            document.getElementById('meeting-room-count').addEventListener('input', e => {
+                state.meetingRooms = parseInt(e.target.value) || 0;
+                debouncedUpdate(updatePriceDisplay);
+            });
+            
+            document.getElementById('toilet-count').addEventListener('input', e => {
+                state.toilets = parseInt(e.target.value) || 0;
+                debouncedUpdate(updatePriceDisplay);
+            });
+            
+            document.getElementById('kitchen-count').addEventListener('input', e => {
+                state.kitchens = parseInt(e.target.value) || 0;
+                debouncedUpdate(updatePriceDisplay);
+            });
+            
+            // Day buttons
+            document.querySelectorAll('[data-day]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const day = btn.dataset.day;
+                    const type = btn.dataset.type;
+                    
+                    if (btn.classList.contains('active')) {
+                        // Deselect
+                        btn.classList.remove('active');
+                        delete state.cleaningTypes[day];  // Use delete instead
+                        state.cleaningDays = state.cleaningDays.filter(d => d !== day);
+                    } else {
+                        // Select: remove active from other buttons for this day
+                        document.querySelectorAll(`[data-day="${day}"]`).forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        
+                        state.cleaningTypes[day] = type;
+                        if (!state.cleaningDays.includes(day)) {
+                            state.cleaningDays.push(day);
+                        }
+                    }
+                    
+                    debouncedUpdate(updatePriceDisplay);
+                });
+            });
+
+            // Initial calculation
+            updatePriceDisplay();
+
+            document.addEventListener('change', function(e) {
+                if (e.target.classList.contains('task-checkbox')) {
+                    debouncedUpdate(updatePriceDisplay);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
