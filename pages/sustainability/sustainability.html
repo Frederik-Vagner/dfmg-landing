@@ -269,10 +269,7 @@
             .slide-image { height: 250px; }
         }
     </style>
-    
-    <!-- Non-critical CSS deferred -->
-    <link rel="preload" href="../../css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-</head>
+    </head>
 <body>
     <!-- Header Component -->
     <div id="header"></div>
@@ -554,9 +551,14 @@
             }
         }
 
-        // Initialize when page loads
         document.addEventListener('DOMContentLoaded', () => {
-            new SustainabilitySlider();
+            const slider = new SustainabilitySlider();
+            
+            // Handle URL fragments
+            const hash = window.location.hash;
+            if (hash === '#miljoe') slider.goToSlide(1);
+            else if (hash === '#social') slider.goToSlide(2);
+            else if (hash === '#governance') slider.goToSlide(3);
         });
     </script>
 </body>

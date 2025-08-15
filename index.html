@@ -3,328 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - All-In-One Facility Service</title>
+    <title>DFMG - Facility Service</title>
     <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
-
-    <!-- Montserrat Font -->
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Critical CSS inline -->
-    <style>
-        body { 
-            margin: 0; 
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-            padding-top: 100px; 
-            line-height: 1.6;
-        }
-        .hero { 
-            min-height: 80vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            background: #f8fafc;
-        }
-        .container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 0 20px; 
-        }
-        .btn { 
-            padding: 15px 30px; 
-            margin: 10px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            display: inline-block; 
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .btn.primary { 
-            background: #22c55e; 
-            color: white; 
-        }
-        .btn.secondary { 
-            background: transparent; 
-            color: #344767; 
-            border: 2px solid #344767; 
-        }
-        .section { 
-            padding: 4rem 0; 
-        }
-        h1 { 
-            font-size: 3rem; 
-            font-weight: 300; 
-            margin-bottom: 1rem; 
-            color: #344767;
-        }
-        h2 { 
-            font-size: 2.5rem; 
-            font-weight: 600; 
-            margin-bottom: 1rem; 
-            color: #344767;
-        }
-        .subtitle { 
-            color: #4285f4; 
-            font-size: 0.9rem; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            margin-bottom: 1rem; 
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.8rem; }
-            .btn { padding: 12px 24px; margin: 5px; }
-        }
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    body { 
+        margin: 0; 
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+        padding-top: 100px; 
+        line-height: 1.6;
+    }
+    .hero { 
+        min-height: 80vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        background: #f8fafc;
+    }
+    .container { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 20px; 
+    }
+    .btn { 
+        padding: 15px 30px; 
+        margin: 10px; 
+        text-decoration: none; 
+        border-radius: 50px; 
+        display: inline-block; 
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    .btn.primary { 
+        background: #22c55e; 
+        color: white; 
+    }
+    .btn.secondary { 
+        background: transparent; 
+        color: #344767; 
+        border: 2px solid #344767; 
+    }
+    .section { 
+        padding: 4rem 0; 
+    }
+    h1 { 
+        font-size: 3rem; 
+        font-weight: 300; 
+        margin-bottom: 1rem; 
+        color: #344767;
+    }
+    h2 { 
+        font-size: 2.5rem; 
+        font-weight: 600; 
+        margin-bottom: 1rem; 
+        color: #344767;
+    }
+    .subtitle { 
+        color: #4285f4; 
+        font-size: 0.9rem; 
+        font-weight: 600; 
+        text-transform: uppercase; 
+        letter-spacing: 1px; 
+        margin-bottom: 1rem; 
+    }
+    @media (max-width: 768px) {
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.8rem; }
+        .btn { padding: 12px 24px; margin: 5px; }
+    }
 
-        .section-intro { 
-            text-align: center; 
-            margin-bottom: 3rem; 
-        }
-        .carousel-nav { 
-            display: flex; 
-            justify-content: center; 
-            gap: 10px; 
-            margin-top: 20px; 
-        }
-        .services-carousel { 
-            overflow: hidden; 
-        }
-        .services-track { 
-            display: flex; 
-            transition: transform 0.3s ease; 
-            gap: 20px; 
-        }
-        .service-card { 
-            min-width: calc(33.333% - 14px); 
-            height: 350px;
-            background: white; 
-            padding: 1.5rem; 
-            border-radius: 12px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-            border: 1px solid #e2e8f0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-        .service-card h3 { 
-            color: #344767; 
-            margin-bottom: 0.75rem; 
-            font-size: 1.2rem; 
-            font-weight: 600;
-        }
-        .service-card p { 
-            color: #666; 
-            margin: 0; 
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        .carousel-btn { 
-            background: #4285f4; 
-            color: white; 
-            border: none; 
-            width: 40px; 
-            height: 40px; 
-            border-radius: 50%; 
-            cursor: pointer; 
-            font-size: 18px; 
-        }
-        .carousel-btn:hover { 
-            background: #3367d6; 
-        }
+    .section-intro { 
+        text-align: center; 
+        margin-bottom: 3rem; 
+    }
+    .carousel-nav { 
+        display: flex; 
+        justify-content: center; 
+        gap: 10px; 
+        margin-top: 20px; 
+    }
+    .services-carousel { 
+        overflow: hidden; 
+    }
+    .services-track { 
+        display: flex; 
+        transition: transform 0.3s ease; 
+        gap: 20px; 
+    }
+    .service-card { 
+        min-width: calc(33.333% - 14px); 
+        height: 350px;
+        background: white; 
+        padding: 1.5rem; 
+        border-radius: 12px; 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .service-card h3 { 
+        color: #344767; 
+        margin-bottom: 0.75rem; 
+        font-size: 1.2rem; 
+        font-weight: 600;
+    }
+    .service-card p { 
+        color: #666; 
+        margin: 0; 
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    .carousel-btn { 
+        background: #4285f4; 
+        color: white; 
+        border: none; 
+        width: 40px; 
+        height: 40px; 
+        border-radius: 50%; 
+        cursor: pointer; 
+        font-size: 18px; 
+    }
+    .carousel-btn:hover { 
+        background: #3367d6; 
+    }
 
+    .cta-box {
+        background: #344767;
+        border-radius: 20px;
+        padding: 3rem;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        min-height: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+    .cta-left {
+        text-align: left;
+    }
+    .cta-left h2 {
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .cta-left p {
+        color: rgba(255,255,255,0.9);
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .cta-left .btn {
+        background: #22c55e;
+        color: white;
+        font-size: 1rem;
+        padding: 14px 28px;
+    }
+    .cta-left .btn:hover {
+        background: #16a34a;
+    }
+    .cta-right {
+        /* Empty space for future image */
+    }
+    @media (max-width: 768px) {
         .cta-box {
-            background: #344767;
-            border-radius: 20px;
-            padding: 3rem;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            min-height: 300px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            text-align: center;
         }
-        .cta-left {
-            text-align: left;
-        }
-        .cta-left h2 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-        .cta-left p {
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 2rem;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        .cta-left .btn {
-            background: #22c55e;
-            color: white;
-            font-size: 1rem;
-            padding: 14px 28px;
-        }
-        .cta-left .btn:hover {
-            background: #16a34a;
-        }
-        .cta-right {
-            /* Empty space for future image */
-        }
-        @media (max-width: 768px) {
-            .cta-box {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
+    }
 
+    .about-flex-layout {
+        display: flex;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .photos-left,
+    .photos-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .content-center {
+        flex: 2;
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+    .photo-placeholder {
+        height: 120px;
+        background: #f8fafc;
+        border: 2px dashed #cbd5e1;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .about-text h2 {
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        color: #666;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .about-stats-small {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .stat-small {
+        text-align: center;
+        padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border: 1px solid #e2e8f0;
+        min-width: 80px;
+    }
+
+    .stat-number-small {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #22c55e;
+        margin-bottom: 0.25rem;
+    }
+
+    .stat-label-small {
+        color: #666;
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
         .about-flex-layout {
-            display: flex;
+            flex-direction: column;
             gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
         }
-
+        
         .photos-left,
         .photos-right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            display: none;
         }
-
+        
         .content-center {
-            flex: 2;
-            text-align: center;
-            padding: 0 2rem;
+            padding: 0;
         }
-
-        .photo-placeholder {
-            height: 120px;
-            background: #f8fafc;
-            border: 2px dashed #cbd5e1;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .about-text h2 {
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .about-text p {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
+        
         .about-stats-small {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1rem;
         }
+    }
 
-        .stat-small {
-            text-align: center;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            min-width: 80px;
-        }
-
-        .stat-number-small {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #22c55e;
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-label-small {
-            color: #666;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .about-flex-layout {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .photos-left,
-            .photos-right {
-                display: none;
-            }
-            
-            .content-center {
-                padding: 0;
-            }
-            
-            .about-stats-small {
-                gap: 1rem;
-            }
-        }
-
-        .client-logos {
-            margin-top: 3rem;
-            text-align: center;
-        }
-        .logos-text {
-            color: #666;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    .client-logos {
+        margin-top: 3rem;
+        text-align: center;
+    }
+    .logos-text {
+        color: #666;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .logos-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    .client-logo {
+        height: 40px;
+        max-width: 120px;
+        object-fit: contain;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+        filter: grayscale(100%);
+    }
+    .client-logo:hover {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+    @media (max-width: 768px) {
         .logos-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
+            gap: 2rem;
         }
         .client-logo {
-            height: 40px;
-            max-width: 120px;
-            object-fit: contain;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-            filter: grayscale(100%);
+            height: 30px;
+            max-width: 100px;
         }
-        .client-logo:hover {
-            opacity: 1;
-            filter: grayscale(0%);
-        }
-        @media (max-width: 768px) {
-            .logos-row {
-                gap: 2rem;
-            }
-            .client-logo {
-                height: 30px;
-                max-width: 100px;
-            }
-        }
-    </style>
-    
-    <!-- Non-critical CSS deferred -->
-    <link rel="preload" href="css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-</head>
+    }
+</style>
 <body>
     <!-- Header Component -->
     <div id="header"></div>

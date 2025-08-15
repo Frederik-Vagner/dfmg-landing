@@ -1,7 +1,183 @@
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+/* Footer - Mobile-First Performance CSS */
+.footer {
+    background: #1a1f36;
+    color: white;
+    padding: 40px 0 20px;
+}
 
-</head>
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-description {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links a:hover {
+    color: #94a3b8;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact a {
+    color: #94a3b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact a:hover {
+    color: white;
+}
+
+.footer-contact i {
+    width: 16px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: #334155;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    background: #4285f4;
+    color: white;
+}
+
+.footer-bottom a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 20px;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+.copyright {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    background-color: white;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Desktop enhancements */
+@media (min-width: 768px) {
+    .footer-main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .footer-section:nth-child(1) {
+        text-align: end;
+        align-self: center;
+    }
+    
+    .footer-section:nth-child(2) {
+        flex: 1.5;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .footer-section:nth-child(3) {
+        text-align: start;
+        align-self: center;
+    }
+}
+</style>
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-main">
@@ -45,7 +221,7 @@
                             kontakt@dfmg.dk
                         </a>
                         <a href="#">
-                            <i class="fas fa-id-card"></i>
+                            <i class="fas fa-building"></i>
                             44646102
                         </a>
                     </div>

@@ -610,3 +610,27 @@
     </script>
 </body>
 </html>
+
+
+
+a {
+    color: #565656;
+    text-decoration: none;
+    font-weight
+}
+
+a:hover {
+    color: #344767;
+    border-bottom: 2px solid #344767;
+}
+
+a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #344767;
+
+}

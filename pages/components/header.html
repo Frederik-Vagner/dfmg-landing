@@ -1,3 +1,250 @@
+<style>
+/* Header - Mobile-First Performance CSS */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 960px;
+    border-radius: 20px;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.dropdown {
+    position: fixed;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 20px 20px;
+    padding: 5px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    width: 960px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.dropdown::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
+.nav-item::before,
+.nav-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: transparent;
+    z-index: 98;
+}
+
+.nav-item::before {
+    left: -15px;
+    width: 15px;
+}
+
+.nav-item::after {
+    right: -15px;
+    width: 15px;
+}
+
+.nav-item:first-of-type::before {
+    display: none;
+}
+
+.nav-item:last-of-type::after {
+    display: none;
+}
+
+
+.nav:hover ~ * .header,
+.header:has(.nav:hover) {
+    border-radius: 20px 20px 0 0;
+}
+
+.header * {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Info */
+.contact {
+    overflow: hidden;
+    height: 22px;
+    position: relative;
+    display: none;
+    align-items: center;
+    font-size: 1rem;
+    color: #585858;
+    min-width: 150px;
+}
+
+.contact span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    animation: carousel 8s infinite ease-in-out;
+    opacity: 0;
+    transform: translateY(22px);
+    font-weight: 500;
+    color: #344767;
+    line-height: 1;
+}
+
+.contact span:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.contact span:first-child {
+    animation-delay: 0s;
+}
+
+@keyframes carousel {
+    0% { opacity: 0; transform: translateY(25px); }
+    8%, 42% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0; transform: translateY(-25px); }
+    58%, 100% { opacity: 0; transform: translateY(25px); }
+}
+
+/* Navigation */
+.nav {
+    position: relative;
+    display: none;
+    gap: 30px;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #565656;
+    font-weight: 500;
+}
+
+.nav a:hover,
+.nav-item:hover > a,
+:hover { 
+    color: #344767; 
+}
+
+.nav-item { 
+    position: relative; 
+}
+
+/* Dropdown Menu */
+
+
+.nav-item:hover .dropdown,
+.dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown a {
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #565656;
+}
+
+.dropdown a:hover {
+    color: #344767;
+}
+
+.dropdown a:hover strong,
+.dropdown a:hover small {
+    color: #344767;
+}
+
+.dropdown strong { 
+    display: block; 
+    margin-bottom: 5px;
+    color: #565656;
+}
+
+.dropdown small { 
+    color: #565656; 
+    font-size: 0.85em; 
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #565656;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Mobile Menu */
+.menu-checkbox { 
+    display: none; 
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: flex-end;
+    color: #565656;
+}
+
+
+
+/* Show mobile menu when checkbox checked */
+.menu-checkbox:checked ~ .mobile-nav {
+    display: flex;
+}
+
+/* Desktop Responsive Styles - Layout Only */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+    
+    .nav { 
+        display: flex;
+    }
+    
+    .menu-btn, 
+    .mobile-nav { 
+        display: none; 
+    }
+
+    .contact { 
+        display: flex;
+    }
+}
+</style>
 <header class="header">
     <div class="header-container">
         <!-- Logo -->
@@ -11,33 +258,30 @@
             <div class="nav-item">
                 <a href="/pages/services/services.html">Services</a>
                 <div class="dropdown">
-                    <a href="/pages/services/cleaning.html"><strong>Professionel Rengøring</strong><br><small>Kontorer, skoler, restauranter og eventlokaler</small></a>
-                    <a href="/pages/services/property.html"><strong>Ejendomsservice</strong><br><small>Vedligeholdelse af trapper, opgange og elevatorer</small></a>
-                    <a href="/pages/services/handyman.html"><strong>Handyman Services</strong><br><small>Reparationer, vedligeholdelse og møbelmontering</small></a>
-                    <a href="/pages/services/supplies.html"><strong>Supplies & Produkter</strong><br><small>Hygiejneprodukter og office supplies</small></a>
-                    <a href="/pages/services/piccoline.html"><strong>Piccoline Opgaver</strong><br><small>Mindre administrative opgaver og specialopgaver</small></a>
-                    <a href="/pages/services/windows.html"><strong>Vinduespolering</strong><br><small>Professionel vinduesrens indvendig og udvendig</small></a>
+                    <a href="/pages/services/cleaning.html"><strong>Professionel Rengøring</strong><small>Kontorer, skoler, restauranter og eventlokaler</small></a>
+                    <a href="/pages/services/property.html"><strong>Ejendomsservice</strong><small>Vedligeholdelse af trapper, opgange og elevatorer</small></a>
+                    <a href="/pages/services/handyman.html"><strong>Handyman Services</strong><small>Reparationer, vedligeholdelse og møbelmontering</small></a>
+                    <a href="/pages/services/supplies.html"><strong>Supplies & Produkter</strong><small>Hygiejneprodukter og office supplies</small></a>
+                    <a href="/pages/services/piccoline.html"><strong>Piccoline Opgaver</strong><small>Mindre administrative opgaver og specialopgaver</small></a>
+                    <a href="/pages/services/windows.html"><strong>Vinduespolering</strong><small>Professionel vinduesrens indvendig og udvendig</small></a>
                 </div>
             </div>
             
             <div class="nav-item">
                 <a href="/pages/sustainability/sustainability.html">Bæredygtighed</a>
                 <div class="dropdown">
-                    <a href="/pages/sustainability/sustainability.html"><strong>Miljø & Klima</strong><br><small>Grøn omstilling, CO2-reduktion og miljøvenlige produkter</small></a>
-                    <a href="/pages/sustainability/sustainability.html"><strong>Social Bæredygtighed</strong><br><small>Inklusion, lokalsamfund engagement og medarbejdervelfærd</small></a>
-                    <a href="/pages/sustainability/sustainability.html"><strong>Governance</strong><br><small>Etiske værdier, transparens og ansvarlig virksomhedsledelse</small></a>
+                    <a href="/pages/sustainability/sustainability.html#miljoe"><strong>Miljø & Klima</strong><small>Grøn omstilling, CO2-reduktion og miljøvenlige produkter</small></a>
+                    <a href="/pages/sustainability/sustainability.html#social"><strong>Social Bæredygtighed</strong><small>Inklusion, lokalsamfund engagement og medarbejdervelfærd</small></a>
+                    <a href="/pages/sustainability/sustainability.html#governance"><strong>Governance</strong><small>Etiske værdier, transparens og ansvarlig virksomhedsledelse</small></a>
                 </div>
             </div>
             
             <div class="nav-item">
                 <a href="/pages/about/">Indblik</a>
                 <div class="dropdown">
-                    <a href="/pages/about/"><strong>Vores Historie</strong><br><small>Historien omkring hvordan DFMG blev til</small></a>
-                    <a href="/pages/cases/"><strong>Kundecases</strong><br><small>Eksempler på succesfulde projekter og samarbejder</small></a>
-                    <a href="/pages/news/"><strong>Nyheder & Artikler</strong><br><small>Indsigt, bæredygtighed, innovation og branchenyheder</small></a>
-                    <a href="/pages/technology/"><strong>Teknologi & Processer</strong><br><small>DFMG Platform, smart automation og procesoptimering</small></a>
-                    <a href="/pages/jobs/"><strong>Ledige stillinger</strong><br><small>Karrieremuligheder og ledige stillinger</small></a>
-                    <a href="/pages/vision/"><strong>Vision & Mission</strong><br><small>Vores værdier og langsigtede mål</small></a>
+                    <a href="/pages/about/"><strong>Om DFMG</strong><small>ores værdier og langsigtede mål</small></a>
+                    <a href="/pages/technology/"><strong>Teknologi & Processer</strong><small>DFMG Platform, smart automation og procesoptimering</small></a>
+                    <a href="/pages/news/"><strong>Nyheder & Artikler</strong><small>Indsigt, bæredygtighed, innovation og branchenyheder</small></a>
                 </div>
             </div>
             
