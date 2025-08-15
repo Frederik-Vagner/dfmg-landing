@@ -624,7 +624,7 @@
             let weeklyCost = 0;
             let baseAreaCost = 0, toiletCost = 0, kitchenCost = 0, meetingRoomCost = 0;
 
-            // Calculate for each selected day (NO TASK COSTS)
+            // Calculate for each selected day WITH TASK COSTS
             state.cleaningDays.forEach(day => {
                 const cleaningType = state.cleaningTypes[day];
                 if (cleaningType) {
@@ -633,9 +633,23 @@
                     const kitchenDayCost = state.kitchens * RATES.kitchenRate[cleaningType];
                     const meetingRoomDayCost = state.meetingRooms * RATES.meetingRoomRate[cleaningType];
                     
-                    weeklyCost += areaCost + toiletDayCost + kitchenDayCost + meetingRoomDayCost;
+                    // ADD TASK COSTS BACK
+                    let taskCosts = 0;
+                    document.querySelectorAll('.task-checkbox:checked').forEach(checkbox => {
+                        const task = checkbox.dataset.task;
+                        const section = checkbox.dataset.section;
+                        
+                        if (task && section && RATES.taskRates[section]?.[task]?.[cleaningType]) {
+                            const multiplier = section === 'office' ? 1 : 
+                                            section === 'kitchen' ? state.kitchens :
+                                            section === 'toilet' ? state.toilets : 1;
+                            taskCosts += RATES.taskRates[section][task][cleaningType] * multiplier;
+                        }
+                    });
                     
-                    // Accumulate monthly costs (NO task costs added to base)
+                    weeklyCost += areaCost + toiletDayCost + kitchenDayCost + meetingRoomDayCost + taskCosts;
+                    
+                    // Accumulate monthly costs
                     baseAreaCost += areaCost * 4.33;
                     toiletCost += toiletDayCost * 4.33;
                     kitchenCost += kitchenDayCost * 4.33;
