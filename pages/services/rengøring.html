@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFMG - Facility Service</title>
+    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    <style>
+        /* Core Variables */
+        :root {
+            --color-primary: #22c55e;
+            --color-primary-dark: #16a34a;
+            --color-charcoal: #344767;
+            --color-dark-gray: #565656;
+            --color-medium-gray: #666;
+            --color-light-gray: #f8fafc;
+            --color-white: #ffffff;
+            --color-warning: #f59e0b;
+            --color-slate: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1f36;
+            background: var(--color-light-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-auto {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header .subtitle {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--color-medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--color-charcoal);
+        }
+
+        /* Services Section */
+        .services-section {
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+            border: 1px solid #f1f5f9;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .service-image-container {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(1.2) brightness(0.9) saturate(1.1);
+            transition: filter 0.3s;
+        }
+
+        .service-card:hover .service-image {
+            filter: contrast(1.3) brightness(0.95) saturate(1.2);
+        }
+
+        .photo-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .photo-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+            backdrop-filter: blur(2px);
+        }
+
+        .photo-dot.active {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .service-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .service-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .service-features i {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            width: 14px;
+        }
+
+        .service-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: auto;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: linear-gradient(135deg, var(--color-light-gray), #f1f5f9);
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.25rem;
+        }
+
+        .mini-chart {
+            width: 100%;
+            height: 40px;
+            margin-top: 0.5rem;
+        }
+
+        .chart-bar {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+            height: 100%;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.5rem;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: width 0.3s;
+        }
+
+        .services-summary {
+            background: var(--color-light-gray);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+
+        .summary-stat {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .summary-label {
+            font-size: 0.9rem;
+            color: var(--color-medium-gray);
+            text-transform: uppercase;
+        }
+
+        /* Cleaning Types Section */
+        .cleaning-types {
+            background: var(--color-light-gray);
+        }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .type-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+        }
+
+        .type-badge {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .type-card h3 {
+            font-size: 2rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .type-card p {
+            font-size: 1.1rem;
+            color: var(--color-medium-gray);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--color-charcoal);
+            font-weight: 500;
+        }
+
+        .features-list i {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+        }
+
+        /* Process Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step h4 {
+            font-size: 1.3rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .process-step p {
+            color: var(--color-medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Features Showcase */
+        .features-showcase {
+            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.3s;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Visual Demo */
+        .visual-demo {
+            background: var(--color-light-gray);
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .demo-mockup {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .mockup-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .mockup-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--color-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            background: var(--color-light-gray);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .calendar-day.active {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .report-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--color-light-gray);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .status-badge {
+            background: var(--color-primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .status-badge.ongoing {
+            background: var(--color-warning);
+        }
+
+        /* Before/After Gallery */
+        .gallery-section {
+            background: white;
+        }
+
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .before-after-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .image-container {
+            position: relative;
+            height: 200px;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-medium-gray);
+            font-size: 0.9rem;
+        }
+
+        .image-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h4 {
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .card-content p {
+            color: var(--color-medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-transparent {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card {
+                min-height: auto;
+            }
+
+            .service-stats {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .types-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+<body>
+<!-- Header Component -->
+<div id="header"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Erhvervsrengøring</h1>
+                <p class="hero-subtitle">Professionel rengøringsservice der skaber rene, produktive arbejdsmiljøer for jeres virksomhed</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i>
+                        Pris Beregner
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-arrow-down"></i>
+                        Se Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section section-auto" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">VORES SPECIALER</div>
+                <h2>Erhvervsrengøring for Alle Brancher</h2>
+                <p>Vi leverer skræddersyede rengøringsløsninger til virksomheder i hele Danmark med fokus på kvalitet, pålidelighed og bæredygtighed</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Kontor & Kontorfællesskaber Card -->
+                <div class="service-card">
+                    <div class="service-image-container">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f1f5f9, #e2e8f0); display: flex; align-items: center; justify-content: center; color: #64748b;">Kontor rengøring billede</div>
+                        <div class="photo-dots">
+                            <div class="photo-dot active"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge">HACCP Certificeret</div>
+                        <h3>Restauranter & Caféer</h3>
+                        <p>Specialiseret fødevaresikker rengøring af køkkener, spiseområder og sanitære faciliteter i overensstemmelse med HACCP.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> HACCP compliance</li>
+                            <li><i class="fas fa-check"></i> Kommercielle køkkener</li>
+                            <li><i class="fas fa-check"></i> Fedtfjerning og dybderens</li>
+                            <li><i class="fas fa-check"></i> Ventilationsrensning</li>
+                            <li><i class="fas fa-check"></i> Fødevaresikkerhed</li>
+                        </ul>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">75+</span>
+                                <span class="stat-label">Restauranter</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 88%;">88%</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Klager</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 0%; background: #22c55e;">0%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ejendomsrengøring Card -->
+                <div class="service-card">
+                    <div class="service-image-container">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #faf5ff, #f3e8ff); display: flex; align-items: center; justify-content: center; color: #64748b;">Ejendoms rengøring billede</div>
+                        <div class="photo-dots">
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot active"></div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge">Omfattende</div>
+                        <h3>Ejendomsrengøring</h3>
+                        <p>Omfattende rengøring af fællesarealer, trappeopgange, elevatorer og udendørs områder for ejendomsselskaber.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Fællesarealer og opgange</li>
+                            <li><i class="fas fa-check"></i> Elevatorer og tekniske rum</li>
+                            <li><i class="fas fa-check"></i> Udendørs områder</li>
+                            <li><i class="fas fa-check"></i> Vinduespudsning</li>
+                            <li><i class="fas fa-check"></i> Maintenance support</li>
+                        </ul>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Ejendomme</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 95%;">95%</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Års garanti</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 80%;">5 år</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Statistics Summary -->
+            <div class="services-summary">
+                <div class="summary-grid">
+                    <div>
+                        <div class="summary-stat">950+</div>
+                        <div class="summary-label">Tilfredse Kunder</div>
+                    </div>
+                    <div>
+                        <div class="summary-stat">99.2%</div>
+                        <div class="summary-label">Kvalitetsrate</div>
+                    </div>
+                    <div>
+                        <div class="summary-stat">24/7</div>
+                        <div class="summary-label">Support</div>
+                    </div>
+                    <div>
+                        <div class="summary-stat">5+</div>
+                        <div class="summary-label">Års Erfaring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cleaning Types -->
+    <section class="cleaning-types section-auto">
+        <div class="container">
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="type-badge">Daglig Service</div>
+                    <h3>Løbende Rengøring</h3>
+                    <p>Regelmæssig rengøring der holder jeres faciliteter i topstand hver dag. Perfekt til kontorer og virksomheder der har brug for konsistent vedligeholdelse.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Daglig, ugentlig eller månedlig service</li>
+                        <li><i class="fas fa-check"></i> Fleksible tidsplaner</li>
+                        <li><i class="fas fa-check"></i> Faste dedikerede teams</li>
+                        <li><i class="fas fa-check"></i> Kvalitetskontrol og opfølgning</li>
+                        <li><i class="fas fa-check"></i> Miljøvenlige produkter</li>
+                    </ul>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-badge">Intensiv Service</div>
+                    <h3>Grundig Rengøring / Deep Cleaning</h3>
+                    <p>Omfattende dybderengøring der når alle hjørner og kroge. Ideelt til årlig hovedrengøring, flytterengøring eller efter renoveringer.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Komplet dybderengøring</li>
+                        <li><i class="fas fa-check"></i> Specialudstyr og teknikker</li>
+                        <li><i class="fas fa-check"></i> Vinduespolering inkluderet</li>
+                        <li><i class="fas fa-check"></i> Gulvbehandling og voksning</li>
+                        <li><i class="fas fa-check"></i> Desinfektion af alle flader</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section section-auto" id="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">VORES TILGANG</div>
+                <h2>En Gennemskuelig Proces</h2>
+                <p>Vi sikrer total transparens og kontrol gennem hele samarbejdet, så I altid ved præcis hvad der sker</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Komplet Information</h4>
+                    <p>Vi starter med en grundig gennemgang af jeres behov og forventninger, så vi forstår præcis hvad I ønsker</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Detaljeret Planlægning</h4>
+                    <p>Vi udarbejder en grundplan baseret på jeres lokaler, så alt er aftalt ned til mindste detalje</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Kalender & Sporing</h4>
+                    <p>Fuld oversigt over fremtidige opgaver med mulighed for at spore tilbage op til 1 år</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Live Rapportering</h4>
+                    <p>Medarbejdernes løbende rapporter giver jer indsigt uden at være til stede</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>Visuelt Bevis</h4>
+                    <p>Før og efter billeder efter jeres ønsker dokumenterer vores arbejde</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h4>Fleksibel Kommunikation</h4>
+                    <p>Smidig anmodningsflow ved ændringer + telefonisk tilgængelighed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Showcase -->
+    <section class="features-showcase section-auto" id="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="section-header">
+                    <div class="subtitle">AVANCERET TEKNOLOGI</div>
+                    <h2>Vær Til Stede Uden at Være Der</h2>
+                    <p>Vores digitale platform giver jer total kontrol og indsigt i alle aspekter af jeres rengøringsservice</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Interaktive Grundplaner</h4>
+                        <p>Detaljerede grundplaner hvor alle opgaver er markeret og aftalt på forhånd</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <h4>Kalender Integration</h4>
+                        <p>Fuld oversigt over alle planlagte opgaver med historik og fremtidige bookinger</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-camera"></i>
+                        <h4>Foto Dokumentation</h4>
+                        <p>Før og efter billeder efter jeres specifikke ønsker og krav</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobil Anmodninger</h4>
+                        <p>Hurtig og nem anmodningsflow når jeres tidsplan ændrer sig</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>24/7 Support</h4>
+                        <p>Vi er altid tilgængelige på telefonen når I har brug for os</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Real-time Rapportering</h4>
+                        <p>Live opdateringer fra vores medarbejdere direkte til jeres dashboard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Demo -->
+    <section class="visual-demo section-auto">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">PLATFORM DEMO</div>
+                <h2>Se Hvordan Det Fungerer</h2>
+                <p>Vores intuitive platform giver jer fuld kontrol og gennemsigtighed</p>
+            </div>
+            
+            <div class="demo-grid">
+                <div class="demo-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div>
+                            <h4>Kalender Oversigt</h4>
+                            <p>Juli 2025 - Adnami Hovedkontor</p>
+                        </div>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day">M</div>
+                        <div class="calendar-day">T</div>
+                        <div class="calendar-day">O</div>
+                        <div class="calendar-day">T</div>
+                        <div class="calendar-day">F</div>
+                        <div class="calendar-day">L</div>
+                        <div class="calendar-day">S</div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day active">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day active">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day active">9</div>
+                        <div class="calendar-day active">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day active">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day active">16</div>
+                        <div class="calendar-day active">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day active">20</div>
+                    </div>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                        <i class="fas fa-info-circle"></i> Grønne dage: Planlagt rengøring
+                    </div>
+                </div>
+                
+                <div class="demo-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div>
+                            <h4>Live Rapporter</h4>
+                            <p>Dagens aktiviteter</p>
+                        </div>
+                    </div>
+                    <div class="report-item">
+                        <div class="status-badge">FÆRDIG</div>
+                        <div>
+                            <strong>Reception & Lobby</strong>
+                            <div style="font-size: 0.8rem; color: #666;">Raman N. - 08:01</div>
+                        </div>
+                    </div>
+                    <div class="report-item">
+                        <div class="status-badge">FÆRDIG</div>
+                        <div>
+                            <strong>Mødelokaler 1-3</strong>
+                            <div style="font-size: 0.8rem; color: #666;">Diya P. - 08:01</div>
+                        </div>
+                    </div>
+                    <div class="report-item">
+                        <div class="status-badge ongoing">IGANGVÆRENDE</div>
+                        <div>
+                            <strong>Kontorområde</strong>
+                            <div style="font-size: 0.8rem; color: #666;">Team 1 - 08:45</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Gallery -->
+    <section class="gallery-section section-auto" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">VORES RESULTATER</div>
+                <h2>Før & Efter Eksempler</h2>
+                <p>Se transformationen af vores kunders faciliteter gennem professionel rengøring</p>
+            </div>
+            
+            <div class="before-after-grid">
+                <div class="before-after-card">
+                    <div class="image-container">
+                        <div class="image-badge">FØR</div>
+                        <div>Restaurant køkken - før deep cleaning</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Restaurant Hovedrengøring</h4>
+                        <p>Grundig rengøring af køkken og serveringsområde inkl. HACCP compliance</p>
+                    </div>
+                </div>
+                
+                <div class="before-after-card">
+                    <div class="image-container">
+                        <div class="image-badge">EFTER</div>
+                        <div>Restaurant køkken - efter deep cleaning</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Spotløst Resultat</h4>
+                        <p>Køkkenet er nu klar til service med højeste hygiejnestandard</p>
+                    </div>
+                </div>
+                
+                <div class="before-after-card">
+                    <div class="image-container">
+                        <div class="image-badge">FØR</div>
+                        <div>Kontor reception - før rengøring</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Kontor Reception</h4>
+                        <p>Reception området havde brug for professionel behandling</p>
+                    </div>
+                </div>
+                
+                <div class="before-after-card">
+                    <div class="image-container">
+                        <div class="image-badge">EFTER</div>
+                        <div>Kontor reception - efter rengøring</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Professionel Standard</h4>
+                        <p>Receptionen skaber nu det perfekte første indtryk</p>
+                    </div>
+                </div>
+                
+                <div class="before-after-card">
+                    <div class="image-container">
+                        <div class="image-badge">FØR</div>
+                        <div>Fælles toiletfaciliteter - før</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Sanitære Faciliteter</h4>
+                        <p>Toiletområdet krævede specialiseret hygiejnebehandling</p>
+                    </div>
+                </div>
+                
+                <div class="before-after-card">
+                    <div class="image-container">
+                        <div class="image-badge">EFTER</div>
+                        <div>Fælles toiletfaciliteter - efter</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Hygiejnisk Perfektion</h4>
+                        <p>Faciliteter der opfylder de højeste renhedsstandarder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-auto">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Klar til Professionel Erhvervsrengøring?</h2>
+                <p>Få et skræddersyet tilbud baseret på jeres specifikke behov og faciliteter</p>
+                <div class="hero-cta">
+                    <a href="#calculator" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i>
+                        Beregn Pris Online
+                    </a>
+                    <a href="tel:+4550480273" class="btn cta-transparent">
+                        <i class="fas fa-phone"></i>
+                        Ring Nu: +45 50 48 02 73
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>dot active"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge">Professionel</div>
+                        <h3>Kontor & Kontorfællesskaber</h3>
+                        <p>Professionel rengøring af kontorer, fællesområder, mødelokaler og reception. Vi sikrer et rent og professionelt arbejdsmiljø.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Daglig eller ugentlig service</li>
+                            <li><i class="fas fa-check"></i> Mødelokaler og fællesområder</li>
+                            <li><i class="fas fa-check"></i> Sanitære faciliteter</li>
+                            <li><i class="fas fa-check"></i> Køkkener og spisestuer</li>
+                            <li><i class="fas fa-check"></i> Vinduespolering</li>
+                        </ul>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">Kontorer</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 85%;">85%</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Tilfredshed</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 98%;">98%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Eventlokaler Card -->
+                <div class="service-card">
+                    <div class="service-image-container">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f0f9ff, #e0f2fe); display: flex; align-items: center; justify-content: center; color: #64748b;">Event lokaler rengøring billede</div>
+                        <div class="photo-dots">
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot active"></div>
+                            <div class="photo-dot"></div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge">Specialiseret</div>
+                        <h3>Eventlokaler</h3>
+                        <p>Specialiseret rengøring før og efter events. Vi sørger for at jeres lokaler er perfekte til arrangementer og spotløse bagefter.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Pre-event forberedelse</li>
+                            <li><i class="fas fa-check"></i> Post-event oprydning</li>
+                            <li><i class="fas fa-check"></i> Fleksible tidsplaner</li>
+                            <li><i class="fas fa-check"></i> Specialudstyr tilgængeligt</li>
+                            <li><i class="fas fa-check"></i> Emergency cleaning</li>
+                        </ul>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Events</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 92%;">92%</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Tilgængelighed</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 100%;">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skoler & Institutioner Card -->
+                <div class="service-card">
+                    <div class="service-image-container">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f0fdf4, #dcfce7); display: flex; align-items: center; justify-content: center; color: #64748b;">Skole rengøring billede</div>
+                        <div class="photo-dots">
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot active"></div>
+                            <div class="photo-dot"></div>
+                            <div class="photo-dot"></div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge">Hygiejnisk</div>
+                        <h3>Skoler & Institutioner</h3>
+                        <p>Grundig og hygiejnisk rengøring af undervisningslokaler, kantiner og fællesområder med fokus på børns og unges sundhed.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Børnevenlige produkter</li>
+                            <li><i class="fas fa-check"></i> Grundig desinfektion</li>
+                            <li><i class="fas fa-check"></i> Kantiner og køkkener</li>
+                            <li><i class="fas fa-check"></i> Legepladser og udendørs</li>
+                            <li><i class="fas fa-check"></i> Corona-sikker protokol</li>
+                        </ul>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Skoler</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 75%;">75%</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Sikkerhed</span>
+                                <div class="mini-chart">
+                                    <div class="chart-bar" style="width: 100%;">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <!-- Footer Component -->
+    <div id="footer"></div>
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+</body>
+</html>

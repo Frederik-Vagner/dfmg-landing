@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFMG - Facility Service</title>
+    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #1a1f36;
+    background: #fafbfc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section - Split with product showcase */
+.hero {
+    background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+    padding: 8rem 0 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #344767;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.hero-benefit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.benefit-text {
+    font-weight: 600;
+    color: #344767;
+    font-size: 0.9rem;
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.product-item {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+
+}
+
+.product-item:hover {
+    box-shadow: 0 25px 50px rgba(34, 197, 94, 0.2);
+}
+
+.product-item:hover::before {
+    left: 0;
+}
+
+.product-icon {
+    font-size: 2.5rem;
+    color: #22c55e;
+    margin-bottom: 1rem;
+}
+
+.product-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #344767;
+    margin-bottom: 0.5rem;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-cta {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: #22c55e;
+    color: white;
+    border-color: #22c55e;
+}
+
+.btn-primary:hover {
+    background: #16a34a;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+.btn-secondary {
+    background: #344767;
+    color: white;
+    border-color: #344767;
+}
+
+.btn-secondary:hover {
+    background: #4a5568;
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 6rem 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-header .subtitle {
+    color: #22c55e;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: #344767;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.category-card {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 2rem;
+
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.category-card:hover {
+    background: white;
+    border-color: #22c55e;
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+}
+
+.category-card.active {
+    background: white;
+    border-color: #22c55e;
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.category-card h3 {
+    color: #344767;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.category-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.category-features {
+    list-style: none;
+}
+
+.category-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: #344767;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.category-features i {
+    color: #22c55e;
+    font-size: 0.8rem;
+    width: 12px;
+}
+
+.category-content {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 2rem;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-header {
+    margin-bottom: 2rem;
+}
+
+.content-badge {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.content-section h4 {
+    font-size: 1.8rem;
+    color: #344767;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.content-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Hygiene Products Pricing Table */
+.pricing-table {
+    background: #f8fafc;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.pricing-header {
+    background: linear-gradient(135deg, #344767, #4a5568);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.pricing-header h5 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.pricing-body {
+    padding: 2rem;
+}
+
+.pricing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-item:last-child {
+    border-bottom: none;
+}
+
+.pricing-name {
+    font-weight: 600;
+    color: #344767;
+    flex: 1;
+}
+
+.pricing-specs {
+    color: #666;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.pricing-price {
+    font-weight: 700;
+    color: #22c55e;
+    font-size: 1.1rem;
+}
+
+/* Shop System */
+.shop-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.shop-item {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+}
+
+.shop-item:hover {
+    border-color: #22c55e;
+}
+
+.shop-item-icon {
+    font-size: 2rem;
+    color: #22c55e;
+    margin-bottom: 1rem;
+}
+
+.shop-item h6 {
+    color: #344767;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.shop-item-price {
+    color: #22c55e;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.shop-category-badge {
+    background: #e2e8f0;
+    color: #666;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Custom Request Section */
+.custom-request {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 2px dashed #cbd5e1;
+    text-align: center;
+
+}
+
+.custom-request:hover {
+    border-color: #22c55e;
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+}
+
+.custom-request-icon {
+    font-size: 3rem;
+    color: #22c55e;
+    margin-bottom: 1rem;
+}
+
+.custom-request h5 {
+    color: #344767;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.custom-request p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.custom-request-btn {
+    background: #22c55e;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.custom-request-btn:hover {
+    background: #16a34a;
+}
+
+/* Process Section */
+.process-section {
+    padding: 6rem 0;
+    background: #f8fafc;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.process-step {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 2rem;
+}
+
+.process-step h4 {
+    font-size: 1.3rem;
+    color: #344767;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.process-step p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #344767, #4a5568);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="supplies" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.05)"/><rect x="10" y="10" width="10" height="10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="20" fill="url(%23supplies)"/></svg>') repeat;
+}
+
+.benefits-content {
+    position: relative;
+    z-index: 2;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    text-align: center;
+}
+
+.benefit-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.benefit-card i {
+    font-size: 3rem;
+    color: #22c55e;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.benefit-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.benefit-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .categories-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .category-content {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-showcase {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pricing-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .shop-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+</style>
+<body>
+<!-- Header Component -->
+<div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Supplies & Produkter</h1>
+                    <p class="hero-subtitle">Alt hvad I har brug for til jeres arbejdsplads - fra hygiejneprodukter til kontorartikler. Bestil nemt gennem vores system og få leveret direkte til jeres dør.</p>
+                    
+                    <div class="hero-benefits">
+                        <div class="hero-benefit">
+                            <div class="benefit-icon"><i class="fas fa-truck"></i></div>
+                            <div class="benefit-text">Hurtig levering</div>
+                        </div>
+                        <div class="hero-benefit">
+                            <div class="benefit-icon"><i class="fas fa-tags"></i></div>
+                            <div class="benefit-text">Konkurrencedygtige priser</div>
+                        </div>
+                        <div class="hero-benefit">
+                            <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="benefit-text">Miljøvenlige produkter</div>
+                        </div>
+                        <div class="hero-benefit">
+                            <div class="benefit-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="benefit-text">Nem online bestilling</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#shop" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                            Se Vores Shop
+                        </a>
+                        <a href="#hygiene" class="btn btn-secondary">
+                            <i class="fas fa-spray-can"></i>
+                            Hygiejneprodukter
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="products-showcase">
+                        <div class="product-item">
+                            <div class="product-icon"><i class="fas fa-toilet-paper"></i></div>
+                            <div class="product-name">Toiletpapir</div>
+                            <div class="product-category">Hygiejne</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon"><i class="fas fa-coffee"></i></div>
+                            <div class="product-name">Kaffe & Te</div>
+                            <div class="product-category">Drikkevarer</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon"><i class="fas fa-pen"></i></div>
+                            <div class="product-name">Kontorartikler</div>
+                            <div class="product-category">Office Supplies</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon"><i class="fas fa-cookie-bite"></i></div>
+                            <div class="product-name">Snacks</div>
+                            <div class="product-category">Forplejning</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">VORES PRODUKTKATEGORIER</div>
+                <h2>Alt I Har Brug For på Ét Sted</h2>
+                <p>Fra daglige hygiejneprodukter til kontorartikler og forplejning - vi leverer alt hvad der skal til for at holde jeres arbejdsplads kørende</p>
+            </div>
+            
+            <div class="categories-container">
+                <div class="category-list">
+                    <div class="category-card active" onclick="showCategory('hygiene')">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-spray-can"></i></div>
+                            <h3>Hygiejneprodukter</h3>
+                        </div>
+                        <p>Professionelle rengøringsprodukter og hygiejneartikler til jeres faciliteter</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Toiletpapir og håndklædeark</li>
+                            <li><i class="fas fa-check"></i> Håndsæbe og håndsprit</li>
+                            <li><i class="fas fa-check"></i> Rengøringsmidler</li>
+                            <li><i class="fas fa-check"></i> Skraldesække</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="category-card" onclick="showCategory('office')">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-pencil-alt"></i></div>
+                            <h3>Kontorartikler</h3>
+                        </div>
+                        <p>Alt hvad I har brug for til den daglige kontordrift og administration</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Skriveredskaber og papir</li>
+                            <li><i class="fas fa-check"></i> Post-it notes og kontorprodukter</li>
+                            <li><i class="fas fa-check"></i> Printerpapir og toner</li>
+                            <li><i class="fas fa-check"></i> Arkivering og organisation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="category-card" onclick="showCategory('beverages')">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-mug-hot"></i></div>
+                            <h3>Kaffe, Te & Drikkevarer</h3>
+                        </div>
+                        <p>Høj kvalitets kaffe, te og andre drikkevarer til jeres medarbejdere</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Premium kaffe og espresso</li>
+                            <li><i class="fas fa-check"></i> Forskellige tessorter</li>
+                            <li><i class="fas fa-check"></i> Kakao og varm chokolade</li>
+                            <li><i class="fas fa-check"></i> Tilbehør og maskiner</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="category-card" onclick="showCategory('snacks')">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-cookie"></i></div>
+                            <h3>Snacks & Forplejning</h3>
+                        </div>
+                        <p>Sunde og lækre snacks til møder, events og den daglige pause</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Sunde snacks og nødder</li>
+                            <li><i class="fas fa-check"></i> Kager og kiks til møder</li>
+                            <li><i class="fas fa-check"></i> Frugt og grøntsager</li>
+                            <li><i class="fas fa-check"></i> Specialkost og allergifri</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-content">
+                    <!-- Hygiene Products Content -->
+                    <div class="content-section active" id="hygiene">
+                        <div class="content-header">
+                            <div class="content-badge">Professionel Hygiejne</div>
+                            <h4>Hygiejneprodukter</h4>
+                            <p>Professionelle hygiejneprodukter der sikrer rene og sunde arbejdsmiljøer. Alle produkter er af højeste kvalitet og miljøcertificerede.</p>
+                        </div>
+                        
+                        <div class="pricing-table">
+                            <div class="pricing-header">
+                                <h5>Standard Hygiejneprodukter - Prisliste</h5>
+                            </div>
+                            <div class="pricing-body">
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Toiletpapir 3 lags</div>
+                                    <div class="pricing-specs">(72 ruller)</div>
+                                    <div class="pricing-price">297 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Køkkenrulle 3 lags</div>
+                                    <div class="pricing-specs">(24 ruller)</div>
+                                    <div class="pricing-price">156 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Håndklædeark 2 lags</div>
+                                    <div class="pricing-specs">(4.000 styk)</div>
+                                    <div class="pricing-price">335 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Håndklædeark 2 lags genbrugspapir</div>
+                                    <div class="pricing-specs">(3.000 styk)</div>
+                                    <div class="pricing-price">329 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Håndklædeark 3 lags</div>
+                                    <div class="pricing-specs">(2.300 styk)</div>
+                                    <div class="pricing-price">351 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Neophos</div>
+                                    <div class="pricing-specs">(86 styk)</div>
+                                    <div class="pricing-price">123 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Håndsprit 85%</div>
+                                    <div class="pricing-specs">(600 ml)</div>
+                                    <div class="pricing-price">38 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Sorte skraldesække</div>
+                                    <div class="pricing-specs">(20 ruller per kasse)</div>
+                                    <div class="pricing-price">220 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Håndsæbe</div>
+                                    <div class="pricing-specs">(500ml)</div>
+                                    <div class="pricing-price">30 DKK</div>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-name">Levering</div>
+                                    <div class="pricing-specs">(per gang)</div>
+                                    <div class="pricing-price">99 DKK</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p style="font-size: 0.9rem; color: #666; font-style: italic;">
+                            *Hygiejneprodukter er som udgangspunkt ikke en del af aftalen, men kan tilvælges. Alle priser er ekskl. moms.
+                        </p>
+                    </div>
+                    
+                    <!-- Office Supplies Content -->
+                    <div class="content-section" id="office">
+                        <div class="content-header">
+                            <div class="content-badge">Kontorløsninger</div>
+                            <h4>Kontorartikler & Office Supplies</h4>
+                            <p>Komplet sortiment af kontorartikler til jeres daglige drift. Bestil nemt gennem vores online shop-system.</p>
+                        </div>
+                        
+                        <div class="shop-preview">
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Office Supplies</div>
+                                <div class="shop-item-icon"><i class="fas fa-pen"></i></div>
+                                <h6>BIC M10 Original Kuglepen</h6>
+                                <div class="shop-item-price">800.00 DKK</div>
+                            </div>
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Office Supplies</div>
+                                <div class="shop-item-icon"><i class="fas fa-print"></i></div>
+                                <h6>Kopipapir A4/80g/500 ark</h6>
+                                <div class="shop-item-price">59.00 DKK</div>
+                            </div>
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Office Supplies</div>
+                                <div class="shop-item-icon"><i class="fas fa-sticky-note"></i></div>
+                                <h6>Post-it Notes 76x76 mm</h6>
+                                <div class="shop-item-price">15.00 DKK</div>
+                            </div>
+                        </div>
+                        
+                        <h5 style="color: #344767; margin-bottom: 1rem; font-weight: 600;">Kategorier i vores shop:</h5>
+                        <ul style="list-style: none; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Office Supplies</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Kaffe & Te</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Snacks</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Drikkevarer</li>
+                        </ul>
+                        
+                        <div class="custom-request">
+                            <div class="custom-request-icon"><i class="fas fa-plus-circle"></i></div>
+                            <h5>Mangler I noget specifikt?</h5>
+                            <p>Send os en anmodning med billede af produktet - vi finder det til den bedste pris og tilføjer det til vores katalog</p>
+                            <a href="#" class="custom-request-btn">
+                                <i class="fas fa-camera"></i>
+                                Send Produktanmodning
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Beverages Content -->
+                    <div class="content-section" id="beverages">
+                        <div class="content-header">
+                            <div class="content-badge">Premium Drikkevarer</div>
+                            <h4>Kaffe, Te & Drikkevarer</h4>
+                            <p>Højkvalitets kaffe og te til jeres medarbejdere. Vi leverer alt fra økologisk espresso til specialte-blandinger.</p>
+                        </div>
+                        
+                        <div class="shop-preview">
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Coffee</div>
+                                <div class="shop-item-icon"><i class="fas fa-coffee"></i></div>
+                                <h6>Evo pulver 1kg</h6>
+                                <div class="shop-item-price">179.00 DKK</div>
+                            </div>
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Tea</div>
+                                <div class="shop-item-icon"><i class="fas fa-leaf"></i></div>
+                                <h6>Earl Grey Premium</h6>
+                                <div class="shop-item-price">89.00 DKK</div>
+                            </div>
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Coffee</div>
+                                <div class="shop-item-icon"><i class="fas fa-mug-hot"></i></div>
+                                <h6>Espresso Blend</h6>
+                                <div class="shop-item-price">195.00 DKK</div>
+                            </div>
+                        </div>
+                        
+                        <h5 style="color: #344767; margin-bottom: 1rem; font-weight: 600;">Vores kaffesortiment:</h5>
+                        <ul style="list-style: none; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Økologisk espresso og filterkaffe</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Instant kaffe til hurtig servering</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Koffeinfri alternativer</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Kafferensemaskiner og tilbehør</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Snacks Content -->
+                    <div class="content-section" id="snacks">
+                        <div class="content-header">
+                            <div class="content-badge">Sund Forplejning</div>
+                            <h4>Snacks & Forplejning</h4>
+                            <p>Sunde og lækre snacks til jeres medarbejdere og møder. Alt fra nødder og frugt til special catering.</p>
+                        </div>
+                        
+                        <div class="shop-preview">
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Snacks</div>
+                                <div class="shop-item-icon"><i class="fas fa-seedling"></i></div>
+                                <h6>Blandede Nødder</h6>
+                                <div class="shop-item-price">65.00 DKK</div>
+                            </div>
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Snacks</div>
+                                <div class="shop-item-icon"><i class="fas fa-apple-alt"></i></div>
+                                <h6>Frisk Frugt Levering</h6>
+                                <div class="shop-item-price">125.00 DKK</div>
+                            </div>
+                            <div class="shop-item">
+                                <div class="shop-category-badge">Snacks</div>
+                                <div class="shop-item-icon"><i class="fas fa-cookie"></i></div>
+                                <h6>Økologiske Kiks</h6>
+                                <div class="shop-item-price">45.00 DKK</div>
+                            </div>
+                        </div>
+                        
+                        <h5 style="color: #344767; margin-bottom: 1rem; font-weight: 600;">Specialservice:</h5>
+                        <ul style="list-style: none; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Ugentlig frugtleverancer</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Catering til møder og events</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Allergivenlige alternativer</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #22c55e; margin-right: 0.75rem;"></i> Sæsonbaserede specialiteter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">SÅDAN FUNGERER DET</div>
+                <h2>Fra Bestilling til Levering</h2>
+                <p>En simpel og effektiv proces der sikrer I altid har de produkter I har brug for</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h4>Bestilling</h4>
+                    <p>Log ind på vores platform og bestil fra vores omfattende katalog eller send en produktanmodning</p>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <h4>Behandling</h4>
+                    <p>Vi behandler jeres ordre og sikrer de bedste priser gennem vores leverandørnetværk</p>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <h4>Pakkning</h4>
+                    <p>Produkterne pakkes sikkert og klargøres til hurtig levering til jeres adresse</p>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <h4>Levering</h4>
+                    <p>Hurtig og pålidelig levering direkte til jeres kontor eller andre ønskede adresser</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="section-header">
+                    <div class="subtitle">VORES FORDELE</div>
+                    <h2>Hvorfor Vælge DFMG Som Jeres Leverandør?</h2>
+                    <p>Vi gør det nemt og effektivt at få alle de produkter I har brug for gennem ét system</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-in">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <h4>Nem Online Bestilling</h4>
+                        <p>Intuitiv platform hvor I nemt kan bestille og administrere alle jeres produkter på ét sted</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Forhandlede Priser</h4>
+                        <p>Vi forhandler de bedste priser med leverandører og giver jer fordelen af vores indkøbsmagt</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <i class="fas fa-truck-fast"></i>
+                        <h4>Hurtig Levering</h4>
+                        <p>Effektiv logistik sikrer hurtig levering direkte til jeres arbejdsplads</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Forbrugsanalyse</h4>
+                        <p>Detaljeret rapportering giver jer indsigt i forbrug og hjælper med budgetplanlægning</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <i class="fas fa-recycle"></i>
+                        <h4>Bæredygtige Valg</h4>
+                        <p>Stort udvalg af miljøvenlige og bæredygtige produkter til den ansvarlige virksomhed</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <i class="fas fa-headset"></i>
+                        <h4>Dedikeret Support</h4>
+                        <p>Personlig kundeservice der hjælper jer med alt fra produktvalg til leveringsplanlægning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Klar til at Forenkle Jeres Indkøb?</h2>
+                <p>Få adgang til vores omfattende produktkatalog og oplev hvor nemt det er at administrere alle jeres supplies gennem ét system.</p>
+                <div class="hero-cta">
+                    <a href="#calculator" class="btn" style="background: white; color: #22c55e; border-color: white;">
+                        <i class="fas fa-shopping-cart"></i>
+                        Se Vores Shop
+                    </a>
+                    <a href="tel:+4550480273" class="btn" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.3);">
+                        <i class="fas fa-phone"></i>
+                        Ring Nu: +45 50 48 02 73
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+</body>
+</html>

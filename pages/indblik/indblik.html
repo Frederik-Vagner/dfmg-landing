@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFMG - Facility Service</title>
+    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    <style>
+        /* Minimal CSS - Core Variables */
+        :root {
+            --color-primary: #4285f4;
+            --color-success: #22c55e;
+            --color-charcoal: #344767;
+            --color-dark-gray: #64748b;
+            --color-light-gray: #f8fafc;
+            --color-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-auto {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--color-dark-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Timeline - Essential Styles Only */
+        .story-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--color-primary), var(--color-success));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 0 2rem;
+            position: relative;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 4px solid white;
+        }
+
+        .timeline-content h3 {
+            color: var(--color-charcoal);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .achievement-badge {
+            display: inline-block;
+            background: var(--color-success);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Process Steps - Minimal Grid */
+        .work-process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .process-step {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 2px solid #f1f5f9;
+            position: relative;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-success));
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            color: var(--color-charcoal);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Quality Grid */
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .quality-card {
+            background: var(--color-light-gray);
+            border-radius: 16px;
+            padding: 2rem;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .quality-card h3 {
+            color: var(--color-charcoal);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quality-features {
+            list-style: none;
+        }
+
+        .quality-features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .quality-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+        }
+
+        /* Cases Grid */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, var(--color-primary), #1d4ed8);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .case-logo {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.2rem;
+        }
+
+        .case-company {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content {
+            padding: 1.5rem;
+        }
+
+        .case-challenge h4 {
+            color: var(--color-charcoal);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .case-challenge {
+            margin-bottom: 1rem;
+        }
+
+        .case-results {
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .case-results h5 {
+            color: var(--color-success);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--color-success);
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--color-dark-gray);
+        }
+
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #f1f5f9;
+        }
+
+        .news-image {
+            height: 160px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-success));
+            position: relative;
+        }
+
+        .news-date {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--color-charcoal);
+            padding: 0.3rem 0.8rem;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-category {
+            color: var(--color-primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            color: var(--color-charcoal);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-excerpt {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 2rem;
+            }
+            
+            .timeline-year {
+                left: 2rem;
+                width: 50px;
+                height: 50px;
+                font-size: 0.8rem;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+            }
+
+            .timeline-content {
+                margin: 0 0 0 4rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .work-process {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<body>
+<!-- Header Component -->
+<div id="header"></div>
+    <!-- Our Story Section -->
+    <section class="section-auto" id="story">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vores Historie</h2>
+                <p>Fra lille start-up til Danmarks foretrukne facility partner - historien om DFMG's rejse mod excellence</p>
+            </div>
+            
+            <div class="story-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>Starten på Drømmen</h3>
+                        <p>DFMG blev grundlagt med en vision om at revolutionere facility management i Danmark. Vi startede med et lille team af dedikerede medarbejdere og en stor drøm om at skabe positive forandringer i branchen.</p>
+                        <p>Allerede fra starten fokuserede vi på bæredygtige løsninger og enestående kundeservice som vores kerneprincipper.</p>
+                        <span class="achievement-badge">Grundlagt som grøn virksomhed</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-content">
+                        <h3>Første Store Kontrakter</h3>
+                        <p>Vi sikrede vores første større erhvervskontrakter og etablerede os som en pålidelig partner for københavnske virksomheder. Dette år markerede starten på vores specialisering inden for professionel rengøring og ejendomsservice.</p>
+                        <p>Vi implementerede vores bilfri transport politik og blev certificeret inden for miljøvenlig drift.</p>
+                        <span class="achievement-badge">100% Bilfri Transport</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h3>Ekspansion og Innovation</h3>
+                        <p>Markant vækst i kundebase og udvidelse af serviceportefølje. Vi introducerede digitale løsninger for bedre kundeinteraktion og implementerede avancerede kvalitetskontrolsystemer.</p>
+                        <p>Partnerskaber med leading teknologi leverandører sikrede os en position som innovationsdriver i branchen.</p>
+                        <span class="achievement-badge">Digital Transformation</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content">
+                        <h3>Bæredygtighedslederskab</h3>
+                        <p>Vi lancerede vores omfattende bæredygtighedsprogram og blev anerkendt som branchens grønne leder. Implementering af cirkulær økonomi principper og social ansvarlighed i alle aspekter af vores forretning.</p>
+                        <p>Etablering af mentorprogrammer og inklusions-initiativer for medarbejdere.</p>
+                        <span class="achievement-badge">Bæredygtighedsaward</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>Strategisk Facility Partner</h3>
+                        <p>Evolution fra service leverandør til strategisk facility partner. Vi hjælper nu virksomheder med at optimere deres workplace experience og reducere omkostninger gennem holistiske facility løsninger.</p>
+                        <p>Lancering af vores Total Facility Management koncept og dedicated account manager program.</p>
+                        <span class="achievement-badge">200+ Tilfredse Kunder</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>Fremtiden Starter Nu</h3>
+                        <p>Kontinuerlig innovation og vækst med fokus på at blive Danmarks mest betroede facility partner. Vi investerer i ny teknologi, udvider vores team og skaber endnu bedre løsninger for vores kunder.</p>
+                        <p>Ambitiøse mål for de kommende år inkluderer yderligere ekspansion og pioneering af næste generations facility services.</p>
+                        <span class="achievement-badge">Klar til Fremtiden</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="section-auto bg-white" id="work">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hvordan Vi Arbejder</h2>
+                <p>Vores succesformel bygger på systematisk tilgang, høje standarder og konstant fokus på forbedring</p>
+            </div>
+            
+            <div class="work-process">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Analyse & Forståelse</h3>
+                    <p>Vi starter altid med en grundig analyse af kundens behov, udfordringer og målsætninger for at skabe den perfekte løsning.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Skræddersyet Plan</h3>
+                    <p>Baseret på analysen udvikler vi en detaljeret serviceplan der er tilpasset specifikke krav og forventninger.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Professionel Udførelse</h3>
+                    <p>Vores erfarne teams udfører alle opgaver med højeste kvalitet, sikkerhed og opmærksomhed på detaljer.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Kontinuerlig Optimering</h3>
+                    <p>Vi monitorerer løbende performance, indsamler feedback og optimerer vores services for bedst mulige resultater.</p>
+                </div>
+            </div>
+            
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <h3>
+                        <i class="fas fa-shield-alt"></i>
+                        Kvalitetssikring
+                    </h3>
+                    <ul class="quality-features">
+                        <li>Systematiske kvalitetskontroller ved hver service</li>
+                        <li>Certificerede medarbejdere med løbende træning</li>
+                        <li>Digitale checklister og dokumentation</li>
+                        <li>Customer satisfaction tracking og feedback loops</li>
+                        <li>Performance metrics og KPI rapportering</li>
+                        <li>Proaktiv problemløsning og forbedringer</li>
+                    </ul>
+                </div>
+                
+                <div class="quality-card">
+                    <h3>
+                        <i class="fas fa-handshake"></i>
+                        Kundeforhold
+                    </h3>
+                    <ul class="quality-features">
+                        <li>Dedikeret account manager for hver kunde</li>
+                        <li>24/7 support og emergency response</li>
+                        <li>Regelmæssige review møder og planlægning</li>
+                        <li>Transparent kommunikation og rapportering</li>
+                        <li>Fleksible løsninger der tilpasser sig ændringer</li>
+                        <li>Langsigtet partnerskabstænkning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Cases Section -->
+    <section class="section-auto" id="cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kundecases</h2>
+                <p>Virkelige historier fra vores samarbejder - se hvordan vi har hjulpet virksomheder med at opnå deres mål</p>
+            </div>
+            
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="case-company">Adnami</div>
+                        <div class="case-industry">Tech / Marketing</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-challenge">
+                            <h4>Udfordringen</h4>
+                            <p>Adnami havde behov for pålidelig rengøringsservice der kunne matche deres høje standarder og fleksible arbejdsmiljø. De søgte en partner der forstod deres unikke behov som vækstvirksomhed.</p>
+                        </div>
+                        <div class="case-challenge">
+                            <h4>Vores Løsning</h4>
+                            <p>Vi implementerede et fleksibelt rengøringsprogram tilpasset deres dynamiske arbejdsmiljø, med fokus på detaljerne og personlig opmærksomhed.</p>
+                        </div>
+                        <div class="case-results">
+                            <h5>Resultater</h5>
+                            <div class="result-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">100%</div>
+                                    <div class="metric-label">Kundetilfredshed</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">0</div>
+                                    <div class="metric-label">Klager</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="case-company">Nybolig</div>
+                        <div class="case-industry">Ejendomsmægling</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-challenge">
+                            <h4>Udfordringen</h4>
+                            <p>Nybolig havde brug for konsistent, høj kvalitets rengøring på tværs af flere lokationer med varierende behov og tidspunkter for service.</p>
+                        </div>
+                        <div class="case-challenge">
+                            <h4>Vores Løsning</h4>
+                            <p>Multi-lokation rengøringsplan med koordineret logistik og standardiserede processer, men fleksibilitet til lokale tilpasninger.</p>
+                        </div>
+                        <div class="case-results">
+                            <h5>Resultater</h5>
+                            <div class="result-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">5</div>
+                                    <div class="metric-label">Lokationer</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">99%</div>
+                                    <div class="metric-label">Rettidig Service</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <div class="case-company">SOHO</div>
+                        <div class="case-industry">Coworking Space</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-challenge">
+                            <h4>Udfordringen</h4>
+                            <p>SOHO's dynamiske coworking miljø krævede fleksible rengøringsløsninger der kunne håndtere høj aktivitet og varierende belægning.</p>
+                        </div>
+                        <div class="case-challenge">
+                            <h4>Vores Løsning</h4>
+                            <p>Adaptive rengøringsschema baseret på real-time belægning, med ekstra opmærksomhed på fællesområder og høj-trafik zoner.</p>
+                        </div>
+                        <div class="case-results">
+                            <h5>Resultater</h5>
+                            <div class="result-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">95%</div>
+                                    <div class="metric-label">Member Satisfaction</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">30%</div>
+                                    <div class="metric-label">Reduceret Spild</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="case-company">DEAS</div>
+                        <div class="case-industry">Asset Management</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-challenge">
+                            <h4>Udfordringen</h4>
+                            <p>DEAS havde behov for premium facility services der matchede deres professionelle image og høje standarder for kundeoplevelser.</p>
+                        </div>
+                        <div class="case-challenge">
+                            <h4>Vores Løsning</h4>
+                            <p>Comprehensive facility management program med fokus på detaljer, professionel præsentation og seamless service delivery.</p>
+                        </div>
+                        <div class="case-results">
+                            <h5>Resultater</h5>
+                            <div class="result-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">98%</div>
+                                    <div class="metric-label">Service Quality</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">24/7</div>
+                                    <div class="metric-label">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section-auto bg-white" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seneste Nyheder</h2>
+                <p>Hold dig opdateret med de seneste udviklinger, initiativer og milepæle hos DFMG</p>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="news-date">15 Jan 2024</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Bæredygtighed</div>
+                        <h3 class="news-title">DFMG Når 100% CO2-Neutral Drift</h3>
+                        <p class="news-excerpt">Vi er stolte over at kunne annoncere, at DFMG nu har opnået fuldstændig CO2-neutral drift gennem vores bilfri transport og grønne initiativer...</p>
+                        <a href="#" class="read-more">
+                            Læs mere <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="news-date">1 Dec 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Community</div>
+                        <h3 class="news-title">DFMG Støtter Lokal Uddannelsesinitiativ</h3>
+                        <p class="news-excerpt">Som del af vores sociale ansvar støtter DFMG nu lokale uddannelsesprogrammer for unge inden for facility management og bæredygtighed...</p>
+                        <a href="#" class="read-more">
+                            Læs mere <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="news-date">20 Nov 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Growth</div>
+                        <h3 class="news-title">200+ Tilfredse Kunder Milepæl</h3>
+                        <p class="news-excerpt">DFMG fejrer en vigtig milepæl med over 200 aktive, tilfredse kunder på tværs af København og omegn. Tak for tilliden...</p>
+                        <a href="#" class="read-more">
+                            Læs mere <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+</body>
+</html>
+                  
+
+                
+
+               

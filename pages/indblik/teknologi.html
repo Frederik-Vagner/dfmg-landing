@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFMG - Facility Service</title>
+    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    <style>
+        /* Core Variables */
+        :root {
+            --color-primary: #3b82f6;
+            --color-secondary: #06b6d4;
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+            --color-danger: #ef4444;
+            --color-purple: #8b5cf6;
+            --color-charcoal: #334155;
+            --color-dark-gray: #64748b;
+            --color-light-gray: #f8fafc;
+            --color-white: #ffffff;
+            --color-tech-dark: #1e293b;
+            --color-tech-medium: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-auto {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header .subtitle {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--color-dark-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .technology-hero {
+            background: linear-gradient(135deg, var(--color-tech-dark), var(--color-tech-medium));
+            color: white;
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+        }
+
+        .tech-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: var(--color-primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Platform Section */
+        .platform-section {
+            background: var(--color-light-gray);
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .platform-content h3 {
+            font-size: 2rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .platform-content p {
+            font-size: 1.1rem;
+            color: var(--color-dark-gray);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .platform-features {
+            list-style: none;
+        }
+
+        .platform-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .platform-features i {
+            color: var(--color-primary);
+            width: 20px;
+        }
+
+        .platform-visual {
+            background: linear-gradient(135deg, var(--color-tech-dark), var(--color-tech-medium));
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .platform-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            color: var(--color-primary);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Modules Section */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 2px solid #f1f5f9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--module-color);
+        }
+
+        .module-card.tasks { --module-color: var(--color-primary); }
+        .module-card.employees { --module-color: var(--color-success); }
+        .module-card.clients { --module-color: var(--color-warning); }
+        .module-card.automation { --module-color: var(--color-purple); }
+        .module-card.quality { --module-color: var(--color-danger); }
+        .module-card.analytics { --module-color: var(--color-secondary); }
+
+        .module-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--module-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .module-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .module-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .module-features li {
+            color: var(--color-dark-gray);
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .module-features li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--module-color);
+            font-weight: bold;
+        }
+
+        /* Automation Section */
+        .automation-section {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+        }
+
+        .automation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .automation-content h2 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .automation-content p {
+            font-size: 1.1rem;
+            color: var(--color-dark-gray);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .automation-visual {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .automation-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--color-light-gray);
+            border-radius: 12px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: var(--color-charcoal);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .step-content p {
+            color: var(--color-dark-gray);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .automation-benefits {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .benefit-item h4 {
+            color: var(--color-charcoal);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .benefit-item p {
+            color: var(--color-dark-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Integration Section */
+        .integration-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .integration-card {
+            background: linear-gradient(135deg, var(--color-light-gray), #f1f5f9);
+            border-radius: 20px;
+            padding: 3rem;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .integration-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .integration-features {
+            list-style: none;
+        }
+
+        .integration-features li {
+            color: var(--color-dark-gray);
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .integration-features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background: var(--color-primary);
+            border-radius: 50%;
+        }
+
+        /* Innovation Timeline */
+        .innovation-section {
+            background: var(--color-light-gray);
+        }
+
+        .innovation-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 2rem;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 15px solid transparent;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -30px;
+            border-left-color: white;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -30px;
+            border-right-color: white;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .timeline-content h3 {
+            color: var(--color-charcoal);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .technology-cta {
+            background: linear-gradient(135deg, var(--color-tech-dark), var(--color-tech-medium));
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: var(--color-primary);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #2563eb;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: white;
+            color: var(--color-charcoal);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .tech-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .platform-grid,
+            .automation-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .automation-benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .integration-showcase {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline-line {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                margin-left: 4rem;
+            }
+
+            .timeline-content {
+                margin: 0;
+            }
+
+            .timeline-content::before {
+                display: none;
+            }
+
+            .timeline-year {
+                left: 2rem;
+                width: 50px;
+                height: 50px;
+                font-size: 0.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+<body>
+<!-- Header Component -->
+<div id="header"></div>
+
+    <!-- Platform Overview -->
+    <section class="platform-section section-auto">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">DFMG PLATFORM</div>
+                <h2>Hjertet i Vores Operation</h2>
+                <p>Vores proprietære platform integrerer alle aspekter af facility management i ét sammenhængende system</p>
+            </div>
+            
+            <div class="platform-grid">
+                <div class="platform-content">
+                    <h3>Centraliseret Intelligens</h3>
+                    <p>DFMG Platform er udviklet in-house over flere år for at skabe den ultimative facility management løsning. Systemet integrerer task management, medarbejderstyring, kvalitetskontrol og kundeservice i én seamless platform.</p>
+                    <p>Med real-time data og intelligent automation optimerer vi kontinuerligt vores processer for maksimal effektivitet og kundetilfredshed.</p>
+                    
+                    <ul class="platform-features">
+                        <li><i class="fas fa-check"></i> Real-time task tracking og monitoring</li>
+                        <li><i class="fas fa-check"></i> Automatiseret scheduling og ressourceallokering</li>
+                        <li><i class="fas fa-check"></i> Intelligent kvalitetskontrol og rapportering</li>
+                        <li><i class="fas fa-check"></i> Integrated kunde- og medarbejderportaler</li>
+                        <li><i class="fas fa-check"></i> Predictive analytics og performance optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-visual">
+                    <div class="platform-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Avanceret Arkitektur</h3>
+                    <p>Cloud-native platform bygget på moderne teknologi stack med skalerbarhed, sikkerhed og performance i centrum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Modules -->
+    <section class="modules-section section-auto">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">SYSTEM MODULER</div>
+                <h2>Kernefunktionaliteter</h2>
+                <p>Hver komponent arbejder sammen for at skabe en seamless facility management oplevelse</p>
+            </div>
+            
+            <div class="modules-grid">
+                <div class="module-card tasks">
+                    <div class="module-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Management</h3>
+                    <ul class="module-features">
+                        <li>Intelligent scheduling og routing</li>
+                        <li>Real-time status tracking</li>
+                        <li>Automatiske gentagende opgaver</li>
+                        <li>Foto- og videodokumentation</li>
+                        <li>Kvalitetschecklister</li>
+                        <li>Performance analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card employees">
+                    <div class="module-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Medarbejderstyring</h3>
+                    <ul class="module-features">
+                        <li>Kompetence- og tilgængelighedsstyring</li>
+                        <li>Automatisk timeregistrering</li>
+                        <li>Løn og ferieberegninger</li>
+                        <li>Trænings- og certificeringssporing</li>
+                        <li>Mobile check-in/check-out</li>
+                        <li>Performance evaluering</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card clients">
+                    <div class="module-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Kundestyring</h3>
+                    <ul class="module-features">
+                        <li>Multi-lokation administration</li>
+                        <li>Service templates og konfiguration</li>
+                        <li>Automatisk fakturering</li>
+                        <li>Kunde portal med real-time opdateringer</li>
+                        <li>Klage- og anmodningssystem</li>
+                        <li>SLA monitoring og rapportering</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card automation">
+                    <div class="module-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Smart Automation</h3>
+                    <ul class="module-features">
+                        <li>Intelligente gentagelsesmønstre</li>
+                        <li>Automatisk resource allokering</li>
+                        <li>Predictive maintenance scheduling</li>
+                        <li>Auto-completion af forsinkede opgaver</li>
+                        <li>Notifikationer og alerts</li>
+                        <li>Machine learning optimering</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card quality">
+                    <div class="module-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Kvalitetskontrol</h3>
+                    <ul class="module-features">
+                        <li>Digital checklister og inspektioner</li>
+                        <li>Foto-/videodokumentation</li>
+                        <li>Kvalitetsscoring og trends</li>
+                        <li>Kundefeedback integration</li>
+                        <li>Corrective action tracking</li>
+                        <li>Compliance rapportering</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card analytics">
+                    <div class="module-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Insights</h3>
+                    <ul class="module-features">
+                        <li>Real-time performance dashboards</li>
+                        <li>Predictive analytics og forecasting</li>
+                        <li>Custom reporting og KPI tracking</li>
+                        <li>Data visualization og trends</li>
+                        <li>ROI beregninger og cost analysis</li>
+                        <li>Business intelligence integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Automation -->
+    <section class="automation-section section-auto">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">SMART AUTOMATION</div>
+                <h2>Intelligent Procesoptimering</h2>
+                <p>Vores AI-drevne automation reducerer manuel arbejde og øger effektiviteten på tværs af alle processer</p>
+            </div>
+            
+            <div class="automation-grid">
+                <div class="automation-content">
+                    <h2>Automatisering Der Fungerer</h2>
+                    <p>Fra intelligente scheduling algoritmer til automatiske timeout håndteringer - vores platform minimerer manuel intervention og maksimerer operational excellence.</p>
+                    <p>Machine learning algoritmer lærer kontinuerligt af historiske data for at optimere routes, forudsige resourcebehov og identificere kvalitetsforbedringer.</p>
+                </div>
+                
+                <div class="automation-visual">
+                    <div class="automation-flow">
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Intelligent Scheduling</h4>
+                                <p>AI-optimeret task scheduling baseret på lokation, kompetencer og historiske data</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Smart Routing</h4>
+                                <p>Automatisk optimering af ruter for minimal transporttid og maksimal effektivitet</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Auto-Completion</h4>
+                                <p>Automatisk håndtering af forsinkede tasks med intelligent timeout management</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Proactive Alerts</h4>
+                                <p>Real-time notifikationer og early warning systems for alle stakeholders</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Continuous Learning</h4>
+                                <p>Machine learning modeller der forbedrer performance over tid</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="automation-benefits">
+                <div class="benefit-item">
+                    <h4>85% Reduktion</h4>
+                    <p>I manuel administrativt arbejde gennem intelligent automation</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>99.5% Præcision</h4>
+                    <p>I task scheduling og resource allokering</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>50% Hurtigere</h4>
+                    <p>Response tid på kritiske issues og ændringer</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Real-time Sync</h4>
+                    <p>Øjeblikkelig synchronisering på tværs af alle platforme</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Integration -->
+    <section class="integration-section section-auto">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">SYSTEM INTEGRATION</div>
+                <h2>Seamless Connectivity</h2>
+                <p>Vores platform integrerer med eksisterende systemer og tredjepartsservices for maksimal funktionalitet</p>
+            </div>
+            
+            <div class="integration-showcase">
+                <div class="integration-card">
+                    <h3>Finansiel Integration</h3>
+                    <ul class="integration-features">
+                        <li>Automatisk fakturagenerering fra færdige tasks</li>
+                        <li>Real-time lønberegninger baseret på timeregistrering</li>
+                        <li>Integration med accounting software</li>
+                        <li>Automatisk VAT og tax håndtering</li>
+                        <li>Multi-currency support for internationale kunder</li>
+                        <li>Custom pricing models per kunde og service type</li>
+                    </ul>
+                </div>
+                
+                <div class="integration-card">
+                    <h3>Kommunikationsplatforme</h3>
+                    <ul class="integration-features">
+                        <li>SMS og email automation for notifikationer</li>
+                        <li>Push notifications til mobile apps</li>
+                        <li>Integration med customer CRM systemer</li>
+                        <li>Real-time chat support mellem stakeholders</li>
+                        <li>Video calling integration for remote support</li>
+                        <li>Multi-language support og localization</li>
+                    </ul>
+                </div>
+                
+                <div class="integration-card">
+                    <h3>IoT & Hardware Integration</h3>
+                    <ul class="integration-features">
+                        <li>GPS tracking for medarbejder lokation</li>
+                        <li>Smart building sensors og monitoring</li>
+                        <li>RFID/NFC tags for equipment tracking</li>
+                        <li>Integration med adgangskontrolsystemer</li>
+                        <li>Environmental monitoring (temperatur, luftkvalitet)</li>
+                        <li>Predictive maintenance gennem sensor data</li>
+                    </ul>
+                </div>
+                
+                <div class="integration-card">
+                    <h3>Compliance & Sikkerhed</h3>
+                    <ul class="integration-features">
+                        <li>GDPR compliance og data protection</li>
+                        <li>Multi-factor authentication og access control</li>
+                        <li>Audit trails og activity logging</li>
+                        <li>Secure file storage og backup systemer</li>
+                        <li>Industry standard certifications</li>
+                        <li>Regular security audits og penetration testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Timeline -->
+    <section class="innovation-section section-auto">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle">INNOVATION ROADMAP</div>
+                <h2>Kontinuerlig Udvikling</h2>
+                <p>Vores teknologi udvikles konstant for at være på forkant med industriens behov</p>
+            </div>
+            
+            <div class="innovation-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>AI-Powered Insights</h3>
+                        <p>Implementation af machine learning algoritmer for predictive analytics, intelligent resource planning og automatisk kvalitetsoptimering baseret på historiske performance data.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">Q2</div>
+                    <div class="timeline-content">
+                        <h3>Mobile-First Architecture</h3>
+                        <p>Lancering af native mobile apps med offline capabilities, real-time synchronisering og advanced photo/video capture med automatic quality assessment.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">Q3</div>
+                    <div class="timeline-content">
+                        <h3>IoT Integration Platform</h3>
+                        <p>Integration med smart building technologies, environmental sensors og predictive maintenance systemer for proaktiv facility management.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">Q4</div>
+                    <div class="timeline-content">
+                        <h3>Advanced Analytics Dashboard</h3>
+                        <p>Launch af comprehensive business intelligence platform med real-time KPI tracking, custom reporting og predictive forecasting capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>Autonomous Operations</h3>
+                        <p>Udvikling af fully autonomous scheduling, resource allocation og quality control systemer med minimal human intervention requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+</body>
+</html>
