@@ -35,7 +35,6 @@
         align-items: center; 
         justify-content: center; 
         text-align: center; 
-        background: #f8fafc;
     }
     .container { 
         max-width: 1200px; 
@@ -91,7 +90,7 @@
 
     .section-intro { 
         text-align: center; 
-        margin-bottom: 3rem; 
+        margin-bottom: 20px; 
     }
     .carousel-nav { 
         display: flex; 
@@ -105,44 +104,88 @@
     .services-track { 
         display: flex; 
         transition: transform 0.3s ease; 
-        gap: 20px; 
+        width: max-content;
+        gap: 20px;
     }
     .service-card { 
-        min-width: calc(33.333% - 14px); 
-        height: 350px;
+        width: 386px;
+        flex-shrink: 0;
+        height: 520px;
         background: white; 
-        padding: 1.5rem; 
         border-radius: 12px; 
         box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
         border: 1px solid #e2e8f0;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
     }
-    .service-card h3 { 
-        color: #344767; 
-        margin-bottom: 0.75rem; 
-        font-size: 1.2rem; 
+    .service-card img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .service-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+    }
+
+    .service-card h3,
+    .service-card p {
+        position: relative;
+        z-index: 3;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+        margin-bottom: 0.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .service-card h3 {
+        margin-bottom: 0.75rem;
+        font-size: 1.2rem;
         font-weight: 600;
     }
-    .service-card p { 
-        color: #666; 
-        margin: 0; 
+
+    .service-card p {
+        margin: 0 0 1.5rem 0;
         font-size: 0.95rem;
         line-height: 1.4;
     }
     .carousel-btn { 
-        background: #4285f4; 
+        background: #344767; 
         color: white; 
         border: none; 
         width: 40px; 
         height: 40px; 
         border-radius: 50%; 
         cursor: pointer; 
-        font-size: 18px; 
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-btn i{ 
+        font-size: 1.25rem; 
     }
     .carousel-btn:hover { 
-        background: #3367d6; 
+        background: white; 
+    }
+
+    .carousel-btn:hover i{ 
+        color: #344767; 
     }
 
     .cta-box {
@@ -193,38 +236,56 @@
     }
 
     .about-flex-layout {
-        display: flex;
-        gap: 2rem;
+        position: relative;
         max-width: 1200px;
         margin: 0 auto;
-        align-items: center;
+        padding: 4rem 2rem;
+        text-align: center;
     }
 
     .photos-left,
     .photos-right {
-        flex: 1;
+        position: absolute;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
+    .photos-left {
+        left: 0;
+        top: 2rem;
+    }
+
+    .photos-right {
+        right: 0;
+        top: 3rem;
+    }
+
+    
+
     .content-center {
-        flex: 2;
-        text-align: center;
-        padding: 0 2rem;
+        position: relative;
+        z-index: 10;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
     }
 
     .photo-placeholder {
-        height: 120px;
+        width: 80px;
+        height: 80px;
         background: #f8fafc;
-        border: 2px dashed #cbd5e1;
         border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #94a3b8;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .about-text h2 {
@@ -348,7 +409,7 @@
                     <div class="logos-text">Betroet af</div>
                     <div class="logos-row">
                         <img src="images/logos/deas.png" alt="Deas" class="client-logo">
-                        <img src="images/logos/nybolig2.png" alt="Nybolig" class="client-logo">
+                        <img src="images/logos/nybolig.png" alt="Nybolig" class="client-logo">
                         <img src="images/logos/soho.png" alt="SOHO" class="client-logo">
                         <img src="images/logos/adnami.png" alt="Adnami" class="client-logo">
                     </div>
@@ -357,52 +418,145 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="about-flex-layout">
-                <!-- Left column - Photos 1,3,5,7 -->
-                <div class="photos-left">
-                    <div class="photo-placeholder">Photo 1</div>
-                    <div class="photo-placeholder">Photo 3</div>
-                    <div class="photo-placeholder">Photo 5</div>
-                    <div class="photo-placeholder">Photo 7</div>
-                </div>
-                
-                <!-- Center column - Text and Stats -->
-                <div class="content-center">
-                    <div class="about-text">
-                        <div class="subtitle">OM DFMG</div>
-                        <h2>Menneskene bag jeres facility service</h2>
-                        <p>Grundlagt i 2023 af erfarne fagfolk, der ville gøre facility service mere personligt og pålideligt. Vi kombinerer etableret faglig ekspertise med moderne teknologi for at levere den bedste oplevelse til vores kunder.</p>
-                        <p>Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</p>
-                    </div>
-                    <div class="about-stats-small">
-                        <div class="stat-small">
-                            <div class="stat-number-small">1160</div>
-                            <div class="stat-label-small">Rengøringer</div>
-                        </div>
-                        <div class="stat-small">
-                            <div class="stat-number-small">0</div>
-                            <div class="stat-label-small">Udeblivelser</div>
-                        </div>
-                        <div class="stat-small">
-                            <div class="stat-number-small">24/7</div>
-                            <div class="stat-label-small">Support</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right column - Photos 2,4,6,8 -->
-                <div class="photos-right">
-                    <div class="photo-placeholder">Photo 2</div>
-                    <div class="photo-placeholder">Photo 4</div>
-                    <div class="photo-placeholder">Photo 6</div>
-                    <div class="photo-placeholder">Photo 8</div>
-                </div>
+    
+
+    <div class="testimonials-section">
+        <div class="photos-grid">
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+            </div>
+            <div class="photo">
+                <img src="/images/people/human.jpg" alt="Professionel Rengøring" width="640" height="640">
             </div>
         </div>
-    </section>
+
+        <div class="content">
+            <div class="subtitle">OM DFMG</div>
+            <h2>Menneskene bag jeres facility service</h2>
+            <p>Grundlagt i 2023 af erfarne fagfolk, der ville gøre facility service mere personligt og pålideligt. Vi kombinerer etableret faglig ekspertise med moderne teknologi for at levere den bedste oplevelse til vores kunder.</p>
+            <p>Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</p>
+            <a href="#" class="button">Læs mere om os</a>
+        </div>
+    </div>
+
+    <style>
+        .testimonials-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(9, 120px);
+            grid-template-rows: repeat(2, 120px);
+            gap: 15px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+
+        .photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            background: #ddd;
+        }
+
+        /* Top row - photos 1-9 */
+        .photo:nth-child(1) { grid-column: 1; grid-row: 1; transform: translateY(120px); }
+        .photo:nth-child(2) { grid-column: 2; grid-row: 1; transform: translateY(70px); }
+        .photo:nth-child(3) { grid-column: 3; grid-row: 1; transform: translateY(130px); }
+        .photo:nth-child(4) { grid-column: 4; grid-row: 1; transform: translateY(70px); }
+        .photo:nth-child(5) { grid-column: 5; grid-row: 1; transform: translateY(100px); }
+        .photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(70px); }
+        .photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(130px); }
+        .photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(70px); }
+        .photo:nth-child(9) { grid-column: 9; grid-row: 1; transform: translateY(120px); }
+        
+        /* Bottom row - 4 photos at edges */
+        .photo:nth-child(10) { grid-column: 1; grid-row: 2; transform: translateY(120px); }
+        .photo:nth-child(11) { grid-column: 2; grid-row: 2; transform: translateY(70px); }
+        .photo:nth-child(12) { grid-column: 8; grid-row: 2; transform: translateY(70px); }
+        .photo:nth-child(13) { grid-column: 9; grid-row: 2; transform: translateY(120px); }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .label {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
 
     <!-- Services Section -->
     <section id="services" class="section">
@@ -412,34 +566,44 @@
                 <h2>Facility service på autopilot</h2>
                 <p>Færre leverandører at administrere, gennemsigtige omkostninger og garanteret service kvalitet. Fra daglig rengøring til akut vedligeholdelse leverer vi det hele med 99.5% rettidig udførelse.</p>
                 <div class="carousel-nav">
-                    <button class="carousel-btn" onclick="previousServices()">‹</button>
-                    <button class="carousel-btn" onclick="nextServices()">›</button>
+                    <button class="carousel-btn" onclick="previousServices()">
+                        <i class="fa-solid fa-caret-left"></i>
+                    </button>
+                    <button class="carousel-btn" onclick="nextServices()">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </button>
                 </div>
             </div>
             
             <div class="services-carousel">
                 <div class="services-track" id="servicesTrack">
                     <div class="service-card">
+                        <img src="/images/service/cleaning.jpg" alt="Professionel Rengøring" width="640" height="640">
                         <h3>Professionel Rengøring</h3>
                         <p>Kontorer, skoler, restauranter og eventlokaler</p>
                     </div>
                     <div class="service-card">
-                        <h3>Ejendomsservice</h3>
-                        <p>Vedligeholdelse af trapper, opgange og elevatorer</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Handyman Services</h3>
-                        <p>Reparationer, vedligeholdelse og møbelmontering</p>
-                    </div>
-                    <div class="service-card">
+                        <img src="/images/service/delivery.jpg" alt="Supplies & Produkter" width="640" height="640">
                         <h3>Supplies & Produkter</h3>
                         <p>Hygiejneprodukter og office supplies</p>
                     </div>
                     <div class="service-card">
+                        <img src="/images/service/handyman.jpg" alt="Handyman Services" width="640" height="640">
+                        <h3>Handyman Services</h3>
+                        <p>Reparationer, vedligeholdelse og møbelmontering</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="/images/service/janitor.jpg" alt="Ejendomsservice" width="640" height="640">
+                        <h3>Ejendomsservice</h3>
+                        <p>Vedligeholdelse af trapper, opgange og elevatorer</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="/images/service/picoline.jpg" alt="Piccoline Opgaver" width="640" height="640">
                         <h3>Piccoline Opgaver</h3>
                         <p>Mindre administrative opgaver og specialopgaver</p>
                     </div>
                     <div class="service-card">
+                        <img src="/images/service/windowcleaning.jpg" alt="Vinduespolering" width="640" height="640">
                         <h3>Vinduespolering</h3>
                         <p>Professionel vinduesrens indvendig og udvendig</p>
                     </div>
@@ -449,7 +613,7 @@
     </section>
 
     <!-- Client Stories Section -->
-    <section id="testimonials" class="section" style="background: #f8fafc;">
+    <section class="testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-intro">
                 <div class="subtitle">KLIENT SUCCESHISTORIER</div>
@@ -457,33 +621,209 @@
                 <p>Læs hvordan vores kunder har styrket deres facility drift</p>
             </div>
             
-            <div class="testimonials">
+            <div class="testimonials-grid">
+                <!-- Adnami Testimonial -->
                 <div class="testimonial">
-                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte."</blockquote>
+                    <div class="company-logo-section">
+                        <img class="company-logo" src="/images/logos/adnami.png" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <blockquote>DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte.</blockquote>
                     <div class="author">
-                        <strong>Jørgen Gosvig</strong>
-                        <span>CFO & Operations Manager, Adnami</span>
+                        <img class="author-image" src="/images/people/jørgen.jpeg" alt="Handyman Services" width="640" height="640">
+                        <div class="author-info">
+                            <strong>Jørgen Gosvig</strong>
+                            <span>CFO & Operations Manager, Adnami</span>
+                        </div>
                     </div>
                 </div>
-                
+
+                <!-- Nybolig Testimonial -->
                 <div class="testimonial">
-                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte."</blockquote>
+                    <div class="company-logo-section">
+                        <img class="company-logo" src="/images/logos/nybolig.png" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <blockquote>DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte.</blockquote>
                     <div class="author">
-                        <strong>Ossama Freije</strong>
-                        <span>Indehaver af Fire Nybolig-Afdelinger</span>
+                        <img class="author-image" src="/images/people/ossama.jpeg" alt="Handyman Services" width="640" height="640">
+                        <div class="author-info">
+                            <strong>Ossama Freije</strong>
+                            <span>Indehaver af Nybolig Nordvest, Nørrebro, Enghave og Carlsberbyen</span>
+                        </div>
                     </div>
                 </div>
-                
+
+                <!-- SOHO Testimonial -->
                 <div class="testimonial">
-                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte."</blockquote>
+                    <div class="company-logo-section">
+                        <img class="company-logo" src="/images/logos/soho.png" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <blockquote>DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte.</blockquote>
                     <div class="author">
-                        <strong>Cecilie Duedahl Nielsen</strong>
-                        <span>FO, SOHO</span>
+                        <img class="author-image" src="/images/people/cecilie.jpeg" alt="Handyman Services" width="640" height="640">
+                        <div class="author-info">
+                            <strong>Cecilie Duedahl Nielsen</strong>
+                            <span>Office Manager, SOHO</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+
+        .company-logo-section {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .company-logo {
+            height: 50px;
+            max-width: 150px;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .subtitle {
+            color: #4285f4;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-intro h2 {
+            font-size: 2.5rem;
+            color: #344767;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #f1f5f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .testimonial blockquote {
+            font-size: 1.1rem;
+            color: #344767;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: #4285f4;
+            position: absolute;
+            top: -1rem;
+            left: -0.5rem;
+            font-family: Georgia, serif;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f1f5f9;
+        }
+
+        .author-info strong {
+            display: block;
+            color: #344767;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info span {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .company-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .service-badge {
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid #e0f2fe;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 4rem 0;
+            }
+            
+            .section-intro h2 {
+                font-size: 2rem;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .testimonial {
+                padding: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
 
     <!-- Contact CTA Section -->
     <section id="contact" class="section">
@@ -510,12 +850,12 @@
         let currentIndex = 0;
         const totalCards = 6;
         const cardsVisible = 3;
-        const maxIndex = totalCards - cardsVisible; // 3 (positions: 0,1,2,3)
+        const maxIndex = totalCards - cardsVisible;
 
         function updateCarousel() {
             const track = document.getElementById('servicesTrack');
-            const cardWidth = 33.333; // Each card is 1/3 of container
-            track.style.transform = `translateX(-${currentIndex * cardWidth}%)`;
+            const moveDistance = currentIndex * 400; // 386px card + 14px margin = 400px exactly
+            track.style.transform = `translateX(-${moveDistance}px)`;
         }
 
         function nextServices() {

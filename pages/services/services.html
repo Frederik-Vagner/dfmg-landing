@@ -17,7 +17,6 @@
         body { 
             margin: 0; 
             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-            padding-top: 100px; 
             line-height: 1.6;
             color: #344767;
         }
@@ -86,8 +85,8 @@
             transition: flex 0.4s ease;
             color: white;
             display: flex;
-            align-items: end;
-            padding: 2rem;
+            align-items: stretch;
+            padding: 0 2rem 2rem 2rem;
             overflow: hidden;
         }
         .service-column:hover:not(.expanded) {
@@ -122,20 +121,24 @@
             position: relative;
             z-index: 3;
             width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 3rem;
         }
-        .service-title {
-            font-size: 1.5rem;
+       .service-title {
+            font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            writing-mode: vertical-lr;
-            text-orientation: mixed;
-            transform: rotate(180deg);
+            color: white;
             white-space: nowrap;
+            transition: font-size 0.4s ease;
+        }
+        .service-column:hover .service-title {
+            font-size: 1.4rem;
         }
         .service-column.expanded .service-title {
-            writing-mode: initial;
-            text-orientation: initial;
-            transform: none;
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
@@ -288,10 +291,8 @@
                 height: 400px;
             }
             .service-title {
-                writing-mode: initial;
-                text-orientation: initial;
-                transform: none;
                 font-size: 1.3rem;
+                color: white;
             }
             h1 { font-size: 2rem; }
             h2 { font-size: 1.8rem; }
@@ -312,7 +313,7 @@
     <!-- Services Hero Carousel -->
     <section class="services-hero">
         <div class="service-column" data-service="cleaning">
-            <div class="service-bg" style="background-image: url('../../images/placeholder-office.jpg');"></div>
+            <div class="service-bg" style="background-image: url('/images/service/cleaning.jpg');"></div>
             <div class="service-overlay"></div>
             <div class="service-content">
                 <h3 class="service-title">Professionel Rengøring</h3>
@@ -337,7 +338,7 @@
         </div>
 
         <div class="service-column" data-service="property">
-            <div class="service-bg" style="background-image: url('../../images/placeholder-building.jpg');"></div>
+            <div class="service-bg" style="background-image: url('/images/service/janitor.jpg');"></div>
             <div class="service-overlay"></div>
             <div class="service-content">
                 <h3 class="service-title">Ejendomsservice</h3>
@@ -362,7 +363,7 @@
         </div>
 
         <div class="service-column" data-service="handyman">
-            <div class="service-bg" style="background-image: url('../../images/placeholder-handyman.jpg');"></div>
+            <div class="service-bg" style="background-image: url('/images/service/handyman.jpg');"></div>
             <div class="service-overlay"></div>
             <div class="service-content">
                 <h3 class="service-title">Handyman Services</h3>
@@ -387,7 +388,7 @@
         </div>
 
         <div class="service-column" data-service="supplies">
-            <div class="service-bg" style="background-image: url('../../images/placeholder-supplies.jpg');"></div>
+            <div class="service-bg" style="background-image: url('/images/service/delivery.jpg');"></div>
             <div class="service-overlay"></div>
             <div class="service-content">
                 <h3 class="service-title">Supplies & Produkter</h3>
@@ -412,7 +413,7 @@
         </div>
 
         <div class="service-column" data-service="piccoline">
-            <div class="service-bg" style="background-image: url('../../images/placeholder-admin.jpg');"></div>
+            <div class="service-bg" style="background-image: url('/images/service/picoline.jpg');"></div>
             <div class="service-overlay"></div>
             <div class="service-content">
                 <h3 class="service-title">Piccoline Opgaver</h3>
@@ -437,7 +438,7 @@
         </div>
 
         <div class="service-column" data-service="windows">
-            <div class="service-bg" style="background-image: url('../../images/placeholder-windows.jpg');"></div>
+            <div class="service-bg" style="background-image: url('/images/service/windowcleaning.jpg');"></div>
             <div class="service-overlay"></div>
             <div class="service-content">
                 <h3 class="service-title">Vinduespolering</h3>
@@ -610,27 +611,3 @@
     </script>
 </body>
 </html>
-
-
-
-a {
-    color: #565656;
-    text-decoration: none;
-    font-weight
-}
-
-a:hover {
-    color: #344767;
-    border-bottom: 2px solid #344767;
-}
-
-a:hover::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #344767;
-
-}
