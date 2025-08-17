@@ -36,6 +36,7 @@ body {
     color: #333;
     background: #fff;
     padding-top: 100px;
+    padding-bottom: 80px;
 }
 
 /* Main container */
@@ -71,9 +72,14 @@ body {
 .filter-section {
     background: white;
     padding: 1rem 0;
-    margin-bottom: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-top: 1px solid #e2e8f0;
+    height: 80px;
 }
 
 .filter-container {
@@ -156,9 +162,13 @@ body {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    display: grid;
+    display: none; /* ADD THIS LINE - hide all by default */
     grid-template-columns: 1fr 1fr;
     min-height: 500px;
+}
+
+.featured-article[data-featured-category="all"] {
+    display: grid; /* Show only the "all" featured article by default */
 }
 
 .featured-image {
@@ -399,7 +409,6 @@ body {
     margin-top: 4rem;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
 }
 
 .newsletter-content {
@@ -524,7 +533,8 @@ body {
         <div class="container">
             <!-- Featured Article -->
             <div class="featured-section">
-                <div class="featured-article">
+                <!-- Default/All Featured Article -->
+                <div class="featured-article" data-featured-category="all">
                     <div class="featured-image insights">
                         <div class="featured-badge">Udvalgt</div>
                         <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
@@ -540,6 +550,121 @@ body {
                         <h2 class="featured-title">Hvorfor Systematik Slår Talent i Facility Management</h2>
                         <p class="featured-excerpt">De fleste virksomheder tror at god facility service handler om at finde de rigtige medarbejdere. Men systematiske processer skaber langt mere pålidelig service end talent alene.</p>
                         <a href="/pages/indblik/artikler/indsigt/systematik-vs-talent.html" class="featured-cta">
+                            Læs hele artiklen
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Insights Featured Article -->
+                <div class="featured-article" data-featured-category="insights">
+                    <div class="featured-image insights">
+                        <div class="featured-badge">Udvalgt Indsigt</div>
+                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-meta">
+                            <span class="featured-category">INDSIGT</span>
+                            <span>•</span>
+                            <span>8. december 2024</span>
+                            <span>•</span>
+                            <span>5 min læsning</span>
+                        </div>
+                        <h2 class="featured-title">Øjeblikkelige Svar vs. "Jeg Vender Tilbage"</h2>
+                        <p class="featured-excerpt">Hvorfor systematisk dokumentation og data-adgang gør forskellen mellem professionel service og frustrerende ventetid.</p>
+                        <a href="/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html" class="featured-cta">
+                            Læs hele artiklen
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tips Featured Article -->
+                <div class="featured-article" data-featured-category="tips">
+                    <div class="featured-image tips">
+                        <div class="featured-badge">Udvalgte Tips</div>
+                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-meta">
+                            <span class="featured-category">TIPS & TRICKS</span>
+                            <span>•</span>
+                            <span>12. december 2024</span>
+                            <span>•</span>
+                            <span>4 min læsning</span>
+                        </div>
+                        <h2 class="featured-title">5 Tegn På at I Skal Skifte Facility Leverandør</h2>
+                        <p class="featured-excerpt">Kender I disse tegn? Så er det tid til at overveje om jeres nuværende facility partner virkelig leverer den værdi I fortjener.</p>
+                        <a href="/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html" class="featured-cta">
+                            Læs hele artiklen
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sustainability Featured Article -->
+                <div class="featured-article" data-featured-category="sustainability">
+                    <div class="featured-image sustainability">
+                        <div class="featured-badge">Udvalgt Bæredygtighed</div>
+                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-meta">
+                            <span class="featured-category">BÆREDYGTIGHED</span>
+                            <span>•</span>
+                            <span>10. december 2024</span>
+                            <span>•</span>
+                            <span>3 min læsning</span>
+                        </div>
+                        <h2 class="featured-title">100% Bilfri Facility Service: Sådan Gør Vi Det</h2>
+                        <p class="featured-excerpt">Få indblik i hvordan DFMG har elimineret bil-transport og skabt en CO2-neutral facility service uden at gå på kompromis med kvaliteten.</p>
+                        <a href="/pages/indblik/artikler/baeeredygtighed/100-procent-bilfri-facility-service.html" class="featured-cta">
+                            Læs hele artiklen
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Innovation Featured Article -->
+                <div class="featured-article" data-featured-category="innovation">
+                    <div class="featured-image innovation">
+                        <div class="featured-badge">Udvalgt Innovation</div>
+                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-meta">
+                            <span class="featured-category">INNOVATION</span>
+                            <span>•</span>
+                            <span>10. december 2024</span>
+                            <span>•</span>
+                            <span>6 min læsning</span>
+                        </div>
+                        <h2 class="featured-title">Fra Kaos til Kontrol: DFMG's ERP-System Historie</h2>
+                        <p class="featured-excerpt">Gå bag kulisserne og lær hvordan en programmørs vision blev til et system der revolutionerer facility management.</p>
+                        <a href="/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html" class="featured-cta">
+                            Læs hele artiklen
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cases Featured Article -->
+                <div class="featured-article" data-featured-category="cases">
+                    <div class="featured-image cases">
+                        <div class="featured-badge">Udvalgt Case</div>
+                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-meta">
+                            <span class="featured-category">CASE STUDY</span>
+                            <span>•</span>
+                            <span>10. december 2024</span>
+                            <span>•</span>
+                            <span>4 min læsning</span>
+                        </div>
+                        <h2 class="featured-title">Case: 20% Omkostningsreduktion for Tech-Virksomhed</h2>
+                        <p class="featured-excerpt">Hvordan systematisk facility management og data-drevne beslutninger skabte betydelige besparelser uden at kompromittere kvaliteten.</p>
+                        <a href="/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html" class="featured-cta">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -821,6 +946,7 @@ body {
 document.addEventListener('DOMContentLoaded', function() {
     const filterTabs = document.querySelectorAll('.filter-tab');
     const articleCards = document.querySelectorAll('.article-card');
+    const featuredArticles = document.querySelectorAll('[data-featured-category]');
     const searchInput = document.getElementById('searchInput');
 
     // Filter by category
@@ -832,7 +958,28 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const filter = this.getAttribute('data-filter');
             
-            // Show/hide articles
+            // Show/hide featured articles
+            featuredArticles.forEach(featured => {
+                const featuredCategory = featured.getAttribute('data-featured-category');
+                
+                if (filter === 'all') {
+                    // For "all" filter, only show the default "all" featured article
+                    if (featuredCategory === 'all') {
+                        featured.style.display = 'grid';
+                    } else {
+                        featured.style.display = 'none';
+                    }
+                } else {
+                    // For specific filters, show only the matching featured article
+                    if (featuredCategory === filter) {
+                        featured.style.display = 'grid';
+                    } else {
+                        featured.style.display = 'none';
+                    }
+                }
+            });
+            
+            // Show/hide articles (this part stays the same)
             articleCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
@@ -846,6 +993,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Search functionality
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
+        
+        // Hide all featured articles during search
+        if (searchTerm.length > 0) {
+            featuredArticles.forEach(featured => {
+                featured.style.display = 'none';
+            });
+        } else {
+            // Show appropriate featured article when search is cleared
+            const activeFilter = document.querySelector('.filter-tab.active').getAttribute('data-filter');
+            featuredArticles.forEach(featured => {
+                if (activeFilter === 'all' || featured.getAttribute('data-featured-category') === activeFilter) {
+                    featured.style.display = 'grid';
+                } else {
+                    featured.style.display = 'none';
+                }
+            });
+        }
         
         articleCards.forEach(card => {
             const title = card.querySelector('.article-title').textContent.toLowerCase();
