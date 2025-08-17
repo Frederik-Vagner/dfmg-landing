@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFMG - Facility Service</title>
+    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+body { 
+    margin: 0; 
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+    padding-top: 100px; 
+    line-height: 1.6;
+}
+
+section{ 
+    max-width: 1200px;
+    margin: auto;
+}
+
+.stability-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.subtitle {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.flexibility-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.chat-example {
+    background: white;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #344767;
+    color: white;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.message {
+    margin: 0.75rem 0.75rem 0.05rem 0.75rem;
+    max-width: 85%;
+    position: relative;
+    clear: both;
+}
+
+.message span {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Kunde (grå, venstre) */
+.message.customer {
+    float: left;
+    text-align: left;
+}
+
+.message.customer span {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+/* DFMG (blå, højre) */
+.message.dfmg {
+    float: right;
+    text-align: right;
+}
+
+.message.dfmg span {
+    background: #6366f1;
+    color: white;
+}
+
+.time {
+    font-size: 0.7rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.message.dfmg .time {
+    text-align: right;
+}
+
+.message.customer .time {
+    text-align: left;
+}
+
+
+.stability-content p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+</style>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+        <!-- Stability Section - Opdateret Version -->
+        <section style="max-width: 1200px; margin: 0 auto; align-items: center;">
+            <div class="stability-content">
+                <div class="subtitle">FLEKSIBILITET</div>
+                <h3>Vi tilpasser os jeres rytme</h3>
+                <p>Fra daglige rutiner til akutte behov - vi følger jeres virksomheds tempo og behov.</p>
+                
+                <p>Vores fleksibilitet spænder over tre områder: <strong>Timing</strong> hvor vi arbejder efter arbejdstid, weekender og fleksible starttider så I aldrig bliver forstyrret. <strong>Service tilpasning</strong> hvor vi skalerer op ved events og ned i ferieperioder efter jeres behov. Og <strong>akut respons</strong> hvor vi løser spild, uheld og særlige situationer samme dag når det brenner på.</p>
+
+                <p>Uanset hvad der sker i jeres virksomhed, så finder vi en løsning der passer jer.</p>
+            </div>
+            
+            <div class="flexibility-examples">
+                <!-- Eksempel 1: Ekstra service -->
+                <div class="chat-example">
+                    <div class="chat-header">Ekstra Service</div>
+                    <div class="message customer">
+                        <span>Hej! Vi har et stort klientmøde i morgen. Har I mulighed for ekstra grundig rengøring i dag?</span>
+                        <div class="time">14:32</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Ja, det kan vi sagtens! Hvad tid passer jer bedst?</span>
+                        <div class="time">14:35</div>
+                    </div>
+                    <div class="message customer">
+                        <span>Efter kl. 17 ville være perfekt</span>
+                        <div class="time">14:36</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>✅ Booket! Vi kommer kl. 17:30 og gør kontoret møde-klar</span>
+                        <div class="time">14:37</div>
+                    </div>
+                </div>
+
+                <!-- Eksempel 2: Timing ændring -->
+                <div class="chat-example">
+                    <div class="chat-header">Timing Ændring</div>
+                    <div class="message customer">
+                        <span>Vi har et vigtigt morgenmøde i morgen. Kan I komme tidligere end normalt?</span>
+                        <div class="time">16:45</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Selvfølgelig! Hvad med kl. 06:00-07:30?</span>
+                        <div class="time">16:48</div>
+                    </div>
+                    <div class="message customer">
+                        <span>Perfekt, tak!</span>
+                        <div class="time">16:49</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Vi er der kl. 06:00 sharp 💪</span>
+                        <div class="time">16:50</div>
+                    </div>
+                </div>
+
+                <!-- Eksempel 3: Akut situation -->
+                <div class="chat-example">
+                    <div class="chat-header">Akut Situation</div>
+                    <div class="message customer">
+                        <span>SOS! Kaffe spildt over hele gulvtæppet i receptionen 😱</span>
+                        <div class="time">11:23</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>På vej! Vi er der om 45 min med specialudstyr</span>
+                        <div class="time">11:25</div>
+                    </div>
+                    <div class="message customer">
+                        <span>I er fantastiske! 🙏</span>
+                        <div class="time">11:26</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Opgaven løst! Tæppet er som nyt igen ✨</span>
+                        <div class="time">12:40</div>
+                    </div>
+                </div>
+            </div>      
+        </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+</body>
+</html>
+

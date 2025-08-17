@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt DFMG - All-In-One Facility Service</title>
-    <meta name="description" content="Kontakt DFMG for professionel facility service. Ring på +45 50 48 02 73 eller send os en besked.">
-
-    <!-- Montserrat Font -->
+    <title>DFMG - Facility Service</title>
+    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Critical CSS inline -->
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
     <style>
         body { 
             margin: 0; 
@@ -110,9 +120,16 @@
 
         /* Form styles */
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
         }
+        .contact-info h3 {
+    text-align: left;
+}
+
+.contact-info p {
+    text-align: left;
+}
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -143,7 +160,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
         }
         .job-benefits {
             list-style: none;
@@ -183,19 +200,33 @@
             color: #344767;
             border: 2px solid #344767;
         }
-        .job-visual {
-            background: #344767;
-            color: white;
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
+        .partner-info {
+            text-align: right;
         }
-        .job-visual h4 {
-            color: white;
-            margin-bottom: 1rem;
+
+        .partner-info h3 {
+            text-align: right;
         }
-        .job-visual p {
-            color: rgba(255,255,255,0.9);
+
+        .partner-info p {
+            text-align: right;
+        }
+
+        .partner-info .job-benefits {
+            text-align: right;
+        }
+
+        .partner-info .job-benefits li::before {
+            content: '✓';
+            color: #22c55e;
+            font-weight: bold;
+            margin-left: 1rem;
+            margin-right: 0;
+            float: right;
+        }
+
+        .partner-info .job-buttons {
+            justify-content: flex-end;
         }
 
         @media (max-width: 768px) {
@@ -224,54 +255,68 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="section">
-            <div class="container text-center">
-                <h1>Kontakt DFMG</h1>
-                <p style="font-size: 1.2rem;">Klar til at transformere jeres facility management? Tag kontakt til os i dag</p>
+        <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="section">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: 2rem;">
+            <h1>Kontakt DFMG</h1>
+            <p style="font-size: 1.2rem;">Klar til at transformere jeres facility management? Tag kontakt til os i dag</p>
+        </div>
+        
+        <div class="hero-image" style="height: 40vh;">
+            <div style="background: #e2e8f0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
+                Office Landscape Image
             </div>
-            
-            <!-- Hero Image with Contact Info -->
-            <div class="hero-image">
-                <!-- Placeholder for landscape image -->
-                <div style="background: #e2e8f0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
-                    Office Landscape Image
-                </div>
-                
-                <!-- Contact Info Overlay -->
-                <div class="contact-overlay">
-                    <h3>DFMG</h3>
-                    <p>+45 50 48 02 73</p>
-                    <p>INFO@DFMG.DK</p>
-                    <p>BORUPS ALLE 21</p>
-                    <p>2200 KØBENHAVN N</p>
-                </div>
+            <div class="contact-overlay">
+                <h3>DFMG</h3>
+                <p>+45 50 48 02 73</p>
+                <p>INFO@DFMG.DK</p>
+                <p>BORUPS ALLE 21</p>
+                <p>2200 KØBENHAVN N</p>
             </div>
-        </section>
-
+        </div>
+    </div>
+</section>
         <!-- Contact Form Section -->
         <section class="section">
             <div class="container">
-                <div class="contact-form">
-                    <div style="margin-bottom: 2rem;">
-                        <small style="color: #4285f4; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">KONTAKT</small>
-                        <h2>VI HJÆLPER GERNE!</h2>
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>Kontakt</h2>
+                    <p style="font-size: 1.2rem;">Har du spørgsmål til vores services eller vil du have et uforpligtende tilbud?</p>
+                </div>
+
+                <div class="career-content">
+                    <div class="contact-info">
+                        <h3>Få et tilbud</h3>
+                        <p>Udfyld formularen og beskriv jeres behov. Vi vender tilbage med et skræddersyet tilbud inden for 24 timer.</p>
+                        
+                        <ul class="job-benefits">
+                            <li>Gratis og uforpligtende tilbud</li>
+                            <li>Personlig rådgivning og vejledning</li>
+                            <li>Skræddersyede løsninger til jeres behov</li>
+                            <li>Hurtig respons inden for 24 timer</li>
+                            <li>Mulighed for besigtigelse og konsultation</li>
+                        </ul>
                     </div>
-                    
-                    <form onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Navn" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="E-mail" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Telefonnummer" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Din besked" class="form-textarea" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary" style="width: 100%;">SEND</button>
-                    </form>
+
+                    <div class="contact-form">
+                        <form onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Navn" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="E-mail" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Telefonnummer" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Beskriv jeres behov og ønsker" class="form-textarea" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary" style="width: 100%;">SEND FORESPØRGSEL</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -287,7 +332,8 @@
                 <div class="career-content">
                     <div class="job-info">
                         <h3>Søger du job?</h3>
-                        <p>Hvis du er interesseret i et job hos DFMG, kan du klikke på linket nedenfor for at komme til oprettelsesformularen i vores karriereportal. Se også vores ledige stillinger.</p>
+                        <p>Hvis du er interesseret i et job hos DFMG, kan du kontakte os direkte eller se vores ledige stillinger for at finde den rigtige mulighed.</p>
+
                         
                         <ul class="job-benefits">
                             <li>Konkurrencedygtige løn- og ansættelsesvilkår</li>
@@ -307,10 +353,24 @@
                         </div>
                     </div>
 
-                    <div class="job-visual">
-                        <h4>Bliv en del af DFMG</h4>
-                        <p>Arbejd med en etableret facility service virksomhed og bidrag til pålidelig service for danske erhverv</p>
-                    </div>
+                    <div class="partner-info">
+    <h3>Partnerskab & Samarbejde</h3>
+    <p>Vi søger samarbejdspartnere til at udvide vores servicetilbud og løse større facility management projekter sammen.</p>
+    
+    <ul class="job-benefits">
+        <li>VVS-installatører</li>
+        <li>Elektriker-firmaer</li>
+        <li>Professionel vinduespudsning</li>
+        <li>Logistik og transport</li>
+        <li>Specialrengøring (tæpper, gulvbehandling)</li>
+    </ul>
+
+    <div class="job-buttons">
+        <a href="mailto:kontakt@dfmg.dk?subject=Partnerskab og samarbejde" class="job-btn primary">
+            Kontakt os
+        </a>
+    </div>
+</div>
                 </div>
             </div>
         </section>

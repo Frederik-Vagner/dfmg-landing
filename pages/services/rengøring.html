@@ -23,19 +23,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
     <style>
-        /* Core Variables */
+
         :root {
-            --color-primary: #22c55e;
-            --color-primary-dark: #16a34a;
-            --color-charcoal: #344767;
-            --color-dark-gray: #565656;
-            --color-medium-gray: #666;
+            --color-primary: #1e3a8a;
+            --color-primary-dark: #1e40af;
+            --color-charcoal: #1e3a8a;
+            --color-dark-gray: #4b5563;
+            --color-medium-gray: #6b7280;
             --color-light-gray: #f8fafc;
             --color-white: #ffffff;
-            --color-warning: #f59e0b;
-            --color-slate: #4a5568;
+            --color-warning: #1e3a8a;
+            --color-slate: #1e40af;
         }
 
+        .services-section {
+    background: white;
+}
+
+.hero {
+    background: #1e3a8a;
+    color: white;
+}
+
+.features-showcase {
+    background: #1e3a8a;
+    color: white;
+}
+
+.service-badge {
+    background: #1e3a8a;
+}
+
+.type-badge {
+    background: #1e3a8a;
+}
+
+.type-card::before {
+    background: #1e3a8a;
+}
+
+.step-number {
+    background: #1e3a8a;
+}
+
+.chart-bar {
+    background: #1e3a8a;
+}
+
+.stat-item {
+    background: #f8fafc;
+}
         * {
             margin: 0;
             padding: 0;
@@ -43,10 +80,11 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #1a1f36;
-            background: var(--color-light-gray);
+            color: #333;
+            background: #fff;
+            padding-top: 100px;
         }
 
         .container {
@@ -57,6 +95,37 @@
 
         .section-auto {
             padding: 4rem 0;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-intro .subtitle {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .section-header {
@@ -75,7 +144,6 @@
 
         .section-header h2 {
             font-size: 2.5rem;
-            color: var(--color-charcoal);
             margin-bottom: 1rem;
             font-weight: 300;
             letter-spacing: -1px;
@@ -83,15 +151,12 @@
 
         .section-header p {
             font-size: 1.1rem;
-            color: var(--color-medium-gray);
             max-width: 700px;
             margin: 0 auto;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
-            color: white;
             padding: 6rem 0;
             position: relative;
             overflow: hidden;
@@ -150,18 +215,7 @@
 
         .btn-secondary {
             background: transparent;
-            color: white;
             border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--color-charcoal);
-        }
-
-        /* Services Section */
-        .services-section {
-            background: white;
         }
 
         .services-grid {
@@ -223,8 +277,6 @@
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.5);
             cursor: pointer;
-            transition: background 0.3s;
-            backdrop-filter: blur(2px);
         }
 
         .photo-dot.active {
@@ -240,7 +292,6 @@
 
         .service-badge {
             display: inline-block;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
             color: white;
             padding: 0.4rem 1rem;
             border-radius: 50px;
@@ -301,7 +352,6 @@
         .stat-item {
             text-align: center;
             padding: 1.5rem 1rem;
-            background: linear-gradient(135deg, var(--color-light-gray), #f1f5f9);
             border-radius: 16px;
             border: 1px solid #e2e8f0;
         }
@@ -329,7 +379,6 @@
         }
 
         .chart-bar {
-            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
             height: 100%;
             border-radius: 4px;
             display: flex;
@@ -396,11 +445,9 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
         }
 
         .type-badge {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 50px;
@@ -460,7 +507,6 @@
         .step-number {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
             color: white;
             border-radius: 50%;
             display: flex;
@@ -487,8 +533,6 @@
 
         /* Features Showcase */
         .features-showcase {
-            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
-            color: white;
             position: relative;
             overflow: hidden;
         }
@@ -509,9 +553,7 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 2rem;
-            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: background 0.3s;
         }
 
         .feature-item:hover {
@@ -678,98 +720,26 @@
             font-size: 0.9rem;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: white;
-            text-align: center;
+        .floater{
+            position: fixed;
+            left: 1rem;
+            bottom: 1rem;
+            z-index: 9999;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
         }
 
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
 
-        .cta-content p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
 
-        .cta-transparent {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .service-card {
-                min-height: auto;
-            }
-
-            .service-stats {
-                grid-template-columns: 1fr;
-                gap: 0.75rem;
-            }
-
-            .types-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .demo-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .summary-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
     </style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Erhvervsrengøring</h1>
-                <p class="hero-subtitle">Professionel rengøringsservice der skaber rene, produktive arbejdsmiljøer for jeres virksomhed</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-calculator"></i>
-                        Pris Beregner
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-arrow-down"></i>
-                        Se Services
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Section -->
+    <a href="/pages/prisberegner.html" class="btn btn-primary floater">
+        <i class="fas fa-calculator"></i>
+        Pris Beregner
+    </a>
     <section class="services-section section-auto" id="services">
         <div class="container">
             <div class="section-header">
@@ -782,7 +752,7 @@
                 <!-- Kontor & Kontorfællesskaber Card -->
                 <div class="service-card">
                     <div class="service-image-container">
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f1f5f9, #e2e8f0); display: flex; align-items: center; justify-content: center; color: #64748b;">Kontor rengøring billede</div>
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #64748b;">Kontor rengøring billede</div>
                         <div class="photo-dots">
                             <div class="photo-dot active"></div>
                             <div class="photo-dot"></div>
@@ -805,17 +775,17 @@
                         </ul>
                         <div class="service-stats">
                             <div class="stat-item">
-                                <span class="stat-number">75+</span>
-                                <span class="stat-label">Restauranter</span>
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Aktive Restauranter</span>
                                 <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 88%;">88%</div>
+                                    <div class="chart-bar" style="width: 100%;">100%</div>
                                 </div>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">0</span>
-                                <span class="stat-label">Klager</span>
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">HACCP Compliance</span>
                                 <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 0%; background: #22c55e;">0%</div>
+                                    <div class="chart-bar" style="width: 100%; background: #22c55e;">100%</div>
                                 </div>
                             </div>
                         </div>
@@ -825,7 +795,7 @@
                 <!-- Ejendomsrengøring Card -->
                 <div class="service-card">
                     <div class="service-image-container">
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #faf5ff, #f3e8ff); display: flex; align-items: center; justify-content: center; color: #64748b;">Ejendoms rengøring billede</div>
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #64748b;">Ejendoms rengøring billede</div>
                         <div class="photo-dots">
                             <div class="photo-dot"></div>
                             <div class="photo-dot"></div>
@@ -845,17 +815,17 @@
                         </ul>
                         <div class="service-stats">
                             <div class="stat-item">
-                                <span class="stat-number">200+</span>
-                                <span class="stat-label">Ejendomme</span>
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Ejendomme Serviceret</span>
                                 <div class="mini-chart">
                                     <div class="chart-bar" style="width: 95%;">95%</div>
                                 </div>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">5</span>
-                                <span class="stat-label">Års garanti</span>
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Kvalitetssikring</span>
                                 <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 80%;">5 år</div>
+                                    <div class="chart-bar" style="width: 100%;">100%</div>
                                 </div>
                             </div>
                         </div>
@@ -867,20 +837,20 @@
             <div class="services-summary">
                 <div class="summary-grid">
                     <div>
-                        <div class="summary-stat">950+</div>
-                        <div class="summary-label">Tilfredse Kunder</div>
+                        <div class="summary-stat">100%</div>
+                        <div class="summary-label">Kvalitetssikring</div>
                     </div>
                     <div>
-                        <div class="summary-stat">99.2%</div>
-                        <div class="summary-label">Kvalitetsrate</div>
+                        <div class="summary-stat">Fast</div>
+                        <div class="summary-label">Team</div>
                     </div>
                     <div>
                         <div class="summary-stat">24/7</div>
                         <div class="summary-label">Support</div>
                     </div>
                     <div>
-                        <div class="summary-stat">5+</div>
-                        <div class="summary-label">Års Erfaring</div>
+                        <div class="summary-stat">Ingen</div>
+                        <div class="summary-label">Overraskelser</div>
                     </div>
                 </div>
             </div>
@@ -920,195 +890,737 @@
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process-section section-auto" id="process">
-        <div class="container">
-            <div class="section-header">
-                <div class="subtitle">VORES TILGANG</div>
-                <h2>En Gennemskuelig Proces</h2>
-                <p>Vi sikrer total transparens og kontrol gennem hele samarbejdet, så I altid ved præcis hvad der sker</p>
+<!-- Stability Section - Opdateret Version -->
+<section style="height: 100vh; max-width: 1200px; margin: 0 auto; display: flex; align-items: center;">
+    <div class="container" style="width: 100%;">
+        <div class="stability-content">
+            <div class="stability">
+                <div class="subtitle" style="text-align: center; margin-bottom: 2rem;">STABILITET</div>
+                <h3>Samme Personale, Til tiden, Efter Aftale</h3>
+                <p>Hos DFMG gør vi ikke brgu af underleverandører da det skaber ustabilitet i både kvalitet og udførelse. Med os får du det same personale hver gang</p>
+                <div class="example-text">
+                    <span>Dog udskift af personale ved sygdom eller ferie</span>
+                </div>
+                
+                <p>Vi kommer altid til tiden som aftalt. I over 1,5 år og +1000 rengøringer har vi haft 0 udeblivelser. Når vi siger vi kommer, så kommer vi - uden undskyldninger eller forsinkelser.</p>
+                
+                <h3>Jeres Skræddersyede Service Skema</h3>
+                <p>Hver kunde får et detaljeret skema - ingen gætteri om hvad der bliver gjort</p>
+                <div class="example-text">
+                    <span>Se eksempel på et rengøringskema</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
             </div>
             
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h4>Komplet Information</h4>
-                    <p>Vi starter med en grundig gennemgang af jeres behov og forventninger, så vi forstår præcis hvad I ønsker</p>
+            <div class="service-schedule-demo">
+                <div class="schedule-preview">
+                <div class="tab-navigation">
+                    <button class="tab-button active" onclick="switchTab('kontor')">KONTOR</button>
+                    <button class="tab-button" onclick="switchTab('moedelokaler')">MØDELOKALER</button>
+                    <button class="tab-button" onclick="switchTab('koekken')">KØKKEN</button>
+                    <button class="tab-button" onclick="switchTab('toilet')">TOILET</button>
                 </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h4>Detaljeret Planlægning</h4>
-                    <p>Vi udarbejder en grundplan baseret på jeres lokaler, så alt er aftalt ned til mindste detalje</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h4>Kalender & Sporing</h4>
-                    <p>Fuld oversigt over fremtidige opgaver med mulighed for at spore tilbage op til 1 år</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h4>Live Rapportering</h4>
-                    <p>Medarbejdernes løbende rapporter giver jer indsigt uden at være til stede</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h4>Visuelt Bevis</h4>
-                    <p>Før og efter billeder efter jeres ønsker dokumenterer vores arbejde</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">6</div>
-                    <h4>Fleksibel Kommunikation</h4>
-                    <p>Smidig anmodningsflow ved ændringer + telefonisk tilgængelighed</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Showcase -->
-    <section class="features-showcase section-auto" id="features">
-        <div class="container">
-            <div class="features-content">
-                <div class="section-header">
-                    <div class="subtitle">AVANCERET TEKNOLOGI</div>
-                    <h2>Vær Til Stede Uden at Være Der</h2>
-                    <p>Vores digitale platform giver jer total kontrol og indsigt i alle aspekter af jeres rengøringsservice</p>
-                </div>
-                
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h4>Interaktive Grundplaner</h4>
-                        <p>Detaljerede grundplaner hvor alle opgaver er markeret og aftalt på forhånd</p>
+                    <div class="schedule-table">
+                        <div class="schedule-row">
+                            <div class="task-col">KONTOR</div>
+                            <div class="freq-col">Antal</div>
+                            <div class="day-col">MAN</div>
+                            <div class="day-col">TIR</div>
+                            <div class="day-col">ONS</div>
+                            <div class="day-col">TOR</div>
+                            <div class="day-col">FRE</div>
+                            <div class="day-col">LØR</div>
+                            <div class="day-col">SØN</div>
+                        </div>
                     </div>
                     
-                    <div class="feature-item">
-                        <i class="fas fa-calendar-check"></i>
-                        <h4>Kalender Integration</h4>
-                        <p>Fuld oversigt over alle planlagte opgaver med historik og fremtidige bookinger</p>
-                    </div>
                     
-                    <div class="feature-item">
-                        <i class="fas fa-camera"></i>
-                        <h4>Foto Dokumentation</h4>
-                        <p>Før og efter billeder efter jeres specifikke ønsker og krav</p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Mobil Anmodninger</h4>
-                        <p>Hurtig og nem anmodningsflow når jeres tidsplan ændrer sig</p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <i class="fas fa-headset"></i>
-                        <h4>24/7 Support</h4>
-                        <p>Vi er altid tilgængelige på telefonen når I har brug for os</p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Real-time Rapportering</h4>
-                        <p>Live opdateringer fra vores medarbejdere direkte til jeres dashboard</p>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visual Demo -->
-    <section class="visual-demo section-auto">
-        <div class="container">
-            <div class="section-header">
-                <div class="subtitle">PLATFORM DEMO</div>
-                <h2>Se Hvordan Det Fungerer</h2>
-                <p>Vores intuitive platform giver jer fuld kontrol og gennemsigtighed</p>
+                
             </div>
             
-            <div class="demo-grid">
-                <div class="demo-mockup">
-                    <div class="mockup-header">
-                        <div class="mockup-icon">
-                            <i class="fas fa-calendar"></i>
+        </div>
+        <div class="schedule-note">
+            <p><i class="fas fa-check-circle"></i> <strong>Fordelen:</strong> I ved præcis hvad der sker hvornår - og vi kan nemt tilpasse hvis jeres behov ændrer sig</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.tab-navigation {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.tab-button {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-button.active {
+    background: #344767;
+    color: white;
+    border-color: #344767;
+}
+
+.tab-button:hover {
+    background: #e2e8f0;
+}
+
+.tab-button.active:hover {
+    background: #2d3748;
+}
+.subtitle {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    }
+
+.stability-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.stability-content p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.reliability-sections {
+    margin-bottom: 2rem;
+}
+
+.reliability-item {
+    margin-bottom: 1.5rem;
+}
+
+.reliability-item p {
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.example-text {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.example-text i {
+    color: #3b82f6;
+    font-size: 1.5rem;
+}
+
+.schedule-table {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: 55% 10% 5% 5% 5% 5% 5% 5% 5%;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.schedule-row:first-child {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #344767;
+}
+
+.schedule-row:last-child {
+    border-bottom: none;
+}
+
+.schedule-row.header {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #344767;
+}
+
+.schedule-row > div {
+    padding: 0.75rem 0.25rem;
+    border-right: 1px solid #e2e8f0;
+}
+
+.schedule-row > div:last-child {
+    border-right: none;
+}
+
+.task-col {
+    color: #2d3748;
+    font-size: 0.75rem;
+    padding-left: 1rem !important;
+}
+
+.freq-col {
+    color: #4a5568;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.day-col, .freq-col {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.schedule-note {
+    background: rgba(34, 197, 94, 0.05);
+    border: 1px solid rgba(34, 197, 94, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.schedule-note p {
+    color: #059669;
+    font-size: 0.95rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.schedule-note i {
+    color: #22c55e;
+    margin-right: 0.5rem;
+}
+
+.stability p{
+    margin-bottom: 1rem;
+}
+</style>
+<script>
+let currentTab = 'kontor';
+
+function switchTab(tabName) {
+    currentTab = tabName;
+    
+    // Update button styles
+    document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.add('active');
+    
+    // Update table content
+    updateTableContent();
+}
+
+function updateTableContent() {
+    const tableData = {
+        kontor: [
+            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Sæt stole på plads', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Ryd alle borde for glas, kopper, tallerkner og bestik', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Aftør borde', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Afstøv inventar og overflader under 1,80m', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Rengør indvendige glas og døre (omkring dørhåndtag)', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Aftør alle siddepladser', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Støvsug og vask gulvoverflader', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Kontrollér hjørner og fjern spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Støvsug og vedligehold tæpper og sofaer', '1 x måned', '-', '-', '-', '-', '-', '-', 'U1']
+        ],
+        moedelokaler: [
+            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Sæt stole på plads', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Ryd alle borde for glas, kopper, tallerkner og bestik', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Aftør borde', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Afstøv inventar og overflader under 1,80m', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Rengør indvendige glas og døre (omkring dørhåndtag)', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Aftør alle siddepladser', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Støvsug og vask gulvoverflader', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Kontrollér hjørner og fjern spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Støvsug og vedligehold tæpper og sofaer', '1 x måned', '-', '-', '-', '-', '-', '-', 'U1']
+        ],
+        koekken: [
+            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Aftør bordplader og skabslåger', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Rengør og desinficér vask (afkalkning ved behov)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Aftør spiseborde/loungeborde', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Støvsug og vask gulvoverflader', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Håndtér opvaskemaskine (tøm, fyld, start ved behov)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Aftør affaldsbeholdere', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Rengør opvaskemaskinens filter', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Aftør stole og lamper (<1,80m) og dørkarme', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Rengør og vedligehold kaffeudstyr', '1', '-', '-', '-', '-', '-', '-', '✓']
+        ],
+        toilet: [
+            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Støvsug og vask gulvoverflader', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Rengør og desinficér håndvask, armatur, toiletskål og toiletbørste', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Rengør spejle', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Aftør papir- og sæbebeholdere', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Genopfyld papir og sæbe (hvis nødvendigt)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Rengør indvendige glas og døre (omkring dørhåndtag)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+            ['Aftør døre, karme og lamper (<1,80m)', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Støv gulvpaneler', '1', '-', '-', '-', '-', '-', '-', '✓'],
+            ['Kontrollér loft og hjørner for spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓']
+        ]
+    };
+
+    const sectionNames = {
+        kontor: 'KONTOR',
+        moedelokaler: 'MØDELOKALER', 
+        koekken: 'KØKKEN',
+        toilet: 'TOILET'
+    };
+    
+    const tbody = document.querySelector('.schedule-table');
+    const data = tableData[currentTab];
+    
+    // Update header section name
+    tbody.querySelector('.task-col').textContent = sectionNames[currentTab];
+    
+    // Clear existing rows except header
+    while (tbody.children.length > 1) {
+        tbody.removeChild(tbody.lastChild);
+    }
+    
+    // Add new rows
+    data.forEach(row => {
+        const rowElement = document.createElement('div');
+        rowElement.className = 'schedule-row';
+        row.forEach(cell => {
+            const cellElement = document.createElement('div');
+            if (row.indexOf(cell) === 0) cellElement.className = 'task-col';
+            else if (row.indexOf(cell) === 1) cellElement.className = 'freq-col';
+            else cellElement.className = 'day-col';
+            cellElement.textContent = cell;
+            rowElement.appendChild(cellElement);
+        });
+        tbody.appendChild(rowElement);
+    });
+    // Initialize on page load
+
+}
+document.addEventListener('DOMContentLoaded', function() {
+    updateTableContent();
+});
+</script>
+   <!-- Transparency Section - Ny Version -->
+    <section class="section">
+        <div class="container">
+            <div class="section-intro">
+                <div class="subtitle">GENNEMSIGTIGHED</div>
+                    <h2>I ved altid præcis hvad der sker</h2>
+                <p>Fra jeres personlige dashboard kan I følge alt - live under udførelse og bagefter med dokumentation</p>
+            </div>
+            
+            <div class="transparency-grid">
+                
+                <div class="transparency-card">
+                    <h3>Rengøringspersonale</h3>
+                    <div style="margin:15px 0;display:flex;gap:40px; justify-content: center;">
+                        <div style="display:flex;align-items:center;gap:10px;">
+                            <img src="/images/people/raman.png" loading="lazy" alt="Raman Nepal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
+                            <div>
+                                <div style="font-size:14px;font-weight:600;margin-bottom:2px">Raman Nepal</div>
+                                <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 12 34 56 78</div>
+                                <div style="font-size:12px;color:#666">Rengøringsleder</div>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Kalender Oversigt</h4>
-                            <p>Juli 2025 - Adnami Hovedkontor</p>
+                        <div style="display:flex;align-items:center;gap:10px;">
+                            <img src="/images/people/diya.png" loading="lazy" alt="Raman Nepal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
+                            <div>
+                                <div style="font-size:14px;font-weight:600;margin-bottom:2px">Diya Phuyal</div>
+                                <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 87 65 43 21</div>
+                                <div style="font-size:12px;color:#666">Rengøringsmedarbejder</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="calendar-grid">
-                        <div class="calendar-day">M</div>
-                        <div class="calendar-day">T</div>
-                        <div class="calendar-day">O</div>
-                        <div class="calendar-day">T</div>
-                        <div class="calendar-day">F</div>
-                        <div class="calendar-day">L</div>
-                        <div class="calendar-day">S</div>
-                        <div class="calendar-day">1</div>
-                        <div class="calendar-day active">2</div>
-                        <div class="calendar-day">3</div>
-                        <div class="calendar-day">4</div>
-                        <div class="calendar-day">5</div>
-                        <div class="calendar-day active">6</div>
-                        <div class="calendar-day">7</div>
-                        <div class="calendar-day">8</div>
-                        <div class="calendar-day active">9</div>
-                        <div class="calendar-day active">10</div>
-                        <div class="calendar-day">11</div>
-                        <div class="calendar-day">12</div>
-                        <div class="calendar-day active">13</div>
-                        <div class="calendar-day">14</div>
-                        <div class="calendar-day">15</div>
-                        <div class="calendar-day active">16</div>
-                        <div class="calendar-day active">17</div>
-                        <div class="calendar-day">18</div>
-                        <div class="calendar-day">19</div>
-                        <div class="calendar-day active">20</div>
-                    </div>
-                    <div style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                        <i class="fas fa-info-circle"></i> Grønne dage: Planlagt rengøring
                     </div>
                 </div>
                 
-                <div class="demo-mockup">
-                    <div class="mockup-header">
-                        <div class="mockup-icon">
-                            <i class="fas fa-clipboard-list"></i>
+                <div class="transparency-card">
+                    <h3>Foto Dokumentation</h3>
+                    <div style="display:flex;gap:40px;margin:15px 0;font-size:14px;justify-content:space-between">
+                        <div style="text-align:center;color:#666">
+                            <div style="font-weight:500;margin-bottom:5px;white-space:nowrap">Ingen billeder</div>
+                            <div style="font-size:12px;color:#ef4444">Frarådes</div>
                         </div>
-                        <div>
-                            <h4>Live Rapporter</h4>
-                            <p>Dagens aktiviteter</p>
+                        <div style="text-align:center;color:#344767">
+                            <div style="font-weight:600;margin-bottom:5px">Efter-billeder</div>
+                            <div style="font-size:12px;color:#22c55e">Anbefalet for let/grundig rengøring</div>
                         </div>
-                    </div>
-                    <div class="report-item">
-                        <div class="status-badge">FÆRDIG</div>
-                        <div>
-                            <strong>Reception & Lobby</strong>
-                            <div style="font-size: 0.8rem; color: #666;">Raman N. - 08:01</div>
-                        </div>
-                    </div>
-                    <div class="report-item">
-                        <div class="status-badge">FÆRDIG</div>
-                        <div>
-                            <strong>Mødelokaler 1-3</strong>
-                            <div style="font-size: 0.8rem; color: #666;">Diya P. - 08:01</div>
+                        <div style="text-align:center;color:#666">
+                            <div style="font-weight:500;margin-bottom:5px">Før/efter billeder</div>
+                            <div style="font-size:12px;color:#3b82f6">Anbefalet til events og deep cleaning</div>
                         </div>
                     </div>
-                    <div class="report-item">
-                        <div class="status-badge ongoing">IGANGVÆRENDE</div>
-                        <div>
-                            <strong>Kontorområde</strong>
-                            <div style="font-size: 0.8rem; color: #666;">Team 1 - 08:45</div>
+                </div>
+                
+                <div class="transparency-card double-height">
+                    <h3>Kalender Overblik</h3>
+                    <div style="border-radius:6px; font-size:11px">
+                        <div style="text-align:center;font-weight:600;font-size:18px;margin-bottom:15px;color:#344767">Februar</div>
+                        <div style="display:grid;grid-template-columns:0.5fr 1.5fr 0.5fr 1.5fr 0.5fr 0.5fr 1.5fr;gap:3px 0;text-align:center;font-weight:500;">
+                            <div style="font-weight:600;padding:8px">M</div><div style="font-weight:600;padding:8px">T</div><div style="font-weight:600;padding:8px">O</div><div style="font-weight:600;padding:8px">T</div><div style="font-weight:600;padding:8px">F</div><div style="font-weight:600;padding:8px">L</div><div style="font-weight:600;padding:8px">S</div>
+                            <div style="padding:8px">1</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">3</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">5</div><div style="padding:8px">6</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div style="padding:8px">8</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">10</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">12</div><div style="padding:8px">13</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div style="padding:8px">15</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">17</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">19</div><div style="padding:8px">20</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div style="padding:8px">22</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">24</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">26</div><div style="padding:8px">27</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="transparency-card double-height">
+                    <h3>Slutrapport</h3>
+                    
+                    <div style="display:flex;margin:15px 0; gap: 10px;">
+                        <!-- Rapport detaljer - 70% -->
+                        <div style="flex:0 0 70%;background:#f8f9fa;padding:15px;border-radius:8px;border-left:4px solid #344767">
+                            <div style="display:flex;align-items:center;margin-bottom:12px">
+                                <div style="font-weight:600;color:#344767">📧 Rapport sendt 21:45</div>
+                            </div>
+                            
+                            <div style="margin:8px 0;color:#666;font-size:14px">
+                                <strong>Location:</strong> SOHO<br>
+                                <strong>Task:</strong> Let Rengøring<br>
+                                <strong>Address:</strong> Klosterstræde 9, 1157 København K
+                            </div>
+                            
+                            <div style="margin:12px 0;padding:8px;background:white;border-radius:4px">
+                                <div style="color:#666;margin:4px 0;font-size:13px">⏰ Start: 17:30 | Slut: 21:30</div>
+                                <div style="color:#22c55e;margin:4px 0;font-size:13px">✅ Status: Udført</div>
+                                <div style="color:#344767;margin:4px 0;font-size:13px">👤 Udført af: Diya Phuyal</div>
+                            </div>
+                            
+                            <div style="background:#e8f5e8;padding:8px;border-radius:4px;margin-top:12px;text-align:center">
+                                <div style="color:#22c55e;font-size:12px;font-weight:500">📎 15 billeder vedhæftet</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Foto placeholders - 30% -->
+                        <div style="padding:10px; width: 100%;">
+                            <div style="color:#666;margin-bottom:8px;text-align:center;font-weight:500">Billeder:</div>
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="transparency-note">
+                <p><i class="fas fa-lightbulb"></i> <strong>Fordelen:</strong> I kan dokumentere overfor jeres ledelse, kunder eller lejere at rengøringen er udført professionelt - uden selv at være til stede</p>
+            </div>
         </div>
     </section>
+    <style>
+/* New Sections Styling - Missing CSS */
+.transparency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.transparency-card.double-height {
+    grid-row: span 2;
+}
+
+.transparency-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+
+.transparency-icon {
+    width: 40px;
+    height: 40px;
+    background: #344767;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+    color: white;
+    font-size: 1.2rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+.transparency-card h3 {
+    color: #344767;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+.transparency-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.transparency-note {
+    background: rgba(30, 58, 138, 0.05);
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.transparency-note p {
+    color: #3b82f6;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.transparency-note i {
+    color: #3b82f6;
+    margin-right: 0.5rem;
+}
+
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subtitle {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.section-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.section-intro p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .transparency-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+
+<section style="max-width: 1200px; margin: auto;">
+    <div class="flexibility-content">
+        <div class="subtitle">FLEKSIBILITET</div>
+        <h3>Vi tilpasser os jeres rytme</h3>
+        <p>Fra daglige rutiner til akutte behov - vi følger jeres virksomheds tempo og behov.</p>
+        
+        <p>Vores fleksibilitet spænder over tre områder: <strong>Timing</strong> hvor vi arbejder efter arbejdstid, weekender og fleksible starttider så I aldrig bliver forstyrret. <strong>Service tilpasning</strong> hvor vi skalerer op ved events og ned i ferieperioder efter jeres behov. Og <strong>akut respons</strong> hvor vi løser spild, uheld og særlige situationer samme dag når det brenner på.</p>
+
+        <p>Uanset hvad der sker i jeres virksomhed, så finder vi en løsning der passer jer.</p>
+    </div>
+    
+    <div class="flexibility-examples">
+        <!-- Eksempel 1: Ekstra service -->
+        <div class="chat-example">
+            <div class="chat-header">Ekstra Service</div>
+            <div class="message customer">
+                <span>Hej! Vi har et stort klientmøde i morgen. Har I mulighed for ekstra grundig rengøring i dag?</span>
+                <div class="time">14:32</div>
+            </div>
+            <div class="message dfmg">
+                <span>Ja, det kan vi sagtens! Hvad tid passer jer bedst?</span>
+                <div class="time">14:35</div>
+            </div>
+            <div class="message customer">
+                <span>Efter kl. 17 ville være perfekt</span>
+                <div class="time">14:36</div>
+            </div>
+            <div class="message dfmg">
+                <span>✅ Booket! Vi kommer kl. 17:30 og gør kontoret møde-klar</span>
+                <div class="time">14:37</div>
+            </div>
+        </div>
+
+        <!-- Eksempel 2: Timing ændring -->
+        <div class="chat-example">
+            <div class="chat-header">Timing Ændring</div>
+            <div class="message customer">
+                <span>Vi har et vigtigt morgenmøde i morgen. Kan I komme tidligere end normalt?</span>
+                <div class="time">16:45</div>
+            </div>
+            <div class="message dfmg">
+                <span>Selvfølgelig! Hvad med kl. 06:00-07:30?</span>
+                <div class="time">16:48</div>
+            </div>
+            <div class="message customer">
+                <span>Perfekt, tak!</span>
+                <div class="time">16:49</div>
+            </div>
+            <div class="message dfmg">
+                <span>Vi er der kl. 06:00 sharp 💪</span>
+                <div class="time">16:50</div>
+            </div>
+        </div>
+
+        <!-- Eksempel 3: Akut situation -->
+        <div class="chat-example">
+            <div class="chat-header">Akut Situation</div>
+            <div class="message customer">
+                <span>SOS! Kaffe spildt over hele gulvtæppet i receptionen 😱</span>
+                <div class="time">11:23</div>
+            </div>
+            <div class="message dfmg">
+                <span>På vej! Vi er der om 45 min med specialudstyr</span>
+                <div class="time">11:25</div>
+            </div>
+            <div class="message customer">
+                <span>I er fantastiske! 🙏</span>
+                <div class="time">11:26</div>
+            </div>
+            <div class="message dfmg">
+                <span>Opgaven løst! Tæppet er som nyt igen ✨</span>
+                <div class="time">12:40</div>
+            </div>
+        </div>
+    </div>      
+</section>
+
+<style>
+.flexibility-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.subtitle {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.flexibility-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.chat-example {
+    background: white;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #344767;
+    color: white;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.message {
+    margin: 0.75rem 0.75rem 0.05rem 0.75rem;
+    max-width: 85%;
+    position: relative;
+    clear: both;
+}
+
+.message span {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Kunde (grå, venstre) */
+.message.customer {
+    float: left;
+    text-align: left;
+}
+
+.message.customer span {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+/* DFMG (blå, højre) */
+.message.dfmg {
+    float: right;
+    text-align: right;
+}
+
+.message.dfmg span {
+    background: #6366f1;
+    color: white;
+}
+
+.time {
+    font-size: 0.7rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.message.dfmg .time {
+    text-align: right;
+}
+
+.message.customer .time {
+    text-align: left;
+}
+
+
+.stability-content p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+</style>
 
     <!-- Before/After Gallery -->
     <section class="gallery-section section-auto" id="gallery">
@@ -1189,146 +1701,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section section-auto">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Klar til Professionel Erhvervsrengøring?</h2>
-                <p>Få et skræddersyet tilbud baseret på jeres specifikke behov og faciliteter</p>
-                <div class="hero-cta">
-                    <a href="#calculator" class="btn btn-secondary">
-                        <i class="fas fa-calculator"></i>
-                        Beregn Pris Online
-                    </a>
-                    <a href="tel:+4550480273" class="btn cta-transparent">
-                        <i class="fas fa-phone"></i>
-                        Ring Nu: +45 50 48 02 73
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>dot active"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-badge">Professionel</div>
-                        <h3>Kontor & Kontorfællesskaber</h3>
-                        <p>Professionel rengøring af kontorer, fællesområder, mødelokaler og reception. Vi sikrer et rent og professionelt arbejdsmiljø.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Daglig eller ugentlig service</li>
-                            <li><i class="fas fa-check"></i> Mødelokaler og fællesområder</li>
-                            <li><i class="fas fa-check"></i> Sanitære faciliteter</li>
-                            <li><i class="fas fa-check"></i> Køkkener og spisestuer</li>
-                            <li><i class="fas fa-check"></i> Vinduespolering</li>
-                        </ul>
-                        <div class="service-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">150+</span>
-                                <span class="stat-label">Kontorer</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 85%;">85%</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">98%</span>
-                                <span class="stat-label">Tilfredshed</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 98%;">98%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Eventlokaler Card -->
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f0f9ff, #e0f2fe); display: flex; align-items: center; justify-content: center; color: #64748b;">Event lokaler rengøring billede</div>
-                        <div class="photo-dots">
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot active"></div>
-                            <div class="photo-dot"></div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-badge">Specialiseret</div>
-                        <h3>Eventlokaler</h3>
-                        <p>Specialiseret rengøring før og efter events. Vi sørger for at jeres lokaler er perfekte til arrangementer og spotløse bagefter.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Pre-event forberedelse</li>
-                            <li><i class="fas fa-check"></i> Post-event oprydning</li>
-                            <li><i class="fas fa-check"></i> Fleksible tidsplaner</li>
-                            <li><i class="fas fa-check"></i> Specialudstyr tilgængeligt</li>
-                            <li><i class="fas fa-check"></i> Emergency cleaning</li>
-                        </ul>
-                        <div class="service-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">500+</span>
-                                <span class="stat-label">Events</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 92%;">92%</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">24/7</span>
-                                <span class="stat-label">Tilgængelighed</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 100%;">100%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Skoler & Institutioner Card -->
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f0fdf4, #dcfce7); display: flex; align-items: center; justify-content: center; color: #64748b;">Skole rengøring billede</div>
-                        <div class="photo-dots">
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot active"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-badge">Hygiejnisk</div>
-                        <h3>Skoler & Institutioner</h3>
-                        <p>Grundig og hygiejnisk rengøring af undervisningslokaler, kantiner og fællesområder med fokus på børns og unges sundhed.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Børnevenlige produkter</li>
-                            <li><i class="fas fa-check"></i> Grundig desinfektion</li>
-                            <li><i class="fas fa-check"></i> Kantiner og køkkener</li>
-                            <li><i class="fas fa-check"></i> Legepladser og udendørs</li>
-                            <li><i class="fas fa-check"></i> Corona-sikker protokol</li>
-                        </ul>
-                        <div class="service-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">25+</span>
-                                <span class="stat-label">Skoler</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 75%;">75%</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Sikkerhed</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 100%;">100%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                    <!-- Footer Component -->
+    <!-- Footer Component -->
     <div id="footer"></div>
     <!-- Component loader -->
     <script src="../../js/components.js" defer></script>
