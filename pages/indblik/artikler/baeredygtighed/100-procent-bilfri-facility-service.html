@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hvorfor Systematik Slår Talent i Facility Management | DFMG</title>
+    <meta name="description" content="Opdagå hvordan systematiske processer og dokumentation skaber mere pålidelig facility service end afhængighed af individuelle medarbejdere.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    padding-top: 100px;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Article Header */
+.article-header {
+    background: linear-gradient(135deg, #344767 0%, #4285f4 50%, #22c55e 100%);
+    color: white;
+    padding: 4rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="headerpattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="20" fill="url(%23headerpattern)"/></svg>') repeat;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+.article-category {
+    display: inline-block;
+    background: rgba(34, 197, 94, 0.2);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Main Content Layout */
+.article-content {
+    padding: 1rem 0 0rem;
+    background: #f9fafb;
+    min-height: 80vh;
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Main Article Content */
+.main-content {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.article-excerpt {
+    font-size: 1.25rem;
+    color: #6b7280;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    position: relative;
+}
+
+.article-excerpt::before {
+    content: '"';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 3rem;
+    color: #3b82f6;
+    opacity: 0.3;
+    font-family: serif;
+}
+
+.article-body {
+    line-height: 1.6;
+    color: #374151;
+}
+
+.article-body p {
+    margin-bottom: 1.5rem;
+}
+
+.article-body h1, .article-body h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin: 2rem 0 1rem;
+    font-weight: 700;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.article-body h1::before, .article-body h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 4px;
+    height: 1.5rem;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 2px;
+}
+
+.article-body h3 {
+    font-size: 1.4rem;
+    color: #1f2937;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.article-body strong {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.article-body ul, .article-body ol {
+    margin: 1.5rem 0;
+    padding-left: 0;
+}
+
+.article-body li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.article-body ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Article Images */
+.article-image {
+    max-width: 50%;
+    max-height: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    display: block;
+}
+
+.article-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Callout boxes */
+.article-body .callout {
+    background-color: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.article-body .callout::before {
+    content: "ℹ";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #3b82f6;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.article-body .callout p {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.article-body .success {
+    background-color: #dcfce7;
+    border: 1px solid #22c55e;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.article-body .success::before {
+    content: "✓";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #22c55e;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.article-body .success p {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.article-body blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1.5rem;
+    font-style: italic;
+    background-color: #f8fafc;
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.article-body blockquote::before {
+    content: """;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 2rem;
+    color: #3b82f6;
+    opacity: 0.3;
+    font-family: serif;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.sidebar-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-card h3 i {
+    color: #3b82f6;
+    font-size: 1.1rem;
+}
+
+/* Table of Contents */
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toc-list a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.toc-list a:hover {
+    color: #3b82f6;
+}
+
+/* Related Articles */
+.related-article {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.related-article:last-child {
+    border-bottom: none;
+}
+
+.related-article:hover {
+    background: #f9fafb;
+    margin: 0 -1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.related-image {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.related-image.sustainability {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.related-image.innovation {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.related-image.insights {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.related-content h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1f2937;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+}
+
+.related-content a {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.related-content a:hover {
+    color: #3b82f6;
+}
+
+.related-meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    background: white;
+    color: #1f2937;
+    text-align: center;
+}
+
+.newsletter-signup h3 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.newsletter-input {
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #1f2937;
+    font-size: 0.9rem;
+}
+
+.newsletter-btn {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Share Buttons */
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.share-linkedin {
+    background: #0077b5;
+}
+
+.share-twitter {
+    background: #1da1f2;
+}
+
+.share-facebook {
+    background: #1877f2;
+}
+
+.share-email {
+    background: #6b7280;
+}
+
+/* Back to News */
+.back-to-news {
+    text-align: center;
+    padding: 2rem 0;
+    background: #f9fafb;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+
+    .sidebar-card {
+        margin: 0 10px;
+    }
+}
+</style>
+<body>
+<!-- Header Component -->
+<div id="header"></div>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="breadcrumb">
+                    <a href="/">Forside</a>
+                    <span>›</span>
+                    <a href="/pages/indblik/nyheder.html">Indblik</a>
+                    <span>›</span>
+                    <span>Artikel</span>
+                </div>
+                <div class="article-category">BÆREDYGTIGHED</div>
+                <h1 class="article-title">100% Bilfri Facility Service: Sådan Gør Vi Det</h1>
+                
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        1. december 2024
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        3 min læsning
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-eye"></i>
+                        1,892 visninger
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Main Content -->
+                <main class="main-content">
+                    <img src="/images/article/ipad.jpg" alt="Systematisk facility management" class="article-image">
+                    
+                    <div class="article-excerpt">
+                        Få indblik i hvordan DFMG har elimineret bil-transport og skabt en CO2-neutral facility service uden at gå på kompromis med kvaliteten.
+                    </div>
+
+                    <div class="article-body">
+                        <p>0 tons CO2. 0 liter benzin. 0 parkeringsproblemer. Når vi siger 100% bilfri facility service, mener vi det bogstaveligt.</p>
+
+                        <p>Hos DFMG har vi designet vores entire operation omkring bæredygtig transport. Det startede som et eksperiment, men blev hurtigt til vores største konkurrencefordel.</p>
+
+                        <h2>Hvorfor Bilfri?</h2>
+
+                        <h3>Miljøet Kommer Først</h3>
+                        <p>Traditionel facility service involverer masser af bil-kørsel:</p>
+                        <ul>
+                            <li>Supervisor kører mellem lokationer</li>
+                            <li>Transport af udstyr og materialer</li>
+                            <li>Reaktion på akutte opgaver</li>
+                            <li>Kvalitetskontrol og opfølgning</li>
+                        </ul>
+
+                        <p>For en almindelig facility virksomhed med 10 kunder betyder det 200-400 km kørsel dagligt.</p>
+
+                        <div class="callout">
+                            <p><strong>Udregning:</strong> 300 km/dag × 250 arbejdsdage = 75.000 km årligt = 12+ tons CO2</p>
+                        </div>
+
+                        <h3>Økonomisk Logik</h3>
+                        <p>Bilfri drift sparer massive omkostninger:</p>
+                        <ul>
+                            <li><strong>Bil-omkostninger:</strong> Leasingrate, forsikring, brændstof, vedligeholdelse</li>
+                            <li><strong>Parkering:</strong> Især i København er det dyrt og tidskrævende</li>
+                            <li><strong>Administration:</strong> Kørselsgodtgørelse, logbøger, servicemøder</li>
+                            <li><strong>Fleksibilitet:</strong> Ikke afhængige af trafik og parkeringspladser</li>
+                        </ul>
+
+                        <h2>Sådan Implementerede Vi Det</h2>
+
+                        <h3>1. Strategisk Kundeudvælgelse</h3>
+                        <p>Vi fokuserer på:</p>
+                        <ul>
+                            <li><strong>København og omegn:</strong> Tæt byområde med god offentlig transport</li>
+                            <li><strong>Centrale lokationer:</strong> Nær metro, bus eller tog</li>
+                            <li><strong>Kompakte ruter:</strong> Flere kunder i samme område</li>
+                        </ul>
+
+                        <h3>2. Intelligent Udstyr-Management</h3>
+                        <p>Alt vores udstyr skal kunne transporteres uden bil:</p>
+                        <ul>
+                            <li><strong>Kompakt design:</strong> Foldbare indkøbsvogne og letvægts-udstyr</li>
+                            <li><strong>Multi-funktionelle værktøjer:</strong> Ét redskab løser flere opgaver</li>
+                            <li><strong>Lokalt lager:</strong> Udstyr opbevares hos kunder når muligt</li>
+                            <li><strong>Digitalt først:</strong> Dokumentation på smartphone, ikke papir</li>
+                        </ul>
+
+                        <h3>3. Optimerede Ruter</h3>
+                        <p>Vores ruter designes omkring offentlig transport:</p>
+                        <ul>
+                            <li>Maksimalt 15 minutters gang fra transport</li>
+                            <li>Kombinerede opgaver i samme område på samme dag</li>
+                            <li>Fleksible tidsplaner der respekterer transportmuligheder</li>
+                        </ul>
+
+                        <div class="success">
+                            <p><strong>Resultat:</strong> 95% af vores opgaver udføres med offentlig transport + gang</p>
+                        </div>
+
+                        <h2>Konkrete Transportløsninger</h2>
+
+                        <h3>Daglige Rutiner</h3>
+                        <ul>
+                            <li><strong>Metro + gang:</strong> Perfekt til centralt København</li>
+                            <li><strong>Bus-forbindelser:</strong> Fleksibel adgang til forstæder</li>
+                            <li><strong>Cykel:</strong> Til korte distancer og backup-transport</li>
+                            <li><strong>Kombinerede rejser:</strong> Offentlig transport + el-løbehjul for sidste kilometer</li>
+                        </ul>
+
+                        <h3>Udstyr-Transport</h3>
+                        <ul>
+                            <li><strong>Robust indkøbsvogn:</strong> Kan bære 50kg+ udstyr</li>
+                            <li><strong>Modulære kasser:</strong> Organiseret opbevaring af materialer</li>
+                            <li><strong>Backup-forsyninger:</strong> Kritisk udstyr lagres hos større kunder</li>
+                        </ul>
+
+                        <h3>Nødsituationer</h3>
+                        <p>Selv akutte opgaver løses bilfrit:</p>
+                        <ul>
+                            <li><strong>Taxi som sidste udvej:</strong> Kun ved absolut nødvendighed</li>
+                            <li><strong>Hurtig respons:</strong> Medarbejder tager det først tilgængelige transport</li>
+                            <li><strong>Lokale løsninger:</strong> Partner-netværk for kritiske situationer</li>
+                        </ul>
+
+                        <h2>Udfordringer og Løsninger</h2>
+
+                        <h3>Vejr og Sæsonudsving</h3>
+                        <p><strong>Problem:</strong> Dansk vejr er uforudsigeligt</p>
+                        <p><strong>Løsning:</strong></p>
+                        <ul>
+                            <li>Kvalitets regnudstyr til alle medarbejdere</li>
+                            <li>Fleksible tidsplaner ved ekstreme vejrforhold</li>
+                            <li>Overdækkede venteområder planlagt i ruterne</li>
+                        </ul>
+
+                        <h3>Store Udstyr-behov</h3>
+                        <p><strong>Problem:</strong> Nogle opgaver kræver tungt udstyr</p>
+                        <p><strong>Løsning:</strong></p>
+                        <ul>
+                            <li>Partnership med lokale leverandører</li>
+                            <li>Permanente installationer hos store kunder</li>
+                            <li>Redesign af processer til at eliminere behovet</li>
+                        </ul>
+
+                        <h3>Tidspres</h3>
+                        <p><strong>Problem:</strong> Offentlig transport er ikke altid hurtigst</p>
+                        <p><strong>Løsning:</strong></p>
+                        <ul>
+                            <li>15% ekstra tid i tidsplaner</li>
+                            <li>Proaktiv kommunikation ved forsinkelser</li>
+                            <li>Alternative ruter som backup</li>
+                        </ul>
+
+                        <h2>Fordelene Vi Har Oplevet</h2>
+
+                        <h3>Miljømæssige Gevinster</h3>
+                        <ul>
+                            <li><strong>0 tons CO2</strong> fra transport årligt</li>
+                            <li><strong>Reduceret støjforurening</strong> i boligområder</li>
+                            <li><strong>Mindre luftforurening</strong> i byområder</li>
+                            <li><strong>Bæredygtig profil</strong> der tiltrækker miljøbevidste kunder</li>
+                        </ul>
+
+                        <h3>Operationelle Fordele</h3>
+                        <ul>
+                            <li><strong>30% lavere omkostninger</strong> sammenlignet med bil-baseret drift</li>
+                            <li><strong>Ingen parkeringsproblemer</strong> eller P-afgifter</li>
+                            <li><strong>Forudsigelige transporttider</strong> med offentlig transport</li>
+                            <li><strong>Sundere medarbejdere</strong> gennem mere gang og motion</li>
+                        </ul>
+
+                        <h3>Kunde-reaktioner</h3>
+                        <blockquote>
+                            "Det er fantastisk at have en facility leverandør der matcher vores bæredygtighedsværdier. Det gør det nemt for os at retfærdiggøre samarbejdet."
+                            <br><em>- Sustainability Manager, tech virksomhed</em>
+                        </blockquote>
+
+                        <h2>Markedsresponsen</h2>
+
+                        <h3>Kundernes Prioriteter Ændrer Sig</h3>
+                        <p>Vi ser øget efterspørgsel på bæredygtige services:</p>
+                        <ul>
+                            <li>ESG-rapportering kræver dokumentation for grøn drift</li>
+                            <li>Yngre medarbejdere forventer miljøansvar fra leverandører</li>
+                            <li>B-Corp certificeringer belønner bæredygtige partnerskaber</li>
+                        </ul>
+
+                        <h3>Konkurrencesituationen</h3>
+                        <p>De fleste facility virksomheder er bil-afhængige:</p>
+                        <ul>
+                            <li>Svært at ændre etablerede rutiner og systemer</li>
+                            <li>Investering i bil-flåder skaber modstand mod ændring</li>
+                            <li>Manglende incitament til at innovere transport-løsninger</li>
+                        </ul>
+
+                        <div class="callout">
+                            <p>Vores bilfrie tilgang er blevet en unik selling point der differentierer os fra alle konkurrenter.</p>
+                        </div>
+
+                        <h2>Fremtidsplaner</h2>
+
+                        <h3>Skalering</h3>
+                        <ul>
+                            <li><strong>Flere ruter:</strong> Udvide til andre byer med god offentlig transport</li>
+                            <li><strong>Partner-netværk:</strong> Samarbejde med andre bilfri service-udbydere</li>
+                            <li><strong>Best practice sharing:</strong> Hjælpe andre virksomheder med omstilling</li>
+                        </ul>
+
+                        <h3>Teknologi-innovation</h3>
+                        <ul>
+                            <li><strong>Route-optimering apps:</strong> AI til at finde den bedste offentlige transport</li>
+                            <li><strong>Shared equipment hubs:</strong> Distribueret lager-network</li>
+                            <li><strong>Elektrisk backup:</strong> El-cykler med cargo-kapacitet</li>
+                        </ul>
+
+                        <h2>Sådan Kan Andre Gøre Det</h2>
+
+                        <h3>For Facility Virksomheder</h3>
+                        <ul>
+                            <li>Start med én bilfri rute som pilot</li>
+                            <li>Investér i letvægts, mobilt udstyr</li>
+                            <li>Planlæg ruter omkring offentlig transport</li>
+                            <li>Træn medarbejdere i effektiv transport-planlægning</li>
+                        </ul>
+
+                        <h3>For Kunder Der Vil Hjælpe</h3>
+                        <ul>
+                            <li>Tillad opbevaring af grundudstyr på lokationen</li>
+                            <li>Vær fleksible med timing omkring transport-muligheder</li>
+                            <li>Belønning bæredygtige leverandører i jeres indkøbspolitik</li>
+                            <li>Dokumentér miljøgevinster i jeres ESG-rapportering</li>
+                        </ul>
+
+                        <h2>Konklusion: Grøn Drift Uden Kompromis</h2>
+
+                        <p>100% bilfri facility service er ikke bare muligt - det er rentabelt, effektivt og fremtidssikret.</p>
+
+                        <p>Hos DFMG har vi bevist at man kan levere professionel service uden at skade miljøet. Vores 0-udslip transport er blevet til en konkurrencefordel der tiltrækker miljøbevidste kunder og hjælper dem med at nå deres bæredygtighedsmål.</p>
+
+                        <p><strong>Vil I være med til at gøre facility management grønnere?</strong> Kontakt os og hør hvordan vores bilfri service kan hjælpe jeres virksomhed med at reducere CO2-udslip uden at gå på kompromis med kvalitet.</p>
+                    </div>
+
+                    <!-- Share Buttons -->
+                    <div class="share-buttons">
+                        <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn share-facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:kontakt@dfmg.dk?subject=Interessant artikel om systematik i facility management&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Table of Contents -->
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-list"></i> Indholdsfortegnelse</h3>
+                        <ul class="toc-list" id="toc-list">
+                            <!-- Generated by JavaScript -->
+                        </ul>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-newspaper"></i> Relaterede Artikler</h3>
+                        <div class="related-article">
+                            <div class="related-image insights">
+                                <img src="/images/article/ipad.jpg" alt="Related Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <div class="related-content">
+                                <h4><a href="#">Fra Kaos til Kontrol: DFMG's Systemudvikling</a></h4>
+                                <div class="related-meta">4 min læsning</div>
+                            </div>
+                        </div>
+                        <div class="related-article">
+                            <div class="related-image sustainability">
+                                <img src="/images/article/ipad.jpg" alt="Popular Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <div class="related-content">
+                                <h4><a href="#">5 Tegn På at I Skal Skifte Facility Leverandør</a></h4>
+                                <div class="related-meta">3 min læsning</div>
+                            </div>
+                        </div>
+                        <div class="related-article">
+                            <div class="related-image innovation">
+                                <img src="/images/article/ipad.jpg" alt="Related Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <div class="related-content">
+                                <h4><a href="#">Teknologi vs. Mennesker i Facility Management</a></h4>
+                                <div class="related-meta">5 min læsning</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-card newsletter-signup">
+                        <h3><i class="fas fa-envelope"></i> Hold Dig Opdateret</h3>
+                        <div class="newsletter-subtitle">Få insights fra facility management</div>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Din email adresse" required>
+                            <button type="submit" class="newsletter-btn">
+                                Tilmeld Nyhedsbrev
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact CTA -->
+                    <div class="sidebar-card" style="text-align: center;">
+                        <h3><i class="fas fa-phone"></i> Lad Os Snakkes Ved</h3>
+                        <p style="margin-bottom: 1rem; color: #6b7280;">Interesseret i systematisk facility management?</p>
+                        <a href="/pages/kontakt.html" style="background: #344767; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">Kontakt DFMG</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to News -->
+    <section class="back-to-news">
+        <div class="container">
+            <a href="/pages/indblik/nyheder.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Tilbage til indblik
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    
+    <!-- Component loader -->
+    <script src="/../../../js/components.js" defer></script>
+</body>
+<script>
+// Generate Table of Contents
+document.addEventListener('DOMContentLoaded', function() {
+    const articleBody = document.querySelector('.article-body');
+    const tocList = document.getElementById('toc-list');
+    const headings = articleBody.querySelectorAll('h2, h3');
+    
+    headings.forEach((heading, index) => {
+        const id = 'heading-' + index;
+        heading.id = id;
+        
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = '#' + id;
+        link.textContent = heading.textContent;
+        link.style.paddingLeft = heading.tagName === 'H3' ? '1rem' : '0';
+        
+        li.appendChild(link);
+        tocList.appendChild(li);
+    });
+    
+    // Smooth scrolling
+    tocList.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            e.preventDefault();
+            const target = document.querySelector(e.target.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+</script>
+</html>

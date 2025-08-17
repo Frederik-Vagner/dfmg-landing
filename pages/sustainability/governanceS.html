@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance - DFMG</title>
+    <meta name="description" content="DFMG's governance tilgang: Systematik skaber ansvarlighed gennem transparens, åben kommunikation og fair forretningsførelse.">
+
+    <!-- Performance optimering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            height: 100vh;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+        
+        /* Vertical Sliding Container */
+        .vertical-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 100px);
+            width: 100vw;
+            transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        
+        /* Base Slide */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-shrink: 0;
+            padding: 2rem;
+            padding-top: calc(2rem + 100px);
+        }
+        
+        /* Governance Color Scheme - Professional Blues & Greens */
+        .slide:nth-child(1) { 
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 50%, #cbd5e1 100%);
+        }
+        .slide:nth-child(2) { 
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+        }
+        .slide:nth-child(3) { 
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+        }
+        .slide:nth-child(4) { 
+            background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%);
+        }
+        .slide:nth-child(5) { 
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+        }
+        
+        /* Vertical Navigation */
+        .slide-nav {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 10px;
+            border-radius: 30px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .slide-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(52, 71, 103, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .slide-dot.active {
+            background: #344767;
+            transform: scale(1.3);
+        }
+        
+        .slide-dot:hover {
+            transform: scale(1.1);
+            background: rgba(52, 71, 103, 0.5);
+        }
+        
+        .slide-dot.active:hover {
+            background: #344767;
+        }
+        
+        /* Progress Indicator */
+        .progress-bar {
+            position: fixed;
+            left: 0;
+            top: 100px;
+            width: 3px;
+            background: #344767;
+            transition: height 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+            z-index: 1000;
+        }
+        
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-size: 1.2rem;
+            color: #344767;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .nav-arrow.up {
+            top: 130px;
+        }
+
+        .nav-arrow.down {
+            bottom: 30px;
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        /* Slide Content */
+        .slide-content {
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            display: grid;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        /* Hero Slide */
+        .hero-content {
+            text-align: center;
+            grid-template-columns: 1fr;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(52, 71, 103, 0.1);
+            color: #344767;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 300;
+            color: #344767;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.6rem;
+            color: #64748b;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.4;
+        }
+        
+        .governance-pillars {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .pillar-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #344767, #4285f4);
+        }
+        
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .pillar-icon {
+            font-size: 2.5rem;
+            color: #344767;
+            margin-bottom: 1rem;
+        }
+        
+        .pillar-card h3 {
+            color: #344767;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .pillar-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+        
+        .content-section h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #344767;
+        }
+        
+        .content-section .subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #4285f4;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-text {
+            color: #344767;
+            font-weight: 600;
+        }
+
+        .quote-highlight {
+            background: linear-gradient(135deg, rgba(52, 71, 103, 0.1), rgba(66, 133, 244, 0.1));
+            border-left: 4px solid #344767;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #344767;
+        }
+        
+        /* Feature List */
+        .governance-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .governance-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .governance-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .governance-list i {
+            color: #344767;
+            font-size: 1.5rem;
+            width: 24px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .governance-content {
+            flex: 1;
+        }
+
+        .governance-title {
+            font-weight: 600;
+            color: #344767;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .governance-description {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Visual Section */
+        .visual-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .slide-visual {
+            width: 100%;
+            height: 450px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .data-visual {
+            background: linear-gradient(135deg, #4285f4, #1d4ed8, #1e40af);
+        }
+
+        .communication-visual {
+            background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+        }
+
+        .quality-visual {
+            background: linear-gradient(135deg, #f59e0b, #d97706, #b45309);
+        }
+
+        .scaling-visual {
+            background: linear-gradient(135deg, #344767, #1e293b, #0f172a);
+        }
+
+        .visual-icon {
+            position: absolute;
+            font-size: 6rem;
+            opacity: 0.2;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        /* Full Width Content */
+        .full-width {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .full-width h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #344767;
+            margin-bottom: 1rem;
+        }
+
+        .full-width .subtitle {
+            font-size: 1.4rem;
+            color: #64748b;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .principle-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .principle-card h3 {
+            color: #344767;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .principle-card i {
+            color: #4285f4;
+            font-size: 1.4rem;
+        }
+
+        .principle-card p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Three Column for Quality */
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .quality-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .quality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .quality-card h3 {
+            color: #344767;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .quality-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .quality-number {
+            color: #f59e0b;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body { padding-top: 80px; }
+            .slide { padding-top: calc(2rem + 80px); }
+            .slide-content { gap: 2rem; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .content-section h1 { font-size: 2.5rem; }
+            .full-width h1 { font-size: 2.5rem; }
+            .two-column { grid-template-columns: 1fr; gap: 2rem; }
+            .governance-pillars { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+            .quality-grid { grid-template-columns: 1fr; }
+            .slide-visual { height: 300px; font-size: 1.1rem; }
+            .nav-arrow { display: none; }
+            .slide-nav { right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation Arrows -->
+    <button class="nav-arrow up" id="upBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button class="nav-arrow down" id="downBtn">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <!-- Vertical Sliding Container -->
+    <div class="vertical-container" id="verticalContainer">
+        
+        <!-- Slide 1: Hero -->
+        <section class="slide">
+            <div class="slide-content hero-content">
+                <div>
+                    <div class="hero-badge">Governance</div>
+                    <h1>Systematik Skaber Ansvarlighed</h1>
+                    <div class="hero-subtitle">Hos DFMG bygger vi governance på transparens, åbenhed og fair forretningsførelse. Vores ERP-system gør os ansvarlige overfor alle - kunder, medarbejdere og samfundet.</div>
+                    
+                    <div class="governance-pillars">
+                        <div class="pillar-card">
+                            <i class="fas fa-eye pillar-icon"></i>
+                            <h3>Fuldstændig Transparens</h3>
+                            <p>Alt dokumenteret og tilgængeligt</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-handshake pillar-icon"></i>
+                            <h3>Åben Kommunikation</h3>
+                            <p>Deler tanker og beslutninger</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-shield-alt pillar-icon"></i>
+                            <h3>Fair Konkurrence</h3>
+                            <p>Sort arbejde tolereres ikke</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-chart-line pillar-icon"></i>
+                            <h3>Data-Drevet Ansvar</h3>
+                            <p>Beslutninger baseret på fakta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Data Transparens -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="content-section">
+                    <div class="section-badge">Data & Transparens</div>
+                    <h1>GDPR Excellence Som Konkurrencefordel</h1>
+                    <div class="subtitle">Når datasikkerhed bliver til tillid og troværdighed</div>
+                    <p>Vi har kigget på de største tech-virksomheder for at sikre os GDPR compliance på højeste niveau. <span class="highlight-text">Alle data</span> er beskyttet, sporet og tilgængeligt efter behov.</p>
+                    
+                    <ul class="governance-list">
+                        <li>
+                            <i class="fas fa-lock"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Rollbaseret Adgang</div>
+                                <div class="governance-description">Kun relevante medarbejdere har adgang til kundedata og adgangskoder</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-key"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Nøgle-Inventar Tracking</div>
+                                <div class="governance-description">Systematisk sporbarhed af hvem der har hvilke nøgler med timestamps</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-cloud"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Sikker Hosting</div>
+                                <div class="governance-description">Heroku + AWS infrastruktur med automatiske backups og 30-dages sletning</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-contract"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Digital Kontrakter</div>
+                                <div class="governance-description">Integreret kontrakthåndtering fjerner eksterne leverandører og øger sikkerheden</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="visual-section">
+                    <div class="slide-visual data-visual">
+                        <i class="fas fa-database visual-icon"></i>
+                        <div>GDPR Excellence<br>& Data Sikkerhed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Åben Kommunikation -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="visual-section">
+                    <div class="slide-visual communication-visual">
+                        <i class="fas fa-comments visual-icon"></i>
+                        <div>Åbenhed Som<br>Konkurrencefordel</div>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <div class="section-badge">Åben Kommunikation</div>
+                    <h1>Transparens Som Våben</h1>
+                    <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
+                    <p>Mange virksomheder skjuler deres processer. Vi gør det modsatte - <span class="highlight-text">åbenhed skaber tillid</span> og differentiere os fra konkurrenterne.</p>
+                    
+                    <div class="quote-highlight">
+                        "Jeg er rimelig åben overfor mine kunder og giver dem også gerne mine mellemregninger på hvorfor prisen er som den er."
+                    </div>
+                    
+                    <ul class="governance-list">
+                        <li>
+                            <i class="fas fa-calculator"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Åben Prisfastsættelse</div>
+                                <div class="governance-description">Kunder kan se præcis hvordan priser beregnes ud fra tidsdata og omkostninger</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-users"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Involvering I Beslutninger</div>
+                                <div class="governance-description">Medarbejdere forstår virksomhedens udfordringer og tanker bag beslutninger</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Klager Som Læremuligheder</div>
+                                <div class="governance-description">"Det er faktisk det vi gror mest af" - systematisk håndtering og forbedring</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Same-Day Respons</div>
+                                <div class="governance-description">Tilgængelige 04:00-23:00 alle dage med øjeblikkelig problemløsning</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Kvalitet & Kontinuitet -->
+        <section class="slide">
+            <div class="slide-content full-width">
+                <div>
+                    <div class="section-badge">Kvalitet & Kontinuitet</div>
+                    <h1>Systematisk Kvalitetssikring</h1>
+                    <div class="subtitle">Fra procedurer til performance - alt er dokumenteret og måleligt</div>
+                    
+                    <div class="quality-grid">
+                        <div class="quality-card">
+                            <div class="quality-number">100%</div>
+                            <h3>Kvalitetsgaranti</h3>
+                            <p>Gratis rettelser så hurtigt som muligt hvis standarden ikke nås</p>
+                        </div>
+                        
+                        <div class="quality-card">
+                            <div class="quality-number">3</div>
+                            <h3>Arbejdsskader Totalt</h3>
+                            <p>Kun ødelagte lamper - prompt rapportering til kunder og forsikring</p>
+                        </div>
+                        
+                        <div class="quality-card">
+                            <div class="quality-number">24/7</div>
+                            <h3>Backup Netværk</h3>
+                            <p>Fuldtids, deltids og trusted partnere sikrer kontinuerlig service</p>
+                        </div>
+                        
+                        <div class="quality-card">
+                            <div class="quality-number">100%</div>
+                            <h3>Sikkerhedsinstruktion</div>
+                            <p>Alle medarbejdere får grundig gennemgang af procedurer og produkter</p>
+                        </div>
+                        
+                        <div class="quality-card">
+                            <div class="quality-number">∞</div>
+                            <h3>Klage Dokumentation</h3>
+                            <p>Systematisk opsamling og læring fra feedback i ERP-systemet</p>
+                        </div>
+                        
+                        <div class="quality-card">
+                            <div class="quality-number">30</div>
+                            <h3>Dages Data Retention</h3>
+                            <p>GDPR-compliant sletning med mulighed for forlængelse ved lovkrav</p>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-highlight" style="margin-top: 3rem;">
+                        "Mange er bange for klager, men når jeg ser på det er det faktisk det som vi gror mest af, da det er en chance for at lære og optimere."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Ansvarlig Skalering -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="content-section">
+                    <div class="section-badge">Fremtidssikring</div>
+                    <h1>Ansvarlig Skalering</h1>
+                    <div class="subtitle">Governance der vokser med virksomheden</div>
+                    <p>Når vi sælger vores ERP-system til andre, bygger vi strukturer ind - men de skal selv vælge at følge dem. <span class="highlight-text">Vi er ikke dommere, men enablers.</span></p>
+                    
+                    <div class="quote-highlight">
+                        "Sort arbejde tolereres ikke, da virksomheder som gør sig i dette ødelægger det for alle os andre - og det vil være noget som jeg vil afsløre hvis opdaget."
+                    </div>
+                    
+                    <ul class="governance-list">
+                        <li>
+                            <i class="fas fa-balance-scale"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Fair Konkurrence</div>
+                                <div class="governance-description">Står for etisk forretningsførelse og afslører unfair practices</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-cogs"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Strukturer, Ikke Kontrol</div>
+                                <div class="governance-description">ERP-systemet bygger governance-strukturer ind, men brugerne vælger selv at følge dem</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-users-cog"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Supervisor Empowerment</div>
+                                <div class="governance-description">Involverer medarbejdere i virksomhedens udfordringer så de kan handle selvstændigt</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <div class="governance-content">
+                                <div class="governance-title">Skalerbar Governance</div>
+                                <div class="governance-description">Systematikken sikrer at DFMG-værdierne bevares når virksomheden vokser</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="principles-grid" style="margin-top: 3rem;">
+                        <div class="principle-card">
+                            <h3>
+                                <i class="fas fa-building"></i>
+                                Fremtidens Facility Management
+                            </h3>
+                            <p>Når vi sælger ERP-systemet bygger vi governance-principper ind fra start. Strukturer der guider mod ansvarlig forretningsførelse.</p>
+                        </div>
+                        
+                        <div class="principle-card">
+                            <h3>
+                                <i class="fas fa-gavel"></i>
+                                Enabler, Ikke Dommer
+                            </h3>
+                            <p>Vi skaber værktøjer til ansvarlig drift, men tvinger ikke andre til at følge vores værdier. Valget er deres - konsekvenserne også.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="visual-section">
+                    <div class="slide-visual scaling-visual">
+                        <i class="fas fa-rocket visual-icon"></i>
+                        <div>Skalerbar Governance<br>& Fair Konkurrence</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+        <!-- Slide Navigation -->
+    <div class="slide-nav">
+        <div class="slide-dot active" data-slide="0"></div>
+        <div class="slide-dot" data-slide="1"></div>
+        <div class="slide-dot" data-slide="2"></div>
+        <div class="slide-dot" data-slide="3"></div>
+    </div>
+
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+    <script>
+        class SustainabilitySlider {
+            constructor() {
+                this.container = document.getElementById('horizontalContainer');
+                this.dots = document.querySelectorAll('.slide-dot');
+                this.currentSlide = 0;
+                this.totalSlides = 4;
+                this.isAnimating = false;
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupNavigation();
+                this.setupKeyboard();
+                this.setupWheel();
+                this.setupTouch();
+            }
+            
+            setupNavigation() {
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+            }
+            
+            setupKeyboard() {
+                document.addEventListener('keydown', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    switch(e.key) {
+                        case 'ArrowRight':
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            this.nextSlide();
+                            break;
+                        case 'ArrowLeft':
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            this.prevSlide();
+                            break;
+                    }
+                });
+            }
+            
+            setupWheel() {
+                this.container.addEventListener('wheel', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    e.preventDefault();
+                    
+                    if (e.deltaX > 50 || e.deltaY > 50) {
+                        this.nextSlide();
+                    } else if (e.deltaX < -50 || e.deltaY < -50) {
+                        this.prevSlide();
+                    }
+                }, { passive: false });
+            }
+            
+            setupTouch() {
+                let startX = 0;
+                
+                this.container.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.container.addEventListener('touchend', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+            }
+            
+            goToSlide(index) {
+                if (index === this.currentSlide || this.isAnimating) return;
+                
+                this.isAnimating = true;
+                this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+                
+                const translateX = -this.currentSlide * 100;
+                this.container.style.transform = `translateX(${translateX}vw)`;
+                
+                this.updateDots();
+                
+                setTimeout(() => {
+                    this.isAnimating = false;
+                }, 800);
+            }
+            
+            nextSlide() {
+                if (this.currentSlide < this.totalSlides - 1) {
+                    this.goToSlide(this.currentSlide + 1);
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.goToSlide(this.currentSlide - 1);
+                }
+            }
+            
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = new SustainabilitySlider();
+            
+            // Handle URL fragments
+            const hash = window.location.hash;
+            if (hash === '#miljoe') slider.goToSlide(1);
+            else if (hash === '#social') slider.goToSlide(2);
+            else if (hash === '#governance') slider.goToSlide(3);
+        });
+    </script>
+</body>
+</html>

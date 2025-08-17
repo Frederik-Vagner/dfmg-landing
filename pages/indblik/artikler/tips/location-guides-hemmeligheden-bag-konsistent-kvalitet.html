@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hvorfor Systematik Slår Talent i Facility Management | DFMG</title>
+    <meta name="description" content="Opdagå hvordan systematiske processer og dokumentation skaber mere pålidelig facility service end afhængighed af individuelle medarbejdere.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    padding-top: 100px;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Article Header */
+.article-header {
+    background: linear-gradient(135deg, #344767 0%, #4285f4 50%, #22c55e 100%);
+    color: white;
+    padding: 4rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="headerpattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="20" fill="url(%23headerpattern)"/></svg>') repeat;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+.article-category {
+    display: inline-block;
+    background: rgba(34, 197, 94, 0.2);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Main Content Layout */
+.article-content {
+    padding: 1rem 0 0rem;
+    background: #f9fafb;
+    min-height: 80vh;
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Main Article Content */
+.main-content {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.article-excerpt {
+    font-size: 1.25rem;
+    color: #6b7280;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    position: relative;
+}
+
+.article-excerpt::before {
+    content: '"';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 3rem;
+    color: #3b82f6;
+    opacity: 0.3;
+    font-family: serif;
+}
+
+.article-body {
+    line-height: 1.6;
+    color: #374151;
+}
+
+.article-body p {
+    margin-bottom: 1.5rem;
+}
+
+.article-body h1, .article-body h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin: 2rem 0 1rem;
+    font-weight: 700;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.article-body h1::before, .article-body h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 4px;
+    height: 1.5rem;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 2px;
+}
+
+.article-body h3 {
+    font-size: 1.4rem;
+    color: #1f2937;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.article-body strong {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.article-body ul, .article-body ol {
+    margin: 1.5rem 0;
+    padding-left: 0;
+}
+
+.article-body li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.article-body ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Article Images */
+.article-image {
+    max-width: 50%;
+    max-height: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    display: block;
+}
+
+.article-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Callout boxes */
+.article-body .callout {
+    background-color: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.article-body .callout::before {
+    content: "ℹ";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #3b82f6;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.article-body .callout p {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.article-body .success {
+    background-color: #dcfce7;
+    border: 1px solid #22c55e;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.article-body .success::before {
+    content: "✓";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #22c55e;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.article-body .success p {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.article-body blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1.5rem;
+    font-style: italic;
+    background-color: #f8fafc;
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.article-body blockquote::before {
+    content: """;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 2rem;
+    color: #3b82f6;
+    opacity: 0.3;
+    font-family: serif;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.sidebar-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-card h3 i {
+    color: #3b82f6;
+    font-size: 1.1rem;
+}
+
+/* Table of Contents */
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toc-list a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.toc-list a:hover {
+    color: #3b82f6;
+}
+
+/* Related Articles */
+.related-article {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.related-article:last-child {
+    border-bottom: none;
+}
+
+.related-article:hover {
+    background: #f9fafb;
+    margin: 0 -1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.related-image {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.related-image.sustainability {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.related-image.innovation {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.related-image.insights {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.related-content h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1f2937;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+}
+
+.related-content a {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.related-content a:hover {
+    color: #3b82f6;
+}
+
+.related-meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    background: white;
+    color: #1f2937;
+    text-align: center;
+}
+
+.newsletter-signup h3 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.newsletter-input {
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #1f2937;
+    font-size: 0.9rem;
+}
+
+.newsletter-btn {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Share Buttons */
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.share-linkedin {
+    background: #0077b5;
+}
+
+.share-twitter {
+    background: #1da1f2;
+}
+
+.share-facebook {
+    background: #1877f2;
+}
+
+.share-email {
+    background: #6b7280;
+}
+
+/* Back to News */
+.back-to-news {
+    text-align: center;
+    padding: 2rem 0;
+    background: #f9fafb;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+
+    .sidebar-card {
+        margin: 0 10px;
+    }
+}
+</style>
+<body>
+<!-- Header Component -->
+<div id="header"></div>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="breadcrumb">
+                    <a href="/">Forside</a>
+                    <span>›</span>
+                    <a href="/pages/indblik/nyheder.html">Indblik</a>
+                    <span>›</span>
+                    <span>Artikel</span>
+                </div>
+                <div class="article-category">TIPS & TRICKS</div>
+                <h1 class="article-title">Location Guides: Hemmeligheden Bag Konsistent Kvalitet</h1>
+                
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        5. december 2024
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        4 min læsning
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-eye"></i>
+                        1,445 visninger
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Main Content -->
+                <main class="main-content">
+                    <img src="/images/article/ipad.jpg" alt="Systematisk facility management" class="article-image">
+                    
+                    <div class="article-excerpt">
+                        Lær hvordan detaljeret dokumentation og kunde-specifikke instrukser eliminerer gætværk og sikrer perfekt service hver gang.
+                    </div>
+
+                    <div class="article-body">
+                        <p>Forestil jer at have en ny medarbejder der aldrig har været på jeres lokation før. På 20 minutter skal denne person levere samme kvalitet som jeres erfarne, faste medarbejder. Umuligt? Ikke med Location Guides.</p>
+
+                        <p>Hos DFMG er Location Guides vores hemmelige våben til at sikre konsistent kvalitet, uanset hvilken medarbejder der udfører arbejdet. Lad mig vise jer hvordan det fungerer.</p>
+
+                        <h2>Hvad Er En Location Guide?</h2>
+                        <p>En Location Guide er en komplet, digital manual specielt skræddersyet til jeres virksomhed og lokation. Den indeholder:</p>
+
+                        <ul>
+                            <li><strong>Adgangsinformation:</strong> Nøgler, alarmer, specialkoder</li>
+                            <li><strong>Lokale-specifikke instrukser:</strong> Præcis hvad der skal gøres hvor</li>
+                            <li><strong>Edge cases:</strong> Løsninger på alt det usædvanlige</li>
+                            <li><strong>Præferencer:</strong> Jeres specielle ønsker og krav</li>
+                            <li><strong>Kontaktinformation:</strong> Hvem der skal kontaktes ved problemer</li>
+                            <li><strong>Reference billeder:</strong> Sådan skal det se ud når det er færdigt</li>
+                        </ul>
+
+                        <div class="callout">
+                            <p>En Location Guide er forskellen mellem "håber det går godt" og "ved præcis hvordan det skal gøres".</p>
+                        </div>
+
+                        <h2>Hvorfor Er De Nødvendige?</h2>
+
+                        <h3>Problemet Med "Tribal Knowledge"</h3>
+                        <p>De fleste facility leverandører stoler på "tribal knowledge" - information der kun eksisterer i erfarne medarbejderes hoveder:</p>
+
+                        <ul>
+                            <li>"Husk at dørene i meeting room 3 skal låses hver gang"</li>
+                            <li>"Kunden kan ikke lide at vi rører deres whiteboards"</li>
+                            <li>"Der er en alarm i kælderen der går i gang hvis man åbner det forkerte skab"</li>
+                            <li>"Tæppet i receptionen skal støvsuges i en særlig retning"</li>
+                        </ul>
+
+                        <p>Hvad sker der når den erfarne medarbejder bliver syg, skifter job eller bare har en dårlig dag?</p>
+
+                        <blockquote>
+                            "Vi havde en ny rengøringsmedarbejder der ikke vidste at vores kaffemaskine skulle tømmes på en særlig måde. Resultatet var 5000 kr. i reparationsomkostninger."
+                            <br><em>- Office Manager, advokatfirma</em>
+                        </blockquote>
+
+                        <h2>Sådan Skaber Vi Location Guides</h2>
+
+                        <h3>Fase 1: Deep Dive Walkthrough</h3>
+                        <p>Før vi påbegynder service på en ny lokation, gennemfører jeg personligt en detaljeret walkthrough:</p>
+
+                        <ul>
+                            <li><strong>60-90 minutter</strong> sammen med jeres facilities ansvarlige</li>
+                            <li><strong>Lokale for lokale</strong> gennemgang af alle områder</li>
+                            <li><strong>Hundredvis af billeder</strong> der dokumenterer status og særlige forhold</li>
+                            <li><strong>Noter til alt</strong> der er anderledes eller særligt</li>
+                        </ul>
+
+                        <h3>Fase 2: Edge Case Discovery</h3>
+                        <p>De første 1-3 måneder fokuserer vi på at opdage alle "edge cases" - de situationer der ikke er standard:</p>
+
+                        <ul>
+                            <li>Hvad gør vi hvis noget er i stykker?</li>
+                            <li>Hvordan håndterer vi særlige arrangementer?</li>
+                            <li>Hvem kontakter vi ved tekniske problemer?</li>
+                            <li>Hvilke områder må aldrig forstyrres?</li>
+                        </ul>
+
+                        <div class="success">
+                            <p>Hver gang vi opdager en ny edge case, opdaterer vi øjeblikkelig Location Guide for fremtidige referencer.</p>
+                        </div>
+
+                        <h3>Fase 3: Kontinuerlig Optimering</h3>
+                        <p>Location Guides er levende dokumenter der konstant forbedres:</p>
+
+                        <ul>
+                            <li>Månedlige gennemgange med kunden</li>
+                            <li>Feedback fra medarbejdere der bruger guiden</li>
+                            <li>Opdateringer når lokationen ændres</li>
+                            <li>Tilføjelse af nye processer og præferencer</li>
+                        </ul>
+
+                        <h2>Konkrete Eksempler Fra Vores Location Guides</h2>
+
+                        <h3>Tech-Virksomhed i København</h3>
+                        <p><strong>Særlige forhold:</strong></p>
+                        <ul>
+                            <li>"Telefon booth 2 har et løst panel - træk forsigtigt i døren"</li>
+                            <li>"Kaffemaskinen skal renses hver fredag med den blå klud i skabet under"</li>
+                            <li>"Meeting room A har motion sensor lys der går automatisk - normal ven tid 30 sek"</li>
+                            <li>"Planter i receptionen vandes kun tirsdage - ikke for meget vand"</li>
+                        </ul>
+
+                        <h3>Advokatfirma</h3>
+                        <p><strong>Sikkerhedsprotokol:</strong></p>
+                        <ul>
+                            <li>"Alt papir skal shreddes - ingen undtagelser"</li>
+                            <li>"Partner-kontorer må kun rengøres mellem 17:00-19:00"</li>
+                            <li>"Alarm kode: [KRYPTERET] - husk at disarmere inden adgang"</li>
+                            <li>"Printer område: Sæt ALTID "pause" mode før rengøring"</li>
+                        </ul>
+
+                        <h3>Restaurant</h3>
+                        <p><strong>Hygiejne-specifikke krav:</strong></p>
+                        <ul>
+                            <li>"Køkken gulv skal moppe med specialrengøringsmiddel (gul flaske)"</li>
+                            <li>"Alle overflader i food prep område skal desinficeres"</li>
+                            <li>"Affald skal ud HVER dag - ingen undtagelser"</li>
+                            <li>"Udtræk over komfur skal rengøres med fettopløsende middel"</li>
+                        </ul>
+
+                        <h2>Teknologien Bag Location Guides</h2>
+
+                        <h3>Digital-Først Design</h3>
+                        <p>Vores Location Guides lever i vores ERP-system og er tilgængelige på alle medarbejderes smartphones:</p>
+
+                        <ul>
+                            <li><strong>Øjeblikkelig adgang:</strong> Altid den nyeste version</li>
+                            <li><strong>Billeder og video:</strong> Visuel dokumentation af komplekse procedurer</li>
+                            <li><strong>Søgefunktion:</strong> Find hurtigt specifikke instrukser</li>
+                            <li><strong>Offline tilgængelighed:</strong> Fungerer også uden internet</li>
+                        </ul>
+
+                        <h3>QR-Koder For Kritiske Områder</h3>
+                        <p>I komplekse lokationer placerer vi QR-koder der linker direkte til specifikke instruktioner:</p>
+
+                        <ul>
+                            <li>Scan QR-kode ved teknisk udstyr → Se præcise rengøringsinstrukser</li>
+                            <li>Scan ved særlige materialer → Se håndteringsvejledning</li>
+                            <li>Scan ved problemområder → Se troubleshooting guide</li>
+                        </ul>
+
+                        <h2>Fordelene For Alle Parter</h2>
+
+                        <h3>For Jer Som Kunder:</h3>
+                        <ul>
+                            <li><strong>Konsistent kvalitet:</strong> Samme standard uanset medarbejder</li>
+                            <li><strong>Mindre mikromanagement:</strong> I skal ikke instruere hver enkelt person</li>
+                            <li><strong>Hurtigere onboarding:</strong> Nye medarbejdere er produktive fra dag 1</li>
+                            <li><strong>Færre fejl:</strong> Alt er dokumenteret og kan ikke glemmes</li>
+                        </ul>
+
+                        <h3>For Vores Medarbejdere:</h3>
+                        <ul>
+                            <li><strong>Selvtillid:</strong> De ved præcis hvad der forventes</li>
+                            <li><strong>Effektivitet:</strong> Ingen spild tid på at finde ud af procedurer</li>
+                            <li><strong>Kvalitet:</strong> Mulighed for at levere perfekt service hver gang</li>
+                            <li><strong>Læring:</strong> Kontinuerlig forbedring gennem opdateret dokumentation</li>
+                        </ul>
+
+                        <h3>For DFMG:</h3>
+                        <ul>
+                            <li><strong>Skalerbarhed:</strong> Vi kan håndtere medarbejderskift uden kvalitetsfald</li>
+                            <li><strong>Kundetilfredshed:</strong> Konsistent service skaber loyale kunder</li>
+                            <li><strong>Effektivitet:</strong> Mindre tid brugt på at rette fejl og misforståelser</li>
+                            <li><strong>Konkurrencefordel:</strong> Få leverandører opererer på dette niveau</li>
+                        </ul>
+
+                        <h2>Sådan Implementerer I Location Guides</h2>
+
+                        <h3>Hvis I Vil Gøre Det Selv:</h3>
+                        <ul>
+                            <li><strong>Start simpelt:</strong> Lav en grundlæggende tjekliste for hver opgave</li>
+                            <li><strong>Dokumentér edge cases:</strong> Skriv alt ned der er anderledes</li>
+                            <li><strong>Tag billeder:</strong> Visuel dokumentation er afgørende</li>
+                            <li><strong>Opdatér løbende:</strong> Gør det til en levende proces</li>
+                            <li><strong>Træn jeres team:</strong> Sørg for at alle bruger dokumentationen</li>
+                        </ul>
+
+                        <h3>Hvis I Vil Have Professionel Hjælp:</h3>
+                        <p>Hos DFMG har vi perfektioneret Location Guide-processen gennem års erfaring:</p>
+
+                        <ul>
+                            <li>Vi ved hvilke spørgsmål der skal stilles</li>
+                            <li>Vi har et system der virker</li>
+                            <li>Vi håndterer kompleksiteten for jer</li>
+                            <li>Vi sørger for løbende opdateringer</li>
+                        </ul>
+
+                        <h2>Resultatet: Facility Management På Autopilot</h2>
+                        <p>Med vellavede Location Guides bliver facility management forudsigelig og pålidelig. Jeres service kører på autopilot, fordi alle ved præcis hvad der skal gøres, hvornår og hvordan.</p>
+
+                        <div class="success">
+                            <p><strong>Vores rekord:</strong> En ny medarbejder leverede 100% kvalitet på første forsøg takket være vores detaljerede Location Guide.</p>
+                        </div>
+
+                        <h2>Case Study: Fra Kaos til Kontrol</h2>
+                        <p><strong>Situation:</strong> En kunde havde haft 5 forskellige rengøringsmedarbejdere på 8 måneder. Hver gang skulle de bruge timer på at forklare specifikke krav.</p>
+
+                        <p><strong>Løsning:</strong> Vi lavede en komplet Location Guide med 47 specifikke instrukser og 120 reference billeder.</p>
+
+                        <p><strong>Resultat:</strong> Næste medarbejderskift tog 15 minutter i briefing i stedet for 3 timer. Kvaliteten var konsistent fra dag 1.</p>
+
+                        <h2>Konklusion</h2>
+                        <p>Location Guides er ikke bare dokumentation - de er fundament for professionel facility service. De eliminerer gætværk, reducerer fejl, og sikrer at jeres præferencer altid respekteres.</p>
+
+                        <p>Investering i systematisk dokumentation betaler sig tilbage gennem konsistent kvalitet, reduceret administration, og færre frustrationer.</p>
+
+                        <p><strong>Vil I opleve forskellen?</strong> Lad os lave en Location Guide til jeres virksomhed og vis jer hvordan detaljeret dokumentation transformerer facility service.</p>
+                    </div>
+
+                    <!-- Share Buttons -->
+                    <div class="share-buttons">
+                        <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn share-facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:kontakt@dfmg.dk?subject=Interessant artikel om systematik i facility management&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Table of Contents -->
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-list"></i> Indholdsfortegnelse</h3>
+                        <ul class="toc-list" id="toc-list">
+                            <!-- Generated by JavaScript -->
+                        </ul>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-newspaper"></i> Relaterede Artikler</h3>
+                        <div class="related-article">
+                            <div class="related-image insights">
+                                <img src="/images/article/ipad.jpg" alt="Related Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <div class="related-content">
+                                <h4><a href="#">Fra Kaos til Kontrol: DFMG's Systemudvikling</a></h4>
+                                <div class="related-meta">4 min læsning</div>
+                            </div>
+                        </div>
+                        <div class="related-article">
+                            <div class="related-image sustainability">
+                                <img src="/images/article/ipad.jpg" alt="Popular Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <div class="related-content">
+                                <h4><a href="#">5 Tegn På at I Skal Skifte Facility Leverandør</a></h4>
+                                <div class="related-meta">3 min læsning</div>
+                            </div>
+                        </div>
+                        <div class="related-article">
+                            <div class="related-image innovation">
+                                <img src="/images/article/ipad.jpg" alt="Related Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <div class="related-content">
+                                <h4><a href="#">Teknologi vs. Mennesker i Facility Management</a></h4>
+                                <div class="related-meta">5 min læsning</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-card newsletter-signup">
+                        <h3><i class="fas fa-envelope"></i> Hold Dig Opdateret</h3>
+                        <div class="newsletter-subtitle">Få insights fra facility management</div>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Din email adresse" required>
+                            <button type="submit" class="newsletter-btn">
+                                Tilmeld Nyhedsbrev
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact CTA -->
+                    <div class="sidebar-card" style="text-align: center;">
+                        <h3><i class="fas fa-phone"></i> Lad Os Snakkes Ved</h3>
+                        <p style="margin-bottom: 1rem; color: #6b7280;">Interesseret i systematisk facility management?</p>
+                        <a href="/pages/kontakt.html" style="background: #344767; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">Kontakt DFMG</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to News -->
+    <section class="back-to-news">
+        <div class="container">
+            <a href="/pages/indblik/nyheder.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Tilbage til indblik
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    
+    <!-- Component loader -->
+    <script src="/../../../js/components.js" defer></script>
+</body>
+<script>
+// Generate Table of Contents
+document.addEventListener('DOMContentLoaded', function() {
+    const articleBody = document.querySelector('.article-body');
+    const tocList = document.getElementById('toc-list');
+    const headings = articleBody.querySelectorAll('h2, h3');
+    
+    headings.forEach((heading, index) => {
+        const id = 'heading-' + index;
+        heading.id = id;
+        
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = '#' + id;
+        link.textContent = heading.textContent;
+        link.style.paddingLeft = heading.tagName === 'H3' ? '1rem' : '0';
+        
+        li.appendChild(link);
+        tocList.appendChild(li);
+    });
+    
+    // Smooth scrolling
+    tocList.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            e.preventDefault();
+            const target = document.querySelector(e.target.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+</script>
+</html>

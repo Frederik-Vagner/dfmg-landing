@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    <title>DFMG - Indblik & Artikler</title>
+    <meta name="description" content="Få indblik i facility management trends, tips og DFMG's tilgang til professionel bygningsdrift og rengøring.">
     
     <!-- Favicon -->
     <link rel="icon" href="../../images/logos/logo.png" type="image/png">
@@ -42,18 +41,39 @@ body {
 /* Main container */
 .container {
     padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #344767 0%, #4285f4 50%, #22c55e 100%);
+    color: white;
+    padding: 4rem 0 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Filter Navigation */
 .filter-section {
     background: white;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .filter-container {
@@ -78,8 +98,23 @@ body {
     color: #64748b;
     font-weight: 600;
     cursor: pointer;
-
     font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-tab.active {
+    background: #4285f4;
+    border-color: #4285f4;
+    color: white;
+}
+
+.filter-tab:hover {
+    border-color: #4285f4;
+    color: #4285f4;
+}
+
+.filter-tab.active:hover {
+    color: white;
 }
 
 .search-bar {
@@ -90,9 +125,12 @@ body {
     border-radius: 50px;
     padding: 8px 20px;
     min-width: 300px;
-
+    transition: all 0.3s ease;
 }
 
+.search-bar:focus-within {
+    border-color: #4285f4;
+}
 
 .search-bar input {
     border: none;
@@ -193,8 +231,13 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-
     align-self: flex-start;
+    transition: all 0.3s ease;
+}
+
+.featured-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
 }
 
 /* Articles Grid */
@@ -209,6 +252,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 2rem;
+    margin-bottom: 4rem;
 }
 
 .article-card {
@@ -217,13 +261,38 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .article-image {
     height: 220px;
-    background: linear-gradient(135deg, #64748b, #475569);
     position: relative;
     overflow: hidden;
+}
+
+.article-image.sustainability {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.article-image.innovation {
+    background: linear-gradient(135deg, #4285f4, #1d4ed8);
+}
+
+.article-image.insights {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.article-image.tips {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.article-image.cases {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
 }
 
 .article-date {
@@ -238,6 +307,20 @@ body {
     font-weight: 600;
 }
 
+.coming-soon-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(66, 133, 244, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .article-content {
     padding: 2rem;
 }
@@ -250,6 +333,12 @@ body {
     letter-spacing: 1px;
     margin-bottom: 0.75rem;
 }
+
+.article-category.sustainability { color: #22c55e; }
+.article-category.innovation { color: #4285f4; }
+.article-category.insights { color: #8b5cf6; }
+.article-category.tips { color: #f59e0b; }
+.article-category.cases { color: #ef4444; }
 
 .article-title {
     color: #344767;
@@ -274,6 +363,14 @@ body {
     border-top: 1px solid #f1f5f9;
 }
 
+.read-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
 .read-more {
     color: #4285f4;
     font-weight: 600;
@@ -282,17 +379,27 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: all 0.3s ease;
+}
 
+.read-more:hover {
+    color: #1d4ed8;
+}
+
+.read-more.coming-soon {
+    color: #9ca3af;
+    cursor: default;
 }
 
 /* Newsletter Signup */
 .newsletter-section {
     background: linear-gradient(135deg, #344767, #4a5568);
     color: white;
-    padding: 4rem 0 12rem 0;
+    padding: 4rem 0;
     margin-top: 4rem;
     position: relative;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .newsletter-content {
@@ -345,29 +452,52 @@ body {
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
-
     font-size: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Placeholder icon styling */
-.placeholder-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.newsletter-btn:hover {
+    background: #16a34a;
 }
 
-.placeholder-icon i {
-    font-size: 3rem;
-    color: rgba(255, 255, 255, 0.7);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .featured-article {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+    }
+    
+    .search-bar {
+        min-width: 100%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
 }
-
 </style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Indblik & Artikler</h1>
+            <p class="page-subtitle">Få værdifulde insights om facility management, systematiske processer og de trends der former branchen</p>
+        </div>
+    </section>
 
     <!-- Filter Section -->
     <section class="filter-section">
@@ -375,11 +505,11 @@ body {
             <div class="filter-container">
                 <div class="filter-tabs">
                     <button class="filter-tab active" data-filter="all">Alle</button>
-                    <button class="filter-tab" data-filter="sustainability">Bæredygtighed</button>
-                    <button class="filter-tab" data-filter="innovation">Innovation</button>
                     <button class="filter-tab" data-filter="insights">Indsigt</button>
                     <button class="filter-tab" data-filter="tips">Tips & Tricks</button>
-                    <button class="filter-tab" data-filter="industry">Branche</button>
+                    <button class="filter-tab" data-filter="sustainability">Bæredygtighed</button>
+                    <button class="filter-tab" data-filter="innovation">Innovation</button>
+                    <button class="filter-tab" data-filter="cases">Cases</button>
                 </div>
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
@@ -393,23 +523,23 @@ body {
     <section class="main-content">
         <div class="container">
             <!-- Featured Article -->
-            <div class="featured-section fade-in">
+            <div class="featured-section">
                 <div class="featured-article">
-                    <div class="featured-image">
+                    <div class="featured-image insights">
                         <div class="featured-badge">Udvalgt</div>
                         <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="featured-content">
                         <div class="featured-meta">
-                            <span class="featured-category">BÆREDYGTIGHED</span>
+                            <span class="featured-category">INDSIGT</span>
                             <span>•</span>
-                            <span>15. januar 2024</span>
+                            <span>15. december 2024</span>
                             <span>•</span>
-                            <span>5 min læsning</span>
+                            <span>6 min læsning</span>
                         </div>
-                        <h2 class="featured-title">Grøn Facility Management: Fremtidens Bæredygtige Løsninger</h2>
-                        <p class="featured-excerpt">Oplev hvordan innovative facility management løsninger kan reducere CO2-udslip og skabe værdi for din virksomhed gennem bæredygtige praksisser.</p>
-                        <a href="/pages/indblik/artikel.html" class="featured-cta">
+                        <h2 class="featured-title">Hvorfor Systematik Slår Talent i Facility Management</h2>
+                        <p class="featured-excerpt">De fleste virksomheder tror at god facility service handler om at finde de rigtige medarbejdere. Men systematiske processer skaber langt mere pålidelig service end talent alene.</p>
+                        <a href="/pages/indblik/artikler/indsigt/systematik-vs-talent.html" class="featured-cta">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -419,74 +549,245 @@ body {
 
             <!-- Articles Grid -->
             <div class="articles-section">
-                <h2>Seneste Artikler</h2>
+                <h2>Alle Artikler</h2>
                 <div class="articles-grid" id="articlesGrid">
-                    <article class="article-card fade-in" data-category="sustainability">
-                        <div class="article-image sustainability">
-                            <div class="article-date">12 jan 2024</div>
+                    
+                    <!-- Priority Articles -->
+                    <article class="article-card" data-category="tips">
+                        <div class="article-image tips">
+                            <div class="article-date">12. dec 2024</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="article-content">
-                            <div class="article-category">BÆREDYGTIGHED</div>
-                            <h3 class="article-title">Energibesparende Rengøringsmetoder</h3>
-                            <p class="article-excerpt">Lær om de nyeste teknikker til at reducere energiforbrug under rengøring uden at gå på kompromis med kvaliteten.</p>
-                            <div class="article-meta">
-                                <div class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    3 min læsning
-                                </div>
-                                <a href="/pages/indblik/artikel.html" class="read-more">
-                                    Læs mere <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card fade-in" data-category="innovation">
-                        <div class="article-image innovation">
-                            <div class="article-image sustainability">
-                            <div class="article-date">10 jan 2024</div>
-                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        </div>
-                        <div class="article-content">
-                            <div class="article-category">INNOVATION</div>
-                            <h3 class="article-title">Automatiseret Facility Management</h3>
-                            <p class="article-excerpt">Opdagå hvordan AI og IoT teknologier transformerer måden vi administrerer bygninger og faciliteter på.</p>
+                            <div class="article-category tips">TIPS & TRICKS</div>
+                            <h3 class="article-title">5 Tegn På at I Skal Skifte Facility Leverandør</h3>
+                            <p class="article-excerpt">Kender I disse tegn? Så er det tid til at overveje om jeres nuværende facility partner virkelig leverer den værdi I fortjener.</p>
                             <div class="article-meta">
                                 <div class="read-time">
                                     <i class="fas fa-clock"></i>
                                     4 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikel.html" class="read-more">
-                                    Læs mere <i class="fas fa-arrow-right"></i>
+                                <a href="/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="article-card fade-in" data-category="tips">
-                        <div class="article-image tips">
-                            <div class="article-image sustainability">
-                            <div class="article-date">8 jan 2024</div>
+                    <article class="article-card" data-category="insights">
+                        <div class="article-image insights">
+                            <div class="article-date">8. dec 2024</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
+                        <div class="article-content">
+                            <div class="article-category insights">INDSIGT</div>
+                            <h3 class="article-title">Øjeblikkelige Svar vs. "Jeg Vender Tilbage"</h3>
+                            <p class="article-excerpt">Hvorfor systematisk dokumentation og data-adgang gør forskellen mellem professionel service og frustrerende ventetid.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    5 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="insights">
+                        <div class="article-image insights">
+                            <div class="article-date">10. dec 2024</div>
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="article-content">
-                            <div class="article-category">TIPS & TRICKS</div>
-                            <h3 class="article-title">Vedligeholdelsesplan for Kontorbygninger</h3>
-                            <p class="article-excerpt">Praktiske tips til at udvikle en effektiv vedligeholdelsesplan der forlænger dine bygningers levetid.</p>
+                            <div class="article-category insights">INDSIGT</div>
+                            <h3 class="article-title">Fra VIP til Glemt Kunde: En Alt-for-Almindelig Historie</h3>
+                            <p class="article-excerpt">Forstå hvorfor mange virksomheder mister fokus på deres oprindelige kunder, og hvordan I undgår at blive ofre for denne udvikling.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    4 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/indsigt/fra-vip-til-glemt-kunde.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sustainability -->
+                    <article class="article-card" data-category="sustainability">
+                        <div class="article-image sustainability">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category sustainability">BÆREDYGTIGHED</div>
+                            <h3 class="article-title">100% Bilfri Facility Service: Sådan Gør Vi Det</h3>
+                            <p class="article-excerpt">Få indblik i hvordan DFMG har elimineret bil-transport og skabt en CO2-neutral facility service uden at gå på kompromis med kvaliteten.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    3 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/baeeredygtighed/100-procent-bilfri-facility-service.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="sustainability">
+                        <div class="article-image sustainability">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category sustainability">BÆREDYGTIGHED</div>
+                            <h3 class="article-title">Cirkulær Økonomi i Rengøringsbranchen</h3>
+                            <p class="article-excerpt">Hvordan facility service virksomheder kan implementere cirkulære principper og skabe værdi gennem bæredygtige praksisser.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    5 min læsning
+                                </div>
+                                <span class="read-more coming-soon">
+                                    Kommer snart <i class="fas fa-hourglass-half"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Innovation -->
+                    <article class="article-card" data-category="innovation">
+                        <div class="article-image innovation">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category innovation">INNOVATION</div>
+                            <h3 class="article-title">Fra Kaos til Kontrol: DFMG's ERP-System Historie</h3>
+                            <p class="article-excerpt">Gå bag kulisserne og lær hvordan en programmørs vision blev til et system der revolutionerer facility management.</p>
                             <div class="article-meta">
                                 <div class="read-time">
                                     <i class="fas fa-clock"></i>
                                     6 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikel.html" class="read-more">
-                                    Læs mere <i class="fas fa-arrow-right"></i>
+                                <a href="/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
                     </article>
+
+                    <article class="article-card" data-category="innovation">
+                        <div class="article-image innovation">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category innovation">INNOVATION</div>
+                            <h3 class="article-title">Mennesker vs. Robotter i Facility Management</h3>
+                            <p class="article-excerpt">Hvorfor den menneskelige faktor aldrig bliver erstattet af teknologi, og hvordan vi positionerer os til fremtidens udfordringer.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    5 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tips -->
+                    <article class="article-card" data-category="tips">
+                        <div class="article-image tips">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category tips">TIPS & TRICKS</div>
+                            <h3 class="article-title">Location Guides: Hemmeligheden Bag Konsistent Kvalitet</h3>
+                            <p class="article-excerpt">Lær hvordan detaljeret dokumentation og kunde-specifikke instrukser eliminerer gætværk og sikrer perfekt service hver gang.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    4 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="tips">
+                        <div class="article-image tips">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category tips">TIPS & TRICKS</div>
+                            <h3 class="article-title">Sådan Læser I En Facility Tidsrapport</h3>
+                            <p class="article-excerpt">Få maksimal værdi af jeres facility data. Forstå hvad tallene betyder, og hvordan I bruger dem til at optimere jeres omkostninger.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    3 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/tips/saadan-laeser-i-facility-tidsrapport.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cases -->
+                    <article class="article-card" data-category="cases">
+                        <div class="article-image cases">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category cases">CASE STUDY</div>
+                            <h3 class="article-title">Case: 20% Omkostningsreduktion for Tech-Virksomhed</h3>
+                            <p class="article-excerpt">Hvordan systematisk facility management og data-drevne beslutninger skabte betydelige besparelser uden at kompromittere kvaliteten.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    4 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="cases">
+                        <div class="article-image cases">
+                            <div class="article-date">10. dec 2024</div>                            
+                            <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category cases">CASE STUDY</div>
+                            <h3 class="article-title">Fra 5 Leverandører til Én Pålidelig Partner</h3>
+                            <p class="article-excerpt">Historien om hvordan en københavnsk virksomhed forenklede deres facility management og opnåede bedre service til lavere omkostninger.</p>
+                            <div class="article-meta">
+                                <div class="read-time">
+                                    <i class="fas fa-clock"></i>
+                                    5 min læsning
+                                </div>
+                                <a href="/pages/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html" class="read-more">
+                                    Læs artikel <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>       
             </div>
         </div>
@@ -497,19 +798,67 @@ body {
         <div class="container">
             <div class="newsletter-content">
                 <h2 class="newsletter-title">Hold Dig Opdateret</h2>
-                <p class="newsletter-subtitle">Få de seneste facility management insights, tips og trends leveret direkte til din indbakke</p>
+                <p class="newsletter-subtitle">Få de seneste facility management insights, systematiske tips og DFMG nyheder leveret direkte til din indbakke</p>
                 <form class="newsletter-form">
                     <input type="email" class="newsletter-input" placeholder="Din email adresse" required>
                     <button type="submit" class="newsletter-btn">
                         <i class="fas fa-paper-plane"></i>
-                        Tilmeld
+                        Tilmeld Nyhedsbrev
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    
     <!-- Component loader -->
     <script src="../../js/components.js" defer></script>
 </body>
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const articleCards = document.querySelectorAll('.article-card');
+    const searchInput = document.getElementById('searchInput');
+
+    // Filter by category
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Update active tab
+            filterTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            // Show/hide articles
+            articleCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        articleCards.forEach(card => {
+            const title = card.querySelector('.article-title').textContent.toLowerCase();
+            const excerpt = card.querySelector('.article-excerpt').textContent.toLowerCase();
+            const category = card.querySelector('.article-category').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || excerpt.includes(searchTerm) || category.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 </html>

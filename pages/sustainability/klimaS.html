@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miljø & Klima - DFMG</title>
+    <meta name="description" content="DFMG's miljøtilgang: 100% bilfri drift, cirkulær økonomi og ansvarlig kemikalievalg. Grøn facility service uden kompromis på kvalitet.">
+
+    <!-- Performance optimering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            height: 100vh;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+        
+        /* Vertical Sliding Container */
+        .vertical-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 100px);
+            width: 100vw;
+            transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        
+        /* Base Slide */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-shrink: 0;
+            padding: 2rem;
+            padding-top: calc(2rem + 100px);
+        }
+        
+        /* Environment Color Scheme - Natural Greens */
+        .slide:nth-child(1) { 
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+        }
+        .slide:nth-child(2) { 
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+        }
+        .slide:nth-child(3) { 
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        .slide:nth-child(4) { 
+            background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%);
+        }
+        .slide:nth-child(5) { 
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+        }
+        
+        /* Vertical Navigation */
+        .slide-nav {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 10px;
+            border-radius: 30px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .slide-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(34, 197, 94, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .slide-dot.active {
+            background: #22c55e;
+            transform: scale(1.3);
+        }
+        
+        .slide-dot:hover {
+            transform: scale(1.1);
+            background: rgba(34, 197, 94, 0.5);
+        }
+        
+        .slide-dot.active:hover {
+            background: #22c55e;
+        }
+        
+        /* Progress Indicator */
+        .progress-bar {
+            position: fixed;
+            left: 0;
+            top: 100px;
+            width: 3px;
+            background: #22c55e;
+            transition: height 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+            z-index: 1000;
+        }
+        
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-size: 1.2rem;
+            color: #22c55e;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .nav-arrow.up {
+            top: 130px;
+        }
+
+        .nav-arrow.down {
+            bottom: 30px;
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        /* Slide Content */
+        .slide-content {
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            display: grid;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        /* Hero Slide */
+        .hero-content {
+            text-align: center;
+            grid-template-columns: 1fr;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 300;
+            color: #15803d;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.6rem;
+            color: #64748b;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.4;
+        }
+        
+        .environment-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            color: #22c55e;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat-card h3 {
+            color: #15803d;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .stat-card p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+        
+        .content-section h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #15803d;
+        }
+        
+        .content-section .subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #22c55e;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-text {
+            color: #15803d;
+            font-weight: 600;
+        }
+
+        .quote-highlight {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.1));
+            border-left: 4px solid #22c55e;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #15803d;
+        }
+        
+        /* Environment List */
+        .environment-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .environment-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .environment-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .environment-list i {
+            color: #22c55e;
+            font-size: 1.5rem;
+            width: 24px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .environment-content {
+            flex: 1;
+        }
+
+        .environment-title {
+            font-weight: 600;
+            color: #15803d;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .environment-description {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Visual Section */
+        .visual-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .slide-visual {
+            width: 100%;
+            height: 450px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .bilfri-visual {
+            background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+        }
+
+        .circular-visual {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7, #0369a1);
+        }
+
+        .chemistry-visual {
+            background: linear-gradient(135deg, #f59e0b, #d97706, #b45309);
+        }
+
+        .future-visual {
+            background: linear-gradient(135deg, #6366f1, #4f46e5, #4338ca);
+        }
+
+        .visual-icon {
+            position: absolute;
+            font-size: 6rem;
+            opacity: 0.2;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        /* Full Width Content */
+        .full-width {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .full-width h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #15803d;
+            margin-bottom: 1rem;
+        }
+
+        .full-width .subtitle {
+            font-size: 1.4rem;
+            color: #64748b;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .impact-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .impact-card h3 {
+            color: #15803d;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .impact-card i {
+            color: #22c55e;
+            font-size: 1.4rem;
+        }
+
+        .impact-card p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0ea5e9, #0284c7);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #0ea5e9;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            color: #15803d;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body { padding-top: 80px; }
+            .slide { padding-top: calc(2rem + 80px); }
+            .slide-content { gap: 2rem; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .content-section h1 { font-size: 2.5rem; }
+            .full-width h1 { font-size: 2.5rem; }
+            .two-column { grid-template-columns: 1fr; gap: 2rem; }
+            .environment-stats { grid-template-columns: 1fr; }
+            .impact-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; }
+            .slide-visual { height: 300px; font-size: 1.1rem; }
+            .nav-arrow { display: none; }
+            .slide-nav { right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation Arrows -->
+    <button class="nav-arrow up" id="upBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button class="nav-arrow down" id="downBtn">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <!-- Vertical Sliding Container -->
+    <div class="vertical-container" id="verticalContainer">
+        
+        <!-- Slide 1: Hero -->
+        <section class="slide">
+            <div class="slide-content hero-content">
+                <div>
+                    <div class="hero-badge">Miljø & Klima</div>
+                    <h1>Grøn Drift Som Standard</h1>
+                    <div class="hero-subtitle">Siden dag ét har DFMG bygget miljøhensyn ind i alt vi gør. Ikke som en eftertanke, men som fundamentet for hvordan vi driver forretning.</div>
+                    
+                    <div class="environment-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-bicycle stat-icon"></i>
+                            <h3>100% Bilfri Drift</h3>
+                            <p>Fra leverandør til kunde - hele supply chain kører grønt</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-recycle stat-icon"></i>
+                            <h3>Cirkulær Økonomi</h3>
+                            <p>Genbrug, markedsplads og minimal spild i alle processer</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-leaf stat-icon"></i>
+                            <h3>Ansvarlig Kemi</h3>
+                            <p>Svanemærkede produkter og smart kemikalievalg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Bilfri Komplet -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="content-section">
+                    <div class="section-badge">Bilfri Supply Chain</div>
+                    <h1>100% Bilfri - Hele Vejen</h1>
+                    <div class="subtitle">Fra leverandør til kunde på cykel og offentlig transport</div>
+                    <p>Vi har ikke bare bilfri medarbejdertransport - <span class="highlight-text">hele vores supply chain</span> kører grønt. Dansk leverandør sender til vores lager, og derfra distribuerer vi alt på cykel.</p>
+                    
+                    <div class="quote-highlight">
+                        "Jeg er vokset op på en cykel, så jeg er superkomfortabel med at køre rundt i København med store tasker og 4-5 transportposer på styret."
+                    </div>
+                    
+                    <ul class="environment-list">
+                        <li>
+                            <i class="fas fa-truck"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Dansk Leverandør</div>
+                                <div class="environment-description">Korte transportveje fra leverandør til vores centrale lager</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-bicycle"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Cykel Distribution</div>
+                                <div class="environment-description">Store tasker + transportposer på styret giver serious cargo capacity</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-subway"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Offentlig Transport</div>
+                                <div class="environment-description">Alle medarbejdere bruger offentlig transport eller cykel til arbejde</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">København Focus</div>
+                                <div class="environment-description">Perfekt størrelse til cykel-logistik - effektivt og miljøvenligt</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="visual-section">
+                    <div class="slide-visual bilfri-visual">
+                        <i class="fas fa-bicycle visual-icon"></i>
+                        <div>100% Bilfri<br>Supply Chain</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Cirkulær Økonomi -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="visual-section">
+                    <div class="slide-visual circular-visual">
+                        <i class="fas fa-sync-alt visual-icon"></i>
+                        <div>Fra Affald<br>Til Værdi</div>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <div class="section-badge">Cirkulær Økonomi</div>
+                    <h1>Fra Affald Til Værdi</h1>
+                    <div class="subtitle">Markedsplads hvor ting får nyt liv</div>
+                    <p>Vi har skabt en intern markedsplads hvor vores kunder kan aflevere ting de ikke længere har brug for. Vi <span class="highlight-text">rengør og istandsætter</span> dem, så andre kan give dem nyt liv.</p>
+                    
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3>Afhentning</h3>
+                            <p>Kunder stiller elektronik, kontorting og møbler til rådighed</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3>Istandsættelse</h3>
+                            <p>Vi rengør, reparerer og fotograferer tingene professionelt</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3>Nyt Liv</h3>
+                            <p>Andre kunder kan få tingene og give dem ny værdi</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="environment-list">
+                        <li>
+                            <i class="fas fa-laptop"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Mest Populært: Elektronik</div>
+                                <div class="environment-description">Computere, skærme og kontorelectronik får ofte nyt liv hos andre virksomheder</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-tshirt"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Kogevask & Genbrug</div>
+                                <div class="environment-description">Alle klude og mopper kogevaskes og genbruges - minimal tekstilspild</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Ansvarlig Kemi -->
+        <section class="slide">
+            <div class="slide-content two-column">
+                <div class="content-section">
+                    <div class="section-badge">Smart Produktvalg</div>
+                    <h1>Ansvarlig Kemikalievalg</h1>
+                    <div class="subtitle">Svanemærkede produkter og korrekt anvendelse</div>
+                    <p>Vi bruger primært <span class="highlight-text">svanemærkede produkter</span> og har en ansvarlig tilgang til stærke kemikalier. Høje pH-niveauer kun når det er nødvendigt, og altid med korrekt instruktion.</p>
+                    
+                    <ul class="environment-list">
+                        <li>
+                            <i class="fas fa-certificate"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Svanemærkede Som Standard</div>
+                                <div class="environment-description">Hovedparten af vores produkter er certificeret miljøvenlige</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Grundig Instruktion</div>
+                                <div class="environment-description">Medarbejdere får nøje oplæring i korrekt brug for at minimere spild og risiko</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-flask"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Smart Kemi-Brug</div>
+                                <div class="environment-description">Stærke produkter kun når nødvendigt - intelligent tilgang frem for total undgåelse</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-recycle"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Minimal Spild</div>
+                                <div class="environment-description">Korrekt dosering og anvendelse reducerer både miljøpåvirkning og omkostninger</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="quote-highlight">
+                        "Vi vægter reuse og genbrug højt - både i vores produkter og i måden vi arbejder på."
+                    </div>
+                </div>
+                <div class="visual-section">
+                    <div class="slide-visual chemistry-visual">
+                        <i class="fas fa-leaf visual-icon"></i>
+                        <div>Ansvarlig Kemi<br>& Smart Valg</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Fremtiden -->        
+        <section class="slide">
+            <div class="slide-content full-width">
+                <div>
+                    <div class="section-badge">Fremtiden</div>
+                    <h1>Miljø Som Konkurrencefordel</h1>
+                    <div class="subtitle">Grøn facility service uden kompromis på kvalitet eller pris</div>
+                    
+                    <div class="impact-grid">
+                        <div class="impact-card">
+                            <h3>
+                                <i class="fas fa-chart-line"></i>
+                                Omkostningseffektiv Grøn Drift
+                            </h3>
+                            <p>Vores grønne tilgang er ikke dyrere - den er ofte mere effektiv. Cykel-logistik sparer brændstof, genbrug reducerer indkøb, og korrekt kemikalievalg minimerer spild.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <h3>
+                                <i class="fas fa-handshake"></i>
+                                Kunders Miljømål
+                            </h3>
+                            <p>Vi hjælper kunder med at nå deres egne bæredygtighedsmål gennem vores markedsplads, affaldssortering og miljøvenlige processer.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <h3>
+                                <i class="fas fa-seedling"></i>
+                                Kontinuerlig Forbedring
+                            </h3>
+                            <p>Vi søger konstant nye måder at reducere miljøpåvirkning på - fra bedre sortering til optimeret cykel-ruter og mindre packaging.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <h3>
+                                <i class="fas fa-globe-europe"></i>
+                                Inspiration Til Branchen
+                            </h3>
+                            <p>Når vi sælger vores ERP-system til andre, spreder vi også vores miljøvenlige praksisser og beviser at grøn drift virker.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-highlight" style="margin-top: 3rem;">
+                        "Vi affaldsorterer hvor vi kan. Det er ikke hos alle vores kunder hvor der er opstillet nok forskellige containere til at udføre den bedst mulige sortering, men hvor vi kan, gør vi det."
+                    </div>
+                    
+                    <div class="environment-list" style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        <li>
+                            <i class="fas fa-award"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Autentisk Miljøprofil</div>
+                                <div class="environment-description">Grøn drift fra dag ét - ikke en efterrationalisering eller marketingtrick</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-balance-scale"></i>
+                            <div class="environment-content">
+                                <div class="environment-title">Praktisk Miljøtænkning</div>
+                                <div class="environment-description">Vi gør hvad vi kan, hvor vi kan - realisme frem for perfektionisme</div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+        <div class="slide-dot active" data-slide="0"></div>
+        <div class="slide-dot" data-slide="1"></div>
+        <div class="slide-dot" data-slide="2"></div>
+        <div class="slide-dot" data-slide="3"></div>
+    </div>
+
+    <!-- Component loader -->
+    <script src="../../js/components.js" defer></script>
+    <script>
+        class SustainabilitySlider {
+            constructor() {
+                this.container = document.getElementById('horizontalContainer');
+                this.dots = document.querySelectorAll('.slide-dot');
+                this.currentSlide = 0;
+                this.totalSlides = 4;
+                this.isAnimating = false;
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupNavigation();
+                this.setupKeyboard();
+                this.setupWheel();
+                this.setupTouch();
+            }
+            
+            setupNavigation() {
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+            }
+            
+            setupKeyboard() {
+                document.addEventListener('keydown', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    switch(e.key) {
+                        case 'ArrowRight':
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            this.nextSlide();
+                            break;
+                        case 'ArrowLeft':
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            this.prevSlide();
+                            break;
+                    }
+                });
+            }
+            
+            setupWheel() {
+                this.container.addEventListener('wheel', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    e.preventDefault();
+                    
+                    if (e.deltaX > 50 || e.deltaY > 50) {
+                        this.nextSlide();
+                    } else if (e.deltaX < -50 || e.deltaY < -50) {
+                        this.prevSlide();
+                    }
+                }, { passive: false });
+            }
+            
+            setupTouch() {
+                let startX = 0;
+                
+                this.container.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.container.addEventListener('touchend', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+            }
+            
+            goToSlide(index) {
+                if (index === this.currentSlide || this.isAnimating) return;
+                
+                this.isAnimating = true;
+                this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+                
+                const translateX = -this.currentSlide * 100;
+                this.container.style.transform = `translateX(${translateX}vw)`;
+                
+                this.updateDots();
+                
+                setTimeout(() => {
+                    this.isAnimating = false;
+                }, 800);
+            }
+            
+            nextSlide() {
+                if (this.currentSlide < this.totalSlides - 1) {
+                    this.goToSlide(this.currentSlide + 1);
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.goToSlide(this.currentSlide - 1);
+                }
+            }
+            
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = new SustainabilitySlider();
+            
+            // Handle URL fragments
+            const hash = window.location.hash;
+            if (hash === '#miljoe') slider.goToSlide(1);
+            else if (hash === '#social') slider.goToSlide(2);
+            else if (hash === '#governance') slider.goToSlide(3);
+        });
+    </script>
+</body>
+</html>

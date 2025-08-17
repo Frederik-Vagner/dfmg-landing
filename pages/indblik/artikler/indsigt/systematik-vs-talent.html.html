@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    <title>Hvorfor Systematik Slår Talent i Facility Management | DFMG</title>
+    <meta name="description" content="Opdagå hvordan systematiske processer og dokumentation skaber mere pålidelig facility service end afhængighed af individuelle medarbejdere.">
     
     <!-- Favicon -->
     <link rel="icon" href="../../images/logos/logo.png" type="image/png">
@@ -48,7 +48,7 @@ body {
 
 /* Article Header */
 .article-header {
-    background: linear-gradient(135deg, #1e40af 0%, #3730a3 50%, #1e1b4b 100%);
+    background: linear-gradient(135deg, #344767 0%, #4285f4 50%, #22c55e 100%);
     color: white;
     padding: 4rem 0 2rem;
     position: relative;
@@ -85,7 +85,6 @@ body {
 .breadcrumb a {
     color: white;
     text-decoration: none;
-
 }
 
 .breadcrumb a:hover {
@@ -252,52 +251,82 @@ body {
     display: block;
 }
 
-.article-body img:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Image alignment classes from TinyMCE */
-.article-body .img-left {
-    float: left;
-    margin: 0 2rem 1rem 0;
-    max-width: 300px;
-}
-
-.article-body .img-right {
-    float: right;
-    margin: 0 0 1rem 2rem;
-    max-width: 300px;
-}
-
-.article-body .img-center {
-    display: block;
-    margin: 2rem auto;
-    text-align: center;
-}
-
-.article-body .img-responsive {
-    width: 100%;
+.article-body img {
+    max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
 }
 
-/* Figure support */
-.article-body figure {
-    margin: 2rem 0;
-    text-align: center;
+/* Callout boxes */
+.article-body .callout {
+    background-color: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
 }
 
-.article-body figcaption {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-top: 0.5rem;
+.article-body .callout::before {
+    content: "ℹ";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #3b82f6;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.article-body .callout p {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.article-body .success {
+    background-color: #dcfce7;
+    border: 1px solid #22c55e;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.article-body .success::before {
+    content: "✓";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #22c55e;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.article-body .success p {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.article-body blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1.5rem;
     font-style: italic;
+    background-color: #f8fafc;
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    position: relative;
 }
 
-/* Clear floats */
-.article-body::after {
-    content: "";
-    display: table;
-    clear: both;
+.article-body blockquote::before {
+    content: """;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 2rem;
+    color: #3b82f6;
+    opacity: 0.3;
+    font-family: serif;
 }
 
 /* Sidebar */
@@ -313,11 +342,6 @@ body {
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid #e5e7eb;
-
-}
-
-.sidebar-card:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-card h3 {
@@ -349,7 +373,6 @@ body {
     color: #6b7280;
     text-decoration: none;
     font-size: 0.9rem;
-
     display: block;
     padding: 0.5rem 0;
     border-bottom: 1px solid #f3f4f6;
@@ -365,7 +388,6 @@ body {
     gap: 1rem;
     padding: 1rem 0;
     border-bottom: 1px solid #f3f4f6;
-
 }
 
 .related-article:last-child {
@@ -401,14 +423,6 @@ body {
     background: linear-gradient(135deg, #8b5cf6, #7c3aed);
 }
 
-.related-image.industry {
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-}
-
-.related-image.tips {
-    background: linear-gradient(135deg, #ef4444, #dc2626);
-}
-
 .related-content h4 {
     font-size: 0.9rem;
     font-weight: 600;
@@ -420,7 +434,6 @@ body {
 .related-content a {
     color: #1f2937;
     text-decoration: none;
-
 }
 
 .related-content a:hover {
@@ -430,44 +443,6 @@ body {
 .related-meta {
     font-size: 0.8rem;
     color: #9ca3af;
-}
-
-/* Author Box */
-.author-box {
-    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.author-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: white;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.author-avatar img {
-    border-radius: 50%;
-}
-
-.author-name {
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-}
-
-.author-title {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-bottom: 1rem;
 }
 
 /* Newsletter Signup */
@@ -503,10 +478,6 @@ body {
     font-size: 0.9rem;
 }
 
-.newsletter-input::placeholder {
-    color: #6b7280;
-}
-
 .newsletter-btn {
     background: #1e40af;
     color: white;
@@ -516,11 +487,6 @@ body {
     font-weight: 600;
     cursor: pointer;
 }
-
-.newsletter-btn:hover {
-    background: #1d4ed8;
-}
-
 
 /* Share Buttons */
 .share-buttons {
@@ -538,10 +504,6 @@ body {
     justify-content: center;
     color: white;
     text-decoration: none;
-
-}
-
-.share-btn:hover {
 }
 
 .share-linkedin {
@@ -578,24 +540,11 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-
 }
 
 .back-btn:hover {
     background: #3b82f6;
     color: white;
-}
-
-/* Progress Bar */
-.reading-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
-    z-index: 1000;
-
 }
 
 /* Responsive Design */
@@ -629,277 +578,42 @@ body {
         margin: 0 10px;
     }
 }
-/* Floating Action Button */
-.floating-toc {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 56px;
-    height: 56px;
-    background: #3b82f6;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-
-    z-index: 100;
-}
-
-.floating-toc:hover {
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
-}
-
-@media (min-width: 1025px) {
-    .floating-toc {
-        display: none;
-    }
-}
-
-/* Custom text formatting styles for TinyMCE */
-.article-body code {
-    background-color: #f1f5f9;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-family: 'Courier New', monospace;
-    color: #374151;
-}
-
-.article-body kbd {
-    background-color: #374151;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    font-family: monospace;
-}
-
-.article-body mark {
-    background-color: #fef3c7;
-    padding: 1px 3px;
-    border-radius: 2px;
-}
-
-.article-body small {
-    font-size: 0.8em;
-    color: #6b7280;
-}
-
-.article-body .highlight {
-    background-color: #ffff00;
-    padding: 2px 4px;
-    border-radius: 3px;
-}
-
-.article-body .big-text {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-/* Enhanced callout boxes */
-.article-body .callout {
-    background-color: #dbeafe;
-    border: 1px solid #3b82f6;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem 0;
-    position: relative;
-}
-
-.article-body .callout::before {
-    content: "ℹ";
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #3b82f6;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.article-body .callout p {
-    margin-left: 2rem;
-    margin-bottom: 0;
-}
-
-.article-body .warning {
-    background-color: #fef3c7;
-    border: 1px solid #f59e0b;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem 0;
-    position: relative;
-}
-
-.article-body .warning::before {
-    content: "⚠";
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #f59e0b;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.article-body .warning p {
-    margin-left: 2rem;
-    margin-bottom: 0;
-}
-
-.article-body .success {
-    background-color: #dcfce7;
-    border: 1px solid #22c55e;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem 0;
-    position: relative;
-}
-
-.article-body .success::before {
-    content: "✓";
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #22c55e;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.article-body .success p {
-    margin-left: 2rem;
-    margin-bottom: 0;
-}
-
-/* Enhanced blockquotes (override existing) */
-.article-body blockquote {
-    border-left: 4px solid #3b82f6;
-    padding-left: 1.5rem;
-    font-style: italic;
-    background-color: #f8fafc;
-    padding: 1rem 1rem 1rem 2rem;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-    position: relative;
-}
-
-.article-body blockquote::before {
-    content: """;
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    font-size: 2rem;
-    color: #3b82f6;
-    opacity: 0.3;
-    font-family: serif;
-}
-
-/* Code blocks */
-.article-body pre {
-    background-color: #1f2937;
-    color: #f9fafb;
-    padding: 1rem;
-    border-radius: 8px;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-    position: relative;
-}
-
-.article-body pre::before {
-    content: "{ }";
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    color: #9ca3af;
-    font-size: 0.8rem;
-}
-
-.article-body pre code {
-    background: none;
-    padding: 0;
-    color: inherit;
-    font-family: 'Courier New', monospace;
-}
-
-/* Text alignment utilities */
-.article-body .text-center {
-    text-align: center;
-}
-
-.article-body .text-left {
-    text-align: left;
-}
-
-.article-body .text-right {
-    text-align: right;
-}
-
-.article-body .text-justify {
-    text-align: justify;
-}
-
-/* Additional TinyMCE image classes */
-.article-body .img-thumbnail {
-    max-width: 150px;
-    border: 2px solid #e5e7eb;
-    padding: 4px;
-    border-radius: 8px;
-}
-
-.article-body .img-medium {
-    max-width: 400px;
-}
-
-.article-body .img-large {
-    max-width: 600px;
-}
-
-.article-body .img-rounded {
-    border-radius: 16px;
-}
-
-.article-body .img-circle {
-    border-radius: 50%;
-    aspect-ratio: 1;
-    object-fit: cover;
-}
-
-.article-body .img-shadow {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Tables (if you add table support later) */
-.article-body table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.article-body th,
-.article-body td {
-    border: 1px solid #e5e7eb;
-    padding: 0.75rem;
-    text-align: left;
-}
-
-.article-body th {
-    background-color: #f3f4f6;
-    font-weight: 600;
-    color: #1f2937;
-}
-
-.article-body tr:nth-child(even) {
-    background-color: #f9fafb;
-}
-
 </style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="breadcrumb">
+                    <a href="/">Forside</a>
+                    <span>›</span>
+                    <a href="/pages/indblik/nyheder.html">Indblik</a>
+                    <span>›</span>
+                    <span>Artikel</span>
+                </div>
+                <div class="article-category">INDSIGT</div>
+                <h1 class="article-title">Hvorfor Systematik Slår Talent i Facility Management</h1>
+                
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        15. december 2024
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        6 min læsning
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-eye"></i>
+                        1,847 visninger
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Article Content -->
     <section class="article-content">
@@ -907,83 +621,96 @@ body {
             <div class="content-layout">
                 <!-- Main Content -->
                 <main class="main-content">
-                    <div class="header-content">
-                        <h1 class="article-title" id="article-title">Fremtiden for Facility Management: 5 Teknologi Trends der Forandrer Branchen</h1>
-                        
-                        <div class="article-meta">
-                            <div class="meta-item">
-                                <i class="fas fa-calendar"></i>
-                                15. august 2025
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-clock"></i>
-                                8 min læsning
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-eye"></i>
-                                1,234 visninger
-                            </div>
-                        </div>
-                    </div>
-                    <img src="/images/article/ipad.jpg" alt="Article Image" class="article-image" id="featured-image">
+                    <img src="/images/article/ipad.jpg" alt="Systematisk facility management" class="article-image">
                     
                     <div class="article-excerpt">
-                        Facility management gennemgår en digital transformation. Lær om de teknologier der definerer fremtiden for branchen og hvordan danske virksomheder kan drage fordel af disse innovationer.
+                        De fleste virksomheder tror at god facility service handler om at finde de rigtige medarbejdere. Men virkeligheden er, at systematiske processer og dokumentation skaber langt mere pålidelig service end talent alene.
                     </div>
                     
-                    <div class="article-body" id="article-body">
-                        <p>Facility management-branchen står overfor en omfattende digital transformation. Nye teknologier revolutionerer måden vi administrerer, vedligeholder og optimerer bygninger på. I denne artikel dykker vi ned i de fem vigtigste trends, der vil forme fremtiden for facility management.</p>
+                    <div class="article-body">
+                        <p>I over et årti har facility management-branchen været præget af "star player"-kulturen. Virksomheder satser på enkelte dygtige medarbejdere og håber på, at deres personlige standarder sikrer konsistent kvalitet. Men hvad sker der, når denne medarbejder bliver syg, skifter job eller bare har en dårlig dag?</p>
 
-                        <h2>1. Internet of Things (IoT) og Smart Buildings</h2>
-                        <p>IoT-sensorer implementeres i stigende grad i moderne bygninger for at monitorere alt fra temperatur og luftfugtighed til energiforbrug og rumudnyttelse. Disse data gør det muligt at optimere driftseffektiviteten og reducere omkostningerne betydeligt.</p>
+                        <h2>Problemet Med at Være Afhængig af Individer</h2>
+                        <p>Hos DFMG har vi oplevet hvordan mange af vores kunder kommer fra frustrerende oplevelser med tidligere leverandører. Historien gentager sig:</p>
 
-                        <h3>Fordele ved IoT-implementering:</h3>
                         <ul>
-                            <li>Proaktiv vedligeholdelse baseret på real-time data</li>
-                            <li>Energibesparelser på op til 30%</li>
-                            <li>Forbedret indeklima og medarbejdertilfredshed</li>
-                            <li>Automatiseret rapportering og compliance</li>
+                            <li><strong>År 1:</strong> Fantastisk service fra en dedikeret medarbejder</li>
+                            <li><strong>År 2-3:</strong> Medarbejderen får andre opgaver eller skifter job</li>
+                            <li><strong>År 4+:</strong> Inkonsistent kvalitet og manglende kommunikation</li>
                         </ul>
-
-                        <h2>2. Kunstig Intelligens og Predictive Analytics</h2>
-                        <p>AI-algoritmer analyserer historiske data og realtidsmålinger for at forudsige hvornår udstyr skal vedligeholdes, før det går i stykker. Dette reducerer uventede nedbrud og forlænger udstyrets levetid.</p>
 
                         <div class="callout">
-                            <p>Predictive maintenance kan reducere vedligeholdelsesomkostninger med op til 25% og øge udstyrets oppetid med 20%.</p>
+                            <p>Når service afhænger af individuelle færdigheder frem for systematiske processer, bliver kvaliteten ustabil og uforudsigelig.</p>
                         </div>
 
-                        <h2>3. Mobil Teknologi og Cloud-baserede Platforme</h2>
-                        <p>Moderne facility management-systemer er tilgængelige via mobile apps og cloud-platforme, hvilket giver facilitetsmanagere mulighed for at overvåge og styre faciliteter fra hvor som helst.</p>
+                        <h2>Systematikens Kraft: Konkrete Eksempler</h2>
+                        <p>Lad mig give jer et konkret eksempel fra vores hverdag. Når en kunde ringer og spørger: "Blev der gjort rent i mødelokalet i går?", kan jeg øjeblikkelig svare:</p>
 
-                        <h3>Nøglefunktioner i moderne FM-platforme:</h3>
                         <ul>
-                            <li>Real-time dashboards og rapporter</li>
-                            <li>Digital work order management</li>
-                            <li>Integreret kommunikation mellem teams</li>
-                            <li>GPS-tracking af tekniske teams</li>
+                            <li>Præcis hvornår opgaven startede og sluttede</li>
+                            <li>Hvilke specifikke opgaver der blev udført</li>
+                            <li>Billeddokumentation før og efter</li>
+                            <li>Hvis der var afvigelser eller særlige forhold</li>
                         </ul>
 
-                        <h2>4. Bæredygtighedsteknologier</h2>
-                        <p>Fokus på bæredygtighed driver innovation inden for energioptimering, affaldshåndtering og ressourceeffektivitet. Smarte bygningssystemer hjælper virksomheder med at nå deres ESG-mål.</p>
+                        <p>Før vi implementerede vores ERP-system måtte jeg sige "jeg vender tilbage" og kontakte medarbejderen. Nu får kunden svar med det samme.</p>
 
-                        <h2>5. Augmented Reality (AR) og Digital Twins</h2>
-                        <p>AR-teknologi understøtter tekniske teams ved at vise digitale informationer overlayed på fysiske systemer. Digital twins skaber virtuelle kopier af bygninger for simulering og optimering.</p>
+                        <h3>Dokumentation Som Kvalitetssikring</h3>
+                        <p>Vores medarbejdere udfylder digitale tjeklister for hver opgave. Dette er ikke overvågning - det er værktøjer der hjælper dem med at huske alle detaljer og levere konsistent kvalitet.</p>
 
                         <blockquote>
-                            "Den digitale transformation af facility management handler ikke kun om teknologi - det handler om at skabe mere effektive, bæredygtige og menneskecentrerede arbejdsmiljøer."
+                            "Systemet gør mig bedre til mit job. Jeg glemmer aldrig noget, og jeg kan vise kunden præcis hvad jeg har lavet."
+                            <br><em>- Rengøringsmedarbejder hos DFMG</em>
                         </blockquote>
 
-                        <h2>Implementering i danske virksomheder</h2>
-                        <p>For danske virksomheder er det vigtigt at starte med en klar digital strategi. Hos DFMG hjælper vi kunder med at identificere de rette teknologier baseret på deres specifikke behov og budget.</p>
+                        <h2>Data-Drevet Kvalitetsforbedring</h2>
+                        <p>Systematik giver os også data til kontinuerlig forbedring. Vi kan se mønstre som:</p>
+
+                        <ul>
+                            <li>Hvilke opgaver tager længere tid end forventet</li>
+                            <li>Hvor der ofteste opstår problemer</li>
+                            <li>Hvordan vi kan optimere vores processer</li>
+                        </ul>
 
                         <div class="success">
-                            <p>Vores kunder oplever i gennemsnit 15-20% besparelser på facility omkostninger efter implementering af digitale løsninger.</p>
+                            <p>Et konkret eksempel: Vores tidsdata viste at gulvrengøring i et bestemt lokale tog 50% længere end estimeret. Ved at analysere dataene opdagede vi, at gulvets beskaffenhed krævede en anden teknik. Nu estimerer vi korrekt og leverer bedre service.</p>
+                        </div>
+
+                        <h2>Systematik + Mennesker = Vindende Kombination</h2>
+                        <p>Systematik betyder ikke at eliminere det menneskelige element. Tværtimod - det befrier vores medarbejdere til at fokusere på service og relationer i stedet for at bekymre sig om, om de har glemt noget.</p>
+
+                        <h3>Fordele for Medarbejderne:</h3>
+                        <ul>
+                            <li>Klare retningslinjer reducerer stress og usikkerhed</li>
+                            <li>Dokumentation beskytter dem mod uretfærdig kritik</li>
+                            <li>Månedlig feedback baseret på data hjælper dem med at blive bedre</li>
+                            <li>De føler sig værdsat gennem egne systemadgange og ansvar</li>
+                        </ul>
+
+                        <h2>Implementering af Systematik</h2>
+                        <p>Systematik kræver investering i processer og teknologi. Men alternativet - at være afhængig af individuelle præstationer - er langt mere risikabelt og dyrt på lang sigt.</p>
+
+                        <h3>Vores Tilgang Hos DFMG:</h3>
+                        <ul>
+                            <li><strong>Detaljerede serviceskemaer:</strong> Præcis beskrivelse af alle opgaver</li>
+                            <li><strong>Digital dokumentation:</strong> Billeder, tjeklister og tidsregistrering</li>
+                            <li><strong>Kontinuerlig optimering:</strong> Data-dreven forbedring af processer</li>
+                            <li><strong>Transparent kommunikation:</strong> Kunder kan følge alt i realtid</li>
+                        </ul>
+
+                        <h2>Resultatet: Pålidelighed I Kan Stole På</h2>
+                        <p>Systematik har gjort os i stand til at levere 99.5% rettidig service, uanset hvilken medarbejder der udfører opgaven. Kvaliteten er blevet forudsigelig, og kunderne ved præcis hvad de kan forvente.</p>
+
+                        <div class="callout">
+                            <p>Når I ringer til DFMG, taler I altid med mig personligt. Men informationen jeg giver jer, er baseret på systematiske data - ikke hukommelse eller gætværk.</p>
                         </div>
 
                         <h2>Konklusion</h2>
-                        <p>Fremtiden for facility management er digital, bæredygtig og databaseret. Virksomheder der investerer i disse teknologier nu, vil være bedre positioneret til at møde fremtidens udfordringer og muligheder.</p>
+                        <p>Talent er vigtigt, men systematik er hvad der skaber pålidelig, skalerbar service. I stedet for at håbe på at finde den perfekte medarbejder, bør virksomheder investere i systemer der gør alle medarbejdere succesfulde.</p>
 
-                        <p>Ønsker du at vide mere om hvordan din virksomhed kan drage fordel af disse teknologier? Kontakt vores ekspertteam for en uforpligtende konsultation.</p>
+                        <p>Hos DFMG kombinerer vi det bedste fra begge verdener: Systematiske processer der sikrer kvalitet, og personlige relationer der skaber tillid og forståelse.</p>
+
+                        <p><strong>Ønsker I at opleve forskellen?</strong> Kontakt os for en uforpligtende samtale om hvordan systematisk facility management kan gavne jeres virksomhed.</p>
                     </div>
 
                     <!-- Share Buttons -->
@@ -991,10 +718,10 @@ body {
                         <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn share-facebook" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="mailto:kontakt@dfmg.dk?subject=Fremtiden for Facility Management: 5 Teknologi Trends&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
+                        <a href="mailto:kontakt@dfmg.dk?subject=Interessant artikel om systematik i facility management&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -1003,7 +730,7 @@ body {
                 <!-- Sidebar -->
                 <aside class="sidebar">
                     <!-- Table of Contents -->
-                    <div class="sidebar-card fade-in">
+                    <div class="sidebar-card">
                         <h3><i class="fas fa-list"></i> Indholdsfortegnelse</h3>
                         <ul class="toc-list" id="toc-list">
                             <!-- Generated by JavaScript -->
@@ -1011,15 +738,15 @@ body {
                     </div>
 
                     <!-- Related Articles -->
-                    <div class="sidebar-card fade-in">
+                    <div class="sidebar-card">
                         <h3><i class="fas fa-newspaper"></i> Relaterede Artikler</h3>
                         <div class="related-article">
-                            <div class="related-image tips">
+                            <div class="related-image insights">
                                 <img src="/images/article/ipad.jpg" alt="Related Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                             </div>
                             <div class="related-content">
-                                <h4><a href="#" class="related-link">5 Tips til Effektiv Facility Management</a></h4>
-                                <div class="related-meta">5 min læsning</div>
+                                <h4><a href="#">Fra Kaos til Kontrol: DFMG's Systemudvikling</a></h4>
+                                <div class="related-meta">4 min læsning</div>
                             </div>
                         </div>
                         <div class="related-article">
@@ -1027,39 +754,38 @@ body {
                                 <img src="/images/article/ipad.jpg" alt="Popular Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                             </div>
                             <div class="related-content">
-                                <h4><a href="#">Digitalisering af Rengøringsprocesser</a></h4>
-                                <div class="related-meta">6 min læsning • 1,892 visninger</div>
+                                <h4><a href="#">5 Tegn På at I Skal Skifte Facility Leverandør</a></h4>
+                                <div class="related-meta">3 min læsning</div>
                             </div>
                         </div>
                         <div class="related-article">
-                            <div class="related-image tips">
+                            <div class="related-image innovation">
                                 <img src="/images/article/ipad.jpg" alt="Related Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                             </div>
                             <div class="related-content">
-                                <h4><a href="#">Optimering af Facility Omkostninger</a></h4>
-                                <div class="related-meta">4 min læsning • 1,567 visninger</div>
+                                <h4><a href="#">Teknologi vs. Mennesker i Facility Management</a></h4>
+                                <div class="related-meta">5 min læsning</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Newsletter Signup -->
-                    <div class="sidebar-card newsletter-signup fade-in">
+                    <div class="sidebar-card newsletter-signup">
                         <h3><i class="fas fa-envelope"></i> Hold Dig Opdateret</h3>
-                        <div class="newsletter-subtitle">Få de seneste facility management insights</div>
+                        <div class="newsletter-subtitle">Få insights fra facility management</div>
                         <form class="newsletter-form">
                             <input type="email" class="newsletter-input" placeholder="Din email adresse" required>
                             <button type="submit" class="newsletter-btn">
-                                <i class="fas fa-paper-plane"></i>
                                 Tilmeld Nyhedsbrev
                             </button>
                         </form>
                     </div>
 
                     <!-- Contact CTA -->
-                    <div class="sidebar-card fade-in" style="text-align: center;">
-                        <h3><i class="fas fa-phone"></i> Brug for Hjælp?</h3>
-                        <p style="margin-bottom: 1rem; color: #6b7280;">Kontakt vores eksperter for en uforpligtende konsultation</p>
-                        <a href="/pages/kontakt.html" style="background: #1e40af; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease;">Kontakt Os</a>
+                    <div class="sidebar-card" style="text-align: center;">
+                        <h3><i class="fas fa-phone"></i> Lad Os Snakkes Ved</h3>
+                        <p style="margin-bottom: 1rem; color: #6b7280;">Interesseret i systematisk facility management?</p>
+                        <a href="/pages/kontakt.html" style="background: #344767; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">Kontakt DFMG</a>
                     </div>
                 </aside>
             </div>
@@ -1071,20 +797,21 @@ body {
         <div class="container">
             <a href="/pages/indblik/nyheder.html" class="back-btn">
                 <i class="fas fa-arrow-left"></i>
-                Tilbage til nyheder
+                Tilbage til indblik
             </a>
         </div>
     </section>
 
     <!-- Footer Component -->
     <div id="footer"></div>
+    
     <!-- Component loader -->
-    <script src="../../js/components.js" defer></script>
+    <script src="/../../../js/components.js" defer></script>
 </body>
 <script>
 // Generate Table of Contents
 document.addEventListener('DOMContentLoaded', function() {
-    const articleBody = document.getElementById('article-body');
+    const articleBody = document.querySelector('.article-body');
     const tocList = document.getElementById('toc-list');
     const headings = articleBody.querySelectorAll('h2, h3');
     

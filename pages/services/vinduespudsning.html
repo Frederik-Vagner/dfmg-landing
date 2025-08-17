@@ -459,6 +459,7 @@
             position: relative;
             height: 400px;
             overflow: hidden;
+            user-select: none;
         }
 
         .slider-image {
@@ -486,7 +487,6 @@
         .image-label {
             position: absolute;
             top: 2rem;
-            left: 2rem;
             background: rgba(0,0,0,0.8);
             color: white;
             padding: 1rem 2rem;
@@ -496,6 +496,13 @@
             letter-spacing: 1px;
         }
 
+        .before-image .image-label {
+            left: 2rem;
+        }
+
+        .after-image .image-label {
+            right: 2rem;
+        }
         .slider-handle {
             position: absolute;
             top: 0;
@@ -976,6 +983,84 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-auto" id="comparison">
+        <div class="comparison-slider">
+            <div class="slider-container" id="comparisonSlider">
+                <div class="slider-image before-image">
+                    <div class="image-label">FØR - Snavede Vinduer</div>
+                </div>
+                <div class="slider-image after-image" id="afterImage">
+                    <div class="image-label">EFTER - Krystalklare Vinduer</div>
+                </div>
+                <div class="slider-handle" id="sliderHandle"></div>
+            </div>
+            
+            <div class="comparison-controls">
+                <button class="comparison-btn active" onclick="showComparison('before')">Før Polering</button>
+                <button class="comparison-btn" onclick="showComparison('after')">Efter Polering</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let isDragging = false;
+        const sliderHandle = document.getElementById('sliderHandle');
+        const afterImage = document.getElementById('afterImage');
+        const sliderContainer = document.getElementById('comparisonSlider');
+
+        if (sliderHandle && afterImage && sliderContainer) {
+            // Mouse events
+            sliderHandle.addEventListener('mousedown', startDrag);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', stopDrag);
+            
+            // Touch events for mobile
+            sliderHandle.addEventListener('touchstart', startDrag);
+            document.addEventListener('touchmove', drag);
+            document.addEventListener('touchend', stopDrag);
+
+            function startDrag(e) {
+                isDragging = true;
+                e.preventDefault();
+            }
+
+            function drag(e) {
+                if (!isDragging) return;
+                
+                const rect = sliderContainer.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const x = clientX - rect.left;
+                const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                
+                sliderHandle.style.left = percentage + '%';
+                afterImage.style.opacity = percentage / 100;
+            }
+
+            function stopDrag() {
+                isDragging = false;
+            }
+        }
+
+        function showComparison(type) {
+            const buttons = document.querySelectorAll('.comparison-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            if (type === 'before') {
+                afterImage.style.opacity = '0';
+                sliderHandle.style.left = '0%';
+                buttons[0].classList.add('active');
+            } else {
+                afterImage.style.opacity = '1';
+                sliderHandle.style.left = '100%';
+                buttons[1].classList.add('active');
+            }
+        }
+    </script>
+
+
     <!-- Footer Component -->
     <div id="footer"></div>
     <!-- Component loader -->
