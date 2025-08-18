@@ -23,44 +23,275 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <style>
-    /* Minimal CSS - Performance First */
-    :root {
-        --primary: #4285f4;
-        --success: #22c55e;
-        --charcoal: #344767;
-        --gray: #64748b;
-        --light-gray: #f8fafc;
-        --red: #ef4444;
-    }
+/* ==========================================
+   DFMG UNIFIED CSS - MASTER STYLESHEET
+   ========================================== */
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+/* CSS VARIABLES - Brand System */
+:root {
+    /* Brand Colors */
+    --primary: #4285f4;
+    --success: #22c55e;
+    --charcoal: #344767;
+    --gray: #565656;
+    --light-gray: #64748b;
+    --white: #ffffff;
+    --red: #ef4444;
+    --bg-light-gray: #f8fafc;
+    
+    /* Text Colors (using same colors for consistency) */
+    --text-primary: var(--charcoal);
+    --text-secondary: var(--gray);
+    --text-accent: var(--primary);
+    --text-success: var(--success);
+    --text-white: var(--white);
 
-    body {
-        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: #fff;
-        padding-top: 100px;
-    }
+    /* Background Gradients */
+    --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
+    --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
+    --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
+    /* Typography */
+    --font-size-h1: 3rem;
+    --font-size-h1-mobile: 2rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h2-mobile: 1.8rem;
+    --font-size-subtitle: 0.9rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.75rem;
 
-    .section {
-        padding: 4rem 0;
-    }
+    --font-size-xs: 0.8rem;
+    --font-size-md: 1.1rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 1.4rem;
 
-    .section-header {
-        text-align: center;
-        margin-bottom: 3rem;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    /* Layout & Spacing */
+    --container-width: 1200px;
+    --container-width-wide: 1600px;
+    --container-padding: 0 20px;
+    --section-padding: 4rem 0;
+
+    /* Border Radius */
+    --radius-small: 8px;
+    --radius-medium: 12px;
+    --radius-large: 16px;
+    --radius-xl: 20px;
+    --radius-full: 50px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
+    --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
+
+    /* Borders */
+    --border-light: 1px solid #e2e8f0;
+    --border-lighter: 1px solid #f1f5f9;
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Button System */
+    --btn-padding-sm: 8px 16px;
+    --btn-padding-md: 12px 24px;
+    --btn-padding-lg: 15px 30px;
+    --btn-font-weight: var(--font-weight-semibold);
+
+    /* Background Overlays */
+    --bg-overlay-light: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================
+   UNIVERSAL BASE STYLES
+   ========================================== */
+
+/* Universal Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body { 
+    margin: 0; 
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+    padding-top: 100px; 
+    line-height: 1.6;
+    background: var(--bg-gradient-white);
+}
+
+/* ==========================================
+   LAYOUT SYSTEM
+   ========================================== */
+
+.container { 
+    max-width: var(--container-width); 
+    margin: 0 auto; 
+    padding: var(--container-padding); 
+}
+
+.container-wide { 
+    max-width: var(--container-width-wide); 
+    margin: 0 auto; 
+    padding: var(--container-padding); 
+}
+
+.section { 
+    padding: var(--section-padding); 
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   TYPOGRAPHY SYSTEM
+   ========================================== */
+
+h1 { 
+    font-size: var(--font-size-h1); 
+    font-weight: var(--font-weight-light); 
+    margin-bottom: 1rem; 
+}
+
+h2 { 
+    font-size: var(--font-size-h2); 
+    font-weight: var(--font-weight-semibold); 
+    margin-bottom: 1rem; 
+}
+
+h3 { 
+    font-size: 1.5rem; 
+    font-weight: var(--font-weight-semibold); 
+    margin-bottom: 1rem; 
+}
+
+p {
+    margin-bottom: 1rem; 
+}
+
+.subtitle {
+    color: var(--primary);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 { font-size: var(--font-size-h1-mobile); }
+    h2 { font-size: var(--font-size-h2-mobile); }
+}
+
+/* ==========================================
+   GRID SYSTEMS
+   ========================================== */
+
+.grid-auto { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin-bottom: 3rem;
+}
+
+.grid-4-cols { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2rem; 
+    margin-bottom: 3rem;
+}
+
+/* Responsive behavior for 4-column grid */
+@media (max-width: 1200px) {
+    .grid-4-cols {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@media (max-width: 768px) {
+    .grid-auto,
+    .grid-4-cols,
+    .problem-grid,
+    .process-grid,
+    .tech-grid,
+    .metrics-grid,
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   CARD SYSTEM
+   ========================================== */
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-md);
+}
+
+.card-lg { padding: 2rem; }
+.card-center { text-align: center; }
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+   /* BASIC BUTTON */
+.btn {
+    padding: 12px 24px;
+    border-radius: var(--radius-small);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+.btn-primary { background: var(--success); color: white; }
+.btn-primary:hover { background: #16a34a; }
+
+
+/* CRITICAL UTILITIES (lightweight) */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.text-center { text-align: center; }
+.text-white { color: var(--white); }
+.bg-white { background: var(--white); }
+.bg-light { background: var(--bg-light-gray); }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.overflow-hidden { overflow: hidden; }
+
+/* MINIMAL SPACING (only what you use) */
+.p-6 { padding: 1.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mx-auto { margin: 0 auto; }
+
 
     .section-header h2 {
         font-size: 2.5rem;
@@ -74,15 +305,6 @@
         color: var(--gray);
         max-width: 700px;
         margin: 0 auto;
-    }
-
-    .subtitle {
-        color: var(--primary);
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 1rem;
     }
 
     /* Problem Cards - Simple Grid */
@@ -197,14 +419,6 @@
         font-weight: bold;
     }
 
-    /* Technology Section */
-    .tech-showcase {
-        background: var(--light-gray);
-        border-radius: 16px;
-        padding: 3rem;
-        margin: 3rem 0;
-    }
-
     .tech-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -315,23 +529,11 @@
         align-items: center;
         min-height: 500px;
     }
-
-    .showcase-text h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        font-weight: 300;
-    }
-
-    .showcase-text p {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        opacity: 0.9;
-    }
-
+    
     .showcase-images {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        gap: 2rem;
         position: relative;
     }
 
@@ -349,10 +551,10 @@
         border: 1px solid rgba(255,255,255,0.2);
     }
 
-    .showcase-img:nth-child(1) { transform: translateY(-10px); }
-    .showcase-img:nth-child(2) { transform: translateY(10px); }
-    .showcase-img:nth-child(3) { transform: translateY(10px); }
-    .showcase-img:nth-child(4) { transform: translateY(-10px); }
+    .showcase-img:nth-child(1) { transform: translateY(-5px); }
+    .showcase-img:nth-child(2) { transform: translateY(-25px); }
+    .showcase-img:nth-child(3) { transform: translateY(5px); }
+    .showcase-img:nth-child(4) { transform: translateY(25px); }
 
     /* Split Content Section */
     .split-section {
@@ -376,18 +578,6 @@
         font-size: 1rem;
     }
 
-    .split-content h3 {
-        color: var(--charcoal);
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        font-weight: 300;
-    }
-
-    .split-content p {
-        color: var(--gray);
-        margin-bottom: 1rem;
-        font-size: 1rem;
-    }
     @media (max-width: 768px) {
         .section-header h2 {
             font-size: 2rem;
@@ -406,21 +596,11 @@
     <!-- Header Component -->
     <div id="header"></div>
 
-    <!-- Hero Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <div class="subtitle">VORES TILGANG</div>
-                <h2>Hvorfor Kunder Skifter Til DFMG</h2>
-                <p>Forstå de systemiske problemer i facility branchen, og hvordan vi løser dem gennem systematik, teknologi og personlig opmærksomhed</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Why DFMG Section -->
     <section class="section">
         <div class="container">
             <div class="section-header">
+                <div class="subtitle">VORES TILGANG</div>
                 <h2>Hvorfor Virksomheder Vælger DFMG</h2>
                 <p>Vi har bygget vores tilgang baseret på det, som virksomheder savner mest: pålidelighed, transparens og personlig service</p>
             </div>
@@ -430,10 +610,10 @@
                     <h3>Konsistent Kvalitet Altid</h3>
                     <p>Vores systematiske tilgang sikrer, at I får samme høje standard uanset hvilken medarbejder der udfører servicen, og uanset hvor længe I har været kunde.</p>
                     <ul class="problem-list">
-                        <li style="color: var(--success);">✓ Standardiserede tjeklister for alle opgaver</li>
-                        <li style="color: var(--success);">✓ Dokumenteret kvalitetskontrol</li>
-                        <li style="color: var(--success);">✓ Samme opmærksomhed til alle kunder</li>
-                        <li style="color: var(--success);">✓ Kontinuerlig medarbejderudvikling</li>
+                        <li>✓ Standardiserede tjeklister for alle opgaver</li>
+                        <li>✓ Dokumenteret kvalitetskontrol</li>
+                        <li>✓ Samme opmærksomhed til alle kunder</li>
+                        <li>✓ Kontinuerlig medarbejderudvikling</li>
                     </ul>
                 </div>
 
@@ -441,10 +621,10 @@
                     <h3>Fuldstændig Transparens</h3>
                     <p>I får aldrig overraskelser eller uklarheder. Alt er dokumenteret, tilgængeligt og forklarligt - fra udført arbejde til prisfastsættelse.</p>
                     <ul class="problem-list">
-                        <li style="color: var(--primary);">✓ Real-time dokumentation af alle opgaver</li>
-                        <li style="color: var(--primary);">✓ Billeder før og efter hver service</li>
-                        <li style="color: var(--primary);">✓ Øjeblikkelige svar på alle spørgsmål</li>
-                        <li style="color: var(--primary);">✓ Tidsdata backup for prisfastsættelse</li>
+                        <li>✓ Real-time dokumentation af alle opgaver</li>
+                        <li>✓ Billeder før og efter hver service</li>
+                        <li>✓ Øjeblikkelige svar på alle spørgsmål</li>
+                        <li>✓ Tidsdata backup for prisfastsættelse</li>
                     </ul>
                 </div>
 
@@ -452,10 +632,10 @@
                     <h3>Personlig Service & Relationer</h3>
                     <p>Vi tror på menneskelig kontakt og langvarige partnerskaber. I er ikke bare et kontrakt nummer - I er en værdsatte partner.</p>
                     <ul class="problem-list">
-                        <li style="color: var(--charcoal);">✓ Dedikeret kontaktperson (mig personligt)</li>
-                        <li style="color: var(--charcoal);">✓ Regelmæssige opfølgningsmøder</li>
-                        <li style="color: var(--charcoal);">✓ Fleksibilitet ved ændrede behov</li>
-                        <li style="color: var(--charcoal);">✓ Proaktiv kommunikation</li>
+                        <li>✓ Dedikeret kontaktperson (mig personligt)</li>
+                        <li>✓ Regelmæssige opfølgningsmøder</li>
+                        <li>✓ Fleksibilitet ved ændrede behov</li>
+                        <li>✓ Proaktiv kommunikation</li>
                     </ul>
                 </div>
             </div>
@@ -467,7 +647,7 @@
         <div class="container">
             <div class="showcase-content">
                 <div class="showcase-text">
-                    <h3>Dokumentation Der Skaber Tillid</h3>
+                    <h3 class>Dokumentation Der Skaber Tillid</h3>
                     <p>Vores medarbejdere dokumenterer hver opgave med billeder før og efter, tjeklister og tidsregistrering. Det skaber transparens og giver jer det fulde overblik.</p>
                     <p>Når I ringer med spørgsmål, kan jeg øjeblikkeligt vise jer præcis hvad der er sket, hvornår det skete, og hvordan resultatet så ud.</p>
                 </div>
@@ -482,8 +662,8 @@
     </section>
 
     <!-- Solution Process -->
-    <section class="section" style="background: var(--light-gray);">
-        <div class="container">
+    <section class="section bg-light">
+        <div class="container-wide">
             <div class="section-header">
                 <h2>Vores Systematiske Tilgang</h2>
                 <p>Fra første kontakt til løbende drift - alt er planlagt, dokumenteret og optimeret</p>
@@ -542,7 +722,7 @@
     </section>
 
     <!-- Technology Behind -->
-    <section class="section">
+    <section class="section showcase-section">
         <div class="container">
             <div class="split-section">
                 <div class="split-content">
@@ -559,8 +739,7 @@
     </section>
 
     <!-- Technology Features -->
-    <!-- Technology Features -->
-    <section class="section" style="background: var(--light-gray);">
+    <section class="section bg-light">
         <div class="container">
             <div class="tech-showcase">
                 <div class="section-header">
@@ -594,7 +773,7 @@
     </section>
 
     <!-- Results -->
-    <section class="section" style="background: var(--light-gray);">
+    <section class="section bg-light">
         <div class="container">
             <div class="section-header">
                 <h2>Resultatet: Pålidelighed I Kan Stole På</h2>

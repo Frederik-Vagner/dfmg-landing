@@ -5,7 +5,10 @@
         --success: #22c55e;
         --charcoal: #344767;
         --gray: #565656;
+        --light-gray: #64748b;
         --white: #ffffff;
+        --red: #ef4444;
+        --bg-light-gray: #f8fafc;
         
         /* Text Colors (using same colors for consistency) */
         --text-primary: var(--charcoal);
@@ -101,6 +104,7 @@
     padding-top: 10px;
     padding-bottom: 20px;
     text-align: center;
+    font-weight: var(--font-weight-light);
 }
 
 .footer-section {
@@ -120,6 +124,7 @@
     align-items: center;
     gap: 10px;
     transition: var(--transition-fast);
+    font-weight: var(--font-weight-light);
 }
 
 .footer-contact a:hover {
@@ -136,7 +141,7 @@
 .social-icon {
     width: 40px;
     height: 40px;
-    background: var(--gray);
+    background: var(--light-gray);
     border-radius: var(--radius-small);
     display: flex;
     align-items: center;
@@ -187,6 +192,30 @@
     width: 40px;
     height: 40px;
     object-fit: contain;
+}
+
+h1 { 
+    font-size: var(--font-size-h1); 
+    font-weight: var(--font-weight-light); 
+    margin-bottom: 1rem; 
+}
+
+h2 { 
+    font-size: var(--font-size-h2); 
+    font-weight: var(--font-weight-semibold); 
+    margin-bottom: 1rem; 
+}
+
+h3 { 
+    font-size: 1.5rem; 
+    font-weight: var(--font-weight-semibold); 
+    margin-bottom: 1rem; 
+}
+
+p {
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-light);
+    
 }
 
 /* Desktop enhancements */
