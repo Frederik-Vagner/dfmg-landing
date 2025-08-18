@@ -21,6 +21,10 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <link rel="stylesheet" href="../../css/styles.css">
+
+
 </head>
     <style>
 :root {
@@ -410,17 +414,6 @@ p {
     margin-top: 0.5rem;
 }
 
-
-.process-step::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--bg-gradient-primary);
-}
-
 .step-number {
     width: 50px;
     height: 50px;
@@ -435,34 +428,14 @@ p {
     margin: 0 auto 1rem;
 }
 
-.process-step h3 {
-    color: var(--text-primary);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
 
-.quality-card h3 {
-    color: var(--text-primary);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.quality-features {
-    list-style: none;
-}
-
-.quality-features li {
+.list li {
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
 }
 
-.quality-features li::before {
+.list li::before {
     content: '✓';
     position: absolute;
     left: 0;
@@ -556,154 +529,102 @@ p {
     margin-bottom: 0.5rem;
 }
 
-.news-excerpt {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
 
-.read-more {
-    color: var(--primary);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .timeline-line {
-        left: 2rem;
-    }
-    
-    .timeline-year {
-        left: 2rem;
-        width: 50px;
-        height: 50px;
-        font-size: 0.8rem;
-    }
-
-    .timeline-item {
-        flex-direction: column !important;
-    }
-
-    .timeline-content {
-        margin: 0 0 0 4rem;
-    }
-
-    .grid-auto {
-        grid-template-columns: 1fr;
-    }
-}
-    </style>
+</style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
     <!-- Our Story Section -->
     <section class="section" id="story">
         <div class="container">
-            <div class="section-header">
-                <h2>Vores Historie</h2>
-                <p>Fra lille start-up til Danmarks foretrukne facility partner - historien om DFMG's rejse mod excellence</p>
+            <div class="text-center">
+                <div class="title text-charcoal">Vores Historie</div>
+                <div class="body text-gray">Fra lille start-up til Danmarks foretrukne facility partner - historien om DFMG's rejse mod excellence</p>
             </div>
             
             <div class="story-timeline">
                 <div class="timeline-line"></div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">2015</div>
-                    <div class="timeline-content">
-                        <h3>Starten på Drømmen</h3>
-                        <p>DFMG blev grundlagt med en vision om at revolutionere facility management i Danmark. Vi startede med et lille team af dedikerede medarbejdere og en stor drøm om at skabe positive forandringer i branchen.</p>
-                        <p>Allerede fra starten fokuserede vi på bæredygtige løsninger og enestående kundeservice som vores kerneprincipper.</p>
-                        <span class="achievement-badge">Grundlagt som grøn virksomhed</span>
-                    </div>
+                <div class="card bg-gradient-white">
+                    <h3>Starten på Drømmen</h3>
+                    <p>DFMG blev grundlagt med en vision om at revolutionere facility management i Danmark. Vi startede med et lille team af dedikerede medarbejdere og en stor drøm om at skabe positive forandringer i branchen.</p>
+                    <p>Allerede fra starten fokuserede vi på bæredygtige løsninger og enestående kundeservice som vores kerneprincipper.</p>
+                    <span class="achievement-badge">Grundlagt som grøn virksomhed</span>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">2017</div>
-                    <div class="timeline-content">
-                        <h3>Første Store Kontrakter</h3>
-                        <p>Vi sikrede vores første større erhvervskontrakter og etablerede os som en pålidelig partner for københavnske virksomheder. Dette år markerede starten på vores specialisering inden for professionel rengøring og ejendomsservice.</p>
-                        <p>Vi implementerede vores bilfri transport politik og blev certificeret inden for miljøvenlig drift.</p>
-                        <span class="achievement-badge">100% Bilfri Transport</span>
-                    </div>
+                <div class="card bg-gradient-white space2">
+                    <h3>Første Store Kontrakter</h3>
+                    <p>Vi sikrede vores første større erhvervskontrakter og etablerede os som en pålidelig partner for københavnske virksomheder. Dette år markerede starten på vores specialisering inden for professionel rengøring og ejendomsservice.</p>
+                    <p>Vi implementerede vores bilfri transport politik og blev certificeret inden for miljøvenlig drift.</p>
+                    <span class="achievement-badge">100% Bilfri Transport</span>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">2019</div>
-                    <div class="timeline-content">
-                        <h3>Ekspansion og Innovation</h3>
-                        <p>Markant vækst i kundebase og udvidelse af serviceportefølje. Vi introducerede digitale løsninger for bedre kundeinteraktion og implementerede avancerede kvalitetskontrolsystemer.</p>
-                        <p>Partnerskaber med leading teknologi leverandører sikrede os en position som innovationsdriver i branchen.</p>
-                        <span class="achievement-badge">Digital Transformation</span>
-                    </div>
+                 <div class="card bg-gradient-white space2">
+                    <h3>Ekspansion og Innovation</h3>
+                    <p>Markant vækst i kundebase og udvidelse af serviceportefølje. Vi introducerede digitale løsninger for bedre kundeinteraktion og implementerede avancerede kvalitetskontrolsystemer.</p>
+                    <p>Partnerskaber med leading teknologi leverandører sikrede os en position som innovationsdriver i branchen.</p>
+                    <span class="achievement-badge">Digital Transformation</span>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">2021</div>
-                    <div class="timeline-content">
-                        <h3>Bæredygtighedslederskab</h3>
-                        <p>Vi lancerede vores omfattende bæredygtighedsprogram og blev anerkendt som branchens grønne leder. Implementering af cirkulær økonomi principper og social ansvarlighed i alle aspekter af vores forretning.</p>
-                        <p>Etablering af mentorprogrammer og inklusions-initiativer for medarbejdere.</p>
-                        <span class="achievement-badge">Bæredygtighedsaward</span>
-                    </div>
+                 <div class="card bg-gradient-white space2">
+                    <h3>Bæredygtighedslederskab</h3>
+                    <p>Vi lancerede vores omfattende bæredygtighedsprogram og blev anerkendt som branchens grønne leder. Implementering af cirkulær økonomi principper og social ansvarlighed i alle aspekter af vores forretning.</p>
+                    <p>Etablering af mentorprogrammer og inklusions-initiativer for medarbejdere.</p>
+                    <span class="achievement-badge">Bæredygtighedsaward</span>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">2023</div>
-                    <div class="timeline-content">
-                        <h3>Strategisk Facility Partner</h3>
-                        <p>Evolution fra service leverandør til strategisk facility partner. Vi hjælper nu virksomheder med at optimere deres workplace experience og reducere omkostninger gennem holistiske facility løsninger.</p>
-                        <p>Lancering af vores Total Facility Management koncept og dedicated account manager program.</p>
-                        <span class="achievement-badge">200+ Tilfredse Kunder</span>
-                    </div>
+                 <div class="card bg-gradient-white space2">
+                    <h3>Strategisk Facility Partner</h3>
+                    <p>Evolution fra service leverandør til strategisk facility partner. Vi hjælper nu virksomheder med at optimere deres workplace experience og reducere omkostninger gennem holistiske facility løsninger.</p>
+                    <p>Lancering af vores Total Facility Management koncept og dedicated account manager program.</p>
+                    <span class="achievement-badge">200+ Tilfredse Kunder</span>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-content">
-                        <h3>Fremtiden Starter Nu</h3>
-                        <p>Kontinuerlig innovation og vækst med fokus på at blive Danmarks mest betroede facility partner. Vi investerer i ny teknologi, udvider vores team og skaber endnu bedre løsninger for vores kunder.</p>
-                        <p>Ambitiøse mål for de kommende år inkluderer yderligere ekspansion og pioneering af næste generations facility services.</p>
-                        <span class="achievement-badge">Klar til Fremtiden</span>
-                    </div>
+                 <div class="card bg-gradient-white space2">
+                    <h3>Fremtiden Starter Nu</h3>
+                    <p>Kontinuerlig innovation og vækst med fokus på at blive Danmarks mest betroede facility partner. Vi investerer i ny teknologi, udvider vores team og skaber endnu bedre løsninger for vores kunder.</p>
+                    <p>Ambitiøse mål for de kommende år inkluderer yderligere ekspansion og pioneering af næste generations facility services.</p>
+                    <span class="achievement-badge">Klar til Fremtiden</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How We Work Section -->
-    <section class="section bg-white" id="work">
+    <section class="section">
         <div class="container-wide">
-            <div class="section-header">
-                <h2>Hvordan Vi Arbejder</h2>
-                <p>Vores succesformel bygger på systematisk tilgang, høje standarder og konstant fokus på forbedring</p>
+            <div class="text-center">
+                <div class="title text-charcoal">Hvordan Vi Arbejder</div>
+                <div class="body text-gray bot-space2">Vores succesformel bygger på systematisk tilgang, høje standarder og konstant fokus på forbedring</div>
             </div>
-            
-            <div class="grid-4-cols">
-                <div class="card card-center relative border p-6">
+             
+            <div class="flex bot-space2">
+                <div class="card text-center p-6">
                     <div class="step-number">1</div>
                     <h3>Analyse & Forståelse</h3>
                     <p>Vi starter altid med en grundig analyse af kundens behov, udfordringer og målsætninger for at skabe den perfekte løsning.</p>
                 </div>
                 
-                <div class="card card-center relative border p-6">
+                <div class="card text-center p-6">
                     <div class="step-number">2</div>
                     <h3>Skræddersyet Plan</h3>
                     <p>Baseret på analysen udvikler vi en detaljeret serviceplan der er tilpasset specifikke krav og forventninger.</p>
                 </div>
                 
-                <div class="card card-center relative border p-6">
+                <div class="card text-center p-6">
                     <div class="step-number">3</div>
                     <h3>Professionel Udførelse</h3>
                     <p>Vores erfarne teams udfører alle opgaver med højeste kvalitet, sikkerhed og opmærksomhed på detaljer.</p>
                 </div>
                 
-                <div class="card card-center relative border p-6">
+                <div class="card text-center p-6">
                     <div class="step-number">4</div>
                     <h3>Kontinuerlig Optimering</h3>
                     <p>Vi monitorerer løbende performance, indsamler feedback og optimerer vores services for bedst mulige resultater.</p>
                 </div>
             </div>
+        </div>
+        <div class="container">
             
             <div class="grid-auto">
                 <div class="card card-lg border-l-4">
@@ -711,7 +632,7 @@ p {
                         <i class="fas fa-shield-alt"></i>
                         Kvalitetssikring
                     </h3>
-                    <ul class="quality-features">
+                    <ul class="list">
                         <li>Systematiske kvalitetskontroller ved hver service</li>
                         <li>Certificerede medarbejdere med løbende træning</li>
                         <li>Digitale checklister og dokumentation</li>
@@ -726,7 +647,7 @@ p {
                         <i class="fas fa-handshake"></i>
                         Kundeforhold
                     </h3>
-                    <ul class="quality-features">
+                    <ul class="list">
                         <li>Dedikeret account manager for hver kunde</li>
                         <li>24/7 support og emergency response</li>
                         <li>Regelmæssige review møder og planlægning</li>
@@ -736,15 +657,15 @@ p {
                     </ul>
                 </div>
             </div>
-        </div>
+        
     </section>
 
     <!-- News Section -->
     <section class="section bg-white" id="news">
         <div class="container">
-            <div class="section-header">
-                <h2>Seneste Artikler</h2>
-                <p>Hold dig opdateret med de seneste udviklinger, initiativer og milepæle hos DFMG</p>
+            <div class="text-center">
+                <div class="title text-charcoal">Seneste Artikler</div>
+                <div class="body text-gray bot-space2">Seneste Artikler</div>
             </div>
             
             <div class="grid-auto">
@@ -756,7 +677,7 @@ p {
                         <div class="news-category">TIPS & TRICKS</div>
                         <h3 class="news-title">Location Guides: Hemmeligheden Bag Konsistent Kvalitet</h3>
                         <p class="news-excerpt">Lær hvordan detaljeret dokumentation og kunde-specifikke instrukser eliminerer gætværk og sikrer perfekt service hver gang.</p>
-                        <a href="#" class="read-more">
+                        <a href="#" class="btn primary small">
                             Læs mere <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -770,7 +691,7 @@ p {
                         <div class="news-category">INNOVATION</div>
                         <h3 class="news-title">Mennesker vs. Robotter i Facility Management</h3>
                         <p class="news-excerpt">Hvorfor den menneskelige faktor aldrig bliver erstattet af teknologi, og hvordan vi positionerer os til fremtidens udfordringer.</p>
-                        <a href="#" class="read-more">
+                        <a href="#" class="btn primary small">
                             Læs mere <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -784,7 +705,7 @@ p {
                         <div class="news-category">BÆREDYGTIGHED</div>
                         <h3 class="news-title">Cirkulær Økonomi i Rengøringsbranchen</h3>
                         <p class="news-excerpt">Hvordan facility service virksomheder kan implementere cirkulære principper og skabe værdi gennem bæredygtige praksisser.</p>
-                        <a href="#" class="read-more">
+                        <a href="#" class="btn primary small">
                             Læs mere <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -794,11 +715,11 @@ p {
     </section>
 
     <!-- Customer Cases Section -->
-    <section class="section bg-light" id="cases">
+    <section class="section">
         <div class="container-wide">
-            <div class="section-header">
-                <h2>Kundecases</h2>
-                <p>Virkelige historier fra vores samarbejder - se hvordan vi har hjulpet virksomheder med at opnå deres mål</p>
+            <div class="text-center">
+                <div class="title text-charcoal">Kundecases</div>
+                <div class="body text-gray bot-space2">Virkelige historier fra vores samarbejder - se hvordan vi har hjulpet virksomheder med at opnå deres mål</div>
             </div>
             
             <div class="grid-4-cols">

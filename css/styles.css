@@ -32,10 +32,11 @@
     --font-weight-semibold: 600;
 
     /* Layout & Spacing */
+    --container-width-narrow: 800px;
     --container-width-normal: 1200px;
     --container-width-wide: 1600px;
     --container-padding: 0 20px;
-    --section-padding: 2rem 0;
+    --section-padding: 4rem 0;
 
     /* Border Radius */
     --radius-normal: 20px;
@@ -65,6 +66,12 @@ body {
     padding: var(--container-padding); 
 }
 
+.container-narrow { 
+    max-width: var(--container-width-narrow); 
+    margin: 0 auto; 
+    padding: var(--container-padding); 
+}
+
 .container-wide { 
     max-width: var(--container-width-normal); 
     margin: 0 auto; 
@@ -72,7 +79,7 @@ body {
 }
 
 .first { 
-    padding-top: 100px !important;
+    padding-top: 150px !important;
 }
 
 .section { 
@@ -85,8 +92,7 @@ body {
 
 /* BUTTON */
 
-button { 
-    margin: 10px; 
+.btn { 
     text-decoration: none; 
     border-radius: var(--radius-normal); 
     display: inline-block; 
@@ -153,25 +159,21 @@ button {
 h1 { 
     font-size: 2.5rem; 
     font-weight: var(--font-weight-semibold); 
-    color: var(--charcoal);
 }
 
 h2 { 
     font-size: 2rem; 
     font-weight: var(--font-weight-semibold); 
-    color: var(--charcoal);
 }
 
 h3 { 
     font-size: 1.5rem; 
     font-weight: var(--font-weight-semibold); 
-    color: var(--charcoal);
 }
 
 h4 { 
     font-size: 1rem; 
     font-weight: var(--font-weight-semibold); 
-    color: var(--charcoal);
 }
 
 
@@ -207,11 +209,23 @@ h4 {
 .text-gray { color: var(--gray); }
 .text-white { color: var(--white); }
 
+.bg-gradient-primary { background: var(--bg-gradient-primary); color: var(--white);  }
+.bg-gradient-success { background: var(--bg-gradient-success); }
+.bg-gradient-white { background: var(--bg-gradient-white); }
+.bg-gradient-charcoal { background: var(--bg-gradient-charcoal); }
+
+
 .bot-space { margin-bottom: 1rem; }
+.bot-space2 { margin-bottom: 2rem; }
 
 .space1 { margin: 1rem; }
 .space2 { margin: 2rem; }
 .space3 { margin: 3rem; }
+
+
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
 
 
 .cta-box {
@@ -252,4 +266,21 @@ h4 {
 .form-textarea {
     min-height: 120px;
     resize: vertical;
+}
+
+
+.card{
+    position: relative;
+    border-radius: var(--radius-normal);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid #e2e8f0
+
+}
+
+
+
+.list{
+    list-style: none;
+    padding: unset;
 }

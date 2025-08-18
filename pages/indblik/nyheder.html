@@ -21,23 +21,10 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <style>
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #fff;
-    padding-top: 100px;
-    padding-bottom: 80px;
-}
 
 /* Main container */
 .container {
@@ -71,7 +58,6 @@ body {
 /* Filter Navigation */
 .filter-section {
     background: white;
-    padding: 1rem 0;
     box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
     position: fixed;
     bottom: 0;
@@ -79,7 +65,6 @@ body {
     right: 0;
     z-index: 1000;
     border-top: 1px solid #e2e8f0;
-    height: 80px;
 }
 
 .filter-container {
@@ -88,39 +73,19 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 10px 0;
 }
 
 .filter-tabs {
     display: flex;
-    gap: 0.5rem;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
-.filter-tab {
-    padding: 12px 24px;
-    border: 2px solid #e2e8f0;
-    border-radius: 50px;
-    background: white;
-    color: #64748b;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.filter-tab.active {
-    background: #4285f4;
-    border-color: #4285f4;
-    color: white;
-}
-
-.filter-tab:hover {
-    border-color: #4285f4;
-    color: #4285f4;
-}
-
-.filter-tab.active:hover {
-    color: white;
+.small.filter-tab:not(.active){
+    background: var(--bg-gradient-white); 
+    color: var(--text-primary); 
+    border: 2px solid var(--charcoal);
 }
 
 .search-bar {
@@ -129,7 +94,7 @@ body {
     background: #f8fafc;
     border: 2px solid #e2e8f0;
     border-radius: 50px;
-    padding: 8px 20px;
+    padding: 0 10px;
     min-width: 300px;
     transition: all 0.3s ease;
 }
@@ -153,22 +118,26 @@ body {
 }
 
 /* Featured Article */
+
 .featured-section {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+    max-width: 1000px;
+    margin: auto;
 }
+
 
 .featured-article {
     background: white;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    display: none; /* ADD THIS LINE - hide all by default */
+    display: none;
     grid-template-columns: 1fr 1fr;
-    min-height: 500px;
+    min-height: 200px;
 }
 
 .featured-article[data-featured-category="all"] {
-    display: grid; /* Show only the "all" featured article by default */
+    display: grid;
 }
 
 .featured-image {
@@ -192,7 +161,7 @@ body {
 }
 
 .featured-content {
-    padding: 3rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,38 +185,33 @@ body {
 }
 
 .featured-title {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     color: #344767;
     font-weight: 300;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
 }
 
 .featured-excerpt {
     color: #64748b;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
-.featured-cta {
+.primary medium {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     background: #4285f4;
     color: white;
-    padding: 16px 32px;
+    padding: 12px 24px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
     align-self: flex-start;
     transition: all 0.3s ease;
-}
-
-.featured-cta:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
 }
 
 /* Articles Grid */
@@ -272,11 +236,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border: 1px solid #f1f5f9;
     transition: all 0.3s ease;
-}
-
-.article-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .article-image {
@@ -381,7 +340,7 @@ body {
     font-size: 0.9rem;
 }
 
-.read-more {
+.primary small {
     color: #4285f4;
     font-weight: 600;
     text-decoration: none;
@@ -392,84 +351,10 @@ body {
     transition: all 0.3s ease;
 }
 
-.read-more:hover {
-    color: #1d4ed8;
-}
 
-.read-more.coming-soon {
+.primary small.coming-soon {
     color: #9ca3af;
     cursor: default;
-}
-
-/* Newsletter Signup */
-.newsletter-section {
-    background: linear-gradient(135deg, #344767, #4a5568);
-    color: white;
-    padding: 4rem 0;
-    margin-top: 4rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.newsletter-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.newsletter-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 300;
-}
-
-.newsletter-subtitle {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-bottom: 2.5rem;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.newsletter-input {
-    flex: 1;
-    padding: 16px 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1rem;
-    backdrop-filter: blur(10px);
-}
-
-.newsletter-input::placeholder {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.newsletter-btn {
-    background: #22c55e;
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.newsletter-btn:hover {
-    background: #16a34a;
 }
 
 /* Responsive */
@@ -495,19 +380,23 @@ body {
         flex-direction: column;
     }
 }
+
+.active {
+    background: var(--bg-gradient-charcoal); 
+    color: var(--white); 
+}
 </style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
 
-<!-- Chatbot Component -->
-<div id="chatbot"></div>
-
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="section first">
         <div class="container">
-            <h1 class="page-title">Indblik & Artikler</h1>
-            <p class="page-subtitle">Få værdifulde insights om facility management, systematiske processer og de trends der former branchen</p>
+            <div class="text-center">
+                <div class="title text-charcoal">Indblik & Artikler</div>
+                <div class="body text-gray">Få værdifulde insights om facility management, systematiske processer og de trends der former branchen</div>
+            </div>
         </div>
     </section>
 
@@ -516,12 +405,12 @@ body {
         <div class="container">
             <div class="filter-container">
                 <div class="filter-tabs">
-                    <button class="filter-tab active" data-filter="all">Alle</button>
-                    <button class="filter-tab" data-filter="insights">Indsigt</button>
-                    <button class="filter-tab" data-filter="tips">Tips & Tricks</button>
-                    <button class="filter-tab" data-filter="sustainability">Bæredygtighed</button>
-                    <button class="filter-tab" data-filter="innovation">Innovation</button>
-                    <button class="filter-tab" data-filter="cases">Cases</button>
+                    <a class="btn small filter-tab active" data-filter="all">Alle</a>
+                    <a class="btn small filter-tab" data-filter="insights">Indsigt</a>
+                    <a class="btn small filter-tab" data-filter="tips">Tips & Tricks</a>
+                    <a class="btn small filter-tab" data-filter="sustainability">Bæredygtighed</a>
+                    <a class="btn small filter-tab" data-filter="innovation">Innovation</a>
+                    <a class="btn small filter-tab" data-filter="cases">Cases</a>
                 </div>
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
@@ -552,7 +441,7 @@ body {
                         </div>
                         <h2 class="featured-title">Hvorfor Systematik Slår Talent i Facility Management</h2>
                         <p class="featured-excerpt">De fleste virksomheder tror at god facility service handler om at finde de rigtige medarbejdere. Men systematiske processer skaber langt mere pålidelig service end talent alene.</p>
-                        <a href="/pages/indblik/artikler/indsigt/systematik-vs-talent.html" class="featured-cta">
+                        <a href="/pages/indblik/artikler/indsigt/systematik-vs-talent.html" class="btn primary medium" style="align-self: anchor-center;">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -563,7 +452,7 @@ body {
                 <div class="featured-article" data-featured-category="insights">
                     <div class="featured-image insights">
                         <div class="featured-badge">Udvalgt Indsigt</div>
-                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;" style="align-self: anchor-center;">
                     </div>
                     <div class="featured-content">
                         <div class="featured-meta">
@@ -575,7 +464,7 @@ body {
                         </div>
                         <h2 class="featured-title">Øjeblikkelige Svar vs. "Jeg Vender Tilbage"</h2>
                         <p class="featured-excerpt">Hvorfor systematisk dokumentation og data-adgang gør forskellen mellem professionel service og frustrerende ventetid.</p>
-                        <a href="/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html" class="featured-cta">
+                        <a href="/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html" class="btn primary medium" style="align-self: anchor-center;">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -586,7 +475,7 @@ body {
                 <div class="featured-article" data-featured-category="tips">
                     <div class="featured-image tips">
                         <div class="featured-badge">Udvalgte Tips</div>
-                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="/images/article/ipad.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;" style="align-self: anchor-center;">
                     </div>
                     <div class="featured-content">
                         <div class="featured-meta">
@@ -598,7 +487,7 @@ body {
                         </div>
                         <h2 class="featured-title">5 Tegn På at I Skal Skifte Facility Leverandør</h2>
                         <p class="featured-excerpt">Kender I disse tegn? Så er det tid til at overveje om jeres nuværende facility partner virkelig leverer den værdi I fortjener.</p>
-                        <a href="/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html" class="featured-cta">
+                        <a href="/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html" class="btn primary medium" style="align-self: anchor-center;">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -621,7 +510,7 @@ body {
                         </div>
                         <h2 class="featured-title">100% Bilfri Facility Service: Sådan Gør Vi Det</h2>
                         <p class="featured-excerpt">Få indblik i hvordan DFMG har elimineret bil-transport og skabt en CO2-neutral facility service uden at gå på kompromis med kvaliteten.</p>
-                        <a href="/pages/indblik/artikler/baeeredygtighed/100-procent-bilfri-facility-service.html" class="featured-cta">
+                        <a href="/pages/indblik/artikler/baeeredygtighed/100-procent-bilfri-facility-service.html" class="btn primary medium" style="align-self: anchor-center;">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -644,7 +533,7 @@ body {
                         </div>
                         <h2 class="featured-title">Fra Kaos til Kontrol: DFMG's ERP-System Historie</h2>
                         <p class="featured-excerpt">Gå bag kulisserne og lær hvordan en programmørs vision blev til et system der revolutionerer facility management.</p>
-                        <a href="/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html" class="featured-cta">
+                        <a href="/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html" class="btn primary medium" style="align-self: anchor-center;">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -667,7 +556,7 @@ body {
                         </div>
                         <h2 class="featured-title">Case: 20% Omkostningsreduktion for Tech-Virksomhed</h2>
                         <p class="featured-excerpt">Hvordan systematisk facility management og data-drevne beslutninger skabte betydelige besparelser uden at kompromittere kvaliteten.</p>
-                        <a href="/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html" class="featured-cta">
+                        <a href="/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html" class="btn primary medium" style="align-self: anchor-center;">
                             Læs hele artiklen
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -695,7 +584,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     4 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html" class="read-more">
+                                <a href="/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -716,7 +605,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     5 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html" class="read-more">
+                                <a href="/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -737,7 +626,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     4 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/indsigt/fra-vip-til-glemt-kunde.html" class="read-more">
+                                <a href="/pages/indblik/artikler/indsigt/fra-vip-til-glemt-kunde.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -759,7 +648,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     3 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/baeeredygtighed/100-procent-bilfri-facility-service.html" class="read-more">
+                                <a href="/pages/indblik/artikler/baeeredygtighed/100-procent-bilfri-facility-service.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -780,9 +669,9 @@ body {
                                     <i class="fas fa-clock"></i>
                                     5 min læsning
                                 </div>
-                                <span class="read-more coming-soon">
+                                <a class="btn primary small coming-soon">
                                     Kommer snart <i class="fas fa-hourglass-half"></i>
-                                </span>
+                                </a>
                             </div>
                         </div>
                     </article>
@@ -802,7 +691,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     6 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html" class="read-more">
+                                <a href="/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -823,7 +712,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     5 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html" class="read-more">
+                                <a href="/pages/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -845,7 +734,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     4 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html" class="read-more">
+                                <a href="/pages/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -866,7 +755,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     3 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/tips/saadan-laeser-i-facility-tidsrapport.html" class="read-more">
+                                <a href="/pages/indblik/artikler/tips/saadan-laeser-i-facility-tidsrapport.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -888,7 +777,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     4 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html" class="read-more">
+                                <a href="/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -909,7 +798,7 @@ body {
                                     <i class="fas fa-clock"></i>
                                     5 min læsning
                                 </div>
-                                <a href="/pages/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html" class="read-more">
+                                <a href="/pages/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html" class="btn primary small">
                                     Læs artikel <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -917,23 +806,6 @@ body {
                     </article>
 
                 </div>       
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Signup -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2 class="newsletter-title">Hold Dig Opdateret</h2>
-                <p class="newsletter-subtitle">Få de seneste facility management insights, systematiske tips og DFMG nyheder leveret direkte til din indbakke</p>
-                <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Din email adresse" required>
-                    <button type="submit" class="newsletter-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Tilmeld Nyhedsbrev
-                    </button>
-                </form>
             </div>
         </div>
     </section>

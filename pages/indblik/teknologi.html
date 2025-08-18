@@ -21,366 +21,35 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <style>
-/* ==========================================
-   DFMG UNIFIED CSS - MASTER STYLESHEET
-   ========================================== */
 
-/* CSS VARIABLES - Brand System */
-:root {
-    /* Brand Colors */
-    --primary: #4285f4;
-    --success: #22c55e;
-    --charcoal: #344767;
-    --gray: #565656;
-    --light-gray: #64748b;
-    --white: #ffffff;
-    --red: #ef4444;
-    --bg-light-gray: #f8fafc;
-    
-    /* Text Colors (using same colors for consistency) */
-    --text-primary: var(--charcoal);
-    --text-secondary: var(--gray);
-    --text-accent: var(--primary);
-    --text-success: var(--success);
-    --text-white: var(--white);
-
-    /* Background Gradients */
-    --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
-    --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
-    --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
-    --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
-
-    /* Typography */
-    --font-size-h1: 3rem;
-    --font-size-h1-mobile: 2rem;
-    --font-size-h2: 2.5rem;
-    --font-size-h2-mobile: 1.8rem;
-    --font-size-subtitle: 0.9rem;
-    --font-size-body: 1rem;
-    --font-size-small: 0.75rem;
-
-    --font-size-xs: 0.8rem;
-    --font-size-md: 1.1rem;
-    --font-size-lg: 1.2rem;
-    --font-size-xl: 1.4rem;
-
-    --font-weight-light: 300;
-    --font-weight-normal: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-
-    /* Layout & Spacing */
-    --container-width: 1200px;
-    --container-width-wide: 1600px;
-    --container-padding: 0 20px;
-    --section-padding: 4rem 0;
-
-    /* Border Radius */
-    --radius-small: 8px;
-    --radius-medium: 12px;
-    --radius-large: 16px;
-    --radius-xl: 20px;
-    --radius-full: 50px;
-
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-    --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
-    --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
-    --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
-    --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
-
-    /* Borders */
-    --border-light: 1px solid #e2e8f0;
-    --border-lighter: 1px solid #f1f5f9;
-
-    /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
-
-    /* Button System */
-    --btn-padding-sm: 8px 16px;
-    --btn-padding-md: 12px 24px;
-    --btn-padding-lg: 15px 30px;
-    --btn-font-weight: var(--font-weight-semibold);
-
-    /* Background Overlays */
-    --bg-overlay-light: rgba(255, 255, 255, 0.2);
-}
-
-/* ==========================================
-   UNIVERSAL BASE STYLES
-   ========================================== */
-
-/* Universal Box Sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* Body */
-body { 
-    margin: 0; 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-    padding-top: 100px; 
-    line-height: 1.6;
-    background: var(--bg-gradient-white);
-}
-
-/* ==========================================
-   LAYOUT SYSTEM
-   ========================================== */
-
-.container { 
-    max-width: var(--container-width); 
-    margin: 0 auto; 
-    padding: var(--container-padding); 
-}
-
-.container-wide { 
-    max-width: var(--container-width-wide); 
-    margin: 0 auto; 
-    padding: var(--container-padding); 
-}
-
-.section { 
-    padding: var(--section-padding); 
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* ==========================================
-   TYPOGRAPHY SYSTEM
-   ========================================== */
-
-h1 { 
-    font-size: var(--font-size-h1); 
-    font-weight: var(--font-weight-light); 
-    margin-bottom: 1rem; 
-}
-
-h2 { 
-    font-size: var(--font-size-h2); 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-}
-
-h3 { 
-    font-size: 1.5rem; 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-}
-
-p {
-    margin-bottom: 1rem; 
-}
-
-.subtitle {
-    color: var(--primary);
-    font-size: var(--font-size-subtitle);
-    font-weight: var(--font-weight-semibold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-    h1 { font-size: var(--font-size-h1-mobile); }
-    h2 { font-size: var(--font-size-h2-mobile); }
-}
-
-/* ==========================================
-   GRID SYSTEMS
-   ========================================== */
-
-.grid-auto { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 2rem; 
-    margin-bottom: 3rem;
-}
-
-.grid-4-cols { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 2rem; 
-    margin-bottom: 3rem;
-}
-
-/* Responsive behavior for 4-column grid */
-@media (max-width: 1200px) {
-    .grid-4-cols {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .grid-auto,
-    .grid-4-cols,
-    .problem-grid,
-    .process-grid,
-    .tech-grid,
-    .metrics-grid,
-    .results-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ==========================================
-   CARD SYSTEM
-   ========================================== */
-
-.card {
-    background: var(--white);
-    border-radius: var(--radius-large);
-    box-shadow: var(--shadow-md);
-}
-
-.card-lg { padding: 2rem; }
-.card-center { text-align: center; }
-
-/* ==========================================
-   BUTTONS
-   ========================================== */
-   /* BASIC BUTTON */
-.btn {
-    padding: 12px 24px;
-    border-radius: var(--radius-small);
-    font-weight: var(--font-weight-semibold);
-    text-decoration: none;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    transition: 0.15s ease;
-}
-.btn-primary { background: var(--success); color: white; }
-.btn-primary:hover { background: #16a34a; }
-
-
-/* CRITICAL UTILITIES (lightweight) */
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.text-center { text-align: center; }
-.text-white { color: var(--white); }
-.bg-white { background: var(--white); }
-.bg-light { background: var(--bg-light-gray); }
-.relative { position: relative; }
-.absolute { position: absolute; }
-.overflow-hidden { overflow: hidden; }
-
-/* MINIMAL SPACING (only what you use) */
-.p-6 { padding: 1.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mx-auto { margin: 0 auto; }
-
-
-    .section-header h2 {
-        font-size: 2.5rem;
-        color: var(--charcoal);
-        margin-bottom: 1rem;
-        font-weight: 300;
-    }
-
-    .section-header p {
-        font-size: 1.1rem;
-        color: var(--gray);
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    /* Problem Cards - Simple Grid */
-    .problem-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-        margin-bottom: 4rem;
-    }
-
-    .problem-card {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        border-left: 4px solid var(--red);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .problem-card h3 {
-        color: var(--charcoal);
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
-
-    .problem-list {
+    .list {
         list-style: none;
         margin-top: 1rem;
     }
 
-    .problem-list li {
+    .list li {
         margin-bottom: 0.5rem;
         position: relative;
-        padding-left: 1.5rem;
         color: var(--gray);
+        padding-left: 1.5rem;
     }
 
-    .problem-list li::before {
-        content: '';
+    .list li::before {
+        content: '✓';
         position: absolute;
         left: 0;
+        color: var(--success);
         font-weight: bold;
-    }
-
-    /* Process Steps - Minimal */
-    .process-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        margin: 3rem 0;
-    }
-
-    .process-step {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        text-align: center;
-        border: 1px solid #f1f5f9;
-        position: relative;
-    }
-
-    .process-step::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--primary);
-        border-radius: 12px 12px 0 0;
     }
 
     .step-number {
         width: 60px;
         height: 60px;
-        background: var(--primary);
+        background: var(--charcoal);
         color: white;
         border-radius: 50%;
         display: flex;
@@ -391,135 +60,20 @@ p {
         margin: 0 auto 1rem;
     }
 
-    .process-step h3 {
-        color: var(--charcoal);
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
 
-    .step-features {
-        list-style: none;
-        text-align: left;
-        margin-top: 1rem;
-    }
 
-    .step-features li {
-        margin-bottom: 0.5rem;
-        position: relative;
-        padding-left: 1.5rem;
-        color: var(--gray);
-    }
-
-    .step-features li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: var(--success);
-        font-weight: bold;
-    }
-
-    .tech-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .tech-feature {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-    }
-
-    .tech-feature h4 {
-        color: var(--charcoal);
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    /* Metrics - Simple */
-    .metrics-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        margin: 3rem 0;
-    }
-
-    .metric-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        text-align: center;
-        border: 1px solid #f1f5f9;
-        border-top: 4px solid var(--success);
-    }
 
     .metric-value {
         font-size: 2.5rem;
         font-weight: bold;
         color: var(--success);
         margin-bottom: 0.5rem;
+        text-align: center;
     }
 
     .metric-label {
         color: var(--gray);
         font-weight: 500;
-    }
-
-    /* Results Section */
-    .results-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin: 3rem 0;
-    }
-
-    .result-card {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        border-left: 4px solid var(--success);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .result-card h4 {
-        color: var(--charcoal);
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
-
-    .result-list {
-        list-style: none;
-    }
-
-    .result-list li {
-        margin-bottom: 0.5rem;
-        position: relative;
-        padding-left: 1.5rem;
-        color: var(--gray);
-    }
-
-    .result-list li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: var(--success);
-        font-weight: bold;
-    }
-
-    /* Image Showcase */
-    .showcase-section {
-        background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
-        color: white;
-        position: relative;
-        overflow: hidden;
     }
 
     .showcase-content {
@@ -556,86 +110,50 @@ p {
     .showcase-img:nth-child(3) { transform: translateY(5px); }
     .showcase-img:nth-child(4) { transform: translateY(25px); }
 
-    /* Split Content Section */
-    .split-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        min-height: 400px;
-        align-items: center;
-    }
-
-    .split-content {
-        padding: 3rem;
-    }
-
-    .split-image {
-        background: var(--light-gray);
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--gray);
-        font-size: 1rem;
-    }
-
-    @media (max-width: 768px) {
-        .section-header h2 {
-            font-size: 2rem;
-        }
-        
-        .problem-grid,
-        .process-grid,
-        .tech-grid,
-        .metrics-grid,
-        .results-grid {
-            grid-template-columns: 1fr;
-        }
-    }
 </style>
 <body>
     <!-- Header Component -->
     <div id="header"></div>
 
     <!-- Why DFMG Section -->
-    <section class="section">
+    <section class="section first">
         <div class="container">
-            <div class="section-header">
-                <div class="subtitle">VORES TILGANG</div>
-                <h2>Hvorfor Virksomheder Vælger DFMG</h2>
-                <p>Vi har bygget vores tilgang baseret på det, som virksomheder savner mest: pålidelighed, transparens og personlig service</p>
+            <div class="text-center">
+                <div class="title text-charcoal">Hvorfor Virksomheder Vælger DFMG</div>
+                <div class="body text-gray bot-space2">Vi har bygget vores tilgang baseret på det, som virksomheder savner mest: pålidelighed, transparens og personlig service</div>
             </div>
             
-            <div class="problem-grid">
-                <div class="problem-card" style="border-left-color: var(--success);">
-                    <h3>Konsistent Kvalitet Altid</h3>
+            <div class="flex">
+                <div class="card bg-gradient-white" style="border-left: 4px solid var(--success);">
+                    <h4>Konsistent Kvalitet Altid</h4>
                     <p>Vores systematiske tilgang sikrer, at I får samme høje standard uanset hvilken medarbejder der udfører servicen, og uanset hvor længe I har været kunde.</p>
-                    <ul class="problem-list">
-                        <li>✓ Standardiserede tjeklister for alle opgaver</li>
-                        <li>✓ Dokumenteret kvalitetskontrol</li>
-                        <li>✓ Samme opmærksomhed til alle kunder</li>
-                        <li>✓ Kontinuerlig medarbejderudvikling</li>
+                    <ul class="list">
+                        <li>Standardiserede tjeklister for alle opgaver</li>
+                        <li>Dokumenteret kvalitetskontrol</li>
+                        <li>Samme opmærksomhed til alle kunder</li>
+                        <li>Kontinuerlig medarbejderudvikling</li>
                     </ul>
                 </div>
 
-                <div class="problem-card" style="border-left-color: var(--primary);">
-                    <h3>Fuldstændig Transparens</h3>
+                <div class="card bg-gradient-white" style="border-left: 4px solid var(--primary);">
+                    <h4>Fuldstændig Transparens</h4>
                     <p>I får aldrig overraskelser eller uklarheder. Alt er dokumenteret, tilgængeligt og forklarligt - fra udført arbejde til prisfastsættelse.</p>
-                    <ul class="problem-list">
-                        <li>✓ Real-time dokumentation af alle opgaver</li>
-                        <li>✓ Billeder før og efter hver service</li>
-                        <li>✓ Øjeblikkelige svar på alle spørgsmål</li>
-                        <li>✓ Tidsdata backup for prisfastsættelse</li>
+                    <ul class="list">
+                        <li>Real-time dokumentation af alle opgaver</li>
+                        <li>Billeder før og efter hver service</li>
+                        <li>Øjeblikkelige svar på alle spørgsmål</li>
+                        <li>Tidsdata backup for prisfastsættelse</li>
                     </ul>
                 </div>
 
-                <div class="problem-card" style="border-left-color: var(--charcoal);">
-                    <h3>Personlig Service & Relationer</h3>
+                <div class="card bg-gradient-white" style="border-left: 4px solid var(--charcoal);">
+                    <h4>Personlig Service & Relationer</h4>
                     <p>Vi tror på menneskelig kontakt og langvarige partnerskaber. I er ikke bare et kontrakt nummer - I er en værdsatte partner.</p>
-                    <ul class="problem-list">
-                        <li>✓ Dedikeret kontaktperson (mig personligt)</li>
-                        <li>✓ Regelmæssige opfølgningsmøder</li>
-                        <li>✓ Fleksibilitet ved ændrede behov</li>
-                        <li>✓ Proaktiv kommunikation</li>
+                    <ul class="list">
+                        <li>Dedikeret kontaktperson (mig personligt)</li>
+                        <li>Regelmæssige opfølgningsmøder</li>
+                        <li>Fleksibilitet ved ændrede behov</li>
+                        <li>Proaktiv kommunikation</li>
                     </ul>
                 </div>
             </div>
@@ -643,7 +161,7 @@ p {
     </section>
 
     <!-- Visual Showcase -->
-    <section class="section showcase-section">
+    <section class="section bg-gradient-primary">
         <div class="container">
             <div class="showcase-content">
                 <div class="showcase-text">
@@ -663,18 +181,19 @@ p {
 
     <!-- Solution Process -->
     <section class="section bg-light">
-        <div class="container-wide">
-            <div class="section-header">
-                <h2>Vores Systematiske Tilgang</h2>
-                <p>Fra første kontakt til løbende drift - alt er planlagt, dokumenteret og optimeret</p>
+        <div class="container-width-wide">
+            <div class="text-center">
+            <div class="subtitle text-primary">VORES TILGANG</div>
+                <div class="title text-charcoal">Systematiske Arbejdsgange</div>
+                <div class="body text-gray bot-space2">Fra første kontakt til løbende drift - alt er planlagt, dokumenteret og optimeret</div>
             </div>
             
-            <div class="process-grid">
-                <div class="process-step">
+            <div class="flex">
+                <div class="card bg-gradient-white">
                     <div class="step-number">1</div>
-                    <h3>Grundig Analyse & Møde</h3>
+                    <h4>Grundig Analyse & Møde</h4>
                     <p>Vi starter altid med et fysisk møde på jeres lokation for at forstå behovene fuldt ud.</p>
-                    <ul class="step-features">
+                    <ul class="list">
                         <li>Besigtigelse af alle områder</li>
                         <li>Detaljeret serviceskema udarbejdes</li>
                         <li>Forventningsafstemning på alle punkter</li>
@@ -682,11 +201,11 @@ p {
                     </ul>
                 </div>
                 
-                <div class="process-step">
+                <div class="card bg-gradient-white">
                     <div class="step-number">2</div>
-                    <h3>Skræddersyet Implementering</h3>
+                    <h4>Skræddersyet Implementering</h4>
                     <p>Vi koordinerer overgang fra tidligere leverandør og etablerer jeres specifikke rutiner.</p>
-                    <ul class="step-features">
+                    <ul class="list">
                         <li>Leverandørskifte håndteres professionelt</li>
                         <li>Produkter og materialer leveres</li>
                         <li>Location guide oprettes med alle detaljer</li>
@@ -694,11 +213,11 @@ p {
                     </ul>
                 </div>
                 
-                <div class="process-step">
+                <div class="card bg-gradient-white">
                     <div class="step-number">3</div>
-                    <h3>Systematisk Udførelse</h3>
+                    <h4>Systematisk Udførelse</h4>
                     <p>Hver opgave udføres efter samme høje standard, uanset hvilken medarbejder der udfører den.</p>
-                    <ul class="step-features">
+                    <ul class="list">
                         <li>Detaljerede tjeklister for alle opgaver</li>
                         <li>Real-time dokumentation af udført arbejde</li>
                         <li>Billeddokumentation før/efter</li>
@@ -706,11 +225,11 @@ p {
                     </ul>
                 </div>
                 
-                <div class="process-step">
+                <div class="card bg-gradient-white">
                     <div class="step-number">4</div>
-                    <h3>Kontinuerlig Optimering</h3>
+                    <h4>Kontinuerlig Optimering</h4>
                     <p>Vi monitorerer performance og optimerer konstant for at levere bedst mulig service.</p>
-                    <ul class="step-features">
+                    <ul class="list">
                         <li>Månedlig kvalitetskontrol</li>
                         <li>KPI dashboard og dataanalyse</li>
                         <li>Kvartalsvis opfølgningsmøder</li>
@@ -722,16 +241,16 @@ p {
     </section>
 
     <!-- Technology Behind -->
-    <section class="section showcase-section">
+    <section class="section bg-gradient-primary">
         <div class="container">
-            <div class="split-section">
-                <div class="split-content">
+            <div class="flex flex-2">
+                <div class="p-2">
                     <h3>Teknologien Der Gør Os Bedre</h3>
                     <p>Vores specialbyggede ERP-system er designet til at gøre os mere effektive, så vi kan fokusere på det der virkelig betyder noget - jer og kvaliteten.</p>
                     <p>Systemet giver os øjeblikkelig adgang til al data, så når I ringer, får I svar med det samme i stedet for "jeg vender tilbage."</p>
                     <p>Det betyder også, at vi kan tilbyde fair priser baseret på faktiske data frem for gætværk.</p>
                 </div>
-                <div class="split-image">
+                <div class="" style="display: flex; align-items: center; justify-content: center;">
                     Dashboard view<br>ERP System Interface
                 </div>
             </div>
@@ -739,33 +258,38 @@ p {
     </section>
 
     <!-- Technology Features -->
-    <section class="section bg-light">
-        <div class="container">
+    <section class="section">
+        <div class="container-narrow">
             <div class="tech-showcase">
-                <div class="section-header">
-                    <h2>Konkrete Fordele For Jer</h2>
-                    <p>Her er hvordan vores systematiske tilgang påvirker jeres hverdag positivt</p>
+                <div class="text-center">
+                <div class="subtitle text-primary">FORDELE</div>
+                    <div class="title text-charcoal">Konkrete Fordele For Jer</div>
+                    <div class="body text-gray bot-space2">Her er hvordan vores systematiske tilgang påvirker jeres hverdag positivt</div>
                 </div>
                 
-                <div class="tech-grid">
-                    <div class="tech-feature">
-                        <h4><i class="fas fa-eye"></i> Fuldt Overblik</h4>
-                        <p>Når I ringer med spørgsmål, kan jeg øjeblikkeligt se hvad der er sket, hvornår, og af hvem. Ingen "jeg vender tilbage" - kun konkrete svar med det samme.</p>
+                <div class="flex flex-2">
+                    <div class="flex flex-2" style="flex-direction: column; gap: 20px;">
+                        <div class="card bg-gradient-white">
+                            <h4><i class="fas fa-eye"></i> Fuldt Overblik</h4>
+                            <p>Når I ringer med spørgsmål, kan jeg øjeblikkeligt se hvad der er sket, hvornår, og af hvem. Ingen "jeg vender tilbage" - kun konkrete svar med det samme.</p>
+                        </div>
+                        
+                       <div class="card bg-gradient-white">
+                            <h4><i class="fas fa-chart-line"></i> Data-Drevet Beslutninger</h4>
+                            <p>Vores KPI dashboard giver os præcise data på tidsforbrug, kvalitet og omkostninger. Det betyder bedre planlægning og fair priser baseret på faktiske tal.</p>
+                        </div>
                     </div>
                     
-                    <div class="tech-feature">
-                        <h4><i class="fas fa-chart-line"></i> Data-Drevet Beslutninger</h4>
-                        <p>Vores KPI dashboard giver os præcise data på tidsforbrug, kvalitet og omkostninger. Det betyder bedre planlægning og fair priser baseret på faktiske tal.</p>
-                    </div>
-                    
-                    <div class="tech-feature">
-                        <h4><i class="fas fa-shield-alt"></i> Kvalitetssikring</h4>
-                        <p>Medarbejdere dokumenterer deres eget arbejde med tjeklister og billeder. Standardiserede processer sikrer samme høje kvalitet, uanset hvem der udfører opgaven.</p>
-                    </div>
-                    
-                    <div class="tech-feature">
-                        <h4><i class="fas fa-comments"></i> Bedre Relationer</h4>
-                        <p>Systemet giver mig overskud til at fokusere på det vigtige - relationerne med jer og mine medarbejdere. Mindre administration = mere tid til personlig opmærksomhed.</p>
+                    <div class="flex flex-2" style="flex-direction: column; gap: 20px;">
+                        <div class="card bg-gradient-white">
+                            <h4><i class="fas fa-shield-alt"></i> Kvalitetssikring</h4>
+                            <p>Medarbejdere dokumenterer deres eget arbejde med tjeklister og billeder. Standardiserede processer sikrer samme høje kvalitet, uanset hvem der udfører opgaven.</p>
+                        </div>
+                        
+                        <div class="card bg-gradient-white">
+                            <h4><i class="fas fa-comments"></i> Bedre Relationer</h4>
+                            <p>Systemet giver mig overskud til at fokusere på det vigtige - relationerne med jer og mine medarbejdere. Mindre administration = mere tid til personlig opmærksomhed.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -773,39 +297,40 @@ p {
     </section>
 
     <!-- Results -->
-    <section class="section bg-light">
+    <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Resultatet: Pålidelighed I Kan Stole På</h2>
-                <p>Konkrete forbedringer som vores kunder oplever</p>
+            <div class="text-center">
+            <div class="subtitle text-primary">RESULTAT</div>
+                <div class="title text-charcoal">Resultatet: Pålidelighed I Kan Stole På</div>
+                <div class="body text-gray bot-space">Konkrete forbedringer som vores kunder oplever</div>
             </div>
             
-            <div class="metrics-grid">
-                <div class="metric-card">
+            <div class="flex bot-space2">
+                <div class="card bg-gradient-white">
                     <div class="metric-value">99.5%</div>
                     <div class="metric-label">Rettidig Udførelse</div>
                 </div>
                 
-                <div class="metric-card">
+                <div class="card bg-gradient-white">
                     <div class="metric-value">100%</div>
                     <div class="metric-label">Transparens i Udført Arbejde</div>
                 </div>
                 
-                <div class="metric-card">
+                <div class="card bg-gradient-white">
                     <div class="metric-value">3 mdr</div>
                     <div class="metric-label">Gennemsnitlig Opfølgning</div>
                 </div>
                 
-                <div class="metric-card">
+                <div class="card bg-gradient-white">
                     <div class="metric-value">0</div>
                     <div class="metric-label">Minutter Ventetid på Svar</div>
                 </div>
             </div>
             
-            <div class="results-grid">
-                <div class="result-card">
+            <div class="flex">
+                <div class="card">
                     <h4>For Jeres Administration</h4>
-                    <ul class="result-list">
+                    <ul class="list">
                         <li>Øjeblikkelige svar på alle spørgsmål</li>
                         <li>Detaljerede rapporter med data backup</li>
                         <li>Proaktiv kommunikation ved ændringer</li>
@@ -813,9 +338,9 @@ p {
                     </ul>
                 </div>
                 
-                <div class="result-card">
+                <div class="card bg-gradient-white">
                     <h4>For Jeres Medarbejdere</h4>
-                    <ul class="result-list">
+                    <ul class="list">
                         <li>Konsistent høj standard hver gang</li>
                         <li>Ingen overraskelser eller manglende service</li>
                         <li>Personlig kontakt og relationer</li>
@@ -823,9 +348,9 @@ p {
                     </ul>
                 </div>
                 
-                <div class="result-card">
+                <div class="card bg-gradient-white">
                     <h4>For Jeres Bundlinje</h4>
-                    <ul class="result-list">
+                    <ul class="list">
                         <li>Fair priser baseret på faktisk tidsforbrug</li>
                         <li>Ingen skjulte omkostninger eller overraskelser</li>
                         <li>Stabile serviceniveauer over tid</li>
