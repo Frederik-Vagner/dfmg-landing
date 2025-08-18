@@ -23,409 +23,557 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
     <style>
-        /* Minimal CSS - Core Variables */
-        :root {
-            --color-primary: #4285f4;
-            --color-success: #22c55e;
-            --color-charcoal: #344767;
-            --color-dark-gray: #64748b;
-            --color-light-gray: #f8fafc;
-            --color-white: #ffffff;
-        }
+:root {
+    /* Brand Colors */
+    --primary: #4285f4;
+    --success: #22c55e;
+    --charcoal: #344767;
+    --gray: #565656;
+    --white: #ffffff;
+    
+    /* Text Colors (using same colors for consistency) */
+    --text-primary: var(--charcoal);
+    --text-secondary: var(--gray);
+    --text-accent: var(--primary);
+    --text-success: var(--success);
+    --text-white: var(--white);
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* Background Gradients */
+    --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
+    --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
+    --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
 
-        body {
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            padding-top: 100px;
-        }
+    /* Typography */
+    --font-size-h1: 3rem;
+    --font-size-h1-mobile: 2rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h2-mobile: 1.8rem;
+    --font-size-subtitle: 0.9rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.75rem;
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+    --font-size-xs: 0.8rem;
+    --font-size-md: 1.1rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 1.4rem;
 
-        .section-auto {
-            padding: 4rem 0;
-        }
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+    /* Layout & Spacing */
+    --container-width: 1200px;
+    --container-padding: 0 20px;
+    --section-padding: 4rem 0;
 
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
+    /* Border Radius */
+    --radius-small: 8px;
+    --radius-medium: 12px;
+    --radius-large: 16px;
+    --radius-xl: 20px;
+    --radius-full: 50px;
 
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--color-dark-gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
+    --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
 
-        /* Timeline - Essential Styles Only */
-        .story-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    /* Borders */
+    --border-light: 1px solid #e2e8f0;
+    --border-lighter: 1px solid #f1f5f9;
 
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--color-primary), var(--color-success));
-            transform: translateX(-50%);
-        }
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
 
-        .timeline-item {
-            display: flex;
-            margin-bottom: 3rem;
-            position: relative;
-        }
+    /* Button System */
+    --btn-padding-sm: 8px 16px;
+    --btn-padding-md: 12px 24px;
+    --btn-padding-lg: 15px 30px;
+    --btn-font-weight: var(--font-weight-semibold);
 
-        .timeline-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+    /* Background Overlays */
+    --bg-overlay-light: rgba(255, 255, 255, 0.2);
+    }
 
-        .timeline-content {
-            flex: 1;
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin: 0 2rem;
-            position: relative;
-        }
+/* Universal Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-        .timeline-year {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--color-primary);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.9rem;
-            border: 4px solid white;
-        }
+.bg-white { background: var(--white); }
+.bg-light { background: var(--bg-gradient-white); }
 
-        .timeline-content h3 {
-            color: var(--color-charcoal);
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
 
-        .achievement-badge {
-            display: inline-block;
-            background: var(--color-success);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
 
-        /* Process Steps - Minimal Grid */
-        .work-process {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
+/* UNIFIED UTILITY CLASSES */
+/* Layout Classes */
+.flex-col { display: flex; flex-direction: column; }
+.flex-row { display: flex; flex-direction: row; }
+.gap-sm { gap: 15px; }
+.gap-md { gap: 20px; }
+.gap-lg { gap: 30px; }
+.gap-xl { gap: 4rem; }
 
-        .process-step {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            border: 2px solid #f1f5f9;
-            position: relative;
-        }
+/* Text Classes */
+.text-lg { font-size: 1.2rem; }
+.text-base { font-size: var(--font-size-body); }
+.text-sm { font-size: var(--font-size-small); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.text-center { text-align: center; }
 
-        .process-step::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-success));
-        }
+.text-xs { font-size: var(--font-size-xs); }
+.text-md { font-size: var(--font-size-md); }
+.text-xl { font-size: var(--font-size-xl); }
+.mb-sm { margin-bottom: 0.5rem; }
+.mb-md { margin-bottom: 1rem; }
 
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--color-primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 0 auto 1rem;
-        }
+/* Spacing Classes */
+.mb-lg { margin-bottom: 4rem; }
 
-        .process-step h3 {
-            color: var(--color-charcoal);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
+/* Button System */
+.btn {
+    padding: var(--btn-padding-lg);
+    border-radius: var(--radius-small);
+    font-weight: var(--btn-font-weight);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-align: center;
+}
 
-        /* Quality Grid */
-        .quality-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+.btn-sm { padding: var(--btn-padding-sm); }
+.btn-md { padding: var(--btn-padding-md); }
 
-        .quality-card {
-            background: var(--color-light-gray);
-            border-radius: 16px;
-            padding: 2rem;
-            border-left: 4px solid var(--color-primary);
-        }
+.btn-primary { 
+    background: var(--success); 
+    color: var(--text-white); 
+}
+.btn-primary:hover { background: #16a34a; }
 
-        .quality-card h3 {
-            color: var(--color-charcoal);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+.btn-secondary { 
+    background: var(--text-white); 
+    color: var(--text-primary); 
+    border: 2px solid var(--text-primary); 
+}
+.btn-secondary:hover {
+    background: var(--text-primary);
+    color: var(--text-white);
+}
 
-        .quality-features {
-            list-style: none;
-        }
+/* Position Classes */
+.relative { position: relative; }
+.absolute { position: absolute; }
 
-        .quality-features li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
+/* Display & Overflow */
+.block { display: block; }
+.inline-block { display: inline-block; }
+.hidden { display: none; }
+.overflow-hidden { overflow: hidden; }
 
-        .quality-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--color-success);
-            font-weight: bold;
-        }
+/* Width & Height */
+.w-full { width: 100%; }
+.h-auto { height: auto; }
+.max-w-none { max-width: none; }
 
-        /* Cases Grid */
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+/* Additional Text Sizes */
+.text-2xl { font-size: 1.6rem; }
+.text-3xl { font-size: 2rem; }
 
-        .case-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+/* Margin & Padding Utilities */
+.m-0 { margin: 0; }
+.p-0 { padding: 0; }
+.p-6 { padding: 1.5rem; }
+.mt-auto { margin-top: auto; }
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
 
-        .case-header {
-            background: linear-gradient(135deg, var(--color-primary), #1d4ed8);
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
+/* Border */
+.border { border: var(--border-light); }
+.border-l-4 { border-left: 4px solid var(--primary); }
+.border-success { border-color: var(--success); }
 
-        .case-logo {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.2rem;
-        }
+.card {
+    background: var(--white);
+    border-radius: var(--radius-large);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+}
 
-        .case-company {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+.card-lg { padding: 2rem; }
+.card-center { text-align: center; }
 
-        .case-content {
-            padding: 1.5rem;
-        }
+.grid-auto { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin-bottom: 3rem;
+}
 
-        .case-challenge h4 {
-            color: var(--color-charcoal);
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
+/* Background Utilities */
+.bg-gradient-primary { background: var(--bg-gradient-primary); }
+.bg-overlay-light { background: var(--bg-overlay-light); }
 
-        .case-challenge {
-            margin-bottom: 1rem;
-        }
+/* Text Color Utilities */
+.text-white { color: var(--text-white); }
+.text-primary { color: var(--text-primary); }
 
-        .case-results {
-            border-radius: 8px;
-            padding: 1rem;
-            margin-top: 1rem;
-        }
+/* Flexbox Utilities */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
 
-        .case-results h5 {
-            color: var(--color-success);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+/* Sizing Utilities */
+.w-15 { width: 60px; }
+.h-15 { height: 60px; }
 
-        .result-metrics {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
+/* Spacing Utilities */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-4 { margin-bottom: 1rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.top-4 { top: 1rem; }
+.right-4 { right: 1rem; }
 
-        .metric {
-            text-align: center;
-        }
+/* Border Radius Utilities */
+.rounded-full { border-radius: 50%; }
+.rounded-lg { border-radius: var(--radius-medium); }
 
-        .metric-value {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--color-success);
-        }
+/* CORE BASE STYLES */
+body { 
+    margin: 0; 
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+    padding-top: 100px; 
+    line-height: 1.6;
+}
 
-        .metric-label {
-            font-size: 0.8rem;
-            color: var(--color-dark-gray);
-        }
+.container { 
+    max-width: var(--container-width); 
+    margin: 0 auto; 
+    padding: var(--container-padding); 
+}
 
-        /* News Grid */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+.section { 
+    padding: var(--section-padding); 
+}
 
-        .news-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #f1f5f9;
-        }
+/* Typography */
+h1 { 
+    font-size: var(--font-size-h1); 
+    font-weight: var(--font-weight-light); 
+    margin-bottom: 1rem; 
+    color: var(--text-primary);
+}
 
-        .news-image {
-            height: 160px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-success));
-            position: relative;
-        }
+h2 { 
+    font-size: var(--font-size-h2); 
+    font-weight: var(--font-weight-semibold); 
+    margin-bottom: 1rem; 
+    color: var(--text-primary);
+}
 
-        .news-date {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.9);
-            color: var(--color-charcoal);
-            padding: 0.3rem 0.8rem;
-            border-radius: 16px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
+h3 { 
+    font-size: 1.5rem; 
+    font-weight: var(--font-weight-semibold); 
+    margin-bottom: 1rem; 
+    color: var(--text-primary);
+}
 
-        .news-content {
-            padding: 1.5rem;
-        }
+p { 
+    color: var(--text-secondary); 
+    margin-bottom: 1rem; 
+}
 
-        .news-category {
-            color: var(--color-primary);
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 { font-size: var(--font-size-h1-mobile); }
+    h2 { font-size: var(--font-size-h2-mobile); }
+}
 
-        .news-title {
-            color: var(--color-charcoal);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
-        .news-excerpt {
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-        .read-more {
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-        }
+/* Timeline - Essential Styles Only */
+.story-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .timeline-line {
-                left: 2rem;
-            }
-            
-            .timeline-year {
-                left: 2rem;
-                width: 50px;
-                height: 50px;
-                font-size: 0.8rem;
-            }
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--success));
+    transform: translateX(-50%);
+}
 
-            .timeline-item {
-                flex-direction: column !important;
-            }
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
 
-            .timeline-content {
-                margin: 0 0 0 4rem;
-            }
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
-            .section-header h2 {
-                font-size: 2rem;
-            }
+.timeline-content {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-lg);
+    margin: 0 2rem;
+    position: relative;
+}
 
-            .work-process {
-                grid-template-columns: 1fr;
-            }
-        }
+.timeline-year {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 4px solid white;
+}
+
+.timeline-content h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.achievement-badge {
+    display: inline-block;
+    background: var(--success);
+    color: white;
+    padding: 4px 12px;
+    border-radius: var(--radius-medium);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--bg-gradient-primary);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.process-step h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.quality-card h3 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quality-features {
+    list-style: none;
+}
+
+.quality-features li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.quality-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.case-card {
+    background: white;
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.case-company {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.case-content {
+    padding: 1.5rem;
+}
+
+.case-challenge h4 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.case-challenge {
+    margin-bottom: 1rem;
+}
+
+.case-results {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.case-results h5 {
+    color: var(--success);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.result-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--success);
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.news-image {
+    height: 160px;
+    background: linear-gradient(135deg, var(--primary), var(--success));
+    position: relative;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-category {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.news-title {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.news-excerpt {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 2rem;
+    }
+    
+    .timeline-year {
+        left: 2rem;
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+    }
+
+    .timeline-content {
+        margin: 0 0 0 4rem;
+    }
+
+    .grid-auto {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
     <!-- Our Story Section -->
-    <section class="section-auto" id="story">
+    <section class="section" id="story">
         <div class="container">
             <div class="section-header">
                 <h2>Vores Historie</h2>
@@ -499,41 +647,41 @@
     </section>
 
     <!-- How We Work Section -->
-    <section class="section-auto bg-white" id="work">
+    <section class="section bg-white" id="work">
         <div class="container">
             <div class="section-header">
                 <h2>Hvordan Vi Arbejder</h2>
                 <p>Vores succesformel bygger på systematisk tilgang, høje standarder og konstant fokus på forbedring</p>
             </div>
             
-            <div class="work-process">
-                <div class="process-step">
+            <div class="grid-auto">
+                <div class="card card-center relative border">
                     <div class="step-number">1</div>
                     <h3>Analyse & Forståelse</h3>
                     <p>Vi starter altid med en grundig analyse af kundens behov, udfordringer og målsætninger for at skabe den perfekte løsning.</p>
                 </div>
                 
-                <div class="process-step">
+                <div class="card card-center relative border">
                     <div class="step-number">2</div>
                     <h3>Skræddersyet Plan</h3>
                     <p>Baseret på analysen udvikler vi en detaljeret serviceplan der er tilpasset specifikke krav og forventninger.</p>
                 </div>
                 
-                <div class="process-step">
+                <div class="card card-center relative border">
                     <div class="step-number">3</div>
                     <h3>Professionel Udførelse</h3>
                     <p>Vores erfarne teams udfører alle opgaver med højeste kvalitet, sikkerhed og opmærksomhed på detaljer.</p>
                 </div>
                 
-                <div class="process-step">
+                <div class="card card-center relative border">
                     <div class="step-number">4</div>
                     <h3>Kontinuerlig Optimering</h3>
                     <p>Vi monitorerer løbende performance, indsamler feedback og optimerer vores services for bedst mulige resultater.</p>
                 </div>
             </div>
             
-            <div class="quality-grid">
-                <div class="quality-card">
+            <div class="grid-auto">
+                <div class="card card-lg border-l-4">
                     <h3>
                         <i class="fas fa-shield-alt"></i>
                         Kvalitetssikring
@@ -548,7 +696,7 @@
                     </ul>
                 </div>
                 
-                <div class="quality-card">
+                <div class="card card-lg border-l-4">
                     <h3>
                         <i class="fas fa-handshake"></i>
                         Kundeforhold
@@ -567,17 +715,17 @@
     </section>
 
     <!-- Customer Cases Section -->
-    <section class="section-auto" id="cases">
+    <section class="section bg-light" id="cases">
         <div class="container">
             <div class="section-header">
                 <h2>Kundecases</h2>
                 <p>Virkelige historier fra vores samarbejder - se hvordan vi har hjulpet virksomheder med at opnå deres mål</p>
             </div>
             
-            <div class="cases-grid">
+            <div class="grid-auto">
                 <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-logo">
+                    <div class="bg-gradient-primary text-white text-center p-6">
+                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
                             <i class="fas fa-building"></i>
                         </div>
                         <div class="case-company">Adnami</div>
@@ -609,8 +757,8 @@
                 </div>
 
                 <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-logo">
+                    <div class="bg-gradient-primary text-white text-center" >
+                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
                             <i class="fas fa-home"></i>
                         </div>
                         <div class="case-company">Nybolig</div>
@@ -642,8 +790,8 @@
                 </div>
 
                 <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-logo">
+                    <div class="bg-gradient-primary text-white text-center" >
+                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
                             <i class="fas fa-city"></i>
                         </div>
                         <div class="case-company">SOHO</div>
@@ -675,8 +823,8 @@
                 </div>
 
                 <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-logo">
+                    <div class="bg-gradient-primary text-white text-center" >
+                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="case-company">DEAS</div>
@@ -711,50 +859,50 @@
     </section>
 
     <!-- News Section -->
-    <section class="section-auto bg-white" id="news">
+    <section class="section bg-white" id="news">
         <div class="container">
             <div class="section-header">
-                <h2>Seneste Nyheder</h2>
+                <h2>Seneste Artikler</h2>
                 <p>Hold dig opdateret med de seneste udviklinger, initiativer og milepæle hos DFMG</p>
             </div>
             
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-image">
-                        <div class="news-date">15 Jan 2024</div>
+            <div class="grid-auto">
+                <div class="card overflow-hidden p-0">                    
+                <div class="news-image">
+                        <div class="absolute top-4 right-4 bg-overlay-light text-primary px-3 py-1 rounded-lg text-xs font-semibold">12. dec 2024</div>
                     </div>
                     <div class="news-content">
-                        <div class="news-category">Bæredygtighed</div>
-                        <h3 class="news-title">DFMG Når 100% CO2-Neutral Drift</h3>
-                        <p class="news-excerpt">Vi er stolte over at kunne annoncere, at DFMG nu har opnået fuldstændig CO2-neutral drift gennem vores bilfri transport og grønne initiativer...</p>
+                        <div class="news-category">TIPS & TRICKS</div>
+                        <h3 class="news-title">Location Guides: Hemmeligheden Bag Konsistent Kvalitet</h3>
+                        <p class="news-excerpt">Lær hvordan detaljeret dokumentation og kunde-specifikke instrukser eliminerer gætværk og sikrer perfekt service hver gang.</p>
                         <a href="#" class="read-more">
                             Læs mere <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="news-card">
-                    <div class="news-image">
-                        <div class="news-date">1 Dec 2023</div>
+                <div class="card overflow-hidden p-0">                    
+                <div class="news-image">
+                        <div class="absolute top-4 right-4 bg-overlay-light text-primary px-3 py-1 rounded-lg text-xs font-semibold">10. dec 2024</div>
                     </div>
                     <div class="news-content">
-                        <div class="news-category">Community</div>
-                        <h3 class="news-title">DFMG Støtter Lokal Uddannelsesinitiativ</h3>
-                        <p class="news-excerpt">Som del af vores sociale ansvar støtter DFMG nu lokale uddannelsesprogrammer for unge inden for facility management og bæredygtighed...</p>
+                        <div class="news-category">INNOVATION</div>
+                        <h3 class="news-title">Mennesker vs. Robotter i Facility Management</h3>
+                        <p class="news-excerpt">Hvorfor den menneskelige faktor aldrig bliver erstattet af teknologi, og hvordan vi positionerer os til fremtidens udfordringer.</p>
                         <a href="#" class="read-more">
                             Læs mere <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="news-card">
-                    <div class="news-image">
-                        <div class="news-date">20 Nov 2023</div>
+                <div class="card overflow-hidden p-0">                    
+                <div class="news-image">
+                        <div class="absolute top-4 right-4 bg-overlay-light text-primary px-3 py-1 rounded-lg text-xs font-semibold">10. dec 2024</div>
                     </div>
                     <div class="news-content">
-                        <div class="news-category">Growth</div>
-                        <h3 class="news-title">200+ Tilfredse Kunder Milepæl</h3>
-                        <p class="news-excerpt">DFMG fejrer en vigtig milepæl med over 200 aktive, tilfredse kunder på tværs af København og omegn. Tak for tilliden...</p>
+                        <div class="news-category">BÆREDYGTIGHED</div>
+                        <h3 class="news-title">Cirkulær Økonomi i Rengøringsbranchen</h3>
+                        <p class="news-excerpt">Hvordan facility service virksomheder kan implementere cirkulære principper og skabe værdi gennem bæredygtige praksisser.</p>
                         <a href="#" class="read-more">
                             Læs mere <i class="fas fa-arrow-right"></i>
                         </a>

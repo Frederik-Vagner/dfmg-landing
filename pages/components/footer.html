@@ -1,30 +1,105 @@
 <style>
+:root {
+        /* Brand Colors */
+        --primary: #4285f4;
+        --success: #22c55e;
+        --charcoal: #344767;
+        --gray: #565656;
+        --white: #ffffff;
+        
+        /* Text Colors (using same colors for consistency) */
+        --text-primary: var(--charcoal);
+        --text-secondary: var(--gray);
+        --text-accent: var(--primary);
+        --text-success: var(--success);
+        --text-white: var(--white);
+        
+        /* Background Gradients */
+        --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
+        --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
+        --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+        --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
+
+        /* Typography */
+        --font-size-h1: 3rem;
+        --font-size-h1-mobile: 2rem;
+        --font-size-h2: 2.5rem;
+        --font-size-h2-mobile: 1.8rem;
+        --font-size-subtitle: 0.9rem;
+        --font-size-body: 1rem;
+        --font-size-small: 0.75rem;
+
+        --font-weight-light: 300;
+        --font-weight-normal: 400;
+        --font-weight-medium: 500;
+        --font-weight-semibold: 600;
+
+        /* Layout & Spacing */
+        --container-width: 1200px;
+        --container-padding: 0 20px;
+        --section-padding: 4rem 0;
+
+        /* Border Radius */
+        --radius-small: 8px;
+        --radius-medium: 12px;
+        --radius-large: 16px;
+        --radius-xl: 20px;
+        --radius-full: 50px;
+
+        /* Shadows */
+        --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+        --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
+        --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+        --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
+        --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
+
+        /* Borders */
+        --border-light: 1px solid #e2e8f0;
+        --border-lighter: 1px solid #f1f5f9;
+
+        /* Transitions */
+        --transition-fast: 0.15s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.5s ease;
+    }
+
+    .flex-col { display: flex; flex-direction: column; }
+.flex-row { display: flex; flex-direction: row; }
+.gap-sm { gap: 15px; }
+.gap-md { gap: 20px; }
+.gap-lg { gap: 30px; }
+.flex-wrap { flex-wrap: wrap; }
+.justify-center { justify-content: center; }
+.border-top { border-top: var(--border-light); }
+
 /* Footer - Mobile-First Performance CSS */
 .footer {
-    background: #1a1f36;
-    color: white;
-    padding: 40px 0 20px;
+    background: var(--bg-gradient-charcoal);
+    color: var(--text-white);
+    padding: calc(var(--section-padding) * 0.6) 0 calc(var(--section-padding) * 0.3);
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
-.footer-main {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding-bottom: 20px;
+.link-footer {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition-fast);
 }
+
+.link-footer:hover { color: var(--text-secondary); }
+
 
 .footer-bottom {
-    border-top: 1px solid #334155;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -33,113 +108,79 @@
 }
 
 .footer-description {
-    color: #94a3b8;
+    color: var(--text-white);
     line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    text-align: center;
-}
-
-.footer-links-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.footer-links a:hover {
-    color: #94a3b8;
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    font-size: var(--font-size-subtitle);
 }
 
 .footer-contact a {
-    color: #94a3b8;
+    color: var(--text-white);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: var(--transition-fast);
 }
 
 .footer-contact a:hover {
-    color: white;
+    color: var(--text-white);
 }
 
 .footer-contact i {
     width: 16px;
     text-align: center;
-    color: #94a3b8;
+    color: var(--text-white);
     font-size: 14px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
 }
 
 .social-icon {
     width: 40px;
     height: 40px;
-    background: #334155;
-    border-radius: 8px;
+    background: var(--gray);
+    border-radius: var(--radius-small);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #94a3b8;
+    color: var(--text-white);
     text-decoration: none;
     font-size: 16px;
+    transition: var(--transition-fast);
+    margin-top: 10px;
 }
 
 .social-icon:hover {
-    background: #4285f4;
-    color: white;
+    background: var(--primary);
+    color: var(--text-white) ;
 }
 
 .footer-bottom a {
-    color: #94a3b8;
+    color: var(--text-white);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: var(--font-size-subtitle);
     margin-right: 20px;
 }
 
 .footer-bottom a:hover {
-    color: white;
+    color: var(--text-white) ;
 }
 
 .copyright {
-    color: #64748b;
-    font-size: 0.9rem;
+    color: var(--text-white);
+    font-size: var(--font-size-subtitle);
 }
 
 .footer-logo {
     width: 60px;
     height: 60px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     margin-left: auto;
     background-color: white;
+    margin-top: 15px;
 }
 
 .footer-logo img {
@@ -153,6 +194,7 @@
     .footer-main {
         flex-direction: row;
         align-items: flex-start;
+        padding-bottom: 10px;
     }
     
     .footer-bottom {
@@ -180,7 +222,7 @@
 </style>
 <footer class="footer">
     <div class="footer-container">
-        <div class="footer-main">
+        <div class="footer-main flex-col gap-lg">
             <div class="footer-section">
                 <p class="footer-description">
                     Grundlagt i 2023 kombinerer vi etableret faglig ekspertise med teknologidrevet effektivisering.
@@ -192,26 +234,26 @@
             
             <div class="footer-section">
                 <div class="footer-links">
-                    <div class="footer-links-row">
-                        <a href="/pages/indblik/jobs.html">Karriere</a>
-                        <a href="/pages/services/services.html">Services</a>
-                        <a href="{% url 'landing:public_indblik' %}">Historie</a>
+                    <div class="flex-row gap-md flex-wrap justify-center">
+                        <a href="/pages/indblik/jobs.html" class="link-footer">Karriere</a>
+                        <a href="/pages/services/services.html" class="link-footer">Services</a>
+                        <a href="{% url 'landing:public_indblik' %}" class="link-footer">Historie</a>
                     </div>
-                    <div class="footer-links-row">
-                        <a href="/pages/sustainability/sustainability.html">Vores Arbejde</a>
-                        <a href="/pages/sustainability/sustainability.html">Vores Aftryk</a>
+                    <div class="flex-row gap-md flex-wrap justify-center" style="padding: 20px 0;">
+                        <a href="/pages/sustainability/sustainability.html" class="link-footer">Vores Arbejde</a>
+                        <a href="/pages/sustainability/sustainability.html" class="link-footer">Vores Aftryk</a>
                     </div>
-                    <div class="footer-links-row">
-                        <a href="{% url 'landing:public_teknologi' %}">Teknologi</a>
-                        <a href="/pages/sustainability/sustainability.html">Bæredygtighed</a>
-                        <a href="/pages/kontakt.html">Kontakt</a>
+                    <div class="flex-row gap-md flex-wrap justify-center">
+                        <a href="{% url 'landing:public_teknologi' %}" class="link-footer">Teknologi</a>
+                        <a href="/pages/sustainability/sustainability.html" class="link-footer">Bæredygtighed</a>
+                        <a href="/pages/kontakt.html" class="link-footer">Kontakt</a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-section">
-                <div style="display: flex;">
-                    <div class="footer-contact">
+                <div class="flex-row">
+                    <div class="footer-contact flex-col gap-sm">
                         <a href="tel:+4550480273">
                             <i class="fas fa-phone"></i>
                             50480273
@@ -232,7 +274,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="social-icons">
+                <div class="flex-row gap-md">
                     <a href="https://www.linkedin.com/company/dfmg-aps/" class="social-icon" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
@@ -243,7 +285,7 @@
             </div>
         </div>
         
-        <div class="footer-bottom">
+        <div class="footer-bottom flex-col gap-md border-top">
             <div class="footer-section">
                 <a href="#">Privatlivspolitik</a>
                 <a href="#">Cookie Politik</a>

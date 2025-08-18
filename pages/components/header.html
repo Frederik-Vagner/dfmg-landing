@@ -1,4 +1,67 @@
 <style>
+:root {
+/* Brand Colors */
+--primary: #4285f4;
+--success: #22c55e;
+--charcoal: #344767;
+--gray: #565656;
+--white: #ffffff;
+
+/* Text Colors (using same colors for consistency) */
+--text-primary: var(--charcoal);
+--text-secondary: var(--gray);
+--text-accent: var(--primary);
+--text-success: var(--success);
+--text-white: var(--white);
+
+/* Background Gradients */
+--bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
+--bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
+--bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+--bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
+
+/* Typography */
+--font-size-h1: 3rem;
+--font-size-h1-mobile: 2rem;
+--font-size-h2: 2.5rem;
+--font-size-h2-mobile: 1.8rem;
+--font-size-subtitle: 0.9rem;
+--font-size-body: 1rem;
+--font-size-small: 0.75rem;
+
+--font-weight-light: 300;
+--font-weight-normal: 400;
+--font-weight-medium: 500;
+--font-weight-semibold: 600;
+
+/* Layout & Spacing */
+--container-width: 1200px;
+--container-padding: 0 20px;
+--section-padding: 4rem 0;
+
+/* Border Radius */
+--radius-small: 8px;
+--radius-medium: 12px;
+--radius-large: 16px;
+--radius-xl: 20px;
+--radius-full: 50px;
+
+/* Shadows */
+--shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+--shadow-md: 0 2px 10px rgba(0,0,0,0.1);
+--shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+--shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
+--shadow-text: 0 2px 4px rgba(0,0,0,0.7);
+
+/* Borders */
+--border-light: 1px solid #e2e8f0;
+--border-lighter: 1px solid #f1f5f9;
+
+/* Transitions */
+--transition-fast: 0.15s ease;
+--transition-normal: 0.3s ease;
+--transition-slow: 0.5s ease;
+}
 /* Header - Mobile-First Performance CSS */
 .header {
     position: fixed;
@@ -7,12 +70,12 @@
     transform: translateX(-50%);
     width: calc(100% - 40px);
     max-width: 960px;
-    border-radius: 20px;
+    border-radius: var(--radius-xl);
     z-index: 100;
     margin: 0;
     padding: 0;
-    background: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
 }
 
 .dropdown {
@@ -20,7 +83,7 @@
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
     padding: 5px 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -28,8 +91,8 @@
     visibility: hidden;
     z-index: 99;
     width: 960px;
-    background: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
 }
 
 .dropdown::before {
@@ -73,7 +136,7 @@
 
 .nav:hover ~ * .header,
 .header:has(.nav:hover) {
-    border-radius: 20px 20px 0 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 }
 
 .header * {
@@ -82,12 +145,9 @@
 }
 
 .header-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
+    padding: 15px;
 }
 
 /* Contact Info */
@@ -98,7 +158,7 @@
     display: none;
     align-items: center;
     font-size: 1rem;
-    color: #585858;
+    color: var(--text-secondary);
     min-width: 150px;
 }
 
@@ -110,7 +170,7 @@
     opacity: 0;
     transform: translateY(22px);
     font-weight: 400;
-    color: #344767;
+    color: var(--text-primary);
     line-height: 1;
 }
 
@@ -133,20 +193,20 @@
 .nav {
     position: relative;
     display: none;
-    gap: 30px;
     align-items: center;
     margin: 0 40px;
 }
 
 .nav a {
     text-decoration: none;
-    color: #565656;
+    color: var(--text-secondary);
     font-weight: 400;
+    transition: var(--transition-fast);
 }
 
 .nav a:hover,
 .nav-item:hover > a{ 
-    color: #344767; 
+    color: var(--text-primary); 
 }
 
 .nav-item { 
@@ -164,39 +224,37 @@
 
 .dropdown a {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: var(--radius-small);
     text-decoration: none;
-    color: #565656;
+    color: var(--text-secondary);
 }
 
 .dropdown a:hover {
-    color: #344767;
+    color: var(--text-primary);
 }
 
 .dropdown a:hover strong,
 .dropdown a:hover small {
-    color: #344767;
+    color: var(--text-primary);
 }
 
 .dropdown strong { 
     display: block; 
     margin-bottom: 5px;
-    color: #565656;
+    color: var(--text-secondary);
 }
 
 .dropdown small { 
-    color: #565656; 
+    color: var(--text-secondary); 
     font-size: 0.85em; 
 }
 
 /* Logo */
 .logo {
-    display: flex;
     align-items: center;
-    gap: 4px;
     text-decoration: none;
-    color: #565656;
-    font-weight: 500;
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
     font-size: 1.2rem;
 }
 
@@ -211,7 +269,7 @@
     font-size: 1.5rem;
     cursor: pointer;
     align-self: flex-end;
-    color: #565656;
+    color: var(--text-secondary);
 }
 
 
@@ -224,7 +282,7 @@
 /* Desktop Responsive Styles - Layout Only */
 @media (min-width: 768px) {
     .header-container {
-        flex-direction: row;
+        flex-direction: row !important;
         justify-content: space-between;
         align-items: center;
         padding: 15px 30px;
@@ -245,15 +303,15 @@
 }
 </style>
 <header class="header">
-    <div class="header-container">
+    <div class="header-container flex-col gap-sm">
         <!-- Logo -->
-        <a href="/" class="logo">
+        <a href="/" class="logo flex-row gap-sm">
             <img src="/images/logos/logo.png" alt="DFMG" width="30" height="30">
             <span>DFMG</span>
         </a>
         
         <!-- Desktop Navigation with dropdowns -->
-        <nav class="nav">
+        <nav class="nav flex-row gap-lg">
             <div class="nav-item">
                 <a href="/pages/services/services.html">Services</a>
                 <div class="dropdown">
