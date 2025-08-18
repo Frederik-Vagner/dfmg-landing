@@ -1,71 +1,4 @@
 <style>
-:root {
-        /* Brand Colors */
-        --primary: #4285f4;
-        --success: #22c55e;
-        --charcoal: #344767;
-        --gray: #565656;
-        --light-gray: #64748b;
-        --white: #ffffff;
-        --red: #ef4444;
-        --bg-light-gray: #f8fafc;
-        
-        /* Text Colors (using same colors for consistency) */
-        --text-primary: var(--charcoal);
-        --text-secondary: var(--gray);
-        --text-accent: var(--primary);
-        --text-success: var(--success);
-        --text-white: var(--white);
-        
-        /* Background Gradients */
-        --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
-        --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
-        --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
-        --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
-
-        /* Typography */
-        --font-size-h1: 3rem;
-        --font-size-h1-mobile: 2rem;
-        --font-size-h2: 2.5rem;
-        --font-size-h2-mobile: 1.8rem;
-        --font-size-subtitle: 0.9rem;
-        --font-size-body: 1rem;
-        --font-size-small: 0.75rem;
-
-        --font-weight-light: 300;
-        --font-weight-normal: 400;
-        --font-weight-medium: 500;
-        --font-weight-semibold: 600;
-
-        /* Layout & Spacing */
-        --container-width: 1200px;
-        --container-padding: 0 20px;
-        --section-padding: 4rem 0;
-
-        /* Border Radius */
-        --radius-small: 8px;
-        --radius-medium: 12px;
-        --radius-large: 16px;
-        --radius-xl: 20px;
-        --radius-full: 50px;
-
-        /* Shadows */
-        --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-        --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
-        --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
-        --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
-        --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
-
-        /* Borders */
-        --border-light: 1px solid #e2e8f0;
-        --border-lighter: 1px solid #f1f5f9;
-
-        /* Transitions */
-        --transition-fast: 0.15s ease;
-        --transition-normal: 0.3s ease;
-        --transition-slow: 0.5s ease;
-    }
-
     .flex-col { display: flex; flex-direction: column; }
 .flex-row { display: flex; flex-direction: row; }
 .gap-sm { gap: 15px; }
@@ -78,7 +11,7 @@
 /* Footer - Mobile-First Performance CSS */
 .footer {
     background: var(--bg-gradient-charcoal);
-    color: var(--text-white);
+    color: var(--white);
     padding: calc(var(--section-padding) * 0.6) 0 calc(var(--section-padding) * 0.3);
 }
 
@@ -89,7 +22,7 @@
 }
 
 .link-footer {
-    color: var(--text-white);
+    color: var(--white);
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     text-transform: uppercase;
@@ -112,13 +45,13 @@
 }
 
 .footer-description {
-    color: var(--text-white);
+    color: var(--white);
     line-height: 1.6;
     font-size: var(--font-size-subtitle);
 }
 
 .footer-contact a {
-    color: var(--text-white);
+    color: var(--white);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -128,13 +61,13 @@
 }
 
 .footer-contact a:hover {
-    color: var(--text-white);
+    color: var(--white);
 }
 
 .footer-contact i {
     width: 16px;
     text-align: center;
-    color: var(--text-white);
+    color: var(--white);
     font-size: 14px;
 }
 
@@ -146,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-white);
+    color: var(--white);
     text-decoration: none;
     font-size: 16px;
     transition: var(--transition-fast);
@@ -155,22 +88,22 @@
 
 .social-icon:hover {
     background: var(--primary);
-    color: var(--text-white) ;
+    color: var(--white) ;
 }
 
 .footer-bottom a {
-    color: var(--text-white);
+    color: var(--white);
     text-decoration: none;
     font-size: var(--font-size-subtitle);
     margin-right: 20px;
 }
 
 .footer-bottom a:hover {
-    color: var(--text-white) ;
+    color: var(--white) ;
 }
 
 .copyright {
-    color: var(--text-white);
+    color: var(--white);
     font-size: var(--font-size-subtitle);
 }
 
@@ -192,30 +125,6 @@
     width: 40px;
     height: 40px;
     object-fit: contain;
-}
-
-h1 { 
-    font-size: var(--font-size-h1); 
-    font-weight: var(--font-weight-light); 
-    margin-bottom: 1rem; 
-}
-
-h2 { 
-    font-size: var(--font-size-h2); 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-}
-
-h3 { 
-    font-size: 1.5rem; 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-}
-
-p {
-    margin-bottom: 1rem;
-    font-weight: var(--font-weight-light);
-    
 }
 
 /* Desktop enhancements */

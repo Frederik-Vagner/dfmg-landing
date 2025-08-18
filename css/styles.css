@@ -38,7 +38,7 @@
     --section-padding: 2rem 0;
 
     /* Border Radius */
-    --radius-normal: 10px;
+    --radius-normal: 20px;
     --radius-circle: 50px;
 
     /* Shadow */
@@ -84,7 +84,7 @@ body {
 button { 
     margin: 10px; 
     text-decoration: none; 
-    border-radius: var(--radius-full); 
+    border-radius: var(--radius-normal); 
     display: inline-block; 
     font-weight: var(--font-weight-semibold);
     transition: all var(--transition-normal);

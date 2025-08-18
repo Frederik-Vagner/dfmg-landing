@@ -1,68 +1,5 @@
 <style>
-:root {
-/* Brand Colors */
---primary: #4285f4;
---success: #22c55e;
---charcoal: #344767;
---gray: #565656;
---white: #ffffff;
 
-/* Text Colors (using same colors for consistency) */
---text-primary: var(--charcoal);
---text-secondary: var(--gray);
---text-accent: var(--primary);
---text-success: var(--success);
---text-white: var(--white);
-
-/* Background Gradients */
---bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
---bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
---bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
---bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
-
-/* Typography */
---font-size-h1: 3rem;
---font-size-h1-mobile: 2rem;
---font-size-h2: 2.5rem;
---font-size-h2-mobile: 1.8rem;
---font-size-subtitle: 0.9rem;
---font-size-body: 1rem;
---font-size-small: 0.75rem;
-
---font-weight-light: 300;
---font-weight-normal: 400;
---font-weight-medium: 500;
---font-weight-semibold: 600;
-
-/* Layout & Spacing */
---container-width: 1200px;
---container-padding: 0 20px;
---section-padding: 4rem 0;
-
-/* Border Radius */
---radius-small: 8px;
---radius-medium: 12px;
---radius-large: 16px;
---radius-xl: 20px;
---radius-full: 50px;
-
-/* Shadows */
---shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
---shadow-md: 0 2px 10px rgba(0,0,0,0.1);
---shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
---shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
---shadow-text: 0 2px 4px rgba(0,0,0,0.7);
-
-/* Borders */
---border-light: 1px solid #e2e8f0;
---border-lighter: 1px solid #f1f5f9;
-
-/* Transitions */
---transition-fast: 0.15s ease;
---transition-normal: 0.3s ease;
---transition-slow: 0.5s ease;
-}
-/* Header - Mobile-First Performance CSS */
 .header {
     position: fixed;
     top: 20px;
@@ -70,7 +7,7 @@
     transform: translateX(-50%);
     width: calc(100% - 40px);
     max-width: 960px;
-    border-radius: var(--radius-xl);
+    border-radius: 20px;
     z-index: 100;
     margin: 0;
     padding: 0;
@@ -83,7 +20,7 @@
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    border-radius: 0 0 20px 20px;
     padding: 5px 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -136,7 +73,7 @@
 
 .nav:hover ~ * .header,
 .header:has(.nav:hover) {
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .header * {
@@ -145,7 +82,7 @@
 }
 
 .header-container {
-    max-width: var(--container-width);
+    max-width: var(--container-width-normal);
     margin: 0 auto;
     padding: 15px;
 }
@@ -158,7 +95,7 @@
     display: none;
     align-items: center;
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--gray);
     min-width: 150px;
 }
 
@@ -170,7 +107,7 @@
     opacity: 0;
     transform: translateY(22px);
     font-weight: 400;
-    color: var(--text-primary);
+    color: var(--gray);
     line-height: 1;
 }
 
@@ -199,22 +136,19 @@
 
 .nav a {
     text-decoration: none;
-    color: var(--text-secondary);
+    color: var(--gray);
     font-weight: 400;
-    transition: var(--transition-fast);
+    transition: var(--transition-normal);
 }
 
 .nav a:hover,
 .nav-item:hover > a{ 
-    color: var(--text-primary); 
+    color: var(--charcoal); 
 }
 
 .nav-item { 
     position: relative; 
 }
-
-/* Dropdown Menu */
-
 
 .nav-item:hover .dropdown,
 .dropdown:hover {
@@ -224,18 +158,17 @@
 
 .dropdown a {
     padding: 10px;
-    border-radius: var(--radius-small);
     text-decoration: none;
-    color: var(--text-secondary);
+    color: var(--gray);
 }
 
 .dropdown a:hover {
-    color: var(--text-primary);
+    color: var(--charcoal);
 }
 
 .dropdown a:hover strong,
 .dropdown a:hover small {
-    color: var(--text-primary);
+    color: var(--charcoal);
 }
 
 .dropdown strong { 
@@ -253,8 +186,8 @@
 .logo {
     align-items: center;
     text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: var(--font-weight-medium);
+    color: var(--gray);
+    font-weight: var(--font-weight-normal);
     font-size: 1.2rem;
 }
 
@@ -269,10 +202,8 @@
     font-size: 1.5rem;
     cursor: pointer;
     align-self: flex-end;
-    color: var(--text-secondary);
+    color: var(--gray);
 }
-
-
 
 /* Show mobile menu when checkbox checked */
 .menu-checkbox:checked ~ .mobile-nav {
