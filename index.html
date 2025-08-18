@@ -32,6 +32,70 @@
     *::-webkit-scrollbar {
         display: none; /* Chrome, Safari, and Opera */
     }
+
+    :root {
+        /* Brand Colors */
+        --primary: #4285f4;
+        --success: #22c55e;
+        --charcoal: #344767;
+        --gray: #565656;
+        --white: #ffffff;
+        
+        /* Text Colors (using same colors for consistency) */
+        --text-primary: var(--charcoal);
+        --text-secondary: var(--gray);
+        --text-accent: var(--primary);
+        --text-success: var(--success);
+        --text-white: var(--white);
+        
+        /* Background Gradients */
+        --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
+        --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
+        --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+        --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
+
+        /* Typography */
+        --font-size-h1: 3rem;
+        --font-size-h1-mobile: 2rem;
+        --font-size-h2: 2.5rem;
+        --font-size-h2-mobile: 1.8rem;
+        --font-size-subtitle: 0.9rem;
+        --font-size-body: 1rem;
+        --font-size-small: 0.75rem;
+
+        --font-weight-light: 300;
+        --font-weight-normal: 400;
+        --font-weight-medium: 500;
+        --font-weight-semibold: 600;
+
+        /* Layout & Spacing */
+        --container-width: 1200px;
+        --container-padding: 0 20px;
+        --section-padding: 4rem 0;
+
+        /* Border Radius */
+        --radius-small: 8px;
+        --radius-medium: 12px;
+        --radius-large: 16px;
+        --radius-xl: 20px;
+        --radius-full: 50px;
+
+        /* Shadows */
+        --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+        --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
+        --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+        --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
+        --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
+
+        /* Borders */
+        --border-light: 1px solid #e2e8f0;
+        --border-lighter: 1px solid #f1f5f9;
+
+        /* Transitions */
+        --transition-fast: 0.15s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.5s ease;
+    }
     
     body { 
         margin: 0; 
@@ -47,61 +111,67 @@
         text-align: center; 
     }
     .container { 
-        max-width: 1200px; 
+        max-width: var(--container-width); 
         margin: 0 auto; 
-        padding: 0 20px; 
+        padding: var(--container-padding); 
     }
     .btn { 
         padding: 15px 30px; 
         margin: 10px; 
         text-decoration: none; 
-        border-radius: 50px; 
+        border-radius: var(--radius-full); 
         display: inline-block; 
-        font-weight: 600;
-        transition: all 0.3s ease;
+        font-weight: var(--font-weight-semibold);
+        transition: all var(--transition-normal);
     }
     .btn.primary { 
-        background: #22c55e; 
-        color: white; 
+        background: var(--success); 
+        color: var(--text-white); 
     }
     .btn.secondary { 
         background: transparent; 
-        color: #344767; 
-        border: 2px solid #344767; 
+        color: var(--text-primary); 
+        border: 2px solid var(--charcoal); 
+    }
+
+    .button:hover {
+        background: #2d3748;
+        transform: translateY(-2px);
+    }
+
+    .btn.primary:hover {
+        background: #16a34a;
+        transform: translateY(-1px);
+    }
+
+    .btn.secondary:hover {
+        background: var(--charcoal);
+        color: var(--text-white);
     }
     .section { 
-        padding: 4rem 0; 
+        padding: var(--section-padding); 
     }
     h1 { 
-        font-size: 3rem; 
-        font-weight: 300; 
+        font-size: var(--font-size-h1); 
+        font-weight: var(--font-weight-light); 
         margin-bottom: 1rem; 
-        color: #344767;
+        color: var(--text-primary);
     }
     h2 { 
-        font-size: 2.5rem; 
-        font-weight: 600; 
+        font-size: var(--font-size-h2); 
+        font-weight: var(--font-weight-semibold); 
         margin-bottom: 1rem; 
-        color: #344767;
+        color: var(--text-primary);
     }
     .subtitle { 
-        color: #4285f4; 
-        font-size: 0.9rem; 
-        font-weight: 600; 
+        color: var(--text-accent); 
+        font-size: var(--font-size-subtitle); 
+        font-weight: var(--font-weight-semibold); 
         text-transform: uppercase; 
         letter-spacing: 1px; 
         margin-bottom: 1rem; 
     }
-    @media (max-width: 768px) {
-        h1 { font-size: 2rem; }
-        h2 { font-size: 1.8rem; }
-        .btn { padding: 12px 24px; margin: 5px; }
-    }
 
-    .section-intro { 
-        text-align: center; 
-        margin-bottom: 20px; 
-    }
     .carousel-nav { 
         display: flex; 
         justify-content: center; 
@@ -113,7 +183,7 @@
     }
     .services-track { 
         display: flex; 
-        transition: transform 0.3s ease; 
+        transition: transform var(--transition-normal); 
         width: max-content;
         gap: 20px;
     }
@@ -122,9 +192,9 @@
         flex-shrink: 0;
         height: 520px;
         background: white; 
-        border-radius: 12px; 
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-        border: 1px solid #e2e8f0;
+        border-radius: var(--radius-medium); 
+        box-shadow: var(--shadow-md); 
+        border: var(--border-light);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -157,15 +227,15 @@
         position: relative;
         z-index: 3;
         color: white;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+        text-shadow: var(--shadow-text);
         margin-bottom: 0.5rem;
         padding: 0 1.5rem;
     }
 
-    .service-card h3 {
+   .service-card h3 {
         margin-bottom: 0.75rem;
         font-size: 1.2rem;
-        font-weight: 600;
+        font-weight: var(--font-weight-semibold);
     }
 
     .service-card p {
@@ -173,20 +243,21 @@
         font-size: 0.95rem;
         line-height: 1.4;
     }
+
     .carousel-btn { 
-        background: #344767; 
-        color: white; 
+        background: var(--charcoal); 
+        color: var(--text-white); 
         border: none; 
         width: 40px; 
         height: 40px; 
-        border-radius: 50%; 
+        border-radius: var(--radius-full); 
         cursor: pointer; 
         font-size: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all var(--transition-normal);
     }
-
     .carousel-btn i{ 
         font-size: 1.25rem; 
     }
@@ -195,14 +266,14 @@
     }
 
     .carousel-btn:hover i{ 
-        color: #344767; 
+        color: var(--charcoal); 
     }
 
     .cta-box {
-        background: #344767;
-        border-radius: 20px;
+        background: var(--bg-gradient-charcoal);
+        border-radius: var(--radius-xl);
         padding: 3rem;
-        color: white;
+        color: var(--text-white);
         position: relative;
         overflow: hidden;
         min-height: 300px;
@@ -215,10 +286,10 @@
         text-align: left;
     }
     .cta-left h2 {
-        color: white;
+        color: var(--text-white);
         margin-bottom: 1rem;
         font-size: 1.8rem;
-        font-weight: 600;
+        font-weight: var(--font-weight-semibold);
     }
     .cta-left p {
         color: rgba(255,255,255,0.9);
@@ -227,9 +298,9 @@
         line-height: 1.5;
     }
     .cta-left .btn {
-        background: #22c55e;
-        color: white;
-        font-size: 1rem;
+        background: var(--success);
+        color: var(--text-white);
+        font-size: var(--font-size-body);
         padding: 14px 28px;
     }
     .cta-left .btn:hover {
@@ -238,126 +309,25 @@
     .cta-right {
         /* Empty space for future image */
     }
-    @media (max-width: 768px) {
-        .cta-box {
-            grid-template-columns: 1fr;
-            text-align: center;
-        }
-    }
 
     .about-flex-layout {
         position: relative;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
         text-align: center;
-    }
-
-    .photos-left,
-    .photos-right {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .photos-left {
-        left: 0;
-        top: 2rem;
-    }
-
-    .photos-right {
-        right: 0;
-        top: 3rem;
-    }
-
-    
+    }  
 
     .content-center {
         position: relative;
         z-index: 10;
         max-width: 600px;
         margin: 0 auto;
+    }
+
+    /* Add specific styling for glassmorphism when needed */
+    .about-flex-layout .content-center {
         padding: 2rem;
         background: rgba(255, 255, 255, 0.95);
-        border-radius: 16px;
+        border-radius: var(--radius-large);
         backdrop-filter: blur(10px);
-    }
-
-    .photo-placeholder {
-        width: 80px;
-        height: 80px;
-        background: #f8fafc;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #94a3b8;
-        font-size: 0.7rem;
-        font-weight: 500;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .about-text h2 {
-        margin-bottom: 1.5rem;
-        font-size: 2rem;
-    }
-
-    .about-text p {
-        color: #666;
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-    }
-
-    .about-stats-small {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .stat-small {
-        text-align: center;
-        padding: 1rem;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        border: 1px solid #e2e8f0;
-        min-width: 80px;
-    }
-
-    .stat-number-small {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #22c55e;
-        margin-bottom: 0.25rem;
-    }
-
-    .stat-label-small {
-        color: #666;
-        font-size: 0.75rem;
-        font-weight: 500;
-    }
-
-    @media (max-width: 768px) {
-        .about-flex-layout {
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .photos-left,
-        .photos-right {
-            display: none;
-        }
-        
-        .content-center {
-            padding: 0;
-        }
-        
-        .about-stats-small {
-            gap: 1rem;
-        }
     }
 
     .client-logos {
@@ -365,9 +335,9 @@
         text-align: center;
     }
     .logos-text {
-        color: #666;
-        font-size: 0.9rem;
-        font-weight: 500;
+        color: var(--text-secondary);
+        font-size: var(--font-size-subtitle);
+        font-weight: var(--font-weight-medium);
         margin-bottom: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -384,14 +354,193 @@
         max-width: 120px;
         object-fit: contain;
         opacity: 0.7;
-        transition: opacity 0.3s ease;
+        transition: opacity var(--transition-normal);
         filter: grayscale(100%);
     }
     .client-logo:hover {
         opacity: 1;
         filter: grayscale(0%);
     }
+
+    .photos-grid {
+        display: grid;
+        grid-template-columns: repeat(9, 120px);
+        grid-template-rows: repeat(2, 120px);
+        gap: 15px;
+        max-width: var(--container-width);
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .photo {
+        width: 120px;
+        height: 120px;
+        border-radius: var(--radius-medium);
+        background: #ddd;
+    }
+
+    /* Top row - photos 1-9 */
+    .photo:nth-child(1) { grid-column: 1; grid-row: 1; transform: translateY(120px); }
+    .photo:nth-child(2) { grid-column: 2; grid-row: 1; transform: translateY(70px); }
+    .photo:nth-child(3) { grid-column: 3; grid-row: 1; transform: translateY(130px); }
+    .photo:nth-child(4) { grid-column: 4; grid-row: 1; transform: translateY(70px); }
+    .photo:nth-child(5) { grid-column: 5; grid-row: 1; transform: translateY(100px); }
+    .photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(70px); }
+    .photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(130px); }
+    .photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(70px); }
+    .photo:nth-child(9) { grid-column: 9; grid-row: 1; transform: translateY(120px); }
+    
+    /* Bottom row - 4 photos at edges */
+    .photo:nth-child(10) { grid-column: 1; grid-row: 2; transform: translateY(120px); }
+    .photo:nth-child(11) { grid-column: 2; grid-row: 2; transform: translateY(70px); }
+    .photo:nth-child(12) { grid-column: 8; grid-row: 2; transform: translateY(70px); }
+    .photo:nth-child(13) { grid-column: 9; grid-row: 2; transform: translateY(120px); }
+
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--radius-medium);
+    }
+
+    .button {
+        display: inline-block;
+        background: var(--charcoal);
+        color: var(--text-white);
+        padding: 14px 28px;
+        border-radius: var(--radius-full);
+        text-decoration: none;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-semibold);
+        transition: all var(--transition-normal);
+    }
+
+    .company-logo-section {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: var(--border-lighter);
+    }
+
+    .company-logo {
+        height: 50px;
+        max-width: 150px;
+        object-fit: contain;
+        opacity: 0.8;
+    }
+
+    .section-intro {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-intro h2 {
+        font-size: var(--font-size-h2);
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .section-intro p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .testimonial {
+        background: white;
+        padding: 2.5rem;
+        border-radius: var(--radius-large);
+        box-shadow: var(--shadow-lg);
+        border: var(--border-lighter);
+        transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .testimonial:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+    }
+
+    .testimonial blockquote {
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        font-style: italic;
+        position: relative;
+    }
+
+    .testimonial blockquote::before {
+        content: '"';
+        font-size: 4rem;
+        color: var(--text-accent);
+        position: absolute;
+        top: -1rem;
+        left: -0.5rem;
+        font-family: Georgia, serif;
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .author-image {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+        border: 3px solid #f1f5f9;
+    }
+
+    .author-info strong {
+        display: block;
+        color: var(--text-primary);
+        font-size: 1.1rem;
+        font-weight: var(--font-weight-semibold);
+        margin-bottom: 0.25rem;
+    }
+
+    .author-info span {
+        color: #64748b;
+        font-size: var(--font-size-subtitle);
+    }
+
     @media (max-width: 768px) {
+        h1 { font-size: var(--font-size-h1-mobile); }
+        h2 { font-size: var(--font-size-h2-mobile); }
+        .btn { padding: 12px 24px; margin: 5px; }
+
+        .section-intro h2 {
+            font-size: var(--font-size-h2-mobile);
+        }
+        
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .testimonial {
+            padding: 2rem;
+        }
+        
+        .container {
+            padding: 0 1rem;
+        }
+        .cta-box {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
         .logos-row {
             gap: 2rem;
         }
@@ -431,145 +580,61 @@
         </div>
     </section>
 
-    
+    <section class="section">
+        <div class="container">
+            <div class="about-flex-layout">
+                <div class="photos-grid">
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                    </div>
+                    <div class="photo">
+                        <img src="/images/people/human.jpg" alt="Professionel Rengøring" width="640" height="640">
+                    </div>
+                </div>
 
-    <div class="testimonials-section">
-        <div class="photos-grid">
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-            </div>
-            <div class="photo">
-                <img src="/images/people/human.jpg" alt="Professionel Rengøring" width="640" height="640">
+                <div class="content-center">
+                    <div class="subtitle">OM DFMG</div>
+                    <h2>Menneskene bag jeres facility service</h2>
+                    <p>Grundlagt i 2023 af erfarne fagfolk, der ville gøre facility service mere personligt og pålideligt. Vi kombinerer etableret faglig ekspertise med moderne teknologi for at levere den bedste oplevelse til vores kunder.</p>
+                    <p>Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</p>
+                    <a href="#" class="button">Læs mere om os</a>
+                </div>
             </div>
         </div>
-
-        <div class="content">
-            <div class="subtitle">OM DFMG</div>
-            <h2>Menneskene bag jeres facility service</h2>
-            <p>Grundlagt i 2023 af erfarne fagfolk, der ville gøre facility service mere personligt og pålideligt. Vi kombinerer etableret faglig ekspertise med moderne teknologi for at levere den bedste oplevelse til vores kunder.</p>
-            <p>Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</p>
-            <a href="#" class="button">Læs mere om os</a>
-        </div>
-    </div>
-
-    <style>
-        .testimonials-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .photos-grid {
-            display: grid;
-            grid-template-columns: repeat(9, 120px);
-            grid-template-rows: repeat(2, 120px);
-            gap: 15px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            justify-content: center;
-        }
-
-        .photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 12px;
-            background: #ddd;
-        }
-
-        /* Top row - photos 1-9 */
-        .photo:nth-child(1) { grid-column: 1; grid-row: 1; transform: translateY(120px); }
-        .photo:nth-child(2) { grid-column: 2; grid-row: 1; transform: translateY(70px); }
-        .photo:nth-child(3) { grid-column: 3; grid-row: 1; transform: translateY(130px); }
-        .photo:nth-child(4) { grid-column: 4; grid-row: 1; transform: translateY(70px); }
-        .photo:nth-child(5) { grid-column: 5; grid-row: 1; transform: translateY(100px); }
-        .photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(70px); }
-        .photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(130px); }
-        .photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(70px); }
-        .photo:nth-child(9) { grid-column: 9; grid-row: 1; transform: translateY(120px); }
-        
-        /* Bottom row - 4 photos at edges */
-        .photo:nth-child(10) { grid-column: 1; grid-row: 2; transform: translateY(120px); }
-        .photo:nth-child(11) { grid-column: 2; grid-row: 2; transform: translateY(70px); }
-        .photo:nth-child(12) { grid-column: 8; grid-row: 2; transform: translateY(70px); }
-        .photo:nth-child(13) { grid-column: 9; grid-row: 2; transform: translateY(120px); }
-
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .label {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #000;
-            margin-bottom: 8px;
-        }
-
-        .description {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.5;
-            margin-bottom: 32px;
-        }
-
-        .button {
-            display: inline-block;
-            background: #000;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-    </style>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="section">
@@ -626,7 +691,7 @@
     </section>
 
     <!-- Client Stories Section -->
-    <section class="testimonials-section" id="testimonials">
+    <section class="section" id="testimonials">
         <div class="container">
             <div class="section-intro">
                 <div class="subtitle">KLIENT SUCCESHISTORIER</div>
@@ -682,161 +747,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-
-        .company-logo-section {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .company-logo {
-            height: 50px;
-            max-width: 150px;
-            object-fit: contain;
-            opacity: 0.8;
-        }
-
-        .section-intro {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .subtitle {
-            color: #4285f4;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .section-intro h2 {
-            font-size: 2.5rem;
-            color: #344767;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .section-intro p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border: 1px solid #f1f5f9;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .testimonial:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-
-        .testimonial blockquote {
-            font-size: 1.1rem;
-            color: #344767;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            font-style: italic;
-            position: relative;
-        }
-
-        .testimonial blockquote::before {
-            content: '"';
-            font-size: 4rem;
-            color: #4285f4;
-            position: absolute;
-            top: -1rem;
-            left: -0.5rem;
-            font-family: Georgia, serif;
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #f1f5f9;
-        }
-
-        .author-info strong {
-            display: block;
-            color: #344767;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .author-info span {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        .company-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #f1f5f9;
-        }
-
-        .service-badge {
-            background: #f0f9ff;
-            color: #0369a1;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            border: 1px solid #e0f2fe;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .testimonials-section {
-                padding: 4rem 0;
-            }
-            
-            .section-intro h2 {
-                font-size: 2rem;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .testimonial {
-                padding: 2rem;
-            }
-            
-            .container {
-                padding: 0 1rem;
-            }
-        }
-    </style>
 
     <!-- Contact CTA Section -->
     <section id="contact" class="section">
