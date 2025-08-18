@@ -71,6 +71,10 @@ body {
     padding: var(--container-padding); 
 }
 
+.first { 
+    padding-top: 100px !important;
+}
+
 .section { 
     padding: var(--section-padding); 
 }
@@ -90,19 +94,19 @@ button {
     transition: all var(--transition-normal);
 }
 
-.primary { 
+.primary {
     background: var(--bg-gradient-charcoal); 
-    color: var(--text-white); 
+    color: var(--white); 
 }
 
 .success { 
-    background: var(--success); 
-    color: var(--text-white); 
+    background: var(--bg-gradient-success); 
+    color: var(--white); 
     border: none;
 }
 
 .secondary { 
-    background: transparent; 
+    background: var(--bg-gradient-white); 
     color: var(--text-primary); 
     border: 2px solid var(--charcoal); 
 }
@@ -146,6 +150,31 @@ button {
     font-size: var(--font-size-discalmer); 
 }
 
+h1 { 
+    font-size: 2.5rem; 
+    font-weight: var(--font-weight-semibold); 
+    color: var(--charcoal);
+}
+
+h2 { 
+    font-size: 2rem; 
+    font-weight: var(--font-weight-semibold); 
+    color: var(--charcoal);
+}
+
+h3 { 
+    font-size: 1.5rem; 
+    font-weight: var(--font-weight-semibold); 
+    color: var(--charcoal);
+}
+
+h4 { 
+    font-size: 1rem; 
+    font-weight: var(--font-weight-semibold); 
+    color: var(--charcoal);
+}
+
+
 /* Flex Container Base */
 .flex {
     display: flex;
@@ -187,9 +216,9 @@ button {
 
 .cta-box {
     background: var(--bg-gradient-charcoal);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-normal);
     padding: 3rem;
-    color: var(--text-white);
+    color: var(--white);
     position: relative;
     overflow: hidden;
     min-height: 300px;
@@ -198,4 +227,29 @@ button {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 2rem;
+}
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 15px;
+    border: var(--border-light);
+    border-radius: var(--radius-normal);
+    font-size: var(--font-size-body);
+    font-family: inherit;
+    background: var(--white);
+    transition: var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+}
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
 }

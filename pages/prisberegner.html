@@ -21,6 +21,8 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
     <style>
         * {
@@ -82,7 +84,7 @@
         }
 
         .btn{
-            padding: 0.5rem 1rem;
+            padding: 6px 12px;
             border: 2px solid #e2e8f0;
             border-radius: 8px;
             font-size: 0.8rem;
@@ -189,6 +191,10 @@
             font-size: 1.4rem;
             font-weight: bold;
         }
+
+        #price th, #price td, #price label, #price span{
+            font-size: 0.85rem;
+            }
     </style>
     
     <!-- Non-critical CSS deferred -->
@@ -198,13 +204,13 @@
     <!-- Header Component -->
     <div id="header"></div>
 
-    <section class="section">
+    <section id="price">
         <div class="container">
             <div class="calculator-content">
 
                 <!-- Column 1: Information -->
                 <div class="column">
-                    <h2>Oplysninger</h2>
+                    <h3>Oplysninger</h3>
                     <div class="info-card">
                         <h4>Størrelse</h4>
                         <label>Hvor stort er jeres kontor?</label>
@@ -349,7 +355,7 @@
                 <!-- Column 2: Service Templates -->
                 <div class="column">
                     <div style="display: flex; justify-content: space-between;">
-                        <h2>Service Skema</h2>
+                        <h3>Service Skema</h3>
                         <div class="flex">
                             <div class="btn active" onclick="toggleAllServiceTypes('let')">Let</div>
                             <div class="btn" onclick="toggleAllServiceTypes('grundig')">Grundig</div>
@@ -504,7 +510,7 @@
 
                 <!-- Column 3: Price Summary -->
                 <div class="column">
-                    <h2>Månedlig Pris</h2>
+                    <h3>Månedlig Pris</h3>
                     <div class="info-card" id="price-breakdown" style="padding: 2rem;">
                         <div class="price-line">
                             <span>Basispris (500 m²)</span>

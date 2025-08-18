@@ -21,176 +21,11 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
+
 </head>
-    <style>
-    :root {
-/* Brand Colors */
---primary: #4285f4;
---success: #22c55e;
---charcoal: #344767;
---gray: #565656;
---white: #ffffff;
-
-/* Text Colors (using same colors for consistency) */
---text-primary: var(--charcoal);
---text-secondary: var(--gray);
---text-accent: var(--primary);
---text-success: var(--success);
---text-white: var(--white);
-
-/* Background Gradients */
---bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
---bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
---bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
---bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
-
-/* Typography */
---font-size-h1: 3rem;
---font-size-h1-mobile: 2rem;
---font-size-h2: 2.5rem;
---font-size-h2-mobile: 1.8rem;
---font-size-subtitle: 0.9rem;
---font-size-body: 1rem;
---font-size-small: 0.75rem;
-
---font-weight-light: 300;
---font-weight-normal: 400;
---font-weight-medium: 500;
---font-weight-semibold: 600;
-
-/* Layout & Spacing */
---container-width: 1200px;
---container-padding: 0 20px;
---section-padding: 4rem 0;
-
-/* Border Radius */
---radius-small: 8px;
---radius-medium: 12px;
---radius-large: 16px;
---radius-xl: 20px;
---radius-full: 50px;
-
-/* Shadows */
---shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
---shadow-md: 0 2px 10px rgba(0,0,0,0.1);
---shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
---shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
---shadow-text: 0 2px 4px rgba(0,0,0,0.7);
-
-/* Borders */
---border-light: 1px solid #e2e8f0;
---border-lighter: 1px solid #f1f5f9;
-
-/* Transitions */
---transition-fast: 0.15s ease;
---transition-normal: 0.3s ease;
---transition-slow: 0.5s ease;
-
-/* Button System */
---btn-padding-sm: 8px 16px;
---btn-padding-md: 12px 24px;
---btn-padding-lg: 15px 30px;
---btn-font-weight: var(--font-weight-semibold);
-}
-.flex-col { display: flex; flex-direction: column; }
-.flex-row { display: flex; flex-direction: row; }
-.gap-sm { gap: 15px; }
-.gap-md { gap: 20px; }
-.gap-lg { gap: 30px; }
-.gap-xl { gap: 4rem; }
-
-.btn {
-    padding: var(--btn-padding-lg);
-    border-radius: var(--radius-small);
-    font-weight: var(--btn-font-weight);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: var(--transition-fast);
-    text-align: center;
-}
-
-.btn-secondary:hover {
-    background: var(--text-primary);
-    color: var(--text-white);
-}
-
-.btn-sm { padding: var(--btn-padding-sm); }
-.btn-md { padding: var(--btn-padding-md); }
-
-.btn-primary { 
-    background: var(--success); 
-    color: var(--text-white); 
-}
-.btn-primary:hover { background: #16a34a; }
-
-.btn-secondary { 
-    background: var(--text-white); 
-    color: var(--text-primary); 
-    border: 2px solid var(--text-primary); 
-}
-
-.text-lg { font-size: 1.2rem; }
-.text-base { font-size: var(--font-size-body); }
-.text-sm { font-size: var(--font-size-small); }
-.font-semibold { font-weight: var(--font-weight-semibold); }
-.font-medium { font-weight: var(--font-weight-medium); }
-.mb-lg { margin-bottom: 4rem; }
-
-
-body { 
-    margin: 0; 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-    padding-top: 100px; 
-    line-height: 1.6;
-}
-.container { 
-    max-width: var(--container-width); 
-    margin: 0 auto; 
-    padding: var(--container-padding); 
-}
-.section { 
-    padding: var(--section-padding); 
-}
-.text-center { 
-    text-align: center; 
-}
-h1 { 
-    font-size: var(--font-size-h1); 
-    font-weight: var(--font-weight-light); 
-    margin-bottom: 1rem; 
-    color: var(--text-primary);
-}
-h2 { 
-    font-size: var(--font-size-h2); 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-    color: var(--text-primary);
-}
-h3 { 
-    font-size: 1.5rem; 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-    color: var(--text-primary);
-}
-p { 
-    color: var(--text-secondary); 
-    margin-bottom: 1rem; 
-}
-
-.contact-overlay h3 {
-    color: var(--text-white);
-    margin-bottom: 1rem;
-}
-.contact-overlay p {
-    color: var(--text-white);
-    margin-bottom: 0.5rem;
-}
-
+<style>
 /* Form styles */
 .contact-form {
     max-width: none;
@@ -198,34 +33,6 @@ p {
 }
 .contact-info h3 {
     text-align: left;
-}
-
-.contact-info p {
-    text-align: left;
-}
-.form-group {
-    margin-bottom: 1.5rem;
-}
-.form-input,
-.form-textarea {
-    width: 100%;
-    padding: 15px;
-    border: var(--border-light);
-    border-radius: var(--radius-small);
-    font-size: var(--font-size-body);
-    font-family: inherit;
-    background: var(--white);
-    transition: var(--transition-fast);
-}
-
-.form-input:focus,
-.form-textarea:focus {
-    outline: none;
-    border-color: var(--success);
-}
-.form-textarea {
-    min-height: 120px;
-    resize: vertical;
 }
 
 *, *::before, *::after {
@@ -243,10 +50,6 @@ p {
     opacity: 0.5;
 }
 
-/* Career section */
-.career-section {
-    background: #f8fafc;
-}
 .career-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -260,7 +63,7 @@ p {
 }
 .job-benefits li {
     padding: 0.5rem 0;
-    color: var(--text-primary);
+    color: var(--gray);
 }
 .job-benefits li::before {
     content: '✓';
@@ -268,27 +71,7 @@ p {
     font-weight: bold;
     margin-right: 1rem;
 }
-.job-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
 
-.partner-info {
-    text-align: right;
-}
-
-.partner-info h3 {
-    text-align: right;
-}
-
-.partner-info p {
-    text-align: right;
-}
-
-.partner-info .job-benefits {
-    text-align: right;
-}
 
 .partner-info .job-benefits li::before {
     content: '✓';
@@ -298,33 +81,7 @@ p {
     margin-right: 0;
     float: right;
 }
-
-.partner-info .job-buttons {
-    justify-content: flex-end;
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: var(--font-size-h1-mobile); }
-    h2 { font-size: var(--font-size-h2-mobile); }
-    .btn { padding: 12px 24px; margin: 5px; }
-
-    .contact-overlay {
-        position: static;
-        margin: 2rem 1rem 0;
-        max-width: none;
-    }
-    .career-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .job-buttons {
-        flex-direction: column;
-    }
-}
-    </style>
-    
-    <!-- Non-critical CSS deferred -->
-    <link rel="preload" href="../css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</style>
 </head>
 <body>
     <!-- Header Component -->
@@ -333,16 +90,16 @@ p {
     <!-- Main Content -->
     <main>
         <!-- Contact Form Section -->
-        <section class="section">
+        <section class="section first">
             <div class="container">
-                <div class="text-center mb-lg">
-                    <h2>Kontakt</h2>
-                    <p class="text-lg">Har du spørgsmål til vores services eller vil du have et uforpligtende tilbud?</p>
+                <div class="text-center">
+                    <div class="title text-charcoal">Kontakt</div>
+                    <div class="body text-gray">Har du spørgsmål til vores services eller vil du have et uforpligtende tilbud?</div>
                 </div>
 
                 <div class="career-content">
                     <div class="contact-info">
-                        <h3>Få et tilbud</h3>
+                        <h2>Få et tilbud</h2>
                         <p>Udfyld formularen og beskriv jeres behov. Vi vender tilbage med et skræddersyet tilbud inden for 24 timer.</p>
                         
                         <ul class="job-benefits">
@@ -355,7 +112,7 @@ p {
                     </div>
 
                     <div class="contact-form">
-                        <h3>Kontakt formular</h3>
+                        <h2>Kontakt formular</h2>
                         <form onsubmit="handleFormSubmit(event)">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="Navn" class="form-input" required>
@@ -369,7 +126,7 @@ p {
                             <div class="form-group">
                                 <textarea name="message" placeholder="Beskriv jeres behov og ønsker" class="form-textarea" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">SEND FORESPØRGSEL</button>
+                            <button type="submit" class="success medium" style="width: 100%;">SEND FORESPØRGSEL</button>
                         </form>
                     </div>
                 </div>
@@ -377,15 +134,15 @@ p {
         </section>
 
         <!-- Career Section -->
-        <section class="section career-section">
+        <section class="section">
             <div class="container">
-                <div class="text-center mb-lg">
+                <div class="text-center">
                     <h2>Karriere</h2>
                     <p class="text-lg">Søger du job hos DFMG? Bliv en del af et professionelt facility service team</p>
                 </div>
 
                 <div class="career-content">
-                    <div class="job-info">
+                    <div>
                         <h3>Søger du job?</h3>
                         <p>Hvis du er interesseret i et job hos DFMG, kan du kontakte os direkte eller se vores ledige stillinger for at finde den rigtige mulighed.</p>
 
@@ -399,33 +156,33 @@ p {
                         </ul>
 
                         <div class="job-buttons">
-                            <a href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="btn btn-primary btn-md">
+                            <button href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="primary medium">
                                 Kontakt os
-                            </a>
-                            <a href="/pages/indblik/jobs.html" class="btn btn-secondary btn-md">
+                            </button>
+                            <button href="/pages/indblik/jobs.html" class="secondary medium">
                                 Se ledige stillinger
-                            </a>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="partner-info">
-    <h3>Partnerskab & Samarbejde</h3>
-    <p>Vi søger samarbejdspartnere til at udvide vores servicetilbud og løse større facility management projekter sammen.</p>
-    
-    <ul class="job-benefits">
-        <li>VVS-installatører</li>
-        <li>Elektriker-firmaer</li>
-        <li>Professionel vinduespudsning</li>
-        <li>Logistik og transport</li>
-        <li>Specialrengøring (tæpper, gulvbehandling)</li>
-    </ul>
+                    <div class="partner-info text-right">
+                        <h3>Partnerskab & Samarbejde</h3>
+                        <p>Vi søger samarbejdspartnere til at udvide vores servicetilbud og løse større facility management projekter sammen.</p>
+                        
+                        <ul class="job-benefits">
+                            <li>VVS-installatører</li>
+                            <li>Elektriker-firmaer</li>
+                            <li>Professionel vinduespudsning</li>
+                            <li>Logistik og transport</li>
+                            <li>Specialrengøring (tæpper, gulvbehandling)</li>
+                        </ul>
 
-    <div class="job-buttons">
-        <a href="mailto:kontakt@dfmg.dk?subject=Partnerskab og samarbejde" class="btn btn-primary btn-md">
-            Kontakt os
-        </a>
-    </div>
-</div>
+                        <div class="job-buttons">
+                            <button href="mailto:kontakt@dfmg.dk?subject=Partnerskab og samarbejde" class="primary medium">
+                                Kontakt os
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

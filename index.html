@@ -41,7 +41,7 @@
     grid-template-columns: repeat(9, 120px);
     grid-template-rows: repeat(2, 120px);
     gap: 15px;
-    max-width: var(--container-width);
+    max-width: var(--container-width-normal);
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -50,7 +50,7 @@
 .photo {
     width: 120px;
     height: 120px;
-    border-radius: var(--radius-medium);
+    border-radius: var(--radius-normal);
     background: #ddd;
 }
 
@@ -76,7 +76,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: var(--radius-medium);
+    border-radius: var(--radius-normal);
 }
 
 .services-carousel { 
@@ -94,8 +94,8 @@
     flex-shrink: 0;
     height: 520px;
     background: white; 
-    border-radius: var(--radius-medium); 
-    box-shadow: var(--shadow-md); 
+    border-radius: var(--radius-normal); 
+    box-shadow: var(--shadow-lg); 
     border: var(--border-light);
     display: flex;
     flex-direction: column;
@@ -129,7 +129,6 @@
     position: relative;
     z-index: 3;
     color: white;
-    text-shadow: var(--shadow-text);
     margin-bottom: 0.5rem;
     padding: 0 1.5rem;
 }
@@ -191,7 +190,7 @@
 .testimonial {
     background: white;
     padding: 2.5rem;
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-normal);
     box-shadow: var(--shadow-lg);
     border: var(--border-lighter);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
@@ -199,12 +198,12 @@
 
 .testimonial:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
 }
 
 .testimonial blockquote {
     font-size: 1.1rem;
-    color: var(--text-primary);
+    color: var(--gray);
     line-height: 1.6;
     margin-bottom: 2rem;
     font-style: italic;
@@ -224,7 +223,7 @@
 .author-image {
     width: 60px;
     height: 60px;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-circle);
     object-fit: cover;
     border: 3px solid #f1f5f9;
 }

@@ -1,118 +1,16 @@
 <style>
-/* Hide scrollbars for all elements */
-* {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
-}
-
-*::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
-}
-
-:root {
-        /* Brand Colors */
-        --primary: #4285f4;
-        --success: #22c55e;
-        --charcoal: #344767;
-        --gray: #565656;
-        --white: #ffffff;
-        
-        /* Text Colors (using same colors for consistency) */
-        --text-primary: var(--charcoal);
-        --text-secondary: var(--gray);
-        --text-accent: var(--primary);
-        --text-success: var(--success);
-        --text-white: var(--white);
-        
-        /* Background Gradients */
-        --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
-        --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
-        --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
-        --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
-
-        /* Typography */
-        --font-size-h1: 3rem;
-        --font-size-h1-mobile: 2rem;
-        --font-size-h2: 2.5rem;
-        --font-size-h2-mobile: 1.8rem;
-        --font-size-subtitle: 0.9rem;
-        --font-size-body: 1rem;
-        --font-size-small: 0.75rem;
-
-        --font-weight-light: 300;
-        --font-weight-normal: 400;
-        --font-weight-medium: 500;
-        --font-weight-semibold: 600;
-
-        /* Layout & Spacing */
-        --container-width: 1200px;
-        --container-padding: 0 20px;
-        --section-padding: 4rem 0;
-
-        /* Border Radius */
-        --radius-small: 8px;
-        --radius-medium: 12px;
-        --radius-large: 16px;
-        --radius-xl: 20px;
-        --radius-full: 50px;
-
-        /* Shadows */
-        --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-        --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
-        --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
-        --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
-        --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
-
-        /* Borders */
-        --border-light: 1px solid #e2e8f0;
-        --border-lighter: 1px solid #f1f5f9;
-
-        /* Transitions */
-        --transition-fast: 0.15s ease;
-        --transition-normal: 0.3s ease;
-        --transition-slow: 0.5s ease;
-    }
-
-    .btn {
-    padding: 12px 16px;
-    border: none;
-    border-radius: var(--radius-medium);
-    cursor: pointer;
-    font-size: 0.85rem;
-    font-weight: var(--font-weight-semibold);
-    transition: all var(--transition-normal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.btn-primary {
-    background: var(--bg-gradient-primary);
-    color: var(--text-white);
-}
-
-.btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
-}
-
 .input {
     padding: 12px 16px;
     border: 2px solid var(--border-lighter);
-    border-radius: var(--radius-medium);
+    border-radius: var(--radius-normal);
     font-size: 14px;
     outline: none;
     transition: border-color var(--transition-normal);
 }
 
-.input:focus {
-    border-color: var(--primary);
-}
-
 .input-flex {
     flex: 1;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-circle);
 }
 
 .btn-full {
@@ -121,7 +19,7 @@
 
 .btn-icon {
     padding: 12px 16px;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-circle);
 }
 
 .chatbot-widget {
@@ -135,7 +33,7 @@
 .chatbot-button {
     width: 60px;
     height: 60px;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-circle);
     background: var(--bg-gradient-charcoal);
     border: none;
     cursor: pointer;
@@ -144,7 +42,7 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    color: var(--text-white);
+    color: var(--white);
     transition: all var(--transition-normal);
 }
 
@@ -162,7 +60,7 @@
     max-width: 90vw;
     background: var(--white);
     border: var(--border-lighter);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-normal);
     box-shadow: var(--shadow-xl);
     overflow: hidden;
     display: none;
@@ -176,18 +74,18 @@
 /* Header */
 .widget-header {
     background: var(--bg-gradient-charcoal);
-    color: var(--text-white);
+    color: var(--white);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .chatbot-title {
     font-size: 18px;
     font-weight: var(--font-weight-semibold);
-    color: var(--text-white);
+    color: var(--white);
 }
 
 .live-indicator {
@@ -199,14 +97,14 @@
     background: rgba(34, 197, 94, 0.2);
     color: var(--success);
     padding: 6px 12px;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-normal);
 }
 
 .status-dot {
     width: 6px;
     height: 6px;
     background: var(--success);
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-circle);
     animation: pulse 2s infinite;
 }
 
@@ -267,7 +165,7 @@
 .faq-item {
     margin-bottom: 12px;
     border: var(--border-lighter);
-    border-radius: var(--radius-medium);
+    border-radius: var(--radius-normal);
     overflow: hidden;
     background: var(--white);
 }
@@ -281,7 +179,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--text-primary);
+    color: var(--charcoal);
     transition: all var(--transition-normal);
 }
 
@@ -291,7 +189,7 @@
 
 .faq-question.active {
     background: var(--bg-gradient-primary);
-    color: var(--text-white);
+    color: var(--white);
 }
 
 .faq-question i {
@@ -337,7 +235,7 @@
 .status-indicator {
     width: 8px;
     height: 8px;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-circle);
     background: var(--success);
     animation: pulse 2s infinite;
 }
@@ -358,14 +256,12 @@
 .fixed-cta {
     position: sticky;
     bottom: 0;
-    background: var(--white);
-    padding: 16px 20px;
     border-top: var(--border-lighter);
-    flex-shrink: 0;
+    text-align: center;
 }
 
 .cta-title {
-    color: var(--text-primary);
+    color: var(--charcoal);
     font-size: 16px;
     font-weight: var(--font-weight-semibold);
     text-align: center;
@@ -392,7 +288,7 @@
     right: 0;
     bottom: 0;
     background: var(--white);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-circle);
     z-index: 1000;
     overflow: hidden;
     display: none;
@@ -428,8 +324,8 @@
 .preview-message {
     background: var(--white);
     border: var(--border-lighter);
-    color: var(--text-primary);
-    border-radius: var(--radius-large) var(--radius-large) 4px var(--radius-large);
+    color: var(--charcoal);
+    border-radius: var(--radius-normal);
     padding: 14px 18px;
     box-shadow: var(--shadow-lg);
     font-size: 14px;
@@ -455,9 +351,9 @@
     top: 20px;
     right: 20px;
     background: var(--bg-gradient-success);
-    color: var(--text-white);
+    color: var(--white);
     padding: 16px 24px;
-    border-radius: var(--radius-medium);
+    border-radius: var(--radius-normal);
     box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
     z-index: 1001;
     transform: translateX(400px);
@@ -605,7 +501,7 @@
                 
                 <!-- Fixed bottom CTA -->
                 <div class="fixed-cta">
-                    <button class="btn btn-primary btn-full" onclick="toggleCallbackForm()">
+                    <button class="primary small" onclick="toggleCallbackForm()">
                         <i class="fas fa-phone"></i>
                         Bliv ringet op
                     </button>
@@ -629,9 +525,9 @@
                         </button>
                     </div>
                     
-                    <div class="cta-section">
+                    <div class="text-center">
                         <div class="cta-title">Eller kontakt os direkte</div>
-                        <button class="btn btn-primary btn-full" onclick="callDirect()">
+                        <button class="primary small" onclick="callDirect()">
                             <i class="fas fa-phone"></i>
                             Ring: +45 50 48 02 73
                         </button>
