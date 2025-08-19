@@ -26,12 +26,59 @@
 </head>
 
 <style>
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-        
+
+:root{
+   --success: #22c55e;
+    
+}
+
+.environment-visual {
+    background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+}
+
+.social-visual {
+    background: linear-gradient(135deg, #4285f4, #1d4ed8, #1e40af);
+}
+
+.governance-visual {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9);
+}
+
+.slide:nth-child(1) { 
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+.slide:nth-child(2) { 
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+}
+.slide:nth-child(3) { 
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+}
+.slide:nth-child(4) { 
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+}
+
+.slide-dot.active.slide-1-active {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+.slide-dot.active.slide-2-active {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%) !important;
+}
+
+.slide-dot.active.slide-3-active {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%) !important;
+}
+
+.slide-dot.active.slide-4-active {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important;
+}  
 .sustainability-page { 
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
     line-height: 1.6;
@@ -62,20 +109,6 @@
     padding: 2rem;
 }
         
-/* Modern Slide Backgrounds */
-.slide:nth-child(1) { 
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-.slide:nth-child(2) { 
-    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
-}
-.slide:nth-child(3) { 
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
-}
-.slide:nth-child(4) { 
-    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
-}
-
 /* Enhanced Navigation */
 .slide-nav {
     position: fixed;
@@ -88,7 +121,6 @@
     background: rgba(255, 255, 255, 0.95);
     padding: 12px 20px;
     border-radius: 30px;
-    backdrop-filter: blur(15px);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -104,7 +136,6 @@
 }
 
 .slide-dot.active {
-    background: #22c55e;
     transform: scale(1.2);
 }
 
@@ -117,15 +148,14 @@
     background: #22c55e;
 }
 
-/* Progress Indicator */
-.progress-bar {
-    position: fixed;
-    top: 100px;
-    left: 0;
-    height: 3px;
-    background: #22c55e;
-    transition: width 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-    z-index: 1000;
+.slide-content1 {
+    width: 100%;
+    max-width: 800px;
+    /* height: 100%; */
+    display: grid
+;
+    align-items: center;
+    gap: 3rem;
 }
 
 /* Slide Content Layouts */
@@ -138,90 +168,14 @@
     gap: 3rem;
 }
 
-/* Enhanced Intro Slide */
-.intro-content {
-    text-align: center;
-    grid-template-columns: 1fr;
-}
-
-.intro-content h1 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    color: #344767;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-}
-
-.intro-subtitle {
-    font-size: 1.5rem;
-    color: #4285f4;
-    font-weight: 500;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.intro-content p {
-    font-size: 1.4rem;
-    color: #64748b;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    line-height: 1.5;
-}
-
-/* Modern Pillars */
-.sustainability-pillars {
+.slide-content4 {
+    width: 100%;
+    max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
+    align-items: center;
+    gap: 3rem;
 }
 
-.pillar {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.pillar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #22c55e, #4285f4);
-}
-
-.pillar:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.pillar-icon {
-    font-size: 3rem;
-    color: #22c55e;
-    margin-bottom: 1.5rem;
-    display: block;
-}
-
-.pillar h3 {
-    color: #344767;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.pillar p {
-    color: #64748b;
-    font-size: 1rem;
-}
 
 /* Two Column Layout */
 .two-column {
@@ -229,12 +183,6 @@
     gap: 4rem;
     align-items: center;
     display: flex;
-}
-
-.content-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .section-badge {
@@ -250,45 +198,6 @@
     margin-bottom: 1rem;
 }
 
-.content-section h1 {
-    font-size: 3.5rem;
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    color: #344767;
-}
-
-.content-section .subtitle {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #64748b;
-    margin-bottom: 2rem;
-    line-height: 1.4;
-}
-
-.content-section p {
-    font-size: 1.1rem;
-    color: #64748b;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.highlight-text {
-    color: #344767;
-    font-weight: 600;
-}
-
-.stat-highlight {
-    display: inline-block;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin: 0 4px;
-}
-
 /* Enhanced Feature List */
 
 .feature-list li {
@@ -299,7 +208,6 @@
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
 }
@@ -307,29 +215,6 @@
 .feature-list li:hover {
     transform: translateX(10px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.feature-list i {
-    color: #22c55e;
-    font-size: 1.3rem;
-    width: 24px;
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.feature-content {
-    flex: 1;
-}
-
-.feature-title {
-    font-weight: 600;
-    color: #344767;
-    margin-bottom: 0.5rem;
-}
-
-.feature-description {
-    color: #64748b;
-    font-size: 0.95rem;
 }
 
 /* Enhanced Image Section */
@@ -362,82 +247,7 @@
     background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9);
 }
 
-.visual-icon {
-    position: absolute;
-    font-size: 6rem;
-    opacity: 0.2;
-}
-
 /* Three Column Layout for Governance */
-.governance-layout {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-}
-
-.governance-header {
-    margin-bottom: 3rem;
-}
-
-.governance-header h1 {
-    font-size: 3.5rem;
-    font-weight: 300;
-    color: #344767;
-    margin-bottom: 1rem;
-}
-
-.governance-header .subtitle {
-    font-size: 1.4rem;
-    color: #64748b;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.governance-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.governance-card {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2.5rem 2rem;
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.governance-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #8b5cf6, #a855f7);
-}
-
-.governance-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-.governance-card h3 {
-    color: #344767;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.governance-card p {
-    color: #64748b;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
 .governance-number {
     color: #8b5cf6;
     font-size: 0.8rem;
@@ -447,60 +257,6 @@
     letter-spacing: 1px;
 }
 
-/* Navigation Arrows */
-.nav-arrow {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    font-size: 1.2rem;
-    color: #344767;
-    backdrop-filter: blur(10px);
-}
-
-.nav-arrow:hover {
-    background: white;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.nav-arrow.prev {
-    left: 30px;
-}
-
-.nav-arrow.next {
-    right: 30px;
-}
-
-.nav-arrow:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
-@media (max-width: 768px) {
-    .sustainability-page { padding-top: 80px; } /* Changed from body to .sustainability-page */
-    .horizontal-container { height: calc(100vh - 80px); }
-    .slide { padding: 1rem; }
-    .slide-content { gap: 2rem; }
-    .intro-content h1 { font-size: 2.8rem; }
-    .intro-subtitle { font-size: 1.2rem; }
-    .content-section h1 { font-size: 2.5rem; }
-    .two-column { grid-template-columns: 1fr; gap: 2rem; }
-    .governance-grid { grid-template-columns: 1fr; }
-    .sustainability-pillars { grid-template-columns: 1fr; }
-    .slide-visual { height: 300px; }
-    .nav-arrow { display: none; }
-    .slide-nav { bottom: 20px; }
-}
 
 .slide-grid {
     display: grid;
@@ -524,30 +280,30 @@
         
         <!-- Slide 1: Intro -->
         <section class="slide">
-            <div class="slide-content intro-content">
-                <div>
-                    <div class="intro-subtitle">Bæredygtighed</div>
-                    <h1>Ansvarlig Vækst Gennem Systematik</h1>
-                    <p>Hos DFMG er bæredygtighed ikke bare et buzzword - det er konkrete handlinger integreret i vores daglige drift. Fra <span class="stat-highlight">100% bilfri transport</span> til systematisk social ansvarlighed.</p>
+            <div class="slide-content1">
+                <div class="text-center">
+                    <div class="subtitle">Bæredygtighed</div>
+                    <div class="title text-charcoal">Ansvarlig Vækst Gennem Systematik</div>
+                    <div class="body text-gray bot-space2">Hos DFMG er bæredygtighed ikke bare et buzzword - det er konkrete handlinger integreret i vores daglige drift. Fra <span class="highlight">100% bilfri transport</span> til systematisk social ansvarlighed.</div>
+                </div>
                     
-                    <div class="sustainability-pillars">
-                        <div class="pillar">
-                            <i class="fas fa-leaf pillar-icon"></i>
+                    <div class="flex flex-3">
+                        <div class="card bg-gradient-white">
+                            <i class="fas fa-leaf text-primary"></i>
                             <h3>Grøn Drift</h3>
                             <p>CO2-neutral facility service gennem bilfri transport og miljøvenlige processer</p>
                         </div>
-                        <div class="pillar">
-                            <i class="fas fa-users pillar-icon"></i>
+                            <div class="card bg-gradient-white">
+                            <i class="fas fa-users text-primary"></i>
                             <h3>Mennesker Først</h3>
                             <p>Værdifulde medarbejdere og stærke lokalsamfundsrelationer</p>
                         </div>
-                        <div class="pillar">
-                            <i class="fas fa-chart-line pillar-icon"></i>
+                            <div class="card bg-gradient-white">
+                            <i class="fas fa-chart-line text-primary"></i>
                             <h3>Systematisk Ansvar</h3>
                             <p>Data-drevet bæredygtighed og transparent rapportering</p>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
 
@@ -556,46 +312,45 @@
             <div class="slide-grid">
                 <div class="content-section">
                     <div class="section-badge">Miljø & Klima</div>
-                    <h1>100% Bilfri Facility Service</h1>
+                    <div class="title text-charcoal">100% Bilfri Facility Service</div>
                     <div class="subtitle">Vi beviser at høj service og grøn drift går hånd i hånd</div>
-                    <p>Siden starten har DFMG kørt <span class="stat-highlight">100% bilfri</span> - ikke som et marketingtrick, men som en fundamental del af vores forretningsmodel. Vores medarbejdere bruger offentlig transport og cykler, hvilket reducerer CO2-udslip betydeligt.</p>
+                    <div class="body text-gray">Siden starten har DFMG kørt <span class="highlight">100% bilfri</span> - ikke som et marketingtrick, men som en fundamental del af vores forretningsmodel. Vores medarbejdere bruger offentlig transport og cykler, hvilket reducerer CO2-udslip betydeligt.</div>
                 </div>
                 <div class="slide-visual environment-visual">
-                    <i class="fas fa-leaf visual-icon"></i>
                     <div>Miljø & Klima<br>Konkrete Handlinger</div>
                 </div>
-                <div class="image-section">
+                <div class="">
                     <ul class="feature-list">
                         <li>
-                            <i class="fas fa-bicycle"></i>
+                            <i class="fas fa-bicycle text-success"></i>
                             <div class="feature-content">
-                                <div class="feature-title">Bilfri Transport Policy</div>
-                                <div class="feature-description">Alle DFMG medarbejdere transporterer sig bilfrit - cykler, offentlig transport og til fods</div>
+                                <h3 class="">Bilfri Transport Policy</h3>
+                                <h4 class="">Alle DFMG medarbejdere transporterer sig bilfrit - cykler, offentlig transport og til fods</h4>
                             </div>
                         </li>
                         <li>
-                            <i class="fas fa-leaf"></i>
-                            <div class="feature-content">
-                                <div class="feature-title">Miljøcertificerede Produkter</div>
-                                <div class="feature-description">Kun EU Ecolabel og Svanen-certificerede rengøringsmidler i vores supply chain</div>
+                            <i class="fas fa-leaf text-success"></i>
+                            <div class="">
+                                <h3 class="">Miljøcertificerede Produkter</h3>
+                                <h4 class="">Kun EU Ecolabel og Svanen-certificerede rengøringsmidler i vores supply chain</h4>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="image-section">
+                <div class="">
                     <ul class="feature-list">
                         <li>
-                            <i class="fas fa-chart-bar"></i>
-                            <div class="feature-content">
-                                <div class="feature-title">CO2-Tracking</div>
-                                <div class="feature-description">Real-time måling og rapportering af vores klimaaftryk gennem vores ERP-system</div>
+                            <i class="fas fa-chart-bar text-success"></i>
+                            <div class="">
+                                <h3 class="">CO2-Tracking</h3>
+                                <h4 class="">Real-time måling og rapportering af vores klimaaftryk gennem vores ERP-system</h4>
                             </div>
                         </li>
                         <li>
-                            <i class="fas fa-recycle"></i>
-                            <div class="feature-content">
-                                <div class="feature-title">Cirkulære Processer</div>
-                                <div class="feature-description">Systematisk affaldssortering og genbrug af materialer i alle vores services</div>
+                            <i class="fas fa-recycle text-success"></i>
+                            <div class="">
+                                <h3 class="">Cirkulære Processer</h3>
+                                <h4 class="">Systematisk affaldssortering og genbrug af materialer i alle vores services</h4>
                             </div>
                         </li>
                     </ul>
@@ -609,89 +364,88 @@
                 <ul class="feature-list">
                     <li>
                         <i class="fas fa-graduation-cap"></i>
-                        <div class="feature-content">
-                            <div class="feature-title">Kontinuerlig Udvikling</div>
-                            <div class="feature-description">Månedlige kvalitetsrapporter og personlig coaching til alle medarbejdere</div>
+                        <div class="">
+                            <h3 class="">Kontinuerlig Udvikling</h3>
+                            <h4 class="">Månedlige kvalitetsrapporter og personlig coaching til alle medarbejdere</h4>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-user-shield"></i>
-                        <div class="feature-content">
-                            <div class="feature-title">Medarbejder Empowerment</div>
-                            <div class="feature-description">Egne systemadgange, dokumentationsansvar og direkte kommunikation med ledelsen</div>
+                        <div class="">
+                            <h3 class="">Medarbejder Empowerment</h3>
+                            <h4 class="">Egne systemadgange, dokumentationsansvar og direkte kommunikation med ledelsen</h4>
                         </div>
                     </li>
                 </ul>
                 <ul class="feature-list">
                     <li>
                         <i class="fas fa-heart"></i>
-                        <div class="feature-content">
-                            <div class="feature-title">Lokalsamfund Engagement</div>
-                            <div class="feature-description">Støtte til lokale uddannelsesprogrammer og mentorskab for unge i facility branchen</div>
+                        <div class="">
+                            <h3 class="">Lokalsamfund Engagement</h3>
+                            <h4 class="">Støtte til lokale uddannelsesprogrammer og mentorskab for unge i facility branchen</h4>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-balance-scale"></i>
-                        <div class="feature-content">
-                            <div class="feature-title">Fair Arbejdsvilkår</div>
-                            <div class="feature-description">Transparente lønstrukturer og arbejdstider baseret på data frem for gætværk</div>
+                        <div class="">
+                            <h3 class="">Fair Arbejdsvilkår</h3>
+                            <h4 class="">Transparente lønstrukturer og arbejdstider baseret på data frem for gætværk</h4>
                         </div>
                     </li>
                 </ul>
                 <div class="slide-visual social-visual">
-                    <i class="fas fa-handshake visual-icon"></i>
                     <div>Social Bæredygtighed<br>Mennesker i Centrum</div>
                 </div>
                 <div class="content-section">
                     <div class="section-badge">Social Bæredygtighed</div>
-                    <h1>Medarbejdere Som Mennesker, Ikke Numre</h1>
+                    <div class="title text-charcoal">Medarbejdere Som Mennesker, Ikke Numre</div>
                     <div class="subtitle">Vores systematik skaber overskud til at investere i mennesker</div>
-                    <p>Når teknologi håndterer administrationen, får vi tid til det vigtige: at værne om vores medarbejdere og bidrage til lokalsamfundet. <span class="stat-highlight">100% af medarbejdere</span> har egne systemadgange og månedlig feedback.</p>
+                    <div class="body text-gray">Når teknologi håndterer administrationen, får vi tid til det vigtige: at værne om vores medarbejdere og bidrage til lokalsamfundet. <span class="highlight">100% af medarbejdere</span> - har egne systemadgange og månedlig feedback.</div>
                 </div>
             </div>
         </section>
 
         <!-- Slide 4: Governance -->
         <section class="slide">
-            <div class="slide-content governance-layout">
-                <div class="governance-header">
+            <div class="slide-content4 governance-layout">
+                <div class="text-center">
                     <div class="section-badge">Governance</div>
-                    <h1>Systematik Skaber Ansvarlighed</h1>
-                    <div class="subtitle">Vores ERP-system sikrer transparens, sporbarhed og ansvarlig forretningsførelse i alle led</div>
+                    <div class="title text-charcoal">Systematik Skaber Ansvarlighed</div>
+                    <div class="subtitle text-charcoal">Vores ERP-system sikrer transparens, sporbarhed og ansvarlig forretningsførelse i alle led</div>
                 </div>
                 
-                <div class="governance-grid">
-                    <div class="governance-card">
+                <div class="grid-2x3">
+                    <div class="card bg-gradient-white text-center">
                         <div class="governance-number">01 - Transparens</div>
                         <h3>Fuldstændig Sporbarhed</h3>
                         <p>Alle opgaver, tider og omkostninger er dokumenteret og tilgængelige. Kunder kan se præcis hvad de betaler for.</p>
                     </div>
                     
-                    <div class="governance-card">
+                    <div class="card bg-gradient-white text-center">
                         <div class="governance-number">02 - Data Sikkerhed</div>
                         <h3>GDPR Compliance</h3>
                         <p>Systematisk håndtering af persondata med fuld overholdelse af databeskyttelsesregler.</p>
                     </div>
                     
-                    <div class="governance-card">
+                    <div class="card bg-gradient-white text-center">
                         <div class="governance-number">03 - Kvalitetssikring</div>
                         <h3>Objektiv Måling</h3>
                         <p>Performance metrics og KPI'er eliminerer subjektive vurderinger og sikrer fair behandling.</p>
                     </div>
                     
-                    <div class="governance-card">
+                    <div class="card bg-gradient-white text-center">
                         <div class="governance-number">04 - Etisk Drift</div>
                         <h3>Fair Prisfastsættelse</h3>
                         <p>Priser baseret på faktisk tidsforbrug og data - ikke gætværk eller tilfældige estimater.</p>
                     </div>
                     
-                    <div class="governance-card">
+                    <div class="card bg-gradient-white text-center">
                         <div class="governance-number">05 - Kontinuitet</div>
                         <h3>Risikostyring</h3>
                         <p>Systematiske backup-procedurer sikrer service selv ved sygdom eller personaleskift.</p>
                     </div>
                     
-                    <div class="governance-card">
+                    <div class="card bg-gradient-white text-center">
                         <div class="governance-number">06 - Innovation</div>
                         <h3>Ansvarlig Teknologi</h3>
                         <p>Teknologi der styrker mennesker fremfor at erstatte dem - fremtidssikret og menneskelig.</p>
@@ -826,7 +580,13 @@
             
             updateDots() {
                 this.dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === this.currentSlide);
+                    // Remove all active classes
+                    dot.classList.remove('active', 'slide-1-active', 'slide-2-active', 'slide-3-active', 'slide-4-active');
+                    
+                    // Add appropriate class for current slide
+                    if (index === this.currentSlide) {
+                        dot.classList.add('active', `slide-${this.currentSlide + 1}-active`);
+                    }
                 });
             }
         }

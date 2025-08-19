@@ -14,6 +14,7 @@
     --success: #22c55e;
     --gray: #565656;
     --white: #ffffff;
+    --governance: #8b5cf6
     
     /* Background Gradients */
     --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
@@ -201,6 +202,14 @@ h4 {
 /* 4 Column Layout (1fr 1fr 1fr 1fr) */
 .flex-4 > * {
     flex: 1;
+}
+
+/* 2 rows of 3 columns grid layout */
+.grid-2x3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
 }
 
 /* Text Alignment Utilities */
