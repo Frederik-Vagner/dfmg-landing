@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    <title>DFMG - Vertical Slider</title>
+    <meta name="description" content="Vertical sliding page template">
     
     <!-- Favicon -->
-    <link rel="icon" href="images/logos/logo.png" type="image/png">
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
     <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
     
@@ -21,204 +21,401 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
+
 <style>
-body { 
-    margin: 0; 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-    padding-top: 100px; 
-    line-height: 1.6;
-}
-
-section{ 
-    max-width: 1200px;
-    margin: auto;
-}
-
-.stability-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-}
-
-.subtitle {
-    color: #3b82f6;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.flexibility-examples {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 12px;
-}
-
-.chat-example {
-    background: white;
-    border-radius: 8px;
+* {
+    margin: 0;
     padding: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+:root {
+   --success: #22c55e;
+}
+
+/* Header Protection - matches working horizontal page */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000 !important;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure slides don't interfere with header */
+.sustainability-page {
+    position: relative;
+    z-index: 1;
+}
+
+.vertical-container {
+    position: relative;
+    z-index: 1;
+}
+
+.slide:nth-child(1) { 
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+.slide:nth-child(2) { 
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+}
+.slide:nth-child(3) { 
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+}
+.slide:nth-child(4) { 
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+}
+.slide:nth-child(5) { 
+    background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%);
+}
+
+.slide-dot.active.slide-1-active {
+    background: #64748b !important;
+}
+
+.slide-dot.active.slide-2-active {
+    background: #22c55e !important;
+}
+
+.slide-dot.active.slide-3-active {
+    background: #3b82f6 !important;
+}
+
+.slide-dot.active.slide-4-active {
+    background: #8b5cf6 !important;
+}
+
+.slide-dot.active.slide-5-active {
+    background: #f59e0b !important;
+}
+
+.sustainability-page { 
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    height: 100vh;
     overflow: hidden;
 }
+        
+/* Vertical Scrolling Container */
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    height: 500vh; /* 5 slides × 100vh each */
+    width: 100vw;
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateY(0); /* Explicitly set initial position */
+}
 
-.chat-header {
-    background: #344767;
-    color: white;
-    padding: 0.75rem;
-    font-weight: 600;
-    font-size: 0.85rem;
+/* Base Slide */
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    padding: 2rem;
+    padding-top: calc(2rem + 80px); /* Account for header in padding instead */
+}
+        
+/* Enhanced Navigation */
+.slide-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 10px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.slide-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(52, 71, 103, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.slide-dot.active {
+    transform: scale(1.3);
+}
+
+.slide-dot:hover {
+    transform: scale(1.1);
+    background: rgba(52, 71, 103, 0.5);
+}
+
+.slide-dot.active:hover {
+    background: #22c55e;
+}
+
+/* Slide Content */
+.slide-content {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.message {
-    margin: 0.75rem 0.75rem 0.05rem 0.75rem;
-    max-width: 85%;
-    position: relative;
-    clear: both;
+/* Empty slide placeholder styling */
+.slide-placeholder {
+    color: #64748b;
+    font-size: 2rem;
+    font-weight: 300;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    border: 2px dashed rgba(100, 116, 139, 0.3);
 }
 
-.message span {
-    display: inline-block;
-    padding: 0.75rem 1rem;
-    border-radius: 18px;
-    font-size: 0.85rem;
-    line-height: 1.4;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sustainability-page { 
+        padding-top: 60px; 
+    }
+    
+    .slide { 
+        height: 100vh;
+        padding: 1rem;
+        padding-top: calc(1rem + 60px); /* Account for header in padding instead */
+    }
+    
+    .slide-nav { 
+        right: 20px; 
+    }
+    
+    .slide-placeholder {
+        font-size: 1.5rem;
+        padding: 2rem 3rem;
+    }
 }
-
-/* Kunde (grå, venstre) */
-.message.customer {
-    float: left;
-    text-align: left;
-}
-
-.message.customer span {
-    background: #e5e7eb;
-    color: #1f2937;
-}
-
-/* DFMG (blå, højre) */
-.message.dfmg {
-    float: right;
-    text-align: right;
-}
-
-.message.dfmg span {
-    background: #6366f1;
-    color: white;
-}
-
-.time {
-    font-size: 0.7rem;
-    color: #6b7280;
-    margin-top: 0.25rem;
-}
-
-.message.dfmg .time {
-    text-align: right;
-}
-
-.message.customer .time {
-    text-align: left;
-}
-
-
-.stability-content p {
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
 </style>
-<body>
+
+<body class="sustainability-page">
     <!-- Header Component -->
     <div id="header"></div>
-        <!-- Stability Section - Opdateret Version -->
-        <section style="max-width: 1200px; margin: 0 auto; align-items: center;">
-            <div class="stability-content">
-                <div class="subtitle">FLEKSIBILITET</div>
-                <h3>Vi tilpasser os jeres rytme</h3>
-                <p>Fra daglige rutiner til akutte behov - vi følger jeres virksomheds tempo og behov.</p>
-                
-                <p>Vores fleksibilitet spænder over tre områder: <strong>Timing</strong> hvor vi arbejder efter arbejdstid, weekender og fleksible starttider så I aldrig bliver forstyrret. <strong>Service tilpasning</strong> hvor vi skalerer op ved events og ned i ferieperioder efter jeres behov. Og <strong>akut respons</strong> hvor vi løser spild, uheld og særlige situationer samme dag når det brenner på.</p>
 
-                <p>Uanset hvad der sker i jeres virksomhed, så finder vi en løsning der passer jer.</p>
+    <!-- Vertical Scrolling Container -->
+    <div class="vertical-container" id="verticalContainer">
+        
+        <!-- Slide 1: Empty -->
+        <section class="slide">
+            <div class="slide-content">
+                <div class="slide-placeholder">
+                    Slide 1 - Empty
+                </div>
             </div>
-            
-            <div class="flexibility-examples">
-                <!-- Eksempel 1: Ekstra service -->
-                <div class="chat-example">
-                    <div class="chat-header">Ekstra Service</div>
-                    <div class="message customer">
-                        <span>Hej! Vi har et stort klientmøde i morgen. Har I mulighed for ekstra grundig rengøring i dag?</span>
-                        <div class="time">14:32</div>
-                    </div>
-                    <div class="message dfmg">
-                        <span>Ja, det kan vi sagtens! Hvad tid passer jer bedst?</span>
-                        <div class="time">14:35</div>
-                    </div>
-                    <div class="message customer">
-                        <span>Efter kl. 17 ville være perfekt</span>
-                        <div class="time">14:36</div>
-                    </div>
-                    <div class="message dfmg">
-                        <span>✅ Booket! Vi kommer kl. 17:30 og gør kontoret møde-klar</span>
-                        <div class="time">14:37</div>
-                    </div>
-                </div>
-
-                <!-- Eksempel 2: Timing ændring -->
-                <div class="chat-example">
-                    <div class="chat-header">Timing Ændring</div>
-                    <div class="message customer">
-                        <span>Vi har et vigtigt morgenmøde i morgen. Kan I komme tidligere end normalt?</span>
-                        <div class="time">16:45</div>
-                    </div>
-                    <div class="message dfmg">
-                        <span>Selvfølgelig! Hvad med kl. 06:00-07:30?</span>
-                        <div class="time">16:48</div>
-                    </div>
-                    <div class="message customer">
-                        <span>Perfekt, tak!</span>
-                        <div class="time">16:49</div>
-                    </div>
-                    <div class="message dfmg">
-                        <span>Vi er der kl. 06:00 sharp 💪</span>
-                        <div class="time">16:50</div>
-                    </div>
-                </div>
-
-                <!-- Eksempel 3: Akut situation -->
-                <div class="chat-example">
-                    <div class="chat-header">Akut Situation</div>
-                    <div class="message customer">
-                        <span>SOS! Kaffe spildt over hele gulvtæppet i receptionen 😱</span>
-                        <div class="time">11:23</div>
-                    </div>
-                    <div class="message dfmg">
-                        <span>På vej! Vi er der om 45 min med specialudstyr</span>
-                        <div class="time">11:25</div>
-                    </div>
-                    <div class="message customer">
-                        <span>I er fantastiske! 🙏</span>
-                        <div class="time">11:26</div>
-                    </div>
-                    <div class="message dfmg">
-                        <span>Opgaven løst! Tæppet er som nyt igen ✨</span>
-                        <div class="time">12:40</div>
-                    </div>
-                </div>
-            </div>      
         </section>
 
-    <!-- Footer Component -->
+        <!-- Slide 2: Empty -->
+        <section class="slide">
+            <div class="slide-content">
+                <div class="slide-placeholder">
+                    Slide 2 - Empty
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Empty -->
+        <section class="slide">
+            <div class="slide-content">
+                <div class="slide-placeholder">
+                    Slide 3 - Empty
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Empty -->
+        <section class="slide">
+            <div class="slide-content">
+                <div class="slide-placeholder">
+                    Slide 4 - Empty
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Empty -->
+        <section class="slide">
+            <div class="slide-content">
+                <div class="slide-placeholder">
+                    Slide 5 - Empty
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+        <div class="slide-dot active" data-slide="0"></div>
+        <div class="slide-dot" data-slide="1"></div>
+        <div class="slide-dot" data-slide="2"></div>
+        <div class="slide-dot" data-slide="3"></div>
+        <div class="slide-dot" data-slide="4"></div>
+    </div>
+
     <div id="footer"></div>
+
     <!-- Component loader -->
     <script src="../../js/components.js" defer></script>
+    <script>
+        class VerticalSlider {
+            constructor() {
+                this.container = document.getElementById('verticalContainer');
+                this.dots = document.querySelectorAll('.slide-dot');
+                this.currentSlide = 0;
+                this.totalSlides = 5;
+                this.isAnimating = false;
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupNavigation();
+                this.setupKeyboard();
+                this.setupWheel();
+                this.setupTouch();
+                this.updateArrows();
+            }
+            
+            setupNavigation() {
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+            }
+            
+            setupKeyboard() {
+                document.addEventListener('keydown', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    switch(e.key) {
+                        case 'ArrowRight':
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            this.nextSlide();
+                            break;
+                        case 'ArrowLeft':
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            this.prevSlide();
+                            break;
+                    }
+                });
+            }
+            
+            setupWheel() {
+                this.container.addEventListener('wheel', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    e.preventDefault();
+                    
+                    if (e.deltaY > 50) {
+                        this.nextSlide();
+                    } else if (e.deltaY < -50) {
+                        this.prevSlide();
+                    }
+                }, { passive: false });
+            }
+            
+            setupTouch() {
+                let startY = 0;
+                
+                this.container.addEventListener('touchstart', (e) => {
+                    startY = e.touches[0].clientY;
+                });
+                
+                this.container.addEventListener('touchend', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    const endY = e.changedTouches[0].clientY;
+                    const diff = startY - endY;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+            }
+            
+            goToSlide(index) {
+                if (index === this.currentSlide || this.isAnimating) return;
+                
+                this.isAnimating = true;
+                this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+                
+                const translateY = -this.currentSlide * 100;
+                this.container.style.transform = `translateY(${translateY}vh)`;
+                
+                this.updateDots();
+                this.updateArrows();
+                
+                setTimeout(() => {
+                    this.isAnimating = false;
+                }, 800);
+            }
+            
+            nextSlide() {
+                if (this.currentSlide < this.totalSlides - 1) {
+                    this.goToSlide(this.currentSlide + 1);
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.goToSlide(this.currentSlide - 1);
+                }
+            }
+            
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    // Remove all active classes
+                    dot.classList.remove('active', 'slide-1-active', 'slide-2-active', 'slide-3-active', 'slide-4-active', 'slide-5-active');
+                    
+                    // Add appropriate class for current slide
+                    if (index === this.currentSlide) {
+                        dot.classList.add('active', `slide-${this.currentSlide + 1}-active`);
+                    }
+                });
+            }
+            
+            updateArrows() {
+                
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = new VerticalSlider();
+            
+            // Handle URL fragments - customize these as needed
+            const hash = window.location.hash;
+            if (hash === '#slide2') slider.goToSlide(1);
+            else if (hash === '#slide3') slider.goToSlide(2);
+            else if (hash === '#slide4') slider.goToSlide(3);
+            else if (hash === '#slide5') slider.goToSlide(4);
+            else slider.goToSlide(0); // Ensure we start at slide 0 if no hash
+        });
+    </script>
 </body>
 </html>
-

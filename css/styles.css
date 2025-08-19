@@ -14,7 +14,7 @@
     --success: #22c55e;
     --gray: #565656;
     --white: #ffffff;
-    --governance: #8b5cf6
+    --governance: #8b5cf6;
     
     /* Background Gradients */
     --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
@@ -319,7 +319,6 @@ h4 {
 .card{
     position: relative;
     border-radius: var(--radius-normal);
-    padding: 2rem;
     box-shadow: var(--shadow-lg);
 }
 
