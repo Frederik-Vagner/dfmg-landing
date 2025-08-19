@@ -26,40 +26,24 @@
 </head>
 
 <style>
-.badge {
-    display: inline-block;
+.slide:nth-child(2) .badge {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.slide:nth-child(3) .badge {
+    background: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+}
+
+.slide:nth-child(4) .badge {
     background: rgba(34, 197, 94, 0.1);
     color: #22c55e;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
 }
 
-.quote {
-    background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(34, 197, 94, 0.1));
-    padding: 1rem;
-    border-radius: 12px;
-    margin: 1rem 0;
-    font-style: italic;
-    color: #15803d;
-}
-
-.grid-2x2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-}
-
-.grid-3x2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
+.slide:nth-child(5) .badge {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
 }
 
 * {
@@ -94,41 +78,46 @@
     z-index: 1;
 }
 
-/* Governance Color Scheme - Professional Blues & Greens */
+/* Enhanced Governance Color Scheme */
 .slide:nth-child(1) { 
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 50%, #cbd5e1 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    color: #f8fafc;
 }
 .slide:nth-child(2) { 
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    color: #e2e8f0;
 }
 .slide:nth-child(3) { 
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+    background: linear-gradient(135deg, #164e63 0%, #0891b2 50%, #0284c7 100%);
+    color: #f0f9ff;
 }
 .slide:nth-child(4) { 
-    background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%);
+    background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+    color: #f0fdf4;
 }
 .slide:nth-child(5) { 
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #3730a3 0%, #4338ca 50%, #4f46e5 100%);
+    color: #f8fafc;
 }
 
 .slide-dot.active.slide-1-active {
-    background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
 }
 
 .slide-dot.active.slide-2-active {
-    background: #22c55e !important;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
 }
 
 .slide-dot.active.slide-3-active {
-    background: #3b82f6 !important;
+    background: linear-gradient(135deg, #164e63 0%, #0891b2 50%, #0284c7 100%);
 }
 
 .slide-dot.active.slide-4-active {
-    background: #8b5cf6 !important;
+    background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
 }
 
 .slide-dot.active.slide-5-active {
-    background: #f59e0b !important;
+    background: linear-gradient(135deg, #3730a3 0%, #4338ca 50%, #4f46e5 100%);
 }
 
 .sustainability-page { 
@@ -309,18 +298,16 @@
     background: linear-gradient(135deg, #6366f1, #4f46e5, #4338ca);
 }
 
-.slide1{
-    color: #4285f4;
+.slide1 .quality-number{
+    color: #60a5fa;
 }
 
-.slide4{
-    color: #f59e0b;
+.slide4 .quality-number{
+    color: #34d399;
 }
 
-
-
-.slide5{
-    color: #ef4444;
+.slide5 .quality-number{
+    color: #a78bfa;
 }
 
 .step-number {
@@ -365,6 +352,13 @@
     .slide-nav { right: 20px; }
 }
 
+.quality-number {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .sustainability-page { 
@@ -388,6 +382,30 @@
 }
 
 
+.card-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.card-horizontal i {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.card-horizontal .card-content {
+    flex: 1;
+}
+
+.card-horizontal .card-content h4 {
+    margin-bottom: 0.5rem;
+}
+
+.card-horizontal .card-content p {
+    margin-bottom: 0;
+}
+
 </style>
 
 <body class="sustainability-page">
@@ -399,7 +417,7 @@
         
         <!-- Slide 1: Empty -->
         <section class="slide">
-            <div class="slide-content" style="max-width: 1000px;">
+            <div class="slide-content-normal">
                 <div>
                     <div class="badge">Governance</div>
                     <h1>Systematik Skaber Ansvarlighed</h1>
@@ -407,22 +425,22 @@
                     
                     <div class="flex">
                         <div class="card bg-gradient-white border-top-charcoal p-1">
-                            <i class="fas fa-eye text-charcoal"></i>
+                            <i class="fas fa-eye"></i>
                             <h3>Fuldstændig Transparens</h3>
                             <p>Alt dokumenteret og tilgængeligt</p>
                         </div>
                         <div class="card bg-gradient-white border-top-charcoal p-1">
-                            <i class="fas fa-handshake text-charcoal"></i>
+                            <i class="fas fa-handshake"></i>
                             <h3>Åben Kommunikation</h3>
                             <p>Deler tanker og beslutninger</p>
                         </div>
                         <div class="card bg-gradient-white border-top-charcoal p-1">
-                            <i class="fas fa-shield-alt text-charcoal"></i>
+                            <i class="fas fa-shield-alt"></i>
                             <h3>Fair Konkurrence</h3>
                             <p>Sort arbejde tolereres ikke</p>
                         </div>
                         <div class="card bg-gradient-white border-top-charcoal p-1">
-                            <i class="fas fa-chart-line text-charcoal"></i>
+                            <i class="fas fa-chart-line"></i>
                             <h3>Data-Drevet Ansvar</h3>
                             <p>Beslutninger baseret på fakta</p>
                         </div>
@@ -433,95 +451,107 @@
 
         <!-- Slide 2: Empty -->
         <section class="slide">
-            <div class="flex flex-2">
-                <div class="text-center">
-                    <div class="badge">Data & Transparens</div>
-                    <h1>GDPR Excellence Som Konkurrencefordel</h1>
-                    <div class="text-primary">Når datasikkerhed bliver til tillid og troværdighed</div>
-                    <p>Vi har kigget på de største tech-virksomheder for at sikre os GDPR compliance på højeste niveau. <span class="text-charcoal">Alle data</span> er beskyttet, sporet og tilgængeligt efter behov.</p>
-                    
-                    <div class="grid">
-                        <div class="card bg-gradient-white flex p-1">
-                            <i class="fas fa-lock"></i>
-                            <div class="">
-                                <div class="">Rollbaseret Adgang</div>
-                                <div class="">Kun relevante medarbejdere har adgang til kundedata og adgangskoder</div>
+            <div class="slide-content-wide">
+                <div class="flex flex-2">
+                    <div class="text-center">
+                        <div class="badge">Data & Transparens</div>
+                        <h1>GDPR Excellence Som Konkurrencefordel</h1>
+                        <div class="subtitle">Når datasikkerhed bliver til tillid og troværdighed</div>
+                        <div class="body">Vi har kigget på de største tech-virksomheder...</div>
+                        
+                        <div class="grid">
+                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                                <div class="card-horizontal">
+                                    <i class="fas fa-lock text-primary"></i>
+                                    <div class="card-content">
+                                        <h4>Rollbaseret Adgang</h4>
+                                        <p>Kun relevante medarbejdere har adgang til kundedata og adgangskoder</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card bg-gradient-white flex p-1">
-                            <i class="fas fa-key"></i>
-                            <div class="">
-                                <div class="">Nøgle-Inventar Tracking</div>
-                                <div class="">Systematisk sporbarhed af hvem der har hvilke nøgler med timestamps</div>
+                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                                <div class="card-horizontal">
+                                    <i class="fas fa-key text-primary"></i>
+                                    <div class="card-content">
+                                        <h4>Nøgle-Inventar Tracking</h4>
+                                        <p>Systematisk sporbarhed af hvem der har hvilke nøgler med timestamps</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card bg-gradient-white flex p-1">
-                            <i class="fas fa-cloud"></i>
-                            <div class="">
-                                <div class="">Sikker Hosting</div>
-                                <div class="">Heroku + AWS infrastruktur med automatiske backups og 30-dages sletning</div>
+                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                                <div class="card-horizontal">
+                                    <i class="fas fa-cloud text-primary"></i>
+                                    <div class="card-content">
+                                        <h4>Sikker Hosting</h4>
+                                        <p>Heroku + AWS infrastruktur med automatiske backups og 30-dages sletning</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card bg-gradient-white flex p-1">
-                            <i class="fas fa-file-contract"></i>
-                            <div class="">
-                                <div class="">Digital Kontrakter</div>
-                                <div class="">Integreret kontrakthåndtering fjerner eksterne leverandører og øger sikkerheden</div>
+                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                                <div class="card-horizontal">
+                                    <i class="fas fa-file-contract text-primary"></i>
+                                    <div class="card-content">
+                                        <h4>Digital Kontrakter</h4>
+                                        <p>Integreret kontrakthåndtering fjerner eksterne leverandører og øger sikkerheden</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div style="align-content: center;"> 
+                        <div class="photo">
+                            <div>photo</div>
+                        </div>
+                    </div>           
                 </div>
-                <div style="align-content: center;"> 
-                    <div class="photo">
-                        <div>photo</div>
-                    </div>
-                </div>           
             </div>
         </section>
 
         <!-- Slide 3: Empty -->
         <section class="slide">
-            <div class="flex flex-2">
-                <div class="grid">
-                    <div class="card bg-gradient-white flex p-1">
-                        <i class="fas fa-calculator"></i>
-                        <div class="">
-                            <div class="">Åben Prisfastsættelse</div>
-                            <div class="">Kunder kan se præcis hvordan priser beregnes ud fra tidsdata og omkostninger</div>
+            <div class="slide-content-wide">
+                <div class="flex flex-2">
+                    <div class="grid">
+                        <div class="card bg-gradient-white flex p-1">
+                            <i class="fas fa-calculator"></i>
+                            <div class="">
+                                <div class="">Åben Prisfastsættelse</div>
+                                <div class="">Kunder kan se præcis hvordan priser beregnes ud fra tidsdata og omkostninger</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white flex p-1">
+                            <i class="fas fa-users"></i>
+                            <div class="">
+                                <div class="">Involvering I Beslutninger</div>
+                                <div class="">Medarbejdere forstår virksomhedens udfordringer og tanker bag beslutninger</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white flex p-1">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="">
+                                <div class="">Klager Som Læremuligheder</div>
+                                <div class="">"Det er faktisk det vi gror mest af" - systematisk håndtering og forbedring</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white flex p-1">
+                            <i class="fas fa-clock"></i>
+                            <div class="">
+                                <div class="">Same-Day Respons</div>
+                                <div class="">Tilgængelige 04:00-23:00 alle dage med øjeblikkelig problemløsning</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card bg-gradient-white flex p-1">
-                        <i class="fas fa-users"></i>
-                        <div class="">
-                            <div class="">Involvering I Beslutninger</div>
-                            <div class="">Medarbejdere forstår virksomhedens udfordringer og tanker bag beslutninger</div>
+                    <div style="align-content: center;"> 
+                        <div class="badge">Åben Kommunikation</div>
+                        <h1>Transparens Som Våben</h1>
+                        <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
+                        <p>Mange virksomheder skjuler deres processer. Vi gør det modsatte - <span class="highlight">åbenhed skaber tillid</span> og differentiere os fra konkurrenterne.</p>
+                        <div class="quote border-left-charcoal text-white">
+                            "Jeg er rimelig åben overfor mine kunder og giver dem også gerne mine mellemregninger på hvorfor prisen er som den er."
                         </div>
-                    </div>
-                    <div class="card bg-gradient-white flex p-1">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <div class="">
-                            <div class="">Klager Som Læremuligheder</div>
-                            <div class="">"Det er faktisk det vi gror mest af" - systematisk håndtering og forbedring</div>
+                        <div class="photo">
+                            <div>photo</div>
                         </div>
-                    </div>
-                    <div class="card bg-gradient-white flex p-1">
-                        <i class="fas fa-clock"></i>
-                        <div class="">
-                            <div class="">Same-Day Respons</div>
-                            <div class="">Tilgængelige 04:00-23:00 alle dage med øjeblikkelig problemløsning</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="align-content: center;"> 
-                    <div class="badge">Åben Kommunikation</div>
-                    <h1>Transparens Som Våben</h1>
-                    <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
-                    <p>Mange virksomheder skjuler deres processer. Vi gør det modsatte - <span class="highlight-text">åbenhed skaber tillid</span> og differentiere os fra konkurrenterne.</p>
-                    <div class="quote border-left-charcoal">
-                        "Jeg er rimelig åben overfor mine kunder og giver dem også gerne mine mellemregninger på hvorfor prisen er som den er."
-                    </div>
-                    <div class="photo">
-                        <div>photo</div>
                     </div>
                 </div>
             </div>
@@ -529,7 +559,7 @@
 
         <!-- Slide 4: Empty -->
         <section class="slide">
-            <div class="slide-content full-width">
+            <div class="slide-content-wide">
                 <div>
                     <div class="badge">Kvalitet & Kontinuitet</div>
                     <h1>Systematisk Kvalitetssikring</h1>
@@ -537,9 +567,11 @@
                     
                     <div class="grid-2x3 bot-space2">
                         <div class="card bg-gradient-white p-1">
-                            <div class="quality-number slide4">100%</div>
-                            <h5>Kvalitetsgaranti</h5>
-                            <p>Gratis rettelser så hurtigt som muligt hvis standarden ikke nås</p>
+                            <div class="stat">
+                                <div class="stat-number text-success">100%</div>
+                                <div class="stat-label">Kvalitetsgaranti</div>
+                                <div class="stat-description">Gratis rettelser så hurtigt som muligt hvis standarden ikke nås</div>
+                            </div>
                         </div>
 
                         <div class="card bg-gradient-white p-1">
@@ -585,79 +617,77 @@
                             <p>GDPR-compliant sletning med mulighed for forlængelse ved lovkrav</p>
                         </div>
                     </div>
-                    
-                    <div class="quote" style="margin-top: 0.5rem;">
+                    <div class="quote">
                         "Det er mit mål at hjælpe dem så meget som muligt med det de gerne vil opnå - også selvom det ikke er i min virksomhed."
-                    </div>
-                    
+                    </div> 
                 </div>
             </div>
         </section>
 
-        
-
         <!-- Slide 5: Empty -->
         <section class="slide">
-            <div class="flex flex-2">
-                <div style="align-content: center;"> 
-                    <div class="badge">Åben Kommunikation</div>
-                    <h1>Transparens Som Våben</h1>
-                    <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
-                    <p>Mange virksomheder skjuler deres processer. Vi gør det modsatte - <span class="highlight-text">åbenhed skaber tillid</span> og differentiere os fra konkurrenterne.</p>
-                    <div class="grid-2x2">
-                        <div class="card bg-gradient-white border-bottom-charcoal p-1">
-                            <i class="fas fa-balance-scale"></i>
-                            <div class="">
-                                <div class="">Fair Konkurrence</div>
-                                <div class="">Står for etisk forretningsførelse og afslører unfair practices</div>
+            <div class="slide-content-wide">
+                <div class="flex flex-2">
+                    <div style="align-content: center;"> 
+                        <div class="badge">Åben Kommunikation</div>
+                        <h1>Transparens Som Våben</h1>
+                        <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
+                        <p>Mange virksomheder skjuler deres processer. Vi gør det modsatte - <span class="highlight">åbenhed skaber tillid</span> og differentiere os fra konkurrenterne.</p>
+                        <div class="grid-2x2">
+                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                                <i class="fas fa-balance-scale"></i>
+                                <div class="">
+                                    <div class="">Fair Konkurrence</div>
+                                    <div class="">Står for etisk forretningsførelse og afslører unfair practices</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card bg-gradient-white border-bottom-charcoal p-1">
-                            <i class="fas fa-cogs"></i>
-                            <div class="">
-                                <div class="">Strukturer, Ikke Kontrol</div>
-                                <div class="">ERP-systemet bygger governance-strukturer ind, men brugerne vælger selv at følge dem</div>
+                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                                <i class="fas fa-cogs"></i>
+                                <div class="">
+                                    <div class="">Strukturer, Ikke Kontrol</div>
+                                    <div class="">ERP-systemet bygger governance-strukturer ind, men brugerne vælger selv at følge dem</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card bg-gradient-white border-bottom-charcoal p-1">
-                            <i class="fas fa-users-cog"></i>
-                            <div class="">
-                                <div class="">Supervisor Empowerment</div>
-                                <div class="">Involverer medarbejdere i virksomhedens udfordringer så de kan handle selvstændigt</div>
+                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                                <i class="fas fa-users-cog"></i>
+                                <div class="">
+                                    <div class="">Supervisor Empowerment</div>
+                                    <div class="">Involverer medarbejdere i virksomhedens udfordringer så de kan handle selvstændigt</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card bg-gradient-white border-bottom-charcoal p-1">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                            <div class="">
-                                <div class="">Skalerbar Governance</div>
-                                <div class="">Systematikken sikrer at DFMG-værdierne bevares når virksomheden vokser</div>
+                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <div class="">
+                                    <div class="">Skalerbar Governance</div>
+                                    <div class="">Systematikken sikrer at DFMG-værdierne bevares når virksomheden vokser</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="flex" style="margin-top: 3rem;">
-                        <div class="card bg-gradient-white p-1">
-                            <div class="flex">
-                                <i class="fas fa-building text-primary"></i>
-                                <h3>Fremtidens Facility Management</h3>
+                    <div>
+                        <div class="flex">
+                            <div class="card bg-gradient-white p-1">
+                                <div class="flex">
+                                    <i class="fas fa-building text-primary"></i>
+                                    <h3>Fremtidens Facility Management</h3>
+                                </div>
+                                <p>Når vi sælger ERP-systemet bygger vi governance-principper ind fra start. Strukturer der guider mod ansvarlig forretningsførelse.</p>
                             </div>
-                            <p>Når vi sælger ERP-systemet bygger vi governance-principper ind fra start. Strukturer der guider mod ansvarlig forretningsførelse.</p>
-                        </div>
-                        
-                        <div class="card bg-gradient-white p-1">
-                            <div class="flex">
-                                <i class="fas fa-building text-primary"></i>
-                                <h3>Enabler, Ikke Dommer</h3>
+                            
+                            <div class="card bg-gradient-white p-1">
+                                <div class="flex">
+                                    <i class="fas fa-building text-primary"></i>
+                                    <h3>Enabler, Ikke Dommer</h3>
+                                </div>
+                                <p>Vi skaber værktøjer til ansvarlig drift, men tvinger ikke andre til at følge vores værdier. Valget er deres - konsekvenserne også.</p>
                             </div>
-                            <p>Vi skaber værktøjer til ansvarlig drift, men tvinger ikke andre til at følge vores værdier. Valget er deres - konsekvenserne også.</p>
                         </div>
-                    </div>
-                    <div class="quote border-left-charcoal">
-                        "Sort arbejde tolereres ikke, da virksomheder som gør sig i dette ødelægger det for alle os andre - og det vil være noget som jeg vil afsløre hvis opdaget."
-                    </div>
-                    <div class="photo">
-                        <div>photo</div>
+                        <div class="quote border-left-charcoal">
+                            "Sort arbejde tolereres ikke, da virksomheder som gør sig i dette ødelægger det for alle os andre - og det vil være noget som jeg vil afsløre hvis opdaget."
+                        </div>
+                        <div class="photo">
+                            <div>photo</div>
+                        </div>
                     </div>
                 </div>
             </div>
