@@ -156,6 +156,11 @@ body {
     font-size: var(--font-size-discalmer); 
 }
 
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
 h1 { 
     font-size: 2.5rem; 
     font-weight: var(--font-weight-semibold); 
@@ -200,7 +205,7 @@ h4 {
 
 /* Text Alignment Utilities */
 .text-left { text-align: left; }
-.text-center { text-align: center; }
+.text-center { text-align: center;}
 .text-right { text-align: right; }
 
 .text-primary { color: var(--primary); }
@@ -214,6 +219,7 @@ h4 {
 .bg-gradient-white { background: var(--bg-gradient-white); }
 .bg-gradient-charcoal { background: var(--bg-gradient-charcoal); }
 
+.radius-normal { border-radius: var(--radius-normal); }
 
 .bot-space { margin-bottom: 1rem; }
 .bot-space2 { margin-bottom: 2rem; }
@@ -226,6 +232,38 @@ h4 {
 .p-1 { padding: 1rem; }
 .p-2 { padding: 2rem; }
 .p-3 { padding: 3rem; }
+
+
+/* Border utilities - all directions with 4 colors */
+.border-success { border: 4px solid var(--success); }
+.border-primary { border: 4px solid var(--primary); }
+.border-charcoal { border: 4px solid var(--charcoal); }
+.border-white { border: 4px solid var(--white); }
+
+/* Top border with colors */
+.border-top-success { border-top: 4px solid var(--success); }
+.border-top-primary { border-top: 4px solid var(--primary); }
+.border-top-charcoal { border-top: 4px solid var(--charcoal); }
+.border-top-white { border-top: 4px solid var(--white); }
+
+/* Bottom border with colors */
+.border-bottom-success { border-bottom: 4px solid var(--success); }
+.border-bottom-primary { border-bottom: 4px solid var(--primary); }
+.border-bottom-charcoal { border-bottom: 4px solid var(--charcoal); }
+.border-bottom-white { border-bottom: 4px solid var(--white); }
+
+/* Left border with colors */
+.border-left-success { border-left: 4px solid var(--success); }
+.border-left-primary { border-left: 4px solid var(--primary); }
+.border-left-charcoal { border-left: 4px solid var(--charcoal); }
+.border-left-white { border-left: 4px solid var(--white); }
+
+/* Right border with colors */
+.border-right-success { border-right: 4px solid var(--success); }
+.border-right-primary { border-right: 4px solid var(--primary); }
+.border-right-charcoal { border-right: 4px solid var(--charcoal); }
+.border-right-white { border-right: 4px solid var(--white); }
+
 
 
 .cta-box {
@@ -274,10 +312,14 @@ h4 {
     border-radius: var(--radius-normal);
     padding: 2rem;
     box-shadow: var(--shadow-lg);
-    border: 1px solid #e2e8f0
-
 }
 
+.story-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    border-left: 4px solid var(--primary);
+}
 
 
 .list{
