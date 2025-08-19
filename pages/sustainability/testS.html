@@ -40,8 +40,7 @@
 }
 
 .quote {
-    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.1));
-    border-left: 4px solid #22c55e;
+    background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(34, 197, 94, 0.1));
     padding: 1rem;
     border-radius: 12px;
     margin: 1rem 0;
@@ -89,23 +88,23 @@
 }
 
 .slide:nth-child(1) { 
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 50%, #e9d5ff 100%);
 }
 .slide:nth-child(2) { 
-    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%)
 }
 .slide:nth-child(3) { 
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
 }
 .slide:nth-child(4) { 
-    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #fdba74 100%)
 }
 .slide:nth-child(5) { 
-    background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%);
+    background: linear-gradient(135deg, #fef2f2 0%, #fecaca 50%, #fca5a5 100%)
 }
 
 .slide-dot.active.slide-1-active {
-    background: #64748b !important;
+    background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important;
 }
 
 .slide-dot.active.slide-2-active {
@@ -302,6 +301,14 @@
     background: linear-gradient(135deg, #6366f1, #4f46e5, #4338ca);
 }
 
+.slide1{
+    color: #4285f4;
+}
+
+.slide5{
+    color: #ef4444;
+}
+
 .step-number {
     width: 25px;
     height: 25px;
@@ -380,25 +387,25 @@
         <section class="slide">
             <div class="slide-content" style="max-width: 1000px;">
                 <div>
-                    <div class="badge">Miljø & Klima</div>
-                    <h1 class="text-success">Grøn Drift Som Standard</h1>
-                    <div class="text-center bot-space2">Siden dag ét har DFMG bygget miljøhensyn ind i alt vi gør. Ikke som en eftertanke, men som fundamentet for hvordan vi driver forretning.</div>
+                    <div class="badge slide1">Social Bæredygtighed</div>
+                    <h1 class="slide1">Mennesker Først - Altid</h1>
+                    <div class="text-center bot-space2">Hos DFMG er social bæredygtighed ikke politik - det er konkrete handlinger der ændrer menneskers liv. Vi investerer i hjerner, bygger relationer og skaber ægte vækstmuligheder.</div>
                     
                     <div class="flex">
-                        <div class="card bg-gradient-white border-top-success p-2">
-                            <i class="fas fa-bicycle text-success"></i>
-                            <h3>100% Bilfri Drift</h3>
-                            <p>Fra leverandør til kunde - hele supply chain kører grønt</p>
+                        <div class="card bg-gradient-white border-top-primary p-2">
+                            <i class="fas fa-graduation-cap slide1"></i>
+                            <h3>Uddannelse & Vækst</h3>
+                            <p>Medarbejdere studerer ved siden af arbejdet med fuld støtte</p>
                         </div>
-                        <div class="card bg-gradient-white border-top-success p-2">
-                            <i class="fas fa-recycle text-success"></i>
-                            <h3>Cirkulær Økonomi</h3>
-                            <p>Genbrug, markedsplads og minimal spild i alle processer</p>
+                        <div class="card bg-gradient-white border-top-primary p-2">
+                            <i class="fas fa-handshake slide1"></i>
+                             <h3>Ægte Relationer</h3>
+                            <p>Kunder og medarbejdere hilser på hinanden udenfor arbejdstid</p>
                         </div>
-                        <div class="card bg-gradient-white border-top-success p-2">
-                            <i class="fas fa-leaf text-success"></i>
-                            <h3>Ansvarlig Kemi</h3>
-                            <p>Svanemærkede produkter og smart kemikalievalg</p>
+                        <div class="card bg-gradient-white border-top-primary p-2">
+                            <i class="fas fa-rocket slide1"></i>
+                            <h3>Iværksætter Mentoring</h3>
+                            <p>Hjælper medarbejdere med at starte egen forretning</p>
                         </div>
                     </div>
                 </div>
@@ -408,159 +415,136 @@
         <!-- Slide 2: Empty -->
         <section class="slide">
             <div class="flex flex-2">
-                <div class="">
-                    <div class="badge">Bilfri Supply Chain</div>
-                    <h1>100% Bilfri - Hele Vejen</h1>
-                    <div class="">Fra leverandør til kunde på cykel og offentlig transport</div>
-                    <p>Vi har ikke bare bilfri medarbejdertransport - <span class="text-success">hele vores supply chain</span> kører grønt. Dansk leverandør sender til vores lager, og derfra distribuerer vi alt på cykel.</p>
-                    <div class="photo">
-                        <P>PHOTO</P>
-                    </div>
+                <div class="text-center">
+                    <div class="badge">Integration & Empowerment</div>
+                    <h1>Deres Hjerne Er Det Vigtigste</h1>
+                    <div class="text-primary">Vi ser potentiale hvor andre ser billig arbejdskraft</div>
+                    <p>Mange af vores medarbejdere kommer fra Asien for at søge bedre muligheder. De har ofte akademiske baggrunde, men møder vanskeligheder med at konkurrere på det danske arbejdsmarked.</p>
                     <div class="quote">
-                        "Jeg er vokset op på en cykel, så jeg er superkomfortabel med at køre rundt i København med store tasker og 4-5 transportposer på styret."
+                        "Jeg tror virkelig på mennesket og at man kan lære alt uanset baggrund, hvis de bare har det rigtige mindset til tingene."
                     </div>
-                </div>
-                <div class="grid"> 
-                    <div class="card bg-gradient-white p-2">
-                        <i class="fas fa-truck text-success"></i>
-                        <div class="">
-                            <div class="">Dansk Leverandør</div>
-                            <div class="">Korte transportveje fra leverandør til vores centrale lager</div>
+                    <div class="grid">
+                        <div class="card bg-gradient-white p-1">
+                                <i class="fas fa-swimmer slide1"></i>
+                            <div class="">
+                                <div class="">Svømmeundervisning</div>
+                                    <div class="">Vi lærer medarbejdere at svømme - noget alle lærer i Danmark, men ikke normalt i deres hjemlande</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                                <i class="fas fa-user-graduate slide1"></i>
+                            <div class="">
+                                <div class="">Business Student Partnership</div>
+                                    <div class="">En medarbejder studerer business, og vi håber han kan blive partner når han er færdig</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-brain slide1"></i>
+                            <div class="">Smart Work Philosophy</div>
+                            <div class="">"Smart not hard" - lærer at tænke og arbejde strategisk frem for bare at udføre</div>
                         </div>
                     </div>
-                    <div class="card bg-gradient-white p-2">
-                        <i class="fas fa-bicycle text-success"></i>
-                        <div class="">
-                            <div class="">Cykel Distribution</div>
-                            <div class="">Store tasker + transportposer på styret giver serious cargo capacity</div>
-                        </div>
+                </div> 
+                <div style="align-content: center;"> 
+                    <div class="photo">
+                        <div>photo</div>
                     </div>
-                    <div class="card bg-gradient-white p-2">
-                        <i class="fas fa-subway text-success"></i>
-                        <div class="">Offentlig Transport</div>
-                        <div class="">Alle medarbejdere bruger offentlig transport eller cykel til arbejde</div>
+                    <div class="photo">
+                        <div>photo</div>
                     </div>
-                    <div class="card bg-gradient-white p-2">
-                        <i class="fas fa-map-marker-alt text-success"></i>
-                        <div class="">
-                            <div class="">København Focus</div>
-                            <div class="">Perfekt størrelse til cykel-logistik - effektivt og miljøvenligt</div>
-                        </div>
-                    </div>
-                </div>              
+                </div>           
             </div>
         </section>
 
         <!-- Slide 3: Empty -->
         <section class="slide">
-            <div class="slide-content two-column1">
-                <div class="grid" style="align-content: center">
-                    <div class="photo">
-                        <P>PHOTO</P>
-                    </div>
-                    <div class="photo">
-                        <P>PHOTO</P>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="badge">Cirkulær Økonomi</div>
-                    <h1>Fra Affald Til Værdi</h1>
-                    <div class="">Markedsplads hvor ting får nyt liv</div>
-                    <p class="space2">Vi har skabt en intern markedsplads hvor vores kunder kan aflevere ting de ikke længere har brug for. Vi <span class="text-primary">rengør og istandsætter</span> dem, så andre kan give dem nyt liv.</p>
-                    
-                    <div class="flex bot-space2">
+            <div class="flex flex-2">
+                <div class="grid">
                         <div class="card bg-gradient-white p-1">
-                            <div class="step-number">1</div>
-                            <h3>Afhentning</h3>
-                            <p>Kunder stiller elektronik, kontorting og møbler til rådighed</p>
-                        </div>
-                        
-                        <div class="card bg-gradient-white p-1">
-                            <div class="step-number">2</div>
-                            <h3>Istandsættelse</h3>
-                            <p>Vi rengør, reparerer og fotograferer tingene professionelt</p>
-                        </div>
-                        
-                        <div class="card bg-gradient-white p-1">
-                            <div class="step-number">3</div>
-                            <h3>Nyt Liv</h3>
-                            <p>Andre kunder kan få tingene og give dem ny værdi</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex" style="display: flex; gap: 1rem;">
-                        <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-laptop text-primary"></i>
-                            <div class="">
-                                <div class="">Mest Populært: Elektronik</div>
-                                <div class="">Computere, skærme og kontorelectronik får ofte nyt liv hos andre virksomheder</div>
+                            <i class="fas fa-smile text-primary"></i>
+                            <div class="story-content">
+                                <div class="">"Smil og Hils På Dem"</div>
+                                <div class="">Vi lærer medarbejdere at være menneskelige - ikke sky og bange som andre i branchen</div>
                             </div>
                         </div>
                         <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-tshirt text-primary"></i>
-                            <div class="">
-                                <div class="">Kogevask & Genbrug</div>
-                                <div class="">Alle klude og mopper kogevaskes og genbruges - minimal tekstilspild</div>
+                            <i class="fas fa-coffee text-primary"></i>
+                            <div class="story-content">
+                                <div class="">Møder Udenfor Arbejdstid</div>
+                                <div class="">Kunder fortæller om at møde vores folk på gaden og hilse - det er ægte relationer</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-hands-helping text-primary"></i>
+                            <div class="story-content">
+                                <div class="">Kunder Hjælper Aktivt</div>
+                                <div class="">Lukker vinduer, holder rent, spørger om de er i vejen - det sker kun ved gensidig respekt</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-star text-primary"></i>
+                            <div class="story-content">
+                                <div class="">"Utrolig Søde"</div>
+                                <div class="">Konkret feedback fra kunder om vores medarbejderes venlige og professionelle tilgang</div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <div> 
+                    <div class="badge">Ægte Relationer</div>
+                    <h1>Mere End Bare Rengøring</h1>
+                    <div class="subtitle">Når fællesskab og relationer skaber værdi for alle</div>
+                    <p class="bot-space2">Rengøring er rengøring, men vi gør det til meget mere. Det er fællesskabet og glæden ved at skabe gode oplevelser som gør, at vores kunder elsker os.</p>
+                    <div class="photo">
+                        <div>photo</div>
+                    </div>
+                </div>           
             </div>
         </section>
 
         <!-- Slide 4: Empty -->
         <section class="slide">
-            <div class="slide-content two-column">
-                <div class="">
-                    <div class="badge">Smart Produktvalg</div>
-                    <h5>Ansvarlig Kemikalievalg</h5>
-                    <div class="">Svanemærkede produkter og korrekt anvendelse</div>
-                    <p class="bot-space">Vi bruger primært <span class="text-success">svanemærkede produkter</span> og har en ansvarlig tilgang til stærke kemikalier. Høje pH-niveauer kun når det er nødvendigt, og altid med korrekt instruktion.</p>
+            <div class="flex flex-2">
+                <div class="text-center">
+                    <div class="badge">Lederskab</div>
+                    <h1>Leading by Example, Ikke Fear</h1>
+                    <div class="text-primary">Der er en grund til alt - og det er vigtigt at forklare sig</div>
+                    <p>Andre kommer fra steder hvor det er "leading by fear", men vi tror på at forklare hvorfor vi gør som vi gør. Selv når der skal gives kritik eller feedback på fejl.</p>
                     
-                     <div class="grid-2x2">
-                        <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-flask text-success"></i>
+                    <div class="quote card border-left-primary">
+                        "Det er vigtigt at de bliver set og hørt. Der er selvfølgelig en grænse - man kan ikke være bedste venner, men man skal holde det professionelt."
+                    </div>
+                    <div class="grid">
+                        <div class="card flex bg-gradient-white p-1">
+                            <i class="fas fa-eye text-primary"></i>
                             <div class="">
-                                <div class="">Smart Kemi-Brug</div>
-                                <div class="">Stærke produkter kun når nødvendigt - intelligent tilgang frem for total undgåelse</div>
+                                <div class="">Observation Som Hjælp</div>
+                                <div class="">Overvåger arbejde for at hjælpe med ergonomi og optimering - ikke for at straffe</div>
                             </div>
                         </div>
-                        <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-recycle text-success"></i>
-                            <div class="">
-                                <div class="">Minimal Spild</div>
-                                <div class="">Korrekt dosering og anvendelse reducerer både miljøpåvirkning og omkostninger</div>
+                        <div class="card flex bg-gradient-white p-1">
+                            <i class="fas fa-comments text-primary"></i>
+                            <div class="story-content">
+                                <div class="">Drømme & Mål Samtaler</div>
+                                <div class="">Spørger ind til medarbejdernes fremtidsplaner og personlige ambitioner</div>
                             </div>
                         </div>
-
-                        <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-certificate text-success"></i>
-                            <div class="">
-                                <div class="">Svanemærkede Som Standard</div>
-                                <div class="">Hovedparten af vores produkter er certificeret miljøvenlige</div>
-                            </div>
-                        </div>
-                        <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-graduation-cap text-success"></i>
-                            <div class="">
-                                <div class="">Grundig Instruktion</div>
-                                <div class="">Medarbejdere får nøje oplæring i korrekt brug for at minimere spild og risiko</div>
+                        <div class="card flex bg-gradient-white p-1">
+                            <i class="fas fa-shield-alt text-primary"></i>
+                            <div class="story-content">
+                                <div class="">Krop Skal Holde Livet Ud</div>
+                                <div class="">Lærer ergonomi og "smart work" - de skal bruge kroppen hele livet</div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="quote">
-                        "Vi vægter reuse og genbrug højt - både i vores produkter og i måden vi arbejder på."
-                    </div>
-                </div>
-                <div class="grid">
+                </div> 
+                <div style="align-content: center;"> 
                     <div class="photo">
                         <div>photo</div>
                     </div>
                     <div class="photo">
                         <div>photo</div>
                     </div>
-                </div>
+                </div>           
             </div>
         </section>
 
@@ -568,63 +552,46 @@
         <section class="slide">
             <div class="slide-content full-width">
                 <div>
-                    <div class="badge">Fremtiden</div>
-                    <h5>Miljø Som Konkurrencefordel</h5>
-                    <div class="subtitle">Grøn facility service uden kompromis på kvalitet eller pris</div>
+                    <div class="badge">Fremtid & Vækst</div>
+                    <h1>Intet Loft På Deres Rolle</h1>
+                    <div class="subtitle">Vi hjælper dem med at vokse - også selvom det betyder de starter egen forretning</div>
                     
                     <div class="grid-2x2">
                         <div class="card bg-gradient-white p-1">
-                            <h5> 
-                                <i class="fas fa-chart-line text-success"></i>
-                                Omkostningseffektiv Grøn Drift
-                            </h5>
-                            <p>Vores grønne tilgang er ikke dyrere - den er ofte mere effektiv. Cykel-logistik sparer brændstof, genbrug reducerer indkøb, og korrekt kemikalievalg minimerer spild.</p>
+                            <h3>
+                                <i class="fas fa-rocket slide5"></i>
+                                Iværksætter Mentoring
+                            </h3>
+                            <p>Sætter mig gerne med medarbejdere og hjælper dem med startskudet til deres egen forretning. Det er mit mål at hjælpe dem opnå deres drømme.</p>
                         </div>
                         
                         <div class="card bg-gradient-white p-1">
-                            <h5>
-                                <i class="fas fa-handshake text-success"></i>
-                                Kunders Miljømål
-                            </h5>
-                            <p>Vi hjælper kunder med at nå deres egne bæredygtighedsmål gennem vores markedsplads, affaldssortering og miljøvenlige processer.</p>
+                            <h3>
+                                <i class="fas fa-chart-line slide5"></i>
+                                Vækst Med Virksomheden
+                            </h3>
+                            <p>Håber at medarbejdere kan vokse med virksomheden og hjælpe andre steder som de interesserer sig for. Der er intet loft for deres rolle.</p>
                         </div>
                         
                         <div class="card bg-gradient-white p-1">
-                            <h5>
-                                <i class="fas fa-seedling text-success"></i>
-                                Kontinuerlig Forbedring
-                            </h5>
-                            <p>Vi søger konstant nye måder at reducere miljøpåvirkning på - fra bedre sortering til optimeret cykel-ruter og mindre packaging.</p>
+                            <h3>
+                                <i class="fas fa-lightbulb slide5"></i>
+                                Tankesæt Udvikling
+                            </h3>
+                            <p>Når vi taler sammen kan man høre at mine ord sætter gang i tanker hos dem. De fortæller om deres drømme og mål for fremtiden.</p>
                         </div>
                         
                         <div class="card bg-gradient-white p-1">
-                            <h5>
-                                <i class="fas fa-globe-europe text-success"></i>
-                                Inspiration Til Branchen
-                            </h5>
-                            <p>Når vi sælger vores ERP-system til andre, spreder vi også vores miljøvenlige praksisser og beviser at grøn drift virker.</p>
+                            <h3>
+                                <i class="fas fa-users slide5"></i>
+                                Fremtidige Ledere
+                            </h3>
+                            <p>Når vi vokser i størrelse, håber jeg medarbejdere kan blive supervisors og ledere. Systematikken sikrer at den personlige tilgang ikke forsvinder.</p>
                         </div>
                     </div>
                     
                     <div class="quote" style="margin-top: 0.5rem;">
-                        "Vi affaldsorterer hvor vi kan. Det er ikke hos alle vores kunder hvor der er opstillet nok forskellige containere til at udføre den bedst mulige sortering, men hvor vi kan, gør vi det."
-                    </div>
-                    
-                    <div class="grid" style="margin-top: 0.5rem; max-width: 800px; margin: auto">
-                        <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-award text-success"></i>
-                            <div class="">
-                                <div class="">Autentisk Miljøprofil</div>
-                                <div class="">Grøn drift fra dag ét - ikke en efterrationalisering eller marketingtrick</div>
-                            </div>
-                        </div>
-                        <div class="card bg-gradient-white p-1">
-                            <i class="fas fa-balance-scale text-success"></i>
-                            <div class="">
-                                <div class="">Praktisk Miljøtænkning</div>
-                                <div class="">Vi gør hvad vi kan, hvor vi kan - realisme frem for perfektionisme</div>
-                            </div>
-                        </div>
+                        "Det er mit mål at hjælpe dem så meget som muligt med det de gerne vil opnå - også selvom det ikke er i min virksomhed."
                     </div>
                 </div>
             </div>

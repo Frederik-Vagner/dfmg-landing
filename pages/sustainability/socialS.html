@@ -3,478 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Bæredygtighed - DFMG</title>
-    <meta name="description" content="DFMG's tilgang til social bæredygtighed: Mennesker først, integration gennem empowerment og ægte relationer i facility management.">
-
-    <!-- Performance optimering -->
+    <title>DFMG - Vertical Slider</title>
+    <meta name="description" content="Vertical sliding page template">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body { 
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            height: 100vh;
-            overflow: hidden;
-            padding-top: 100px;
-        }
-        
-        /* Vertical Sliding Container */
-        .vertical-container {
-            display: flex;
-            flex-direction: column;
-            height: calc(100vh - 100px);
-            width: 100vw;
-            transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-        }
-        
-        /* Modern Slide Backgrounds */
-        .slide:nth-child(1) { 
-            background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 50%, #e9d5ff 100%);
-        }
-        .slide:nth-child(2) { 
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
-        }
-        .slide:nth-child(3) { 
-            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
-        }
-        .slide:nth-child(4) { 
-            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #fdba74 100%);
-        }
-        .slide:nth-child(5) { 
-            background: linear-gradient(135deg, #fef2f2 0%, #fecaca 50%, #fca5a5 100%);
-        }
-        
-        /* Progress Indicator */
-        .progress-bar {
-            position: fixed;
-            left: 0;
-            top: 100px;
-            width: 3px;
-            background: #4285f4;
-            transition: height 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-            z-index: 1000;
-        }
-        
-        /* Navigation Arrows */
-        .nav-arrow {
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            font-size: 1.2rem;
-            color: #344767;
-            backdrop-filter: blur(10px);
-        }
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        .nav-arrow:hover {
-            background: white;
-            transform: translateX(-50%) scale(1.1);
-        }
-
-        .nav-arrow.up {
-            top: 130px;
-        }
-
-        .nav-arrow.down {
-            bottom: 30px;
-        }
-
-        .nav-arrow:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-        
-        /* Slide Content */
-        .slide-content {
-            width: 100%;
-            max-width: 1200px;
-            height: 100%;
-            display: grid;
-            align-items: center;
-            gap: 3rem;
-        }
-        
-        /* Hero Slide */
-        .hero-content {
-            text-align: center;
-            grid-template-columns: 1fr;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            background: rgba(66, 133, 244, 0.1);
-            color: #4285f4;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-        }
-        
-        .hero-content h1 {
-            font-size: 4.5rem;
-            font-weight: 300;
-            color: #344767;
-            margin-bottom: 2rem;
-            line-height: 1.1;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.6rem;
-            color: #64748b;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            line-height: 1.4;
-        }
-        
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        
-        .stat-card {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .stat-icon {
-            font-size: 3rem;
-            color: #4285f4;
-            margin-bottom: 1rem;
-        }
-        
-        .stat-card h3 {
-            color: #344767;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .stat-card p {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-        
-        /* Two Column Layout */
-        .two-column {
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .content-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: rgba(34, 197, 94, 0.1);
-            color: #22c55e;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            align-self: flex-start;
-        }
-        
-        .content-section h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: #344767;
-        }
-        
-        .content-section .subtitle {
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: #4285f4;
-            margin-bottom: 2rem;
-            line-height: 1.4;
-        }
-        
-        .content-section p {
-            font-size: 1.1rem;
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-        
-        .highlight-text {
-            color: #344767;
-            font-weight: 600;
-        }
-
-        .quote-highlight {
-            background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(34, 197, 94, 0.1));
-            border-left: 4px solid #4285f4;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #344767;
-        }
-        
-        /* Story List */
-        .story-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-        
-        .story-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .story-list li:hover {
-            transform: translateX(10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .story-list i {
-            color: #4285f4;
-            font-size: 1.5rem;
-            width: 24px;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        .story-content {
-            flex: 1;
-        }
-
-        .story-title {
-            font-weight: 600;
-            color: #344767;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .story-description {
-            color: #64748b;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        
-        /* Visual Section */
-        .visual-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .slide-visual {
-            width: 100%;
-            height: 450px;
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.3rem;
-            font-weight: 500;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        .integration-visual {
-            background: linear-gradient(135deg, #4285f4, #1d4ed8, #1e40af);
-        }
-
-        .relationship-visual {
-            background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
-        }
-
-        .leadership-visual {
-            background: linear-gradient(135deg, #f59e0b, #d97706, #b45309);
-        }
-
-        .growth-visual {
-            background: linear-gradient(135deg, #ef4444, #dc2626, #b91c1c);
-        }
-
-        .visual-icon {
-            position: absolute;
-            font-size: 6rem;
-            opacity: 0.2;
-            top: 2rem;
-            right: 2rem;
-        }
-
-        /* Full Width Content */
-        .full-width {
-            grid-template-columns: 1fr;
-            text-align: center;
-            gap: 2rem;
-        }
-
-        .full-width h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            color: #344767;
-            margin-bottom: 1rem;
-        }
-
-        .full-width .subtitle {
-            font-size: 1.4rem;
-            color: #64748b;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .principle-card {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            text-align: left;
-            transition: all 0.3s ease;
-        }
-
-        .principle-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .principle-card h3 {
-            color: #344767;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .principle-card i {
-            color: #ef4444;
-            font-size: 1.4rem;
-        }
-
-        .principle-card p {
-            color: #64748b;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body { padding-top: 80px; }
-            .slide { padding-top: calc(2rem + 80px); }
-            .slide-content { gap: 2rem; }
-            .hero-content h1 { font-size: 2.8rem; }
-            .content-section h1 { font-size: 2.5rem; }
-            .full-width h1 { font-size: 2.5rem; }
-            .two-column { grid-template-columns: 1fr; gap: 2rem; }
-            .hero-stats { grid-template-columns: 1fr; }
-            .principles-grid { grid-template-columns: 1fr; }
-            .slide-visual { height: 300px; font-size: 1.1rem; }
-            .nav-arrow { display: none; }
-            .slide-nav { right: 20px; }
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
-<body>
+
+<style>
+.badge {
+    display: inline-block;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.quote {
+    background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(34, 197, 94, 0.1));
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #15803d;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+   --success: #22c55e;
+}
+
+/* Header Protection - matches working horizontal page */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000 !important;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure slides don't interfere with header */
+.sustainability-page {
+    position: relative;
+    z-index: 1;
+}
+
+.vertical-container {
+    position: relative;
+    z-index: 1;
+}
+
+.slide:nth-child(1) { 
+    background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+}
+.slide:nth-child(2) { 
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%)
+}
+.slide:nth-child(3) { 
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+}
+.slide:nth-child(4) { 
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #fdba74 100%)
+}
+.slide:nth-child(5) { 
+    background: linear-gradient(135deg, #fef2f2 0%, #fecaca 50%, #fca5a5 100%)
+}
+
+.slide-dot.active.slide-1-active {
+    background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important;
+}
+
+.slide-dot.active.slide-2-active {
+    background: #22c55e !important;
+}
+
+.slide-dot.active.slide-3-active {
+    background: #3b82f6 !important;
+}
+
+.slide-dot.active.slide-4-active {
+    background: #8b5cf6 !important;
+}
+
+.slide-dot.active.slide-5-active {
+    background: #f59e0b !important;
+}
+
+.sustainability-page { 
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+        
+/* Vertical Scrolling Container */
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    height: 500vh; /* 5 slides × 100vh each */
+    width: 100vw;
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateY(0); /* Explicitly set initial position */
+}
+
+/* Base Slide */
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    padding: 2rem 5rem 2rem 3rem;
+    padding-top: calc(2rem + 80px); /* Account for header in padding instead */
+}
+        
+/* Enhanced Navigation */
+.slide-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 10px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.slide-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(52, 71, 103, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.grid{
+    display: grid;
+    gap: 1rem;
+}
+
+.slide-dot.active {
+    transform: scale(1.3);
+}
+
+.slide-dot:hover {
+    transform: scale(1.1);
+    background: rgba(52, 71, 103, 0.5);
+}
+
+.slide-dot.active:hover {
+    background: #22c55e;
+}
+
+/* Slide Content */
+.slide-content {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Empty slide placeholder styling */
+.slide-placeholder {
+    color: #64748b;
+    font-size: 2rem;
+    font-weight: 300;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    border: 2px dashed rgba(100, 116, 139, 0.3);
+}
+
+
+/* Two Column Layout */
+.two-column {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.two-column1 {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+/* Visual Section */
+.photo {
+    width: 100%;
+    height: 200px;
+    background: rgb(0 0 0 / 10%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.slide-visual {
+    width: 100%;
+    height: 450px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.slide-visual1 {
+    width: 100%;
+    height: 200px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.bilfri-visual {
+    background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+}
+
+.circular-visual {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7, #0369a1);
+}
+
+.chemistry-visual {
+    background: linear-gradient(135deg, #f59e0b, #d97706, #b45309);
+}
+
+.future-visual {
+    background: linear-gradient(135deg, #6366f1, #4f46e5, #4338ca);
+}
+
+.slide1{
+    color: #4285f4;
+}
+
+.slide5{
+    color: #ef4444;
+}
+
+.step-number {
+    width: 25px;
+    height: 25px;
+    background: #0ea5e9;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 auto 1rem;
+}
+
+.slide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body { padding-top: 80px; }
+    .slide { padding-top: calc(2rem + 80px); }
+    .slide-content { gap: 2rem; }
+    .hero-content h1 { font-size: 2.8rem; }
+    . h1 { font-size: 2.5rem; }
+    .full-width h1 { font-size: 2.5rem; }
+    .two-column { grid-template-columns: 1fr; gap: 2rem; }
+    .environment-stats { grid-template-columns: 1fr; }
+    .impact-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .slide-visual { height: 300px; font-size: 1.1rem; }
+    .nav-arrow { display: none; }
+    .slide-nav { right: 20px; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sustainability-page { 
+        padding-top: 60px; 
+    }
+    
+    .slide { 
+        height: 100vh;
+        padding: 1rem;
+        padding-top: calc(1rem + 60px); /* Account for header in padding instead */
+    }
+    
+    .slide-nav { 
+        right: 20px; 
+    }
+    
+    .slide-placeholder {
+        font-size: 1.5rem;
+        padding: 2rem 3rem;
+    }
+}
+
+
+</style>
+
+<body class="sustainability-page">
     <!-- Header Component -->
     <div id="header"></div>
 
-    <!-- Progress Bar -->
-    <div class="progress-bar" id="progressBar"></div>
-
-    <!-- Navigation Arrows -->
-    <a class="nav-arrow up" id="upBtn">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-    <a class="nav-arrow down" id="downBtn">
-        <i class="fas fa-chevron-down"></i>
-    </button>
-
-    <!-- Vertical Sliding Container -->
+    <!-- Vertical Scrolling Container -->
     <div class="vertical-container" id="verticalContainer">
         
-        <!-- Slide 1: Hero -->
+        <!-- Slide 1: Empty -->
         <section class="slide">
-            <div class="slide-content hero-content">
+            <div class="slide-content" style="max-width: 1000px;">
                 <div>
-                    <div class="hero-badge">Social Bæredygtighed</div>
-                    <h1>Mennesker Først - Altid</h1>
-                    <div class="hero-subtitle">Hos DFMG er social bæredygtighed ikke politik - det er konkrete handlinger der ændrer menneskers liv. Vi investerer i hjerner, bygger relationer og skaber ægte vækstmuligheder.</div>
+                    <div class="badge slide1">Social Bæredygtighed</div>
+                    <h1 class="slide1">Mennesker Først - Altid</h1>
+                    <div class="text-center bot-space2">Hos DFMG er social bæredygtighed ikke politik - det er konkrete handlinger der ændrer menneskers liv. Vi investerer i hjerner, bygger relationer og skaber ægte vækstmuligheder.</div>
                     
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <i class="fas fa-graduation-cap stat-icon"></i>
+                    <div class="flex">
+                        <div class="card bg-gradient-white border-top-primary p-2">
+                            <i class="fas fa-graduation-cap slide1"></i>
                             <h3>Uddannelse & Vækst</h3>
                             <p>Medarbejdere studerer ved siden af arbejdet med fuld støtte</p>
                         </div>
-                        <div class="stat-card">
-                            <i class="fas fa-handshake stat-icon"></i>
-                            <h3>Ægte Relationer</h3>
+                        <div class="card bg-gradient-white border-top-primary p-2">
+                            <i class="fas fa-handshake slide1"></i>
+                             <h3>Ægte Relationer</h3>
                             <p>Kunder og medarbejdere hilser på hinanden udenfor arbejdstid</p>
                         </div>
-                        <div class="stat-card">
-                            <i class="fas fa-rocket stat-icon"></i>
+                        <div class="card bg-gradient-white border-top-primary p-2">
+                            <i class="fas fa-rocket slide1"></i>
                             <h3>Iværksætter Mentoring</h3>
                             <p>Hjælper medarbejdere med at starte egen forretning</p>
                         </div>
@@ -483,201 +412,344 @@
             </div>
         </section>
 
-        <!-- Slide 2: Integration & Empowerment -->
+        <!-- Slide 2: Empty -->
         <section class="slide">
-            <div class="slide-content two-column">
-                <div class="content-section">
-                    <div class="section-badge">Integration & Empowerment</div>
+            <div class="flex flex-2">
+                <div class="text-center">
+                    <div class="badge">Integration & Empowerment</div>
                     <h1>Deres Hjerne Er Det Vigtigste</h1>
-                    <div class="subtitle">Vi ser potentiale hvor andre ser billig arbejdskraft</div>
+                    <div class="text-primary">Vi ser potentiale hvor andre ser billig arbejdskraft</div>
                     <p>Mange af vores medarbejdere kommer fra Asien for at søge bedre muligheder. De har ofte akademiske baggrunde, men møder vanskeligheder med at konkurrere på det danske arbejdsmarked.</p>
-                    
-                    <div class="quote-highlight">
+                    <div class="quote">
                         "Jeg tror virkelig på mennesket og at man kan lære alt uanset baggrund, hvis de bare har det rigtige mindset til tingene."
                     </div>
-                    
-                    <ul class="story-list">
-                        <li>
-                            <i class="fas fa-swimmer"></i>
-                            <div class="story-content">
-                                <div class="story-title">Svømmeundervisning</div>
-                                <div class="story-description">Vi lærer medarbejdere at svømme - noget alle lærer i Danmark, men ikke normalt i deres hjemlande</div>
+                    <div class="grid">
+                        <div class="card bg-gradient-white p-1">
+                                <i class="fas fa-swimmer slide1"></i>
+                            <div class="">
+                                <div class="">Svømmeundervisning</div>
+                                    <div class="">Vi lærer medarbejdere at svømme - noget alle lærer i Danmark, men ikke normalt i deres hjemlande</div>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-user-graduate"></i>
-                            <div class="story-content">
-                                <div class="story-title">Business Student Partnership</div>
-                                <div class="story-description">En medarbejder studerer business, og vi håber han kan blive partner når han er færdig</div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                                <i class="fas fa-user-graduate slide1"></i>
+                            <div class="">
+                                <div class="">Business Student Partnership</div>
+                                    <div class="">En medarbejder studerer business, og vi håber han kan blive partner når han er færdig</div>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-brain"></i>
-                            <div class="story-content">
-                                <div class="story-title">Smart Work Philosophy</div>
-                                <div class="story-description">"Smart not hard" - lærer at tænke og arbejde strategisk frem for bare at udføre</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="visual-section">
-                    <div class="slide-visual integration-visual">
-                        <i class="fas fa-globe visual-icon"></i>
-                        <div>Integration Gennem<br>Empowerment & Uddannelse</div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-brain slide1"></i>
+                            <div class="">Smart Work Philosophy</div>
+                            <div class="">"Smart not hard" - lærer at tænke og arbejde strategisk frem for bare at udføre</div>
+                        </div>
                     </div>
-                </div>
+                </div> 
+                <div style="align-content: center;"> 
+                    <div class="photo">
+                        <div>photo</div>
+                    </div>
+                    <div class="photo">
+                        <div>photo</div>
+                    </div>
+                </div>           
             </div>
         </section>
 
-        <!-- Slide 3: Relationer Der Betyder Noget -->
+        <!-- Slide 3: Empty -->
         <section class="slide">
-            <div class="slide-content two-column">
-                <div class="visual-section">
-                    <div class="slide-visual relationship-visual">
-                        <i class="fas fa-heart visual-icon"></i>
-                        <div>Ægte Relationer<br>Mellem Mennesker</div>
+            <div class="flex flex-2">
+                <div class="grid">
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-smile text-primary"></i>
+                            <div class="story-content">
+                                <div class="">"Smil og Hils På Dem"</div>
+                                <div class="">Vi lærer medarbejdere at være menneskelige - ikke sky og bange som andre i branchen</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-coffee text-primary"></i>
+                            <div class="story-content">
+                                <div class="">Møder Udenfor Arbejdstid</div>
+                                <div class="">Kunder fortæller om at møde vores folk på gaden og hilse - det er ægte relationer</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-hands-helping text-primary"></i>
+                            <div class="story-content">
+                                <div class="">Kunder Hjælper Aktivt</div>
+                                <div class="">Lukker vinduer, holder rent, spørger om de er i vejen - det sker kun ved gensidig respekt</div>
+                            </div>
+                        </div>
+                        <div class="card bg-gradient-white p-1">
+                            <i class="fas fa-star text-primary"></i>
+                            <div class="story-content">
+                                <div class="">"Utrolig Søde"</div>
+                                <div class="">Konkret feedback fra kunder om vores medarbejderes venlige og professionelle tilgang</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="content-section">
-                    <div class="section-badge">Ægte Relationer</div>
+                <div> 
+                    <div class="badge">Ægte Relationer</div>
                     <h1>Mere End Bare Rengøring</h1>
                     <div class="subtitle">Når fællesskab og relationer skaber værdi for alle</div>
-                    <p>Rengøring er rengøring, men vi gør det til meget mere. Det er fællesskabet og glæden ved at skabe gode oplevelser som gør, at vores kunder elsker os.</p>
-                    
-                    <ul class="story-list">
-                        <li>
-                            <i class="fas fa-smile"></i>
-                            <div class="story-content">
-                                <div class="story-title">"Smil og Hils På Dem"</div>
-                                <div class="story-description">Vi lærer medarbejdere at være menneskelige - ikke sky og bange som andre i branchen</div>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-coffee"></i>
-                            <div class="story-content">
-                                <div class="story-title">Møder Udenfor Arbejdstid</div>
-                                <div class="story-description">Kunder fortæller om at møde vores folk på gaden og hilse - det er ægte relationer</div>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-hands-helping"></i>
-                            <div class="story-content">
-                                <div class="story-title">Kunder Hjælper Aktivt</div>
-                                <div class="story-description">Lukker vinduer, holder rent, spørger om de er i vejen - det sker kun ved gensidig respekt</div>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-star"></i>
-                            <div class="story-content">
-                                <div class="story-title">"Utrolig Søde"</div>
-                                <div class="story-description">Konkret feedback fra kunder om vores medarbejderes venlige og professionelle tilgang</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                    <p class="bot-space2">Rengøring er rengøring, men vi gør det til meget mere. Det er fællesskabet og glæden ved at skabe gode oplevelser som gør, at vores kunder elsker os.</p>
+                    <div class="photo">
+                        <div>photo</div>
+                    </div>
+                </div>           
             </div>
         </section>
 
-        <!-- Slide 4: Ledelse Gennem Forståelse -->
+        <!-- Slide 4: Empty -->
         <section class="slide">
-            <div class="slide-content two-column">
-                <div class="content-section">
-                    <div class="section-badge">Lederskab</div>
+            <div class="flex flex-2">
+                <div class="text-center">
+                    <div class="badge">Lederskab</div>
                     <h1>Leading by Example, Ikke Fear</h1>
-                    <div class="subtitle">Der er en grund til alt - og det er vigtigt at forklare sig</div>
+                    <div class="text-primary">Der er en grund til alt - og det er vigtigt at forklare sig</div>
                     <p>Andre kommer fra steder hvor det er "leading by fear", men vi tror på at forklare hvorfor vi gør som vi gør. Selv når der skal gives kritik eller feedback på fejl.</p>
                     
-                    <div class="quote-highlight">
+                    <div class="quote card border-left-primary">
                         "Det er vigtigt at de bliver set og hørt. Der er selvfølgelig en grænse - man kan ikke være bedste venner, men man skal holde det professionelt."
                     </div>
-                    
-                    <ul class="story-list">
-                        <li>
-                            <i class="fas fa-eye"></i>
-                            <div class="story-content">
-                                <div class="story-title">Observation Som Hjælp</div>
-                                <div class="story-description">Overvåger arbejde for at hjælpe med ergonomi og optimering - ikke for at straffe</div>
+                    <div class="grid">
+                        <div class="card flex bg-gradient-white p-1">
+                            <i class="fas fa-eye text-primary"></i>
+                            <div class="">
+                                <div class="">Observation Som Hjælp</div>
+                                <div class="">Overvåger arbejde for at hjælpe med ergonomi og optimering - ikke for at straffe</div>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="card flex bg-gradient-white p-1">
+                            <i class="fas fa-comments text-primary"></i>
                             <div class="story-content">
-                                <div class="story-title">Drømme & Mål Samtaler</div>
-                                <div class="story-description">Spørger ind til medarbejdernes fremtidsplaner og personlige ambitioner</div>
+                                <div class="">Drømme & Mål Samtaler</div>
+                                <div class="">Spørger ind til medarbejdernes fremtidsplaner og personlige ambitioner</div>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="card flex bg-gradient-white p-1">
+                            <i class="fas fa-shield-alt text-primary"></i>
                             <div class="story-content">
-                                <div class="story-title">Krop Skal Holde Livet Ud</div>
-                                <div class="story-description">Lærer ergonomi og "smart work" - de skal bruge kroppen hele livet</div>
+                                <div class="">Krop Skal Holde Livet Ud</div>
+                                <div class="">Lærer ergonomi og "smart work" - de skal bruge kroppen hele livet</div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="visual-section">
-                    <div class="slide-visual leadership-visual">
-                        <i class="fas fa-compass visual-icon"></i>
-                        <div>Ledelse Gennem<br>Forståelse & Vejledning</div>
+                        </div>
                     </div>
-                </div>
+                </div> 
+                <div style="align-content: center;"> 
+                    <div class="photo">
+                        <div>photo</div>
+                    </div>
+                    <div class="photo">
+                        <div>photo</div>
+                    </div>
+                </div>           
             </div>
         </section>
 
-        <!-- Slide 5: Vækst Uden Loft -->
+        <!-- Slide 5: Empty -->
         <section class="slide">
             <div class="slide-content full-width">
                 <div>
-                    <div class="section-badge">Fremtid & Vækst</div>
+                    <div class="badge">Fremtid & Vækst</div>
                     <h1>Intet Loft På Deres Rolle</h1>
                     <div class="subtitle">Vi hjælper dem med at vokse - også selvom det betyder de starter egen forretning</div>
                     
-                    <div class="principles-grid">
-                        <div class="principle-card">
+                    <div class="grid-2x2">
+                        <div class="card bg-gradient-white p-1">
                             <h3>
-                                <i class="fas fa-rocket"></i>
+                                <i class="fas fa-rocket slide5"></i>
                                 Iværksætter Mentoring
                             </h3>
                             <p>Sætter mig gerne med medarbejdere og hjælper dem med startskudet til deres egen forretning. Det er mit mål at hjælpe dem opnå deres drømme.</p>
                         </div>
                         
-                        <div class="principle-card">
+                        <div class="card bg-gradient-white p-1">
                             <h3>
-                                <i class="fas fa-chart-line"></i>
+                                <i class="fas fa-chart-line slide5"></i>
                                 Vækst Med Virksomheden
                             </h3>
                             <p>Håber at medarbejdere kan vokse med virksomheden og hjælpe andre steder som de interesserer sig for. Der er intet loft for deres rolle.</p>
                         </div>
                         
-                        <div class="principle-card">
+                        <div class="card bg-gradient-white p-1">
                             <h3>
-                                <i class="fas fa-lightbulb"></i>
+                                <i class="fas fa-lightbulb slide5"></i>
                                 Tankesæt Udvikling
                             </h3>
                             <p>Når vi taler sammen kan man høre at mine ord sætter gang i tanker hos dem. De fortæller om deres drømme og mål for fremtiden.</p>
                         </div>
                         
-                        <div class="principle-card">
+                        <div class="card bg-gradient-white p-1">
                             <h3>
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-users slide5"></i>
                                 Fremtidige Ledere
                             </h3>
                             <p>Når vi vokser i størrelse, håber jeg medarbejdere kan blive supervisors og ledere. Systematikken sikrer at den personlige tilgang ikke forsvinder.</p>
                         </div>
                     </div>
                     
-                    <div class="quote-highlight" style="margin-top: 3rem;">
+                    <div class="quote" style="margin-top: 0.5rem;">
                         "Det er mit mål at hjælpe dem så meget som muligt med det de gerne vil opnå - også selvom det ikke er i min virksomhed."
                     </div>
                 </div>
             </div>
         </section>
     </div>
+    
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+        <div class="slide-dot active" data-slide="0"></div>
+        <div class="slide-dot" data-slide="1"></div>
+        <div class="slide-dot" data-slide="2"></div>
+        <div class="slide-dot" data-slide="3"></div>
+        <div class="slide-dot" data-slide="4"></div>
+    </div>
 
     <div id="footer"></div>
 
     <!-- Component loader -->
     <script src="../../js/components.js" defer></script>
+    <script>
+        class VerticalSlider {
+            constructor() {
+                this.container = document.getElementById('verticalContainer');
+                this.dots = document.querySelectorAll('.slide-dot');
+                this.currentSlide = 0;
+                this.totalSlides = 5;
+                this.isAnimating = false;
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupNavigation();
+                this.setupKeyboard();
+                this.setupWheel();
+                this.setupTouch();
+                this.updateArrows();
+            }
+            
+            setupNavigation() {
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+            }
+            
+            setupKeyboard() {
+                document.addEventListener('keydown', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    switch(e.key) {
+                        case 'ArrowRight':
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            this.nextSlide();
+                            break;
+                        case 'ArrowLeft':
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            this.prevSlide();
+                            break;
+                    }
+                });
+            }
+            
+            setupWheel() {
+                this.container.addEventListener('wheel', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    e.preventDefault();
+                    
+                    if (e.deltaY > 50) {
+                        this.nextSlide();
+                    } else if (e.deltaY < -50) {
+                        this.prevSlide();
+                    }
+                }, { passive: false });
+            }
+            
+            setupTouch() {
+                let startY = 0;
+                
+                this.container.addEventListener('touchstart', (e) => {
+                    startY = e.touches[0].clientY;
+                });
+                
+                this.container.addEventListener('touchend', (e) => {
+                    if (this.isAnimating) return;
+                    
+                    const endY = e.changedTouches[0].clientY;
+                    const diff = startY - endY;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+            }
+            
+            goToSlide(index) {
+                if (index === this.currentSlide || this.isAnimating) return;
+                
+                this.isAnimating = true;
+                this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+                
+                const translateY = -this.currentSlide * 100;
+                this.container.style.transform = `translateY(${translateY}vh)`;
+                
+                this.updateDots();
+                this.updateArrows();
+                
+                setTimeout(() => {
+                    this.isAnimating = false;
+                }, 800);
+            }
+            
+            nextSlide() {
+                if (this.currentSlide < this.totalSlides - 1) {
+                    this.goToSlide(this.currentSlide + 1);
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.goToSlide(this.currentSlide - 1);
+                }
+            }
+            
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    // Remove all active classes
+                    dot.classList.remove('active', 'slide-1-active', 'slide-2-active', 'slide-3-active', 'slide-4-active', 'slide-5-active');
+                    
+                    // Add appropriate class for current slide
+                    if (index === this.currentSlide) {
+                        dot.classList.add('active', `slide-${this.currentSlide + 1}-active`);
+                    }
+                });
+            }
+            
+            updateArrows() {
+                
+            }
+        }
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = new VerticalSlider();
+            
+            // Handle URL fragments - customize these as needed
+            const hash = window.location.hash;
+            if (hash === '#slide2') slider.goToSlide(1);
+            else if (hash === '#slide3') slider.goToSlide(2);
+            else if (hash === '#slide4') slider.goToSlide(3);
+            else if (hash === '#slide5') slider.goToSlide(4);
+            else slider.goToSlide(0); // Ensure we start at slide 0 if no hash
+        });
+    </script>
 </body>
 </html>
