@@ -23,6 +23,7 @@
     --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
     --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
     --bg-gradient-sky: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 50%, white 100%);
+    --bg-gradient-red: linear-gradient(135deg, var(--red), #dc2626, #b91c1c);
     /* Typography */
     --font-size-title: 2.5rem;
     --font-size-subtitle: 0.9rem;
@@ -75,7 +76,7 @@ body {
 }
 
 .container-wide { 
-    max-width: var(--container-width-normal); 
+    max-width: var(--container-width-wide); 
     margin: 0 auto; 
     padding: var(--container-padding); 
 }
@@ -109,6 +110,12 @@ body {
 
 .success { 
     background: var(--bg-gradient-success); 
+    color: var(--white); 
+    border: none;
+}
+
+.red { 
+    background: var(--bg-gradient-red); 
     color: var(--white); 
     border: none;
 }
@@ -255,7 +262,7 @@ h4 {
 }
 
 .bg-gradient-sky { background: var(--bg-gradient-sky); }
-.bg-gradient-metal { background: rgba(255, 255, 255, 0.1); }
+.bg-gradient-metal { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);}
 
 
 
@@ -277,6 +284,7 @@ h4 {
 .p-1 { padding: 1rem; }
 .p-2 { padding: 2rem; }
 .p-3 { padding: 3rem; }
+.p-4 { padding: 4rem; }
 
 
 /* Border utilities - all directions with 4 colors */
@@ -382,7 +390,6 @@ h4 {
 }
 
 .card i {
-    margin-bottom: 0.5rem;
     font-size: 1.5rem;
 }
 
@@ -549,4 +556,51 @@ h4 {
 
 .cta-center .flex i {
     padding-right: 0.5rem;
+}
+
+
+/* Styled Feature List */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    color: var(--charcoal);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.feature-list i {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Icon color variants */
+.feature-list.list-success i {
+    color: var(--success);
+}
+
+.feature-list.list-red i {
+    color: var(--red);
+}
+
+.feature-list.list-primary i {
+    color: var(--primary);
+}
+
+/* Optional: Add background styling */
+.feature-list li.styled {
+    background: var(--bg-gradient-white);
+    padding: 1rem;
+    border-radius: var(--radius-normal);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 0.5rem;
 }

@@ -89,6 +89,34 @@
     gap: 20px;
 }
 
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--charcoal);
+    text-decoration: none;
+}
+
+.carousel-btn:hover {
+    background: #344767;
+    color: white;
+    border-color: #344767;
+}
+
 .service-card { 
     width: 386px;
     flex-shrink: 0;
@@ -320,15 +348,14 @@
                 <div class="subtitle text-primary">VORES SERVICES</div>
                 <div class="title text-charcoal">Facility service på autopilot</div>
                 <div class="body text-gray">Færre leverandører at administrere, gennemsigtige omkostninger og garanteret service kvalitet. Fra daglig rengøring til akut vedligeholdelse leverer vi det hele med 99.5% rettidig udførelse.</div>
-                <div class="flex space1" style="justify-content: center;">
-                    <a class="btn primary small" onclick="previousServices()">
-                        <i class="fa-solid fa-caret-left"></i>
+                <div class="carousel-controls bot-space2">
+                    <a class="carousel-btn" onclick="previousServices()">
+                        <i class="fas fa-chevron-left"></i>
                     </a>
-                    <a class="btn primary small" onclick="nextServices()">
-                        <i class="fa-solid fa-caret-right"></i>
+                    <a class="carousel-btn" onclick="nextServices()">
+                        <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
-            </div>
             
             <div class="services-carousel">
                 <div class="services-track" id="servicesTrack">
