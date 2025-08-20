@@ -38,7 +38,7 @@
 /* ABOUT */
 .photos-grid {
     display: grid;
-    grid-template-columns: repeat(9, 120px);
+    grid-template-columns: repeat(8, 120px);
     grid-template-rows: repeat(2, 120px);
     gap: 15px;
     max-width: var(--container-width-normal);
@@ -55,21 +55,19 @@
 }
 
 /* Top row - photos 1-9 */
+/* Top row - 8 photos */
 .photo:nth-child(1) { grid-column: 1; grid-row: 1; transform: translateY(120px); }
 .photo:nth-child(2) { grid-column: 2; grid-row: 1; transform: translateY(70px); }
 .photo:nth-child(3) { grid-column: 3; grid-row: 1; transform: translateY(130px); }
 .photo:nth-child(4) { grid-column: 4; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(5) { grid-column: 5; grid-row: 1; transform: translateY(100px); }
-.photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(130px); }
-.photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(9) { grid-column: 9; grid-row: 1; transform: translateY(120px); }
+.photo:nth-child(5) { grid-column: 5; grid-row: 1; transform: translateY(70px); }
+.photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(130px); }
+.photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(70px); }
+.photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(120px); }
 
-/* Bottom row - 4 photos at edges */
-.photo:nth-child(10) { grid-column: 1; grid-row: 2; transform: translateY(120px); }
-.photo:nth-child(11) { grid-column: 2; grid-row: 2; transform: translateY(70px); }
-.photo:nth-child(12) { grid-column: 8; grid-row: 2; transform: translateY(70px); }
-.photo:nth-child(13) { grid-column: 9; grid-row: 2; transform: translateY(120px); }
+/* Bottom row - 2 photos in middle */
+.photo:nth-child(9) { grid-column: 2; grid-row: 2; transform: translateY(70px); }
+.photo:nth-child(10) { grid-column: 7; grid-row: 2; transform: translateY(70px); }
 
 
 .photo img {
@@ -128,9 +126,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: stretch;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
 }
+
 .service-card img {
     position: absolute;
     top: 0;
@@ -159,18 +161,21 @@
     color: white;
     margin-bottom: 0.5rem;
     padding: 0 1.5rem;
+    
 }
 
 .service-card h3 {
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
     font-weight: var(--font-weight-semibold);
+    min-height: 1.8rem;
 }
 
 .service-card p {
     margin: 0 0 1.5rem 0;
     font-size: 0.95rem;
     line-height: 1.4;
+    min-height: 2.66rem;
 }
 
 
@@ -224,28 +229,13 @@
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.testimonial:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
 .testimonial blockquote {
     font-size: 1.1rem;
     color: var(--gray);
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin: 0 0 1.5rem 0;
     font-style: italic;
     position: relative;
-}
-
-.testimonial blockquote::before {
-    content: '"';
-    font-size: 4rem;
-    color: var(--text-accent);
-    position: absolute;
-    top: -1.2rem;
-    left: -2rem;
-    font-family: Georgia, serif;
 }
 
 .author-image {
@@ -254,6 +244,19 @@
     border-radius: var(--radius-circle);
     object-fit: cover;
     border: 3px solid #f1f5f9;
+}
+
+.service-card h3,
+.service-card p {
+    text-align: left;
+}
+
+.testimonial .btn {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    justify-content: center;
+    display: grid
+;
 }
 
 </style>
@@ -270,7 +273,7 @@
             <div class="text-center">
                 <div class="title text-charcoal">All-In-One Facility Service</div>
                 <div class="body text-gray">Rengøring, vedligeholdelse og produkter til jeres facility</div>
-                <div class="flex" style="justify-content: center;">
+                <div class="flex space1" style="justify-content: center;">
                     <a href="" class="btn success medium">Få Gratis Analyse</a>
                     <a href="" class="btn secondary medium">Udforsk Løsninger</a>
                 </div>
@@ -290,51 +293,42 @@
             <div class="text-center">
                 <div class="photos-grid">
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/diya2.jpg" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/frederik.jpeg" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/diya.png" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/anders.jpeg" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/raman2.jpg" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/frederikke.jpeg" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/people/raman2.jpg" alt="Handyman Services" width="640" height="640">
                     </div>
                     <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/human.jpg" alt="Professionel Rengøring" width="640" height="640">
+                        <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
                     </div>
                 </div>
 
                 <div style="max-width: 600px; margin: auto;">
                     <div class="subtitle text-primary">OM DFMG</div>
                     <div class="title text-charcoal">Menneskene bag jeres facility service</div>
-                    <div class="body text-gray bot-space">Grundlagt i 2023 af erfarne fagfolk, der ville gøre facility service mere personligt og pålideligt. Vi kombinerer etableret faglig ekspertise med moderne teknologi for at levere den bedste oplevelse til vores kunder.</div>
-                    <div class="body text-gray">Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</div>
+                    <div class="body text-gray bot-space">Startet for at skabe et stærkere fællesskab og ruske op i en traditionel branche domineret af store koncerner og forældet processor. Vi kombinerer proffesionel ekspertise med personlig service for at levere pålidelige facility management løsninger til danske virksomheder.</div>
+                    <div class="body text-gray bot-space">Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</div>
                     <a href="#" class="btn primary medium">Læs mere om os</a>
                 </div>
             </div>
@@ -346,8 +340,8 @@
         <div class="container">
             <div class="text-center">
                 <div class="subtitle text-primary">VORES SERVICES</div>
-                <div class="title text-charcoal">Facility service på autopilot</div>
-                <div class="body text-gray">Færre leverandører at administrere, gennemsigtige omkostninger og garanteret service kvalitet. Fra daglig rengøring til akut vedligeholdelse leverer vi det hele med 99.5% rettidig udførelse.</div>
+                <div class="title text-charcoal">Facility service hele vejen rundt</div>
+                <div class="body text-gray">Transparent drift gennem en samlet leverandør - stabil service kvalitet og fleksible løsninger til alle facility behov.</div>
                 <div class="carousel-controls bot-space2">
                     <a class="carousel-btn" onclick="previousServices()">
                         <i class="fas fa-chevron-left"></i>
@@ -356,39 +350,40 @@
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
-            
+            </div>
+
             <div class="services-carousel">
                 <div class="services-track" id="servicesTrack">
-                    <div class="service-card">
+                    <a href="/pages/services/rengøring.html" class="service-card">
                         <img src="/images/service/cleaning.jpg" alt="Professionel Rengøring" width="640" height="640">
                         <h3>Professionel Rengøring</h3>
                         <p>Kontorer, skoler, restauranter og eventlokaler</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="/pages/services/produkter.html" class="service-card">
                         <img src="/images/service/delivery.jpg" alt="Supplies & Produkter" width="640" height="640">
                         <h3>Supplies & Produkter</h3>
                         <p>Hygiejneprodukter og office supplies</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="/pages/services/handyman.html" class="service-card">
                         <img src="/images/service/handyman.jpg" alt="Handyman Services" width="640" height="640">
                         <h3>Handyman Services</h3>
                         <p>Reparationer, vedligeholdelse og møbelmontering</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="/pages/services/ejendomsservice.html" class="service-card">
                         <img src="/images/service/janitor.jpg" alt="Ejendomsservice" width="640" height="640">
                         <h3>Ejendomsservice</h3>
                         <p>Vedligeholdelse af trapper, opgange og elevatorer</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="/pages/services/picoline.html" class="service-card">
                         <img src="/images/service/picoline.jpg" alt="Piccoline Opgaver" width="640" height="640">
                         <h3>Piccoline Opgaver</h3>
                         <p>Mindre administrative opgaver og specialopgaver</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="/pages/services/vinduespudsning.html" class="service-card">
                         <img src="/images/service/windowcleaning.jpg" alt="Vinduespolering" width="640" height="640">
                         <h3>Vinduespolering</h3>
                         <p>Professionel vinduesrens indvendig og udvendig</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -409,14 +404,15 @@
                     <div class="company-logo-section">
                         <img class="company-logo" src="/images/logos/adnami.png" alt="Handyman Services" width="640" height="640">
                     </div>
-                    <blockquote>DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte.</blockquote>
+                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte"</blockquote>
                     <div class="flex">
                         <img class="author-image" src="/images/people/jørgen.jpeg" alt="Handyman Services" width="640" height="640">
                         <div class="author-info">
                             <strong>Jørgen Gosvig</strong>
-                            <span>CFO & Operations Manager, Adnami</span>
+                            <span>Operations Manager, Adnami</span>
                         </div>
                     </div>
+                    <a href="/pages/indblik/cases/adnami.html" class="btn primary small">Læs mere</a>
                 </div>
 
                 <!-- Nybolig Testimonial -->
@@ -424,14 +420,15 @@
                     <div class="company-logo-section">
                         <img class="company-logo" src="/images/logos/nybolig.png" alt="Handyman Services" width="640" height="640">
                     </div>
-                    <blockquote>DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte.</blockquote>
+                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte"</blockquote>
                     <div class="flex">
                         <img class="author-image" src="/images/people/ossama.jpeg" alt="Handyman Services" width="640" height="640">
                         <div class="author-info">
                             <strong>Ossama Freije</strong>
-                            <span>Indehaver af Nybolig Nordvest, Nørrebro, Enghave og Carlsberbyen</span>
+                            <span>Indehaver af Nybolig</span>
                         </div>
                     </div>
+                    <a href="/pages/indblik/cases/adnami.html" class="btn primary small">Læs mere</a>
                 </div>
 
                 <!-- SOHO Testimonial -->
@@ -439,7 +436,7 @@
                     <div class="company-logo-section">
                         <img class="company-logo" src="/images/logos/soho.png" alt="Handyman Services" width="640" height="640">
                     </div>
-                    <blockquote>DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte.</blockquote>
+                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte"</blockquote>
                     <div class="flex">
                         <img class="author-image" src="/images/people/cecilie.jpeg" alt="Handyman Services" width="640" height="640">
                         <div class="author-info">
@@ -447,6 +444,7 @@
                             <span>Office Manager, SOHO</span>
                         </div>
                     </div>
+                    <a href="/pages/case-adnami.html" class="btn primary small">Læs mere</a>
                 </div>
             </div>
         </div>
@@ -459,7 +457,10 @@
                 <div class="cta-left">
                     <h2 class="text-white">Få En Uforpligtet Facility Besparelsesanalyse</h2>
                     <p>Arbejd sammen med DFMG som jeres facility service partner. Få en gratis gennemgang af jeres nuværende setup.</p>
-                    <a href="#" class="btn success large">Få Gratis Analyse</a>
+                    <div class="flex">
+                        <a href="/pages/kontakt.html" class="btn success medium"><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Kontakt Os</a>
+                        <a href="/pages/prisberegner.html" class="btn white medium"><i class="fas fa-calculator" style="margin-right: 0.5rem;"></i>Prisberegner</a>
+                    </div>
                 </div>
                 <div class="cta-right">
                     <!-- Empty space for future image -->

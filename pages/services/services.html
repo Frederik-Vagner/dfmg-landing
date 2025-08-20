@@ -56,7 +56,7 @@
     overflow: hidden;
 }
 
-.service-column:hover:not(.expanded) {
+.service-column:hover:not(.expanded):not(.collapsed) {
     flex: 1.2;
 }
 
@@ -109,8 +109,124 @@
     transition: font-size 0.4s ease;
 }
 
-.service-column:hover .service-title {
+.service-column:hover:not(.collapsed) .service-title {
     font-size: 1.4rem;
+}
+
+.expanded-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    color: var(--color-charcoal);
+    padding: 7rem 2rem 1rem 2rem;
+    z-index: 4;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.expanded-close-btn {
+    position: absolute;
+    top: 6.5rem;
+    right: 1rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.expanded-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-charcoal);
+    margin-top: 0;
+    padding-right: 150px; /* Space for button */
+}
+
+.expanded-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.expanded-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.expanded-stat-item {
+    text-align: center;
+}
+
+.expanded-stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: block;
+}
+
+.expanded-stat-label {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.specialomrader-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.specialomrader-title {
+    margin-bottom: 1rem;
+    color: var(--color-charcoal);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.specialomrade-card {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.specialomrade-title {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.specialomrade-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.specialomrade-item {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.specialomrade-item:before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
 }
 
 .service-column.expanded .service-title {
@@ -254,6 +370,106 @@
         font-size: 1.3rem;
         color: white;
     }
+}
+
+.expanded-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.expanded-content-left {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.expanded-content-right {
+    flex: 1;
+    top: 2rem;
+}
+
+.expanded-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    margin-top: 3rem;
+}
+
+.fordele-title {
+    margin-bottom: 1rem;
+    color: var(--color-charcoal);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.fordele-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.fordele-card {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.fordele-icon {
+    color: var(--color-primary);
+    font-size: 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    padding: 0.4rem;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fordele-text {
+    font-size: 0.9rem;
+    color: var(--color-charcoal);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.specialomrader-section {
+    margin-bottom: 2rem;
+}
+
+/* Hide content of collapsed columns */
+.service-column.collapsed .service-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Disable hover effects on collapsed columns */
+.service-column.collapsed:hover {
+    flex: 0.2 !important;
+    filter: none !important;
+}
+
+.service-column.collapsed .service-title:hover {
+    font-size: 1.2rem !important;
+}
+
+.expanded-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 </style>
 
@@ -507,14 +723,172 @@
 
 <script>
 // Service pillar interaction
+const serviceDetails = {
+    cleaning: {
+        title: "Professionel Rengøring",
+        badge: "Mest Populære",
+        description: "Erhvervsrengøring af kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.",
+        detailedDescription: "Vores erfarne rengøringsteams leverer konsistent høj kvalitet gennem certificerede processer og miljøvenlige produkter.",
+        stats: [
+            { number: "950+", label: "Tilfredse Kunder" },
+            { number: "99.2%", label: "Kvalitetsrate" },
+            { number: "24/7", label: "Support" }
+        ],
+        categories: [
+            {
+                name: "Kontorrengøring",
+                items: ["Daglig eller ugentlig service", "Gulvbehandling og støvsugning", "Sanitær og køkkenfaciliteter", "Papirkurve og affaldssortering"]
+            },
+            {
+                name: "Restauranter & Caféer", 
+                items: ["Køkkenrengøring og fedtfjerning", "Ventilationsrensning", "Fødevaresikkerhed", "Specialudstyr til foodservice"]
+            },
+            {
+                name: "Skoler & Institutioner",
+                items: ["Børnevenlige produkter", "Desinfektion og hygiejne", "Klasseværelser og fællesarealer", "Legepladser og udendørs områder"]
+            }
+        ],
+        features: [
+            "Miljøvenlige og allergivenlige produkter",
+            "Certificerede og forsikrede medarbejdere", 
+            "Fleksible tidsplaner der passer jeres drift",
+            "Digital rapportering og kvalitetskontrol"
+        ]
+    },
+    property: {
+        title: "Ejendomsservice",
+        description: "Vedligeholdelse af trapper, opgange, elevatorer og udendørs områder.",
+        stats: [
+            { number: "200+", label: "Ejendomme" },
+            { number: "15+", label: "Års erfaring" },
+            { number: "99%", label: "Tilfredshed" }
+        ],
+        categories: [
+            {
+                name: "Fællesarealer & Opgange",
+                items: ["Daglig rengøring", "Gulvbehandling", "Belysning", "Mindre reparationer"]
+            },
+            {
+                name: "Udendørs Områder",
+                items: ["Græsslåning", "Ukrudtsbekæmpelse", "Snerydning", "Affaldshåndtering"]
+            }
+        ],
+        features: [
+            "Proaktiv vedligeholdelse",
+            "24/7 beredskab",
+            "Certificerede specialister",
+            "Digital rapportering"
+        ]
+    },
+    handyman: {
+        title: "Handyman Services",
+        description: "Reparationer, vedligeholdelse og møbelmontering med hurtig responstid.",
+        stats: [
+            { number: "500+", label: "Projekter" },
+            { number: "2h", label: "Responstid" },
+            { number: "100%", label: "Garanti" }
+        ],
+        categories: [
+            {
+                name: "VVS & El-arbejde",
+                items: ["Vandhane reparationer", "Belysning", "Mindre lækager", "Certificeret service"]
+            },
+            {
+                name: "Maling & Spartling",
+                items: ["Væg- og loftsmaling", "Spartling", "Træværk", "Professionelt finish"]
+            }
+        ],
+        features: [
+            "Bred ekspertise",
+            "Akut service",
+            "Certificerede fagfolk",
+            "Garanti på arbejde"
+        ]
+    },
+    supplies: {
+        title: "Supplies & Produkter",
+        description: "Hygiejneprodukter og office supplies med automatisk påfyldning.",
+        stats: [
+            { number: "1000+", label: "Produkter" },
+            { number: "24h", label: "Leveringstid" },
+            { number: "30%", label: "Besparelse" }
+        ],
+        categories: [
+            {
+                name: "Hygiejneprodukter",
+                items: ["Sæbe og desinfektion", "Toiletpapir", "Affaldssække", "Dispensere"]
+            },
+            {
+                name: "Office Supplies",
+                items: ["Printerpapir", "Kaffe og te", "Rengøringsmidler", "Kontorprodukter"]
+            }
+        ],
+        features: [
+            "Automatisk påfyldning",
+            "Konkurrencedygtige priser",
+            "Miljøvenlige produkter",
+            "Digital bestilling"
+        ]
+    },
+    piccoline: {
+        title: "Piccoline Opgaver",
+        description: "Mindre administrative opgaver og specialopgaver der gør hverdagen nemmere.",
+        stats: [
+            { number: "300+", label: "Opgavetyper" },
+            { number: "2h", label: "Responstid" },
+            { number: "95%", label: "Samme dag" }
+        ],
+        categories: [
+            {
+                name: "Administrative Opgaver",
+                items: ["Dokumenthåndtering", "Datarengøring", "Mødetilberedelse", "Korrespondance"]
+            },
+            {
+                name: "Praktiske Opgaver",
+                items: ["Indkøb", "Levering", "Inventar", "Event-support"]
+            }
+        ],
+        features: [
+            "Fleksible løsninger",
+            "Hurtig responstid",
+            "Erfarne specialister",
+            "Digital opgavestyring"
+        ]
+    },
+    windows: {
+        title: "Vinduespolering",
+        description: "Professionel vinduesrens indvendig og udvendig med certificeret udstyr.",
+        stats: [
+            { number: "150+", label: "Bygninger" },
+            { number: "10.000+", label: "m² vinduer" },
+            { number: "0", label: "Ulykker" }
+        ],
+        categories: [
+            {
+                name: "Indvendig Vinduesrens",
+                items: ["Vinduesflader", "Karme og riller", "Glaspartitioner", "Specialbehandling"]
+            },
+            {
+                name: "Udvendig Polering",
+                items: ["Højdearbejde", "Facade og rammer", "Solafskærmning", "Tagvinduer"]
+            }
+        ],
+        features: [
+            "Certificeret højdearbejde",
+            "Miljøvenlige midler",
+            "Erfarne vinduespolere",
+            "Fuld forsikring"
+        ]
+    }
+};
+
 function toggleService(column) {
     const allColumns = document.querySelectorAll('.service-column');
     const isExpanded = column.classList.contains('expanded');
+    const serviceType = column.getAttribute('data-service');
     
     // Reset all columns
-    allColumns.forEach(col => {
-        col.classList.remove('expanded', 'collapsed');
-    });
+    closeExpandedContent();
     
     if (!isExpanded) {
         // Expand clicked column and collapse others
@@ -524,9 +898,121 @@ function toggleService(column) {
                 col.classList.add('collapsed');
             }
         });
+        
+        // Add detailed content overlay
+        showExpandedContent(column, serviceType);
     }
 }
 
+function getImageName(serviceType) {
+    const imageMap = {
+        'property': 'janitor',
+        'piccoline': 'picoline',
+        'cleaning': 'cleaning',
+        'handyman': 'handyman', 
+        'supplies': 'delivery',
+        'windows': 'windowcleaning'
+    };
+    return imageMap[serviceType] || serviceType;
+}
+
+function showExpandedContent(column, serviceType) {
+    const service = serviceDetails[serviceType];
+    if (!service) return;
+    
+    const expandedContent = document.createElement('div');
+    expandedContent.className = 'expanded-content';
+    expandedContent.innerHTML = `
+        
+        <div class="expanded-layout">
+            <div class="expanded-content-left">
+                <h3 class="expanded-title">${service.title}</h3>
+                <p class="expanded-description">${service.description}</p>
+                
+                <div class="expanded-stats">
+                    ${service.stats.map(stat => `
+                        <div class="expanded-stat-item">
+                            <div class="expanded-stat-number">${stat.number}</div>
+                            <div class="expanded-stat-label">${stat.label}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="specialomrader-section">
+                    <h4 class="specialomrader-title">Specialområder</h4>
+                    <div class="specialomrader-grid">
+                        ${service.categories.map(category => `
+                            <div class="specialomrade-card">
+                                <h5 class="specialomrade-title">${category.name}</h5>
+                                <ul class="specialomrade-list">
+                                    ${category.items.map(item => `
+                                        <li class="specialomrade-item">${item}</li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="expanded-content-right">
+                <button class="expanded-close-btn" onclick="closeExpandedContent(event)">
+                    Tilbage
+                </button>
+                <div class="expanded-image">
+                    <img src="/images/service/${getImageName(serviceType)}.jpg" alt="${service.title}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                </div>
+                <div class="fordele-section">
+                    <h4 class="fordele-title">Vores fordele</h4>
+                    <div class="fordele-grid">
+                        ${service.features.map(feature => `
+                            <div class="fordele-card">
+                                <i class="fas fa-check fordele-icon"></i>
+                                <span class="fordele-text">${feature}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="expanded-actions">
+                    <a href="#" class="btn success medium">
+                        <i class="fas fa-info-circle"></i> Læs Mere
+                    </a>
+                    <a href="#" class="btn secondary medium">
+                        <i class="fas fa-calculator"></i> Få Tilbud
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    column.appendChild(expandedContent);
+}
+
+function closeExpandedContent(event) {
+    // Prevent event bubbling to parent elements
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+    
+    const allColumns = document.querySelectorAll('.service-column');
+    allColumns.forEach(col => {
+        // Hide expanded content immediately before removing
+        const expandedContent = col.querySelector('.expanded-content');
+        if (expandedContent) {
+            expandedContent.style.opacity = '0';
+            expandedContent.style.visibility = 'hidden';
+            // Remove after a brief moment to allow for smooth visual transition
+            setTimeout(() => {
+                if (expandedContent.parentNode) {
+                    expandedContent.remove();
+                }
+            }, 50);
+        }
+        col.classList.remove('expanded', 'collapsed');
+    });
+}
 // Add click handlers to service columns
 document.querySelectorAll('.service-column').forEach(column => {
     column.addEventListener('click', () => toggleService(column));

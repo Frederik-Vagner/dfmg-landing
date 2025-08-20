@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adnami Case Study - DFMG Facility Service</title>
+    <meta name="description" content="Læs hvordan DFMG transformerede Adnamis facility management med skræddersyede løsninger og personlig service.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="../images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="../images/logos/apple-touch-icon.png" sizes="180x180">
+    
+    <!-- Performance -->
+    <meta name="theme-color" content="#344767">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../../../css/styles.css">
+</head>
+<style>
+/* Case Study Specific Styles */
+.case-hero {
+    background: var(--bg-gradient-charcoal);
+    color: var(--white);
+    padding: 8rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.case-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/logos/adnami.png') center/contain no-repeat;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.case-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.case-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    max-width: var(--container-width-wide);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.case-main {
+    background: white;
+}
+
+.case-sidebar {
+    top: 2rem;
+    height: fit-content;
+}
+
+.sidebar-section {
+    background: white;
+    border-radius: var(--radius-normal);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: var(--border-lighter);
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--charcoal);
+    font-size: 1.2rem;
+}
+
+.client-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-normal);
+    text-decoration: none;
+    color: var(--charcoal);
+    border: var(--border-lighter);
+    margin-bottom: 0.75rem;
+}
+
+.client-link.active {
+    background: var(--bg-gradient-primary);
+    color: white;
+}
+
+.client-logo-mini {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-card {
+    background: var(--bg-gradient-white);
+    padding: 2rem;
+    border-radius: var(--radius-normal);
+    text-align: center;
+    border: var(--border-lighter);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.gallery-item {
+    border-radius: var(--radius-normal);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 3rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.timeline-date {
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.quote-section {
+    background: var(--bg-gradient-primary);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: var(--radius-normal);
+    text-align: center;
+    margin: 4rem 0;
+    position: relative;
+}
+
+.quote-section blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.quote-section::before {
+    content: '"';
+    font-size: 8rem;
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+    opacity: 0.2;
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 768px) {
+    .case-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .case-sidebar {
+        position: static;
+        order: -1;
+    }
+}
+</style>
+
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Case Study Hero -->
+    <section class="case-hero">
+        <div class="container">
+            <div class="text-center">
+                <div class="subtitle text-white">CASE STUDY</div>
+                <div class="title text-white">Adnami: Revolutionering af AdTech Facility Management</div>
+                <div class="body text-white">Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig service og innovative løsninger</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Content -->
+    <section class="section">
+        <div class="case-content">
+            <!-- Main Content -->
+            <div class="case-main">
+                <!-- Company Overview -->
+                <div class="card p-3">
+                    <div class="flex" style="align-items: center; margin-bottom: 2rem;">
+                        <div>
+                            <h2>Om Adnami</h2>
+                            <p class="body text-gray">Adnami er en førende adtech-virksomhed, der specialiserer sig i innovative reklameløsninger og programmatisk annoncering. Med hovedsæde i København beskæftiger virksomheden over 50 medarbejdere på tværs af flere afdelinger.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge Section -->
+                <div class="card p-3" style="margin-top: 2rem;">
+                    <h2 class="border-left-red" style="padding-left: 1rem;">Udfordringen</h2>
+                    <p class="body text-gray">Adnami stod overfor flere facility management udfordringer der påvirkede deres daglige drift og medarbejdertilfredshed:</p>
+                    
+                    <ul class="feature-list list-red" style="margin: 2rem 0;">
+                        <li><i class="fas fa-times"></i>Inkonsistent rengøringskvalitet fra tidligere leverandør</li>
+                        <li><i class="fas fa-times"></i>Dårlig kommunikation og langsomme reaktionstider</li>
+                        <li><i class="fas fa-times"></i>Manglende koordination mellem forskellige service leverandører</li>
+                        <li><i class="fas fa-times"></i>Højere omkostninger end budgetteret uden tilsvarende værdi</li>
+                    </ul>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">30%</span>
+                        <div class="stat-label">Omkostningsbesparelse</div>
+                        <div class="stat-description">Årlig reduktion i facility udgifter</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">95%</span>
+                        <div class="stat-label">Tilfredshedsrate</div>
+                        <div class="stat-description">Medarbejdertilfredshed med rengøring</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">24/7</span>
+                        <div class="stat-label">Support</div>
+                        <div class="stat-description">Dedikeret kundeservice</div>
+                    </div>
+                </div>
+
+                <!-- Solution Section -->
+                <div class="card p-3">
+                    <h2 class="border-left-success" style="padding-left: 1rem;">DFMG's Løsning</h2>
+                    <p class="body text-gray">DFMG implementerede en omfattende facility management strategi skræddersyet til Adnamis specifikke behov:</p>
+                    
+                    <div class="grid-2x2" style="margin-top: 2rem; gap: 2rem;">
+                        <div class="card p-2 border-top-primary">
+                            <h4><i class="fas fa-broom" style="color: var(--primary); margin-right: 0.5rem;"></i>Daglig Rengøring</h4>
+                            <p class="body">Skræddersyet rengøringsplan med fokus på high-traffic områder og teknisk udstyr</p>
+                        </div>
+                        <div class="card p-2 border-top-success">
+                            <h4><i class="fas fa-tools" style="color: var(--success); margin-right: 0.5rem;"></i>Proaktiv Vedligeholdelse</h4>
+                            <p class="body">Forebyggende vedligeholdelse af møbler, teknisk udstyr og fællesarealer</p>
+                        </div>
+                        <div class="card p-2 border-top-governance">
+                            <h4><i class="fas fa-box" style="color: var(--governance); margin-right: 0.5rem;"></i>Supply Management</h4>
+                            <p class="body">Automatisk påfyldning af office supplies og hygiejneprodukter</p>
+                        </div>
+                        <div class="card p-2 border-top-charcoal">
+                            <h4><i class="fas fa-headset" style="color: var(--charcoal); margin-right: 0.5rem;"></i>Dedikeret Support</h4>
+                            <p class="body">Fast kontaktperson og hurtig responstid på alle henvendelser</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="card p-3">
+                    <h2>Før & Efter</h2>
+                    <div class="photo-gallery">
+                        <div class="gallery-item">
+                            <img src="../images/service/cleaning.jpg" alt="Rengøret kontor område">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/service/delivery.jpg" alt="Organiserede supplies">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/service/handyman.jpg" alt="Vedligeholdt møbler">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/service/janitor.jpg" alt="Rene fællesarealer">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementation Timeline -->
+                <div class="card p-3">
+                    <h2>Implementering</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Uge 1-2</div>
+                            <h4>Analyse & Planlægning</h4>
+                            <p class="body text-gray">Grundig gennemgang af eksisterende setup og identificering af forbedringspotentialer</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Uge 3</div>
+                            <h4>Skræddersyet Løsning</h4>
+                            <p class="body text-gray">Udvikling af en personlig service plan baseret på Adnamis specifikke behov</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Uge 4</div>
+                            <h4>Pilot Program</h4>
+                            <p class="body text-gray">Test af nye procedurer og systemer med løbende feedback fra medarbejdere</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Uge 5+</div>
+                            <h4>Fuld Implementation</h4>
+                            <p class="body text-gray">Opstart af alle services med kontinuerlig overvågning og optimering</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote Section -->
+                <div class="quote-section">
+                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte. Det er en helt anden oplevelse end vores tidligere leverandør."</blockquote>
+                    <div class="flex" style="justify-content: center; align-items: center; gap: 1rem;">
+                        <img src="../../../images/people/jørgen.jpeg" alt="Jørgen Gosvig" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <strong>Jørgen Gosvig</strong><br>
+                            <span style="opacity: 0.8;">CFO & Operations Manager, Adnami</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="card p-3">
+                    <h2 class="border-left-success" style="padding-left: 1rem;">Resultater</h2>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i>30% reduktion i facility omkostninger årligt</li>
+                        <li><i class="fas fa-check"></i>95% medarbejdertilfredshed med rengøringskvalitet</li>
+                        <li><i class="fas fa-check"></i>Eliminering af uventede vedligeholdelsesomkostninger</li>
+                        <li><i class="fas fa-check"></i>Øget produktivitet gennem bedre arbejdsmiljø</li>
+                        <li><i class="fas fa-check"></i>Forenkling af leverandørstyring gennem én kontakt</li>
+                    </ul>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="cta-center radius-normal">
+                    <h2>Vil I også opleve den DFMG forskel?</h2>
+                    <p>Kontakt os for en uforpligtende samtale om, hvordan vi kan optimere jeres facility management</p>
+                    <div class="flex">
+                        <a href="/pages/kontakt.html" class="btn success medium"><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Kontakt Os</a>
+                        <a href="/pages/prisberegner.html" class="btn white medium"><i class="fas fa-calculator" style="margin-right: 0.5rem;"></i>Prisberegner</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="case-sidebar">
+                <div class="sidebar-section" style="text-align: center;">
+                        <img src="../../../images/logos/adnami.png" alt="Adnami Logo" style="height: 60px; max-width: 200px; object-fit: contain;">
+                    </div>
+                <div class="sidebar-section">
+                    <h3>Andre Kunder</h3>
+                    
+                    <a href="../pages/case-adnami.html" class="client-link active">
+                        <img src="../../../images/logos/adnami.png" alt="Adnami" class="client-logo-mini">
+                        <div>
+                            <strong>Adnami</strong>
+                            <div style="font-size: 0.8rem; color: var(--gray);">AdTech</div>
+                        </div>
+                    </a>
+                    
+                    <a href="../pages/case-nybolig.html" class="client-link">
+                        <img src="../../../images/logos/nybolig.png" alt="Nybolig" class="client-logo-mini">
+                        <div>
+                            <strong>Nybolig</strong>
+                            <div style="font-size: 0.8rem; color: var(--gray);">Ejendomsmægler</div>
+                        </div>
+                    </a>
+                    
+                    <a href="../pages/case-soho.html" class="client-link">
+                        <img src="../../../images/logos/soho.png" alt="SOHO" class="client-logo-mini">
+                        <div>
+                            <strong>SOHO</strong>
+                            <div style="font-size: 0.8rem; color: var(--gray);">Coworking</div>
+                        </div>
+                    </a>
+                    
+                    <a href="../pages/case-deas.html" class="client-link">
+                        <img src="../../../images/logos/deas.png" alt="Deas" class="client-logo-mini">
+                        <div>
+                            <strong>Deas</strong>
+                            <div style="font-size: 0.8rem; color: var(--gray);">Ejendomsadministration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Services Leveret</h3>
+                    <ul class="feature-list list-primary" style="font-size: 0.9rem;">
+                        <li><i class="fas fa-broom"></i>Daglig Rengøring</li>
+                        <li><i class="fas fa-tools"></i>Handyman Services</li>
+                        <li><i class="fas fa-box"></i>Supply Management</li>
+                        <li><i class="fas fa-building"></i>Ejendomsservice</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Projektinfo</h3>
+                    <div style="font-size: 0.9rem;">
+                        <p><strong>Periode:</strong> 18+ måneder</p>
+                        <p><strong>Lokationer:</strong> København HQ</p>
+                        <p><strong>Medarbejdere:</strong> 50+</p>
+                        <p><strong>Areal:</strong> 800+ m²</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- Component loader -->
+    <script src="/../../js/components.js" defer></script>
+</body>
+</html>
