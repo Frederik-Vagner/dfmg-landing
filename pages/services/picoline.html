@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    <title>DFMG - Piccoline Service</title>
+    <meta name="description" content="Jeres kontor's usynlige hjælper">
     
     <!-- Favicon -->
     <link rel="icon" href="../../images/logos/logo.png" type="image/png">
@@ -21,1284 +21,1041 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
-    <style>
-        /* Core Variables */
-        :root {
-            --color-primary: #22c55e;
-            --color-primary-dark: #16a34a;
-            --color-charcoal: #344767;
-            --color-slate: #4a5568;
-            --color-dark-gray: #666;
-            --color-light-gray: #f8fafc;
-            --color-white: #ffffff;
-            --color-border: #e2e8f0;
-            --color-success: #10b981;
-            --color-danger: #ef4444;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #1a1f36;
-            background: var(--color-light-gray);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .section-auto {
-            padding: 4rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header .subtitle {
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: -1px;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--color-dark-gray);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-slate) 50%, var(--color-primary) 100%);
-            padding: 6rem 0;
-            position: relative;
-            overflow: hidden;
-            color: white;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 150px;
-            background: white;
-            clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 80%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .hero-subtitle {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            margin-bottom: 3rem;
-            line-height: 1.5;
-        }
-
-        .hero-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .hero-feature {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .hero-feature:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-feature i {
-            font-size: 2rem;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .hero-feature h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .hero-feature p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--color-charcoal);
-            border-color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--color-light-gray);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: white;
-        }
-
-        /* Definition Section */
-        .definition-section {
-            background: white;
-            padding: 6rem 0;
-        }
-
-        .definition-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        .definition-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--color-charcoal);
-        }
-
-        .definition-highlight {
-            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
-            border-left: 4px solid var(--color-primary);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            font-style: italic;
-            font-weight: 500;
-        }
-
-        .definition-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .piccoline-day {
-            background: linear-gradient(135deg, var(--color-light-gray), #f1f5f9);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .day-title {
-            text-align: center;
-            color: var(--color-charcoal);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-
-        .time-slot {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-        }
-
-        .time-slot:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        }
-
-        .time-badge {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .time-task {
-            flex: 1;
-            color: var(--color-charcoal);
-            font-weight: 500;
-        }
-
-        /* Services Section */
-        .services-section {
-            background: var(--color-light-gray);
-        }
-
-        .services-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .service-tab {
-            background: white;
-            border: 2px solid var(--color-border);
-            color: var(--color-dark-gray);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .service-tab.active {
-            background: var(--color-primary);
-            color: white;
-            border-color: var(--color-primary);
-        }
-
-        .service-tab:hover:not(.active) {
-            border-color: var(--color-primary);
-            background: #f0fdf4;
-        }
-
-        .services-content {
-            display: none;
-        }
-
-        .services-content.active {
-            display: block;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-        }
-
-        .service-card:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
-        }
-
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            color: var(--color-dark-gray);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        .service-features {
-            list-style: none;
-        }
-
-        .service-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            color: var(--color-charcoal);
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .service-features i {
-            color: var(--color-primary);
-            font-size: 0.8rem;
-            width: 14px;
-        }
-
-        /* Ad Hoc Section */
-        .adhoc-section {
-            background: white;
-        }
-
-        .adhoc-explanation {
-            background: linear-gradient(135deg, var(--color-light-gray), #f1f5f9);
-            border-radius: 24px;
-            padding: 4rem;
-            margin-bottom: 4rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .adhoc-explanation::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark), var(--color-primary));
-        }
-
-        .adhoc-badge {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-
-        .adhoc-explanation h3 {
-            font-size: 2rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .adhoc-explanation p {
-            font-size: 1.1rem;
-            color: var(--color-dark-gray);
-            line-height: 1.6;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .adhoc-examples {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .adhoc-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-left: 4px solid transparent;
-            position: relative;
-            transition: all 0.3s;
-        }
-
-        .adhoc-card:hover {
-            border-left-color: var(--color-primary);
-            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.15);
-        }
-
-        .adhoc-card-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .adhoc-card h4 {
-            color: var(--color-charcoal);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .adhoc-card p {
-            color: var(--color-dark-gray);
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        /* Why Choose Section */
-        .why-choose {
-            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-choose-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .benefits-comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 4rem;
-        }
-
-        .comparison-column {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 3rem 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .column-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .column-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
-        }
-
-        .without-icon {
-            background: rgba(239, 68, 68, 0.2);
-            color: var(--color-danger);
-        }
-
-        .with-icon {
-            background: rgba(34, 197, 94, 0.2);
-            color: var(--color-primary);
-        }
-
-        .column-header h4 {
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .comparison-list {
-            list-style: none;
-        }
-
-        .comparison-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-        }
-
-        .comparison-list i {
-            margin-top: 0.25rem;
-            font-size: 1rem;
-        }
-
-        .without-piccoline i {
-            color: var(--color-danger);
-        }
-
-        .with-piccoline i {
-            color: var(--color-primary);
-        }
-
-        /* Testimonial Section */
-        .testimonial-section {
-            background: var(--color-light-gray);
-        }
-
-        .testimonial-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .testimonial-content {
-            background: white;
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .quote-mark {
-            position: absolute;
-            top: -20px;
-            left: 3rem;
-            width: 60px;
-            height: 60px;
-            background: var(--color-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-        }
-
-        .testimonial-text {
-            font-size: 1.2rem;
-            color: var(--color-charcoal);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #f1f5f9;
-            border: 3px solid var(--color-primary);
-        }
-
-        .author-info h5 {
-            color: var(--color-charcoal);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .author-info span {
-            color: var(--color-dark-gray);
-            font-size: 0.9rem;
-        }
-
-        .testimonial-visual {
-            text-align: center;
-        }
-
-        .testimonial-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .stat-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--color-dark-gray);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: white;
-            text-align: center;
-        }
-
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .cta-content p {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-white {
-            background: white;
-            color: var(--color-primary);
-            border-color: white;
-        }
-
-        .cta-transparent {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border-color: rgba(255,255,255,0.3);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .definition-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .testimonial-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .benefits-comparison {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            
-            .hero-features {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .services-tabs {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .testimonial-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .adhoc-examples {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+
+<style>
+/* Essential custom styles not covered by your stylesheet */
+:root {
+    --color-primary: var(--success);
+    --color-primary-dark: #16a34a;
+    --color-charcoal: var(--charcoal);
+    --color-dark-gray: var(--gray);
+    --color-light-gray: #f8fafc;
+    --color-border: #e2e8f0;
+    --color-slate: #475569;
+    --color-danger: #ef4444;
+}
+
+/* Hero specific styles */
+.hero-layout {
+    background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-slate) 50%, var(--color-primary) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-layout::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: white;
+    clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 80%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.hero-feature {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.hero-feature:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-feature i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Definition section */
+.definition-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.definition-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+}
+
+.definition-highlight {
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    border-left: 4px solid var(--color-primary);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.piccoline-day {
+    background: linear-gradient(135deg, var(--color-light-gray), #f1f5f9);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.day-title {
+    text-align: center;
+    color: var(--color-charcoal);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.time-slot {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.time-slot:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.time-badge {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+}
+
+.time-task {
+    flex: 1;
+    color: var(--color-charcoal);
+    font-weight: 500;
+}
+
+/* Services tabs */
+.services-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.service-tab {
+    background: white;
+    border: 2px solid var(--color-border);
+    color: var(--color-dark-gray);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.service-tab.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.service-tab:hover:not(.active) {
+    border-color: var(--color-primary);
+    background: #f0fdf4;
+}
+
+.services-content {
+    display: none;
+}
+
+.services-content.active {
+    display: block;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+}
+
+.service-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-charcoal);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.service-features i {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    width: 14px;
+}
+
+/* Ad hoc section */
+.adhoc-explanation {
+    background: linear-gradient(135deg, var(--color-light-gray), #f1f5f9);
+    border-radius: 24px;
+    padding: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.adhoc-explanation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark), var(--color-primary));
+}
+
+.adhoc-badge {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.adhoc-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.adhoc-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-left: 4px solid transparent;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.adhoc-card:hover {
+    border-left-color: var(--color-primary);
+    box-shadow: 0 15px 40px rgba(34, 197, 94, 0.15);
+}
+
+.adhoc-card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Why choose section */
+.why-choose {
+    background: var(--bg-gradient-charcoal);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-content {
+    position: relative;
+    z-index: 2;
+}
+
+.benefits-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.comparison-column {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.column-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.column-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+}
+
+.without-icon {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--color-danger);
+}
+
+.with-icon {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--color-primary);
+}
+
+.comparison-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comparison-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.comparison-list i {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+}
+
+.without-piccoline i {
+    color: var(--color-danger);
+}
+
+.with-piccoline i {
+    color: var(--color-primary);
+}
+
+/* Testimonial section */
+.testimonial-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.testimonial-content {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    top: -20px;
+    left: 3rem;
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    color: var(--color-charcoal);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    border: 3px solid var(--color-primary);
+}
+
+.testimonial-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .definition-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .testimonial-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .benefits-comparison {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .services-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .testimonial-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .adhoc-examples {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
 <body>
 <!-- Header Component -->
 <div id="header"></div>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">Piccoline Service</div>
-                <h1>Jeres Kontor's Usynlige Hjælper</h1>
-                <p class="hero-subtitle">En piccoline er kontorets øjne, ører og arme - den person der sørger for at alt fungerer perfekt, så jeres medarbejdere kan fokusere på det de er bedst til.</p>
-                
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <i class="fas fa-clock"></i>
-                        <h3>Møder først</h3>
-                        <p>Klargør kontoret før medarbejderne ankommer</p>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-coffee"></i>
-                        <h3>Kaffe klar</h3>
-                        <p>Sørger for at kaffemaskinen er klar til dagens første kop</p>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Frokost service</h3>
-                        <p>Klargør og rydder op efter fælles måltider</p>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-tasks"></i>
-                        <h3>Ad hoc opgaver</h3>
-                        <p>Løser de uventede opgaver der opstår i løbet af dagen</p>
-                    </div>
+
+<!-- Hero Section -->
+<section class="first hero-layout">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">Piccoline Service</div>
+            <h1 class="title text-white" style="font-size: 3.5rem; font-weight: 700; line-height: 1.1;">Jeres Kontor's Usynlige Hjælper</h1>
+            <p class="body text-white bot-space2" style="font-size: 1.4rem; opacity: 0.9;">En piccoline er kontorets øjne, ører og arme - den person der sørger for at alt fungerer perfekt, så jeres medarbejdere kan fokusere på det de er bedst til.</p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i class="fas fa-clock"></i>
+                    <h3 class="text-white" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Møder først</h3>
+                    <p class="text-white" style="font-size: 0.9rem; opacity: 0.9;">Klargør kontoret før medarbejderne ankommer</p>
                 </div>
-                
-                <div class="hero-cta">
-                    <a href="#services" class="btn btn-primary">
-                        <i class="fas fa-arrow-down"></i>
-                        Se Vores Services
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-phone"></i>
-                        Få Tilbud
-                    </a>
+                <div class="hero-feature">
+                    <i class="fas fa-coffee"></i>
+                    <h3 class="text-white" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Kaffe klar</h3>
+                    <p class="text-white" style="font-size: 0.9rem; opacity: 0.9;">Sørger for at kaffemaskinen er klar til dagens første kop</p>
                 </div>
+                <div class="hero-feature">
+                    <i class="fas fa-utensils"></i>
+                    <h3 class="text-white" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Frokost service</h3>
+                    <p class="text-white" style="font-size: 0.9rem; opacity: 0.9;">Klargør og rydder op efter fælles måltider</p>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-tasks"></i>
+                    <h3 class="text-white" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Ad hoc opgaver</h3>
+                    <p class="text-white" style="font-size: 0.9rem; opacity: 0.9;">Løser de uventede opgaver der opstår i løbet af dagen</p>
+                </div>
+            </div>
+            
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="#services" class="btn secondary large" style="background: white; color: var(--color-charcoal); border-color: white;">
+                    <i class="fas fa-arrow-down"></i>
+                    Se Vores Services
+                </a>
+                <a href="#contact" class="btn" style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); padding: 16px 32px; font-size: 1.25rem;">
+                    <i class="fas fa-phone"></i>
+                    Få Tilbud
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- What is Piccoline Section -->
-    <section class="definition-section" id="definition">
-        <div class="container">
-            <div class="section-header">
-                <div class="subtitle">HVAD ER EN PICCOLINE?</div>
-                <h2>Kontorets Uundværlige Hjælper</h2>
-                <p>En piccoline fungerer som kontorets øjne, ører og arme og har i løbet af en normal arbejdsdag mange opgaver der sikrer den daglige drift</p>
-            </div>
-            
-            <div class="definition-content">
-                <div class="definition-text">
-                    <p>En piccoline/piccolo har til opgave at sørge for kontorets daglige drift, hvor deres opgaver typisk er mere praktiske end administrative. De er ofte dem, som møder først ind på kontoret - her tænder de lys og kaffemaskine, skruer op eller ned på radiatorer, og tjekker at alt er klar til at de øvrige medarbejdere møder ind.</p>
-                    
-                    <div class="definition-highlight">
-                        "Jeg gør egentlig bare alt for, at de andre får en nemmere hverdag." 
-                        <br><strong>- Petrine, Piccoline hos Maigaard & Mølbech</strong>
-                    </div>
-                    
-                    <p>Udover de mange praktiske opgaver, varetager en piccoline også ofte såkaldte ad hoc opgaver - de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver.</p>
+<!-- What is Piccoline Section -->
+<section class="section" id="definition">
+    <div class="container">
+        <div class="text-center bot-space2">
+            <div class="subtitle text-success">HVAD ER EN PICCOLINE?</div>
+            <h2 class="text-charcoal">Kontorets Uundværlige Hjælper</h2>
+            <p class="body text-gray">En piccoline fungerer som kontorets øjne, ører og arme og har i løbet af en normal arbejdsdag mange opgaver der sikrer den daglige drift</p>
+        </div>
+        
+        <div class="definition-content">
+            <div class="definition-text">
+                <p>En piccoline/piccolo har til opgave at sørge for kontorets daglige drift, hvor deres opgaver typisk er mere praktiske end administrative. De er ofte dem, som møder først ind på kontoret - her tænder de lys og kaffemaskine, skruer op eller ned på radiatorer, og tjekker at alt er klar til at de øvrige medarbejdere møder ind.</p>
+                
+                <div class="definition-highlight">
+                    "Jeg gør egentlig bare alt for, at de andre får en nemmere hverdag." 
+                    <br><strong>- Petrine, Piccoline hos Maigaard & Mølbech</strong>
                 </div>
                 
-                <div class="definition-visual">
-                    <div class="piccoline-day">
-                        <div class="day-title">En Typisk Piccoline Dag</div>
-                        <div class="time-slot">
-                            <div class="time-badge">07:30</div>
-                            <div class="time-task">Ankommer og tænder lys & kaffe</div>
-                        </div>
-                        <div class="time-slot">
-                            <div class="time-badge">08:00</div>
-                            <div class="time-task">Tjekker temperatur og faciliteter</div>
-                        </div>
-                        <div class="time-slot">
-                            <div class="time-badge">09:00</div>
-                            <div class="time-task">Rengøring af køkken og toilet</div>
-                        </div>
-                        <div class="time-slot">
-                            <div class="time-badge">12:00</div>
-                            <div class="time-task">Klargør frokost og fællesområder</div>
-                        </div>
-                        <div class="time-slot">
-                            <div class="time-badge">13:00</div>
-                            <div class="time-task">Oprydning efter frokost</div>
-                        </div>
-                        <div class="time-slot">
-                            <div class="time-badge">14:00</div>
-                            <div class="time-task">Ad hoc opgaver og vedligeholdelse</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-section section-auto" id="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="subtitle">VORES PICCOLINE SERVICES</div>
-                <h2>Faste Opgaver & Fleksibel Support</h2>
-                <p>Vores piccoliner håndterer både daglige rutineopgaver og uforudsete behov, så jeres kontor altid fungerer optimalt</p>
+                <p>Udover de mange praktiske opgaver, varetager en piccoline også ofte såkaldte ad hoc opgaver - de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver.</p>
             </div>
             
-            <div class="services-tabs">
-                <div class="service-tab active" onclick="showServices('daily')">Daglige Opgaver</div>
-                <div class="service-tab" onclick="showServices('weekly')">Ugentlige Opgaver</div>
-                <div class="service-tab" onclick="showServices('adhoc')">Ad Hoc Support</div>
-            </div>
-            
-            <div class="services-content active" id="daily">
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-broom"></i></div>
-                        <h3>Rengøring & Hygiejne</h3>
-                        <p>Daglig rengøring af toilet, køkken og fællesområder for at sikre et rent og sundt arbejdsmiljø.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Toilet og håndvaske</li>
-                            <li><i class="fas fa-check"></i> Køkken og spiseplads</li>
-                            <li><i class="fas fa-check"></i> Overflader og borde</li>
-                            <li><i class="fas fa-check"></i> Støvsugning efter behov</li>
-                            <li><i class="fas fa-check"></i> Affaldshåndtering</li>
-                        </ul>
+            <div>
+                <div class="piccoline-day">
+                    <div class="day-title">En Typisk Piccoline Dag</div>
+                    <div class="time-slot">
+                        <div class="time-badge">07:30</div>
+                        <div class="time-task">Ankommer og tænder lys & kaffe</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-utensils"></i></div>
-                        <h3>Frokost & Måltider</h3>
-                        <p>Klargøring og oprydning efter fælles måltider, så medarbejderne kan nyde deres pause.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Borddækning og klargøring</li>
-                            <li><i class="fas fa-check"></i> Servering ved behov</li>
-                            <li><i class="fas fa-check"></i> Oprydning efter måltider</li>
-                            <li><i class="fas fa-check"></i> Opvask og køkkenrengøring</li>
-                            <li><i class="fas fa-check"></i> Genopfyldning af forsyninger</li>
-                        </ul>
+                    <div class="time-slot">
+                        <div class="time-badge">08:00</div>
+                        <div class="time-task">Tjekker temperatur og faciliteter</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-coffee"></i></div>
-                        <h3>Kaffe & Drikkevarer</h3>
-                        <p>Sørger for at kaffemaskinen altid er klar og at der er friske drikkevarer til rådighed.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Kaffemaskine klargøring</li>
-                            <li><i class="fas fa-check"></i> Genopfyldning af kaffe og te</li>
-                            <li><i class="fas fa-check"></i> Rengøring af kaffestation</li>
-                            <li><i class="fas fa-check"></i> Kontrol af vandfiltre</li>
-                            <li><i class="fas fa-check"></i> Bestilling af forsyninger</li>
-                        </ul>
+                    <div class="time-slot">
+                        <div class="time-badge">09:00</div>
+                        <div class="time-task">Rengøring af køkken og toilet</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-thermometer-half"></i></div>
-                        <h3>Faciliteter & Miljø</h3>
-                        <p>Kontrol og justering af kontorets fysiske miljø for optimal komfort og funktionalitet.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Temperatur og ventilation</li>
-                            <li><i class="fas fa-check"></i> Belysning og el-udstyr</li>
-                            <li><i class="fas fa-check"></i> Sikkerhedstjek</li>
-                            <li><i class="fas fa-check"></i> Adgangskontrol</li>
-                            <li><i class="fas fa-check"></i> Rapportering af fejl</li>
-                        </ul>
+                    <div class="time-slot">
+                        <div class="time-badge">12:00</div>
+                        <div class="time-task">Klargør frokost og fællesområder</div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="services-content" id="weekly">
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-boxes"></i></div>
-                        <h3>Lager & Forsyninger</h3>
-                        <p>Ugentlig kontrol og genbestilling af kontorforsyninger og hygiejneprodukter.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Lager inventory</li>
-                            <li><i class="fas fa-check"></i> Bestilling af supplies</li>
-                            <li><i class="fas fa-check"></i> Hygiejneprodukter</li>
-                            <li><i class="fas fa-check"></i> Kontorartikler</li>
-                            <li><i class="fas fa-check"></i> Kaffe og te supplies</li>
-                        </ul>
+                    <div class="time-slot">
+                        <div class="time-badge">13:00</div>
+                        <div class="time-task">Oprydning efter frokost</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-seedling"></i></div>
-                        <h3>Planter & Dekoration</h3>
-                        <p>Pleje af planter og vedligeholdelse af kontorets æstetiske udtryk.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Vanding af planter</li>
-                            <li><i class="fas fa-check"></i> Beskæring og pleje</li>
-                            <li><i class="fas fa-check"></i> Udskiftning af visne planter</li>
-                            <li><i class="fas fa-check"></i> Dekorationsvedligeholdelse</li>
-                            <li><i class="fas fa-check"></i> Sæsonbaseret pynt</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-tools"></i></div>
-                        <h3>Vedligeholdelse & Tjek</h3>
-                        <p>Grundig gennemgang af faciliteter og mindre vedligeholdelsesopgaver.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Udstyr funktionstest</li>
-                            <li><i class="fas fa-check"></i> Mindre reparationer</li>
-                            <li><i class="fas fa-check"></i> Filter udskiftning</li>
-                            <li><i class="fas fa-check"></i> Sikkerhedsudstyr kontrol</li>
-                            <li><i class="fas fa-check"></i> Dokumentation og rapporter</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-                        <h3>Event Support</h3>
-                        <p>Forberedelse og support til møder, events og særlige arrangementer.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Mødelokale klargøring</li>
-                            <li><i class="fas fa-check"></i> Catering assistance</li>
-                            <li><i class="fas fa-check"></i> AV-udstyr setup</li>
-                            <li><i class="fas fa-check"></i> Gæste modtagelse</li>
-                            <li><i class="fas fa-check"></i> Post-event oprydning</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="services-content" id="adhoc">
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                        <h3>Personlig Assistance</h3>
-                        <p>Små personlige opgaver der gør medarbejdernes hverdag lettere.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Hentning af plastre/medicin</li>
-                            <li><i class="fas fa-check"></i> Post og pakke håndtering</li>
-                            <li><i class="fas fa-check"></i> Transport assistance</li>
-                            <li><i class="fas fa-check"></i> Personlige indkøb</li>
-                            <li><i class="fas fa-check"></i> Akut hjælp og support</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-box-open"></i></div>
-                        <h3>Organisering & Oprydning</h3>
-                        <p>Organisering af lager, depot og andre opbevaringsområder efter behov.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Depotrum oprydning</li>
-                            <li><i class="fas fa-check"></i> Arkiv organisering</li>
-                            <li><i class="fas fa-check"></i> Lager omstrukturering</li>
-                            <li><i class="fas fa-check"></i> Sæsonbaseret oprydning</li>
-                            <li><i class="fas fa-check"></i> Genbrugshåndtering</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-users"></i></div>
-                        <h3>Møde & Gæste Service</h3>
-                        <p>Klargøring af te, kaffe og vand til kundemøder og særlige lejligheder.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Mødeforplejning</li>
-                            <li><i class="fas fa-check"></i> Gæstebetjening</li>
-                            <li><i class="fas fa-check"></i> Reception assistance</li>
-                            <li><i class="fas fa-check"></i> Overfladerens innan</li>
-                            <li><i class="fas fa-check"></i> Last-minute klargøring</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                        <h3>Akut Support</h3>
-                        <p>Hurtig reaktion på uventede situationer og akutte behov.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Spild og uheld</li>
-                            <li><i class="fas fa-check"></i> Udstyr nedbrud</li>
-                            <li><i class="fas fa-check"></i> Uventede gæster</li>
-                            <li><i class="fas fa-check"></i> Akut indkøb</li>
-                            <li><i class="fas fa-check"></i> Problemløsning</li>
-                        </ul>
+                    <div class="time-slot">
+                        <div class="time-badge">14:00</div>
+                        <div class="time-task">Ad hoc opgaver og vedligeholdelse</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Ad Hoc Explanation Section -->
-    <section class="adhoc-section section-auto" id="adhoc-explanation">
-        <div class="container">
-            <div class="adhoc-explanation">
-                <div class="adhoc-badge">AD HOC OPGAVER</div>
-                <h3>Hvad Er Ad Hoc Opgaver?</h3>
-                <p>Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
+<!-- Services Section -->
+<section class="section bg-gradient-white" id="services">
+    <div class="container">
+        <div class="text-center bot-space2">
+            <div class="subtitle text-success">VORES PICCOLINE SERVICES</div>
+            <h2 class="text-charcoal">Faste Opgaver & Fleksibel Support</h2>
+            <p class="body text-gray">Vores piccoliner håndterer både daglige rutineopgaver og uforudsete behov, så jeres kontor altid fungerer optimalt</p>
+        </div>
+        
+        <div class="services-tabs">
+            <div class="service-tab active" onclick="showServices('daily')">Daglige Opgaver</div>
+            <div class="service-tab" onclick="showServices('weekly')">Ugentlige Opgaver</div>
+            <div class="service-tab" onclick="showServices('adhoc')">Ad Hoc Support</div>
+        </div>
+        
+        <div class="services-content active" id="daily">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-broom"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Rengøring & Hygiejne</h3>
+                    <p class="text-gray bot-space">Daglig rengøring af toilet, køkken og fællesområder for at sikre et rent og sundt arbejdsmiljø.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Toilet og håndvaske</li>
+                        <li><i class="fas fa-check"></i> Køkken og spiseplads</li>
+                        <li><i class="fas fa-check"></i> Overflader og borde</li>
+                        <li><i class="fas fa-check"></i> Støvsugning efter behov</li>
+                        <li><i class="fas fa-check"></i> Affaldshåndtering</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Frokost & Måltider</h3>
+                    <p class="text-gray bot-space">Klargøring og oprydning efter fælles måltider, så medarbejderne kan nyde deres pause.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Borddækning og klargøring</li>
+                        <li><i class="fas fa-check"></i> Servering ved behov</li>
+                        <li><i class="fas fa-check"></i> Oprydning efter måltider</li>
+                        <li><i class="fas fa-check"></i> Opvask og køkkenrengøring</li>
+                        <li><i class="fas fa-check"></i> Genopfyldning af forsyninger</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-coffee"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Kaffe & Drikkevarer</h3>
+                    <p class="text-gray bot-space">Sørger for at kaffemaskinen altid er klar og at der er friske drikkevarer til rådighed.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Kaffemaskine klargøring</li>
+                        <li><i class="fas fa-check"></i> Genopfyldning af kaffe og te</li>
+                        <li><i class="fas fa-check"></i> Rengøring af kaffestation</li>
+                        <li><i class="fas fa-check"></i> Kontrol af vandfiltre</li>
+                        <li><i class="fas fa-check"></i> Bestilling af forsyninger</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-thermometer-half"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Faciliteter & Miljø</h3>
+                    <p class="text-gray bot-space">Kontrol og justering af kontorets fysiske miljø for optimal komfort og funktionalitet.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Temperatur og ventilation</li>
+                        <li><i class="fas fa-check"></i> Belysning og el-udstyr</li>
+                        <li><i class="fas fa-check"></i> Sikkerhedstjek</li>
+                        <li><i class="fas fa-check"></i> Adgangskontrol</li>
+                        <li><i class="fas fa-check"></i> Rapportering af fejl</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="services-content" id="weekly">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Lager & Forsyninger</h3>
+                    <p class="text-gray bot-space">Ugentlig kontrol og genbestilling af kontorforsyninger og hygiejneprodukter.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Lager inventory</li>
+                        <li><i class="fas fa-check"></i> Bestilling af supplies</li>
+                        <li><i class="fas fa-check"></i> Hygiejneprodukter</li>
+                        <li><i class="fas fa-check"></i> Kontorartikler</li>
+                        <li><i class="fas fa-check"></i> Kaffe og te supplies</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-seedling"></i></div>
+                    <p class="text-gray bot-space">Pleje af planter og vedligeholdelse af kontorets æstetiske udtryk.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Vanding af planter</li>
+                        <li><i class="fas fa-check"></i> Beskæring og pleje</li>
+                        <li><i class="fas fa-check"></i> Udskiftning af visne planter</li>
+                        <li><i class="fas fa-check"></i> Dekorationsvedligeholdelse</li>
+                        <li><i class="fas fa-check"></i> Sæsonbaseret pynt</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Vedligeholdelse & Tjek</h3>
+                    <p class="text-gray bot-space">Grundig gennemgang af faciliteter og mindre vedligeholdelsesopgaver.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Udstyr funktionstest</li>
+                        <li><i class="fas fa-check"></i> Mindre reparationer</li>
+                        <li><i class="fas fa-check"></i> Filter udskiftning</li>
+                        <li><i class="fas fa-check"></i> Sikkerhedsudstyr kontrol</li>
+                        <li><i class="fas fa-check"></i> Dokumentation og rapporter</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Event Support</h3>
+                    <p class="text-gray bot-space">Forberedelse og support til møder, events og særlige arrangementer.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Mødelokale klargøring</li>
+                        <li><i class="fas fa-check"></i> Catering assistance</li>
+                        <li><i class="fas fa-check"></i> AV-udstyr setup</li>
+                        <li><i class="fas fa-check"></i> Gæste modtagelse</li>
+                        <li><i class="fas fa-check"></i> Post-event oprydning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="services-content" id="adhoc">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Personlig Assistance</h3>
+                    <p class="text-gray bot-space">Små personlige opgaver der gør medarbejdernes hverdag lettere.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Hentning af plastre/medicin</li>
+                        <li><i class="fas fa-check"></i> Post og pakke håndtering</li>
+                        <li><i class="fas fa-check"></i> Transport assistance</li>
+                        <li><i class="fas fa-check"></i> Personlige indkøb</li>
+                        <li><i class="fas fa-check"></i> Akut hjælp og support</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-box-open"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Organisering & Oprydning</h3>
+                    <p class="text-gray bot-space">Organisering af lager, depot og andre opbevaringsområder efter behov.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Depotrum oprydning</li>
+                        <li><i class="fas fa-check"></i> Arkiv organisering</li>
+                        <li><i class="fas fa-check"></i> Lager omstrukturering</li>
+                        <li><i class="fas fa-check"></i> Sæsonbaseret oprydning</li>
+                        <li><i class="fas fa-check"></i> Genbrugshåndtering</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Møde & Gæste Service</h3>
+                    <p class="text-gray bot-space">Klargøring af te, kaffe og vand til kundemøder og særlige lejligheder.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Mødeforplejning</li>
+                        <li><i class="fas fa-check"></i> Gæstebetjening</li>
+                        <li><i class="fas fa-check"></i> Reception assistance</li>
+                        <li><i class="fas fa-check"></i> Overfladerens innan</li>
+                        <li><i class="fas fa-check"></i> Last-minute klargøring</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3 class="text-charcoal" style="font-size: 1.4rem; font-weight: 600;">Akut Support</h3>
+                    <p class="text-gray bot-space">Hurtig reaktion på uventede situationer og akutte behov.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Spild og uheld</li>
+                        <li><i class="fas fa-check"></i> Udstyr nedbrud</li>
+                        <li><i class="fas fa-check"></i> Uventede gæster</li>
+                        <li><i class="fas fa-check"></i> Akut indkøb</li>
+                        <li><i class="fas fa-check"></i> Problemløsning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ad Hoc Explanation Section -->
+<section class="section" id="adhoc-explanation">
+    <div class="container">
+        <div class="adhoc-explanation">
+            <div class="adhoc-badge">AD HOC OPGAVER</div>
+            <h3 class="text-charcoal" style="font-size: 2rem; font-weight: 600; margin-bottom: 1.5rem;">Hvad Er Ad Hoc Opgaver?</h3>
+            <p class="text-gray" style="font-size: 1.1rem; line-height: 1.6; max-width: 700px; margin: 0 auto;">Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
+        </div>
+        
+        <div class="adhoc-examples">
+            <div class="adhoc-card">
+                <div class="adhoc-card-icon"><i class="fas fa-box-open"></i></div>
+                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Rydde op i depotrummet</h4>
+                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
             </div>
             
-            <div class="adhoc-examples">
-                <div class="adhoc-card">
-                    <div class="adhoc-card-icon"><i class="fas fa-box-open"></i></div>
-                    <h4>Rydde op i depotrummet</h4>
-                    <p>Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
-                </div>
-                
-                <div class="adhoc-card">
-                    <div class="adhoc-card-icon"><i class="fas fa-mug-hot"></i></div>
-                    <h4>Klargøre til kundemøde</h4>
-                    <p>Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
-                </div>
-                
-                <div class="adhoc-card">
-                    <div class="adhoc-card-icon"><i class="fas fa-band-aid"></i></div>
-                    <h4>Hente plastre i butikken</h4>
-                    <p>Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
-                </div>
-                
-                <div class="adhoc-card">
-                    <div class="adhoc-card-icon"><i class="fas fa-seedling"></i></div>
-                    <h4>Vande planterne</h4>
-                    <p>Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
-                </div>
-                
-                <div class="adhoc-card">
-                    <div class="adhoc-card-icon"><i class="fas fa-tools"></i></div>
-                    <h4>Mindre reparationer</h4>
-                    <p>Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
-                </div>
-                
-                <div class="adhoc-card">
-                    <div class="adhoc-card-icon"><i class="fas fa-shopping-bag"></i></div>
-                    <h4>Akutte indkøb</h4>
-                    <p>Når der pludselig mangler noget vigtigt til kontoret eller til et møde, håndterer piccolinen indkøbet hurtigt.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Piccoline Section -->
-    <section class="why-choose section-auto" id="benefits">
-        <div class="container">
-            <div class="why-choose-content">
-                <div class="section-header">
-                    <div class="subtitle">HVORFOR VÆLGE PICCOLINE?</div>
-                    <h2>Forskellen En Piccoline Gør</h2>
-                    <p>Se hvordan en dedikeret piccoline transformerer jeres kontor fra en arbejdsplads til et velfungerende miljø</p>
-                </div>
-                
-                <div class="benefits-comparison">
-                    <div class="comparison-column">
-                        <div class="column-header">
-                            <div class="column-icon without-icon">
-                                <i class="fas fa-times"></i>
-                            </div>
-                            <h4>Uden Piccoline</h4>
-                        </div>
-                        <ul class="comparison-list without-piccoline">
-                            <li>
-                                <i class="fas fa-times"></i>
-                                <span>Medarbejdere bruger tid på praktiske opgaver</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-times"></i>
-                                <span>Kaffe og faciliteter er ikke altid klar</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-times"></i>
-                                <span>Oprydning bliver skubbet til senere</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-times"></i>
-                                <span>Mindre problemer bliver til større</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-times"></i>
-                                <span>Inkonsistent rengøring og vedligeholdelse</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-times"></i>
-                                <span>Stress ved uventede gæster</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="comparison-column">
-                        <div class="column-header">
-                            <div class="column-icon with-icon">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <h4>Med DFMG Piccoline</h4>
-                        </div>
-                        <ul class="comparison-list with-piccoline">
-                            <li>
-                                <i class="fas fa-check"></i>
-                                <span>Medarbejdere fokuserer 100% på deres kerneopgaver</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                <span>Alt er klar når medarbejderne ankommer</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                <span>Kontinuerlig oprydning og organisering</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                <span>Proaktiv problemløsning og forebyggelse</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                <span>Konsistent høj standard på alle områder</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                <span>Altid klar til at imponere gæster</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section section-auto" id="testimonial">
-        <div class="container">
-            <div class="section-header">
-                <div class="subtitle">HVAD SIGER VORES KUNDER</div>
-                <h2>Oplevelser Fra Danske Virksomheder</h2>
-                <p>Læs hvordan vores piccoline service har gjort en forskel for virksomheder som jeres</p>
+            <div class="adhoc-card">
+                <div class="adhoc-card-icon"><i class="fas fa-mug-hot"></i></div>
+                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Klargøre til kundemøde</h4>
+                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
             </div>
             
-            <div class="testimonial-container">
-                <div class="testimonial-content">
-                    <div class="quote-mark">"</div>
-                    <div class="testimonial-text">
-                        Vores DFMG piccoline har virkelig ændret hverdagen på kontoret. Nu kan vi fokusere på vores kerneopgaver, mens hun sørger for at alt det praktiske bare fungerer. Kaffen er klar når vi kommer, frokosten kører gnidningsløst, og vi behøver aldrig bekymre os om de små ting der ellers kan forstyrre arbejdsdagen.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image"></div>
-                        <div class="author-info">
-                            <h5>Cecilie Duedahl Nielsen</h5>
-                            <span>Facility Officer, SOHO</span>
+            <div class="adhoc-card">
+                <div class="adhoc-card-icon"><i class="fas fa-band-aid"></i></div>
+                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Hente plastre i butikken</h4>
+                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
+            </div>
+            
+            <div class="adhoc-card">
+                <div class="adhoc-card-icon"><i class="fas fa-seedling"></i></div>
+                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Vande planterne</h4>
+                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
+            </div>
+            
+            <div class="adhoc-card">
+                <div class="adhoc-card-icon"><i class="fas fa-tools"></i></div>
+                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Mindre reparationer</h4>
+                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
+            </div>
+            
+            <div class="adhoc-card">
+                <div class="adhoc-card-icon"><i class="fas fa-shopping-bag"></i></div>
+                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Akutte indkøb</h4>
+                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når der pludselig mangler noget vigtigt til kontoret eller til et møde, håndterer piccolinen indkøbet hurtigt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Piccoline Section -->
+<section class="section why-choose" id="benefits">
+    <div class="container">
+        <div class="why-choose-content">
+            <div class="text-center bot-space2">
+                <div class="subtitle text-success">HVORFOR VÆLGE PICCOLINE?</div>
+                <h2 class="text-white">Forskellen En Piccoline Gør</h2>
+                <p class="body text-white">Se hvordan en dedikeret piccoline transformerer jeres kontor fra en arbejdsplads til et velfungerende miljø</p>
+            </div>
+            
+            <div class="benefits-comparison">
+                <div class="comparison-column">
+                    <div class="column-header">
+                        <div class="column-icon without-icon">
+                            <i class="fas fa-times"></i>
                         </div>
+                        <h4 class="text-white" style="font-size: 1.3rem; font-weight: 600;">Uden Piccoline</h4>
                     </div>
+                    <ul class="comparison-list without-piccoline">
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Medarbejdere bruger tid på praktiske opgaver</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Kaffe og faciliteter er ikke altid klar</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Oprydning bliver skubbet til senere</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Mindre problemer bliver til større</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Inkonsistent rengøring og vedligeholdelse</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Stress ved uventede gæster</span>
+                        </li>
+                    </ul>
                 </div>
                 
-                <div class="testimonial-visual">
-                    <div class="testimonial-stats">
-                        <div class="stat-card">
-                            <span class="stat-number">95%</span>
-                            <span class="stat-label">Tidsbesparing</span>
+                <div class="comparison-column">
+                    <div class="column-header">
+                        <div class="column-icon with-icon">
+                            <i class="fas fa-check"></i>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Tilfredshed</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Beredskab</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Timers Support</span>
-                        </div>
+                        <h4 class="text-white" style="font-size: 1.3rem; font-weight: 600;">Med DFMG Piccoline</h4>
+                    </div>
+                    <ul class="comparison-list with-piccoline">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Medarbejdere fokuserer 100% på deres kerneopgaver</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Alt er klar når medarbejderne ankommer</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Kontinuerlig oprydning og organisering</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Proaktiv problemløsning og forebyggelse</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Konsistent høj standard på alle områder</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Altid klar til at imponere gæster</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="section bg-gradient-white" id="testimonial">
+    <div class="container">
+        <div class="text-center bot-space2">
+            <div class="subtitle text-success">HVAD SIGER VORES KUNDER</div>
+            <h2 class="text-charcoal">Oplevelser Fra Danske Virksomheder</h2>
+            <p class="body text-gray">Læs hvordan vores piccoline service har gjort en forskel for virksomheder som jeres</p>
+        </div>
+        
+        <div class="testimonial-container">
+            <div class="testimonial-content">
+                <div class="quote-mark">"</div>
+                <div class="testimonial-text">
+                    Vores DFMG piccoline har virkelig ændret hverdagen på kontoret. Nu kan vi fokusere på vores kerneopgaver, mens hun sørger for at alt det praktiske bare fungerer. Kaffen er klar når vi kommer, frokosten kører gnidningsløst, og vi behøver aldrig bekymre os om de små ting der ellers kan forstyrre arbejdsdagen.
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image"></div>
+                    <div>
+                        <h5 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.25rem;">Cecilie Duedahl Nielsen</h5>
+                        <span class="text-gray" style="font-size: 0.9rem;">Facility Officer, SOHO</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="testimonial-stats">
+                    <div class="stat-card">
+                        <span class="stat-number text-success">95%</span>
+                        <span class="stat-label text-gray">Tidsbesparing</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number text-success">100%</span>
+                        <span class="stat-label text-gray">Tilfredshed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number text-success">24/7</span>
+                        <span class="stat-label text-gray">Beredskab</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number text-success">15+</span>
+                        <span class="stat-label text-gray">Timers Support</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="cta-section section-auto">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Gør Jeres Hverdag Lettere Med En Piccoline</h2>
-                <p>Lad os tage os af alle de praktiske opgaver, så jeres medarbejdere kan fokusere på det der skaber værdi for virksomheden. Kontakt os for at høre mere om vores piccoline services.</p>
-                <div class="hero-cta">
-                    <a href="#calculator" class="btn cta-white">
-                        <i class="fas fa-calculator"></i>
-                        Beregn Pris Online
-                    </a>
-                    <a href="tel:+4550480273" class="btn cta-transparent">
-                        <i class="fas fa-phone"></i>
-                        Ring Nu: +45 50 48 02 73
-                    </a>
-                </div>
-            </div>
+<!-- CTA Section -->
+<section class="section bg-gradient-success">
+    <div class="container text-center">
+        <h2 class="text-white bot-space">Gør Jeres Hverdag Lettere Med En Piccoline</h2>
+        <p class="body text-white bot-space2" style="max-width: 600px; margin: 0 auto 3rem; opacity: 0.9;">Lad os tage os af alle de praktiske opgaver, så jeres medarbejdere kan fokusere på det der skaber værdi for virksomheden. Kontakt os for at høre mere om vores piccoline services.</p>
+        <div class="flex" style="gap: 1rem; flex-wrap: wrap; justify-content: center;">
+            <a href="#calculator" class="btn secondary medium">
+                <i class="fas fa-calculator"></i>
+                Beregn Pris Online
+            </a>
+            <a href="tel:+4550480273" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3); padding: 14px 28px; font-size: 1rem;">
+                <i class="fas fa-phone"></i>
+                Ring Nu: +45 50 48 02 73
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer Component -->
-    <div id="footer"></div>
-    <!-- Component loader -->
-    <script src="../../js/components.js" defer></script>
+<!-- Footer Component -->
+<div id="footer"></div>
+
+<!-- Component loader -->
+<script src="../../js/components.js" defer></script>
+
+<script>
+function showServices(serviceType) {
+    // Hide all service contents
+    document.querySelectorAll('.services-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Remove active class from all tabs
+    document.querySelectorAll('.service-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Show selected service content
+    document.getElementById(serviceType).classList.add('active');
+    
+    // Add active class to clicked tab
+    event.target.classList.add('active');
+}
+</script>
+
 </body>
 </html>

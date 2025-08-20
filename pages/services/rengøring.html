@@ -21,203 +21,23 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
     <style>
-
-        :root {
-            --color-primary: #1e3a8a;
-            --color-primary-dark: #1e40af;
-            --color-charcoal: #1e3a8a;
-            --color-dark-gray: #4b5563;
-            --color-medium-gray: #6b7280;
-            --color-light-gray: #f8fafc;
-            --color-white: #ffffff;
-            --color-warning: #1e3a8a;
-            --color-slate: #1e40af;
-        }
-
-        .services-section {
-    background: white;
-}
-
-.hero {
-    background: #1e3a8a;
-    color: white;
-}
-
-.features-showcase {
-    background: #1e3a8a;
-    color: white;
-}
-
-.service-badge {
-    background: #1e3a8a;
-}
-
-.type-badge {
-    background: #1e3a8a;
-}
-
-.type-card::before {
-    background: #1e3a8a;
-}
-
-.step-number {
-    background: #1e3a8a;
-}
-
-.chart-bar {
-    background: #1e3a8a;
-}
-
-.stat-item {
-    background: #f8fafc;
-}
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
             padding-top: 100px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
+        .floater{
+            position: fixed;
+            left: 1rem;
+            bottom: 1rem;
+            z-index: 9999;
         }
 
-        .section-auto {
-            padding: 4rem 0;
-        }
-
-        .section {
-            padding: 4rem 0;
-        }
-
-        .section-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-intro .subtitle {
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .section-intro h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: -1px;
-        }
-
-        .section-intro p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header .subtitle {
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: -1px;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-            letter-spacing: -2px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background: var(--color-primary);
-            color: white;
-            border: 2px solid var(--color-primary);
-        }
-
-        .btn-primary:hover {
-            background: var(--color-primary-dark);
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid white;
-        }
-
+        /* Services Grid Styles */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -247,18 +67,11 @@
             height: 280px;
             overflow: hidden;
             border-radius: 16px 16px 0 0;
-        }
-
-        .service-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: contrast(1.2) brightness(0.9) saturate(1.1);
-            transition: filter 0.3s;
-        }
-
-        .service-card:hover .service-image {
-            filter: contrast(1.3) brightness(0.95) saturate(1.2);
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
         }
 
         .photo-dots {
@@ -268,7 +81,6 @@
             transform: translateX(-50%);
             display: flex;
             gap: 8px;
-            z-index: 2;
         }
 
         .photo-dot {
@@ -292,6 +104,7 @@
 
         .service-badge {
             display: inline-block;
+            background: var(--charcoal);
             color: white;
             padding: 0.4rem 1rem;
             border-radius: 50px;
@@ -301,21 +114,6 @@
             letter-spacing: 1px;
             margin-bottom: 1rem;
             width: fit-content;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: #1a202c;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .service-card p {
-            color: #4a5568;
-            line-height: 1.6;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
         }
 
         .service-features {
@@ -335,7 +133,7 @@
         }
 
         .service-features i {
-            color: var(--color-primary);
+            color: var(--primary);
             font-size: 0.9rem;
             width: 14px;
         }
@@ -354,13 +152,14 @@
             padding: 1.5rem 1rem;
             border-radius: 16px;
             border: 1px solid #e2e8f0;
+            background: #f8fafc;
         }
 
         .stat-number {
             display: block;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--color-primary);
+            color: var(--primary);
             line-height: 1;
         }
 
@@ -389,46 +188,10 @@
             font-size: 0.75rem;
             font-weight: 600;
             transition: width 0.3s;
+            background: var(--charcoal);
         }
 
-        .services-summary {
-            background: var(--color-light-gray);
-            padding: 2rem;
-            border-radius: 16px;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-        }
-
-        .summary-stat {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-
-        .summary-label {
-            font-size: 0.9rem;
-            color: var(--color-medium-gray);
-            text-transform: uppercase;
-        }
-
-        /* Cleaning Types Section */
-        .cleaning-types {
-            background: var(--color-light-gray);
-        }
-
-        .types-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
+        /* Type Cards */
         .type-card {
             background: white;
             border-radius: 24px;
@@ -445,9 +208,11 @@
             left: 0;
             right: 0;
             height: 6px;
+            background: var(--charcoal);
         }
 
         .type-badge {
+            background: var(--charcoal);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 50px;
@@ -459,20 +224,6 @@
             margin-bottom: 1.5rem;
         }
 
-        .type-card h3 {
-            font-size: 2rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .type-card p {
-            font-size: 1.1rem;
-            color: var(--color-medium-gray);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
         .features-list {
             list-style: none;
         }
@@ -482,192 +233,253 @@
             align-items: center;
             gap: 1rem;
             margin-bottom: 1rem;
-            color: var(--color-charcoal);
+            color: var(--charcoal);
             font-weight: 500;
         }
 
         .features-list i {
-            color: var(--color-primary);
+            color: var(--primary);
             font-size: 1.2rem;
         }
 
-        /* Process Section */
-        .process-grid {
+        /* Stability Section */
+        .stability-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 80px;
-            height: 80px;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0 auto 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .process-step h4 {
-            font-size: 1.3rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .process-step p {
-            color: var(--color-medium-gray);
-            line-height: 1.6;
-        }
-
-        /* Features Showcase */
-        .features-showcase {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .features-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 2fr;
             gap: 2rem;
-            margin-top: 3rem;
+            align-items: center;
         }
 
-        .feature-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .feature-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .feature-item i {
-            font-size: 2.5rem;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .feature-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .feature-item p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            line-height: 1.5;
-        }
-
-        /* Visual Demo */
-        .visual-demo {
-            background: var(--color-light-gray);
-        }
-
-        .demo-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-
-        .demo-mockup {
+        .service-schedule-demo {
             background: white;
             border-radius: 16px;
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .mockup-header {
+        .tab-navigation {
             display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .mockup-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--color-primary);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
             gap: 0.5rem;
             margin-bottom: 1rem;
-        }
-
-        .calendar-day {
-            aspect-ratio: 1;
-            background: var(--color-light-gray);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
         }
 
-        .calendar-day.active {
-            background: var(--color-primary);
+        .tab-button {
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .tab-button.active {
+            background: #344767;
             color: white;
+            border-color: #344767;
         }
 
-        .report-item {
-            display: flex;
-            align-items: center;
+        .tab-button:hover {
+            background: #e2e8f0;
+        }
+
+        .tab-button.active:hover {
+            background: #2d3748;
+        }
+
+        .schedule-table {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .schedule-row {
+            display: grid;
+            grid-template-columns: 55% 10% 5% 5% 5% 5% 5% 5% 5%;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .schedule-row:first-child {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #344767;
+        }
+
+        .schedule-row:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-row > div {
+            padding: 0.75rem 0.25rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .schedule-row > div:last-child {
+            border-right: none;
+        }
+
+        .task-col {
+            color: #2d3748;
+            font-size: 0.75rem;
+            padding-left: 1rem !important;
+        }
+
+        .freq-col, .day-col {
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .schedule-note {
+            background: rgba(34, 197, 94, 0.05);
+            border: 1px solid rgba(34, 197, 94, 0.1);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .schedule-note p {
+            color: #059669;
+            font-size: 0.95rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .schedule-note i {
+            color: #22c55e;
+            margin-right: 0.5rem;
+        }
+
+        /* Transparency Section */
+        .transparency-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .transparency-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .transparency-card.double-height {
+            grid-row: span 2;
+        }
+
+        .transparency-card h3 {
+            color: #344767;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 1rem 0;
+        }
+
+        .transparency-note {
+            background: rgba(30, 58, 138, 0.05);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .transparency-note p {
+            color: #3b82f6;
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .transparency-note i {
+            color: #3b82f6;
+            margin-right: 0.5rem;
+        }
+
+        /* Flexibility Section */
+        .flexibility-examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 1rem;
             padding: 1rem;
-            background: var(--color-light-gray);
-            border-radius: 8px;
-            margin-bottom: 1rem;
+            border-radius: 12px;
         }
 
-        .status-badge {
-            background: var(--color-primary);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-
-        .status-badge.ongoing {
-            background: var(--color-warning);
-        }
-
-        /* Before/After Gallery */
-        .gallery-section {
+        .chat-example {
             background: white;
+            border-radius: 8px;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
 
+        .chat-header {
+            background: #344767;
+            color: white;
+            padding: 0.75rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .message {
+            margin: 0.75rem 0.75rem 0.05rem 0.75rem;
+            max-width: 85%;
+            position: relative;
+            clear: both;
+        }
+
+        .message span {
+            display: inline-block;
+            padding: 0.75rem 1rem;
+            border-radius: 18px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .message.customer {
+            float: left;
+            text-align: left;
+        }
+
+        .message.customer span {
+            background: #e5e7eb;
+            color: #1f2937;
+        }
+
+        .message.dfmg {
+            float: right;
+            text-align: right;
+        }
+
+        .message.dfmg span {
+            background: #6366f1;
+            color: white;
+        }
+
+        .time {
+            font-size: 0.7rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+
+        .message.dfmg .time {
+            text-align: right;
+        }
+
+        .message.customer .time {
+            text-align: left;
+        }
+
+        /* Gallery */
         .before-after-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -689,7 +501,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-medium-gray);
+            color: #64748b;
             font-size: 0.9rem;
         }
 
@@ -710,49 +522,60 @@
         }
 
         .card-content h4 {
-            color: var(--color-charcoal);
+            color: var(--charcoal);
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
 
         .card-content p {
-            color: var(--color-medium-gray);
+            color: #64748b;
             font-size: 0.9rem;
         }
 
-        .floater{
-            position: fixed;
-            left: 1rem;
-            bottom: 1rem;
-            z-index: 9999;
-            padding: 0.5rem 1rem;
-            font-size: 0.8rem;
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stability-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .transparency-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .flexibility-examples {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
-
-
-
     </style>
+</head>
 <body>
-<!-- Header Component -->
-<div id="header"></div>
-    <!-- Services Section -->
-    <a href="/pages/prisberegner.html" class="btn btn-primary floater">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Floating Calculator Button -->
+    <a href="/pages/prisberegner.html" class="btn primary small floater">
         <i class="fas fa-calculator"></i>
         Pris Beregner
     </a>
-    <section class="services-section section-auto" id="services">
+
+    <!-- Services Section -->
+    <section class="section first">
         <div class="container">
-            <div class="section-header">
-                <div class="subtitle">VORES SPECIALER</div>
-                <h2>Erhvervsrengøring for Alle Brancher</h2>
-                <p>Vi leverer skræddersyede rengøringsløsninger til virksomheder i hele Danmark med fokus på kvalitet, pålidelighed og bæredygtighed</p>
+            <div class="text-center bot-space2">
+                <div class="subtitle text-primary">VORES SPECIALER</div>
+                <h2 class="title">Erhvervsrengøring for Alle Brancher</h2>
+                <p class="body">Vi leverer skræddersyede rengøringsløsninger til virksomheder i hele Danmark med fokus på kvalitet, pålidelighed og bæredygtighed</p>
             </div>
             
             <div class="services-grid">
-                <!-- Kontor & Kontorfællesskaber Card -->
+                <!-- Restauranter & Caféer Card -->
                 <div class="service-card">
                     <div class="service-image-container">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #64748b;">Kontor rengøring billede</div>
+                        <div>Kontor rengøring billede</div>
                         <div class="photo-dots">
                             <div class="photo-dot active"></div>
                             <div class="photo-dot"></div>
@@ -795,7 +618,7 @@
                 <!-- Ejendomsrengøring Card -->
                 <div class="service-card">
                     <div class="service-image-container">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #64748b;">Ejendoms rengøring billede</div>
+                        <div>Ejendoms rengøring billede</div>
                         <div class="photo-dots">
                             <div class="photo-dot"></div>
                             <div class="photo-dot"></div>
@@ -834,23 +657,23 @@
             </div>
             
             <!-- Service Statistics Summary -->
-            <div class="services-summary">
-                <div class="summary-grid">
+            <div class="card bg-gradient-white p-3 text-center">
+                <div class="flex">
                     <div>
-                        <div class="summary-stat">100%</div>
-                        <div class="summary-label">Kvalitetssikring</div>
+                        <div class="stat-number text-primary">100%</div>
+                        <div class="subtitle">Kvalitetssikring</div>
                     </div>
                     <div>
-                        <div class="summary-stat">Fast</div>
-                        <div class="summary-label">Team</div>
+                        <div class="stat-number text-primary">Fast</div>
+                        <div class="subtitle">Team</div>
                     </div>
                     <div>
-                        <div class="summary-stat">24/7</div>
-                        <div class="summary-label">Support</div>
+                        <div class="stat-number text-primary">24/7</div>
+                        <div class="subtitle">Support</div>
                     </div>
                     <div>
-                        <div class="summary-stat">Ingen</div>
-                        <div class="summary-label">Overraskelser</div>
+                        <div class="stat-number text-primary">Ingen</div>
+                        <div class="subtitle">Overraskelser</div>
                     </div>
                 </div>
             </div>
@@ -858,9 +681,9 @@
     </section>
 
     <!-- Cleaning Types -->
-    <section class="cleaning-types section-auto">
+    <section class="section bg-gradient-white">
         <div class="container">
-            <div class="types-grid">
+            <div class="flex">
                 <div class="type-card">
                     <div class="type-badge">Daglig Service</div>
                     <h3>Løbende Rengøring</h3>
@@ -890,36 +713,35 @@
         </div>
     </section>
 
-<!-- Stability Section - Opdateret Version -->
-<section style="height: 100vh; max-width: 1200px; margin: 0 auto; display: flex; align-items: center;">
-    <div class="container" style="width: 100%;">
-        <div class="stability-content">
-            <div class="stability">
-                <div class="subtitle" style="text-align: center; margin-bottom: 2rem;">STABILITET</div>
-                <h3>Samme Personale, Til tiden, Efter Aftale</h3>
-                <p>Hos DFMG gør vi ikke brgu af underleverandører da det skaber ustabilitet i både kvalitet og udførelse. Med os får du det same personale hver gang</p>
-                <div class="example-text">
-                    <span>Dog udskift af personale ved sygdom eller ferie</span>
+    <!-- Stability Section -->
+    <section class="section" style="min-height: 100vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="stability-content">
+                <div>
+                    <div class="subtitle text-primary text-center bot-space2">STABILITET</div>
+                    <h3>Samme Personale, Til tiden, Efter Aftale</h3>
+                    <p>Hos DFMG gør vi ikke brug af underleverandører da det skaber ustabilitet i både kvalitet og udførelse. Med os får du det samme personale hver gang</p>
+                    <div style="color: #64748b; font-size: 0.85rem; font-style: italic; text-align: center; margin: 2rem 0;">
+                        <span>Dog udskift af personale ved sygdom eller ferie</span>
+                    </div>
+                    
+                    <p>Vi kommer altid til tiden som aftalt. I over 1,5 år og +1000 rengøringer har vi haft 0 udeblivelser. Når vi siger vi kommer, så kommer vi - uden undskyldninger eller forsinkelser.</p>
+                    
+                    <h3>Jeres Skræddersyede Service Skema</h3>
+                    <p>Hver kunde får et detaljeret skema - ingen gætteri om hvad der bliver gjort</p>
+                    <div style="color: #64748b; font-size: 0.85rem; font-style: italic; display: flex; align-items: center; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                        <span>Se eksempel på et rengøringskema</span>
+                        <i class="fas fa-arrow-right" style="color: #3b82f6; font-size: 1.5rem;"></i>
+                    </div>
                 </div>
                 
-                <p>Vi kommer altid til tiden som aftalt. I over 1,5 år og +1000 rengøringer har vi haft 0 udeblivelser. Når vi siger vi kommer, så kommer vi - uden undskyldninger eller forsinkelser.</p>
-                
-                <h3>Jeres Skræddersyede Service Skema</h3>
-                <p>Hver kunde får et detaljeret skema - ingen gætteri om hvad der bliver gjort</p>
-                <div class="example-text">
-                    <span>Se eksempel på et rengøringskema</span>
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </div>
-            
-            <div class="service-schedule-demo">
-                <div class="schedule-preview">
-                <div class="tab-navigation">
-                    <a class="tab-button active" onclick="switchTab('kontor')">KONTOR</button>
-                    <a class="tab-button" onclick="switchTab('moedelokaler')">MØDELOKALER</button>
-                    <a class="tab-button" onclick="switchTab('koekken')">KØKKEN</button>
-                    <a class="tab-button" onclick="switchTab('toilet')">TOILET</button>
-                </div>
+                <div class="service-schedule-demo">
+                    <div class="tab-navigation">
+                        <a class="tab-button active" onclick="switchTab('kontor')">KONTOR</a>
+                        <a class="tab-button" onclick="switchTab('moedelokaler')">MØDELOKALER</a>
+                        <a class="tab-button" onclick="switchTab('koekken')">KØKKEN</a>
+                        <a class="tab-button" onclick="switchTab('toilet')">TOILET</a>
+                    </div>
                     <div class="schedule-table">
                         <div class="schedule-row">
                             <div class="task-col">KONTOR</div>
@@ -933,318 +755,44 @@
                             <div class="day-col">SØN</div>
                         </div>
                     </div>
-                    
-                    
                 </div>
-                
             </div>
             
+            <div class="schedule-note">
+                <p><i class="fas fa-check-circle"></i> <strong>Fordelen:</strong> I ved præcis hvad der sker hvornår - og vi kan nemt tilpasse hvis jeres behov ændrer sig</p>
+            </div>
         </div>
-        <div class="schedule-note">
-            <p><i class="fas fa-check-circle"></i> <strong>Fordelen:</strong> I ved præcis hvad der sker hvornår - og vi kan nemt tilpasse hvis jeres behov ændrer sig</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<style>
-.tab-navigation {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    justify-content: center;
-}
-
-.tab-button {
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #64748b;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.tab-button.active {
-    background: #344767;
-    color: white;
-    border-color: #344767;
-}
-
-.tab-button:hover {
-    background: #e2e8f0;
-}
-
-.tab-button.active:hover {
-    background: #2d3748;
-}
-.subtitle {
-    color: #3b82f6;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    }
-
-.stability-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-}
-
-.stability-content p {
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
-.reliability-sections {
-    margin-bottom: 2rem;
-}
-
-.reliability-item {
-    margin-bottom: 1.5rem;
-}
-
-.reliability-item p {
-    color: #64748b;
-    font-size: 0.95rem;
-    font-weight: 400;
-    margin: 0;
-}
-
-.example-text {
-    color: #64748b;
-    font-size: 0.85rem;
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.example-text i {
-    color: #3b82f6;
-    font-size: 1.5rem;
-}
-
-.schedule-table {
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-}
-
-.schedule-row {
-    display: grid;
-    grid-template-columns: 55% 10% 5% 5% 5% 5% 5% 5% 5%;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.schedule-row:first-child {
-    background: #f8fafc;
-    font-weight: 600;
-    color: #344767;
-}
-
-.schedule-row:last-child {
-    border-bottom: none;
-}
-
-.schedule-row.header {
-    background: #f8fafc;
-    font-weight: 600;
-    color: #344767;
-}
-
-.schedule-row > div {
-    padding: 0.75rem 0.25rem;
-    border-right: 1px solid #e2e8f0;
-}
-
-.schedule-row > div:last-child {
-    border-right: none;
-}
-
-.task-col {
-    color: #2d3748;
-    font-size: 0.75rem;
-    padding-left: 1rem !important;
-}
-
-.freq-col {
-    color: #4a5568;
-    font-size: 0.7rem;
-    text-align: center;
-}
-
-.day-col, .freq-col {
-    font-size: 0.7rem;
-    text-align: center;
-}
-
-.schedule-note {
-    background: rgba(34, 197, 94, 0.05);
-    border: 1px solid rgba(34, 197, 94, 0.1);
-    border-radius: 8px;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.schedule-note p {
-    color: #059669;
-    font-size: 0.95rem;
-    margin: 0;
-    font-weight: 500;
-}
-
-.schedule-note i {
-    color: #22c55e;
-    margin-right: 0.5rem;
-}
-
-.stability p{
-    margin-bottom: 1rem;
-}
-</style>
-<script>
-let currentTab = 'kontor';
-
-function switchTab(tabName) {
-    currentTab = tabName;
-    
-    // Update button styles
-    document.querySelectorAll('.tab-button').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.add('active');
-    
-    // Update table content
-    updateTableContent();
-}
-
-function updateTableContent() {
-    const tableData = {
-        kontor: [
-            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Sæt stole på plads', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Ryd alle borde for glas, kopper, tallerkner og bestik', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Aftør borde', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Afstøv inventar og overflader under 1,80m', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Rengør indvendige glas og døre (omkring dørhåndtag)', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Aftør alle siddepladser', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Støvsug og vask gulvoverflader', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Kontrollér hjørner og fjern spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Støvsug og vedligehold tæpper og sofaer', '1 x måned', '-', '-', '-', '-', '-', '-', 'U1']
-        ],
-        moedelokaler: [
-            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Sæt stole på plads', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Ryd alle borde for glas, kopper, tallerkner og bestik', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Aftør borde', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Afstøv inventar og overflader under 1,80m', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Rengør indvendige glas og døre (omkring dørhåndtag)', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Aftør alle siddepladser', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Støvsug og vask gulvoverflader', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Kontrollér hjørner og fjern spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Støvsug og vedligehold tæpper og sofaer', '1 x måned', '-', '-', '-', '-', '-', '-', 'U1']
-        ],
-        koekken: [
-            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Aftør bordplader og skabslåger', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Rengør og desinficér vask (afkalkning ved behov)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Aftør spiseborde/loungeborde', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Støvsug og vask gulvoverflader', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Håndtér opvaskemaskine (tøm, fyld, start ved behov)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Aftør affaldsbeholdere', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Rengør opvaskemaskinens filter', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Aftør stole og lamper (<1,80m) og dørkarme', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Rengør og vedligehold kaffeudstyr', '1', '-', '-', '-', '-', '-', '-', '✓']
-        ],
-        toilet: [
-            ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Støvsug og vask gulvoverflader', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Rengør og desinficér håndvask, armatur, toiletskål og toiletbørste', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Rengør spejle', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Aftør papir- og sæbebeholdere', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Genopfyld papir og sæbe (hvis nødvendigt)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Rengør indvendige glas og døre (omkring dørhåndtag)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
-            ['Aftør døre, karme og lamper (<1,80m)', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Støv gulvpaneler', '1', '-', '-', '-', '-', '-', '-', '✓'],
-            ['Kontrollér loft og hjørner for spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓']
-        ]
-    };
-
-    const sectionNames = {
-        kontor: 'KONTOR',
-        moedelokaler: 'MØDELOKALER', 
-        koekken: 'KØKKEN',
-        toilet: 'TOILET'
-    };
-    
-    const tbody = document.querySelector('.schedule-table');
-    const data = tableData[currentTab];
-    
-    // Update header section name
-    tbody.querySelector('.task-col').textContent = sectionNames[currentTab];
-    
-    // Clear existing rows except header
-    while (tbody.children.length > 1) {
-        tbody.removeChild(tbody.lastChild);
-    }
-    
-    // Add new rows
-    data.forEach(row => {
-        const rowElement = document.createElement('div');
-        rowElement.className = 'schedule-row';
-        row.forEach(cell => {
-            const cellElement = document.createElement('div');
-            if (row.indexOf(cell) === 0) cellElement.className = 'task-col';
-            else if (row.indexOf(cell) === 1) cellElement.className = 'freq-col';
-            else cellElement.className = 'day-col';
-            cellElement.textContent = cell;
-            rowElement.appendChild(cellElement);
-        });
-        tbody.appendChild(rowElement);
-    });
-    // Initialize on page load
-
-}
-document.addEventListener('DOMContentLoaded', function() {
-    updateTableContent();
-});
-</script>
-   <!-- Transparency Section - Ny Version -->
+    <!-- Transparency Section -->
     <section class="section">
         <div class="container">
-            <div class="section-intro">
-                <div class="subtitle">GENNEMSIGTIGHED</div>
-                    <h2>I ved altid præcis hvad der sker</h2>
-                <p>Fra jeres personlige dashboard kan I følge alt - live under udførelse og bagefter med dokumentation</p>
+            <div class="text-center bot-space2">
+                <div class="subtitle text-primary">GENNEMSIGTIGHED</div>
+                <h2 class="title">I ved altid præcis hvad der sker</h2>
+                <p class="body">Fra jeres personlige dashboard kan I følge alt - live under udførelse og bagefter med dokumentation</p>
             </div>
             
             <div class="transparency-grid">
-                
                 <div class="transparency-card">
                     <h3>Rengøringspersonale</h3>
                     <div style="margin:15px 0;display:flex;gap:40px; justify-content: center;">
                         <div style="display:flex;align-items:center;gap:10px;">
-                            <img src="/images/people/raman.png" loading="lazy" alt="Raman Nepal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
-                            <div>
-                                <div style="font-size:14px;font-weight:600;margin-bottom:2px">Raman Nepal</div>
-                                <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 12 34 56 78</div>
-                                <div style="font-size:12px;color:#666">Rengøringsleder</div>
+                            <div class="flex">
+                                <img src="/images/people/raman.png" loading="lazy" alt="Raman Nepal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
+                                <div class="">
+                                    <div style="font-size:14px;font-weight:600;margin-bottom:2px">Raman Nepal</div>
+                                    <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 87 65 43 21</div>
+                                    <div style="font-size:12px;color:#666">Rengøringsleder</div>
+                                </div>
                             </div>
-                        </div>
-                        <div style="display:flex;align-items:center;gap:10px;">
-                            <img src="/images/people/diya.png" loading="lazy" alt="Raman Nepal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
-                            <div>
-                                <div style="font-size:14px;font-weight:600;margin-bottom:2px">Diya Phuyal</div>
-                                <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 87 65 43 21</div>
-                                <div style="font-size:12px;color:#666">Rengøringsmedarbejder</div>
+                            <div class="flex">
+                                <img src="/images/people/diya.png" loading="lazy" alt="Diya Phuyal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
+                                <div class="">
+                                    <div style="font-size:14px;font-weight:600;margin-bottom:2px">Diya Phuyal</div>
+                                    <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 12 34 56 78</div>
+                                    <div style="font-size:12px;color:#666">Rengøringsmedarbejder</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1284,9 +832,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <div class="transparency-card double-height">
                     <h3>Slutrapport</h3>
-                    
                     <div style="display:flex;margin:15px 0; gap: 10px;">
-                        <!-- Rapport detaljer - 70% -->
                         <div style="flex:0 0 70%;background:#f8f9fa;padding:15px;border-radius:8px;border-left:4px solid #344767">
                             <div style="display:flex;align-items:center;margin-bottom:12px">
                                 <div style="font-weight:600;color:#344767">📧 Rapport sendt 21:45</div>
@@ -1309,7 +855,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         </div>
                         
-                        <!-- Foto placeholders - 30% -->
                         <div style="padding:10px; width: 100%;">
                             <div style="color:#666;margin-bottom:8px;text-align:center;font-weight:500">Billeder:</div>
                             <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
@@ -1334,301 +879,94 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </section>
-    <style>
-/* New Sections Styling - Missing CSS */
-.transparency-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 2rem;
-    margin-top: 2rem;
-}
 
-.transparency-card.double-height {
-    grid-row: span 2;
-}
+    <!-- Flexibility Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center bot-space2">
+                <div class="subtitle text-primary">FLEKSIBILITET</div>
+                <h3>Vi tilpasser os jeres rytme</h3>
+                <p>Fra daglige rutiner til akutte behov - vi følger jeres virksomheds tempo og behov.</p>
+                
+                <p>Vores fleksibilitet spænder over tre områder: <strong>Timing</strong> hvor vi arbejder efter arbejdstid, weekender og fleksible starttider så I aldrig bliver forstyrret. <strong>Service tilpasning</strong> hvor vi skalerer op ved events og ned i ferieperioder efter jeres behov. Og <strong>akut respons</strong> hvor vi løser spild, uheld og særlige situationer samme dag når det brenner på.</p>
 
-.transparency-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border: 1px solid #e2e8f0;
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-
-.transparency-icon {
-    width: 40px;
-    height: 40px;
-    background: #344767;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0 1rem 0;
-    color: white;
-    font-size: 1.2rem;
-    float: left;
-    margin-right: 1rem;
-}
-
-.transparency-card h3 {
-    color: #344767;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 0 1rem 0;
-}
-
-.transparency-card p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.transparency-note {
-    background: rgba(30, 58, 138, 0.05);
-    border: 1px solid rgba(30, 58, 138, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.transparency-note p {
-    color: #3b82f6;
-    font-size: 1rem;
-    margin: 0;
-    font-weight: 500;
-}
-
-.transparency-note i {
-    color: #3b82f6;
-    margin-right: 0.5rem;
-}
-
-
-.section-intro {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.subtitle {
-    color: #3b82f6;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
-.section-intro h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 300;
-    letter-spacing: -1px;
-}
-
-.section-intro p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .transparency-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-
-
-<section style="max-width: 1200px; margin: auto;">
-    <div class="flexibility-content">
-        <div class="subtitle">FLEKSIBILITET</div>
-        <h3>Vi tilpasser os jeres rytme</h3>
-        <p>Fra daglige rutiner til akutte behov - vi følger jeres virksomheds tempo og behov.</p>
-        
-        <p>Vores fleksibilitet spænder over tre områder: <strong>Timing</strong> hvor vi arbejder efter arbejdstid, weekender og fleksible starttider så I aldrig bliver forstyrret. <strong>Service tilpasning</strong> hvor vi skalerer op ved events og ned i ferieperioder efter jeres behov. Og <strong>akut respons</strong> hvor vi løser spild, uheld og særlige situationer samme dag når det brenner på.</p>
-
-        <p>Uanset hvad der sker i jeres virksomhed, så finder vi en løsning der passer jer.</p>
-    </div>
-    
-    <div class="flexibility-examples">
-        <!-- Eksempel 1: Ekstra service -->
-        <div class="chat-example">
-            <div class="chat-header">Ekstra Service</div>
-            <div class="message customer">
-                <span>Hej! Vi har et stort klientmøde i morgen. Har I mulighed for ekstra grundig rengøring i dag?</span>
-                <div class="time">14:32</div>
+                <p>Uanset hvad der sker i jeres virksomhed, så finder vi en løsning der passer jer.</p>
             </div>
-            <div class="message dfmg">
-                <span>Ja, det kan vi sagtens! Hvad tid passer jer bedst?</span>
-                <div class="time">14:35</div>
-            </div>
-            <div class="message customer">
-                <span>Efter kl. 17 ville være perfekt</span>
-                <div class="time">14:36</div>
-            </div>
-            <div class="message dfmg">
-                <span>✅ Booket! Vi kommer kl. 17:30 og gør kontoret møde-klar</span>
-                <div class="time">14:37</div>
+            
+            <div class="flexibility-examples">
+                <!-- Eksempel 1: Ekstra service -->
+                <div class="chat-example">
+                    <div class="chat-header">Ekstra Service</div>
+                    <div class="message customer">
+                        <span>Hej! Vi har et stort klientmøde i morgen. Har I mulighed for ekstra grundig rengøring i dag?</span>
+                        <div class="time">14:32</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Ja, det kan vi sagtens! Hvad tid passer jer bedst?</span>
+                        <div class="time">14:35</div>
+                    </div>
+                    <div class="message customer">
+                        <span>Efter kl. 17 ville være perfekt</span>
+                        <div class="time">14:36</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>✅ Booket! Vi kommer kl. 17:30 og gør kontoret møde-klar</span>
+                        <div class="time">14:37</div>
+                    </div>
+                </div>
+
+                <!-- Eksempel 2: Timing ændring -->
+                <div class="chat-example">
+                    <div class="chat-header">Timing Ændring</div>
+                    <div class="message customer">
+                        <span>Vi har et vigtigt morgenmøde i morgen. Kan I komme tidligere end normalt?</span>
+                        <div class="time">16:45</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Selvfølgelig! Hvad med kl. 06:00-07:30?</span>
+                        <div class="time">16:48</div>
+                    </div>
+                    <div class="message customer">
+                        <span>Perfekt, tak!</span>
+                        <div class="time">16:49</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Vi er der kl. 06:00 sharp 💪</span>
+                        <div class="time">16:50</div>
+                    </div>
+                </div>
+
+                <!-- Eksempel 3: Akut situation -->
+                <div class="chat-example">
+                    <div class="chat-header">Akut Situation</div>
+                    <div class="message customer">
+                        <span>SOS! Kaffe spildt over hele gulvtæppet i receptionen 😱</span>
+                        <div class="time">11:23</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>På vej! Vi er der om 45 min med specialudstyr</span>
+                        <div class="time">11:25</div>
+                    </div>
+                    <div class="message customer">
+                        <span>I er fantastiske! 🙏</span>
+                        <div class="time">11:26</div>
+                    </div>
+                    <div class="message dfmg">
+                        <span>Opgaven løst! Tæppet er som nyt igen ✨</span>
+                        <div class="time">12:40</div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Eksempel 2: Timing ændring -->
-        <div class="chat-example">
-            <div class="chat-header">Timing Ændring</div>
-            <div class="message customer">
-                <span>Vi har et vigtigt morgenmøde i morgen. Kan I komme tidligere end normalt?</span>
-                <div class="time">16:45</div>
-            </div>
-            <div class="message dfmg">
-                <span>Selvfølgelig! Hvad med kl. 06:00-07:30?</span>
-                <div class="time">16:48</div>
-            </div>
-            <div class="message customer">
-                <span>Perfekt, tak!</span>
-                <div class="time">16:49</div>
-            </div>
-            <div class="message dfmg">
-                <span>Vi er der kl. 06:00 sharp 💪</span>
-                <div class="time">16:50</div>
-            </div>
-        </div>
-
-        <!-- Eksempel 3: Akut situation -->
-        <div class="chat-example">
-            <div class="chat-header">Akut Situation</div>
-            <div class="message customer">
-                <span>SOS! Kaffe spildt over hele gulvtæppet i receptionen 😱</span>
-                <div class="time">11:23</div>
-            </div>
-            <div class="message dfmg">
-                <span>På vej! Vi er der om 45 min med specialudstyr</span>
-                <div class="time">11:25</div>
-            </div>
-            <div class="message customer">
-                <span>I er fantastiske! 🙏</span>
-                <div class="time">11:26</div>
-            </div>
-            <div class="message dfmg">
-                <span>Opgaven løst! Tæppet er som nyt igen ✨</span>
-                <div class="time">12:40</div>
-            </div>
-        </div>
-    </div>      
-</section>
-
-<style>
-.flexibility-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-}
-
-.subtitle {
-    color: #3b82f6;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.flexibility-examples {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 12px;
-}
-
-.chat-example {
-    background: white;
-    border-radius: 8px;
-    padding: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-}
-
-.chat-header {
-    background: #344767;
-    color: white;
-    padding: 0.75rem;
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-align: center;
-}
-
-.message {
-    margin: 0.75rem 0.75rem 0.05rem 0.75rem;
-    max-width: 85%;
-    position: relative;
-    clear: both;
-}
-
-.message span {
-    display: inline-block;
-    padding: 0.75rem 1rem;
-    border-radius: 18px;
-    font-size: 0.85rem;
-    line-height: 1.4;
-}
-
-/* Kunde (grå, venstre) */
-.message.customer {
-    float: left;
-    text-align: left;
-}
-
-.message.customer span {
-    background: #e5e7eb;
-    color: #1f2937;
-}
-
-/* DFMG (blå, højre) */
-.message.dfmg {
-    float: right;
-    text-align: right;
-}
-
-.message.dfmg span {
-    background: #6366f1;
-    color: white;
-}
-
-.time {
-    font-size: 0.7rem;
-    color: #6b7280;
-    margin-top: 0.25rem;
-}
-
-.message.dfmg .time {
-    text-align: right;
-}
-
-.message.customer .time {
-    text-align: left;
-}
-
-
-.stability-content p {
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
-</style>
+    </section>
 
     <!-- Before/After Gallery -->
-    <section class="gallery-section section-auto" id="gallery">
+    <section class="section bg-gradient-white" id="gallery">
         <div class="container">
-            <div class="section-header">
-                <div class="subtitle">VORES RESULTATER</div>
-                <h2>Før & Efter Eksempler</h2>
-                <p>Se transformationen af vores kunders faciliteter gennem professionel rengøring</p>
+            <div class="text-center bot-space2">
+                <div class="subtitle text-primary">VORES RESULTATER</div>
+                <h2 class="title">Før & Efter Eksempler</h2>
+                <p class="body">Se transformationen af vores kunders faciliteter gennem professionel rengøring</p>
             </div>
             
             <div class="before-after-grid">
@@ -1703,7 +1041,116 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- Footer Component -->
     <div id="footer"></div>
+
     <!-- Component loader -->
     <script src="../../js/components.js" defer></script>
+
+    <script>
+        let currentTab = 'kontor';
+
+        function switchTab(tabName) {
+            currentTab = tabName;
+            
+            // Update button styles
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.add('active');
+            
+            // Update table content
+            updateTableContent();
+        }
+
+        function updateTableContent() {
+            const tableData = {
+                kontor: [
+                    ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Sæt stole på plads', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Ryd alle borde for glas, kopper, tallerkner og bestik', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Aftør borde', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Afstøv inventar og overflader under 1,80m', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Rengør indvendige glas og døre (omkring dørhåndtag)', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Aftør alle siddepladser', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Støvsug og vask gulvoverflader', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Kontrollér hjørner og fjern spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Støvsug og vedligehold tæpper og sofaer', '1 x måned', '-', '-', '-', '-', '-', '-', 'U1']
+                ],
+                moedelokaler: [
+                    ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Sæt stole på plads', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Ryd alle borde for glas, kopper, tallerkner og bestik', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Aftør borde', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Afstøv inventar og overflader under 1,80m', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Rengør indvendige glas og døre (omkring dørhåndtag)', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Aftør alle siddepladser', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Støvsug og vask gulvoverflader', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Kontrollér hjørner og fjern spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Støvsug og vedligehold tæpper og sofaer', '1 x måned', '-', '-', '-', '-', '-', '-', 'U1']
+                ],
+                koekken: [
+                    ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Aftør bordplader og skabslåger', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Rengør og desinficér vask (afkalkning ved behov)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Aftør spiseborde/loungeborde', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Støvsug og vask gulvoverflader', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Håndtér opvaskemaskine (tøm, fyld, start ved behov)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Aftør affaldsbeholdere', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Rengør opvaskemaskinens filter', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Aftør stole og lamper (<1,80m) og dørkarme', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Rengør og vedligehold kaffeudstyr', '1', '-', '-', '-', '-', '-', '-', '✓']
+                ],
+                toilet: [
+                    ['Tøm affaldsbeholdere og udskift poser', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Støvsug og vask gulvoverflader', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Rengør og desinficér håndvask, armatur, toiletskål og toiletbørste', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Rengør spejle', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Aftør papir- og sæbebeholdere', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Genopfyld papir og sæbe (hvis nødvendigt)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Rengør indvendige glas og døre (omkring dørhåndtag)', '3', '✓', '-', '✓', '-', '✓', '-', '-'],
+                    ['Aftør døre, karme og lamper (<1,80m)', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Støv gulvpaneler', '1', '-', '-', '-', '-', '-', '-', '✓'],
+                    ['Kontrollér loft og hjørner for spindelvæv', '1', '-', '-', '-', '-', '-', '-', '✓']
+                ]
+            };
+
+            const sectionNames = {
+                kontor: 'KONTOR',
+                moedelokaler: 'MØDELOKALER', 
+                koekken: 'KØKKEN',
+                toilet: 'TOILET'
+            };
+            
+            const tbody = document.querySelector('.schedule-table');
+            const data = tableData[currentTab];
+            
+            // Update header section name
+            tbody.querySelector('.task-col').textContent = sectionNames[currentTab];
+            
+            // Clear existing rows except header
+            while (tbody.children.length > 1) {
+                tbody.removeChild(tbody.lastChild);
+            }
+            
+            // Add new rows
+            data.forEach(row => {
+                const rowElement = document.createElement('div');
+                rowElement.className = 'schedule-row';
+                row.forEach(cell => {
+                    const cellElement = document.createElement('div');
+                    if (row.indexOf(cell) === 0) cellElement.className = 'task-col';
+                    else if (row.indexOf(cell) === 1) cellElement.className = 'freq-col';
+                    else cellElement.className = 'day-col';
+                    cellElement.textContent = cell;
+                    rowElement.appendChild(cellElement);
+                });
+                tbody.appendChild(rowElement);
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTableContent();
+        });
+    </script>
 </body>
 </html>

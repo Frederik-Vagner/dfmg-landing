@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    <title>DFMG - Professionel Vinduespolering</title>
+    <meta name="description" content="Krystalklare vinduer til din virksomhed">
     
     <!-- Favicon -->
     <link rel="icon" href="../../images/logos/logo.png" type="image/png">
@@ -21,972 +21,510 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
-    <style>
-        /* Core Variables */
-        :root {
-            --color-primary: #22c55e;
-            --color-primary-dark: #16a34a;
-            --color-charcoal: #344767;
-            --color-slate: #4a5568;
-            --color-dark-gray: #666;
-            --color-medium-gray: #9ca3af;
-            --color-light-gray: #f8fafc;
-            --color-white: #ffffff;
-            --color-border: #e2e8f0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #1a1f36;
-            background: var(--color-light-gray);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .section-auto {
-            padding: 4rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header .subtitle {
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: -1px;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--color-dark-gray);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 50%, white 100%);
-            padding: 6rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 6rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-            color: var(--color-charcoal);
-            line-height: 1;
-            letter-spacing: -2px;
-        }
-
-        .hero-highlight {
-            color: var(--color-primary);
-            font-weight: 600;
-        }
-
-        .hero-subtitle {
-            font-size: 1.4rem;
-            color: var(--color-dark-gray);
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .hero-stat {
-            text-align: center;
-        }
-
-        .hero-stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-stat-label {
-            color: var(--color-dark-gray);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .window-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            width: 100%;
-            max-width: 350px;
-        }
-
-        .window-panel {
-            height: 200px;
-            border-radius: 12px;
-            position: relative;
-            overflow: hidden;
-            border: 3px solid var(--color-medium-gray);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .window-panel.dirty {
-            background: linear-gradient(45deg, #f1f5f9 25%, #e2e8f0 25%, #e2e8f0 50%, #f1f5f9 50%, #f1f5f9 75%, #e2e8f0 75%);
-            background-size: 20px 20px;
-            opacity: 0.7;
-        }
-
-        .window-panel.clean {
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-            border-color: var(--color-primary);
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
-        }
-
-        .window-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .window-panel.clean .window-overlay {
-            opacity: 1;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background: var(--color-primary);
-            color: white;
-            border-color: var(--color-primary);
-        }
-
-        .btn-primary:hover {
-            background: var(--color-primary-dark);
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
-        }
-
-        .btn-secondary {
-            background: var(--color-charcoal);
-            color: white;
-            border-color: var(--color-charcoal);
-        }
-
-        .btn-secondary:hover {
-            background: var(--color-slate);
-        }
-
-        /* Services Section */
-        .services-container {
-            position: relative;
-            perspective: 1000px;
-        }
-
-        .services-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .service-layer {
-            background: white;
-            border-radius: 24px;
-            padding: 3rem 4rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            border: 2px solid transparent;
-            position: relative;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .service-layer:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 30px 80px rgba(34, 197, 94, 0.2);
-        }
-
-        .service-layer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-            border-radius: 24px 24px 0 0;
-        }
-
-        .service-content {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-        }
-
-        .service-info h3 {
-            font-size: 1.8rem;
-            color: var(--color-charcoal);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .service-info p {
-            color: var(--color-dark-gray);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .service-features {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .feature-tag {
-            background: #f0fdf4;
-            color: var(--color-primary-dark);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid #bbf7d0;
-        }
-
-        .service-price {
-            text-align: center;
-            background: var(--color-light-gray);
-            padding: 1.5rem;
-            border-radius: 16px;
-            border: 2px solid var(--color-border);
-        }
-
-        .price-label {
-            color: var(--color-dark-gray);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-amount {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-
-        /* Process Section */
-        .process-section {
-            background: var(--color-light-gray);
-        }
-
-        .process-workflow {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-            position: relative;
-        }
-
-        .process-workflow::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            right: 10%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-            z-index: 1;
-        }
-
-        .process-step {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            position: relative;
-            z-index: 2;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .process-step:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 20px 50px rgba(34, 197, 94, 0.2);
-        }
-
-        .step-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 auto 1.5rem;
-            position: relative;
-        }
-
-        .step-number {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            width: 30px;
-            height: 30px;
-            background: var(--color-charcoal);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        .process-step h4 {
-            font-size: 1.1rem;
-            color: var(--color-charcoal);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .process-step p {
-            color: var(--color-dark-gray);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* Comparison Section */
-        .comparison-section {
-            background: white;
-        }
-
-        .comparison-slider {
-            position: relative;
-            max-width: 800px;
-            margin: 4rem auto 0;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .slider-container {
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-            user-select: none;
-        }
-
-        .slider-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: opacity 0.3s;
-        }
-
-        .before-image {
-            background: linear-gradient(45deg, #f1f5f9 25%, #e2e8f0 25%, #e2e8f0 50%, #f1f5f9 50%, #f1f5f9 75%, #e2e8f0 75%);
-            background-size: 30px 30px;
-            opacity: 0.8;
-        }
-
-        .after-image {
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-            opacity: 0;
-        }
-
-        .image-label {
-            position: absolute;
-            top: 2rem;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .before-image .image-label {
-            left: 2rem;
-        }
-
-        .after-image .image-label {
-            right: 2rem;
-        }
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: var(--color-primary);
-            cursor: ew-resize;
-            z-index: 10;
-        }
-
-        .slider-handle::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: var(--color-primary);
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .slider-handle::after {
-            content: '↔';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .comparison-controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .comparison-btn {
-            padding: 0.75rem 2rem;
-            border: 2px solid var(--color-medium-gray);
-            background: white;
-            color: var(--color-dark-gray);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-
-        .comparison-btn.active {
-            background: var(--color-primary);
-            color: white;
-            border-color: var(--color-primary);
-        }
-
-        .comparison-btn:hover:not(.active) {
-            border-color: var(--color-primary);
-            background: #f0fdf4;
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .benefits-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .benefit-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .benefit-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(34, 197, 94, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            font-size: 2rem;
-            margin: 0 auto 2rem;
-        }
-
-        .benefit-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .benefit-card p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        /* Pricing Section */
-        .pricing-section {
-            background: var(--color-light-gray);
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .pricing-card {
-            background: white;
-            border-radius: 24px;
-            padding: 3rem 2rem;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            border: 2px solid transparent;
-            position: relative;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .pricing-card:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 25px 60px rgba(34, 197, 94, 0.15);
-        }
-
-        .pricing-card.featured {
-            border-color: var(--color-primary);
-        }
-
-        .pricing-card.featured::before {
-            content: 'MEST POPULÆR';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--color-primary);
-            color: white;
-            padding: 0.5rem 2rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .pricing-header h3 {
-            font-size: 1.5rem;
-            color: var(--color-charcoal);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .pricing-subtitle {
-            color: var(--color-dark-gray);
-            margin-bottom: 2rem;
-        }
-
-        .pricing-amount {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-period {
-            color: var(--color-dark-gray);
-            margin-bottom: 2rem;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 3rem;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-            color: var(--color-charcoal);
-            font-weight: 500;
-        }
-
-        .pricing-features i {
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            width: 16px;
-        }
-
-        .pricing-cta {
-            width: 100%;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            border: 2px solid var(--color-primary);
-            background: transparent;
-            color: var(--color-primary);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .pricing-cta:hover {
-            background: var(--color-primary);
-            color: white;
-        }
-
-        .pricing-card.featured .pricing-cta {
-            background: var(--color-primary);
-            color: white;
-        }
-
-        .pricing-card.featured .pricing-cta:hover {
-            background: var(--color-primary-dark);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--color-charcoal), var(--color-slate));
-            color: white;
-            text-align: center;
-        }
-
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .cta-content p {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-white {
-            background: white;
-            color: var(--color-primary);
-            border-color: white;
-        }
-
-        .cta-transparent {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border-color: rgba(255,255,255,0.3);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .service-content {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                text-align: center;
-            }
-
-            .process-workflow {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .process-workflow::before {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .hero-stats {
-                gap: 1.5rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .window-grid {
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .service-layer {
-                padding: 2rem;
-            }
-
-            .comparison-controls {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+
+<style>
+/* Essential custom styles not covered by your stylesheet */
+:root {
+    --color-primary: var(--success);
+    --color-primary-dark: #16a34a;
+    --color-charcoal: var(--charcoal);
+    --color-dark-gray: var(--gray);
+    --color-light-gray: #f8fafc;
+    --color-border: #e2e8f0;
+    --color-slate: #475569;
+    --color-medium-gray: #9ca3af;
+}
+
+/* Hero specific styles */
+.hero-layout {
+    background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 50%, white 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 6rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-highlight {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.window-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.window-panel {
+    height: 200px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--color-medium-gray);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.window-panel.dirty {
+    background: linear-gradient(45deg, #f1f5f9 25%, #e2e8f0 25%, #e2e8f0 50%, #f1f5f9 50%, #f1f5f9 75%, #e2e8f0 75%);
+    background-size: 20px 20px;
+    opacity: 0.7;
+}
+
+.window-panel.clean {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
+}
+
+.window-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.window-panel.clean .window-overlay {
+    opacity: 1;
+}
+
+/* Services stack */
+.services-container {
+    position: relative;
+    perspective: 1000px;
+}
+
+.services-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-layer {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem 4rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.service-layer:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 30px 80px rgba(34, 197, 94, 0.2);
+}
+
+.service-layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: 24px 24px 0 0;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.service-features {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.feature-tag {
+    background: #f0fdf4;
+    color: var(--color-primary-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #bbf7d0;
+}
+
+.service-price {
+    text-align: center;
+    background: var(--color-light-gray);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 2px solid var(--color-border);
+}
+
+.price-label {
+    color: var(--color-dark-gray);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.price-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Comparison slider */
+.comparison-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto 0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.slider-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s;
+}
+
+.before-image {
+    background: linear-gradient(45deg, #f1f5f9 25%, #e2e8f0 25%, #e2e8f0 50%, #f1f5f9 50%, #f1f5f9 75%, #e2e8f0 75%);
+    background-size: 30px 30px;
+    opacity: 0.8;
+}
+
+.after-image {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    opacity: 0;
+}
+
+.image-label {
+    position: absolute;
+    top: 2rem;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.before-image .image-label {
+    left: 2rem;
+}
+
+.after-image .image-label {
+    right: 2rem;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: var(--color-primary);
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+.slider-handle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.slider-handle::after {
+    content: '↔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.comparison-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.comparison-btn {
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--color-medium-gray);
+    background: white;
+    color: var(--color-dark-gray);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.comparison-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.comparison-btn:hover:not(.active) {
+    border-color: var(--color-primary);
+    background: #f0fdf4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .window-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .service-layer {
+        padding: 2rem;
+    }
+
+    .comparison-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+
 <body>
 <!-- Header Component -->
 <div id="header"></div>
-    <!-- Jobs Section -->
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Professionel <span class="hero-highlight">Vinduespolering</span></h1>
-                    <p class="hero-subtitle">Krystalklare vinduer der skaber det perfekte første indtryk. Vores vinduespoleringsservice sørger for at jeres bygning altid fremstår professionel og indbydende.</p>
-                    
-                    <div class="hero-stats">
-                        <div class="hero-stat">
-                            <span class="hero-stat-number">500+</span>
-                            <span class="hero-stat-label">Vinduer poleret</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-number">99%</span>
-                            <span class="hero-stat-label">Plette fri</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-number">24h</span>
-                            <span class="hero-stat-label">Service garanti</span>
-                        </div>
+
+<!-- Hero Section -->
+<section class="first hero-layout">
+    <div class="container">
+        <div class="hero-content">
+            <div>
+                <h1 class="title text-charcoal" style="font-size: 3.5rem; font-weight: 300; line-height: 1; letter-spacing: -2px;">
+                    Professionel <span class="hero-highlight">Vinduespolering</span>
+                </h1>
+                <p class="body text-gray bot-space2" style="font-size: 1.4rem;">Krystalklare vinduer der skaber det perfekte første indtryk. Vores vinduespoleringsservice sørger for at jeres bygning altid fremstår professionel og indbydende.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number text-success">500+</span>
+                        <span class="stat-label text-gray">Vinduer poleret</span>
                     </div>
-                    
-                    <div class="hero-cta">
-                        <a href="#pricing" class="btn btn-primary">
-                            <i class="fas fa-calculator"></i>
-                            Få Tilbud
-                        </a>
-                        <a href="#services" class="btn btn-secondary">
-                            <i class="fas fa-arrow-down"></i>
-                            Se Services
-                        </a>
+                    <div class="stat">
+                        <span class="stat-number text-success">99%</span>
+                        <span class="stat-label text-gray">Plette fri</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number text-success">24h</span>
+                        <span class="stat-label text-gray">Service garanti</span>
                     </div>
                 </div>
                 
-                <div class="hero-visual">
-                    <div class="window-grid">
-                        <div class="window-panel dirty">
-                            <div class="window-overlay">
-                                <span>Før</span>
-                            </div>
-                        </div>
-                        <div class="window-panel clean">
-                            <div class="window-overlay">
-                                <i class="fas fa-sparkles"></i>
-                            </div>
-                        </div>
-                        <div class="window-panel clean">
-                            <div class="window-overlay">
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="window-panel dirty">
-                            <div class="window-overlay">
-                                <span>Før</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+                    <a href="#pricing" class="btn success medium">
+                        <i class="fas fa-calculator"></i>
+                        Få Tilbud
+                    </a>
+                    <a href="#services" class="btn primary medium">
+                        <i class="fas fa-arrow-down"></i>
+                        Se Services
+                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section-auto" id="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="subtitle">VORES SERVICES</div>
-                <h2>Komplet Vinduespolering</h2>
-                <p>Fra enkelte vinduer til komplette bygningsfacader - vi leverer professionel vinduespolering der sikrer krystalklare resultater</p>
             </div>
             
-            <div class="services-container">
-                <div class="services-stack">
-                    <div class="service-layer">
-                        <div class="service-content">
-                            <div class="service-icon">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div class="service-info">
-                                <h3>Indvendige Vinduer</h3>
-                                <p>Grundig rengøring af vinduer indvendigt med professionelle produkter der ikke efterlader striber eller pletter.</p>
-                                <div class="service-features">
-                                    <span class="feature-tag">Plette fri finish</span>
-                                    <span class="feature-tag">Miljøvenlige produkter</span>
-                                    <span class="feature-tag">Karme inkluderet</span>
-                                </div>
-                            </div>
-                            <div class="service-price">
-                                <div class="price-label">Fra</div>
-                                <div class="price-amount">25 kr</div>
-                                <div class="price-label">per vindue</div>
-                            </div>
+            <div>
+                <div class="window-grid">
+                    <div class="window-panel dirty">
+                        <div class="window-overlay">
+                            <span>Før</span>
                         </div>
                     </div>
-                    
-                    <div class="service-layer">
-                        <div class="service-content">
-                            <div class="service-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <div class="service-info">
-                                <h3>Udvendige Vinduer</h3>
-                                <p>Professionel udvendig vinduespolering med specialudstyr der når alle områder sikkert og effektivt.</p>
-                                <div class="service-features">
-                                    <span class="feature-tag">Teleskopstænger</span>
-                                    <span class="feature-tag">Sikkerhedsudstyr</span>
-                                    <span class="feature-tag">Alle højder</span>
-                                </div>
-                            </div>
-                            <div class="service-price">
-                                <div class="price-label">Fra</div>
-                                <div class="price-amount">35 kr</div>
-                                <div class="price-label">per vindue</div>
-                            </div>
+                    <div class="window-panel clean">
+                        <div class="window-overlay">
+                            <i class="fas fa-sparkles"></i>
                         </div>
                     </div>
-                    
-                    <div class="service-layer">
-                        <div class="service-content">
-                            <div class="service-icon">
-                                <i class="fas fa-city"></i>
+                    <div class="window-panel clean">
+                        <div class="window-overlay">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="window-panel dirty">
+                        <div class="window-overlay">
+                            <span>Før</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="text-center bot-space2">
+            <div class="subtitle text-success">VORES SERVICES</div>
+            <h2 class="text-charcoal">Komplet Vinduespolering</h2>
+            <p class="body text-gray">Fra enkelte vinduer til komplette bygningsfacader - vi leverer professionel vinduespolering der sikrer krystalklare resultater</p>
+        </div>
+        
+        <div class="services-container">
+            <div class="services-stack">
+                <div class="service-layer">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3 class="text-charcoal">Indvendige Vinduer</h3>
+                            <p class="text-gray">Grundig rengøring af vinduer indvendigt med professionelle produkter der ikke efterlader striber eller pletter.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Plette fri finish</span>
+                                <span class="feature-tag">Miljøvenlige produkter</span>
+                                <span class="feature-tag">Karme inkluderet</span>
                             </div>
-                            <div class="service-info">
-                                <h3>Facade Vinduer</h3>
-                                <p>Specialiseret service til store vinduespartier og glasfacader med professionelt højdegående udstyr.</p>
-                                <div class="service-features">
-                                    <span class="feature-tag">Professionelt udstyr</span>
-                                    <span class="feature-tag">Certificerede teknikere</span>
-                                    <span class="feature-tag">Forsikringsdækket</span>
-                                </div>
+                        </div>
+                        <div class="service-price">
+                            <div class="price-label">Fra</div>
+                            <div class="price-amount">25 kr</div>
+                            <div class="price-label">per vindue</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-layer">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3 class="text-charcoal">Udvendige Vinduer</h3>
+                            <p class="text-gray">Professionel udvendig vinduespolering med specialudstyr der når alle områder sikkert og effektivt.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Teleskopstænger</span>
+                                <span class="feature-tag">Sikkerhedsudstyr</span>
+                                <span class="feature-tag">Alle højder</span>
+                            </div>
+                        </div>
+                        <div class="service-price">
+                            <div class="price-label">Fra</div>
+                            <div class="price-amount">35 kr</div>
+                            <div class="price-label">per vindue</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-layer">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3 class="text-charcoal">Facade Vinduer</h3>
+                            <p class="text-gray">Specialiseret service til store vinduespartier og glasfacader med professionelt højdegående udstyr.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Professionelt udstyr</span>
+                                <span class="feature-tag">Certificerede teknikere</span>
+                                <span class="feature-tag">Forsikringsdækket</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section class="section-auto" id="comparison">
+<!-- Comparison Section -->
+<section class="section" id="comparison">
+    <div class="container">
         <div class="comparison-slider">
             <div class="slider-container" id="comparisonSlider">
                 <div class="slider-image before-image">
@@ -999,71 +537,73 @@
             </div>
             
             <div class="comparison-controls">
-                <a class="comparison-btn active" onclick="showComparison('before')">Før Polering</button>
-                <a class="comparison-btn" onclick="showComparison('after')">Efter Polering</button>
+                <a class="comparison-btn active" onclick="showComparison('before')">Før Polering</a>
+                <a class="comparison-btn" onclick="showComparison('after')">Efter Polering</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <script>
-        let isDragging = false;
-        const sliderHandle = document.getElementById('sliderHandle');
-        const afterImage = document.getElementById('afterImage');
-        const sliderContainer = document.getElementById('comparisonSlider');
+<!-- Footer Component -->
+<div id="footer"></div>
 
-        if (sliderHandle && afterImage && sliderContainer) {
-            // Mouse events
-            sliderHandle.addEventListener('mousedown', startDrag);
-            document.addEventListener('mousemove', drag);
-            document.addEventListener('mouseup', stopDrag);
-            
-            // Touch events for mobile
-            sliderHandle.addEventListener('touchstart', startDrag);
-            document.addEventListener('touchmove', drag);
-            document.addEventListener('touchend', stopDrag);
+<!-- Component loader -->
+<script src="../../js/components.js" defer></script>
 
-            function startDrag(e) {
-                isDragging = true;
-                e.preventDefault();
-            }
+<script>
+let isDragging = false;
+const sliderHandle = document.getElementById('sliderHandle');
+const afterImage = document.getElementById('afterImage');
+const sliderContainer = document.getElementById('comparisonSlider');
 
-            function drag(e) {
-                if (!isDragging) return;
-                
-                const rect = sliderContainer.getBoundingClientRect();
-                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-                const x = clientX - rect.left;
-                const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-                
-                sliderHandle.style.left = percentage + '%';
-                afterImage.style.opacity = percentage / 100;
-            }
+if (sliderHandle && afterImage && sliderContainer) {
+    // Mouse events
+    sliderHandle.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', stopDrag);
+    
+    // Touch events for mobile
+    sliderHandle.addEventListener('touchstart', startDrag);
+    document.addEventListener('touchmove', drag);
+    document.addEventListener('touchend', stopDrag);
 
-            function stopDrag() {
-                isDragging = false;
-            }
-        }
+    function startDrag(e) {
+        isDragging = true;
+        e.preventDefault();
+    }
 
-        function showComparison(type) {
-            const buttons = document.querySelectorAll('.comparison-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            if (type === 'before') {
-                afterImage.style.opacity = '0';
-                sliderHandle.style.left = '0%';
-                buttons[0].classList.add('active');
-            } else {
-                afterImage.style.opacity = '1';
-                sliderHandle.style.left = '100%';
-                buttons[1].classList.add('active');
-            }
-        }
-    </script>
+    function drag(e) {
+        if (!isDragging) return;
+        
+        const rect = sliderContainer.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const x = clientX - rect.left;
+        const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+        
+        sliderHandle.style.left = percentage + '%';
+        afterImage.style.opacity = percentage / 100;
+    }
 
+    function stopDrag() {
+        isDragging = false;
+    }
+}
 
-    <!-- Footer Component -->
-    <div id="footer"></div>
-    <!-- Component loader -->
-    <script src="../../js/components.js" defer></script>
+function showComparison(type) {
+    const buttons = document.querySelectorAll('.comparison-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    if (type === 'before') {
+        afterImage.style.opacity = '0';
+        sliderHandle.style.left = '0%';
+        buttons[0].classList.add('active');
+    } else {
+        afterImage.style.opacity = '1';
+        sliderHandle.style.left = '100%';
+        buttons[1].classList.add('active');
+    }
+}
+</script>
+
 </body>
 </html>
