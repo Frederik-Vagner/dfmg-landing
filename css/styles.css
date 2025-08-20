@@ -233,6 +233,13 @@ h4 {
     gap: 20px;
 }
 
+.grid-3x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
 .grid {
     display: grid;
 }  
@@ -452,7 +459,7 @@ h4 {
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: var(--font-weight-semibold);
     line-height: 1;
     margin-bottom: 0.5rem;
