@@ -27,60 +27,12 @@
 </head>
 
 <style>
-/* Essential custom styles not covered by your stylesheet */
-:root {
-    --color-primary: var(--success);
-    --color-primary-dark: #16a34a;
-    --color-charcoal: var(--charcoal);
-    --color-dark-gray: var(--gray);
-    --color-light-gray: #f8fafc;
-    --color-border: #e2e8f0;
-    --color-slate: #475569;
-    --color-medium-gray: #9ca3af;
-}
-
-/* Hero specific styles */
-.hero-layout {
-    background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 50%, white 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 6rem;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-highlight {
-    color: var(--color-primary);
-    font-weight: 600;
-}
-
-.hero-stats {
-    display: flex;
-    gap: 3rem;
-    margin: 2rem 0;
-}
-
-.window-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-}
-
 .window-panel {
     height: 200px;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
-    border: 3px solid var(--color-medium-gray);
+    border: 3px solid #e2e8f0;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -93,7 +45,7 @@
 
 .window-panel.clean {
     background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-    border-color: var(--color-primary);
+    border-color: var(--primary);
     box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
 }
 
@@ -115,58 +67,10 @@
     opacity: 1;
 }
 
-/* Services stack */
-.services-container {
-    position: relative;
-    perspective: 1000px;
-}
-
-.services-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.service-layer {
-    background: white;
-    border-radius: 24px;
-    padding: 3rem 4rem;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-    border: 2px solid transparent;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.service-layer:hover {
-    border-color: var(--color-primary);
-    box-shadow: 0 30px 80px rgba(34, 197, 94, 0.2);
-}
-
-.service-layer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-    border-radius: 24px 24px 0 0;
-}
-
-.service-content {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 2rem;
-    align-items: center;
-}
-
 .service-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: linear-gradient(135deg, var(--primary), var(--charcoal));
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -175,33 +79,13 @@
     font-size: 2rem;
 }
 
-.service-features {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.feature-tag {
-    background: #f0fdf4;
-    color: var(--color-primary-dark);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid #bbf7d0;
-}
-
 .service-price {
     text-align: center;
-    background: var(--color-light-gray);
     padding: 1.5rem;
-    border-radius: 16px;
-    border: 2px solid var(--color-border);
 }
 
 .price-label {
-    color: var(--color-dark-gray);
+    color: var(--gray);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -211,7 +95,7 @@
 .price-amount {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--primary);
 }
 
 /* Comparison slider */
@@ -279,7 +163,7 @@
     left: 50%;
     width: 4px;
     height: 100%;
-    background: var(--color-primary);
+    background: var(--primary);
     cursor: ew-resize;
     z-index: 10;
 }
@@ -292,7 +176,7 @@
     transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
-    background: var(--color-primary);
+    background: var(--primary);
     border-radius: 50%;
     border: 4px solid white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -313,14 +197,13 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
 }
 
 .comparison-btn {
     padding: 0.75rem 2rem;
-    border: 2px solid var(--color-medium-gray);
+    border: 2px solid #e2e8f0;
     background: white;
-    color: var(--color-dark-gray);
+    color: var(--gray);
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s;
@@ -329,47 +212,17 @@
 }
 
 .comparison-btn.active {
-    background: var(--color-primary);
+    background: var(--primary);
     color: white;
-    border-color: var(--color-primary);
+    border-color: var(--primary);
 }
 
 .comparison-btn:hover:not(.active) {
-    border-color: var(--color-primary);
+    border-color: var(--primary);
     background: #f0fdf4;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-
-    .service-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
-    }
-}
-
 @media (max-width: 768px) {
-    .hero-stats {
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .window-grid {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-    }
-
-    .service-layer {
-        padding: 2rem;
-    }
-
     .comparison-controls {
         flex-direction: column;
         align-items: center;
@@ -382,25 +235,25 @@
 <div id="header"></div>
 
 <!-- Hero Section -->
-<section class="first hero-layout">
+<section class="first bg-gradient-sky">
     <div class="container">
-        <div class="hero-content">
+        <div class="flex flex-2">
             <div>
                 <h1 class="title text-charcoal" style="font-size: 3.5rem; font-weight: 300; line-height: 1; letter-spacing: -2px;">
-                    Professionel <span class="hero-highlight">Vinduespolering</span>
+                    Professionel <span class="highlight">Vinduespolering</span>
                 </h1>
-                <p class="body text-gray bot-space2" style="font-size: 1.4rem;">Krystalklare vinduer der skaber det perfekte første indtryk. Vores vinduespoleringsservice sørger for at jeres bygning altid fremstår professionel og indbydende.</p>
+                <p class="body text-gray bot-space2">Krystalklare vinduer der skaber det perfekte første indtryk. Vores vinduespoleringsservice sørger for at jeres bygning altid fremstår professionel og indbydende.</p>
                 
-                <div class="hero-stats">
-                    <div class="stat">
+                <div class="flex">
+                    <div class="stat-number">
                         <span class="stat-number text-success">500+</span>
                         <span class="stat-label text-gray">Vinduer poleret</span>
                     </div>
-                    <div class="stat">
+                    <div class="stat-number">
                         <span class="stat-number text-success">99%</span>
                         <span class="stat-label text-gray">Plette fri</span>
                     </div>
-                    <div class="stat">
+                    <div class="stat-number">
                         <span class="stat-number text-success">24h</span>
                         <span class="stat-label text-gray">Service garanti</span>
                     </div>
@@ -419,7 +272,7 @@
             </div>
             
             <div>
-                <div class="window-grid">
+                <div class="grid-2x2">
                     <div class="window-panel dirty">
                         <div class="window-overlay">
                             <span>Før</span>
@@ -455,10 +308,10 @@
             <p class="body text-gray">Fra enkelte vinduer til komplette bygningsfacader - vi leverer professionel vinduespolering der sikrer krystalklare resultater</p>
         </div>
         
-        <div class="services-container">
+        <div class="grid">
             <div class="services-stack">
-                <div class="service-layer">
-                    <div class="service-content">
+                <div class="card p-2 .bg-gradient-white">
+                    <div class="flex">
                         <div class="service-icon">
                             <i class="fas fa-building"></i>
                         </div>
@@ -466,9 +319,9 @@
                             <h3 class="text-charcoal">Indvendige Vinduer</h3>
                             <p class="text-gray">Grundig rengøring af vinduer indvendigt med professionelle produkter der ikke efterlader striber eller pletter.</p>
                             <div class="service-features">
-                                <span class="feature-tag">Plette fri finish</span>
-                                <span class="feature-tag">Miljøvenlige produkter</span>
-                                <span class="feature-tag">Karme inkluderet</span>
+                                <span class="badge">Plette fri finish</span>
+                                <span class="badge">Miljøvenlige produkter</span>
+                                <span class="badge">Karme inkluderet</span>
                             </div>
                         </div>
                         <div class="service-price">
@@ -479,8 +332,8 @@
                     </div>
                 </div>
                 
-                <div class="service-layer">
-                    <div class="service-content">
+                <div class="card p-2 .bg-gradient-white">
+                    <div class="flex">
                         <div class="service-icon">
                             <i class="fas fa-home"></i>
                         </div>
@@ -488,9 +341,9 @@
                             <h3 class="text-charcoal">Udvendige Vinduer</h3>
                             <p class="text-gray">Professionel udvendig vinduespolering med specialudstyr der når alle områder sikkert og effektivt.</p>
                             <div class="service-features">
-                                <span class="feature-tag">Teleskopstænger</span>
-                                <span class="feature-tag">Sikkerhedsudstyr</span>
-                                <span class="feature-tag">Alle højder</span>
+                                <span class="badge">Teleskopstænger</span>
+                                <span class="badge">Sikkerhedsudstyr</span>
+                                <span class="badge">Alle højder</span>
                             </div>
                         </div>
                         <div class="service-price">
@@ -501,8 +354,8 @@
                     </div>
                 </div>
                 
-                <div class="service-layer">
-                    <div class="service-content">
+                <div class="card p-2 .bg-gradient-white">
+                    <div class="flex">
                         <div class="service-icon">
                             <i class="fas fa-city"></i>
                         </div>
@@ -510,9 +363,9 @@
                             <h3 class="text-charcoal">Facade Vinduer</h3>
                             <p class="text-gray">Specialiseret service til store vinduespartier og glasfacader med professionelt højdegående udstyr.</p>
                             <div class="service-features">
-                                <span class="feature-tag">Professionelt udstyr</span>
-                                <span class="feature-tag">Certificerede teknikere</span>
-                                <span class="feature-tag">Forsikringsdækket</span>
+                                <span class="badge">Professionelt udstyr</span>
+                                <span class="badge">Certificerede teknikere</span>
+                                <span class="badge">Forsikringsdækket</span>
                             </div>
                         </div>
                     </div>
@@ -536,7 +389,7 @@
                 <div class="slider-handle" id="sliderHandle"></div>
             </div>
             
-            <div class="comparison-controls">
+            <div class="comparison-controls space2">
                 <a class="comparison-btn active" onclick="showComparison('before')">Før Polering</a>
                 <a class="comparison-btn" onclick="showComparison('after')">Efter Polering</a>
             </div>
