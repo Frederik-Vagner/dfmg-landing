@@ -101,6 +101,11 @@ body {
     display: inline-block; 
     font-weight: var(--font-weight-semibold);
     transition: all var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .primary {
@@ -287,7 +292,7 @@ h4 {
 .space2 { margin: 2rem; }
 .space3 { margin: 3rem; }
 
-
+.p-05 { padding: 0.5rem; }
 .p-1 { padding: 1rem; }
 .p-2 { padding: 2rem; }
 .p-3 { padding: 3rem; }

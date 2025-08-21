@@ -27,15 +27,6 @@
 </head>
 
 <style>
-/* Essential custom styles for the unique hero carousel - this layout must be preserved */
-:root {
-    --color-primary: var(--success);
-    --color-primary-dark: #16a34a;
-    --color-charcoal: var(--charcoal);
-    --color-dark-gray: var(--gray);
-    --color-light-gray: #f8fafc;
-}
-
 /* Hero Services Carousel - CRITICAL LAYOUT */
 .services-hero {
     height: 100vh;
@@ -120,18 +111,33 @@
     right: 0;
     bottom: 0;
     background: white;
-    color: var(--color-charcoal);
+    color: var(--charcoal);
     padding: 7rem 2rem 1rem 2rem;
     z-index: 4;
     overflow-y: auto;
     height: 100vh;
 }
 
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--charcoal);
+    text-decoration: none;
+}
+
 .expanded-close-btn {
     position: absolute;
     top: 6.5rem;
     right: 1rem;
-    background: var(--color-primary);
+    background: var(--bg-gradient-white);
     color: white;
     border: none;
     padding: 0.8rem 1.2rem;
@@ -140,21 +146,15 @@
     font-size: 0.9rem;
     z-index: 10;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: box-shadow 0.2s ease;
 }
 
-.expanded-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--color-charcoal);
-    margin-top: 0;
-    padding-right: 150px; /* Space for button */
+.expanded-close-btn:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
-.expanded-description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: #666;
-    line-height: 1.6;
+.expanded-close-btn i {
+    color: var(--charcoal);
 }
 
 .expanded-stats {
@@ -171,7 +171,7 @@
 .expanded-stat-number {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--charcoal);
     display: block;
 }
 
@@ -181,52 +181,34 @@
     text-transform: uppercase;
 }
 
-.specialomrader-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.specialomrader-title {
-    margin-bottom: 1rem;
-    color: var(--color-charcoal);
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.specialomrade-card {
-    background: #f8fafc;
-    padding: 1.5rem;
-    border-radius: 10px;
-}
-
-.specialomrade-title {
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
 .specialomrade-list {
     list-style: none;
-    padding: 0;
+    padding: 0.5rem;
     margin: 0;
 }
 
 .specialomrade-item {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--charcoal);
     margin-bottom: 0.3rem;
     padding-left: 1rem;
     position: relative;
+    align-items: center;
 }
 
 .specialomrade-item:before {
     content: "•";
-    color: var(--color-primary);
+    color: var(--charcoal);
     position: absolute;
     left: 0;
+    font-size: 2rem;
+    line-height: 1; /* Normalize line height */
+    top: 50%; /* Position at middle of container */
+    transform: translateY(-55%); /* Center vertically */
+}
+
+.specialomrade-title{
+    font-weight: 500;
 }
 
 .service-column.expanded .service-title {
@@ -270,7 +252,7 @@
 }
 
 .service-features i {
-    color: var(--color-primary);
+    color: var(--charcoal);
 }
 
 .service-actions {
@@ -291,16 +273,21 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
 }
 
 .feature-card {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
+}
+
+.feature-card h3,
+.feature-card p{
+    margin: unset;
+    align-content: center;
 }
 
 .feature-card:hover {
@@ -309,8 +296,7 @@
 
 .feature-icon {
     font-size: 2.5rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
+    color: var(--charcoal);
 }
 
 /* Process steps */
@@ -337,7 +323,7 @@
 .step-number {
     width: 50px;
     height: 50px;
-    background: var(--color-primary);
+    background: var(--charcoal);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -386,6 +372,14 @@
     padding-right: 2rem;
 }
 
+.expanded-content-left > h3{
+    margin-bottom: unset;
+}
+
+.expanded-content-left > p{
+    margin-top: unset;
+}
+
 .expanded-content-right {
     flex: 1;
     top: 2rem;
@@ -402,7 +396,7 @@
 
 .fordele-title {
     margin-bottom: 1rem;
-    color: var(--color-charcoal);
+    color: var(--charcoal);
     font-size: 1.3rem;
     font-weight: 600;
 }
@@ -424,7 +418,7 @@
 }
 
 .fordele-icon {
-    color: var(--color-primary);
+    color: var(--charcoal);
     font-size: 1rem;
     background: rgba(34, 197, 94, 0.1);
     padding: 0.4rem;
@@ -439,13 +433,18 @@
 
 .fordele-text {
     font-size: 0.9rem;
-    color: var(--color-charcoal);
+    color: var(--charcoal);
     font-weight: 500;
     line-height: 1.4;
 }
 
 .specialomrader-section {
     margin-bottom: 2rem;
+}
+
+.specialomrader-section h4,
+.specialomrader-section h5{
+    margin: unset;
 }
 
 /* Hide content of collapsed columns */
@@ -494,7 +493,7 @@
                 <li><i class="fas fa-check"></i> Digital rapportering</li>
             </ul>
             <div class="service-actions">
-                <a href="#" class="btn success medium">
+                <a href="#" class="btn primary medium">
                     <i class="fas fa-info-circle"></i> Læs Mere
                 </a>
                 <a href="#" class="btn secondary medium">
@@ -519,7 +518,7 @@
                 <li><i class="fas fa-check"></i> Proaktiv vedligeholdelse</li>
             </ul>
             <div class="service-actions">
-                <a href="#" class="btn success medium">
+                <a href="#" class="btn primary medium">
                     <i class="fas fa-info-circle"></i> Læs Mere
                 </a>
                 <a href="#" class="btn secondary medium">
@@ -544,7 +543,7 @@
                 <li><i class="fas fa-check"></i> 2h responstid</li>
             </ul>
             <div class="service-actions">
-                <a href="#" class="btn success medium">
+                <a href="#" class="btn primary medium">
                     <i class="fas fa-info-circle"></i> Læs Mere
                 </a>
                 <a href="#" class="btn secondary medium">
@@ -569,7 +568,7 @@
                 <li><i class="fas fa-check"></i> Digital bestilling</li>
             </ul>
             <div class="service-actions">
-                <a href="#" class="btn success medium">
+                <a href="#" class="btn primary medium">
                     <i class="fas fa-info-circle"></i> Læs Mere
                 </a>
                 <a href="#" class="btn secondary medium">
@@ -594,7 +593,7 @@
                 <li><i class="fas fa-check"></i> Samme dag levering</li>
             </ul>
             <div class="service-actions">
-                <a href="#" class="btn success medium">
+                <a href="#" class="btn primary medium">
                     <i class="fas fa-info-circle"></i> Læs Mere
                 </a>
                 <a href="#" class="btn secondary medium">
@@ -619,11 +618,11 @@
                 <li><i class="fas fa-check"></i> Fuld forsikring</li>
             </ul>
             <div class="service-actions">
-                <a href="#" class="btn success medium">
+                <a href="#" class="btn primary medium">
                     <i class="fas fa-info-circle"></i> Læs Mere
                 </a>
                 <a href="#" class="btn secondary medium">
-                    <i class="fas fa-calculator"></i> Få Tilbud
+                    <i class="fas fa-calculator"></i> Prisberegner
                 </a>
             </div>
         </div>
@@ -633,39 +632,68 @@
 <!-- Why Choose Us Section -->
 <section class="section bg-gradient-white">
     <div class="container">
-        <div class="text-center bot-space2">
+        <div class="text-center bot-space">
             <div class="subtitle text-success">VORES FORDELE</div>
             <h2 class="text-charcoal">Hvorfor Vælge DFMG?</h2>
             <p class="body text-gray">Vi leverer ikke bare services - vi skaber værdi for jeres virksomhed gennem kvalitet, innovation og dedikeret service</p>
         </div>
+
+        <div class="text-center">
+            <div class="badge text-charcoal">Driften</div>
+        </div>
         
-        <div class="features-grid">
+        <div class="features-grid bot-space2">
             <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-award"></i></div>
-                <h4 class="text-charcoal">Høj Kvalitet</h4>
+            <div class="flex" style="justify-content: center;">
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h3 class="text-charcoal">Høj Kvalitet</h3>
+                </div>
                 <p class="text-gray">Certificerede medarbejdere og strenge kvalitetskontroller sikrer konsistent høj standard</p>
             </div>
-            
             <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-leaf"></i></div>
                 <h4 class="text-charcoal">Bæredygtighed</h4>
                 <p class="text-gray">Miljøvenlige produkter og processer der beskytter både miljø og medarbejderes sundhed</p>
             </div>
-            
             <div class="feature-card">
+            <div class="flex" style="justify-content: center;">
+                <h3 class="text-charcoal">24/7 Service</h3>
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+
+                </div>
+                <p class="text-gray">Akut service og beredskab når I har brug for det - hele døgnet, året rundt</p>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <div class="badge text-charcoal">Systemet</div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+            <div class="flex" style="justify-content: center;">
                 <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-                <h4 class="text-charcoal">Digital Platform</h4>
+                    <h3 class="text-charcoal">Digital Platform</h3>
+                </div>
                 <p class="text-gray">Moderne teknologi giver jer fuld transparens og kontrol med alle services</p>
             </div>
-            
             <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-clock"></i></div>
-                <h4 class="text-charcoal">24/7 Service</h4>
-                <p class="text-gray">Akut service og beredskab når I har brug for det - hele døgnet, året rundt</p>
+                <h4 class="text-charcoal">?</h4>
+            </div>
+            <div class="feature-card">
+                <div class="flex" style="justify-content: center;">
+                    
+                    <h3 class="text-charcoal">Digital Platform</h3>
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                </div>
+                <p class="text-gray">Moderne teknologi giver jer fuld transparens og kontrol med alle services</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<div class="feature-card">
+                
 
 <!-- Process Section -->
 <section class="section">
@@ -926,8 +954,8 @@ function showExpandedContent(column, serviceType) {
         
         <div class="expanded-layout">
             <div class="expanded-content-left">
-                <h3 class="expanded-title">${service.title}</h3>
-                <p class="expanded-description">${service.description}</p>
+                <h3 class="text-charcoal">${service.title}</h3>
+                <p class="text-charcoal">${service.description}</p>
                 
                 <div class="expanded-stats">
                     ${service.stats.map(stat => `
@@ -939,10 +967,10 @@ function showExpandedContent(column, serviceType) {
                 </div>
                 
                 <div class="specialomrader-section">
-                    <h4 class="specialomrader-title">Specialområder</h4>
-                    <div class="specialomrader-grid">
+                    <h4 class="text-charcoal">Specialområder</h4>
+                    <div class="grid-2x2">
                         ${service.categories.map(category => `
-                            <div class="specialomrade-card">
+                            <div class="p-05">
                                 <h5 class="specialomrade-title">${category.name}</h5>
                                 <ul class="specialomrade-list">
                                     ${category.items.map(item => `
@@ -957,13 +985,13 @@ function showExpandedContent(column, serviceType) {
             
             <div class="expanded-content-right">
                 <button class="expanded-close-btn" onclick="closeExpandedContent(event)">
-                    Tilbage
+                    <i class="fa-solid fa-reply"></i>
                 </button>
                 <div class="expanded-image">
                     <img src="/images/service/${getImageName(serviceType)}.jpg" alt="${service.title}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
                 <div class="fordele-section">
-                    <h4 class="fordele-title">Vores fordele</h4>
+                    <h4 class="fordele-title">Hvorfor DFMG</h4>
                     <div class="fordele-grid">
                         ${service.features.map(feature => `
                             <div class="fordele-card">
@@ -975,7 +1003,7 @@ function showExpandedContent(column, serviceType) {
                 </div>
                 
                 <div class="expanded-actions">
-                    <a href="#" class="btn success medium">
+                    <a href="#" class="btn primary medium">
                         <i class="fas fa-info-circle"></i> Læs Mere
                     </a>
                     <a href="#" class="btn secondary medium">
