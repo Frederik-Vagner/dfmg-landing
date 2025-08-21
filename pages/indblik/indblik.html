@@ -26,430 +26,7 @@
 
 
 </head>
-    <style>
-:root {
-    /* Brand Colors */
-    --primary: #4285f4;
-    --success: #22c55e;
-    --charcoal: #344767;
-    --gray: #565656;
-    --white: #ffffff;
-    
-    /* Text Colors (using same colors for consistency) */
-    --text-primary: var(--charcoal);
-    --text-secondary: var(--gray);
-    --text-accent: var(--primary);
-    --text-success: var(--success);
-    --text-white: var(--white);
-
-    /* Background Gradients */
-    --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
-    --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
-    --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
-    --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, #2a3441 100%);
-
-    /* Typography */
-    --font-size-h1: 3rem;
-    --font-size-h1-mobile: 2rem;
-    --font-size-h2: 2.5rem;
-    --font-size-h2-mobile: 1.8rem;
-    --font-size-subtitle: 0.9rem;
-    --font-size-body: 1rem;
-    --font-size-small: 0.75rem;
-
-    --font-size-xs: 0.8rem;
-    --font-size-md: 1.1rem;
-    --font-size-lg: 1.2rem;
-    --font-size-xl: 1.4rem;
-
-    --font-weight-light: 300;
-    --font-weight-normal: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-
-    /* Layout & Spacing */
-    --container-width: 1200px;
-    --container-padding: 0 20px;
-    --section-padding: 4rem 0;
-
-    /* Border Radius */
-    --radius-small: 8px;
-    --radius-medium: 12px;
-    --radius-large: 16px;
-    --radius-xl: 20px;
-    --radius-full: 50px;
-
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-    --shadow-md: 0 2px 10px rgba(0,0,0,0.1);
-    --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
-    --shadow-xl: 0 8px 30px rgba(0,0,0,0.12);
-    --shadow-text: 0 2px 4px rgba(0,0,0,0.7);
-
-    /* Borders */
-    --border-light: 1px solid #e2e8f0;
-    --border-lighter: 1px solid #f1f5f9;
-
-    /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
-
-    /* Button System */
-    --btn-padding-sm: 8px 16px;
-    --btn-padding-md: 12px 24px;
-    --btn-padding-lg: 15px 30px;
-    --btn-font-weight: var(--font-weight-semibold);
-
-    /* Background Overlays */
-    --bg-overlay-light: rgba(255, 255, 255, 0.2);
-    }
-
-/* Universal Box Sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-.bg-white { background: var(--white); }
-.bg-light { background: var(--bg-gradient-white); }
-
-
-
-/* UNIFIED UTILITY CLASSES */
-/* Layout Classes */
-.flex-col { display: flex; flex-direction: column; }
-.flex-row { display: flex; flex-direction: row; }
-.gap-sm { gap: 15px; }
-.gap-md { gap: 20px; }
-.gap-lg { gap: 30px; }
-.gap-xl { gap: 4rem; }
-
-/* Text Classes */
-.text-lg { font-size: 1.2rem; }
-.text-base { font-size: var(--font-size-body); }
-.text-sm { font-size: var(--font-size-small); }
-.font-semibold { font-weight: var(--font-weight-semibold); }
-.font-medium { font-weight: var(--font-weight-medium); }
-.text-center { text-align: center; }
-
-.text-xs { font-size: var(--font-size-xs); }
-.text-md { font-size: var(--font-size-md); }
-.text-xl { font-size: var(--font-size-xl); }
-.mb-sm { margin-bottom: 0.5rem; }
-.mb-md { margin-bottom: 1rem; }
-
-/* Spacing Classes */
-.mb-lg { margin-bottom: 4rem; }
-
-/* Button System */
-.btn {
-    padding: var(--btn-padding-lg);
-    border-radius: var(--radius-small);
-    font-weight: var(--btn-font-weight);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: var(--transition-fast);
-    text-align: center;
-}
-
-.btn-sm { padding: var(--btn-padding-sm); }
-.btn-md { padding: var(--btn-padding-md); }
-
-.btn-primary { 
-    background: var(--success); 
-    color: var(--text-white); 
-}
-.btn-primary:hover { background: #16a34a; }
-
-.btn-secondary { 
-    background: var(--text-white); 
-    color: var(--text-primary); 
-    border: 2px solid var(--text-primary); 
-}
-.btn-secondary:hover {
-    background: var(--text-primary);
-    color: var(--text-white);
-}
-
-/* Position Classes */
-.relative { position: relative; }
-.absolute { position: absolute; }
-
-/* Display & Overflow */
-.block { display: block; }
-.inline-block { display: inline-block; }
-.hidden { display: none; }
-.overflow-hidden { overflow: hidden; }
-
-/* Width & Height */
-.w-full { width: 100%; }
-.h-auto { height: auto; }
-.max-w-none { max-width: none; }
-
-/* Additional Text Sizes */
-.text-2xl { font-size: 1.6rem; }
-.text-3xl { font-size: 2rem; }
-
-/* Margin & Padding Utilities */
-.m-0 { margin: 0; }
-.p-0 { padding: 0; }
-.p-6 { padding: 1.5rem; }
-.mt-auto { margin-top: auto; }
-.ml-auto { margin-left: auto; }
-.mr-auto { margin-right: auto; }
-
-/* Border */
-.border { border: var(--border-light); }
-.border-l-4 { border-left: 4px solid var(--primary); }
-.border-success { border-color: var(--success); }
-
-.card {
-    background: var(--white);
-    border-radius: var(--radius-large);
-    box-shadow: var(--shadow-md);
-}
-
-.card-lg { padding: 2rem; }
-.card-center { text-align: center; }
-
-.grid-auto { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 2rem; 
-    margin-bottom: 3rem;
-}
-
-.grid-4-cols { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 2rem; 
-    margin-bottom: 3rem;
-}
-
-/* Responsive behavior for 4-column grid */
-@media (max-width: 1200px) {
-    .grid-4-cols {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .grid-4-cols {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Background Utilities */
-.bg-gradient-primary { background: var(--bg-gradient-primary); }
-.bg-overlay-light { background: var(--bg-overlay-light); }
-
-/* Text Color Utilities */
-.text-white { color: var(--text-white); }
-.text-primary { color: var(--text-primary); }
-
-/* Flexbox Utilities */
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-
-/* Sizing Utilities */
-.w-15 { width: 60px; }
-.h-15 { height: 60px; }
-
-/* Spacing Utilities */
-.mx-auto { margin-left: auto; margin-right: auto; }
-.mb-4 { margin-bottom: 1rem; }
-.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
-.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
-.top-4 { top: 1rem; }
-.right-4 { right: 1rem; }
-
-/* Border Radius Utilities */
-.rounded-full { border-radius: 50%; }
-.rounded-lg { border-radius: var(--radius-medium); }
-
-/* CORE BASE STYLES */
-body { 
-    margin: 0; 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-    padding-top: 100px; 
-    line-height: 1.6;
-}
-
-.container { 
-    max-width: var(--container-width); 
-    margin: 0 auto; 
-    padding: var(--container-padding); 
-}
-
-.container-wide { 
-    max-width: 1400px; 
-    margin: 0 auto; 
-    padding: var(--container-padding); 
-}
-
-.section { 
-    padding: var(--section-padding); 
-}
-
-/* Typography */
-h1 { 
-    font-size: var(--font-size-h1); 
-    font-weight: var(--font-weight-light); 
-    margin-bottom: 1rem; 
-    color: var(--text-primary);
-}
-
-h2 { 
-    font-size: var(--font-size-h2); 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-    color: var(--text-primary);
-}
-
-h3 { 
-    font-size: 1.5rem; 
-    font-weight: var(--font-weight-semibold); 
-    margin-bottom: 1rem; 
-    color: var(--text-primary);
-}
-
-p { 
-    color: var(--text-secondary); 
-    margin-bottom: 1rem; 
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-    h1 { font-size: var(--font-size-h1-mobile); }
-    h2 { font-size: var(--font-size-h2-mobile); }
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Timeline - Essential Styles Only */
-.story-timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.timeline-line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--primary), var(--success));
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    display: flex;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-.timeline-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.timeline-content {
-    flex: 1;
-    background: white;
-    padding: 1.5rem;
-    border-radius: var(--radius-medium);
-    box-shadow: var(--shadow-lg);
-    margin: 0 2rem;
-    position: relative;
-}
-
-.timeline-year {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.9rem;
-    border: 4px solid white;
-}
-
-.timeline-content h3 {
-    color: var(--text-primary);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.achievement-badge {
-    display: inline-block;
-    background: var(--success);
-    color: white;
-    padding: 4px 12px;
-    border-radius: var(--radius-medium);
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-}
-
-.step-number {
-    width: 50px;
-    height: 50px;
-    background: var(--primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0 auto 1rem;
-}
-
-
-.list li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--success);
-    font-weight: bold;
-}
-
-.case-card {
-    background: white;
-    border-radius: var(--radius-large);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-}
-
+<style>
 .case-company {
     font-size: 1.2rem;
     font-weight: 600;
@@ -504,94 +81,127 @@ p {
     color: var(--text-secondary);
 }
 
-.news-image {
-    height: 160px;
-    background: linear-gradient(135deg, var(--primary), var(--success));
-    position: relative;
+.article-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
 }
 
-.news-content {
+.article-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+.article-date {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #344767;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.article-title {
+    color: #344767;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: unset;
+}
+
+.article-excerpt {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.read-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.article-content {
     padding: 1.5rem;
 }
 
-.news-category {
-    color: var(--primary);
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+.company-logo {
+    height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+    color: unset;
 }
 
-.news-title {
-    color: var(--text-primary);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--charcoal);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
+.carousel-btn:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.cases-carousel { 
+    overflow: hidden; 
+}
+
+.cases-carousel {
+    max-width: 832px; /* (386px * 2) + (20px gap) + some padding */
+    margin: 0 auto;
+}
+
+.cases-track { 
+    display: flex; 
+    transition: transform var(--transition-normal); 
+    width: max-content;
+    gap: 20px;
+}
+
+.cases-track .card { 
+    width: 386px;
+    flex-shrink: 0;
+    min-height: 520px;
+}
 </style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
-    <!-- Our Story Section -->
-    <section class="section" id="story">
-        <div class="container">
-            <div class="text-center">
-                <div class="title text-charcoal">Vores Historie</div>
-                <div class="body text-gray">Fra lille start-up til Danmarks foretrukne facility partner - historien om DFMG's rejse mod excellence</p>
-            </div>
-            
-            <div class="story-timeline">
-                <div class="timeline-line"></div>
-                
-                <div class="card bg-gradient-white">
-                    <h3>Starten på Drømmen</h3>
-                    <p>DFMG blev grundlagt med en vision om at revolutionere facility management i Danmark. Vi startede med et lille team af dedikerede medarbejdere og en stor drøm om at skabe positive forandringer i branchen.</p>
-                    <p>Allerede fra starten fokuserede vi på bæredygtige løsninger og enestående kundeservice som vores kerneprincipper.</p>
-                    <span class="achievement-badge">Grundlagt som grøn virksomhed</span>
-                </div>
-                
-                <div class="card bg-gradient-white space2">
-                    <h3>Første Store Kontrakter</h3>
-                    <p>Vi sikrede vores første større erhvervskontrakter og etablerede os som en pålidelig partner for københavnske virksomheder. Dette år markerede starten på vores specialisering inden for professionel rengøring og ejendomsservice.</p>
-                    <p>Vi implementerede vores bilfri transport politik og blev certificeret inden for miljøvenlig drift.</p>
-                    <span class="achievement-badge">100% Bilfri Transport</span>
-                </div>
-                
-                 <div class="card bg-gradient-white space2">
-                    <h3>Ekspansion og Innovation</h3>
-                    <p>Markant vækst i kundebase og udvidelse af serviceportefølje. Vi introducerede digitale løsninger for bedre kundeinteraktion og implementerede avancerede kvalitetskontrolsystemer.</p>
-                    <p>Partnerskaber med leading teknologi leverandører sikrede os en position som innovationsdriver i branchen.</p>
-                    <span class="achievement-badge">Digital Transformation</span>
-                </div>
-                
-                 <div class="card bg-gradient-white space2">
-                    <h3>Bæredygtighedslederskab</h3>
-                    <p>Vi lancerede vores omfattende bæredygtighedsprogram og blev anerkendt som branchens grønne leder. Implementering af cirkulær økonomi principper og social ansvarlighed i alle aspekter af vores forretning.</p>
-                    <p>Etablering af mentorprogrammer og inklusions-initiativer for medarbejdere.</p>
-                    <span class="achievement-badge">Bæredygtighedsaward</span>
-                </div>
-                
-                 <div class="card bg-gradient-white space2">
-                    <h3>Strategisk Facility Partner</h3>
-                    <p>Evolution fra service leverandør til strategisk facility partner. Vi hjælper nu virksomheder med at optimere deres workplace experience og reducere omkostninger gennem holistiske facility løsninger.</p>
-                    <p>Lancering af vores Total Facility Management koncept og dedicated account manager program.</p>
-                    <span class="achievement-badge">200+ Tilfredse Kunder</span>
-                </div>
-                
-                 <div class="card bg-gradient-white space2">
-                    <h3>Fremtiden Starter Nu</h3>
-                    <p>Kontinuerlig innovation og vækst med fokus på at blive Danmarks mest betroede facility partner. Vi investerer i ny teknologi, udvider vores team og skaber endnu bedre løsninger for vores kunder.</p>
-                    <p>Ambitiøse mål for de kommende år inkluderer yderligere ekspansion og pioneering af næste generations facility services.</p>
-                    <span class="achievement-badge">Klar til Fremtiden</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- How We Work Section -->
-    <section class="section">
+    <section class="section first">
         <div class="container-wide">
             <div class="text-center">
                 <div class="title text-charcoal">Hvordan Vi Arbejder</div>
@@ -599,26 +209,26 @@ p {
             </div>
              
             <div class="flex bot-space2">
-                <div class="card text-center p-6">
-                    <div class="step-number">1</div>
+                <div class="card bg-gradient-white p-1 text-center">
+                    <div class="stat-number">1</div>
                     <h3>Analyse & Forståelse</h3>
                     <p>Vi starter altid med en grundig analyse af kundens behov, udfordringer og målsætninger for at skabe den perfekte løsning.</p>
                 </div>
                 
-                <div class="card text-center p-6">
-                    <div class="step-number">2</div>
+                <div class="card bg-gradient-white p-1 text-center">
+                    <div class="stat-number">2</div>
                     <h3>Skræddersyet Plan</h3>
                     <p>Baseret på analysen udvikler vi en detaljeret serviceplan der er tilpasset specifikke krav og forventninger.</p>
                 </div>
                 
-                <div class="card text-center p-6">
-                    <div class="step-number">3</div>
+                <div class="card bg-gradient-white p-1 text-center">
+                    <div class="stat-number">3</div>
                     <h3>Professionel Udførelse</h3>
                     <p>Vores erfarne teams udfører alle opgaver med højeste kvalitet, sikkerhed og opmærksomhed på detaljer.</p>
                 </div>
                 
-                <div class="card text-center p-6">
-                    <div class="step-number">4</div>
+                <div class="card bg-gradient-white p-1 text-center">
+                    <div class="stat-number">4</div>
                     <h3>Kontinuerlig Optimering</h3>
                     <p>Vi monitorerer løbende performance, indsamler feedback og optimerer vores services for bedst mulige resultater.</p>
                 </div>
@@ -626,229 +236,242 @@ p {
         </div>
         <div class="container">
             
-            <div class="grid-auto">
-                <div class="card card-lg border-l-4">
+            <div class="flex flex-2">
+                <div class="card bg-gradient-white border-left-primary p-2">
                     <h3>
                         <i class="fas fa-shield-alt"></i>
                         Kvalitetssikring
                     </h3>
-                    <ul class="list">
-                        <li>Systematiske kvalitetskontroller ved hver service</li>
-                        <li>Certificerede medarbejdere med løbende træning</li>
-                        <li>Digitale checklister og dokumentation</li>
-                        <li>Customer satisfaction tracking og feedback loops</li>
-                        <li>Performance metrics og KPI rapportering</li>
-                        <li>Proaktiv problemløsning og forbedringer</li>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i>Systematiske kvalitetskontroller ved hver service</li>
+                        <li><i class="fas fa-check"></i>Certificerede medarbejdere med løbende træning</li>
+                        <li><i class="fas fa-check"></i>Digitale checklister og dokumentation</li>
+                        <li><i class="fas fa-check"></i>Customer satisfaction tracking og feedback loops</li>
+                        <li><i class="fas fa-check"></i>Performance metrics og KPI rapportering</li>
+                        <li><i class="fas fa-check"></i>Proaktiv problemløsning og forbedringer</li>
                     </ul>
                 </div>
                 
-                <div class="card card-lg border-l-4">
+                <div class="card bg-gradient-white border-left-primary p-2">
                     <h3>
                         <i class="fas fa-handshake"></i>
                         Kundeforhold
                     </h3>
-                    <ul class="list">
-                        <li>Dedikeret account manager for hver kunde</li>
-                        <li>24/7 support og emergency response</li>
-                        <li>Regelmæssige review møder og planlægning</li>
-                        <li>Transparent kommunikation og rapportering</li>
-                        <li>Fleksible løsninger der tilpasser sig ændringer</li>
-                        <li>Langsigtet partnerskabstænkning</li>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i>Dedikeret account manager for hver kunde</li>
+                        <li><i class="fas fa-check"></i>24/7 support og emergency response</li>
+                        <li><i class="fas fa-check"></i>Regelmæssige review møder og planlægning</li>
+                        <li><i class="fas fa-check"></i>Transparent kommunikation og rapportering</li>
+                        <li><i class="fas fa-check"></i>Fleksible løsninger der tilpasser sig ændringer</li>
+                        <li><i class="fas fa-check"></i>Langsigtet partnerskabstænkning</li>
                     </ul>
                 </div>
             </div>
         
     </section>
 
-    <!-- News Section -->
-    <section class="section bg-white" id="news">
+    <!-- Article Section -->
+    <section class="section bg-white" id="articles">
         <div class="container">
             <div class="text-center">
                 <div class="title text-charcoal">Seneste Artikler</div>
-                <div class="body text-gray bot-space2">Seneste Artikler</div>
             </div>
             
-            <div class="grid-auto">
-                <div class="card overflow-hidden p-0">                    
-                <div class="news-image">
-                        <div class="absolute top-4 right-4 bg-overlay-light text-primary px-3 py-1 rounded-lg text-xs font-semibold">12. dec 2024</div>
+            <div class="flex">
+                <article class="article-card" data-category="insights">
+                    <div class="article-image insights">
+                        <div class="article-date">Case Study</div>
+                        <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="news-content">
-                        <div class="news-category">TIPS & TRICKS</div>
-                        <h3 class="news-title">Location Guides: Hemmeligheden Bag Konsistent Kvalitet</h3>
-                        <p class="news-excerpt">Lær hvordan detaljeret dokumentation og kunde-specifikke instrukser eliminerer gætværk og sikrer perfekt service hver gang.</p>
-                        <a href="#" class="btn primary small">
-                            Læs mere <i class="fas fa-arrow-right"></i>
-                        </a>
+                    <div class="article-content">
+                        <h4 class="article-title">Fra 5 Leverandører til Én Pålidelig Partner</h4>
+                        <p class="article-excerpt">Historien om hvordan en københavnsk virksomhed forenklede deres facility management og opnåede bedre service til lavere omkostninger.</p>
+                        <div class="article-meta">
+                            <div class="read-time">
+                                <i class="fas fa-clock"></i>
+                                4 min læsning
+                            </div>
+                            <a href="/pages/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html" class="btn primary small">
+                                Læs artikel <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card overflow-hidden p-0">                    
-                <div class="news-image">
-                        <div class="absolute top-4 right-4 bg-overlay-light text-primary px-3 py-1 rounded-lg text-xs font-semibold">10. dec 2024</div>
+                </article>
+                <article class="article-card" data-category="insights">
+                    <div class="article-image insights">
+                        <div class="article-date">INNOVATION</div>
+                        <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="news-content">
-                        <div class="news-category">INNOVATION</div>
-                        <h3 class="news-title">Mennesker vs. Robotter i Facility Management</h3>
-                        <p class="news-excerpt">Hvorfor den menneskelige faktor aldrig bliver erstattet af teknologi, og hvordan vi positionerer os til fremtidens udfordringer.</p>
-                        <a href="#" class="btn primary small">
-                            Læs mere <i class="fas fa-arrow-right"></i>
-                        </a>
+                    <div class="article-content">
+                        <h4 class="article-title">Mennesker vs. Robotter i Facility Management</h4>
+                        <p class="article-excerpt">Hvorfor den menneskelige faktor aldrig bliver erstattet af teknologi, og hvordan vi positionerer os til fremtidens udfordringer.</p>
+                        <div class="article-meta">
+                            <div class="read-time">
+                                <i class="fas fa-clock"></i>
+                                3 min læsning
+                            </div>
+                            <a href="/pages/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html" class="btn primary small">
+                                Læs artikel <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card overflow-hidden p-0">                    
-                <div class="news-image">
-                        <div class="absolute top-4 right-4 bg-overlay-light text-primary px-3 py-1 rounded-lg text-xs font-semibold">10. dec 2024</div>
+                </article>
+                <article class="article-card" data-category="insights">
+                    <div class="article-image insights">
+                        <div class="article-date">TIPS & TRICKS</div>
+                        <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="news-content">
-                        <div class="news-category">BÆREDYGTIGHED</div>
-                        <h3 class="news-title">Cirkulær Økonomi i Rengøringsbranchen</h3>
-                        <p class="news-excerpt">Hvordan facility service virksomheder kan implementere cirkulære principper og skabe værdi gennem bæredygtige praksisser.</p>
-                        <a href="#" class="btn primary small">
-                            Læs mere <i class="fas fa-arrow-right"></i>
-                        </a>
+                    <div class="article-content">
+                        <h4 class="article-title">Location Guides: Et Værktøj til Konsistent Kvalitet</h4>
+                        <p class="article-excerpt">Lær hvordan detaljeret dokumentation og kunde-specifikke instrukser eliminerer gætværk og sikrer perfekt service hver gang.</p>
+                        <div class="article-meta">
+                            <div class="read-time">
+                                <i class="fas fa-clock"></i>
+                                4 min læsning
+                            </div>
+                            <a href="/pages/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html" class="btn primary small">
+                                Læs artikel <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Customer Cases Section -->
     <section class="section">
-        <div class="container-wide">
+        <div class="container">
             <div class="text-center">
                 <div class="title text-charcoal">Kundecases</div>
                 <div class="body text-gray bot-space2">Virkelige historier fra vores samarbejder - se hvordan vi har hjulpet virksomheder med at opnå deres mål</div>
+                    <div class="carousel-controls bot-space2">
+                    <a class="carousel-btn" onclick="previousServices()">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a class="carousel-btn" onclick="nextServices()">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
             </div>
             
-            <div class="grid-4-cols">
-                <div class="case-card">
-                    <div class="bg-gradient-primary text-white text-center p-6">
-                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
-                            <i class="fas fa-building"></i>
+            
+            <div class="cases-carousel">
+                <div class="cases-track" id="casesTrack">
+                    <div class="card bg-gradient-white text-center p-1">
+                        <div class="company-logo-section">
+                            <img class="company-logo" src="/images/logos/adnami.png" alt="Handyman Services" width="640" height="640">
                         </div>
-                        <div class="case-company">Adnami</div>
                         <div class="case-industry">Tech / Marketing</div>
-                    </div>
-                    <div class="case-content">
-                        <div class="case-challenge">
-                            <h4>Udfordringen</h4>
-                            <p>Adnami havde behov for pålidelig rengøringsservice der kunne matche deres høje standarder og fleksible arbejdsmiljø. De søgte en partner der forstod deres unikke behov som vækstvirksomhed.</p>
-                        </div>
-                        <div class="case-challenge">
-                            <h4>Vores Løsning</h4>
-                            <p>Vi implementerede et fleksibelt rengøringsprogram tilpasset deres dynamiske arbejdsmiljø, med fokus på detaljerne og personlig opmærksomhed.</p>
-                        </div>
-                        <div class="case-results">
-                            <h5>Resultater</h5>
-                            <div class="result-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">100%</div>
-                                    <div class="metric-label">Kundetilfredshed</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">0</div>
-                                    <div class="metric-label">Klager</div>
+                        <div class="case-content">
+                            <div class="case-challenge">
+                                <h4>Udfordringen</h4>
+                                <p>Adnami havde behov for pålidelig rengøringsservice der kunne matche deres høje standarder og fleksible arbejdsmiljø. De søgte en partner der forstod deres unikke behov som vækstvirksomhed.</p>
+                            </div>
+                            <div class="case-challenge">
+                                <h4>Vores Løsning</h4>
+                                <p>Vi implementerede et fleksibelt rengøringsprogram tilpasset deres dynamiske arbejdsmiljø, med fokus på detaljerne og personlig opmærksomhed.</p>
+                            </div>
+                            <div class="case-results">
+                                <h5>Resultater</h5>
+                                <div class="result-metrics">
+                                    <div class="metric">
+                                        <div class="metric-value">100%</div>
+                                        <div class="metric-label">Kundetilfredshed</div>
+                                    </div>
+                                    <div class="metric">
+                                        <div class="metric-value">0</div>
+                                        <div class="metric-label">Klager</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="case-card">
-                    <div class="bg-gradient-primary text-white text-center p-6" >
-                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
-                            <i class="fas fa-home"></i>
+                    <div class="card bg-gradient-white text-center p-1">
+                        <div class="company-logo-section">
+                            <img class="company-logo" src="/images/logos/nybolig.png" alt="Handyman Services" width="640" height="640">
                         </div>
-                        <div class="case-company">Nybolig</div>
                         <div class="case-industry">Ejendomsmægling</div>
-                    </div>
-                    <div class="case-content">
-                        <div class="case-challenge">
-                            <h4>Udfordringen</h4>
+                        <div class="case-content">
+                            <div class="case-challenge">
+                                <h4>Udfordringen</h4>
                             <p>Nybolig havde brug for konsistent, høj kvalitets rengøring på tværs af flere lokationer med varierende behov og tidspunkter for service.</p>
-                        </div>
-                        <div class="case-challenge">
-                            <h4>Vores Løsning</h4>
+                            </div>
+                            <div class="case-challenge">
+                                <h4>Vores Løsning</h4>
                             <p>Multi-lokation rengøringsplan med koordineret logistik og standardiserede processer, men fleksibilitet til lokale tilpasninger.</p>
-                        </div>
-                        <div class="case-results">
-                            <h5>Resultater</h5>
-                            <div class="result-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">5</div>
-                                    <div class="metric-label">Lokationer</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">99%</div>
-                                    <div class="metric-label">Rettidig Service</div>
+                            </div>
+                            <div class="case-results">
+                                <h5>Resultater</h5>
+                                <div class="result-metrics">
+                                    <div class="metric">
+                                        <div class="metric-value">5</div>
+                                        <div class="metric-label">Lokationer</div>
+                                    </div>
+                                    <div class="metric">
+                                        <div class="metric-value">99%</div>
+                                        <div class="metric-label">Rettidig Service</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="case-card">
-                    <div class="bg-gradient-primary text-white text-center p-6" >
-                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
-                            <i class="fas fa-city"></i>
+                    <div class="card bg-gradient-white text-center p-1">
+                        <div class="company-logo-section">
+                            <img class="company-logo" src="/images/logos/soho.png" alt="Handyman Services" width="640" height="640">
                         </div>
-                        <div class="case-company">SOHO</div>
                         <div class="case-industry">Coworking Space</div>
-                    </div>
-                    <div class="case-content">
-                        <div class="case-challenge">
-                            <h4>Udfordringen</h4>
-                            <p>SOHO's dynamiske coworking miljø krævede fleksible rengøringsløsninger der kunne håndtere høj aktivitet og varierende belægning.</p>
-                        </div>
-                        <div class="case-challenge">
-                            <h4>Vores Løsning</h4>
-                            <p>Adaptive rengøringsschema baseret på real-time belægning, med ekstra opmærksomhed på fællesområder og høj-trafik zoner.</p>
-                        </div>
-                        <div class="case-results">
-                            <h5>Resultater</h5>
-                            <div class="result-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">95%</div>
-                                    <div class="metric-label">Member Satisfaction</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">30%</div>
-                                    <div class="metric-label">Reduceret Spild</div>
+                        <div class="case-content">
+                            <div class="case-challenge">
+                                <h4>Udfordringen</h4>
+                                <p>SOHO's dynamiske coworking miljø krævede fleksible rengøringsløsninger der kunne håndtere høj aktivitet og varierende belægning.</p>
+                            </div>
+                            <div class="case-challenge">
+                                <h4>Vores Løsning</h4>
+                                <p>Adaptive rengøringsschema baseret på real-time belægning, med ekstra opmærksomhed på fællesområder og høj-trafik zoner.</p>
+                            </div>
+                            <div class="case-results">
+                                <h5>Resultater</h5>
+                                <div class="result-metrics">
+                                    <div class="metric">
+                                        <div class="metric-value">95%</div>
+                                        <div class="metric-label">Member Satisfaction</div>
+                                    </div>
+                                    <div class="metric">
+                                        <div class="metric-value">30%</div>
+                                        <div class="metric-label">Reduceret Spild</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="case-card">
-                    <div class="bg-gradient-primary text-white text-center p-6" >
-                        <div class="w-15 h-15 bg-overlay-light rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="card bg-gradient-white text-center p-1">
+                        <div class="company-logo-section">
+                            <img class="company-logo" src="/images/logos/deas.png" alt="Handyman Services" width="640" height="640">
                         </div>
-                        <div class="case-company">DEAS</div>
-                        <div class="case-industry">Asset Management</div>
-                    </div>
-                    <div class="case-content">
-                        <div class="case-challenge">
-                            <h4>Udfordringen</h4>
-                            <p>DEAS havde behov for premium facility services der matchede deres professionelle image og høje standarder for kundeoplevelser.</p>
-                        </div>
-                        <div class="case-challenge">
-                            <h4>Vores Løsning</h4>
-                            <p>Comprehensive facility management program med fokus på detaljer, professionel præsentation og seamless service delivery.</p>
-                        </div>
-                        <div class="case-results">
-                            <h5>Resultater</h5>
-                            <div class="result-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">98%</div>
-                                    <div class="metric-label">Service Quality</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">24/7</div>
-                                    <div class="metric-label">Support</div>
+                        <div class="case-content">
+                            <div class="case-challenge">
+                                <h4>Udfordringen</h4>
+                                <p>DEAS havde behov for premium facility services der matchede deres professionelle image og høje standarder for kundeoplevelser.</p>
+                            </div>
+                            <div class="case-challenge">
+                                <h4>Vores Løsning</h4>
+                                <p>Comprehensive facility management program med fokus på detaljer, professionel præsentation og seamless service delivery.</p>
+                            </div>
+                            <div class="case-results">
+                                <h5>Resultater</h5>
+                                <div class="result-metrics">
+                                    <div class="metric">
+                                        <div class="metric-value">98%</div>
+                                        <div class="metric-label">Service Quality</div>
+                                    </div>
+                                    <div class="metric">
+                                        <div class="metric-value">24/7</div>
+                                        <div class="metric-label">Support</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -862,5 +485,31 @@ p {
     <div id="footer"></div>
     <!-- Component loader -->
     <script src="../../js/components.js" defer></script>
+    <script>
+    let currentCaseIndex = 0;
+    const totalCases = 4;
+    const casesVisible = 2;
+    const maxCaseIndex = totalCases - casesVisible;
+
+    function updateCasesCarousel() {
+        const track = document.getElementById('casesTrack');
+        const moveDistance = currentCaseIndex * 406; // 386px card + 20px gap = 406px exactly
+        track.style.transform = `translateX(-${moveDistance}px)`;
+    }
+
+    function nextServices() {
+        if (currentCaseIndex < maxCaseIndex) {
+            currentCaseIndex++;
+            updateCasesCarousel();
+        }
+    }
+
+    function previousServices() {
+        if (currentCaseIndex > 0) {
+            currentCaseIndex--;
+            updateCasesCarousel();
+        }
+    }
+    </script>
 </body>
 </html>
