@@ -31,13 +31,6 @@
     max-width: none;
     margin: 0;
 }
-.contact-info h3 {
-    text-align: left;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 
 .form-input::placeholder,
 .form-textarea::placeholder {
@@ -53,25 +46,27 @@
 .career-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--gap-xl);
+    gap: 5rem;
     align-items: start;
 }
+
 .job-benefits {
     list-style: none;
     padding: 0;
     margin: 2rem 0;
 }
+
 .job-benefits li {
     padding: 0.5rem 0;
     color: var(--gray);
 }
+
 .job-benefits li::before {
     content: '✓';
     color: var(--success);
     font-weight: bold;
     margin-right: 1rem;
 }
-
 
 .partner-info .job-benefits li::before {
     content: '✓';
@@ -80,6 +75,184 @@
     margin-left: 1rem;
     margin-right: 0;
     float: right;
+}
+
+.partner-info .job-benefits li.unavailable::before {
+    content: '✗';
+    color: var(--red);
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-right: 0;
+    float: right;
+}
+
+/* Custom Dropdown */
+.custom-dropdown {
+    position: relative;
+}
+
+.dropdown-selected {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    background: var(--white);
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.dropdown-selected.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    display: none;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.dropdown-options.open {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    margin-top: -1px;
+}
+
+.dropdown-options input[type="checkbox"] {
+    display: none;
+}
+
+.dropdown-options label {
+    display: block;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.dropdown-options label:hover {
+    background: #f8fafc;
+}
+
+.dropdown-options label.selected {
+    color: var(--success);
+    font-weight: 500;
+}
+
+.dropdown-options label.selected::after {
+    content: '✓';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+/* Form Row */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row.phone-row {
+    grid-template-columns: 25% auto;
+    gap: 1rem;
+}
+
+.phone-code select {
+    font-size: 1.1rem;
+    padding: 15px;
+    appearance: none; /* Fjern standard dropdown pil */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 45px; /* Plads til custom pil */
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-row.phone-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    margin-top: 3rem;
+}
+
+.faq-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: background 0.2s ease;
+}
+
+.faq-question h4 {
+    margin: 0;
+    color: var(--charcoal);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+    color: var(--gray);
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer.open {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 1.5rem;
+    margin: 0;
+    color: var(--gray);
 }
 </style>
 </head>
@@ -92,14 +265,9 @@
         <!-- Contact Form Section -->
         <section class="section first">
             <div class="container">
-                <div class="text-center">
-                    <div class="title text-charcoal">Kontakt</div>
-                    <div class="body text-gray">Har du spørgsmål til vores services eller vil du have et uforpligtende tilbud?</div>
-                </div>
-
                 <div class="career-content">
                     <div class="contact-info">
-                        <h2>Få et tilbud</h2>
+                        <h2 class="text-charcoal">Få et tilbud</h2>
                         <p>Udfyld formularen og beskriv jeres behov. Vi vender tilbage med et skræddersyet tilbud inden for 24 timer.</p>
                         
                         <ul class="job-benefits">
@@ -112,22 +280,118 @@
                     </div>
 
                     <div class="contact-form">
-                        <h2>Kontakt formular</h2>
-                        <form onsubmit="handleFormSubmit(event)">
+                        <h2 class="text-charcoal text-center">Kontakt formular</h2>
+                        <form action="https://formspree.io/f/xdkdrqkw" method="POST">
+                        <!-- Hidden fields for Formspree -->
+                        <input type="hidden" name="_subject" value="Ny henvendelse fra DFMG hjemmeside">
+                        <input type="hidden" name="_next" value="https://dfmg.dk/pages/tak.html">
                             <div class="form-group">
-                                <input type="text" name="name" placeholder="Navn" class="form-input" required>
+                                <div class="custom-dropdown">
+                                    <div class="dropdown-selected" onclick="toggleDropdown()">
+                                        <span id="selected-text">Hvilke services drejer det sig om?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="dropdown-options" id="dropdown-options">
+                                        <label><input type="checkbox" name="services[]" value="erhvervsrengoring"> Erhvervsrengøring</label>
+                                        <label><input type="checkbox" name="services[]" value="ejendomsservice"> Ejendomsservice</label>
+                                        <label><input type="checkbox" name="services[]" value="handyman"> Handyman Services</label>
+                                        <label><input type="checkbox" name="services[]" value="supplies"> Supplies & Produkter</label>
+                                        <label><input type="checkbox" name="services[]" value="piccoline"> Piccoline Ordning</label>
+                                        <label><input type="checkbox" name="services[]" value="vinduespolering"> Vinduespolering</label>
+                                        <label><input type="checkbox" name="services[]" value="facility-management"> Facility Management</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" name="company" placeholder="Jeres virksomhed" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Dit navn" class="form-input" required>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="E-mail" class="form-input" required>
+                                <input type="email" name="email" placeholder="Din e-mail" class="form-input" required>
+                            </div>
+                            <div class="form-row phone-row">
+                                <div class="form-group phone-code">
+                                    <select name="country_code" class="form-input">
+                                        <option value="+45" selected>🇩🇰 +45</option>
+                                        <option value="+46">🇸🇪 +46</option>
+                                        <option value="+47">🇳🇴 +47</option>
+                                        <option value="+49">🇩🇪 +49</option>
+                                        <option value="+44">🇬🇧 +44</option>
+                                        <option value="+31">🇳🇱 +31</option>
+                                        <option value="+33">🇫🇷 +33</option>
+                                        <option value="+39">🇮🇹 +39</option>
+                                        <option value="+34">🇪🇸 +34</option>
+                                        <option value="+351">🇵🇹 +351</option>
+                                        <option value="+32">🇧🇪 +32</option>
+                                        <option value="+43">🇦🇹 +43</option>
+                                        <option value="+41">🇨🇭 +41</option>
+                                        <option value="+48">🇵🇱 +48</option>
+                                        <option value="+420">🇨🇿 +420</option>
+                                        <option value="+421">🇸🇰 +421</option>
+                                        <option value="+36">🇭🇺 +36</option>
+                                        <option value="+385">🇭🇷 +385</option>
+                                        <option value="+386">🇸🇮 +386</option>
+                                        <option value="+372">🇪🇪 +372</option>
+                                        <option value="+371">🇱🇻 +371</option>
+                                        <option value="+370">🇱🇹 +370</option>
+                                        <option value="+358">🇫🇮 +358</option>
+                                        <option value="+353">🇮🇪 +353</option>
+                                    </select>
+                                </div>
+                                <div class="form-group phone-number">
+                                    <input type="tel" name="phone" placeholder="12 34 56 78" class="form-input" pattern="[0-9\s]{7,15}" required>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" placeholder="Telefonnummer" class="form-input" required>
+                                <textarea name="message" placeholder="Beskriv jeres behov, så vi kan forberede os bedst muligt" class="form-textarea" required></textarea>
                             </div>
-                            <div class="form-group">
-                                <textarea name="message" placeholder="Beskriv jeres behov og ønsker" class="form-textarea" required></textarea>
-                            </div>
-                            <a type="submit" class="btn success medium" style="width: 100%;">SEND FORESPØRGSEL</a>
+                            <button type="submit" class="btn success medium text-center" style="width: 100%; box-sizing: border-box">SEND FORESPØRGSEL</button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container-narrow">
+                <div class="text-center">
+                    <h3 class="text-charcoal">Ofte stillede spørgsmål</h3>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>Hvilke områder dækker I?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Vores nuværende kunder ligger hovedsageligt i København, men vi dækker hele Storkøbenhavn og tilstødende områder.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>Har I forsikring?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Vi har selvfølgelig alle lovpligtige forsikringer. Dette inkluderer ansvarsforsikring på op til 10 millioner kr. samt medarbejderforsikring.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>Kan man starte samarbejde uden fysisk møde?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Det er desværre ikke muligt. Forventningsafstemning er alt, hvilket er grunden til vi er nødsaget til at se jeres lokation for at komme frem til alle de vigtige detaljer, som gør vi får et langt og stærkt samarbejde.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,16 +401,15 @@
         <section class="section">
             <div class="container">
                 <div class="text-center">
-                    <h2>Karriere</h2>
+                    <h3 class="text-charcoal">Karriere</h3>
                     <p class="text-lg">Søger du job hos DFMG? Bliv en del af et professionelt facility service team</p>
                 </div>
 
                 <div class="career-content">
                     <div>
-                        <h3>Søger du job?</h3>
+                        <h3 class="text-charcoal">Søger du job?</h3>
                         <p>Hvis du er interesseret i et job hos DFMG, kan du kontakte os direkte eller se vores ledige stillinger for at finde den rigtige mulighed.</p>
 
-                        
                         <ul class="job-benefits">
                             <li>Konkurrencedygtige løn- og ansættelsesvilkår</li>
                             <li>Mulighed for faglig og personlig udvikling</li>
@@ -155,7 +418,7 @@
                             <li>Fleksible arbejdstider</li>
                         </ul>
 
-                        <div class="job-buttons">
+                        <div class="job-buttons flex" style="gap: 1rem">
                             <a href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="btn primary medium">
                                 Kontakt os
                             </a>
@@ -166,7 +429,7 @@
                     </div>
 
                     <div class="partner-info text-right">
-                        <h3>Partnerskab & Samarbejde</h3>
+                        <h3 class="text-charcoal">Partnerskab & Samarbejde</h3>
                         <p>Vi søger samarbejdspartnere til at udvide vores servicetilbud og løse større facility management projekter sammen.</p>
                         
                         <ul class="job-benefits">
@@ -174,7 +437,7 @@
                             <li>Elektriker-firmaer</li>
                             <li>Professionel vinduespudsning</li>
                             <li>Logistik og transport</li>
-                            <li>Specialrengøring (tæpper, gulvbehandling)</li>
+                            <li class="unavailable">Erhvervsrengøring</li>
                         </ul>
 
                         <div class="job-buttons">
@@ -194,15 +457,82 @@
     <!-- Component loader -->
     <script src="../js/components.js" defer></script>
     <script>
-        function handleFormSubmit(event) {
-            event.preventDefault();
+        function toggleDropdown() {
+            const options = document.getElementById('dropdown-options');
+            const selected = document.querySelector('.dropdown-selected');
             
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
+            if (options.style.display === 'block') {
+                options.style.display = 'none';
+                options.classList.remove('open');
+                selected.classList.remove('open');
+            } else {
+                options.style.display = 'block';
+                options.classList.add('open');
+                selected.classList.add('open');
+            }
+        }
+
+        // Update selected text og visual styling
+        document.querySelectorAll('.dropdown-options input').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                updateSelectedText();
+                updateVisualSelection();
+            });
+        });
+
+        function updateVisualSelection() {
+            document.querySelectorAll('.dropdown-options label').forEach(label => {
+                const checkbox = label.querySelector('input[type="checkbox"]');
+                if (checkbox.checked) {
+                    label.classList.add('selected');
+                } else {
+                    label.classList.remove('selected');
+                }
+            });
+        }
+
+        function updateSelectedText() {
+            const selected = [...document.querySelectorAll('.dropdown-options input:checked')]
+                .map(cb => cb.parentElement.textContent.trim());
+            document.getElementById('selected-text').textContent = 
+                selected.length ? selected.join(', ') : 'Hvilke services drejer det sig om?';
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.querySelector('.custom-dropdown');
+            const options = document.getElementById('dropdown-options');
+            const selected = document.querySelector('.dropdown-selected');
             
-            console.log('Form submitted:', data);
-            alert('Tak for din besked! Vi kontakter dig inden for 24 timer.');
-            event.target.reset();
+            if (!dropdown.contains(event.target)) {
+                options.style.display = 'none';
+                options.classList.remove('open');
+                selected.classList.remove('open');
+            }
+        });
+
+        // Prevent dropdown from closing when clicking inside it
+        document.querySelector('.custom-dropdown').addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('open');
+            });
+            document.querySelectorAll('.faq-question').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't already open
+            if (!isOpen) {
+                answer.classList.add('open');
+                element.classList.add('active');
+            }
         }
     </script>
 </body>

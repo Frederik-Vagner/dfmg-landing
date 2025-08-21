@@ -360,6 +360,7 @@ h4 {
     font-family: inherit;
     background: var(--white);
     transition: var(--transition-fast);
+    box-sizing: border-box;
 }
 
 .form-input:focus,
