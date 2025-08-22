@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
     
     <!-- Favicon -->
     <link rel="icon" href="../../images/logos/logo.png" type="image/png">
@@ -51,6 +51,11 @@
     flex: 1.2;
 }
 
+.service-column:hover:not(.expanded):not(.collapsed) .service-title {
+    transform: scale(1.3);
+    padding-bottom: 5rem;
+}
+
 .service-column.expanded {
     flex: 3;
 }
@@ -87,21 +92,28 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
     padding-bottom: 3rem;
+    top: 70vh;
 }
+
+
 
 .service-title {
     font-size: 1.2rem;
     font-weight: 600;
     color: white;
     white-space: nowrap;
-    transition: font-size 0.4s ease;
-}
-
-.service-column:hover:not(.collapsed) .service-title {
-    font-size: 1.4rem;
+    transition: transform 0.4s ease;
+    text-align: center;
+    margin: 0 auto; /* Center the fixed width container */
+    line-height: 1.2;
+    min-height: 1.44rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Fixed width for consistent alignment */
+    max-width: 100%; /* Responsive fallback */
 }
 
 .expanded-content {
@@ -117,6 +129,7 @@
     overflow-y: auto;
     height: 100vh;
 }
+
 
 .carousel-btn {
     width: 50px;
@@ -459,10 +472,6 @@
     filter: none !important;
 }
 
-.service-column.collapsed .service-title:hover {
-    font-size: 1.2rem !important;
-}
-
 .expanded-actions {
     display: flex;
     justify-content: center;
@@ -481,7 +490,7 @@
         <div class="service-bg" style="background-image: url('/images/service/cleaning.jpg');"></div>
         <div class="service-overlay"></div>
         <div class="service-content">
-            <h3 class="service-title">Professionel Rengøring</h3>
+            <h3 class="service-title">Erhvervsrengøring</h3>
             <div class="service-description">
                 Kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.
             </div>
@@ -581,7 +590,7 @@
         <div class="service-bg" style="background-image: url('/images/service/picoline.jpg');"></div>
         <div class="service-overlay"></div>
         <div class="service-content">
-            <h3 class="service-title">Piccoline Opgaver</h3>
+            <h3 class="service-title">Piccoline Ordning</h3>
             <div class="service-description">
                 Mindre administrative opgaver og specialopgaver der gør hverdagen nemmere.
             </div>
@@ -689,10 +698,7 @@
             </div>
         </div>
     </div>
-</section>
-
-<div class="feature-card">
-                
+</section>                
 
 <!-- Process Section -->
 <section class="section">
@@ -858,7 +864,7 @@ const serviceDetails = {
         ]
     },
     piccoline: {
-        title: "Piccoline Opgaver",
+        title: "Piccoline Ordning",
         description: "Mindre administrative opgaver og specialopgaver der gør hverdagen nemmere.",
         stats: [
             { number: "300+", label: "Opgavetyper" },

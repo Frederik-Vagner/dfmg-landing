@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder professionel rengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
+    <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
     
     <!-- Favicon -->
     <link rel="icon" href="images/logos/logo.png" type="image/png">
@@ -56,18 +56,18 @@
 
 /* Top row - photos 1-9 */
 /* Top row - 8 photos */
-.photo:nth-child(1) { grid-column: 1; grid-row: 1; transform: translateY(120px); }
-.photo:nth-child(2) { grid-column: 2; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(3) { grid-column: 3; grid-row: 1; transform: translateY(130px); }
+.photo:nth-child(1) { grid-column: 1; grid-row: 1; transform: translateY(130px); }
+.photo:nth-child(2) { grid-column: 2; grid-row: 1; transform: translateY(40px); }
+.photo:nth-child(3) { grid-column: 3; grid-row: 1; transform: translateY(100px); }
 .photo:nth-child(4) { grid-column: 4; grid-row: 1; transform: translateY(70px); }
 .photo:nth-child(5) { grid-column: 5; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(130px); }
-.photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(120px); }
+.photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(100px); }
+.photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(40px); }
+.photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(130px); }
 
 /* Bottom row - 2 photos in middle */
-.photo:nth-child(9) { grid-column: 2; grid-row: 2; transform: translateY(70px); }
-.photo:nth-child(10) { grid-column: 7; grid-row: 2; transform: translateY(70px); }
+.photo:nth-child(9) { grid-column: 2; grid-row: 2; transform: translateY(40px); }
+.photo:nth-child(10) { grid-column: 7; grid-row: 2; transform: translateY(40px); }
 
 
 .photo img {
@@ -91,7 +91,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .carousel-btn {
@@ -259,6 +259,7 @@
 
 </style>
 <body>
+<!-- Font -->
 <div id="maintenance-overlay" style="
     position: fixed;
     top: 0;
@@ -291,6 +292,7 @@ body.maintenance-mode > *:not(#maintenance-overlay) {
 // Apply maintenance mode
 document.body.classList.add('maintenance-mode');
 </script>
+
     <!-- Header Component -->
     <div id="header"></div>
 
@@ -304,13 +306,13 @@ document.body.classList.add('maintenance-mode');
                 <div class="title text-charcoal">All-In-One Facility Service</div>
                 <div class="body text-gray">Rengøring, vedligeholdelse og produkter til jeres facility</div>
                 <div class="flex space1" style="justify-content: center;">
-                    <a href="" class="btn success medium">Få Gratis Analyse</a>
-                    <a href="" class="btn secondary medium">Udforsk Løsninger</a>
+                    <a href="" class="btn success medium">Komplet Facility Service</a>
+                    <a href="/pages/services/services.html" class="btn secondary medium">Udforsk Løsninger</a>
                 </div>
                 <div class="body text-gray space1">Betroet af</div>
                 <div class="flex">
                     <img src="images/logos/deas.png" alt="Deas" class="client-logo">
-                    <img src="images/logos/nybolig.png" alt="Nybolig" class="client-logo">
+                    <img src="images/logos/adnami.png" alt="Nybolig" class="client-logo">
                     <img src="images/logos/soho.png" alt="SOHO" class="client-logo">
                     <img src="images/logos/adnami.png" alt="Adnami" class="client-logo">
                 </div>
@@ -385,7 +387,7 @@ document.body.classList.add('maintenance-mode');
             <div class="services-carousel">
                 <div class="services-track" id="servicesTrack">
                     <a href="/pages/services/rengøring.html" class="service-card">
-                        <img src="/images/service/cleaning.jpg" alt="Professionel Rengøring" width="640" height="640">
+                        <img src="/images/service/cleaning.jpg" alt="Erhvervsrengøring" width="640" height="640">
                         <h3>Erhvervsrengøring</h3>
                         <p>Kontorer, skoler, restauranter og eventlokaler</p>
                     </a>
@@ -405,7 +407,7 @@ document.body.classList.add('maintenance-mode');
                         <p>Vedligeholdelse af trapper, opgange og elevatorer</p>
                     </a>
                     <a href="/pages/services/picoline.html" class="service-card">
-                        <img src="/images/service/picoline.jpg" alt="Piccoline Opgaver" width="640" height="640">
+                        <img src="/images/service/picoline.jpg" alt="Piccoline Ordning" width="640" height="640">
                         <h3>Piccoline Ordning</h3>
                         <p>Mindre administrative opgaver og specialopgaver</p>
                     </a>
@@ -468,9 +470,9 @@ document.body.classList.add('maintenance-mode');
                     </div>
                     <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte"</blockquote>
                     <div class="flex">
-                        <img class="author-image" src="/images/people/cecilie.jpeg" alt="Handyman Services" width="640" height="640">
+                        <img class="author-image" src="/images/people/.jpeg" alt="Handyman Services" width="640" height="640">
                         <div class="author-info">
-                            <strong>Cecilie Duedahl Nielsen</strong>
+                            <strong></strong>
                             <span>Office Manager, SOHO</span>
                         </div>
                     </div>
