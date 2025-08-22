@@ -101,7 +101,7 @@
 
 .service-title {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     white-space: nowrap;
     transition: transform 0.4s ease;
@@ -279,72 +279,6 @@
 .service-column.expanded .service-actions {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Features grid */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.feature-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-}
-
-.feature-card h3,
-.feature-card p{
-    margin: unset;
-    align-content: center;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: var(--charcoal);
-}
-
-/* Process steps */
-.process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.process-step {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-
-.process-step:hover {
-    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.15);
-}
-
-.step-number {
-    width: 50px;
-    height: 50px;
-    background: var(--charcoal);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 auto 1rem;
 }
 
 /* Responsive Design */
@@ -637,11 +571,63 @@
     </div>
 </section>
 
+<!-- Service Selection Section -->
+<section class="section">
+   <div class="container">
+        <div class="text-center bot-space2">
+            <div class="subtitle text-primary">BYG DIN LØSNING</div>
+        </div>
+        <div class="flex flex-2" style="align-items: center; gap: 3rem;">
+           <!-- Individual Services -->
+           <div class="p-2">
+               <h2 class="text-charcoal">Vælg Én eller Flere Services</h2>
+               <p class="body text-gray bot-space">
+                   Start med de services I har mest brug for lige nu. Jo flere services I vælger, jo mere værdi kan vi skabe for jer gennem koordinerede processer og bedre priser.
+               </p>
+               
+               <ul class="feature-list list-success">
+                   <li><i class="fas fa-check"></i> Fleksibel opstart med enkelte services</li>
+                   <li><i class="fas fa-check"></i> Gradvis udvidelse efter behov</li>
+                   <li><i class="fas fa-check"></i> Bundel-rabatter ved flere services</li>
+                   <li><i class="fas fa-check"></i> Mere streamlined jo flere I vælger</li>
+               </ul>
+           </div>
+           
+           <!-- Complete Package -->
+           <div class="card p-2 border-left-charcoal ">
+               <div class="badge text-charcoal">MEST VÆRDI</div>
+               <h2 class="text-charcoal">Komplet Facility Service</h2>
+               <p class="body text-gray bot-space">
+                   Få alle services samlet i én smidig pakke. Maksimal værdi gennem koordineret drift, fælles processer og betydelige besparelser.
+               </p>
+               
+               <div class="stats-showcase" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0;">
+                   <div class="stat-item" style="text-align: center; padding: 1rem;">
+                       <div class="stat-number text-success" style="font-size: 1.8rem; font-weight: 600;">25%</div>
+                       <div class="stat-label" style="font-size: 0.8rem; color: var(--charcoal);">Besparelse</div>
+                   </div>
+                   <div class="stat-item" style="text-align: center; padding: 1rem;">
+                       <div class="stat-number text-success" style="font-size: 1.8rem; font-weight: 600;">60%</div>
+                       <div class="stat-label" style="font-size: 0.8rem; color: var(--charcoal);">Mindre Admin</div>
+                   </div>
+               </div>
+               
+               <div class="flex" style="gap: 1rem;">
+                   <a href="/pages/services/facility.html" class="btn primary medium text-white">
+                       <i class="fas fa-layer-group"></i> Se Komplet Pakke
+                   </a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+
 <!-- Why Choose Us Section -->
-<section class="section bg-gradient-white">
+<section class="section">
     <div class="container">
         <div class="text-center bot-space">
-            <div class="subtitle text-success">VORES FORDELE</div>
+            <div class="subtitle text-primary">VORES FORDELE</div>
             <h2 class="text-charcoal">Hvorfor Vælge DFMG?</h2>
             <p class="body text-gray">Vi leverer ikke bare services - vi skaber værdi for jeres virksomhed gennem kvalitet, innovation og dedikeret service</p>
         </div>
@@ -650,23 +636,22 @@
             <div class="badge text-charcoal">Driften</div>
         </div>
         
-        <div class="features-grid bot-space2">
-            <div class="feature-card">
-            <div class="flex" style="justify-content: center;">
-                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+        <div class="flex flex-3 bot-space2">
+            <div class="card p-1">
+                <div class="flex" style="justify-content: center;">
+                    <i class="fas fa-award"></i>
                     <h3 class="text-charcoal">Høj Kvalitet</h3>
                 </div>
                 <p class="text-gray">Certificerede medarbejdere og strenge kvalitetskontroller sikrer konsistent høj standard</p>
             </div>
-            <div class="feature-card">
+            <div class="card p-1 text-center">
                 <h4 class="text-charcoal">Bæredygtighed</h4>
                 <p class="text-gray">Miljøvenlige produkter og processer der beskytter både miljø og medarbejderes sundhed</p>
             </div>
-            <div class="feature-card">
-            <div class="flex" style="justify-content: center;">
-                <h3 class="text-charcoal">24/7 Service</h3>
-                <div class="feature-icon"><i class="fas fa-clock"></i></div>
-
+            <div class="card p-1">
+                <div class="flex" style="justify-content: center;">
+                    <h3 class="text-charcoal">24/7 Service</h3>
+                    <i class="fas fa-clock"></i>
                 </div>
                 <p class="text-gray">Akut service og beredskab når I har brug for det - hele døgnet, året rundt</p>
             </div>
@@ -676,59 +661,58 @@
             <div class="badge text-charcoal">Systemet</div>
         </div>
         
-        <div class="features-grid">
-            <div class="feature-card">
-            <div class="flex" style="justify-content: center;">
-                <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3 class="text-charcoal">Digital Platform</h3>
-                </div>
-                <p class="text-gray">Moderne teknologi giver jer fuld transparens og kontrol med alle services</p>
-            </div>
-            <div class="feature-card">
-                <h4 class="text-charcoal">?</h4>
-            </div>
-            <div class="feature-card">
+        <div class="flex flex-3">
+            <div class="card p-1">
                 <div class="flex" style="justify-content: center;">
-                    
+                    <i class="fas fa-mobile-alt"></i>
                     <h3 class="text-charcoal">Digital Platform</h3>
-                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
                 </div>
                 <p class="text-gray">Moderne teknologi giver jer fuld transparens og kontrol med alle services</p>
+            </div>
+            <div class="card p-1 text-center">
+                <h4 class="text-charcoal">Fleksibilitet</h4>
+                <p class="text-gray">Skræddersyede løsninger der tilpasses jeres specifikke behov og krav</p>
+            </div>
+            <div class="card p-1">
+                <div class="flex" style="justify-content: center;">
+                    <h3 class="text-charcoal">Erfaring</h3>
+                    <i class="fas fa-users"></i>
                 </div>
+                <p class="text-gray">Års erfaring med facilities management og tilfredse kunder i hele Danmark</p>
             </div>
         </div>
     </div>
-</section>                
+</section>               
 
 <!-- Process Section -->
 <section class="section">
     <div class="container">
         <div class="text-center bot-space2">
-            <div class="subtitle text-success">SÅDAN ARBEJDER VI</div>
+            <div class="subtitle text-primary">SÅDAN ARBEJDER VI</div>
             <h2 class="text-charcoal">Fra Første Kontakt til Løbende Samarbejde</h2>
             <p class="body text-gray">En struktureret tilgang der sikrer optimal service fra dag ét</p>
         </div>
         
-        <div class="process-steps">
-            <div class="process-step">
+        <div class="flex flex-4">
+            <div class="card p-2 text-center">
                 <div class="step-number">1</div>
                 <h4 class="text-charcoal">Behovsanalyse</h4>
                 <p class="text-gray">Vi analyserer jeres specifikke behov og udarbejder en skræddersyet løsning</p>
             </div>
             
-            <div class="process-step">
+            <div class="card p-2 text-center">
                 <div class="step-number">2</div>
                 <h4 class="text-charcoal">Tilbud & Planlægning</h4>
                 <p class="text-gray">Transparent prissætning og detaljeret plan for implementering</p>
             </div>
             
-            <div class="process-step">
+            <div class="card p-2 text-center">
                 <div class="step-number">3</div>
                 <h4 class="text-charcoal">Implementering</h4>
                 <p class="text-gray">Smidig opstart med dedikerede teams og grundig introduktion</p>
             </div>
             
-            <div class="process-step">
+            <div class="card p-2 text-center">
                 <div class="step-number">4</div>
                 <h4 class="text-charcoal">Løbende Service</h4>
                 <p class="text-gray">Kontinuerlig levering med kvalitetskontrol og optimering</p>
@@ -742,7 +726,7 @@
         <h2>Klar til at Optimere Jeres Facilities?</h2>
         <p class="body text-white bot-space2" style="max-width: 600px; margin: 0 auto 3rem; opacity: 0.9;">Lad os vise jer hvordan vores services kan forbedre jeres arbejdsmiljø og reducere omkostninger.</p>
         <div class="flex">
-            <a href="#" class="btn white medium"><i class="fas fa-calculator"></i>Beregn Pris Online</a>
+            <a href="#" class="btn white medium"><i class="fas fa-calculator"></i>Beregn Pris</a>
             <a href="#" class="btn white medium"><i class="fas fa-phone"></i>Kontakt Os</a>
         </div>
     </div>
