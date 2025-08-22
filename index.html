@@ -259,6 +259,38 @@
 
 </style>
 <body>
+<div id="maintenance-overlay" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 99999999;
+">
+    <h2 style="color: #344767; margin-bottom: 1rem;">Hjemmeside Under Udvikling</h2>
+    <p style="color: #666; text-align: center;">Vi arbejder på at forbedre oplevelsen<br>Vi vender tilbage snarest.</p>
+</div>
+<style>
+/* Prevent scrolling and interaction during maintenance */
+body.maintenance-mode {
+    overflow: hidden;
+}
+
+body.maintenance-mode > *:not(#maintenance-overlay) {
+    pointer-events: none;
+}
+</style>
+<script>
+// Apply maintenance mode
+document.body.classList.add('maintenance-mode');
+</script>
     <!-- Header Component -->
     <div id="header"></div>
 
