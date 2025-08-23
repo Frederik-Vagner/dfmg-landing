@@ -46,6 +46,11 @@
         }
 
         .service-card {
+            width: 570px;
+            flex-shrink: 0;
+        }
+
+        .service-card {
             background: white;
             border-radius: 24px;
             overflow: hidden;
@@ -100,20 +105,6 @@
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-        }
-
-        .service-badge {
-            display: inline-block;
-            background: var(--charcoal);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            width: fit-content;
         }
 
         .service-features {
@@ -550,6 +541,43 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--charcoal);
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .carousel-btn:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+        .services-carousel { 
+            overflow: hidden; 
+        }
+        .services-track { 
+            display: flex; 
+            transition: transform var(--transition-normal); 
+            width: max-content;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
@@ -570,110 +598,137 @@
                 <h2 class="title">Erhvervsrengøring for Alle Brancher</h2>
                 <p class="body">Vi leverer skræddersyede rengøringsløsninger til virksomheder i hele Danmark med fokus på kvalitet, pålidelighed og bæredygtighed</p>
             </div>
-            
-            <div class="services-grid">
-                <!-- Restauranter & Caféer Card -->
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <div>Kontor rengøring billede</div>
-                        <div class="photo-dots">
-                            <div class="photo-dot active"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-badge">HACCP Certificeret</div>
-                        <h3>Restauranter & Caféer</h3>
-                        <p>Specialiseret fødevaresikker rengøring af køkkener, spiseområder og sanitære faciliteter i overensstemmelse med HACCP.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> HACCP compliance</li>
-                            <li><i class="fas fa-check"></i> Kommercielle køkkener</li>
-                            <li><i class="fas fa-check"></i> Fedtfjerning og dybderens</li>
-                            <li><i class="fas fa-check"></i> Ventilationsrensning</li>
-                            <li><i class="fas fa-check"></i> Fødevaresikkerhed</li>
-                        </ul>
-                        <div class="service-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">3</span>
-                                <span class="stat-label">Aktive Restauranter</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 100%;">100%</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">HACCP Compliance</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 100%; background: #22c55e;">100%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Ejendomsrengøring Card -->
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <div>Ejendoms rengøring billede</div>
-                        <div class="photo-dots">
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot"></div>
-                            <div class="photo-dot active"></div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-badge">Omfattende</div>
-                        <h3>Ejendomsrengøring</h3>
-                        <p>Omfattende rengøring af fællesarealer, trappeopgange, elevatorer og udendørs områder for ejendomsselskaber.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Fællesarealer og opgange</li>
-                            <li><i class="fas fa-check"></i> Elevatorer og tekniske rum</li>
-                            <li><i class="fas fa-check"></i> Udendørs områder</li>
-                            <li><i class="fas fa-check"></i> Vinduespudsning</li>
-                            <li><i class="fas fa-check"></i> Maintenance support</li>
-                        </ul>
-                        <div class="service-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">5</span>
-                                <span class="stat-label">Ejendomme Serviceret</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 95%;">95%</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Kvalitetssikring</span>
-                                <div class="mini-chart">
-                                    <div class="chart-bar" style="width: 100%;">100%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="carousel-controls bot-space2">
+                <a class="carousel-btn" onclick="previousServices()">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a class="carousel-btn" onclick="nextServices()">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
             </div>
             
-            <!-- Service Statistics Summary -->
-            <div class="card bg-gradient-white p-3 text-center">
-                <div class="flex">
-                    <div>
-                        <div class="stat-number text-primary">100%</div>
-                        <div class="subtitle">Kvalitetssikring</div>
+            <div class="services-carousel">
+                <div class="services-track" id="servicesTrack">
+                    <!-- Restauranter & Caféer Card -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <div>Kontor rengøring billede</div>
+                            <div class="photo-dots">
+                                <div class="photo-dot active"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 style="margin: unset;">Restauranter & Caféer</h3>
+                            <p>Specialiseret fødevaresikker rengøring af køkkener, spiseområder og sanitære faciliteter i overensstemmelse med HACCP.</p>
+                            <ul class="feature-list list-success">
+                                <li><i class="fas fa-check"></i> HACCP compliance</li>
+                                <li><i class="fas fa-check"></i> Kommercielle køkkener</li>
+                                <li><i class="fas fa-check"></i> Fedtfjerning og dybderens</li>
+                                <li><i class="fas fa-check"></i> Ventilationsrensning</li>
+                                <li><i class="fas fa-check"></i> Fødevaresikkerhed</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <div class="stat-number text-primary">Fast</div>
-                        <div class="subtitle">Team</div>
+                    
+                    <!-- Ejendomsrengøring Card -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <div>Ejendoms rengøring billede</div>
+                            <div class="photo-dots">
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot active"></div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 style="margin: unset;">Ejendomsrengøring</h3>
+                            <p>Omfattende rengøring af fællesarealer, trappeopgange, elevatorer og udendørs områder for ejendomsselskaber.</p>
+                            <ul class="feature-list list-success">
+                                <li><i class="fas fa-check"></i> Fællesarealer og opgange</li>
+                                <li><i class="fas fa-check"></i> Elevatorer og tekniske rum</li>
+                                <li><i class="fas fa-check"></i> Udendørs områder</li>
+                                <li><i class="fas fa-check"></i> Vinduespudsning</li>
+                                <li><i class="fas fa-check"></i> Maintenance support</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <div class="stat-number text-primary">24/7</div>
-                        <div class="subtitle">Support</div>
+
+                    <!-- Kontorfællesskaber Card -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <div>Kontorfællesskab rengøring billede</div>
+                            <div class="photo-dots">
+                                <div class="photo-dot active"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 style="margin: unset;">Kontorfællesskaber</h3>
+                            <p>Specialiseret rengøring af shared workspaces, coworking områder og fleksible kontorløsninger med fokus på hygiejne og professionalisme.</p>
+                            <ul class="feature-list list-success">
+                                <li><i class="fas fa-check"></i> Fælles arbejdsområder</li>
+                                <li><i class="fas fa-check"></i> Mødelokaler og phone booths</li>
+                                <li><i class="fas fa-check"></i> Køkken og pause områder</li>
+                                <li><i class="fas fa-check"></i> Reception og lounge</li>
+                                <li><i class="fas fa-check"></i> Fleksible tidsplaner</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <div class="stat-number text-primary">Ingen</div>
-                        <div class="subtitle">Overraskelser</div>
+
+                    <!-- Eventlokationer Card -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <div>Event lokale rengøring billede</div>
+                            <div class="photo-dots">
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot active"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 style="margin: unset;">Eventlokationer</h3>
+                            <p>Hurtig og effektiv før/efter event rengøring af konference- og festlokaler, så jeres venue altid er klar til næste arrangement.</p>
+                            <ul class="feature-list list-success">
+                                <li><i class="fas fa-check"></i> Før/efter event service</li>
+                                <li><i class="fas fa-check"></i> Konference og mødelokaler</li>
+                                <li><i class="fas fa-check"></i> Festlokaler og ballrooms</li>
+                                <li><i class="fas fa-check"></i> Akut rengøring samme dag</li>
+                                <li><i class="fas fa-check"></i> Fleksible starttider</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Skoler Card -->
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <div>Skole rengøring billede</div>
+                            <div class="photo-dots">
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot active"></div>
+                                <div class="photo-dot"></div>
+                                <div class="photo-dot"></div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 style="margin: unset;">Skoler & Institutioner</h3>
+                            <p>Børnevenlig og sikker rengøring af undervisningslokaler, kantiner og fællesområder med miljøvenlige produkter.</p>
+                            <ul class="feature-list list-success">
+                                <li><i class="fas fa-check"></i> Klasselokaler og auditorier</li>
+                                <li><i class="fas fa-check"></i> Kantiner og køkkener</li>
+                                <li><i class="fas fa-check"></i> Sanitære faciliteter</li>
+                                <li><i class="fas fa-check"></i> Miljøvenlige produkter</li>
+                                <li><i class="fas fa-check"></i> Efter-skoletid service</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -683,30 +738,61 @@
     <!-- Cleaning Types -->
     <section class="section bg-gradient-white">
         <div class="container">
-            <div class="flex">
-                <div class="type-card">
-                    <div class="type-badge">Daglig Service</div>
-                    <h3>Løbende Rengøring</h3>
-                    <p>Regelmæssig rengøring der holder jeres faciliteter i topstand hver dag. Perfekt til kontorer og virksomheder der har brug for konsistent vedligeholdelse.</p>
-                    <ul class="features-list">
+            <div class="grid-2x3-offset">
+                <div class="card p-2 border-top-charcoal">
+                    <div class="type-badge">Løbende Service</div>
+                    <h3>Let Rengøring</h3>
+                    <p>Regelmæssig rengøring der holder jeres faciliteter i topstand hver dag. Perfekt til kontorer og virksomheder med behov for konsistent vedligeholdelse.</p>
+                    <ul class="feature-list list-success">
                         <li><i class="fas fa-check"></i> Daglig, ugentlig eller månedlig service</li>
                         <li><i class="fas fa-check"></i> Fleksible tidsplaner</li>
                         <li><i class="fas fa-check"></i> Faste dedikerede teams</li>
                         <li><i class="fas fa-check"></i> Kvalitetskontrol og opfølgning</li>
-                        <li><i class="fas fa-check"></i> Miljøvenlige produkter</li>
                     </ul>
                 </div>
                 
-                <div class="type-card">
-                    <div class="type-badge">Intensiv Service</div>
-                    <h3>Grundig Rengøring / Deep Cleaning</h3>
-                    <p>Omfattende dybderengøring der når alle hjørner og kroge. Ideelt til årlig hovedrengøring, flytterengøring eller efter renoveringer.</p>
-                    <ul class="features-list">
+                <div class="card p-2 border-top-charcoal">
+                    <div class="type-badge">Løbende Service</div>
+                    <h3>Grunding Rengøring</h3>
+                    <p>Mere omfattende vedligeholdelse, der når alle hjørner og kroge. Ideelt til virksomheder der ønsker ekstra grundighed i den løbende rengøring.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Daglig, ugentlig eller månedlig service</li>
+                        <li><i class="fas fa-check"></i> Fleksible tidsplaner</li>
+                        <li><i class="fas fa-check"></i> Faste dedikerede teams</li>
+                        <li><i class="fas fa-check"></i> Kvalitetskontrol og opfølgning</li>
+                    </ul>
+                </div>
+                <div class="card p-2 border-top-charcoal">
+                    <div class="type-badge">Intensiv service</div>
+                    <h3>Dybdegående Rengøring</h3>
+                    <p>Omfattende hovedrengøring fra gulv til loft. Perfekt til årlig hovedrengøring, flytterengøring eller efter renoveringer.</p>
+                    <ul class="feature-list list-success">
                         <li><i class="fas fa-check"></i> Komplet dybderengøring</li>
                         <li><i class="fas fa-check"></i> Specialudstyr og teknikker</li>
-                        <li><i class="fas fa-check"></i> Vinduespolering inkluderet</li>
                         <li><i class="fas fa-check"></i> Gulvbehandling og voksning</li>
                         <li><i class="fas fa-check"></i> Desinfektion af alle flader</li>
+                    </ul>
+                </div>
+                <div class="card p-2 border-top-charcoal">
+                    <div class="type-badge">Special service</div>
+                    <h3>Ventilationsrengøring</h3>
+                    <p>Effektiv rens af ventilationssystemer for bedre indeklima og forebyggelse af skimmel og bakterier.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Professionel rens af ventilationskanaler</li>
+                        <li><i class="fas fa-check"></i> Forbedret luftkvalitet</li>
+                        <li><i class="fas fa-check"></i> Forebygger skimmel og bakterier</li>
+                        <li><i class="fas fa-check"></i> Udføres med specialudstyr</li>
+                    </ul>
+                </div>
+                <div class="card p-2 border-top-charcoal">
+                    <div class="type-badge">Special service</div>
+                    <h3>Flytterengøring</h3>
+                    <p>Grundig rengøring af hele boligen, så den er klar til ind- eller udflytning.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Rengøring af alle rum og overflader</li>
+                        <li><i class="fas fa-check"></i> Grundig køkken- og badeværelsesrengøring</li>
+                        <li><i class="fas fa-check"></i> Vinduespolering inkluderet</li>
+                        <li><i class="fas fa-check"></i> Afsluttende kvalitetskontrol</li>
                     </ul>
                 </div>
             </div>
@@ -716,6 +802,11 @@
     <!-- Stability Section -->
     <section class="section" style="min-height: 100vh; display: flex; align-items: center;">
         <div class="container">
+            <div class="text-center">
+            <div class="subtitle text-primary">VORES VÆRDIER</div>
+                <div class="title text-charcoal">Hvordan vi sikre succesfulde relationer og resultater</div>
+                <div class="body text-gray bot-space2">Høj kvalitet er forventet, men Stabilitet, gennemsigtighed og fleksibilitet er nøglerne</div>
+            </div>
             <div class="stability-content">
                 <div>
                     <div class="subtitle text-primary text-center bot-space2">STABILITET</div>
@@ -1037,6 +1128,17 @@
                 </div>
             </div>
         </div>
+    </section>ß
+
+    <section class="section" style="padding-bottom: unset;">
+        <div class="cta-center">
+            <h2>Klar til at Optimere Jeres Facilities?</h2>
+            <p class="body text-white bot-space2" style="max-width: 600px; margin: 0 auto 3rem; opacity: 0.9;">Lad os vise jer hvordan vores services kan forbedre jeres arbejdsmiljø og reducere omkostninger.</p>
+            <div class="flex">
+                <a href="#" class="btn white medium"><i class="fas fa-calculator"></i>Beregn Pris</a>
+                <a href="#" class="btn white medium"><i class="fas fa-phone"></i>Kontakt Os</a>
+            </div>
+        </div>
     </section>
 
     <!-- Footer Component -->
@@ -1151,6 +1253,33 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateTableContent();
         });
+    </script>
+        <script>
+        let currentIndex = 0;
+        const totalCards = 5; // Plan for 6 total cards (add 4 more service cards)
+        const cardsVisible = 2; // Show 2 cards at a time
+        const maxIndex = totalCards - cardsVisible;
+
+        function updateCarousel() {
+            const track = document.getElementById('servicesTrack');
+            const cardWidth = 570; // Fixed card width to fit container
+            const gap = 20;
+            const moveDistance = currentIndex * (cardWidth + gap); // Move by 1 card at a time
+            track.style.transform = `translateX(-${moveDistance}px)`;
+        }
+        function nextServices() {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        }
+
+        function previousServices() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        }
     </script>
 </body>
 </html>
