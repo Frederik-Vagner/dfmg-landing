@@ -358,39 +358,155 @@
 
         <!-- FAQ Section -->
         <section class="section">
-            <div class="container-narrow">
+            <div class="container">
                 <div class="text-center">
                     <h3 class="text-charcoal">Ofte stillede spørgsmål</h3>
                 </div>
 
-                <div class="faq-accordion">
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">
-                            <h4>Hvilke områder dækker I?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                <div class="faq-accordion" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <!-- Kolonne 1 -->
+                    <div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Hvilke områder dækker I?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vores nuværende kunder ligger hovedsageligt i København, men vi dækker hele Storkøbenhavn og tilstødende områder.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Vores nuværende kunder ligger hovedsageligt i København, men vi dækker hele Storkøbenhavn og tilstødende områder.</p>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Har I forsikring?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vi har selvfølgelig alle lovpligtige forsikringer. Dette inkluderer ansvarsforsikring på op til 10 millioner kr. samt medarbejderforsikring.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Kan man starte samarbejde uden fysisk møde?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Det er desværre ikke muligt. Forventningsafstemning er alt, hvilket er grunden til vi er nødsaget til at se jeres lokation for at komme frem til alle de vigtige detaljer, som gør vi får et langt og stærkt samarbejde.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Hvor hurtigt kan I starte?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vi kan teknisk set starte allerede i morgen, men vi foretrækker minimum 14 dages forberedelsestid. Dette giver os mulighed for at planlægge logistikken optimalt og gennemgå jeres lokation grundigt med vores medarbejdere.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Hvilke typer virksomheder betjener I?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vi servicerer alle typer erhvervsvirksomheder. Vores nuværende kundeportefølje spænder bredt - fra kontorfællesskaber og eventlokationer til nyistandsatte ejendomme og skoler.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Hvor store lokaler kan I håndtere?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Størrelse er intet problem, så længe vi har en realistisk forberedelsesperiode. Med et smil på læben vil vi påstå, at vi godt kunne varetage Københavns Lufthavn - hvis vi fik 3 måneders forberedelse!</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Kan I håndtere specialrengøring?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Specialrengøringer efter renovation, flytning eller events er noget vi allerede varetager for vores nuværende kunder, så det kan vi sagtens.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">
-                            <h4>Har I forsikring?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                    <!-- Kolonne 2 -->
+                    <div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Arbejder I i weekender og helligdage?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vi arbejder alle dage mellem kl. 04:00-22:00. Vi forsøger at undgå decideret natarbejde, da det ikke er sundt på den lange bane, men ellers er vi fleksible med arbejdstider.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Vi har selvfølgelig alle lovpligtige forsikringer. Dette inkluderer ansvarsforsikring på op til 10 millioner kr. samt medarbejderforsikring.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">
-                            <h4>Kan man starte samarbejde uden fysisk møde?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Hvad er minimum kontraktperiode?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Det afhænger af kontraktens størrelse. Som standard starter vi med løbende + 1 måned, indtil vi har lært hinanden at kende. Derefter foretrækker vi 3 måneder + løbende opsigelse.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Det er desværre ikke muligt. Forventningsafstemning er alt, hvilket er grunden til vi er nødsaget til at se jeres lokation for at komme frem til alle de vigtige detaljer, som gør vi får et langt og stærkt samarbejde.</p>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Har medarbejderne politiattest?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Alle vores medarbejdere har en ren straffeattest. Hvis ønsket kan dette også dokumenteres gennem vores platform for fuld transparens.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Hvem har adgang til vores lokaler?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Kun de medarbejdere som har deres faste gang hos jer får fysisk adgang, samt adgang til den information de har brug for at kunne udføre opgaven på bedst mulig vis.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Skal vi stille rengøringsmidler til rådighed?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vi står for alt udstyr og produkter. Dog har vi brug for, at I stiller et mindre antal kvadratmeter til rådighed til opbevaring af materiel.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Bruger I miljøvenlige produkter?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vi prioriterer miljøvenlige produkter, og de fleste af vores produkter er svanemærkede. Bæredygtighed er en vigtig del af vores værdier.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <h4>Hvem er vores faste kontaktperson?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Helt fra start vil I have kontakt med en fast kontaktperson, som med stor sandsynlighed vil være Frederik Vagner Pedersen, der sikrer kontinuitet i kommunikationen.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
