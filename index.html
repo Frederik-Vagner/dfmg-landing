@@ -38,36 +38,25 @@
 /* ABOUT */
 .photos-grid {
     display: grid;
-    grid-template-columns: repeat(8, 120px);
-    grid-template-rows: repeat(2, 120px);
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
     gap: 15px;
-    max-width: var(--container-width-normal);
-    margin-left: auto;
-    margin-right: auto;
     justify-content: center;
 }
 
 .photo {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: var(--radius-normal);
     background: #ddd;
 }
 
-/* Top row - photos 1-9 */
-/* Top row - 8 photos */
-.photo:nth-child(1) { grid-column: 1; grid-row: 1; transform: translateY(130px); }
-.photo:nth-child(2) { grid-column: 2; grid-row: 1; transform: translateY(40px); }
-.photo:nth-child(3) { grid-column: 3; grid-row: 1; transform: translateY(100px); }
-.photo:nth-child(4) { grid-column: 4; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(5) { grid-column: 5; grid-row: 1; transform: translateY(70px); }
-.photo:nth-child(6) { grid-column: 6; grid-row: 1; transform: translateY(100px); }
-.photo:nth-child(7) { grid-column: 7; grid-row: 1; transform: translateY(40px); }
-.photo:nth-child(8) { grid-column: 8; grid-row: 1; transform: translateY(130px); }
-
-/* Bottom row - 2 photos in middle */
-.photo:nth-child(9) { grid-column: 2; grid-row: 2; transform: translateY(40px); }
-.photo:nth-child(10) { grid-column: 7; grid-row: 2; transform: translateY(40px); }
+.photos-grid-2x3 .photo:nth-child(1) { grid-column: 1; grid-row: 1; }
+.photos-grid-2x3 .photo:nth-child(2) { grid-column: 2; grid-row: 1; }
+.photos-grid-2x3 .photo:nth-child(3) { grid-column: 1; grid-row: 2; }
+.photos-grid-2x3 .photo:nth-child(4) { grid-column: 2; grid-row: 2; }
+.photos-grid-2x3 .photo:nth-child(5) { grid-column: 1; grid-row: 3; }
+.photos-grid-2x3 .photo:nth-child(6) { grid-column: 2; grid-row: 3; }
 
 
 .photo img {
@@ -259,7 +248,7 @@
 
 </style>
 <body>
-<!-- Font  -->
+<!-- Font  
 <div id="maintenance-overlay" style="
     position: fixed;
     top: 0;
@@ -323,46 +312,38 @@ document.body.classList.add('maintenance-mode');
 
     <section class="section">
         <div class="container">
-            <div class="text-center">
-                <div class="photos-grid">
-                    <div class="photo">
-                        <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/diya2.jpg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/frederik.jpeg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/diya.png" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/anders.jpeg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/raman2.jpg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/frederikke.jpeg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/raman2.jpg" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <div class="photo">
-                        <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
-                    </div>
-                </div>
-
-                <div style="max-width: 600px; margin: auto;">
-                    <div class="subtitle text-primary">OM DFMG</div>
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <div class="subtitle text-primary">OM DFMG</div>
+            </div>
+            
+            <div class="flex flex-2">
+                <div class="text-center">
                     <div class="title text-charcoal">Menneskene bag jeres facility service</div>
                     <div class="body text-gray bot-space">Startet for at skabe et stærkere fællesskab og ruske op i en traditionel branche domineret af store koncerner og forældet processor. Vi kombinerer proffesionel ekspertise med personlig service for at levere pålidelige facility management løsninger til danske virksomheder.</div>
                     <div class="body text-gray bot-space">Vores team består af dedikerede professionals, der forstår, at hver virksomhed har unikke behov. Det er derfor vi prioriterer personlige relationer og skræddersyede løsninger frem for ensartede standardpakker.</div>
                     <a href="#" class="btn primary medium">Læs mere om os</a>
+                </div>
+                <div class="photos-column">
+                    <div class="photos-grid">
+                        <div class="photo">
+                            <img src="/images/people/diya.png" alt="Handyman Services" width="640" height="640">
+                        </div>
+                        <div class="photo">
+                            <img src="/images/people/frederik.webp" alt="Handyman Services" width="640" height="640">
+                        </div>
+                        <div class="photo">
+                            <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
+                        </div>
+                        <div class="photo">
+                            <img src="/images/people/vishwas3.jpg" alt="Handyman Services" width="640" height="640">
+                        </div>
+                        <div class="photo">
+                            <img src="/images/people/kim1.png" alt="Handyman Services" width="640" height="640">
+                        </div>
+                        <div class="photo">
+                            <img src="/images/people/pabitra2.webp" alt="Handyman Services" width="640" height="640" style="object-position: bottom;">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -488,15 +469,20 @@ document.body.classList.add('maintenance-mode');
         <div class="container">
             <div class="cta-box">
                 <div class="cta-left">
-                    <h2 class="text-white">Få En Uforpligtet Facility Besparelsesanalyse</h2>
-                    <p>Arbejd sammen med DFMG som jeres facility service partner. Få en gratis gennemgang af jeres nuværende setup.</p>
+                    <h2 class="text-white">Én samlet partner til jeres faciliteter</h2>
+                    <p>Fra rengøring til ejendomsservice – vi skræddersyr en løsning, der passer til jeres behov, så I kan fokusere på jeres kerneforretning.</p>
+                    <p class="cta-proof">Allerede valgt af virksomheder som <strong>Nybolig, DEAS</strong> og <strong>Det Kgl. Haveselskab</strong>.</p>
                     <div class="flex">
-                        <a href="/pages/kontakt.html" class="btn success medium"><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Kontakt Os</a>
-                        <a href="/pages/prisberegner.html" class="btn white medium"><i class="fas fa-calculator" style="margin-right: 0.5rem;"></i>Prisberegner</a>
+                        <a href="/pages/kontakt.html" class="btn success medium">
+                            <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Få et uforpligtende tilbud
+                        </a>
+                        <a href="/pages/prisberegner.html" class="btn white medium">
+                            <i class="fas fa-calculator" style="margin-right: 0.5rem;"></i>Beregn pris på jeres løsning
+                        </a>
                     </div>
                 </div>
                 <div class="cta-right">
-                    <!-- Empty space for future image -->
+                    <!-- Her kan du evt. indsætte billede eller kundelogos -->
                 </div>
             </div>
         </div>
