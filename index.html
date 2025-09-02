@@ -248,7 +248,6 @@
 
 </style>
 <body>
-<!-- Font  -->
 <div id="maintenance-overlay" style="
     position: fixed;
     top: 0;
@@ -265,21 +264,53 @@
     z-index: 99999999;
 ">
     <h2 style="color: #344767; margin-bottom: 1rem;">Hjemmeside Under Udvikling</h2>
-    <p style="color: #666; text-align: center;">Vi arbejder på at forbedre oplevelsen<br>Vi vender tilbage snarest.</p>
+    <p style="color: #666; text-align: center; margin-bottom: 2rem;">Indtast adgangskode for at fortsætte</p>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+        <input type="password" id="access-password" placeholder="Adgangskode" style="
+            padding: 0.75rem 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            width: 250px;
+            text-align: center;
+        ">
+        <button onclick="checkPassword()" style="
+            padding: 0.75rem 2rem;
+            background: #344767;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+        ">Fortsæt</button>
+        <p id="error-message" style="color: #e74c3c; font-size: 0.9rem; display: none;">Forkert adgangskode</p>
+    </div>
 </div>
-<style>
-/* Prevent scrolling and interaction during maintenance */
-body.maintenance-mode {
-    overflow: hidden;
-}
-
-body.maintenance-mode > *:not(#maintenance-overlay) {
-    pointer-events: none;
-}
-</style>
 <script>
 // Apply maintenance mode
 document.body.classList.add('maintenance-mode');
+
+function checkPassword() {
+    const password = document.getElementById('access-password').value;
+    const correctPassword = '2000'; // Change this to your desired password
+    
+    if (password === correctPassword) {
+        document.getElementById('maintenance-overlay').style.display = 'none';
+        document.body.classList.remove('maintenance-mode');
+    } else {
+        document.getElementById('error-message').style.display = 'block';
+        document.getElementById('access-password').value = '';
+    }
+}
+
+// Allow Enter key to submit password
+document.getElementById('access-password').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        checkPassword();
+    }
+});
 </script>
 
 
