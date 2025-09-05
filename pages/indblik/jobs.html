@@ -7,12 +7,12 @@
     <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
     
     <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="../images/logos/logo.png" type="image/png">
     <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
     
     <!-- Performance -->
-    <meta name="theme-color" content="#344767">
+    <meta name="theme-color" content="var(--charcoal)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -21,232 +21,222 @@
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #565656; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    /* Jobs Section */
-    .jobs-section { padding-top: 200px; background: white; }
-    .section-header { text-align: center; margin-bottom: 4rem; }
-    .section-header .subtitle { color: #22c55e; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
-    .section-header h2 { font-size: 3rem; color: #344767; margin-bottom: 1.5rem; font-weight: 300; }
-    .section-header p { font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto; }
+    <link rel="stylesheet" href="../../css/styles.css">
 
-    /* Jobs Grid */
-    .jobs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-    .job-card { background: white; border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; }
-    .job-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-
-    /* Job Card Content */
-    .job-header { padding: 2rem; background: linear-gradient(135deg, #f8fafc, #e2e8f0); }
-    .job-type { display: inline-block; background: #22c55e; color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
-    .job-title { font-size: 1.5rem; color: #344767; margin-bottom: 0.5rem; font-weight: 600; }
-    .job-location { color: #666; font-size: 0.9rem; }
-    .job-content { padding: 2rem; }
-    .job-description { color: #666; margin-bottom: 2rem; }
-    .job-requirements h4 { color: #344767; margin-bottom: 1rem; font-weight: 600; }
-    .job-requirements ul { list-style: none; }
-    .job-requirements li { margin-bottom: 0.5rem; color: #666; font-size: 0.9rem; }
-    .job-requirements li::before { content: '✓'; color: #22c55e; font-weight: bold; margin-right: 0.75rem; }
-    .job-footer { padding: 0 2rem 2rem; text-align: right; }
-
-    /* Button */
-    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #22c55e; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
-    .btn:hover { background: #16a34a; }
-
-    /* Benefits Section */
-    .benefits-section { padding: 6rem 2rem; background: #f8fafc; }
-    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
-    .benefit-card { background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-    .benefit-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
-    .benefit-icon { font-size: 3rem; margin-bottom: 1.5rem; }
-    .benefit-card h4 { font-size: 1.2rem; color: #344767; margin-bottom: 1rem; font-weight: 600; }
-    .benefit-card p { color: #666; font-size: 0.9rem; }
-
-    /* CTA Section */
-    .cta-section { padding: 6rem 2rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; text-align: center; }
-    .cta-content h2 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 600; }
-    .cta-content p { font-size: 1.1rem; margin-bottom: 3rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .cta-buttons .btn { padding: 1rem 2rem; }
-    .btn-white { background: white; color: #22c55e; }
-    .btn-outline { background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3); }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .jobs-grid { grid-template-columns: 1fr; }
-        .section-header h2 { font-size: 2rem; }
-        .cta-content h2 { font-size: 2rem; }
-        .jobs-section, .benefits-section, .cta-section { padding: 4rem 1rem; }
+    <style>
+    /* Job-specific styles that extend the main stylesheet */
+    .jobs-section {
+        padding-top: 150px;
     }
-</style>
+    
+    .job-type {
+        display: inline-block;
+        background: var(--success);
+        color: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-circle);
+        font-size: 0.75rem;
+        font-weight: var(--font-weight-semibold);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    
+    .job-location {
+        color: var(--gray);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .job-requirements ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .job-requirements li {
+        margin-bottom: 0.5rem;
+        color: var(--gray);
+        font-size: 0.9rem;
+    }
+    
+    .job-requirements li::before {
+        content: '✓';
+        color: var(--success);
+        font-weight: bold;
+        margin-right: 0.75rem;
+    }
+    
+    .job-footer {
+        text-align: right;
+        margin-top: 2rem;
+    }
+    
+    .benefit-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+    </style>
+</head>
 <body>
-<!-- Header Component -->
-<div id="header"></div>
+    <!-- Header Component -->
+    <div id="header"></div>
+    
     <!-- Jobs Section -->
-    <section class="jobs-section">
+    <section class="section first jobs-section">
         <div class="container">
-            <div class="section-header">
-                <div class="subtitle">KARRIEREMULIGHEDER</div>
-                <h2>Aktuelle stillinger</h2>
-                <p>Vi søger engagerede medarbejdere der vil være med til at løfte facility management til næste niveau</p>
+            <div class="text-center bot-space2">
+                <div class="subtitle text-success">KARRIEREMULIGHEDER</div>
+                <h2 class="text-charcoal">Aktuelle stillinger</h2>
+                <p class="body text-gray">Vi søger engagerede medarbejdere der vil være med til at løfte facility management til næste niveau</p>
             </div>
             
-            <div class="jobs-grid">
+            <div class="grid-2x3">
                 <!-- Rengøringsassistent (deltid) -->
-                <div class="job-card">
-                    <div class="job-header">
-                        <div class="job-type">Deltid</div>
-                        <h3 class="job-title">Rengøringsassistent</h3>
-                        <div class="job-location">📍 København & omegn</div>
+                <div class="card p-2 bg-gradient-white">
+                    <div class="job-type">Deltid</div>
+                    <h3 class="text-charcoal">Rengøringsassistent</h3>
+                    <div class="job-location">📍 København & omegn</div>
+                    
+                    <p class="body text-gray bot-space">Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.</p>
+                    
+                    <div class="job-requirements">
+                        <h4 class="text-charcoal">Vi forventer:</h4>
+                        <ul>
+                            <li>Interesse for rengøringsarbejde</li>
+                            <li>Ansvarsfuldhed og pålidelighed</li>
+                            <li>Fysisk robusthed</li>
+                            <li>Kørekort og egen transport</li>
+                        </ul>
                     </div>
-                    <div class="job-content">
-                        <p class="job-description">Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.</p>
-                        <div class="job-requirements">
-                            <h4>Vi forventer:</h4>
-                            <ul>
-                                <li>Interesse for rengøringsarbejde</li>
-                                <li>Ansvarsfuldhed og pålidelighed</li>
-                                <li>Fysisk robusthed</li>
-                                <li>Kørekort og egen transport</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsassistent (deltid)" class="btn">
+                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsassistent (deltid)" class="btn success medium">
                             ✉️ Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Rengøringsassistent (fuldtid) -->
-                <div class="job-card">
-                    <div class="job-header">
-                        <div class="job-type">Fuldtid</div>
-                        <h3 class="job-title">Rengøringsassistent</h3>
-                        <div class="job-location">📍 København & omegn</div>
+                <div class="card p-2 bg-gradient-white">
+                    <div class="job-type">Fuldtid</div>
+                    <h3 class="text-charcoal">Rengøringsassistent</h3>
+                    <div class="job-location">📍 København & omegn</div>
+                    
+                    <p class="body text-gray bot-space">Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.</p>
+                    
+                    <div class="job-requirements">
+                        <h4 class="text-charcoal">Vi forventer:</h4>
+                        <ul>
+                            <li>Interesse for rengøringsarbejde</li>
+                            <li>Ansvarsfuldhed og pålidelighed</li>
+                            <li>Fysisk robusthed</li>
+                            <li>Kørekort og egen transport</li>
+                        </ul>
                     </div>
-                    <div class="job-content">
-                        <p class="job-description">Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.</p>
-                        <div class="job-requirements">
-                            <h4>Vi forventer:</h4>
-                            <ul>
-                                <li>Interesse for rengøringsarbejde</li>
-                                <li>Ansvarsfuldhed og pålidelighed</li>
-                                <li>Fysisk robusthed</li>
-                                <li>Kørekort og egen transport</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsassistent (fuldtid)" class="btn">
+                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsassistent (fuldtid)" class="btn success medium">
                             ✉️ Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Rengøringsmedarbejder -->
-                <div class="job-card">
-                    <div class="job-header">
-                        <div class="job-type">Fuldtid</div>
-                        <h3 class="job-title">Rengøringsmedarbejder</h3>
-                        <div class="job-location">📍 København & omegn</div>
+                <div class="card p-2 bg-gradient-white">
+                    <div class="job-type">Fuldtid</div>
+                    <h3 class="text-charcoal">Rengøringsmedarbejder</h3>
+                    <div class="job-location">📍 København & omegn</div>
+                    
+                    <p class="body text-gray bot-space">Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.</p>
+                    
+                    <div class="job-requirements">
+                        <h4 class="text-charcoal">Vi forventer:</h4>
+                        <ul>
+                            <li>Erfaring med Erhvervsrengøring</li>
+                            <li>Selvstændighed og initiativ</li>
+                            <li>Kvalitetsbevidsthed</li>
+                            <li>Kørekort og egen transport</li>
+                        </ul>
                     </div>
-                    <div class="job-content">
-                        <p class="job-description">Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.</p>
-                        <div class="job-requirements">
-                            <h4>Vi forventer:</h4>
-                            <ul>
-                                <li>Erfaring med Erhvervsrengøring</li>
-                                <li>Selvstændighed og initiativ</li>
-                                <li>Kvalitetsbevidsthed</li>
-                                <li>Kørekort og egen transport</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsmedarbejder" class="btn">
+                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsmedarbejder" class="btn success medium">
                             ✉️ Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Handyman -->
-                <div class="job-card">
-                    <div class="job-header">
-                        <div class="job-type">Deltid</div>
-                        <h3 class="job-title">Handyman</h3>
-                        <div class="job-location">📍 Storkøbenhavn</div>
+                <div class="card p-2 bg-gradient-white">
+                    <div class="job-type">Deltid</div>
+                    <h3 class="text-charcoal">Handyman</h3>
+                    <div class="job-location">📍 Storkøbenhavn</div>
+                    
+                    <p class="body text-gray bot-space">Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.</p>
+                    
+                    <div class="job-requirements">
+                        <h4 class="text-charcoal">Vi forventer:</h4>
+                        <ul>
+                            <li>Håndværkerfaglig baggrund</li>
+                            <li>Erfaring med VVS og el-opgaver</li>
+                            <li>Selvstændig og struktureret</li>
+                            <li>Kørekort og eget værktøj</li>
+                        </ul>
                     </div>
-                    <div class="job-content">
-                        <p class="job-description">Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.</p>
-                        <div class="job-requirements">
-                            <h4>Vi forventer:</h4>
-                            <ul>
-                                <li>Håndværkerfaglig baggrund</li>
-                                <li>Erfaring med VVS og el-opgaver</li>
-                                <li>Selvstændig og struktureret</li>
-                                <li>Kørekort og eget værktøj</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Handyman (deltid)" class="btn">
+                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Handyman (deltid)" class="btn success medium">
                             ✉️ Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Salgskonsulent -->
-                <div class="job-card">
-                    <div class="job-header">
-                        <div class="job-type">Fuldtid</div>
-                        <h3 class="job-title">Salgskonsulent</h3>
-                        <div class="job-location">📍 København (hybrid)</div>
+                <div class="card p-2 bg-gradient-white">
+                    <div class="job-type">Fuldtid</div>
+                    <h3 class="text-charcoal">Salgskonsulent</h3>
+                    <div class="job-location">📍 København (hybrid)</div>
+                    
+                    <p class="body text-gray bot-space">Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.</p>
+                    
+                    <div class="job-requirements">
+                        <h4 class="text-charcoal">Vi forventer:</h4>
+                        <ul>
+                            <li>Erfaring med B2B salg</li>
+                            <li>Stærke kommunikationsevner</li>
+                            <li>Resultatorienteret</li>
+                            <li>Kørekort og bil til rådighed</li>
+                        </ul>
                     </div>
-                    <div class="job-content">
-                        <p class="job-description">Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.</p>
-                        <div class="job-requirements">
-                            <h4>Vi forventer:</h4>
-                            <ul>
-                                <li>Erfaring med B2B salg</li>
-                                <li>Stærke kommunikationsevner</li>
-                                <li>Resultatorienteret</li>
-                                <li>Kørekort og bil til rådighed</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Salgskonsulent" class="btn">
+                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Salgskonsulent" class="btn success medium">
                             ✉️ Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Ejendomsservicetekniker -->
-                <div class="job-card">
-                    <div class="job-header">
-                        <div class="job-type">Fuldtid</div>
-                        <h3 class="job-title">Ejendomsservicetekniker</h3>
-                        <div class="job-location">📍 København</div>
+                <div class="card p-2 bg-gradient-white">
+                    <div class="job-type">Fuldtid</div>
+                    <h3 class="text-charcoal">Ejendomsservicetekniker</h3>
+                    <div class="job-location">📍 København</div>
+                    
+                    <p class="body text-gray bot-space">Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.</p>
+                    
+                    <div class="job-requirements">
+                        <h4 class="text-charcoal">Vi forventer:</h4>
+                        <ul>
+                            <li>Erfaring med ejendomsvedligeholdelse</li>
+                            <li>Teknisk forståelse</li>
+                            <li>Kundeservice orienteret</li>
+                            <li>Fleksibilitet og initiativ</li>
+                        </ul>
                     </div>
-                    <div class="job-content">
-                        <p class="job-description">Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.</p>
-                        <div class="job-requirements">
-                            <h4>Vi forventer:</h4>
-                            <ul>
-                                <li>Erfaring med ejendomsvedligeholdelse</li>
-                                <li>Teknisk forståelse</li>
-                                <li>Kundeservice orienteret</li>
-                                <li>Fleksibilitet og initiativ</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Ejendomsservicetekniker" class="btn">
+                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Ejendomsservicetekniker" class="btn success medium">
                             ✉️ Ansøg nu
                         </a>
                     </div>
@@ -256,54 +246,54 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="benefits-section">
+    <section class="section bg-gradient-sky">
         <div class="container">
-            <div class="section-header">
-                <div class="subtitle">MEDARBEJDERFORDELE</div>
-                <h2>Hvorfor arbejde hos DFMG?</h2>
-                <p>Vi tilbyder et inspirerende arbejdsmiljø med gode vilkår og muligheder for udvikling</p>
+            <div class="text-center bot-space2">
+                <div class="subtitle text-success">MEDARBEJDERFORDELE</div>
+                <h2 class="text-charcoal">Hvorfor arbejde hos DFMG?</h2>
+                <p class="body text-gray">Vi tilbyder et inspirerende arbejdsmiljø med gode vilkår og muligheder for udvikling</p>
             </div>
             
-            <div class="benefits-grid">
-                <div class="benefit-card">
+            <div class="grid-2x2">
+                <div class="card p-2 text-center">
                     <div class="benefit-icon">💰</div>
-                    <h4>Konkurrencedygtig løn</h4>
-                    <p>Attraktive løn- og ansættelsesvilkår med mulighed for bonus og provision</p>
+                    <h4 class="text-charcoal">Konkurrencedygtig løn</h4>
+                    <p class="body text-gray">Attraktive løn- og ansættelsesvilkår med mulighed for bonus og provision</p>
                 </div>
                 
-                <div class="benefit-card">
+                <div class="card p-2 text-center">
                     <div class="benefit-icon">🎓</div>
-                    <h4>Udvikling & uddannelse</h4>
-                    <p>Kontinuerlige kurser og udvikling af dine faglige og personlige kompetencer</p>
+                    <h4 class="text-charcoal">Udvikling & uddannelse</h4>
+                    <p class="body text-gray">Kontinuerlige kurser og udvikling af dine faglige og personlige kompetencer</p>
                 </div>
                 
-                <div class="benefit-card">
+                <div class="card p-2 text-center">
                     <div class="benefit-icon">👥</div>
-                    <h4>Godt arbejdsmiljø</h4>
-                    <p>Stærkt teamwork og fællesskab med kollegaer der støtter hinanden</p>
+                    <h4 class="text-charcoal">Godt arbejdsmiljø</h4>
+                    <p class="body text-gray">Stærkt teamwork og fællesskab med kollegaer der støtter hinanden</p>
                 </div>
                 
-                <div class="benefit-card">
+                <div class="card p-2 text-center">
                     <div class="benefit-icon">🚀</div>
-                    <h4>Karrieremuligheder</h4>
-                    <p>Reelle muligheder for faglig udvikling og avancement i virksomheden</p>
+                    <h4 class="text-charcoal">Karrieremuligheder</h4>
+                    <p class="body text-gray">Reelle muligheder for faglig udvikling og avancement i virksomheden</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section">
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-center radius-normal">
                 <h2>Klar til din næste udfordring?</h2>
                 <p>Send din ansøgning eller få mere information om karrieremuligheder hos DFMG</p>
-                <div class="cta-buttons">
-                    <a href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="btn btn-white">
-                        ✉️ Send en mail
+                <div class="flex">
+                    <a href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="btn white medium">
+                        <i class="fas fa-envelope"></i> Send en mail
                     </a>
-                    <a href="tel:+4550480273" class="btn btn-outline">
-                        📞 Ring: +45 50 48 02 73
+                    <a href="tel:+4550480273" class="btn bg-gradient-metal medium">
+                        <i class="fas fa-phone"></i> Ring: +45 50 48 02 73
                     </a>
                 </div>
             </div>
