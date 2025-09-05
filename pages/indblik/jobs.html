@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
+    <title>DFMG - Ledige Stillinger</title>
     <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
     
     <!-- Favicon -->
-    <link rel="icon" href="../images/logos/logo.png" type="image/png">
+    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
     <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
     
@@ -25,50 +25,10 @@
     <link rel="stylesheet" href="../../css/styles.css">
 
     <style>
-    /* Job-specific styles that extend the main stylesheet */
-    .jobs-section {
-        padding-top: 150px;
-    }
     
-    .job-type {
-        display: inline-block;
-        background: var(--success);
+    .badge {
+        background: var(--success) !important;
         color: var(--white);
-        padding: 0.5rem 1rem;
-        border-radius: var(--radius-circle);
-        font-size: 0.75rem;
-        font-weight: var(--font-weight-semibold);
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
-    
-    .job-location {
-        color: var(--gray);
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-    
-    .job-requirements ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .job-requirements li {
-        margin-bottom: 0.5rem;
-        color: var(--gray);
-        font-size: 0.9rem;
-    }
-    
-    .job-requirements li::before {
-        content: '✓';
-        color: var(--success);
-        font-weight: bold;
-        margin-right: 0.75rem;
-    }
-    
-    .job-footer {
-        text-align: right;
-        margin-top: 2rem;
     }
     
     .benefit-icon {
@@ -83,7 +43,7 @@
     <div id="header"></div>
     
     <!-- Jobs Section -->
-    <section class="section first jobs-section">
+    <section class="section first">
         <div class="container">
             <div class="text-center bot-space2">
                 <div class="subtitle text-success">KARRIEREMULIGHEDER</div>
@@ -93,151 +53,139 @@
             
             <div class="grid-2x3">
                 <!-- Rengøringsassistent (deltid) -->
-                <div class="card p-2 bg-gradient-white">
-                    <div class="job-type">Deltid</div>
+                <div class="card p-2">
+                    <div class="badge">Deltid</div>
                     <h3 class="text-charcoal">Rengøringsassistent</h3>
-                    <div class="job-location">📍 København & omegn</div>
+                    <p>📍 København & omegn</p>
                     
-                    <p class="body text-gray bot-space">Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.</p>
+                    <p class="bot-space" style="min-height: 120px;">Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.</p>
                     
-                    <div class="job-requirements">
-                        <h4 class="text-charcoal">Vi forventer:</h4>
-                        <ul>
-                            <li>Interesse for rengøringsarbejde</li>
-                            <li>Ansvarsfuldhed og pålidelighed</li>
-                            <li>Fysisk robusthed</li>
-                            <li>Kørekort og egen transport</li>
-                        </ul>
-                    </div>
+                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Interesse for rengøringsarbejde</li>
+                        <li><i class="fas fa-check"></i> Ansvarsfuldhed og pålidelighed</li>
+                        <li><i class="fas fa-check"></i> Fysisk robusthed</li>
+                        <li><i class="fas fa-check"></i> Kørekort og egen transport</li>
+                    </ul>
                     
-                    <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsassistent (deltid)" class="btn success medium">
-                            ✉️ Ansøg nu
+                    <div class="text-center top-space">
+                        <a href="mailto:kontakt@dfmg.dk?subject=Ansøgning: Rengøringsassistent (deltid)" class="btn success medium">
+                            Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Rengøringsassistent (fuldtid) -->
-                <div class="card p-2 bg-gradient-white">
-                    <div class="job-type">Fuldtid</div>
+                <div class="card p-2">
+                    <div class="badge">Fuldtid</div>
                     <h3 class="text-charcoal">Rengøringsassistent</h3>
-                    <div class="job-location">📍 København & omegn</div>
+                    <p>📍 København & omegn</p>
                     
-                    <p class="body text-gray bot-space">Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.</p>
-                    
-                    <div class="job-requirements">
-                        <h4 class="text-charcoal">Vi forventer:</h4>
-                        <ul>
-                            <li>Interesse for rengøringsarbejde</li>
-                            <li>Ansvarsfuldhed og pålidelighed</li>
-                            <li>Fysisk robusthed</li>
-                            <li>Kørekort og egen transport</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsassistent (fuldtid)" class="btn success medium">
-                            ✉️ Ansøg nu
+                    <p class="bot-space" style="min-height: 120px;">Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.</p>
+
+                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Interesse for rengøringsarbejde</li>
+                        <li><i class="fas fa-check"></i> Ansvarsfuldhed og pålidelighed</li>
+                        <li><i class="fas fa-check"></i> Fysisk robusthed</li>
+                        <li><i class="fas fa-check"></i> Kørekort og egen transport</li>
+                    </ul>
+                 
+                    <div class="text-center top-space">
+                        <a href="mailto:kontakt@dfmg.dk?subject=Ansøgning: Rengøringsassistent (fuldtid)" class="btn success medium">
+                            Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Rengøringsmedarbejder -->
-                <div class="card p-2 bg-gradient-white">
-                    <div class="job-type">Fuldtid</div>
+                <div class="card p-2">
+                    <div class="badge">Fuldtid</div>
                     <h3 class="text-charcoal">Rengøringsmedarbejder</h3>
-                    <div class="job-location">📍 København & omegn</div>
+                    <p>📍 København & omegn</p>
                     
-                    <p class="body text-gray bot-space">Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.</p>
+                    <p class="bot-space" style="min-height: 120px;">Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.</p>
                     
-                    <div class="job-requirements">
-                        <h4 class="text-charcoal">Vi forventer:</h4>
-                        <ul>
-                            <li>Erfaring med Erhvervsrengøring</li>
-                            <li>Selvstændighed og initiativ</li>
-                            <li>Kvalitetsbevidsthed</li>
-                            <li>Kørekort og egen transport</li>
-                        </ul>
-                    </div>
+                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Erfaring med Erhvervsrengøring</li>
+                        <li><i class="fas fa-check"></i> Selvstændighed og initiativ</li>
+                        <li><i class="fas fa-check"></i> Kvalitetsbevidsthed</li>
+                        <li><i class="fas fa-check"></i> Kørekort og egen transport</li>
+                    </ul>
                     
-                    <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Rengøringsmedarbejder" class="btn success medium">
-                            ✉️ Ansøg nu
+                    <div class="text-center top-space">
+                        <a href="mailto:kontakt@dfmg.dk?subject=Ansøgning: Rengøringsmedarbejder" class="btn success medium">
+                            Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Handyman -->
-                <div class="card p-2 bg-gradient-white">
-                    <div class="job-type">Deltid</div>
+                <div class="card p-2">
+                    <div class="badge">Deltid</div>
                     <h3 class="text-charcoal">Handyman</h3>
-                    <div class="job-location">📍 Storkøbenhavn</div>
+                    <p>📍 Storkøbenhavn</p>
                     
-                    <p class="body text-gray bot-space">Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.</p>
+                    <p class="bot-space" style="min-height: 120px;">Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.</p>
                     
-                    <div class="job-requirements">
-                        <h4 class="text-charcoal">Vi forventer:</h4>
-                        <ul>
-                            <li>Håndværkerfaglig baggrund</li>
-                            <li>Erfaring med VVS og el-opgaver</li>
-                            <li>Selvstændig og struktureret</li>
-                            <li>Kørekort og eget værktøj</li>
-                        </ul>
-                    </div>
+                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Håndværkerfaglig baggrund</li>
+                        <li><i class="fas fa-check"></i> Erfaring med VVS og el-opgaver</li>
+                        <li><i class="fas fa-check"></i> Selvstændig og struktureret</li>
+                        <li><i class="fas fa-check"></i> Kørekort og eget værktøj</li>
+                    </ul>
                     
-                    <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Handyman (deltid)" class="btn success medium">
-                            ✉️ Ansøg nu
+                    <div class="text-center top-space">
+                        <a href="mailto:kontakt@dfmg.dk?subject=Ansøgning: Handyman (deltid)" class="btn success medium">
+                            Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Salgskonsulent -->
-                <div class="card p-2 bg-gradient-white">
-                    <div class="job-type">Fuldtid</div>
+                <div class="card p-2">
+                    <div class="badge">Fuldtid</div>
                     <h3 class="text-charcoal">Salgskonsulent</h3>
-                    <div class="job-location">📍 København (hybrid)</div>
+                    <p>📍 København (hybrid)</p>
                     
-                    <p class="body text-gray bot-space">Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.</p>
+                    <p class="bot-space" style="min-height: 120px;">Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.</p>
                     
-                    <div class="job-requirements">
-                        <h4 class="text-charcoal">Vi forventer:</h4>
-                        <ul>
-                            <li>Erfaring med B2B salg</li>
-                            <li>Stærke kommunikationsevner</li>
-                            <li>Resultatorienteret</li>
-                            <li>Kørekort og bil til rådighed</li>
-                        </ul>
-                    </div>
+                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Erfaring med B2B salg</li>
+                        <li><i class="fas fa-check"></i> Stærke kommunikationsevner</li>
+                        <li><i class="fas fa-check"></i> Resultatorienteret</li>
+                        <li><i class="fas fa-check"></i> Kørekort og bil til rådighed</li>
+                    </ul>
                     
-                    <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Salgskonsulent" class="btn success medium">
-                            ✉️ Ansøg nu
+                    <div class="text-center top-space">
+                        <a href="mailto:kontakt@dfmg.dk?subject=Ansøgning: Salgskonsulent" class="btn success medium">
+                            Ansøg nu
                         </a>
                     </div>
                 </div>
 
                 <!-- Ejendomsservicetekniker -->
-                <div class="card p-2 bg-gradient-white">
-                    <div class="job-type">Fuldtid</div>
+                <div class="card p-2">
+                    <div class="badge">Fuldtid</div>
                     <h3 class="text-charcoal">Ejendomsservicetekniker</h3>
-                    <div class="job-location">📍 København</div>
+                    <p>📍 København</p>
                     
-                    <p class="body text-gray bot-space">Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.</p>
+                    <p class="bot-space" style="min-height: 120px;">Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.</p>
                     
-                    <div class="job-requirements">
-                        <h4 class="text-charcoal">Vi forventer:</h4>
-                        <ul>
-                            <li>Erfaring med ejendomsvedligeholdelse</li>
-                            <li>Teknisk forståelse</li>
-                            <li>Kundeservice orienteret</li>
-                            <li>Fleksibilitet og initiativ</li>
-                        </ul>
-                    </div>
+                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Erfaring med ejendomsvedligeholdelse</li>
+                        <li><i class="fas fa-check"></i> Teknisk forståelse</li>
+                        <li><i class="fas fa-check"></i> Kundeservice orienteret</li>
+                        <li><i class="fas fa-check"></i> Fleksibilitet og initiativ</li>
+                    </ul>
                     
-                    <div class="job-footer">
-                        <a href="mailto:job@dfmg.dk?subject=Ansøgning: Ejendomsservicetekniker" class="btn success medium">
-                            ✉️ Ansøg nu
+                    <div class="text-center top-space">
+                        <a href="mailto:kontakt@dfmg.dk?subject=Ansøgning: Ejendomsservicetekniker" class="btn success medium">
+                            Ansøg nu
                         </a>
                     </div>
                 </div>
@@ -246,7 +194,7 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="section bg-gradient-sky">
+    <section class="section">
         <div class="container">
             <div class="text-center bot-space2">
                 <div class="subtitle text-success">MEDARBEJDERFORDELE</div>
@@ -288,14 +236,9 @@
             <div class="cta-center radius-normal">
                 <h2>Klar til din næste udfordring?</h2>
                 <p>Send din ansøgning eller få mere information om karrieremuligheder hos DFMG</p>
-                <div class="flex">
-                    <a href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="btn white medium">
-                        <i class="fas fa-envelope"></i> Send en mail
-                    </a>
-                    <a href="tel:+4550480273" class="btn bg-gradient-metal medium">
-                        <i class="fas fa-phone"></i> Ring: +45 50 48 02 73
-                    </a>
-                </div>
+                <a href="mailto:kontakt@dfmg.dk?subject=Uopfordret ansøgning" class="btn white medium">
+                    <i class="fas fa-envelope"></i> Send en mail
+                </a>
             </div>
         </div>
     </section>
