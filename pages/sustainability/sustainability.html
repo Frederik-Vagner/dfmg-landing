@@ -56,9 +56,11 @@
 }
 .slide:nth-child(2) { 
     background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+    padding: 10rem 4rem 0rem 4rem;
 }
 .slide:nth-child(3) { 
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+    padding: 0rem 4rem 4rem 4rem;
 }
 .slide:nth-child(4) { 
     background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
@@ -105,7 +107,7 @@
     justify-content: center;
     position: relative;
     flex-shrink: 0;
-    padding: 2rem;
+    padding: 4rem;
 }
         
 /* Enhanced Navigation */
@@ -248,12 +250,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
     max-width: 1200px;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 80px);
     align-items: center;
     justify-items: center;
+}
+
+/* Top row items - align to bottom */
+.slide-grid > *:nth-child(1),
+.slide-grid > *:nth-child(2) {
+    align-self: end;
+}
+
+/* Bottom row items - align to top */
+.slide-grid > *:nth-child(3),
+.slide-grid > *:nth-child(4) {
+    align-self: start;
 }
 </style>
 <body class="sustainability-page">
