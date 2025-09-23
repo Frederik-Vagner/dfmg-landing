@@ -32,7 +32,45 @@
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    text-align: center; 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%; /* Zooms in - try 110%, 130%, 140% etc. */
+    background-position: 0% center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+    top: -2.5rem;
+}
+
+.hero .text-charcoal {
+    color: white;
+}
+
+.hero .text-gray {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* ABOUT */
@@ -254,6 +292,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-image" style="background-image: url('/images/service/hero1.jpg');"></div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="text-center">
                 <div class="title text-charcoal">All-In-One Facility Service</div>
@@ -262,11 +302,13 @@
                     <a href="/pages/services/facility.html" class="btn success medium">Komplet Facility Service</a>
                     <a href="/pages/services/services.html" class="btn secondary medium">Udforsk Løsninger</a>
                 </div>
+                <!-- 
                 <div class="body text-gray space1">Betroet af</div>
                 <div class="">
                     <img src="images/logos/soho.png" alt="SOHO" class="client-logo">
                     <img src="images/logos/adnami.png" alt="Adnami" class="client-logo">
                 </div>
+                -->
             </div>
         </div>
     </section>
@@ -299,7 +341,7 @@
                             <img src="/images/people/vishwas3.jpg" alt="Handyman Services" width="640" height="640">
                         </div>
                         <div class="photo">
-                            <img src="/images/people/kim1.png" alt="Handyman Services" width="640" height="640">
+                            <img src="/images/people/anjal.jpg" alt="Handyman Services" width="640" height="640">
                         </div>
                         <div class="photo">
                             <img src="/images/people/pabitra2.webp" alt="Handyman Services" width="640" height="640" style="object-position: bottom;">
