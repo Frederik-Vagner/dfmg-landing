@@ -4,7 +4,7 @@
    ======================================== */
 
 /* Article Card Base Styles */
-.article-card {
+.card--article {
     background: white;
     border-radius: 20px;
     overflow: hidden;
@@ -104,7 +104,7 @@
 }
 
 /* Featured Article */
-.featured-article {
+.card--featured {
     background: white;
     border-radius: 24px;
     overflow: hidden;
@@ -114,7 +114,7 @@
     min-height: 200px;
 }
 
-.featured-article[data-featured-category="all"] {
+.card--featured[data-featured-category="all"] {
     display: grid;
 }
 
@@ -355,7 +355,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .featured-article {
+    .card--featured {
         grid-template-columns: 1fr;
         text-align: center;
     }

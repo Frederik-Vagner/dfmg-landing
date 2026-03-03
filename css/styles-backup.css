@@ -1,36 +1,3 @@
-/* ====================================
-   DFMG LANDING - STYLES.CSS
-   Table of Contents:
-
-   1. CSS RESET & SCROLLBAR
-   2. CSS VARIABLES
-   3. BASE STYLES
-   4. LAYOUT UTILITIES
-   5. SPACING UTILITIES
-   6. TYPOGRAPHY UTILITIES
-   7. COLOR UTILITIES
-   8. BORDER UTILITIES
-   9. DISPLAY & FLEXBOX UTILITIES
-   10. COMPONENT STYLES
-       - Buttons
-       - Cards
-       - Stats
-       - Badges & Quotes
-       - Forms
-       - Lists
-       - CTA Sections
-   11. PAGE-SPECIFIC COMPONENTS
-       - Hero
-       - Header & Navigation
-       - Footer
-       - Article Template
-   12. RESPONSIVE OVERRIDES
-   ==================================== */
-
-/* ====================================
-   1. CSS RESET & SCROLLBAR
-   ==================================== */
-
 * {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer and Edge */
@@ -39,10 +6,6 @@
 *::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
 }
-
-/* ====================================
-   2. CSS VARIABLES
-   ==================================== */
 
 :root {
     /* Brand Colors */
@@ -112,21 +75,12 @@
     --transition-normal: 0.3s ease;
 }
 
-/* ====================================
-   3. BASE STYLES
-   ==================================== */
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+body { 
+    margin: 0; 
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
     line-height: 1.6;
 }
 
-/* ====================================
-   4. LAYOUT UTILITIES
-   ==================================== */
-
-/* Containers */
 .container { 
     max-width: var(--container-width-normal); 
     margin: 0 auto; 
@@ -139,42 +93,25 @@ body {
     padding: var(--container-padding); 
 }
 
-.container-wide,
-.container--wide {
-    max-width: var(--container-width-wide);
-    margin: 0 auto;
-    padding: var(--container-padding);
+.container-wide { 
+    max-width: var(--container-width-wide); 
+    margin: 0 auto; 
+    padding: var(--container-padding); 
 }
 
-/* Sections */
-.first {
+.first { 
     padding-top: 150px !important;
 }
 
-.section {
-    padding: var(--section-padding);
+.section { 
+    padding: var(--section-padding); 
 }
 
-.hero {
-    height: 100vh;
+.hero { 
+    height: 100vh; 
 }
 
-/* ====================================
-   5. SPACING UTILITIES
-   ==================================== */
-
-/* Padding utilities */
-.p-05 { padding: 0.5rem; }
-.p-1 { padding: 1rem; }
-.p-2 { padding: 2rem; }
-.p-3 { padding: 3rem; }
-.p-4 { padding: 4rem; }
-
-/* ====================================
-   10. COMPONENT STYLES
-   ==================================== */
-
-/* === BUTTONS === */
+/* BUTTON */
 
 .btn { 
     text-decoration: none; 
@@ -189,57 +126,52 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/* Button Color Variants */
-.btn--primary {
-    background: var(--bg-gradient-charcoal);
-    color: var(--white);
+.primary {
+    background: var(--bg-gradient-charcoal); 
+    color: var(--white); 
 }
 
-.btn--success {
-    background: var(--bg-gradient-success);
-    color: var(--white);
+.success { 
+    background: var(--bg-gradient-success); 
+    color: var(--white); 
     border: none;
 }
 
-.btn--danger {
-    background: var(--bg-gradient-red);
-    color: var(--white);
+.red { 
+    background: var(--bg-gradient-red); 
+    color: var(--white); 
     border: none;
 }
 
-.btn--secondary {
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-    border: 2px solid var(--charcoal);
+.secondary { 
+    background: var(--bg-gradient-white); 
+    color: var(--text-primary); 
+    border: 2px solid var(--charcoal); 
 }
 
-.btn--ghost {
+.white {
     background: var(--white);
     color: var(--charcoal);
     border: 2px solid var(--white);
 }
 
-/* Button Size Variants */
-.btn--sm {
+.small { 
     padding: 10px 20px;
-    font-size: 0.75rem;
+    font-size: 0.75rem; 
 }
 
-.btn--md {
+.medium { 
     padding: 14px 28px;
-    font-size: 1rem;
+    font-size: 1rem; 
 }
 
-.btn--lg {
+.large { 
     padding: 16px 32px;
-    font-size: 1.25rem;
+    font-size: 1.25rem;  
 }
 
-/* ====================================
-   6. TYPOGRAPHY UTILITIES
-   ==================================== */
+/* TEXT */
 
-/* Semantic text classes */
 .title { 
     font-size: var(--font-size-title); 
     font-weight: var(--font-weight-semibold); 
@@ -282,14 +214,11 @@ h3 {
     font-weight: var(--font-weight-semibold); 
 }
 
-h4 {
-    font-size: 1rem;
-    font-weight: var(--font-weight-semibold);
+h4 { 
+    font-size: 1rem; 
+    font-weight: var(--font-weight-semibold); 
 }
 
-/* ====================================
-   9. DISPLAY & FLEXBOX UTILITIES
-   ==================================== */
 
 /* Flex Container Base */
 .flex {
@@ -351,10 +280,7 @@ h4 {
 .grid-2x3-offset > div:nth-child(3) { grid-column: 5 / 7; }
 .grid-2x3-offset > div:nth-child(4) { grid-column: 2 / 4; }
 .grid-2x3-offset > div:nth-child(5) { grid-column: 4 / 6; }
-
-/* ====================================
-   7. COLOR UTILITIES
-   ==================================== */
+   
 
 /* Text Alignment Utilities */
 .text-left { text-align: left; }
@@ -390,9 +316,22 @@ h4 {
 
 .radius-normal { border-radius: var(--radius-normal); }
 
-/* ====================================
-   8. BORDER UTILITIES
-   ==================================== */
+.bot-space { margin-bottom: 1rem; }
+.bot-space2 { margin-bottom: 2rem; }
+
+.top-space { margin-top: 1rem; }
+.top-space2 { margin-top: 2rem; }
+
+.space1 { margin: 1rem; }
+.space2 { margin: 2rem; }
+.space3 { margin: 3rem; }
+
+.p-05 { padding: 0.5rem; }
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+.p-4 { padding: 4rem; }
+
 
 /* Border utilities - all directions with 4 colors */
 .border-success { border: 3px solid var(--success); }
@@ -424,7 +363,7 @@ h4 {
 .border-right-charcoal { border-right: 4px solid var(--charcoal); }
 .border-right-white { border-right: 4px solid var(--white); }
 
-/* === CTA & SPECIAL SECTIONS === */
+
 
 .cta-box {
     background: var(--bg-gradient-charcoal);
@@ -439,7 +378,6 @@ h4 {
     gap: 2rem;
 }
 
-/* === FORMS === */
 
 .form-group {
     margin-bottom: 1.5rem;
@@ -466,38 +404,14 @@ h4 {
     resize: vertical;
 }
 
-/* === CARDS === */
 
-/* Base card class */
-.card {
+.card{
     position: relative;
     border-radius: var(--radius-normal);
     box-shadow: var(--shadow-lg);
 }
 
-/* Card element classes (BEM-style) */
-.card__header {
-    padding: var(--padding-md);
-    border-bottom: 1px solid #f1f5f9;
-}
-
-.card__body {
-    padding: var(--padding-md);
-}
-
-.card__footer {
-    padding: var(--padding-md);
-    border-top: 1px solid #f1f5f9;
-}
-
-.card__image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Card layout modifiers */
-.card--horizontal {
+.card-horizontal{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -534,126 +448,11 @@ h4 {
     font-weight: var(--font-weight-light);
 }
 
-/* Card variant modifiers */
-
-/* Story card variant */
-.card--story {
+.story-card {
     background: white;
     border-radius: 12px;
     padding: 2rem;
     border-left: 4px solid var(--primary);
-}
-
-/* Service card variant (for carousel items) */
-.card--service {
-    width: 386px;
-    flex-shrink: 0;
-    height: 520px;
-    background: white;
-    border-radius: var(--radius-normal);
-    box-shadow: var(--shadow-lg);
-    border: var(--border-light);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.card--service img,
-.card--service .card__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.card--service::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
-}
-
-.card--service h3,
-.card--service p {
-    position: relative;
-    z-index: 3;
-    color: white;
-    margin-bottom: 0.5rem;
-    padding: 0 1.5rem;
-    top: 2rem;
-    text-align: left;
-}
-
-.card--service h3 {
-    margin-bottom: 0.75rem;
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
-    min-height: 1.8rem;
-}
-
-.card--service p {
-    margin: 0 0 1.5rem 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    min-height: 2.66rem;
-}
-
-/* Article card variant */
-.card--article {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border: 1px solid #f1f5f9;
-    transition: all 0.3s ease;
-}
-
-/* Featured article card variant */
-.card--featured {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 200px;
-}
-
-/* Sidebar card variant */
-.card--sidebar {
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid #e5e7eb;
-}
-
-/* Info card variant */
-.card--info {
-    background: white;
-    padding: var(--padding-md);
-    border-radius: var(--radius-normal);
-    box-shadow: var(--shadow-md);
-}
-
-/* Stat card variant */
-.card--stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: var(--padding-md);
 }
 
 
@@ -689,8 +488,6 @@ h4 {
     box-shadow: var(--shadow-lg);
 }
 
-/* === STATS === */
-
 .stat {
     display: flex;
     flex-direction: column;
@@ -699,8 +496,7 @@ h4 {
     padding: 1rem;
 }
 
-/* Stat element classes (BEM-style) */
-.stat__value {
+.stat-number {
     font-size: 2rem;
     font-weight: var(--font-weight-semibold);
     line-height: 1;
@@ -708,7 +504,7 @@ h4 {
     display: block;
 }
 
-.stat__label {
+.stat-label {
     font-size: var(--font-size-subtitle);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
@@ -716,27 +512,10 @@ h4 {
     margin-bottom: 0.25rem;
 }
 
-.stat__description {
+.stat-description {
     font-size: 0.9rem;
     font-weight: var(--font-weight-light);
     opacity: 0.8;
-}
-
-/* Stat modifiers */
-.stat--inline {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--spacing-md);
-    text-align: left;
-}
-
-.stat--featured {
-    padding: var(--padding-lg);
-}
-
-.stat--featured .stat__value,
-.stat--featured .stat-number {
-    font-size: 3rem;
 }
 
 
@@ -890,11 +669,11 @@ h4 {
 .bg-light-red-10 { background: rgba(239, 68, 68, 0.1); }
 
 
-/* ====================================
-   11. PAGE-SPECIFIC COMPONENTS
-   ==================================== */
+/* ========================================
+   INDEX PAGE SPECIFIC STYLES
+   ======================================== */
 
-/* === HERO === */
+/* HERO */
 .hero {
     min-height: 80vh;
     display: flex;
@@ -1009,6 +788,70 @@ h4 {
     box-shadow: var(--shadow-lg);
 }
 
+.service-card {
+    width: 386px;
+    flex-shrink: 0;
+    height: 520px;
+    background: white;
+    border-radius: var(--radius-normal);
+    box-shadow: var(--shadow-lg);
+    border: var(--border-light);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.service-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.service-card h3,
+.service-card p {
+    position: relative;
+    z-index: 3;
+    color: white;
+    margin-bottom: 0.5rem;
+    padding: 0 1.5rem;
+    top: 2rem;
+    text-align: left;
+}
+
+.service-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-semibold);
+    min-height: 1.8rem;
+}
+
+.service-card p {
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    min-height: 2.66rem;
+}
+
+
 .client-logos {
     margin-top: 3rem;
     text-align: center;
@@ -1084,7 +927,9 @@ h4 {
 }
 
 
-/* === HEADER & NAVIGATION === */
+/* ========================================
+   HEADER COMPONENT STYLES
+   ======================================== */
 
 .header {
     position: fixed;
@@ -1320,9 +1165,16 @@ h4 {
     }
 }
 
-/* === FOOTER === */
 
-/* Additional utility classes (extended set) */
+/* ========================================
+   FOOTER COMPONENT STYLES
+   ======================================== */
+
+/* ========================================
+   COMPREHENSIVE UTILITY SYSTEM
+   ======================================== */
+
+/* === TYPOGRAPHY === */
 
 /* Font Sizes */
 .text-xs { font-size: 0.8rem; }      /* 12.8px */
@@ -1425,6 +1277,8 @@ h4 {
 .hidden { display: none; }
 .block { display: block; }
 .inline-block { display: inline-block; }
+.flex { display: flex; }
+.grid { display: grid; }
 
 /* Flex Direction */
 .flex-row { display: flex; flex-direction: row; }
@@ -1487,17 +1341,25 @@ h4 {
 .border-bottom { border-bottom: 1px solid #f1f5f9; }
 .border-l-4 { border-left: 4px solid var(--charcoal); }
 
-/* Background Colors - Additional variants */
+/* Background Colors */
+.bg-white { background: white; }
 .bg-light { background: #f8f9fa; }
 .bg-lighter { background: #ddd; }
 .bg-success-light { background: #e8f5e8; }
+.bg-charcoal { background: var(--charcoal); }
+.bg-success { background: var(--success); }
 .bg-warning { background: #f59e0b; }
 .bg-transparent { background: transparent; }
 
-/* Text Colors - Additional variants */
+/* Text Colors */
+.text-white { color: white; }
+.text-charcoal { color: var(--charcoal); }
+.text-gray { color: #6b7280; }
 .text-gray-dark { color: #666; }
 .text-gray-light { color: #64748b; }
+.text-success { color: var(--success); }
 .text-blue { color: #3b82f6; }
+.text-red { color: #ef4444; }
 
 /* === IMAGE UTILITIES === */
 
@@ -1526,7 +1388,9 @@ h4 {
 /* Section Utilities */
 .section-full-height { min-height: 100vh; display: flex; align-items: center; }
 
-/* === TAB BUTTONS === */
+/* ========================================
+   REUSABLE COMPONENTS
+   ======================================== */
 
 /* Tab Button Component */
 .tab-button {
@@ -1768,7 +1632,17 @@ h4 {
     }
 }
 
-/* === ARTICLE TEMPLATE === */
+/* ========================================
+   ARTICLE TEMPLATE STYLES
+   ======================================== */
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* Article Header */
 .article-header {

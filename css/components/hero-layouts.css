@@ -62,7 +62,7 @@
 }
 
 /* Service Cards */
-.service-card {
+.card--service {
     min-width: 320px;
     background: white;
     border-radius: 24px;
@@ -75,7 +75,7 @@
     transition: all 0.3s;
 }
 
-.service-card::before {
+.card--service::before {
     content: '';
     position: absolute;
     top: 0;
@@ -86,7 +86,7 @@
     transition: left 0.3s;
 }
 
-.service-card:hover::before {
+.card--service:hover::before {
     left: 0;
 }
 
@@ -167,7 +167,7 @@
         font-size: 0.8rem;
     }
 
-    .service-card {
+    .card--service {
         min-width: 100%;
     }
 
