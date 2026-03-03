@@ -3,582 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
+    <title>DFMG - Erhvervsrengøring</title>
+    <meta name="description" content="Professionel erhvervsrengøring til kontorer, butikker og institutioner.">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../css/styles.css">
-
-    <style>
-        body {
-            padding-top: 100px;
-        }
-
-        .floater{
-            position: fixed;
-            left: 1rem;
-            bottom: 1rem;
-            z-index: 9999;
-        }
-
-        /* Services Grid Styles */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .service-card {
-            width: 570px;
-            flex-shrink: 0;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-            border: 1px solid #f1f5f9;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            min-height: 600px;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-        }
-
-        .service-image-container {
-            position: relative;
-            height: 280px;
-            overflow: hidden;
-            border-radius: 16px 16px 0 0;
-            background: #f1f5f9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-        }
-
-        .photo-dots {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-        }
-
-        .photo-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-        }
-
-        .photo-dot.active {
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        .service-content {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .service-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .service-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.5rem;
-            color: #2d3748;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .service-features i {
-            color: var(--primary);
-            font-size: 0.9rem;
-            width: 14px;
-        }
-
-        .service-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: auto;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem 1rem;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
-            background: #f8fafc;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.75rem;
-            color: #718096;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 0.25rem;
-        }
-
-        .mini-chart {
-            width: 100%;
-            height: 40px;
-            margin-top: 0.5rem;
-        }
-
-        .chart-bar {
-            height: 100%;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 0.5rem;
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 600;
-            transition: width 0.3s;
-            background: var(--charcoal);
-        }
-
-        /* Type Cards */
-        .type-card {
-            background: white;
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .type-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: var(--charcoal);
-        }
-
-        .type-badge {
-            background: var(--charcoal);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-
-        .features-list {
-            list-style: none;
-        }
-
-        .features-list li {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
-            font-weight: 500;
-        }
-
-        .features-list i {
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        /* Stability Section */
-        .stability-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .service-schedule-demo {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .tab-navigation {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            justify-content: center;
-        }
-
-        .tab-button {
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #64748b;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-        }
-
-        .tab-button.active {
-            background: #344767;
-            color: white;
-            border-color: #344767;
-        }
-
-        .tab-button:hover {
-            background: #e2e8f0;
-        }
-
-        .tab-button.active:hover {
-            background: #2d3748;
-        }
-
-        .schedule-table {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-        }
-
-        .schedule-row {
-            display: grid;
-            grid-template-columns: 55% 10% 5% 5% 5% 5% 5% 5% 5%;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .schedule-row:first-child {
-            background: #f8fafc;
-            font-weight: 600;
-            color: #344767;
-        }
-
-        .schedule-row:last-child {
-            border-bottom: none;
-        }
-
-        .schedule-row > div {
-            padding: 0.75rem 0.25rem;
-            border-right: 1px solid #e2e8f0;
-        }
-
-        .schedule-row > div:last-child {
-            border-right: none;
-        }
-
-        .task-col {
-            color: #2d3748;
-            font-size: 0.75rem;
-            padding-left: 1rem !important;
-        }
-
-        .freq-col, .day-col {
-            font-size: 0.7rem;
-            text-align: center;
-        }
-
-        .schedule-note {
-            background: rgba(34, 197, 94, 0.05);
-            border: 1px solid rgba(34, 197, 94, 0.1);
-            border-radius: 8px;
-            padding: 1rem 1.5rem;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .schedule-note p {
-            color: #059669;
-            font-size: 0.95rem;
-            margin: 0;
-            font-weight: 500;
-        }
-
-        .schedule-note i {
-            color: #22c55e;
-            margin-right: 0.5rem;
-        }
-
-        /* Transparency Section */
-        .transparency-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .transparency-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border: 1px solid #e2e8f0;
-        }
-
-        .transparency-card.double-height {
-            grid-row: span 2;
-        }
-
-        .transparency-card h3 {
-            color: #344767;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0 0 1rem 0;
-        }
-
-        .transparency-note {
-            background: rgba(30, 58, 138, 0.05);
-            border: 1px solid rgba(30, 58, 138, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-
-        .transparency-note p {
-            color: #3b82f6;
-            font-size: 1rem;
-            margin: 0;
-            font-weight: 500;
-        }
-
-        .transparency-note i {
-            color: #3b82f6;
-            margin-right: 0.5rem;
-        }
-
-        /* Flexibility Section */
-        .flexibility-examples {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
-            padding: 1rem;
-            border-radius: 12px;
-        }
-
-        .chat-example {
-            background: white;
-            border-radius: 8px;
-            padding: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .chat-header {
-            background: #344767;
-            color: white;
-            padding: 0.75rem;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-align: center;
-        }
-
-        .message {
-            margin: 0.75rem 0.75rem 0.05rem 0.75rem;
-            max-width: 85%;
-            position: relative;
-            clear: both;
-        }
-
-        .message span {
-            display: inline-block;
-            padding: 0.75rem 1rem;
-            border-radius: 18px;
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
-
-        .message.customer {
-            float: left;
-            text-align: left;
-        }
-
-        .message.customer span {
-            background: #e5e7eb;
-            color: #1f2937;
-        }
-
-        .message.dfmg {
-            float: right;
-            text-align: right;
-        }
-
-        .message.dfmg span {
-            background: #6366f1;
-            color: white;
-        }
-
-        .time {
-            font-size: 0.7rem;
-            color: #6b7280;
-            margin-top: 0.25rem;
-        }
-
-        .message.dfmg .time {
-            text-align: right;
-        }
-
-        .message.customer .time {
-            text-align: left;
-        }
-
-        /* Gallery */
-        .before-after-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .before-after-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .image-container {
-            position: relative;
-            height: 200px;
-            background: #f1f5f9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        .image-badge {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card-content h4 {
-            color: var(--charcoal);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .card-content p {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .stability-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .transparency-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .flexibility-examples {
-                grid-template-columns: 1fr;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .carousel-controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .carousel-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: white;
-            border: 2px solid var(--color-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            color: var(--charcoal);
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .carousel-btn:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        }
-
-        .services-carousel { 
-            overflow: hidden; 
-        }
-        .services-track { 
-            display: flex; 
-            transition: transform var(--transition-normal); 
-            width: max-content;
-            gap: 20px;
-        }
-    </style>
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
+
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
 <body>
     <!-- Header Component -->
@@ -624,7 +75,7 @@
                             </div>
                         </div>
                         <div class="service-content">
-                            <h3 style="margin: unset;">Restauranter & Caféer</h3>
+                            <h3 class="m-0">Restauranter & Caféer</h3>
                             <p>Specialiseret fødevaresikker rengøring af køkkener, spiseområder og sanitære faciliteter i overensstemmelse med HACCP.</p>
                             <ul class="feature-list list-success">
                                 <li><i class="fas fa-check"></i> HACCP compliance</li>
@@ -647,7 +98,7 @@
                             </div>
                         </div>
                         <div class="service-content">
-                            <h3 style="margin: unset;">Ejendomsrengøring</h3>
+                            <h3 class="m-0">Ejendomsrengøring</h3>
                             <p>Omfattende rengøring af fællesarealer, trappeopgange, elevatorer og udendørs områder for ejendomsselskaber.</p>
                             <ul class="feature-list list-success">
                                 <li><i class="fas fa-check"></i> Fællesarealer og opgange</li>
@@ -670,7 +121,7 @@
                             </div>
                         </div>
                         <div class="service-content">
-                            <h3 style="margin: unset;">Kontorfællesskaber</h3>
+                            <h3 class="m-0">Kontorfællesskaber</h3>
                             <p>Specialiseret rengøring af shared workspaces, coworking områder og fleksible kontorløsninger med fokus på hygiejne og professionalisme.</p>
                             <ul class="feature-list list-success">
                                 <li><i class="fas fa-check"></i> Fælles arbejdsområder</li>
@@ -694,7 +145,7 @@
                             </div>
                         </div>
                         <div class="service-content">
-                            <h3 style="margin: unset;">Eventlokationer</h3>
+                            <h3 class="m-0">Eventlokationer</h3>
                             <p>Hurtig og effektiv før/efter event rengøring af konference- og festlokaler, så jeres venue altid er klar til næste arrangement.</p>
                             <ul class="feature-list list-success">
                                 <li><i class="fas fa-check"></i> Før/efter event service</li>
@@ -719,7 +170,7 @@
                             </div>
                         </div>
                         <div class="service-content">
-                            <h3 style="margin: unset;">Skoler & Institutioner</h3>
+                            <h3 class="m-0">Skoler & Institutioner</h3>
                             <p>Børnevenlig og sikker rengøring af undervisningslokaler, kantiner og fællesområder med miljøvenlige produkter.</p>
                             <ul class="feature-list list-success">
                                 <li><i class="fas fa-check"></i> Klasselokaler og auditorier</li>
@@ -800,7 +251,7 @@
     </section>
 
     <!-- Stability Section -->
-    <section class="section" style="min-height: 100vh; display: flex; align-items: center;">
+    <section class="section section-full-height">
         <div class="container">
             <div class="text-center">
             <div class="subtitle text-primary">VORES VÆRDIER</div>
@@ -812,7 +263,7 @@
                     <div class="subtitle text-primary text-center bot-space2">STABILITET</div>
                     <h3>Samme Personale, Til tiden, Efter Aftale</h3>
                     <p>Hos DFMG gør vi ikke brug af underleverandører da det skaber ustabilitet i både kvalitet og udførelse. Med os får du det samme personale hver gang</p>
-                    <div style="color: #64748b; font-size: 0.85rem; font-style: italic; text-align: center; margin: 2rem 0;">
+                    <div class="text-gray-light text-sm italic text-center my-2">
                         <span>Dog udskift af personale ved sygdom eller ferie</span>
                     </div>
                     
@@ -820,9 +271,9 @@
                     
                     <h3>Jeres Skræddersyede Service Skema</h3>
                     <p>Hver kunde får et detaljeret skema - ingen gætteri om hvad der bliver gjort</p>
-                    <div style="color: #64748b; font-size: 0.85rem; font-style: italic; display: flex; align-items: center; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                    <div class="text-gray-light text-sm italic flex items-center gap-1 justify-center my-2">
                         <span>Se eksempel på et rengøringskema</span>
-                        <i class="fas fa-arrow-right" style="color: #3b82f6; font-size: 1.5rem;"></i>
+                        <i class="fas fa-arrow-right text-blue text-xl"></i>
                     </div>
                 </div>
                 
@@ -867,22 +318,22 @@
             <div class="transparency-grid">
                 <div class="transparency-card">
                     <h3>Rengøringspersonale</h3>
-                    <div style="margin:15px 0;display:flex;gap:40px; justify-content: center;">
-                        <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="flex justify-center gap-3 mb-15 mt-15">
+                        <div class="flex items-center gap-sm">
                             <div class="flex">
-                                <img src="/images/people/raman.png" loading="lazy" alt="Raman Nepal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
+                                <img src="/images/people/raman.png" loading="lazy" alt="Raman Nepal"  class="profile-img" loading="lazy" decoding="async">
                                 <div class="">
-                                    <div style="font-size:14px;font-weight:600;margin-bottom:2px">Raman Nepal</div>
-                                    <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 87 65 43 21</div>
-                                    <div style="font-size:12px;color:#666">Rengøringsleder</div>
+                                    <div class="text-base font-semibold" >Raman Nepal</div>
+                                    <div class="text-base text-gray-dark" > +45 87 65 43 21</div>
+                                    <div class="text-xs text-gray-dark">Rengøringsleder</div>
                                 </div>
                             </div>
                             <div class="flex">
-                                <img src="/images/people/diya.png" loading="lazy" alt="Diya Phuyal"  style="width:60px;height:60px;border-radius:20%;flex-shrink:0;object-fit:cover">
+                                <img src="/images/people/diya.png" loading="lazy" alt="Diya Phuyal"  class="profile-img" loading="lazy" decoding="async">
                                 <div class="">
-                                    <div style="font-size:14px;font-weight:600;margin-bottom:2px">Diya Phuyal</div>
-                                    <div style="font-size:14px;color:#666;margin-bottom:1px"> +45 12 34 56 78</div>
-                                    <div style="font-size:12px;color:#666">Rengøringsmedarbejder</div>
+                                    <div class="text-base font-semibold" >Diya Phuyal</div>
+                                    <div class="text-base text-gray-dark" > +45 12 34 56 78</div>
+                                    <div class="text-xs text-gray-dark">Rengøringsmedarbejder</div>
                                 </div>
                             </div>
                         </div>
@@ -891,74 +342,74 @@
                 
                 <div class="transparency-card">
                     <h3>Foto Dokumentation</h3>
-                    <div style="display:flex;gap:40px;margin:15px 0;font-size:14px;justify-content:space-between">
-                        <div style="text-align:center;color:#666">
-                            <div style="font-weight:500;margin-bottom:5px;white-space:nowrap">Ingen billeder</div>
-                            <div style="font-size:12px;color:#ef4444">Frarådes</div>
+                    <div class="flex gap-3 mb-15 mt-15 text-base justify-between">
+                        <div class="text-center text-gray-dark">
+                            <div class="font-medium mb-05 no-wrap">Ingen billeder</div>
+                            <div class="text-xs text-red">Frarådes</div>
                         </div>
-                        <div style="text-align:center;color:#344767">
-                            <div style="font-weight:600;margin-bottom:5px">Efter-billeder</div>
-                            <div style="font-size:12px;color:#22c55e">Anbefalet for let/grundig rengøring</div>
+                        <div class="text-center text-charcoal">
+                            <div class="font-semibold mb-05">Efter-billeder</div>
+                            <div class="text-xs text-success">Anbefalet for let/grundig rengøring</div>
                         </div>
-                        <div style="text-align:center;color:#666">
-                            <div style="font-weight:500;margin-bottom:5px">Før/efter billeder</div>
-                            <div style="font-size:12px;color:#3b82f6">Anbefalet til events og deep cleaning</div>
+                        <div class="text-center text-gray-dark">
+                            <div class="font-medium mb-05">Før/efter billeder</div>
+                            <div class="text-xs text-blue">Anbefalet til events og deep cleaning</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="transparency-card double-height">
                     <h3>Kalender Overblik</h3>
-                    <div style="border-radius:6px; font-size:11px">
-                        <div style="text-align:center;font-weight:600;font-size:18px;margin-bottom:15px;color:#344767">Februar</div>
-                        <div style="display:grid;grid-template-columns:0.5fr 1.5fr 0.5fr 1.5fr 0.5fr 0.5fr 1.5fr;gap:3px 0;text-align:center;font-weight:500;">
-                            <div style="font-weight:600;padding:8px">M</div><div style="font-weight:600;padding:8px">T</div><div style="font-weight:600;padding:8px">O</div><div style="font-weight:600;padding:8px">T</div><div style="font-weight:600;padding:8px">F</div><div style="font-weight:600;padding:8px">L</div><div style="font-weight:600;padding:8px">S</div>
-                            <div style="padding:8px">1</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">3</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">5</div><div style="padding:8px">6</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
-                            <div style="padding:8px">8</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">10</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">12</div><div style="padding:8px">13</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
-                            <div style="padding:8px">15</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">17</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">19</div><div style="padding:8px">20</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
-                            <div style="padding:8px">22</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">24</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">26</div><div style="padding:8px">27</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                    <div class="rounded-md text-xs">
+                        <div class="text-center font-semibold text-lg mb-15 text-charcoal">Februar</div>
+                        <div class="grid text-center font-medium" style="grid-template-columns:0.5fr 1.5fr 0.5fr 1.5fr 0.5fr 0.5fr 1.5fr;gap:3px 0;">
+                            <div class="font-semibold p-2">M</div><div class="font-semibold p-2">T</div><div class="font-semibold p-2">O</div><div class="font-semibold p-2">T</div><div class="font-semibold p-2">F</div><div class="font-semibold p-2">L</div><div class="font-semibold p-2">S</div>
+                            <div class="p-2">1</div><div class="badge badge-success"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">3</div><div class="badge badge-success"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">5</div><div class="p-2">6</div><div class="badge badge-success"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div class="p-2">8</div><div class="badge badge-success"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">10</div><div class="badge badge-success"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">12</div><div class="p-2">13</div><div class="badge badge-success"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div class="p-2">15</div><div class="badge badge-success"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">17</div><div class="badge badge-warning"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">19</div><div class="p-2">20</div><div class="badge badge-warning"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div class="p-2">22</div><div class="badge badge-warning"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">24</div><div class="badge badge-warning"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="p-2">26</div><div class="p-2">27</div><div class="badge badge-warning"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="transparency-card double-height">
                     <h3>Slutrapport</h3>
-                    <div style="display:flex;margin:15px 0; gap: 10px;">
-                        <div style="flex:0 0 70%;background:#f8f9fa;padding:15px;border-radius:8px;border-left:4px solid #344767">
-                            <div style="display:flex;align-items:center;margin-bottom:12px">
-                                <div style="font-weight:600;color:#344767">📧 Rapport sendt 21:45</div>
+                    <div class="flex mb-15 mt-15 gap-1">
+                        <div class="flex-0-70 bg-light p-15 rounded-lg border-l-4">
+                            <div class="flex items-center mb-075">
+                                <div class="font-semibold text-charcoal">📧 Rapport sendt 21:45</div>
                             </div>
-                            
-                            <div style="margin:8px 0;color:#666;font-size:14px">
+
+                            <div class="text-gray-dark text-base my-1">
                                 <strong>Location:</strong> SOHO<br>
                                 <strong>Task:</strong> Let Rengøring<br>
                                 <strong>Address:</strong> Klosterstræde 9, 1157 København K
                             </div>
                             
-                            <div style="margin:12px 0;padding:8px;background:white;border-radius:4px">
-                                <div style="color:#666;margin:4px 0;font-size:13px">⏰ Start: 17:30 | Slut: 21:30</div>
-                                <div style="color:#22c55e;margin:4px 0;font-size:13px">✅ Status: Udført</div>
-                                <div style="color:#344767;margin:4px 0;font-size:13px">👤 Udført af: Diya Phuyal</div>
+                            <div class="bg-white p-075 rounded my-075">
+                                <div class="text-gray-dark text-sm my-0">⏰ Start: 17:30 | Slut: 21:30</div>
+                                <div class="text-success text-sm my-0">✅ Status: Udført</div>
+                                <div class="text-charcoal text-sm my-0">👤 Udført af: Diya Phuyal</div>
                             </div>
-                            
-                            <div style="background:#e8f5e8;padding:8px;border-radius:4px;margin-top:12px;text-align:center">
-                                <div style="color:#22c55e;font-size:12px;font-weight:500">📎 15 billeder vedhæftet</div>
+
+                            <div class="bg-success-light p-075 rounded mt-075 text-center">
+                                <div class="text-success text-xs font-medium">📎 15 billeder vedhæftet</div>
                             </div>
                         </div>
                         
-                        <div style="padding:10px; width: 100%;">
-                            <div style="color:#666;margin-bottom:8px;text-align:center;font-weight:500">Billeder:</div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                        <div class="w-full p-1">
+                            <div class="text-gray-dark mb-075 text-center font-medium">Billeder:</div>
+                            <div class="grid grid-cols-2" style="gap:6px">
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
+                                <div class="form-input"></div>
                             </div>
                         </div>
                     </div>
@@ -1140,10 +591,10 @@
                     <p class="cta-proof">Vi sørger for daglig rengøring hos <strong>virksomheder i København og omegn</strong>.</p>
                     <div class="flex">
                         <a href="/pages/kontakt.html" class="btn success medium">
-                            <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Få et tilbud
+                            <i class="fas fa-phone" class="mr-05"></i>Få et tilbud
                         </a>
                         <a href="/pages/kontakt.html" class="btn white medium">
-                            <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt os
+                            <i class="fas fa-envelope" class="mr-05"></i>Kontakt os
                         </a>
                     </div>
                 </div>
@@ -1157,8 +608,11 @@
     <!-- Footer Component -->
     <div id="footer"></div>
 
-    <!-- Component loader -->
-    <script src="../../js/components.js" defer></script>
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
+
+    <!-- Component Loader -->
+    <script src="/js/components.js" defer></script>
 
     <script>
         let currentTab = 'kontor';

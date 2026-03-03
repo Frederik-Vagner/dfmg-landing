@@ -1,0 +1,128 @@
+{
+  "index": {
+    "title": "DFMG - Facility Service & Ejendomsservice",
+    "description": "DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/kontakt": {
+    "title": "DFMG - Kontakt",
+    "description": "Kontakt DFMG for erhvervsrengøring, facility management og ejendomsservice. Vi besvarer alle henvendelser inden for 24 timer.",
+    "components": ["contact-form"],
+    "scripts": []
+  },
+  "pages/prisberegner": {
+    "title": "DFMG - Prisberegner",
+    "description": "Beregn prisen på jeres facility service løsning med vores prisberegner. Få et øjeblikkeligt estimat.",
+    "components": ["calculator"],
+    "scripts": []
+  },
+  "pages/tak": {
+    "title": "DFMG - Tak for din besked",
+    "description": "Tak for din henvendelse til DFMG. Vi vender tilbage hurtigst muligt.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/services/facility": {
+    "title": "DFMG - Komplet Facility Service",
+    "description": "Professionel facility service til jeres virksomhed. Vi klarer alt fra rengøring til vedligehold.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/services/ejendomsservice": {
+    "title": "DFMG - Ejendomsservice",
+    "description": "Komplet ejendomsservice til erhvervsejendomme og boligforeninger. Professionel drift og vedligehold.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/services/handyman": {
+    "title": "DFMG - Handyman Service",
+    "description": "Professionelle håndværkere til alle opgaver. Fra små reparationer til større projekter.",
+    "components": ["hero-layouts"],
+    "scripts": []
+  },
+  "pages/services/vinduespudsning": {
+    "title": "DFMG - Professionel Vinduespolering",
+    "description": "Krystalklare vinduer til din virksomhed. Professionel vinduespolering til erhverv.",
+    "components": ["pricing"],
+    "scripts": []
+  },
+  "pages/services/produkter": {
+    "title": "DFMG - Supplies & Produkter",
+    "description": "Alt hvad I har brug for til jeres arbejdsplads. Hygiejneprodukter, kontorartikler og mere.",
+    "components": ["hero-layouts", "pricing"],
+    "scripts": []
+  },
+  "pages/services/picoline": {
+    "title": "DFMG - Piccoline Service",
+    "description": "Jeres kontor's usynlige hjælper. Piccoline service til erhverv.",
+    "components": ["timeline"],
+    "scripts": []
+  },
+  "pages/services/rengøring": {
+    "title": "DFMG - Erhvervsrengøring",
+    "description": "Professionel erhvervsrengøring til kontorer, butikker og institutioner.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/services/services": {
+    "title": "DFMG - Vores Services",
+    "description": "Se alle vores facility service løsninger. Fra rengøring til total facility management.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/sustainability/sustainability": {
+    "title": "DFMG - Bæredygtighed",
+    "description": "DFMG's bæredygtighedsstrategi og ESG-arbejde. Socialt ansvar, klimaindsats og god ledelse.",
+    "components": ["sustainability-carousel"],
+    "scripts": []
+  },
+  "pages/sustainability/socialS": {
+    "title": "DFMG - Socialt Ansvar",
+    "description": "DFMG's sociale ansvar og arbejde med medarbejdertrivsel, diversitet og samfundsengagement.",
+    "components": ["sustainability-carousel"],
+    "scripts": []
+  },
+  "pages/sustainability/klimaS": {
+    "title": "DFMG - Klimaindsats",
+    "description": "DFMG's klimastrategi og miljøarbejde. Grønne løsninger og CO2-reduktion.",
+    "components": ["sustainability-carousel"],
+    "scripts": []
+  },
+  "pages/sustainability/governanceS": {
+    "title": "DFMG - Governance",
+    "description": "DFMG's ledelsesstruktur, etik og compliance. Ansvarlig forretningsførelse.",
+    "components": ["sustainability-carousel"],
+    "scripts": []
+  },
+  "pages/indblik/om": {
+    "title": "DFMG - Om DFMG",
+    "description": "Mød teamet bag DFMG - den passionerede programmør der revolutionerer facility service med teknologi og personlig opmærksomhed.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/indblik/jobs": {
+    "title": "DFMG - Ledige Stillinger",
+    "description": "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facility management.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/indblik/nyheder": {
+    "title": "DFMG - Nyheder & Artikler",
+    "description": "Seneste nyheder og artikler fra DFMG. Tips, tricks og indsigt i facility management.",
+    "components": ["article-listing"],
+    "scripts": []
+  },
+  "pages/components/privatlivspolitik": {
+    "title": "DFMG - Privatlivspolitik",
+    "description": "DFMG's privatlivspolitik og håndtering af persondata.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/components/cookiepolitik": {
+    "title": "DFMG - Cookiepolitik",
+    "description": "DFMG's cookiepolitik og brug af cookies.",
+    "components": [],
+    "scripts": []
+  }
+}

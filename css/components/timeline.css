@@ -1,0 +1,36 @@
+/* ========================================
+   TIMELINE / SCHEDULE COMPONENT
+   Used by: picoline.html
+   ======================================== */
+
+/* Timeline Badge - Time labels or status indicators */
+.time-badge {
+    background: linear-gradient(135deg, var(--success), #16a34a);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Timeline Task - Task description */
+.time-task {
+    flex: 1;
+    color: var(--charcoal);
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .time-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        min-width: 50px;
+    }
+
+    .time-task {
+        font-size: 0.9rem;
+    }
+}

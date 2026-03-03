@@ -1,0 +1,202 @@
+/* ========================================
+   PRICING COMPONENTS
+   Used by: produkter.html, vinduespudsning.html
+   ======================================== */
+
+/* Simple Price Display */
+.service-price {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.price-label {
+    color: var(--gray);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.price-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Pricing Table */
+.pricing-table {
+    background: #f8fafc;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.pricing-header {
+    background: var(--bg-gradient-charcoal);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.pricing-body {
+    padding: 2rem;
+}
+
+.pricing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-item:last-child {
+    border-bottom: none;
+}
+
+.pricing-name {
+    font-weight: 600;
+    color: var(--color-charcoal);
+    flex: 1;
+}
+
+.pricing-specs {
+    color: var(--color-dark-gray);
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.pricing-price {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+/* Shop Item Preview */
+.shop-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.shop-item {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.shop-item:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.shop-item-icon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.shop-item-price {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.shop-category-badge {
+    background: #e2e8f0;
+    color: var(--color-dark-gray);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Custom Request Card */
+.custom-request {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 2px dashed #cbd5e1;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.custom-request:hover {
+    border-color: var(--color-primary);
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+}
+
+.custom-request-icon {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.custom-request-btn {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.custom-request-btn:hover {
+    background: var(--color-primary-dark);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-price {
+        padding: 1rem;
+    }
+
+    .price-amount {
+        font-size: 1.2rem;
+    }
+
+    .pricing-header {
+        padding: 1rem;
+    }
+
+    .pricing-body {
+        padding: 1rem;
+    }
+
+    .pricing-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .pricing-specs {
+        margin-right: 0;
+    }
+
+    .shop-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .custom-request {
+        padding: 1.5rem;
+    }
+
+    .custom-request-icon {
+        font-size: 2rem;
+    }
+}

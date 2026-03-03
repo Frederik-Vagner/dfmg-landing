@@ -3,200 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
+    <title>Loading...</title>
+    <meta name="description" content="">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components/article-listing.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
 
-
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-<style>
-.case-company {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.case-content {
-    padding: 1.5rem;
-}
-
-.case-challenge h4 {
-    color: var(--text-primary);
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.case-challenge {
-    margin-bottom: 1rem;
-}
-
-.case-results {
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
-.case-results h5 {
-    color: var(--success);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.result-metrics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.metric {
-    text-align: center;
-}
-
-.metric-value {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--success);
-}
-
-.metric-label {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-}
-
-.article-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border: 1px solid #f1f5f9;
-    transition: all 0.3s ease;
-}
-
-.article-image {
-    height: 220px;
-    position: relative;
-    overflow: hidden;
-}
-.article-date {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(255, 255, 255, 0.95);
-    color: #344767;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-.article-title {
-    color: #344767;
-    font-size: 1.3rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin: unset;
-}
-
-.article-excerpt {
-    color: #64748b;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.article-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-    border-top: 1px solid #f1f5f9;
-}
-
-.read-time {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #64748b;
-    font-size: 0.9rem;
-}
-
-.article-content {
-    padding: 1.5rem;
-}
-
-.company-logo {
-    height: 50px;
-    max-width: 150px;
-    object-fit: contain;
-    color: unset;
-}
-
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.carousel-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-    border: 2px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: var(--charcoal);
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.carousel-btn:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
-
-.cases-carousel { 
-    overflow: hidden; 
-}
-
-.cases-carousel {
-    max-width: 1200px; /* (386px * 2) + (20px gap) + some padding */
-    margin: 0 auto;
-}
-
-.cases-track { 
-    display: flex; 
-    transition: transform var(--transition-normal); 
-    width: max-content;
-    gap: 20px;
-}
-
-.cases-track .card { 
-    width: 550px;
-    flex-shrink: 0;
-    min-height: 520px;
-}
-</style>
 <body>
 <!-- Header Component -->
 <div id="header"></div>
@@ -281,7 +116,7 @@
                 <article class="article-card" data-category="insights">
                     <div class="article-image insights">
                         <div class="article-date">Case Study</div>
-                        <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
                     <div class="article-content">
                         <h4 class="article-title">Fra 5 Leverandører til Én Pålidelig Partner</h4>
@@ -300,7 +135,7 @@
                 <article class="article-card" data-category="insights">
                     <div class="article-image insights">
                         <div class="article-date">INNOVATION</div>
-                        <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
                     <div class="article-content">
                         <h4 class="article-title">Mennesker vs. Robotter i Facility Management</h4>
@@ -319,7 +154,7 @@
                 <article class="article-card" data-category="insights">
                     <div class="article-image insights">
                         <div class="article-date">TIPS & TRICKS</div>
-                        <img src="/images/article/ipad.jpg" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
                     <div class="article-content">
                         <h4 class="article-title">Location Guides: Et Værktøj til Konsistent Kvalitet</h4>
@@ -360,7 +195,7 @@
                 <div class="cases-track" id="casesTrack">
                     <div class="card bg-gradient-white text-center p-1">
                         <div class="company-logo-section">
-                            <img class="company-logo" src="/images/logos/adnami.png" alt="Handyman Services" width="640" height="640">
+                            <img class="company-logo" src="/images/logos/adnami.png" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="case-industry">Tech / Marketing</div>
                         <div class="case-content">
@@ -390,7 +225,7 @@
 
                     <div class="card bg-gradient-white text-center p-1">
                         <div class="company-logo-section">
-                            <img class="company-logo" src="" alt="Handyman Services" width="640" height="640">
+                            <img class="company-logo" src="" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="case-industry">Ejendomsmægling</div>
                         <div class="case-content">
@@ -420,7 +255,7 @@
 
                     <div class="card bg-gradient-white text-center p-1">
                         <div class="company-logo-section">
-                            <img class="company-logo" src="/images/logos/soho.png" alt="Handyman Services" width="640" height="640">
+                            <img class="company-logo" src="/images/logos/soho.png" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="case-industry">Coworking Space</div>
                         <div class="case-content">
@@ -450,7 +285,7 @@
 
                     <div class="card bg-gradient-white text-center p-1">
                         <div class="company-logo-section">
-                            <img class="company-logo" src="" alt="Handyman Services" width="640" height="640">
+                            <img class="company-logo" src="" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="case-content">
                             <div class="case-challenge">
@@ -484,8 +319,11 @@
 
     <!-- Footer Component -->
     <div id="footer"></div>
-    <!-- Component loader -->
-    <script src="../../js/components.js" defer></script>
+
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
+    <!-- Component Loader -->
+    <script src="/js/components.js" defer></script>
     <script>
     let currentCaseIndex = 0;
     const totalCases = 4;

@@ -3,74 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
     <title>DFMG - Om DFMG</title>
     <meta name="description" content="Mød teamet bag DFMG - den passionerede programmør der revolutionerer facility service med teknologi og personlig opmærksomhed.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
 
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-<style>
-.hero-image {
-    background: rgb(16 15 15 / 10%);
-    border: 1px solid rgba(255,255,255,0.2);
-    height: 400px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray);
-    font-size: 1rem;
-}
-
-. {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--primary), var(--success));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.3rem;
-    margin: 0 auto 1rem;
-}
-
-.team-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.team-stat {
-    background: rgba(255,255,255,0.1);
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-</style>
 <body>
     <!-- Header Component -->
     <div id="header"></div>
@@ -85,7 +45,7 @@
                     <div class="body text-gray">Hej, jeg hedder [Dit navn] og jeg er den administrerende direktør og grundlægger af DFMG. Som passioneret udvikler har jeg bygget et helt system, der gør facility service mere pålideligt, transparent og personligt.</div>
                     <div class="body text-gray">Jeg tror på at teknologi skal gøre mennesker bedre - ikke erstatte dem. Det er derfor DFMG kombinerer systematik med personlig opmærksomhed.</div>
                 </div>
-                <div class="hero-image">
+                <div style="background: rgb(16 15 15 / 10%); border: 1px solid rgba(255,255,255,0.2); height: 400px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 1rem;">
                     Grundlægger Portrait<br>Professional photo
                 </div>
             </div>
@@ -131,20 +91,20 @@
                     <p>Mine medarbejdere er ikke bare rengøringspersonale - de er professionelle serviceteknikere med deres eget login, omfattende træning og månedlig feedback.</p>
                     <p>Systemet giver dem klare retningslinjer og dokumentationsværktøjer, så de kan fokusere på at levere fantastisk service i stedet for at gætte sig til, hvad der skal gøres.</p>
                 </div>
-                <div class="team-stats">
-                    <div class="team-stat">
+                <div class="grid-2x2">
+                    <div class="stat">
                         <div class="stat-number">100%</div>
                         <div class="stat-label">Certificerede medarbejdere</div>
                     </div>
-                    <div class="team-stat">
+                    <div class="stat">
                         <div class="stat-number">7+</div>
                         <div class="stat-label">Aktive kunder</div>
                     </div>
-                    <div class="team-stat">
+                    <div class="stat">
                         <div class="stat-number">0</div>
                         <div class="stat-label">Minutter ventetid på svar</div>
                     </div>
-                    <div class="team-stat">
+                    <div class="stat">
                         <div class="stat-number">24/7</div>
                         <div class="stat-label">Systemovervågning</div>
                     </div>
@@ -207,7 +167,7 @@
                     <div class="body text-gray">Service handler ikke kun om opgaven - det handler om oplevelsen. Det menneskelige smil, samtalen, forståelsen. Det kan ingen robot levere.</div>
                     <div class="body text-gray">>Men hvis jeg tager fejl? Hvis robotter overtager alt? Så er vi også klar. Vi bygger allerede infrastrukturen og kundegrundlaget. Som passioneret programmør er jeg klar til at styre den robotflåde også.</div>
                 </div>
-                <div class="hero-image">
+                <div style="background: rgb(16 15 15 / 10%); border: 1px solid rgba(255,255,255,0.2); height: 400px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 1rem;">
                     Future Vision<br>Human + Tech illustration
                 </div>
             </div>
@@ -254,8 +214,11 @@
 
     <!-- Footer Component -->
     <div id="footer"></div>
+
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
     
-    <!-- Component loader -->
-    <script src="../../js/components.js" defer></script>
+    <!-- Component Loader -->
+    <script src="/js/components.js" defer></script>
 </body>
 </html>

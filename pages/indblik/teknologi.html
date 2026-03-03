@@ -3,113 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Vores Tilgang</title>
-    <meta name="description" content="Forstå hvordan DFMG leverer pålidelig facility service gennem systematik, teknologi og personlig opmærksomhed.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
+    <title>Loading...</title>
+    <meta name="description" content="">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
+
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-<style>
-
-    .list {
-        list-style: none;
-        margin-top: 1rem;
-    }
-
-    .list li {
-        margin-bottom: 0.5rem;
-        position: relative;
-        color: var(--gray);
-        padding-left: 1.5rem;
-    }
-
-    .list li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: var(--success);
-        font-weight: bold;
-    }
-
-    .step-number {
-        width: 60px;
-        height: 60px;
-        background: var(--charcoal);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin: 0 auto 1rem;
-    }
-
-
-
-
-    .metric-value {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: var(--success);
-        margin-bottom: 0.5rem;
-        text-align: center;
-    }
-
-    .metric-label {
-        color: var(--gray);
-        font-weight: 500;
-    }
-
-    .showcase-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        min-height: 500px;
-    }
-    
-    .showcase-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        position: relative;
-    }
-
-    .showcase-img {
-        width: 100%;
-        height: 200px;
-        background: rgba(255,255,255,0.1);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: rgba(255,255,255,0.7);
-        font-size: 0.9rem;
-        border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .showcase-img:nth-child(1) { transform: translateY(-5px); }
-    .showcase-img:nth-child(2) { transform: translateY(-25px); }
-    .showcase-img:nth-child(3) { transform: translateY(5px); }
-    .showcase-img:nth-child(4) { transform: translateY(25px); }
-
-</style>
 <body>
     <!-- Header Component -->
     <div id="header"></div>
@@ -249,7 +170,7 @@
                     <p>Systemet giver os øjeblikkelig adgang til al data, så når I ringer, får I svar med det samme i stedet for "jeg vender tilbage."</p>
                     <p>Det betyder også, at vi kan tilbyde fair priser baseret på faktiske data frem for gætværk.</p>
                 </div>
-                <div class="" style="display: flex; align-items: center; justify-content: center;">
+                <div class="" class="flex items-center justify-center">
                     Dashboard view<br>ERP System Interface
                 </div>
             </div>
@@ -267,7 +188,7 @@
                 </div>
                 
                 <div class="flex flex-2">
-                    <div class="flex flex-2" style="flex-direction: column; gap: 20px;">
+                    <div class="flex flex-2" class="flex-col gap-md">
                         <div class="card p-2 bg-gradient-white">
                             <h4><i class="fas fa-eye"></i> Fuldt Overblik</h4>
                             <p>Når I ringer med spørgsmål, kan jeg øjeblikkeligt se hvad der er sket, hvornår, og af hvem. Ingen "jeg vender tilbage" - kun konkrete svar med det samme.</p>
@@ -279,7 +200,7 @@
                         </div>
                     </div>
                     
-                    <div class="flex flex-2" style="flex-direction: column; gap: 20px;">
+                    <div class="flex flex-2" class="flex-col gap-md">
                         <div class="card p-2 bg-gradient-white">
                             <h4><i class="fas fa-shield-alt"></i> Kvalitetssikring</h4>
                             <p>Medarbejdere dokumenterer deres eget arbejde med tjeklister og billeder. Standardiserede processer sikrer samme høje kvalitet, uanset hvem der udfører opgaven.</p>
@@ -362,8 +283,11 @@
 
     <!-- Footer Component -->
     <div id="footer"></div>
+
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
     
-    <!-- Component loader -->
-    <script src="../../js/components.js" defer></script>
+    <!-- Component Loader -->
+    <script src="/js/components.js" defer></script>
 </body>
 </html>

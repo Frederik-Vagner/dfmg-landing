@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
-    <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
+    <title>DFMG - Tak for din besked</title>
+    <meta name="description" content="Tak for din henvendelse til DFMG. Vi vender tilbage hurtigst muligt.">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
-    <meta name="theme-color" content="var(--text-primary)">
+    <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
 
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
 <body>
     <!-- Header Component -->
@@ -39,18 +45,18 @@
                 
                 <h1 class="text-charcoal">Tak for din henvendelse!</h1>
                 
-                <p class="body text-gray" style="margin: 2rem 0;">
+                <p class="body text-gray" class="my-2">
                     Vi har modtaget din forespørgsel og vender tilbage med et skræddersyet tilbud inden for 24 timer.
                 </p>
                 
-                <div style="margin: 3rem 0;">
+                <div class="my-3">
                     <a href="/" class="btn primary large">
-                        <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                        <i class="fas fa-home" class="mr-05"></i>
                         Tilbage til forsiden
                     </a>
                 </div>
                 
-                <div class="card bg-gradient-white p-2" style="margin-top: 3rem;">
+                <div class="card bg-gradient-white p-2" class="mt-3">
                     <h3 class="text-charcoal">Hvad sker der nu?</h3>
                     <ul class="feature-list list-success" style="text-align: left; max-width: 400px; margin: 0 auto;">
                         <li><i class="fas fa-envelope"></i> Vi gennemgår din forespørgsel</li>
@@ -65,7 +71,10 @@
     <!-- Footer Component -->
     <div id="footer"></div>
 
-    <!-- Component loader -->
-    <script src="../js/components.js" defer></script>
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
+
+    <!-- Component Loader -->
+    <script src="/js/components.js" defer></script>
 </body>
 </html>

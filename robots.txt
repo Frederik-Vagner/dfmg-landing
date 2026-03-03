@@ -1,0 +1,13 @@
+# robots.txt for DFMG Landing Site
+
+User-agent: *
+Allow: /
+
+# Disallow admin and config directories
+Disallow: /config/
+
+# Sitemap location
+Sitemap: https://dfmg.dk/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

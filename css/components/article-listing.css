@@ -1,0 +1,370 @@
+/* ========================================
+   ARTICLE LISTING COMPONENT
+   Used by: indblik.html, nyheder.html
+   ======================================== */
+
+/* Article Card Base Styles */
+.article-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.article-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-date {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #344767;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.article-content {
+    padding: 1.5rem;
+}
+
+.article-title {
+    color: #344767;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: unset;
+}
+
+.article-excerpt {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.read-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Article Category Styles */
+.article-category {
+    color: #4285f4;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.article-category.sustainability { color: #22c55e; }
+.article-category.innovation { color: #4285f4; }
+.article-category.insights { color: #8b5cf6; }
+.article-category.tips { color: #f59e0b; }
+.article-category.cases { color: #ef4444; }
+
+/* Category-Specific Image Gradients */
+.article-image.sustainability {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.article-image.innovation {
+    background: linear-gradient(135deg, #4285f4, #1d4ed8);
+}
+
+.article-image.insights {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.article-image.tips {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.article-image.cases {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* Featured Article */
+.featured-article {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    min-height: 200px;
+}
+
+.featured-article[data-featured-category="all"] {
+    display: grid;
+}
+
+.featured-image {
+    background: linear-gradient(135deg, #4285f4, #22c55e);
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #344767;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    color: #64748b;
+    font-size: 0.9rem;
+    justify-content: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+}
+
+.featured-read-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.featured-category {
+    color: #4285f4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.featured-title {
+    font-size: 1.5rem;
+    color: #344767;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.featured-excerpt {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Filter & Search */
+.filter-section {
+    background: white;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-top: 1px solid #e2e8f0;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 10px 0;
+}
+
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.small.filter-tab:not(.active) {
+    background: var(--bg-gradient-white);
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.small.filter-tab:not(.active):hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    padding: 0 10px;
+    min-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    border-color: #4285f4;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.search-bar i {
+    color: #64748b;
+    margin-right: 10px;
+}
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Case Study Cards */
+.case-company {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.case-content {
+    padding: 1.5rem;
+}
+
+.case-challenge h4 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.case-challenge {
+    margin-bottom: 1rem;
+}
+
+.case-results {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.case-results h5 {
+    color: var(--success);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Metrics Display */
+.result-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--success);
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Company Logo */
+.company-logo {
+    height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+    color: unset;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(66, 133, 244, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Button States */
+.primary.small.coming-soon {
+    color: #9ca3af;
+    cursor: default;
+}
+
+/* Featured Section Layout */
+.featured-section {
+    margin-bottom: 2.5rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .featured-article {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        min-width: 100%;
+    }
+}

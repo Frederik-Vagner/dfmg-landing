@@ -1,0 +1,186 @@
+/* ========================================
+   CALCULATOR COMPONENT
+   Used by: prisberegner.html
+   ======================================== */
+
+/* Calculator-specific reset */
+#price * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Calculator page body */
+.calculator-page {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #344767;
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+/* Calculator container */
+.calculator-container {
+    max-width: none;
+    margin: 0 auto;
+    padding: 1rem;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+/* Three Column Layout */
+.calculator-content {
+    display: grid;
+    grid-template-columns: 0.8fr 2.5fr 1fr;
+    gap: 0.5rem;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.calculator-content h2 {
+    padding-left: 0.5rem;
+}
+
+/* Column styling */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0.5rem;
+    padding-top: 0;
+}
+
+/* Info card styling */
+.info-card {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Calculator-specific button override */
+#price .btn {
+    padding: 6px 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+#price .btn.active {
+    background: #344767;
+    color: white;
+}
+
+/* Disclaimer text */
+.disclaimer {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Calculator-specific flex */
+#price .flex {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Form input override */
+#price .form-input {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    width: 80px;
+    text-align: center;
+}
+
+/* Planning Table */
+.planning-table td {
+    padding: 0.15rem 0.5rem;
+}
+
+.planning-table td .flex {
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.planning-table td:last-child {
+    text-align: right;
+}
+
+/* Service Tasks Grid */
+.service-tasks {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 0.25rem 0.5rem;
+}
+
+.task-item {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+    align-items: center;
+}
+
+.task-item:hover {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #344767;
+    cursor: pointer;
+}
+
+/* Price Section */
+.price-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.price-total {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #344767;
+}
+
+.price-total-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#monthly-price {
+    color: #344767;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Typography overrides */
+#price th,
+#price td,
+#price label,
+#price span {
+    font-size: 0.85rem;
+}

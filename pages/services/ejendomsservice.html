@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
     <title>DFMG - Ejendomsservice</title>
-    <meta name="description" content="Professionel vedligeholdelse og pleje af ejendomme">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+    <meta name="description" content="Komplet ejendomsservice til erhvervsejendomme og boligforeninger. Professionel drift og vedligehold.">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
+
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-
-<style>
-</style>
-
 <body>
 <!-- Header Component -->
 <div id="header"></div>
@@ -68,7 +70,7 @@
                 </div>
             </div>
             
-            <div style="align-content: center;">
+            <div class="content-center">
                 <div class="grid-3x2" style="gap: 1rem; justify-content: center">
                     <div class="card p-1 bg-gradient-success text-white">Tag & Tagrender</div>
                     <div class="card p-1 bg-gradient-success text-white">Fællesarealer</div>
@@ -93,8 +95,8 @@
         
         <div class="grid-2x3">
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-            <div class="card-horizontal" style="justify-content: center;">
-                <i class="fas fa-building text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+            <div class="card-horizontal" class="justify-center">
+                <i class="fas fa-building text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Fællesarealer & Opgange</h4>
                 </div>
                 <p class="text-gray bot-space">erhvervsrengøring og vedligeholdelse af alle fællesarealer inkl. trappeopgange, gange og receptionsområder.</p>
@@ -108,8 +110,8 @@
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <div class="card-horizontal" style="justify-content: center;">
-                    <i class="fas fa-door-open text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <div class="card-horizontal" class="justify-center">
+                    <i class="fas fa-door-open text-success" class="text-6xl mb-1"></i>
                     <h4 class="text-charcoal">Elevatorer & Tekniske Rum</h4>
                 </div>
                 <p class="text-gray bot-space">Specialiseret rengøring og vedligeholdelse af elevatorer, maskinrum og andre tekniske faciliteter.</p>
@@ -123,8 +125,8 @@
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-            <div class="card-horizontal" style="justify-content: center;">
-                <i class="fas fa-tree text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+            <div class="card-horizontal" class="justify-center">
+                <i class="fas fa-tree text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Udendørs Områder</h4>
                 </div>
                 <p class="text-gray bot-space">Pleje af grønne områder, parkeringspladser, indgange og andre udendørs faciliteter omkring ejendommen.</p>
@@ -138,8 +140,8 @@
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-            <div class="card-horizontal" style="justify-content: center;">
-                <i class="fas fa-tools text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+            <div class="card-horizontal" class="justify-center">
+                <i class="fas fa-tools text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Vedligeholdelse & Reparationer</h4>
                 </div>
                 <p class="text-gray bot-space">Handyman services og mindre reparationer der holder ejendommen i perfekt stand året rundt.</p>
@@ -153,8 +155,8 @@
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-            <div class="card-horizontal" style="justify-content: center;">
-                <i class="fas fa-spray-can text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+            <div class="card-horizontal" class="justify-center">
+                <i class="fas fa-spray-can text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Facade & Vinduesrens</h4>
                 </div>
                 <p class="text-gray bot-space">erhvervsrengøring af facade, vinduer og eksterne overflader der sikrer et flot førstehåndsindtryk.</p>
@@ -168,8 +170,8 @@
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-            <div class="card-horizontal" style="justify-content: center;">
-                <i class="fas fa-shield-alt text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+            <div class="card-horizontal" class="justify-center">
+                <i class="fas fa-shield-alt text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Sikkerhed & Overvågning</h4>
                 </div>
                 <p class="text-gray bot-space">Overvågning af ejendom og sikkerhedstjenester der giver beboere og ejere tryghed og ro i sindet.</p>
@@ -246,37 +248,37 @@
             
             <div class="grid-2x3">
                 <div class="card p-2 text-center">
-                    <i class="fas fa-clock text-success" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <i class="fas fa-clock text-success" class="text-7xl mb-2"></i>
                     <h4>24/7 Beredskab</h4>
                     <p>Akut service og nødreparationer hele døgnet. Vi er altid klar til at hjælpe når der opstår uventede problemer</p>
                 </div>
                 
                 <div class="card p-2 text-center">
-                    <i class="fas fa-leaf text-success" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <i class="fas fa-leaf text-success" class="text-7xl mb-2"></i>
                     <h4>Miljøvenlige Løsninger</h4>
                     <p>Vi bruger miljøcertificerede produkter og bæredygtige metoder der beskytter både miljøet og beboernes sundhed</p>
                 </div>
                 
                 <div class="card p-2 text-center">
-                    <i class="fas fa-mobile-alt text-success" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <i class="fas fa-mobile-alt text-success" class="text-7xl mb-2"></i>
                     <h4>Digital Platform</h4>
                     <p>Moderne teknologi giver jer fuld transparens og kontrol med rapportering, planlægning og kommunikation</p>
                 </div>
                 
                 <div class="card p-2 text-center">
-                    <i class="fas fa-award text-success" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <i class="fas fa-award text-success" class="text-7xl mb-2"></i>
                     <h4>Certificerede Specialister</h4>
                     <p>Vores team består af uddannede fagfolk med certificeringer inden for VVS, el-arbejde og andre specialområder</p>
                 </div>
                 
                 <div class="card p-2 text-center">
-                    <i class="fas fa-chart-line text-success" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <i class="fas fa-chart-line text-success" class="text-7xl mb-2"></i>
                     <h4>Værdioptimering</h4>
                     <p>Proaktiv vedligeholdelse der forlænger levetiden på jeres ejendom og opretholder eller øger ejendomsværdien</p>
                 </div>
                 
                 <div class="card p-2 text-center">
-                    <i class="fas fa-handshake text-success" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <i class="fas fa-handshake text-success" class="text-7xl mb-2"></i>
                     <h4>Troværdig Partner</h4>
                     <p>Over 15 års erfaring og hundredvis af tilfredse kunder gør os til Danmarks mest pålidelige ejendomspartner</p>
                 </div>
@@ -321,14 +323,14 @@
                     </div>
                 </div>
                 
-                <div style="align-content: center;">
-                    <div class="p-2 text-center grid" style="justify-content: center; align-content: end;">
-                        <div class="card p-1 bg-gradient-metal bot-space"><h4 style="margin:unset;">24/7 Overvågning</h4></div>
-                        <div class="card p-1 bg-gradient-metal bot-space"><h4 style="margin:unset;">Preventiv Vedligeholdelse</h4></div>
-                        <div class="card p-1 bg-gradient-metal bot-space"><h4 style="margin:unset;">Digital Rapportering</h4></div>
-                        <div class="card p-1 bg-gradient-metal bot-space"><h4 style="margin:unset;">Beboerservice</h4></div>
-                        <div class="card p-1 bg-gradient-metal bot-space"><h4 style="margin:unset;">Kvalitetssikring</h4></div>
-                        <div class="card p-1 bg-gradient-metal"><h4 style="margin:unset;">Omkostningsoptimering</h4></div>
+                <div class="content-center">
+                    <div class="p-2 text-center grid" class="justify-center content-end">
+                        <div class="card p-1 bg-gradient-metal bot-space"><h4 class="m-0">24/7 Overvågning</h4></div>
+                        <div class="card p-1 bg-gradient-metal bot-space"><h4 class="m-0">Preventiv Vedligeholdelse</h4></div>
+                        <div class="card p-1 bg-gradient-metal bot-space"><h4 class="m-0">Digital Rapportering</h4></div>
+                        <div class="card p-1 bg-gradient-metal bot-space"><h4 class="m-0">Beboerservice</h4></div>
+                        <div class="card p-1 bg-gradient-metal bot-space"><h4 class="m-0">Kvalitetssikring</h4></div>
+                        <div class="card p-1 bg-gradient-metal"><h4 class="m-0">Omkostningsoptimering</h4></div>
                     </div>
                 </div>
             </div>
@@ -346,10 +348,10 @@
                 <p class="cta-proof">Tillidspartner for <strong>ejendomme og ejendomsadministration i Storkøbenhavn</strong>.</p>
                 <div class="flex">
                     <a href="/pages/kontakt.html" class="btn success medium">
-                        <i class="fas fa-calendar-check" style="margin-right: 0.5rem;"></i>Book en gratis gennemgang
+                        <i class="fas fa-calendar-check" class="mr-05"></i>Book en gratis gennemgang
                     </a>
                     <a href="/pages/kontakt.html" class="btn white medium">
-                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt os
+                        <i class="fas fa-envelope" class="mr-05"></i>Kontakt os
                     </a>
                 </div>
             </div>
@@ -363,8 +365,11 @@
 <!-- Footer Component -->
 <div id="footer"></div>
 
-<!-- Component loader -->
-<script src="../../js/components.js" defer></script>
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
+
+<!-- Component Loader -->
+<script src="/js/components.js" defer></script>
 
 </body>
 </html>

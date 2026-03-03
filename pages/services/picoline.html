@@ -3,90 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
     <title>DFMG - Piccoline Service</title>
-    <meta name="description" content="Jeres kontor's usynlige hjælper">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+    <meta name="description" content="Jeres kontor's usynlige hjælper. Piccoline service til erhverv.">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components/timeline.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
+
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-
-<style>
-.time-badge {
-    background: linear-gradient(135deg, var(--success), #16a34a);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    min-width: 60px;
-    text-align: center;
-}
-
-.time-task {
-    flex: 1;
-    color: var(--charcoal);
-    font-weight: 500;
-}
-
-.tab-button {
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #64748b;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-}
-
-.tab-button.active {
-    background: var(--success);
-    color: white;
-    border-color: var(--success);
-}
-
-.tab-button:hover:not(.active) {
-    border-color: var(--success);
-    background: #f0fdf4;
-}
-.services-content {
-    display: none;
-}
-
-.services-content.active {
-    display: block;
-}
-
-.column-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem auto;
-    font-size: 2rem;
-}
-</style>
-
 <body>
 <!-- Header Component -->
 <div id="header"></div>
@@ -101,28 +46,28 @@
         </div>
         <div class="flex bot-space2">
             <div class="card p-2 bg-gradient-white text-center">
-                <i class="fas fa-clock text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-clock text-success" class="text-6xl mb-1"></i>
                 <h3 class="text-charcoal">Møder først</h3>
-                <p style="font-size: 0.9rem; opacity: 0.9;">Klargør kontoret før medarbejderne ankommer</p>
+                <p class="text-base opacity-90">Klargør kontoret før medarbejderne ankommer</p>
             </div>
             <div class="card p-2 bg-gradient-white text-center">
-                <i class="fas fa-coffee text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-coffee text-success" class="text-6xl mb-1"></i>
                 <h3 class="text-charcoal">Kaffe klar</h3>
-                <p style="font-size: 0.9rem; opacity: 0.9;">Sørger for at kaffemaskinen er klar til dagens første kop</p>
+                <p class="text-base opacity-90">Sørger for at kaffemaskinen er klar til dagens første kop</p>
             </div>
             <div class="card p-2 bg-gradient-white text-center">
-                <i class="fas fa-utensils text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-utensils text-success" class="text-6xl mb-1"></i>
                 <h3 class="text-charcoal">Frokost service</h3>
-                <p style="font-size: 0.9rem; opacity: 0.9;">Klargør og rydder op efter fælles måltider</p>
+                <p class="text-base opacity-90">Klargør og rydder op efter fælles måltider</p>
             </div>
             <div class="card p-2 bg-gradient-white text-center">
-                <i class="fas fa-tasks text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-tasks text-success" class="text-6xl mb-1"></i>
                 <h3 class="text-charcoal">Ad hoc opgaver</h3>
-                <p style="font-size: 0.9rem; opacity: 0.9;">Løser de uventede opgaver der opstår i løbet af dagen</p>
+                <p class="text-base opacity-90">Løser de uventede opgaver der opstår i løbet af dagen</p>
             </div>
         </div>
             
-        <div class="flex" style="gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <div class="flex gap-1 flex-wrap justify-center">
             <a href="#services" class="btn secondary large">
                 <i class="fas fa-arrow-down"></i>
                 Se Vores Services
@@ -159,7 +104,7 @@
             <div>
                 <div class="card p-2 bg-gradient-white text-center">
                     <h3>En Typisk Piccoline Dag</h3>
-                    <div class="grid" style="gap: 1rem">
+                    <div class="grid gap-1">
                         <div class="card p-1 bg-gradient-white flex">
                             <div class="time-badge">07:30</div>
                             <div class="time-task">Ankommer og tænder lys & kaffe</div>
@@ -200,16 +145,16 @@
             <p class="body text-gray">Vores piccoliner håndterer både daglige rutineopgaver og uforudsete behov, så jeres kontor altid fungerer optimalt</p>
         </div>
         
-        <div class="flex space1" style="justify-content: center; gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap;">
+        <div class="flex space1" class="justify-center gap-2 mb-4 flex-wrap">
             <div class="tab-button active" onclick="showServices('daily')">Daglige Opgaver</div>
             <div class="tab-button" onclick="showServices('weekly')">Ugentlige Opgaver</div>
             <div class="tab-button" onclick="showServices('adhoc')">Ad Hoc Support</div>
         </div>
         
-        <div class="services-content active" id="daily">
+        <div class="toggle-content active" id="daily">
             <div class="grid-2x2">
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-broom text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-broom text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Rengøring & Hygiejne</h3>
                     <p class="text-gray bot-space">Daglig rengøring af toilet, køkken og fællesområder for at sikre et rent og sundt arbejdsmiljø.</p>
                     <ul class="feature-list list-success">
@@ -222,7 +167,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-utensils text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-utensils text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Frokost & Måltider</h3>
                     <p class="text-gray bot-space">Klargøring og oprydning efter fælles måltider, så medarbejderne kan nyde deres pause.</p>
                     <ul class="feature-list list-success">
@@ -235,7 +180,7 @@
                 </div>
                 
                <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-coffee" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-coffee" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Kaffe & Drikkevarer</h3>
                     <p class="text-gray bot-space">Sørger for at kaffemaskinen altid er klar og at der er friske drikkevarer til rådighed.</p>
                     <ul class="feature-list list-success">
@@ -248,7 +193,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-thermometer-half" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-thermometer-half" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Faciliteter & Miljø</h3>
                     <p class="text-gray bot-space">Kontrol og justering af kontorets fysiske miljø for optimal komfort og funktionalitet.</p>
                     <ul class="feature-list list-success">
@@ -262,10 +207,10 @@
             </div>
         </div>
         
-        <div class="services-content" id="weekly">
+        <div class="toggle-content" id="weekly">
             <div class="grid-2x2">
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-boxes" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-boxes" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Lager & Forsyninger</h3>
                     <p class="text-gray bot-space">Ugentlig kontrol og genbestilling af kontorforsyninger og hygiejneprodukter.</p>
                     <ul class="feature-list list-success">
@@ -278,7 +223,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-seedling" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-seedling" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Planter & Dekorationer</h3>
                     <p class="text-gray bot-space">Pleje af planter og vedligeholdelse af kontorets æstetiske udtryk.</p>
                     <ul class="feature-list list-success">
@@ -291,7 +236,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-tools" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-tools" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Vedligeholdelse & Tjek</h3>
                     <p class="text-gray bot-space">Grundig gennemgang af faciliteter og mindre vedligeholdelsesopgaver.</p>
                     <ul class="feature-list list-success">
@@ -304,7 +249,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-calendar-alt" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-calendar-alt" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Event Support</h3>
                     <p class="text-gray bot-space">Forberedelse og support til møder, events og særlige arrangementer.</p>
                     <ul class="feature-list list-success">
@@ -318,10 +263,10 @@
             </div>
         </div>
         
-        <div class="services-content" id="adhoc">
+        <div class="toggle-content" id="adhoc">
             <div class="grid-2x2">
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-hand-holding-heart" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-hand-holding-heart" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Personlig Assistance</h3>
                     <p class="text-gray bot-space">Små personlige opgaver der gør medarbejdernes hverdag lettere.</p>
                     <ul class="feature-list list-success">
@@ -334,7 +279,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-box-open" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-box-open" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Organisering & Oprydning</h3>
                     <p class="text-gray bot-space">Organisering af lager, depot og andre opbevaringsområder efter behov.</p>
                     <ul class="feature-list list-success">
@@ -347,7 +292,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-users" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-users" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Møde & Gæste Service</h3>
                     <p class="text-gray bot-space">Klargøring af te, kaffe og vand til kundemøder og særlige lejligheder.</p>
                     <ul class="feature-list list-success">
@@ -360,7 +305,7 @@
                 </div>
                 
                 <div class="card p-2 bg-gradient-white">
-                    <i class="fas fa-exclamation-triangle" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-exclamation-triangle" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Akut Support</h3>
                     <p class="text-gray bot-space">Hurtig reaktion på uventede situationer og akutte behov.</p>
                     <ul class="feature-list list-success">
@@ -381,45 +326,45 @@
     <div class="container">
         <div class="card p-4 bg-gradient-white border-top-success text-center bot-space2">
             <div class="badge">AD HOC OPGAVER</div>
-            <h3 class="text-charcoal" style="font-size: 2rem; font-weight: 600; margin-bottom: 1.5rem;">Hvad Er Ad Hoc Opgaver?</h3>
+            <h3 class="text-charcoal font-semibold" style="font-size: 2rem; margin-bottom: 1.5rem;">Hvad Er Ad Hoc Opgager?</h3>
             <p class="text-gray" style="font-size: 1.1rem; line-height: 1.6; max-width: 700px; margin: 0 auto;">Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
         </div>
         
         <div class="grid-2x3">
             <div class="card p-1 bg-gradient-white">
-                <i class="fas fa-box-open" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Rydde op i depotrummet</h4>
-                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
+                <i class="fas fa-box-open" class="text-6xl mb-1"></i>
+                <h4 class="text-charcoal" class="text-xl font-semibold mb-1">Rydde op i depotrummet</h4>
+                <p class="text-gray" class="leading-normal text-md">Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
             </div>
             
             <div class="card p-1 bg-gradient-white">
-                <i class="fas fa-mug-hot" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Klargøre til kundemøde</h4>
-                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
+                <i class="fas fa-mug-hot" class="text-6xl mb-1"></i>
+                <h4 class="text-charcoal" class="text-xl font-semibold mb-1">Klargøre til kundemøde</h4>
+                <p class="text-gray" class="leading-normal text-md">Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
             </div>
             
             <div class="card p-1 bg-gradient-white">
-                <i class="fas fa-band-aid" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Hente plastre i butikken</h4>
-                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
+                <i class="fas fa-band-aid" class="text-6xl mb-1"></i>
+                <h4 class="text-charcoal" class="text-xl font-semibold mb-1">Hente plastre i butikken</h4>
+                <p class="text-gray" class="leading-normal text-md">Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
             </div>
             
             <div class="card p-1 bg-gradient-white">
-                <i class="fas fa-seedling" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Vande planterne</h4>
-                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
+                <i class="fas fa-seedling" class="text-6xl mb-1"></i>
+                <h4 class="text-charcoal" class="text-xl font-semibold mb-1">Vande planterne</h4>
+                <p class="text-gray" class="leading-normal text-md">Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
             </div>
             
             <div class="card p-1 bg-gradient-white">
-                <i class="fas fa-tools" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Mindre reparationer</h4>
-                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
+                <i class="fas fa-tools" class="text-6xl mb-1"></i>
+                <h4 class="text-charcoal" class="text-xl font-semibold mb-1">Mindre reparationer</h4>
+                <p class="text-gray" class="leading-normal text-md">Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
             </div>
             
             <div class="card p-1 bg-gradient-white">
-                <i class="fas fa-shopping-bag" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h4 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Akutte indkøb</h4>
-                <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Når der pludselig mangler noget vigtigt til kontoret eller til et møde, håndterer piccolinen indkøbet hurtigt.</p>
+                <i class="fas fa-shopping-bag" class="text-6xl mb-1"></i>
+                <h4 class="text-charcoal" class="text-xl font-semibold mb-1">Akutte indkøb</h4>
+                <p class="text-gray" class="leading-normal text-md">Når der pludselig mangler noget vigtigt til kontoret eller til et møde, håndterer piccolinen indkøbet hurtigt.</p>
             </div>
         </div>
     </div>
@@ -435,10 +380,10 @@
                 <div class="body text-white ">Se hvordan en dedikeret piccoline transformerer jeres kontor fra en arbejdsplads til et velfungerende miljø</div>
             </div>
             
-            <div class="flex flex-2" style="gap: 4rem; margin-top: 4rem;">
+            <div class="flex flex-2 gap-4" style="margin-top: 4rem;">
                 <div class="card bg-gradient-metal p-2">
                     <div class="text-center bot-space">
-                        <div class="column-icon red">
+                        <div class="icon-circle red">
                             <i class="fas fa-times"></i>
                         </div>
                         <h4 class="text-white" style="font-size: 1.3rem; font-weight: 600;">Uden Piccoline</h4>
@@ -473,7 +418,7 @@
                 
                 <div class="card bg-gradient-metal p-2">
                     <div class="text-center bot-space2">
-                        <div class="column-icon success bot-space">
+                        <div class="icon-circle success bot-space">
                             <i class="fas fa-check"></i>
                         </div>
                         <h3 class="text-white space1">Med DFMG Piccoline</h3>
@@ -525,10 +470,10 @@
                     "Vores DFMG piccoline har virkelig ændret hverdagen på kontoret. Nu kan vi fokusere på vores kerneopgaver, mens hun sørger for at alt det praktiske bare fungerer. Kaffen er klar når vi kommer, frokosten kører gnidningsløst, og vi behøver aldrig bekymre os om de små ting der ellers kan forstyrre arbejdsdagen."
                 </div>
                 <div class="card-horizontal">
-                    <img class="author-image" src="/images/people/.jpeg" alt="Handyman Services" width="640" height="640" style="width: 60px; height: 60px; border-radius: 50%;">
+                    <img class="author-image" src="/images/people/.jpeg" alt="Handyman Services" width="640" height="640" class="avatar" loading="lazy" decoding="async">
                     <div>
-                        <h5 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.25rem;"></h5>
-                        <span class="text-gray" style="font-size: 0.9rem;">Facility Officer, SOHO</span>
+                        <h5 class="text-charcoal font-semibold" style="margin-bottom: 0.25rem;"></h5>
+                        <span class="text-gray text-base">Facility Officer, SOHO</span>
                     </div>
                 </div>
             </div>
@@ -567,10 +512,10 @@
                 <p class="cta-proof">Populær løsning hos <strong>kontorfællesskaber og kreative miljøer i København</strong>.</p>
                 <div class="flex">
                     <a href="/pages/kontakt.html" class="btn success medium">
-                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Få et tilbud
+                        <i class="fas fa-phone" class="mr-05"></i>Få et tilbud
                     </a>
                     <a href="/pages/kontakt.html" class="btn white medium">
-                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt os
+                        <i class="fas fa-envelope" class="mr-05"></i>Kontakt os
                     </a>
                 </div>
             </div>
@@ -584,13 +529,16 @@
 <!-- Footer Component -->
 <div id="footer"></div>
 
-<!-- Component loader -->
-<script src="../../js/components.js" defer></script>
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
+
+<!-- Component Loader -->
+<script src="/js/components.js" defer></script>
 
 <script>
 function showServices(serviceType) {
     // Hide all service contents
-    document.querySelectorAll('.services-content').forEach(content => {
+    document.querySelectorAll('.toggle-content').forEach(content => {
         content.classList.remove('active');
     });
     

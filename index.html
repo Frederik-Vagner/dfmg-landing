@@ -3,288 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMG - Facility Service</title>
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
+    <title>DFMG - Facility Service & Ejendomsservice</title>
     <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-<style>
-
-/* HERO */
-.hero { 
-    min-height: 80vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100%; /* Zooms in - try 110%, 130%, 140% etc. */
-    background-position: 0% center;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
-}
-
-.hero .container {
-    position: relative;
-    z-index: 3;
-    top: -2.5rem;
-}
-
-.hero .text-charcoal {
-    color: white;
-}
-
-.hero .text-gray {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* ABOUT */
-.photos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(3, 150px);
-    gap: 15px;
-    justify-content: center;
-}
-
-.photo {
-    width: 150px;
-    height: 150px;
-    border-radius: var(--radius-normal);
-    background: #ddd;
-}
-
-.photos-grid-2x3 .photo:nth-child(1) { grid-column: 1; grid-row: 1; }
-.photos-grid-2x3 .photo:nth-child(2) { grid-column: 2; grid-row: 1; }
-.photos-grid-2x3 .photo:nth-child(3) { grid-column: 1; grid-row: 2; }
-.photos-grid-2x3 .photo:nth-child(4) { grid-column: 2; grid-row: 2; }
-.photos-grid-2x3 .photo:nth-child(5) { grid-column: 1; grid-row: 3; }
-.photos-grid-2x3 .photo:nth-child(6) { grid-column: 2; grid-row: 3; }
-
-
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius-normal);
-}
-
-.services-carousel { 
-    overflow: hidden; 
-}
-.services-track { 
-    display: flex; 
-    transition: transform var(--transition-normal); 
-    width: max-content;
-    gap: 20px;
-}
-
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.carousel-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-    border: 2px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: var(--charcoal);
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.carousel-btn:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
-
-.service-card { 
-    width: 386px;
-    flex-shrink: 0;
-    height: 520px;
-    background: white; 
-    border-radius: var(--radius-normal); 
-    box-shadow: var(--shadow-lg); 
-    border: var(--border-light);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.service-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.service-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
-}
-
-.service-card h3,
-.service-card p {
-    position: relative;
-    z-index: 3;
-    color: white;
-    margin-bottom: 0.5rem;
-    padding: 0 1.5rem;
-    top: 2rem;
-    
-}
-
-.service-card h3 {
-    margin-bottom: 0.75rem;
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
-    min-height: 1.8rem;
-}
-
-.service-card p {
-    margin: 0 0 1.5rem 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    min-height: 2.66rem;
-}
-
-
-.client-logos {
-    margin-top: 3rem;
-    text-align: center;
-}
-
-.client-logo {
-    height: 40px;
-    max-width: 120px;
-    object-fit: contain;
-    opacity: 0.7;
-    transition: opacity var(--transition-normal);
-    filter: grayscale(100%);
-}
-
-.company-logo-section {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: var(--border-lighter);
-}
-
-.company-logo {
-    height: 50px;
-    max-width: 150px;
-    object-fit: contain;
-}
-
-.section-intro {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.testimonial {
-    background: white;
-    padding: 2.5rem;
-    border-radius: var(--radius-normal);
-    box-shadow: var(--shadow-lg);
-    border: var(--border-lighter);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.testimonial blockquote {
-    font-size: 1.1rem;
-    color: var(--gray);
-    line-height: 1.6;
-    margin: 0 0 1.5rem 0;
-    font-style: italic;
-    position: relative;
-}
-
-.author-image {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--radius-circle);
-    object-fit: cover;
-    border: 3px solid #f1f5f9;
-}
-
-.service-card h3,
-.service-card p {
-    text-align: left;
-}
-
-.testimonial .btn {
-    margin-top: 1.5rem;
-    align-self: flex-start;
-    justify-content: center;
-    display: grid;
-}
-
-</style>
 <body>
 
     <!-- Header Component -->
@@ -298,24 +43,17 @@
             <div class="text-center">
                 <div class="title text-charcoal">All-In-One Facility Service</div>
                 <div class="body text-gray">Rengøring, vedligeholdelse og produkter til jeres facility</div>
-                <div class="flex space1" style="justify-content: center;">
+                <div class="flex space1 justify-center">
                     <a href="/pages/services/facility.html" class="btn success medium">Komplet Facility Service</a>
                     <a href="/pages/services/services.html" class="btn secondary medium">Udforsk Løsninger</a>
                 </div>
-                <!-- 
-                <div class="body text-gray space1">Betroet af</div>
-                <div class="">
-                    <img src="images/logos/soho.png" alt="SOHO" class="client-logo">
-                    <img src="images/logos/adnami.png" alt="Adnami" class="client-logo">
-                </div>
-                -->
             </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 3rem;">
+            <div class="text-center mb-3">
                 <div class="subtitle text-primary">OM DFMG</div>
             </div>
             
@@ -329,22 +67,22 @@
                 <div class="photos-column">
                     <div class="photos-grid">
                         <div class="photo">
-                            <img src="/images/people/diya.png" alt="Handyman Services" width="640" height="640">
+                            <img src="/images/people/diya.png" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="photo">
-                            <img src="/images/people/frederik.webp" alt="Handyman Services" width="640" height="640">
+                            <img src="/images/people/frederik.webp" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="photo">
-                            <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640">
+                            <img src="/images/people/raman.png" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="photo">
-                            <img src="/images/people/vishwas3.jpg" alt="Handyman Services" width="640" height="640">
+                            <img src="/images/people/vishwas3.jpg" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="photo">
-                            <img src="/images/people/anjal.jpg" alt="Handyman Services" width="640" height="640">
+                            <img src="/images/people/anjal.jpg" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         </div>
                         <div class="photo">
-                            <img src="/images/people/pabitra2.webp" alt="Handyman Services" width="640" height="640" style="object-position: bottom;">
+                            <img src="/images/people/pabitra2.webp" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async" class="object-bottom">
                         </div>
                     </div>
                 </div>
@@ -372,32 +110,32 @@
             <div class="services-carousel">
                 <div class="services-track" id="servicesTrack">
                     <a href="/pages/services/rengøring.html" class="service-card">
-                        <img src="/images/service/cleaning.jpg" alt="Erhvervsrengøring" width="640" height="640">
+                        <img src="/images/service/cleaning.jpg" alt="Erhvervsrengøring" width="640" height="640" loading="lazy" decoding="async">
                         <h3>Erhvervsrengøring</h3>
                         <p>Kontorer, skoler, restauranter og eventlokaler</p>
                     </a>
                     <a href="/pages/services/produkter.html" class="service-card">
-                        <img src="/images/service/delivery.jpg" alt="Supplies & Produkter" width="640" height="640">
+                        <img src="/images/service/delivery.jpg" alt="Supplies & Produkter" width="640" height="640" loading="lazy" decoding="async">
                         <h3>Supplies & Produkter</h3>
                         <p>Hygiejneprodukter og office supplies</p>
                     </a>
                     <a href="/pages/services/handyman.html" class="service-card">
-                        <img src="/images/service/handyman.jpg" alt="Handyman Services" width="640" height="640">
+                        <img src="/images/service/handyman.jpg" alt="Handyman Services" width="640" height="640" loading="lazy" decoding="async">
                         <h3>Handyman Services</h3>
                         <p>Reparationer, vedligeholdelse og møbelmontering</p>
                     </a>
                     <a href="/pages/services/ejendomsservice.html" class="service-card">
-                        <img src="/images/service/janitor.jpg" alt="Ejendomsservice" width="640" height="640">
+                        <img src="/images/service/janitor.jpg" alt="Ejendomsservice" width="640" height="640" loading="lazy" decoding="async">
                         <h3>Ejendomsservice</h3>
                         <p>Vedligeholdelse af trapper, opgange og elevatorer</p>
                     </a>
                     <a href="/pages/services/picoline.html" class="service-card">
-                        <img src="/images/service/picoline.jpg" alt="Piccoline Ordning" width="640" height="640">
+                        <img src="/images/service/picoline.jpg" alt="Piccoline Ordning" width="640" height="640" loading="lazy" decoding="async">
                         <h3>Piccoline Ordning</h3>
                         <p>Mindre administrative opgaver og specialopgaver</p>
                     </a>
                     <a href="/pages/services/vinduespudsning.html" class="service-card">
-                        <img src="/images/service/windowcleaning.jpg" alt="Vinduespolering" width="640" height="640">
+                        <img src="/images/service/windowcleaning.jpg" alt="Vinduespolering" width="640" height="640" loading="lazy" decoding="async">
                         <h3>Vinduespolering</h3>
                         <p>Professionel vinduesrens indvendig og udvendig</p>
                     </a>
@@ -405,65 +143,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Client Stories Section 
-    <section class="section">
-        <div class="container">
-            <div class="text-center">
-                <div class="subtitle text-primary">KLIENT SUCCESHISTORIER</div>
-                <div class="title text-charcoal">Dokumenterede Resultater fra Danske Erhverv</div>
-                <div class="body text-gray">Læs hvordan vores kunder har styrket deres facility drift</div>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <div class="company-logo-section">
-                        <img class="company-logo" src="/images/logos/adnami.png" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte"</blockquote>
-                    <div class="flex">
-                        <img class="author-image" src="/images/people/jørgen.jpeg" alt="Handyman Services" width="640" height="640">
-                        <div class="author-info">
-                            <strong>Jørgen Gosvig</strong>
-                            <span>Operations Manager, Adnami</span>
-                        </div>
-                    </div>
-                    <a href="/pages/indblik/cases/adnami.html" class="btn primary small">Læs mere</a>
-                </div>
-
-                <div class="testimonial">
-                    <div class="company-logo-section">
-                        <img class="company-logo" src="/" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte"</blockquote>
-                    <div class="flex">
-                        <img class="author-image" src="" alt="Handyman Services" width="640" height="640">
-                        <div class="author-info">
-                            <strong>xxxx</strong>
-                            <strong>xxxx</strong>
-                        </div>
-                    </div>
-                    <a href="/pages/indblik/cases/adnami.html" class="btn primary small">Læs mere</a>
-                </div>
-
-                <div class="testimonial">
-                    <div class="company-logo-section">
-                        <img class="company-logo" src="/images/logos/soho.png" alt="Handyman Services" width="640" height="640">
-                    </div>
-                    <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte"</blockquote>
-                    <div class="flex">
-                        <img class="author-image" src="/images/people/.jpeg" alt="Handyman Services" width="640" height="640">
-                        <div class="author-info">
-                            <strong></strong>
-                            <span>Office Manager, SOHO</span>
-                        </div>
-                    </div>
-                    <a href="/pages/case-adnami.html" class="btn primary small">Læs mere</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
 
     <!-- Contact CTA Section -->
     <section class="section">
@@ -475,10 +154,10 @@
                     <p class="cta-proof">Allerede valgt af virksomheder som <strong>Soho, Adnami</strong> og <strong>Det Kgl. Haveselskab</strong>.</p>
                     <div class="flex">
                         <a href="/pages/kontakt.html" class="btn success medium">
-                            <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Få et uforpligtende tilbud
+                            <i class="fas fa-phone mr-05"></i>Få et uforpligtende tilbud
                         </a>
                         <a href="/pages/prisberegner.html" class="btn white medium">
-                            <i class="fas fa-calculator" style="margin-right: 0.5rem;"></i>Beregn pris på jeres løsning
+                            <i class="fas fa-calculator mr-05"></i>Beregn pris på jeres løsning
                         </a>
                     </div>
                 </div>
@@ -492,33 +171,10 @@
     <!-- Footer Component -->
     <div id="footer"></div>
 
-    <!-- Component loader -->
-    <script src="js/components.js" defer></script>
-    <script>
-        let currentIndex = 0;
-        const totalCards = 6;
-        const cardsVisible = 3;
-        const maxIndex = totalCards - cardsVisible;
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
 
-        function updateCarousel() {
-            const track = document.getElementById('servicesTrack');
-            const moveDistance = currentIndex * 400; // 386px card + 14px margin = 400px exactly
-            track.style.transform = `translateX(-${moveDistance}px)`;
-        }
-
-        function nextServices() {
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateCarousel();
-            }
-        }
-
-        function previousServices() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        }
-    </script>
+    <!-- Component Loader -->
+    <script src="/js/components.js" defer></script>
 </body>
 </html>

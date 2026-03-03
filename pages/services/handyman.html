@@ -3,210 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
     <title>DFMG - Handyman Service</title>
-    <meta name="description" content="Professionelle håndværkere til alle opgaver">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+    <meta name="description" content="Professionelle håndværkere til alle opgaver. Fra små reparationer til større projekter.">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components/hero-layouts.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
+
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-
-<style>
-/* Hero specific styles */
-.hero-layout {
-    position: relative;
-    overflow: hidden;
-    background: white;
-}
-
-.hero-layout::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: var(--bg-gradient-charcoal);
-    transform: skewX(-15deg);
-    transform-origin: top right;
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.hero-feature {
-    background: var(--color--gray);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    border: 2px solid var(--color-border);
-    font-weight: 600;
-    color: var(--color-charcoal);
-    font-size: 0.9rem;
-    transition: all 0.3s;
-}
-
-/* Services carousel */
-.services-carousel {
-    position: relative;
-    overflow: hidden;
-}
-
-.services-track {
-    display: flex;
-    gap: 2rem;
-    padding: 0 2rem;
-    transition: transform 0.3s ease;
-}
-
-.service-card {
-    min-width: 320px;
-    background: white;
-    border-radius: 24px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    border: 1px solid #f1f5f9;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-    transition: left 0.3s;
-}
-
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 3rem;
-}
-
-.carousel-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-    border: 2px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: var(--charcoal);
-    text-decoration: none;
-}
-
-.carousel-btn:hover {
-    background: #344767;
-    color: white;
-    border-color: #344767;
-}
-
-/* Gallery tabs */
-.tab-button {
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #64748b;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-}
-
-.tab-button.active {
-    background: var(--charcoal);
-    color: white;
-    border-color: var(--charcoal);
-}
-
-.tab-button:hover:not(.active) {
-    border-color: var(--charcoal);
-    background: #f0fdf4;
-}
-
-.services-content {
-    display: none;
-}
-
-.services-content.active {
-    display: block;
-}
-
-
-.before-after-image {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 300px;
-    background: #f1f5f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-dark-gray);
-    font-size: 1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.image-label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(0,0,0,0.8);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.testimonial-text {
-    font-size: 1.3rem;
-    color: var(--color-charcoal);
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    font-style: italic;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
-
 <body>
 <!-- Header Component -->
 <div id="header"></div>
@@ -227,7 +52,7 @@
                     <div class="badge bg-gradient-metal">Små Renoveringer</div>
                 </div>
                 
-                <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+                <div class="flex gap-1 flex-wrap">
                     <a href="#contact" class="btn success medium">
                         <i class="fas fa-wrench"></i>
                         Book Handyman
@@ -242,27 +67,27 @@
             <div>
                 <div class="grid-2x3">
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-hammer text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-hammer text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Hammer</h4>
                     </div>
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-screwdriver text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-screwdriver text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Skruetrækker</h4>
                     </div>
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-wrench text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-wrench text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Skruenøgle</h4>
                     </div>
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-paint-brush text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-paint-brush text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Pensel</h4>
                     </div>
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-drill text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-drill text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Boremaskine</h4>
                     </div>
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-ruler text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-ruler text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Målestok</h4>
                     </div>
                 </div>
@@ -280,10 +105,10 @@
             <p class="body text-gray">Fra småopgaver til større projekter - vores erfarne håndværkere står klar med det rette værktøj og knowhow</p>
         </div>
         
-        <div class="services-carousel">
-            <div class="services-track" id="servicesTrack">
+        <div class="carousel">
+            <div class="carousel-track" id="servicesTrack">
                 <div class="service-card">
-                    <i class="fas fa-tint text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-tint text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">VVS Småopgaver</h3>
                     <p class="text-gray bot-space">Reparation af vandhaner, toilet, afløb og andre mindre VVS-opgaver der holder jeres faciliteter funktionsdygtige.</p>
                     <ul class="feature-list list-success">
@@ -296,7 +121,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <i class="fas fa-bolt text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-bolt text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">El-arbejde & Belysning</h3>
                     <p class="text-gray bot-space">Sikker håndtering af mindre el-opgaver, udskiftning af belysning og installeringer af strømforsyning.</p>
                     <ul class="feature-list list-success">
@@ -309,7 +134,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <i class="fas fa-paint-roller text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-paint-roller text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Maling & Spartling</h3>
                     <p class="text-gray bot-space">Professionel maling af vægge, lofter og træværk samt reparation af huller og skader i gips og puds.</p>
                     <ul class="feature-list list-success">
@@ -322,7 +147,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <i class="fas fa-couch text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-couch text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Møbelmontering</h3>
                     <p class="text-gray bot-space">Montering af kontormøbler, hylder, skabe og andre møbler til jeres arbejdsplads eller private hjem.</p>
                     <ul class="feature-list list-success">
@@ -335,7 +160,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <i class="fas fa-door-open text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-door-open text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Døre & Vinduer</h3>
                     <p class="text-gray bot-space">Reparation og justering af døre og vinduer, udskiftning af låse og håndtag samt montering af nye elementer.</p>
                     <ul class="feature-list list-success">
@@ -348,7 +173,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <i class="fas fa-th-large text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <i class="fas fa-th-large text-success" class="text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Fliser & Badeværelse</h3>
                     <p class="text-gray bot-space">Reparation og udskiftning af fliser, fugning og mindre renoveringer i badeværelser og køkkener.</p>
                     <ul class="feature-list list-success">
@@ -384,37 +209,37 @@
         
         <div class="grid-2x3">
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <i class="fas fa-wrench text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-wrench text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Almindeligt Håndværk</h4>
                 <p class="text-gray">Generelle reparationer og vedligeholdelse</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <i class="fas fa-hammer text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-hammer text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Tømrerarbejde</h4>
                 <p class="text-gray">Træarbejde, montering og reparationer</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <i class="fas fa-paint-brush text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-paint-brush text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Malerarbejde</h4>
                 <p class="text-gray">Professionel maling og overfladebehandling</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <i class="fas fa-plug text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-plug text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">El-installation</h4>
                 <p class="text-gray">Mindre el-opgaver og belysning</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <i class="fas fa-shower text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-shower text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">VVS Service</h4>
                 <p class="text-gray">Rørarbejde og sanitære installationer</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <i class="fas fa-tools text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <i class="fas fa-tools text-success" class="text-6xl mb-1"></i>
                 <h4 class="text-charcoal">Maskinreparation</h4>
                 <p class="text-gray">Service på udstyr og maskiner</p>
             </div>
@@ -432,13 +257,13 @@
         </div>
         
         <div>
-            <div class="flex space1" style="justify-content: center; gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap;">
+            <div class="flex space1 justify-center gap-2 flex-wrap" style="margin-bottom: 4rem;">
                 <div class="tab-button active" onclick="showGallery('renovation')">Renovering</div>
                 <div class="tab-button" onclick="showGallery('furniture')">Møbelmontering</div>
                 <div class="tab-button" onclick="showGallery('painting')">Maling</div>
             </div>
             
-            <div class="services-content active" id="renovation">
+            <div class="toggle-content active" id="renovation">
                 <div class="bot-space2">
                     <h3 class="text-charcoal">Komplet Toiletrum Renovering</h3>
                     <p class="body text-gray bot-space">Vi udførte en total renovering af toiletfaciliteterne på Adnami's hovedkontor, inkl. nye fliser, fugning, maling og VVS-arbejde.</p>
@@ -467,7 +292,7 @@
                 </div>
             </div>
             
-            <div class="services-content" id="furniture">
+            <div class="toggle-content" id="furniture">
                 <div class="bot-space2">
                     <h3 class="text-charcoal">Komplet Kontorindretning</h3>
                     <p class="body text-gray bot-space">Montering af over 25 arbejdspladser inkl. skriveborde, stole, opbevaring og fællesområde møbler for SOHO's nye lokaler.</p>
@@ -496,7 +321,7 @@
                 </div>
             </div>
             
-            <div class="services-content" id="painting">
+            <div class="toggle-content" id="painting">
                 <div class="bot-space2">
                     <h3 class="text-charcoal">Professionel Maling af Kontorfaciliteter</h3>
                     <p class="body text-gray bot-space">Oprydning og maling af hele kontoretagen hos Soho, inkl. vægge, lofter og træværk i deres corporate farver.</p>
@@ -537,7 +362,7 @@
             <p class="body text-white">En struktureret proces der sikrer kvalitet, overholdelse af tidsfrister og dit fulde tilfredshed</p>
         </div>
         
-        <div class="flex" style="gap: 2rem; flex-wrap: wrap; justify-content: center;">
+        <div class="flex gap-2 flex-wrap justify-center">
             <div class="card bg-gradient-white p-2 card-horizontal">
                 <h3 class="text-success">1</h3>
                 <div>
@@ -583,15 +408,15 @@
         <div class="testimonial-text">
             "DFMG's handyman team har været uvurderlige for os. De løser alt fra små akutte reparationer til større renoveringsprojekter med samme professionalisme og kvalitet. Vi kan altid regne med dem når noget skal fikses hurtigt og ordentligt."
         </div>
-        <div class="flex bot-space2" style="justify-content: center;">
-            <img class="author-image" src="" alt="Handyman Services" width="640" height="640" style="width: 100px; height: 100px; border-radius: 50%;">
+        <div class="flex bot-space2" class="justify-center">
+            <img class="author-image" src="" alt="Handyman Services" width="640" height="640" style="width: 100px; height: 100px; border-radius: 50%;" loading="lazy" decoding="async">
             <div>
-                <h5 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.25rem;">xxxx</h5>
+                <h5 class="text-charcoal font-semibold" style="margin-bottom: 0.25rem;">xxxx</h5>
                 <span class="text-gray" style="font-size: 0.9rem;">xxxx</span>
             </div>
         </div>
         
-        <div class="flex" style="justify-content: center;">
+        <div class="flex" class="justify-center">
             <div class="card p-1">
                 <span class="stat-number text-success">48t</span>
                 <span class="stat-label text-gray">Gennemsnitlig responstid</span>
@@ -618,10 +443,10 @@
                 <p class="cta-proof">Brugt af <strong>kontorfællesskaber og ejendomsejere i København</strong>.</p>
                 <div class="flex">
                     <a href="/pages/kontakt.html" class="btn success medium">
-                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Få et tilbud
+                        <i class="fas fa-phone" class="mr-05"></i>Få et tilbud
                     </a>
                     <a href="/pages/kontakt.html" class="btn white medium">
-                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt os
+                        <i class="fas fa-envelope" class="mr-05"></i>Kontakt os
                     </a>
                 </div>
             </div>
@@ -635,8 +460,11 @@
 <!-- Footer Component -->
 <div id="footer"></div>
 
-<!-- Component loader -->
-<script src="../../js/components.js" defer></script>
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
+
+<!-- Component Loader -->
+<script src="/js/components.js" defer></script>
 
 <script>
 let currentSlide = 0;
@@ -655,7 +483,7 @@ function slideServices(direction) {
 
 function showGallery(galleryType) {
     // Hide all services contents
-    document.querySelectorAll('.services-content').forEach(content => {
+    document.querySelectorAll('.toggle-content').forEach(content => {
         content.classList.remove('active');
     });
     
@@ -673,4 +501,4 @@ function showGallery(galleryType) {
 </script>
 
 </body>
-</html> 
+</html>

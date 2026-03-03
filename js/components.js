@@ -1,20 +1,35 @@
 // Fast, simple component loader with chatbot support
 async function loadComponents() {
     try {
-        const [headerResponse, footerResponse, chatbotResponse] = await Promise.all([
+        // Always load header, footer, and chatbot
+        const fetchPromises = [
             fetch('/pages/components/header.html'),
             fetch('/pages/components/footer.html'),
             fetch('/pages/components/chatbot.html')
-        ]);
-        
-        const header = await headerResponse.text();
-        const footer = await footerResponse.text();
-        const chatbot = await chatbotResponse.text();
-        
+        ];
+
+        // Check if article sidebar exists on page
+        const articleSidebarElement = document.getElementById('article-sidebar');
+        if (articleSidebarElement) {
+            fetchPromises.push(fetch('/pages/components/article-sidebar.html'));
+        }
+
+        const responses = await Promise.all(fetchPromises);
+
+        const header = await responses[0].text();
+        const footer = await responses[1].text();
+        const chatbot = await responses[2].text();
+
         document.getElementById('header').innerHTML = header;
         document.getElementById('footer').innerHTML = footer;
         document.getElementById('chatbot').innerHTML = chatbot;
-        
+
+        // Load article sidebar if it exists
+        if (articleSidebarElement && responses[3]) {
+            const articleSidebar = await responses[3].text();
+            articleSidebarElement.innerHTML = articleSidebar;
+        }
+
         // Initialize chatbot after loading
         initializeChatbotFunctions();
     } catch (error) {
@@ -137,15 +152,48 @@ function initializeChatbotFunctions() {
                 e.preventDefault();
                 window.toggleChatbot();
             });
-        } else {
         }
     }, 100);
 }
 
 
+// Carousel functions for services section
+function initializeServicesCarousel() {
+    let currentIndex = 0;
+    const totalCards = 6;
+    const cardsVisible = 3;
+    const maxIndex = totalCards - cardsVisible;
+
+    function updateCarousel() {
+        const track = document.getElementById('servicesTrack');
+        if (track) {
+            const moveDistance = currentIndex * 400; // 386px card + 14px margin = 400px exactly
+            track.style.transform = `translateX(-${moveDistance}px)`;
+        }
+    }
+
+    window.nextServices = function() {
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    };
+
+    window.previousServices = function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    };
+}
+
 // Auto-load when DOM ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadComponents);
+    document.addEventListener('DOMContentLoaded', function() {
+        loadComponents();
+        initializeServicesCarousel();
+    });
 } else {
     loadComponents();
+    initializeServicesCarousel();
 }

@@ -3,264 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page-specific meta (injected by template-loader.js) -->
     <title>DFMG - Supplies & Produkter</title>
-    <meta name="description" content="Alt hvad I har brug for til jeres arbejdsplads">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="../../images/logos/logo.png" type="image/png">
-    <link rel="icon" href="images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png" sizes="180x180">
-    
+    <meta name="description" content="Alt hvad I har brug for til jeres arbejdsplads. Hygiejneprodukter, kontorartikler og mere.">
+
+    <!-- Favicon (root-relative paths) -->
+    <link rel="icon" href="/images/logos/logo.png" type="image/png">
+    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
+
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Main Stylesheet (root-relative path) -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components/hero-layouts.css">
+    <link rel="stylesheet" href="/css/components/pricing.css">
+    <!-- Component Stylesheets (injected by template-loader.js) -->
+
+    <!-- Template Loader -->
+    <script src="/js/template-loader.js"></script>
 </head>
-
-<style>
-/* Hero specific styles */
-.hero-layout {
-    background: linear-gradient(135deg, #f8fafc 0%, white 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-}
-
-
-.category-features i {
-    color: var(--color-primary);
-    font-size: 0.8rem;
-    width: 12px;
-}
-
-.category-content {
-    background: white;
-    border-radius: 24px;
-    padding: 3rem;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 2rem;
-}
-
-.content-section {
-    display: none;
-}
-
-.content-section.active {
-    display: block;
-}
-
-.badge text-charcoal {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-/* Pricing table */
-.pricing-table {
-    background: #f8fafc;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-}
-
-.pricing-header {
-    background: var(--bg-gradient-charcoal);
-    color: white;
-    padding: 1.5rem 2rem;
-    text-align: center;
-}
-
-.pricing-body {
-    padding: 2rem;
-}
-
-.pricing-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.pricing-item:last-child {
-    border-bottom: none;
-}
-
-.pricing-name {
-    font-weight: 600;
-    color: var(--color-charcoal);
-    flex: 1;
-}
-
-.pricing-specs {
-    color: var(--color-dark-gray);
-    font-size: 0.9rem;
-    margin-right: 1rem;
-}
-
-.pricing-price {
-    font-weight: 700;
-    color: var(--color-primary);
-    font-size: 1.1rem;
-}
-
-/* Shop preview */
-.shop-preview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.shop-item {
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    border: 2px solid transparent;
-    transition: all 0.3s;
-}
-
-.shop-item:hover {
-    border-color: var(--color-primary);
-}
-
-.shop-item-icon {
-    font-size: 2rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-}
-
-.shop-item-price {
-    color: var(--color-primary);
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.shop-category-badge text-charcoal {
-    background: #e2e8f0;
-    color: var(--color-dark-gray);
-    padding: 0.25rem 0.75rem;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    display: inline-block;
-}
-
-/* Custom request */
-.custom-request {
-    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-    border-radius: 20px;
-    padding: 2rem;
-    margin-top: 2rem;
-    border: 2px dashed #cbd5e1;
-    text-align: center;
-    transition: all 0.3s;
-}
-
-.custom-request:hover {
-    border-color: var(--color-primary);
-    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
-}
-
-.custom-request-icon {
-    font-size: 3rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-}
-
-.custom-request-btn {
-    background: var(--color-primary);
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s;
-}
-
-.custom-request-btn:hover {
-    background: var(--color-primary-dark);
-}
-
-
-.step-number {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 auto 2rem;
-}
-
-</style>
-
 <body>
 <!-- Header Component -->
 <div id="header"></div>
 
 <!-- Hero Section -->
-<section class="first hero-layout">
+<section class="first hero-grid">
     <div class="container">
-        <div class="hero-content">
+        <div class="hero-grid-content">
             <div>
-                <h1 class="title text-charcoal" style="font-size: 4rem; font-weight: 700; line-height: 1.1;">Supplies & Produkter</h1>
+                <h1 class="title text-charcoal font-bold leading-tight" style="font-size: 4rem;">Supplies & Produkter</h1>
                 <p class="body text-gray bot-space2" style="font-size: 1.3rem;">Alt hvad I har brug for til jeres arbejdsplads - fra hygiejneprodukter til kontorartikler. Bestil nemt gennem vores system og få leveret direkte til jeres dør.</p>
                 
                 <div class="grid-2x2 bot-space2">
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-truck text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-truck text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Hurtig levering</h4>
                     </div>
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-tags text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-tags text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Konkurrencedygtige priser</h4>
                     </div>
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-leaf text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-leaf text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Miljøvenlige produkter</h4>
                     </div>
                 <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-shopping-cart text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-shopping-cart text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Nem online bestilling</h4>
                     </div>
                 </div>
                 
-                <div class="flex" style="gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <div class="flex gap-1 flex-wrap justify-center">
                     <a href="#shop" class="btn success medium">
                         <i class="fas fa-shopping-cart"></i>
                         Se Vores Shop
@@ -275,7 +79,7 @@
             <div>
                 <div class="grid-2x2">
                     <div class="card p-1 bg-gradient-white text-center">
-                        <i class="fas fa-toilet-paper text-success" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-toilet-paper text-success" class="text-6xl mb-1"></i>
                         <h4 class="text-charcoal">Toiletpapir</h4>
                         <p class="text-gray">Hygiejne</p>
                     </div>
@@ -305,15 +109,15 @@
     <div class="container">
         <div class="text-center bot-space2" style="margin-bottom: 5rem;">
             <div class="subtitle text-success">VORES PRODUKTKATEGORIER</div>
-            <h2 class="text-charcoal" style="font-size: 3rem; font-weight: 300; letter-spacing: -1px;">Alt I Har Brug For på Ét Sted</h2>
+            <h2 class="text-charcoal" style="font-size: 3rem; letter-spacing: -1px; font-weight: 300;">Alt I Har Brug For på Ét Sted</h2>
             <p class="body text-gray">Fra daglige hygiejneprodukter til kontorartikler og forplejning - vi leverer alt hvad der skal til for at holde jeres arbejdsplads kørende</p>
         </div>
         
         <div class="flex flex-2">
-            <div class="grid" style="gap: 1rem;">
+            <div class="grid gap-1">
                 <div class="card p-2 bg-gradient-white border-left-success active" onclick="showCategory('hygiene')">
                     <div class="flex">
-                        <i class="fas fa-spray-can text-success" style="font-size: 2rem; margin-right: 1rem;"></i>
+                        <i class="fas fa-spray-can text-success" class="text-5xl mr-1"></i>
                         <div>
                             <h3 class="text-charcoal">Hygiejneprodukter</h3>
                         </div>
@@ -329,7 +133,7 @@
                 
                 <div class="card p-2 bg-gradient-white border-left-success" onclick="showCategory('office')">
                     <div class="flex">
-                        <i class="fas fa-pencil-alt text-success" style="font-size: 2rem; margin-right: 1rem;"></i>
+                        <i class="fas fa-pencil-alt text-success" class="text-5xl mr-1"></i>
                         <div>
                             <h3 class="text-charcoal">Kontorartikler</h3>
                         </div>
@@ -345,7 +149,7 @@
                 
                 <div class="card p-2 bg-gradient-white border-left-success" onclick="showCategory('beverages')">
                     <div class="flex">
-                        <i class="fas fa-mug-hot text-success" style="font-size: 2rem; margin-right: 1rem;"></i>
+                        <i class="fas fa-mug-hot text-success" class="text-5xl mr-1"></i>
                         <div>
                             <h3 class="text-charcoal">Kaffe, Te & Drikkevarer</h3>
                         </div>
@@ -361,7 +165,7 @@
                 
                 <div class="card p-2 bg-gradient-white border-left-success" onclick="showCategory('snacks')">
                     <div class="flex">
-                        <i class="fas fa-cookie text-success" style="font-size: 2rem; margin-right: 1rem;"></i>
+                        <i class="fas fa-cookie text-success" class="text-5xl mr-1"></i>
                         <div>
                             <h3 class="text-charcoal">Snacks & Forplejning</h3>
                         </div>
@@ -378,10 +182,10 @@
             
             <div class="card bg-gradient-white p-2">
                 <!-- Hygiene Products Content -->
-                <div class="content-section active" id="hygiene">
+                <div class="toggle-content active" id="hygiene">
                     <div class="bot-space2">
                         <div class="badge text-charcoal">Professionel Hygiejne</div>
-                        <h4 class="text-charcoal" style="font-size: 1.8rem; font-weight: 600;">Hygiejneprodukter</h4>
+                        <h4 class="text-charcoal text-4xl font-semibold">Hygiejneprodukter</h4>
                         <p class="text-gray">Professionelle hygiejneprodukter der sikrer rene og sunde arbejdsmiljøer. Alle produkter er af højeste kvalitet og miljøcertificerede.</p>
                     </div>
                     
@@ -449,10 +253,10 @@
                 </div>
                 
                 <!-- Office Supplies Content -->
-                <div class="content-section" id="office">
+                <div class="toggle-content" id="office">
                     <div class="bot-space2">
                         <div class="badge text-charcoal">Kontorløsninger</div>
-                        <h4 class="text-charcoal" style="font-size: 1.8rem; font-weight: 600;">Kontorartikler & Office Supplies</h4>
+                        <h4 class="text-charcoal text-4xl font-semibold">Kontorartikler & Office Supplies</h4>
                         <p class="text-gray bot-space2">Komplet sortiment af kontorartikler til jeres daglige drift. Bestil nemt gennem vores online shop-system.</p>
                     </div>
                     
@@ -460,34 +264,34 @@
                         <div class="card bg-gradient-white p-2 text-center">
                             <div class="shop-category-badge text-charcoal">Office Supplies</div>
                             <div class="shop-item-icon"><i class="fas fa-pen"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">BIC M10 Original Kuglepen</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">BIC M10 Original Kuglepen</h6>
                             <div class="shop-item-price">800.00 DKK</div>
                         </div>
                         <div class="card bg-gradient-white p-2 text-center">
                             <div class="shop-category-badge text-charcoal">Office Supplies</div>
                             <div class="shop-item-icon"><i class="fas fa-print"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Kopipapir A4/80g/500 ark</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Kopipapir A4/80g/500 ark</h6>
                             <div class="shop-item-price">59.00 DKK</div>
                         </div>
                         <div class="card bg-gradient-white p-2 text-center">
                             <div class="shop-category-badge text-charcoal">Office Supplies</div>
                             <div class="shop-item-icon"><i class="fas fa-sticky-note"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Post-it Notes 76x76 mm</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Post-it Notes 76x76 mm</h6>
                             <div class="shop-item-price">15.00 DKK</div>
                         </div>
                     </div>
                     
                     <h5 class="text-charcoal bot-space">Kategorier i vores shop:</h5>
                     <ul class="feature-list">
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Office Supplies</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Kaffe & Te</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Snacks</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Drikkevarer</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Office Supplies</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Kaffe & Te</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Snacks</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Drikkevarer</li>
                     </ul>
                     
                     <div class="custom-request">
                         <div class="custom-request-icon"><i class="fas fa-plus-circle"></i></div>
-                        <h5 class="text-charcoal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Mangler I noget specifikt?</h5>
+                        <h5 class="text-charcoal text-xl font-semibold mb-05">Mangler I noget specifikt?</h5>
                         <p class="text-gray bot-space">Send os en anmodning med billede af produktet - vi finder det til den bedste pris og tilføjer det til vores katalog</p>
                         <a href="#" class="custom-request-btn">
                             <i class="fas fa-camera"></i>
@@ -497,10 +301,10 @@
                 </div>
                 
                 <!-- Beverages Content -->
-                <div class="content-section" id="beverages">
+                <div class="toggle-content" id="beverages">
                     <div class="bot-space2">
                         <div class="badge text-charcoal">Premium Drikkevarer</div>
-                        <h4 class="text-charcoal" style="font-size: 1.8rem; font-weight: 600;">Kaffe, Te & Drikkevarer</h4>
+                        <h4 class="text-charcoal text-4xl font-semibold">Kaffe, Te & Drikkevarer</h4>
                         <p class="text-gray bot-space2">Højkvalitets kaffe og te til jeres medarbejdere. Vi leverer alt fra økologisk espresso til specialte-blandinger.</p>
                     </div>
                     
@@ -508,37 +312,37 @@
                         <div class="card bg-gradient-white p-2 text-center">
                             <div class="shop-category-badge text-charcoal">Coffee</div>
                             <div class="shop-item-icon"><i class="fas fa-coffee"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Evo pulver 1kg</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Evo pulver 1kg</h6>
                             <div class="shop-item-price">179.00 DKK</div>
                         </div>
                         <div class="card bg-gradient-white p-2 text-center">
                             <div class="shop-category-badge text-charcoal">Tea</div>
                             <div class="shop-item-icon"><i class="fas fa-leaf"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Earl Grey Premium</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Earl Grey Premium</h6>
                             <div class="shop-item-price">89.00 DKK</div>
                         </div>
                         <div class="card bg-gradient-white p-2 text-center">
                             <div class="shop-category-badge text-charcoal">Coffee</div>
                             <div class="shop-item-icon"><i class="fas fa-mug-hot"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Espresso Blend</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Espresso Blend</h6>
                             <div class="shop-item-price">195.00 DKK</div>
                         </div>
                     </div>
                     
                     <h5 class="text-charcoal bot-space">Vores kaffesortiment:</h5>
                     <ul class="feature-list">
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Økologisk espresso og filterkaffe</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Instant kaffe til hurtig servering</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Koffeinfri alternativer</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Kafferensemaskiner og tilbehør</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Økologisk espresso og filterkaffe</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Instant kaffe til hurtig servering</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Koffeinfri alternativer</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Kafferensemaskiner og tilbehør</li>
                     </ul>
                 </div>
                 
                 <!-- Snacks Content -->
-                <div class="content-section" id="snacks">
+                <div class="toggle-content" id="snacks">
                     <div class="bot-space2">
                         <div class="badge text-charcoal">Sund Forplejning</div>
-                        <h4 class="text-charcoal" style="font-size: 1.8rem; font-weight: 600;">Snacks & Forplejning</h4>
+                        <h4 class="text-charcoal text-4xl font-semibold">Snacks & Forplejning</h4>
                         <p class="text-gray bot-space2">Sunde og lækre snacks til jeres medarbejdere og møder. Alt fra nødder og frugt til special catering.</p>
                     </div>
                     
@@ -546,29 +350,29 @@
                         <div class="shop-item">
                             <div class="shop-category-badge text-charcoal">Snacks</div>
                             <div class="shop-item-icon"><i class="fas fa-seedling"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Blandede Nødder</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Blandede Nødder</h6>
                             <div class="shop-item-price">65.00 DKK</div>
                         </div>
                         <div class="shop-item">
                             <div class="shop-category-badge text-charcoal">Snacks</div>
                             <div class="shop-item-icon"><i class="fas fa-apple-alt"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Frisk Frugt Levering</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Frisk Frugt Levering</h6>
                             <div class="shop-item-price">125.00 DKK</div>
                         </div>
                         <div class="shop-item">
                             <div class="shop-category-badge text-charcoal">Snacks</div>
                             <div class="shop-item-icon"><i class="fas fa-cookie"></i></div>
-                            <h6 class="text-charcoal" style="font-weight: 600; margin-bottom: 0.5rem;">Økologiske Kiks</h6>
+                            <h6 class="text-charcoal font-semibold mb-05">Økologiske Kiks</h6>
                             <div class="shop-item-price">45.00 DKK</div>
                         </div>
                     </div>
                     
                     <h5 class="text-charcoal bot-space">Specialservice:</h5>
                     <ul class="feature-list">
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Ugentlig frugtleverancer</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Catering til møder og events</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Allergivenlige alternativer</li>
-                        <li class="text-gray" style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success" style="margin-right: 0.75rem;"></i> Sæsonbaserede specialiteter</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Ugentlig frugtleverancer</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Catering til møder og events</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Allergivenlige alternativer</li>
+                        <li class="text-gray mb-05"><i class="fas fa-check text-success mr-075"></i> Sæsonbaserede specialiteter</li>
                     </ul>
                 </div>
             </div>
@@ -588,25 +392,25 @@
         <div class="grid-2x2">
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat-number text-success">1</div>
-                <h4 class="text-charcoal" style="font-size: 1.3rem; font-weight: 600;">Bestilling</h4>
+                <h4 class="text-charcoal font-semibold" style="font-size: 1.3rem;">Bestilling</h4>
                 <p class="text-gray">Log ind på vores platform og bestil fra vores omfattende katalog eller send en produktanmodning</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat-number text-success">2</div>
-                <h4 class="text-charcoal">Behandling</h4>
+                <h4 class="text-charcoal font-semibold" style="font-size: 1.3rem;">Behandling</h4>
                 <p class="text-gray">Vi behandler jeres ordre og sikrer de bedste priser gennem vores leverandørnetværk</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat-number text-success">3</div>
-                <h4 class="text-charcoal" style="font-size: 1.3rem; font-weight: 600;">Pakkning</h4>
+                <h4 class="text-charcoal font-semibold" style="font-size: 1.3rem;">Pakkning</h4>
                 <p class="text-gray">Produkterne pakkes sikkert og klargøres til hurtig levering til jeres adresse</p>
             </div>
             
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat-number text-success">4</div>
-                <h4 class="text-charcoal" style="font-size: 1.3rem; font-weight: 600;">Levering</h4>
+                <h4 class="text-charcoal font-semibold" style="font-size: 1.3rem;">Levering</h4>
                 <p class="text-gray">Hurtig og pålidelig levering direkte til jeres kontor eller andre ønskede adresser</p>
             </div>
         </div>
@@ -626,38 +430,38 @@
             <div class="grid-2x3">
                 <div class="card bg-gradient-metal p-1">
                     <i class="fas fa-mouse-pointer"></i>
-                    <h4 class="text-white" style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Nem Online Bestilling</h4>
-                    <p class="text-white" style="opacity: 0.9; line-height: 1.6;">Intuitiv platform hvor I nemt kan bestille og administrere alle jeres produkter på ét sted</p>
+                    <h4 class="text-white text-2xl mb-1 font-semibold">Nem Online Bestilling</h4>
+                    <p class="text-white opacity-90 leading-normal">Intuitiv platform hvor I nemt kan bestille og administrere alle jeres produkter på ét sted</p>
                 </div>
                 
                 <div class="card bg-gradient-metal p-1">
                     <i class="fas fa-handshake"></i>
-                    <h4 class="text-white" style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Forhandlede Priser</h4>
-                    <p class="text-white" style="opacity: 0.9; line-height: 1.6;">Vi forhandler de bedste priser med leverandører og giver jer fordelen af vores indkøbsmagt</p>
+                    <h4 class="text-white text-2xl mb-1 font-semibold">Forhandlede Priser</h4>
+                    <p class="text-white opacity-90 leading-normal">Vi forhandler de bedste priser med leverandører og giver jer fordelen af vores indkøbsmagt</p>
                 </div>
                 
                 <div class="card bg-gradient-metal p-1">
                     <i class="fas fa-truck-fast"></i>
-                    <h4 class="text-white" style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Hurtig Levering</h4>
-                    <p class="text-white" style="opacity: 0.9; line-height: 1.6;">Effektiv logistik sikrer hurtig levering direkte til jeres arbejdsplads</p>
+                    <h4 class="text-white text-2xl mb-1 font-semibold">Hurtig Levering</h4>
+                    <p class="text-white opacity-90 leading-normal">Effektiv logistik sikrer hurtig levering direkte til jeres arbejdsplads</p>
                 </div>
                 
                 <div class="card bg-gradient-metal p-1">
                     <i class="fas fa-chart-line"></i>
-                    <h4 class="text-white" style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Forbrugsanalyse</h4>
-                    <p class="text-white" style="opacity: 0.9; line-height: 1.6;">Detaljeret rapportering giver jer indsigt i forbrug og hjælper med budgetplanlægning</p>
+                    <h4 class="text-white text-2xl mb-1 font-semibold">Forbrugsanalyse</h4>
+                    <p class="text-white opacity-90 leading-normal">Detaljeret rapportering giver jer indsigt i forbrug og hjælper med budgetplanlægning</p>
                 </div>
                 
                 <div class="card bg-gradient-metal p-1">
                     <i class="fas fa-recycle"></i>
-                    <h4 class="text-white" style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Bæredygtige Valg</h4>
-                    <p class="text-white" style="opacity: 0.9; line-height: 1.6;">Stort udvalg af miljøvenlige og bæredygtige produkter til den ansvarlige virksomhed</p>
+                    <h4 class="text-white text-2xl mb-1 font-semibold">Bæredygtige Valg</h4>
+                    <p class="text-white opacity-90 leading-normal">Stort udvalg af miljøvenlige og bæredygtige produkter til den ansvarlige virksomhed</p>
                 </div>
                 
                 <div class="card bg-gradient-metal p-1">
                     <i class="fas fa-headset"></i>
-                    <h4 class="text-white" style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Dedikeret Support</h4>
-                    <p class="text-white" style="opacity: 0.9; line-height: 1.6;">Personlig kundeservice der hjælper jer med alt fra produktvalg til leveringsplanlægning</p>
+                    <h4 class="text-white text-2xl mb-1 font-semibold">Dedikeret Support</h4>
+                    <p class="text-white opacity-90 leading-normal">Personlig kundeservice der hjælper jer med alt fra produktvalg til leveringsplanlægning</p>
                 </div>
             </div>
         </div>
@@ -674,10 +478,10 @@
                 <p class="cta-proof">Virksomheder samler både <strong>facility service og kontorartikler ét sted hos os</strong>.</p>
                 <div class="flex">
                     <a href="/pages/produkter.html" class="btn success medium">
-                        <i class="fas fa-shopping-cart" style="margin-right: 0.5rem;"></i>Bestil nu
+                        <i class="fas fa-shopping-cart" class="mr-05"></i>Bestil nu
                     </a>
                     <a href="/pages/kontakt.html" class="btn white medium">
-                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt os
+                        <i class="fas fa-envelope" class="mr-05"></i>Kontakt os
                     </a>
                 </div>
             </div>
@@ -691,24 +495,27 @@
 <!-- Footer Component -->
 <div id="footer"></div>
 
-<!-- Component loader -->
-<script src="../../js/components.js" defer></script>
+    <!-- Chatbot Component -->
+    <div id="chatbot"></div>
+
+<!-- Component Loader -->
+<script src="/js/components.js" defer></script>
 
 <script>
 function showCategory(categoryId) {
-    // Hide all content sections
-    document.querySelectorAll('.content-section').forEach(section => {
+    // Hide all toggle content sections
+    document.querySelectorAll('.toggle-content').forEach(section => {
         section.classList.remove('active');
     });
-    
+
     // Remove active class from all category cards
     document.querySelectorAll('.card[onclick]').forEach(card => {
         card.classList.remove('active');
     });
-    
+
     // Show selected content section
     document.getElementById(categoryId).classList.add('active');
-    
+
     // Add active class to clicked category card
     event.target.closest('.card[onclick]').classList.add('active');
 }
