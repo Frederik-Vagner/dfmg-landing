@@ -1,0 +1,83 @@
+/* ====================================
+   TYPOGRAPHY
+   ==================================== */
+
+/* Semantic text classes */
+.title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.body {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-light);
+}
+
+.disclaimer{
+    font-size: var(--font-size-disclaimer);
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Heading defaults */
+h1 {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Font Sizes */
+.text-xs { font-size: 0.8rem; }      /* 12.8px */
+.text-base { font-size: 0.9rem; }    /* 14.4px */
+.text-md { font-size: 0.95rem; }     /* 15.2px */
+.text-lg { font-size: 1.1rem; }      /* 17.6px */
+.text-xl { font-size: 1.2rem; }      /* 19.2px */
+.text-2xl { font-size: 1.3rem; }     /* 20.8px */
+.text-4xl { font-size: 1.8rem; }     /* 28.8px */
+.text-5xl { font-size: 2rem; }       /* 32px */
+.text-6xl { font-size: 2.5rem; }     /* 40px */
+.text-7xl { font-size: 3rem; }       /* 48px */
+.text-8xl { font-size: 3.5rem; }     /* 56px */
+.text-9xl { font-size: 4rem; }       /* 64px */
+
+/* Font Weights */
+.font-light { font-weight: var(--font-weight-light); }
+.font-semibold { font-weight: var(--font-weight-medium); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* Text Style */
+.italic { font-style: italic; }
+
+/* Line Height */
+.leading-none { line-height: 1; }
+.leading-tight { line-height: 1.1; }
+.leading-normal { line-height: 1.6; }
+
+/* Letter Spacing */
+.tracking-tight { letter-spacing: -1px; }
+.tracking-tighter { letter-spacing: -2px; }
