@@ -105,18 +105,6 @@
     box-shadow: var(--shadow-md);
 }
 
-/* Image Label Overlay */
-.image-label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-circle);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-medium);
-}
 
 /* Testimonial Text */
 .testimonial-text {

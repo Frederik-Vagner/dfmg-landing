@@ -1,0 +1,68 @@
+/* ========================================
+   BUTTONS
+   Global button system — base, colors, sizes
+   ======================================== */
+
+.btn {
+    text-decoration: none;
+    border-radius: var(--radius-normal);
+    display: inline-block;
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+}
+
+.btn:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Color Variants */
+.btn--primary {
+    background: var(--bg-gradient-charcoal);
+    color: var(--white);
+}
+
+.btn--success {
+    background: var(--bg-gradient-success);
+    color: var(--white);
+    border: none;
+}
+
+.btn--secondary {
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border: 2px solid var(--charcoal);
+}
+
+.btn--ghost {
+    background: var(--white);
+    color: var(--charcoal);
+    border: 2px solid var(--white);
+}
+
+.btn--white {
+    background: var(--white);
+    color: var(--charcoal);
+    border: 2px solid var(--charcoal);
+}
+
+/* Size Variants */
+.btn--sm {
+    padding: 10px 20px;
+    font-size: 0.75rem;
+}
+
+.btn--md {
+    padding: 14px 28px;
+    font-size: 1rem;
+}
+
+.btn--lg {
+    padding: 16px 32px;
+    font-size: 1.25rem;
+}
+
+.btn--full {
+    width: 100%;
+    text-align: center;
+}

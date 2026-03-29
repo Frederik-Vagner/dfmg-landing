@@ -159,14 +159,6 @@
     gap: 0.5rem;
 }
 
-.module-tag {
-    background: var(--bg-light);
-    color: var(--charcoal);
-    padding: 0.35rem 0.75rem;
-    border-radius: var(--radius-circle);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-semibold);
-}
 
 /* ── Value props (3-column) ── */
 .value-grid {

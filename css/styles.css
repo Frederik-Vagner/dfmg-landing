@@ -259,72 +259,6 @@ body {
    10. COMPONENT STYLES
    ==================================== */
 
-/* === BUTTONS === */
-
-.btn { 
-    text-decoration: none; 
-    border-radius: var(--radius-normal); 
-    display: inline-block; 
-    font-weight: var(--font-weight-semibold);
-    transition: all var(--transition-normal);
-    box-shadow: var(--shadow-md);
-}
-
-.btn:hover {
-    box-shadow: var(--shadow-lg);
-}
-
-/* Button Color Variants */
-.btn--primary {
-    background: var(--bg-gradient-charcoal);
-    color: var(--white);
-}
-
-.btn--success {
-    background: var(--bg-gradient-success);
-    color: var(--white);
-    border: none;
-}
-
-.btn--secondary {
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-    border: 2px solid var(--charcoal);
-}
-
-.btn--ghost {
-    background: var(--white);
-    color: var(--charcoal);
-    border: 2px solid var(--white);
-}
-
-/* Button Size Variants */
-.btn--sm {
-    padding: 10px 20px;
-    font-size: 0.75rem;
-}
-
-.btn--md {
-    padding: 14px 28px;
-    font-size: 1rem;
-}
-
-.btn--lg {
-    padding: 16px 32px;
-    font-size: 1.25rem;
-}
-
-.btn--full {
-    width: 100%;
-    text-align: center;
-}
-
-/* Button Color Variant: White (light bg, charcoal text) */
-.btn--white {
-    background: var(--white);
-    color: var(--charcoal);
-    border: 2px solid var(--charcoal);
-}
 
 /* ====================================
    6. TYPOGRAPHY UTILITIES
@@ -458,9 +392,11 @@ h4 {
 .text-governance { color: var(--governance); }
 .text-gray { color: var(--gray); }
 .text-white { color: var(--white); }
+.text-uppercase { text-transform: uppercase; letter-spacing: 1px; }
 
 .bg-gradient-primary { background: var(--bg-gradient-primary); color: var(--white);  }
 .bg-gradient-success { background: var(--bg-gradient-success); }
+.bg-charcoal { background: var(--charcoal); }
 
 .success { background: var(--bg-gradient-success); color: var(--white); border: none; }
 .red { background: var(--bg-gradient-red); color: var(--white); border: none; }
@@ -703,27 +639,6 @@ h4 {
     box-shadow: var(--shadow-lg);
 }
 
-.badge {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 8px 16px;
-    border-radius: var(--radius-circle);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-semibold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    box-shadow: var(--shadow-lg);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.badge.text-charcoal {
-    background: var(--bg-light);
-    box-shadow: none;
-    backdrop-filter: none;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-}
 
 .quote {
     background: rgba(255, 255, 255, 0.1);

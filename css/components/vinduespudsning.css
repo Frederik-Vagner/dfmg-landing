@@ -79,23 +79,14 @@
     opacity: 0;
 }
 
-.image-label {
-    position: absolute;
+.before-image .badge-overlay {
     top: 2rem;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: var(--radius-circle);
-    font-weight: var(--font-weight-medium);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.before-image .image-label {
     left: 2rem;
 }
 
-.after-image .image-label {
+.after-image .badge-overlay {
+    top: 2rem;
+    left: auto;
     right: 2rem;
 }
 

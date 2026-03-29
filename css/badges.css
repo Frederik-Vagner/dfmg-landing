@@ -1,0 +1,59 @@
+/* ========================================
+   BADGES
+   Global badge system — hero, inline, overlay
+   ======================================== */
+
+/* Hero/decorative badge — glassmorphism style for dark backgrounds */
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: var(--radius-circle);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge.text-charcoal {
+    background: var(--bg-light);
+    box-shadow: none;
+    backdrop-filter: none;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Inline badge — lightweight, composable with utility classes */
+.badge-inline {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-circle);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+}
+
+.badge-inline--sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+/* Overlay badge — positioned over images */
+.badge-overlay {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.badge-overlay--light {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--charcoal);
+    font-weight: var(--font-weight-bold);
+    top: 2rem;
+    left: 2rem;
+}

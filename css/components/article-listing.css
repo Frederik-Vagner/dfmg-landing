@@ -128,19 +128,6 @@
     overflow: hidden;
 }
 
-.featured-badge {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--charcoal);
-    padding: 8px 16px;
-    border-radius: var(--radius-normal);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
 .featured-content {
     padding: 1rem;
