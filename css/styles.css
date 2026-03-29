@@ -1000,7 +1000,7 @@ h4 {
     left: 0;
     right: 0;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
     z-index: 10000;
     padding: 0 30px;
@@ -1175,15 +1175,11 @@ h4 {
     color: var(--white);
     font-weight: var(--font-weight-semibold);
     font-size: 1.3rem;
-    transition: color 0.3s ease;
-}
-
-.header--scrolled .logo {
-    color: var(--charcoal);
-}
-
-.header--scrolled .logo img {
-    filter: brightness(0) opacity(0.7);
+    background: rgba(60, 50, 40, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 /* Mobile Menu */
@@ -1192,12 +1188,15 @@ h4 {
 }
 
 .menu-btn {
-    background: none;
+    background: rgba(60, 50, 40, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: none;
+    border-radius: 12px;
+    padding: 8px 12px;
     font-size: 1.5rem;
     cursor: pointer;
-    align-self: flex-end;
-    color: var(--gray);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* Mobile Navigation */
