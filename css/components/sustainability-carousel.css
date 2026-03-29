@@ -3,13 +3,7 @@
    Used by: sustainability.html, social.html, klima.html, governance.html
    ======================================== */
 
-/* Scoped Reset (needed for slide math — padding must not add to width/height) */
-.sustainability-page,
-.sustainability-page *,
-.sustainability-page *::before,
-.sustainability-page *::after {
-    box-sizing: border-box;
-}
+/* box-sizing reset now handled globally in styles.css */
 .sustainability-page ul,
 .sustainability-page li {
     list-style: none;
