@@ -31,6 +31,100 @@
 
     <!-- Template Loader -->
     <script src="/js/template-loader.js"></script>
+
+<style>
+/* Slide Background Gradients */
+.slide:nth-child(1) {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+.slide:nth-child(2) {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+    padding: 10rem 4rem 0rem 4rem;
+}
+.slide:nth-child(3) {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+    padding: 0rem 4rem 4rem 4rem;
+}
+.slide:nth-child(4) {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+}
+
+/* Slide Dot Active Colors */
+.slide-dot.active.slide-1-active {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+.slide-dot.active.slide-2-active {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%) !important;
+}
+.slide-dot.active.slide-3-active {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%) !important;
+}
+.slide-dot.active.slide-4-active {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important;
+}
+
+/* Visual Gradients */
+.environment-visual {
+    background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+}
+.social-visual {
+    background: linear-gradient(135deg, #4285f4, #1d4ed8, #1e40af);
+}
+.governance-visual {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9);
+}
+
+/* Feature List */
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-list li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Slide Grid */
+.slide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    align-items: center;
+    justify-items: center;
+}
+
+.slide-grid > *:nth-child(1),
+.slide-grid > *:nth-child(2) {
+    align-self: end;
+}
+
+.slide-grid > *:nth-child(3),
+.slide-grid > *:nth-child(4) {
+    align-self: start;
+}
+
+/* Governance */
+.governance-number {
+    color: #8b5cf6;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+</style>
 </head>
 <body class="sustainability-page">
 
@@ -81,38 +175,38 @@
                 <div class="slide-visual environment-visual">
                     <div>Miljø & Klima<br>Konkrete Handlinger</div>
                 </div>
-                <div class="">
+                <div>
                     <ul class="feature-list">
                         <li>
                             <i class="fas fa-bicycle text-success"></i>
                             <div class="feature-content">
-                                <h3 class="">Bilfri Transport Policy</h3>
-                                <h4 class="">Alle DFMG medarbejdere transporterer sig bilfrit - cykler, offentlig transport og til fods</h4>
+                                <h3>Bilfri Transport Policy</h3>
+                                <h4>Alle DFMG medarbejdere transporterer sig bilfrit - cykler, offentlig transport og til fods</h4>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-leaf text-success"></i>
-                            <div class="">
-                                <h3 class="">Miljøcertificerede Produkter</h3>
-                                <h4 class="">Kun EU Ecolabel og Svanen-certificerede rengøringsmidler i vores supply chain</h4>
+                            <div>
+                                <h3>Miljøcertificerede Produkter</h3>
+                                <h4>Kun EU Ecolabel og Svanen-certificerede rengøringsmidler i vores supply chain</h4>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="">
+                <div>
                     <ul class="feature-list">
                         <li>
                             <i class="fas fa-chart-bar text-success"></i>
-                            <div class="">
-                                <h3 class="">CO2-Tracking</h3>
-                                <h4 class="">Real-time måling og rapportering af vores klimaaftryk gennem vores ERP-system</h4>
+                            <div>
+                                <h3>CO2-Tracking</h3>
+                                <h4>Real-time måling og rapportering af vores klimaaftryk gennem vores ERP-system</h4>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-recycle text-success"></i>
-                            <div class="">
-                                <h3 class="">Cirkulære Processer</h3>
-                                <h4 class="">Systematisk affaldssortering og genbrug af materialer i alle vores services</h4>
+                            <div>
+                                <h3>Cirkulære Processer</h3>
+                                <h4>Systematisk affaldssortering og genbrug af materialer i alle vores services</h4>
                             </div>
                         </li>
                     </ul>
@@ -126,32 +220,32 @@
                 <ul class="feature-list">
                     <li>
                         <i class="fas fa-graduation-cap"></i>
-                        <div class="">
-                            <h3 class="">Kontinuerlig Udvikling</h3>
-                            <h4 class="">Månedlige kvalitetsrapporter og personlig coaching til alle medarbejdere</h4>
+                        <div>
+                            <h3>Kontinuerlig Udvikling</h3>
+                            <h4>Månedlige kvalitetsrapporter og personlig coaching til alle medarbejdere</h4>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-user-shield"></i>
-                        <div class="">
-                            <h3 class="">Medarbejder Empowerment</h3>
-                            <h4 class="">Egne systemadgange, dokumentationsansvar og direkte kommunikation med ledelsen</h4>
+                        <div>
+                            <h3>Medarbejder Empowerment</h3>
+                            <h4>Egne systemadgange, dokumentationsansvar og direkte kommunikation med ledelsen</h4>
                         </div>
                     </li>
                 </ul>
                 <ul class="feature-list">
                     <li>
                         <i class="fas fa-heart"></i>
-                        <div class="">
-                            <h3 class="">Lokalsamfund Engagement</h3>
-                            <h4 class="">Støtte til lokale uddannelsesprogrammer og mentorskab for unge i facility branchen</h4>
+                        <div>
+                            <h3>Lokalsamfund Engagement</h3>
+                            <h4>Støtte til lokale uddannelsesprogrammer og mentorskab for unge i facility branchen</h4>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-balance-scale"></i>
-                        <div class="">
-                            <h3 class="">Fair Arbejdsvilkår</h3>
-                            <h4 class="">Transparente lønstrukturer og arbejdstider baseret på data frem for gætværk</h4>
+                        <div>
+                            <h3>Fair Arbejdsvilkår</h3>
+                            <h4>Transparente lønstrukturer og arbejdstider baseret på data frem for gætværk</h4>
                         </div>
                     </li>
                 </ul>

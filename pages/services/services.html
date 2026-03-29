@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Vores Services</title>
-    <meta name="description" content="Se alle vores facility service løsninger. Fra rengøring til total facility management.">
+    <title>DFMG - Facility Service</title>
+    <meta name="description" content="DFMG tilbyder erhvervsrengøring, facility management og ejendomsservice. Kontakt os for en uforpligtende samtale.">
 
     <!-- Favicon (root-relative paths) -->
     <link rel="icon" href="/images/logos/logo.png" type="image/png">
@@ -30,6 +30,387 @@
 
     <!-- Template Loader -->
     <script src="/js/template-loader.js"></script>
+
+<style>
+/* Hero Services Carousel - CRITICAL LAYOUT */
+.services-hero {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-column {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    transition: flex 0.4s ease;
+    color: white;
+    display: flex;
+    align-items: stretch;
+    padding: 0 2rem 2rem 2rem;
+    overflow: hidden;
+}
+
+.service-column:hover:not(.expanded):not(.collapsed) {
+    flex: 1.2;
+}
+
+.service-column:hover:not(.expanded):not(.collapsed) .service-title {
+    transform: scale(1.3);
+    padding-bottom: 5rem;
+}
+
+.service-column.expanded {
+    flex: 3;
+}
+
+.service-column.collapsed {
+    flex: 0.2;
+}
+
+.service-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+.service-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    top: 70vh;
+}
+
+.service-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    white-space: nowrap;
+    transition: transform 0.4s ease;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.2;
+    min-height: 1.44rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    max-width: 100%;
+}
+
+.expanded-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    color: var(--charcoal);
+    padding: 7rem 2rem 1rem 2rem;
+    z-index: 4;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--charcoal);
+    text-decoration: none;
+}
+
+.expanded-close-btn {
+    background: var(--bg-gradient-white);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: box-shadow 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.expanded-close-btn:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.expanded-close-btn i {
+    color: var(--charcoal);
+}
+
+.expanded-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.expanded-stat-item {
+    text-align: center;
+}
+
+.expanded-stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    display: block;
+}
+
+.expanded-stat-label {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.specialomrade-list {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.specialomrade-item {
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    margin-bottom: 0.3rem;
+    padding-left: 1rem;
+    position: relative;
+    align-items: center;
+}
+
+.specialomrade-item:before {
+    content: "•";
+    color: var(--charcoal);
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+    line-height: 1;
+    top: 50%;
+    transform: translateY(-55%);
+}
+
+.specialomrade-title {
+    font-weight: 500;
+}
+
+.service-column.expanded .service-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.2s;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-column.expanded .service-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-features {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.3s;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.service-column.expanded .service-features {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-features li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-features i {
+    color: var(--charcoal);
+}
+
+.service-actions {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.4s;
+    display: flex;
+    gap: 1rem;
+}
+
+.service-column.expanded .service-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .service-column {
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .service-column.expanded {
+        height: 400px;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+        color: white;
+    }
+}
+
+.expanded-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.expanded-content-left {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.expanded-content-left > h3 {
+    margin-bottom: unset;
+}
+
+.expanded-content-left > p {
+    margin-top: unset;
+}
+
+.expanded-content-right {
+    flex: 1;
+    top: 2rem;
+}
+
+.expanded-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.fordele-title {
+    margin-bottom: 1rem;
+    color: var(--charcoal);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.fordele-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.fordele-card {
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.fordele-icon {
+    color: var(--charcoal);
+    font-size: 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    padding: 0.4rem;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fordele-text {
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.specialomrader-section {
+    margin-bottom: 2rem;
+}
+
+.specialomrader-section h4,
+.specialomrader-section h5 {
+    margin: unset;
+}
+
+/* Hide content of collapsed columns */
+.service-column.collapsed .service-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Disable hover effects on collapsed columns */
+.service-column.collapsed:hover {
+    flex: 0.2 !important;
+    filter: none !important;
+}
+
+.expanded-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+</style>
 </head>
 <body>
 <!-- Header Component -->
@@ -201,7 +582,7 @@
                <p class="body text-gray mb-2">
                    Start med de services I har mest brug for lige nu. Jo flere services I vælger, jo mere værdi kan vi skabe for jer gennem koordinerede processer og bedre priser.
                </p>
-               
+
                <ul class="feature-list list-success">
                    <li><i class="fas fa-check"></i> Fleksibel opstart med enkelte services</li>
                    <li><i class="fas fa-check"></i> Gradvis udvidelse efter behov</li>
@@ -209,23 +590,23 @@
                    <li><i class="fas fa-check"></i> Mere streamlined jo flere I vælger</li>
                </ul>
            </div>
-           
+
            <!-- Complete Package -->
-           <div class="card p-2 border-left-charcoal ">
+           <div class="card p-2 border-left-charcoal">
                <div class="badge text-charcoal">MEST VÆRDI</div>
                <h2 class="text-charcoal">Komplet Facility Service</h2>
                <p class="body text-gray mb-2">
                    Få alle services samlet i én smidig pakke. Maksimal værdi gennem koordineret drift, fælles processer og betydelige besparelser.
                </p>
-               
-               <div class="stats-showcase grid grid-cols-2 gap-1 my-15">
-                   <div class="stat-item text-center p-1">
-                       <div class="stat__value text-success text-4xl font-semibold">25%</div>
-                       <div class="stat__label text-xs text-charcoal">Besparelse</div>
+
+               <div class="grid grid-cols-2 gap-1 my-15">
+                   <div class="text-center p-1">
+                       <div class="text-success text-4xl font-semibold">25%</div>
+                       <div class="text-xs text-charcoal">Besparelse</div>
                    </div>
-                   <div class="stat-item text-center p-1">
-                       <div class="stat__value text-success text-4xl font-semibold">60%</div>
-                       <div class="stat__label text-xs text-charcoal">Mindre Admin</div>
+                   <div class="text-center p-1">
+                       <div class="text-success text-4xl font-semibold">60%</div>
+                       <div class="text-xs text-charcoal">Mindre Admin</div>
                    </div>
                </div>
 
@@ -252,7 +633,7 @@
         <div class="text-center">
             <div class="badge text-charcoal">Driften</div>
         </div>
-        
+
         <div class="flex flex-3 mb-4">
             <div class="card p-1">
                 <div class="flex justify-center">
@@ -277,7 +658,7 @@
         <div class="text-center">
             <div class="badge text-charcoal">Systemet</div>
         </div>
-        
+
         <div class="flex flex-3">
             <div class="card p-1">
                 <div class="flex justify-center">
@@ -299,7 +680,7 @@
             </div>
         </div>
     </div>
-</section>               
+</section>
 
 <!-- Process Section -->
 <section class="section">
@@ -309,26 +690,26 @@
             <h2 class="text-charcoal">Fra Første Kontakt til Løbende Samarbejde</h2>
             <p class="body text-gray">En struktureret tilgang der sikrer optimal service fra dag ét</p>
         </div>
-        
+
         <div class="flex flex-4">
             <div class="card p-2 text-center">
                 <div class="step-number">1</div>
                 <h4 class="text-charcoal">Behovsanalyse</h4>
                 <p class="text-gray">Vi analyserer jeres specifikke behov og udarbejder en skræddersyet løsning</p>
             </div>
-            
+
             <div class="card p-2 text-center">
                 <div class="step-number">2</div>
                 <h4 class="text-charcoal">Tilbud & Planlægning</h4>
                 <p class="text-gray">Transparent prissætning og detaljeret plan for implementering</p>
             </div>
-            
+
             <div class="card p-2 text-center">
                 <div class="step-number">3</div>
                 <h4 class="text-charcoal">Implementering</h4>
                 <p class="text-gray">Smidig opstart med dedikerede teams og grundig introduktion</p>
             </div>
-            
+
             <div class="card p-2 text-center">
                 <div class="step-number">4</div>
                 <h4 class="text-charcoal">Løbende Service</h4>
@@ -390,7 +771,7 @@ const serviceDetails = {
                 items: ["Daglig eller ugentlig service", "Gulvbehandling og støvsugning", "Sanitær og køkkenfaciliteter", "Papirkurve og affaldssortering"]
             },
             {
-                name: "Restauranter & Caféer", 
+                name: "Restauranter & Caféer",
                 items: ["Køkkenrengøring og fedtfjerning", "Ventilationsrensning", "Fødevaresikkerhed", "Specialudstyr til foodservice"]
             },
             {
@@ -400,7 +781,7 @@ const serviceDetails = {
         ],
         features: [
             "Miljøvenlige og allergivenlige produkter",
-            "Certificerede og forsikrede medarbejdere", 
+            "Certificerede og forsikrede medarbejdere",
             "Fleksible tidsplaner der passer jeres drift",
             "Digital rapportering og kvalitetskontrol"
         ]
@@ -536,10 +917,10 @@ function toggleService(column) {
     const allColumns = document.querySelectorAll('.service-column');
     const isExpanded = column.classList.contains('expanded');
     const serviceType = column.getAttribute('data-service');
-    
+
     // Reset all columns
     closeExpandedContent();
-    
+
     if (!isExpanded) {
         // Expand clicked column and collapse others
         column.classList.add('expanded');
@@ -548,7 +929,7 @@ function toggleService(column) {
                 col.classList.add('collapsed');
             }
         });
-        
+
         // Add detailed content overlay
         showExpandedContent(column, serviceType);
     }
@@ -559,7 +940,7 @@ function getImageName(serviceType) {
         'property': 'janitor',
         'piccoline': 'picoline',
         'cleaning': 'cleaning',
-        'handyman': 'handyman', 
+        'handyman': 'handyman',
         'supplies': 'delivery',
         'windows': 'windowcleaning'
     };
@@ -569,25 +950,28 @@ function getImageName(serviceType) {
 function showExpandedContent(column, serviceType) {
     const service = serviceDetails[serviceType];
     if (!service) return;
-    
+
     const expandedContent = document.createElement('div');
     expandedContent.className = 'expanded-content';
     expandedContent.innerHTML = `
-        
+
         <div class="expanded-layout">
             <div class="expanded-content-left">
+                <button class="expanded-close-btn" onclick="closeExpandedContent(event)">
+                    <i class="fa-solid fa-reply"></i>
+                </button>
                 <h3 class="text-charcoal">${service.title}</h3>
                 <p class="text-charcoal">${service.description}</p>
-                
+
                 <div class="expanded-stats">
                     ${service.stats.map(stat => `
                         <div class="expanded-stat-item">
-                            <div class="expanded-stat__value">${stat.number}</div>
-                            <div class="expanded-stat__label">${stat.label}</div>
+                            <div class="expanded-stat-number">${stat.number}</div>
+                            <div class="expanded-stat-label">${stat.label}</div>
                         </div>
                     `).join('')}
                 </div>
-                
+
                 <div class="specialomrader-section">
                     <h4 class="text-charcoal">Specialområder</h4>
                     <div class="grid-2x2">
@@ -604,11 +988,8 @@ function showExpandedContent(column, serviceType) {
                     </div>
                 </div>
             </div>
-            
+
             <div class="expanded-content-right">
-                <button class="expanded-close-btn" onclick="closeExpandedContent(event)">
-                    <i class="fa-solid fa-reply"></i>
-                </button>
                 <div class="expanded-image">
                     <img src="/images/service/${getImageName(serviceType)}.jpg" alt="${service.title}" class="w-full h-full object-cover rounded-15" loading="lazy" decoding="async">
                 </div>
@@ -623,7 +1004,7 @@ function showExpandedContent(column, serviceType) {
                         `).join('')}
                     </div>
                 </div>
-                
+
                 <div class="expanded-actions">
                     <a href="#" class="btn btn--primary btn--md">
                         <i class="fas fa-info-circle"></i> Læs Mere
@@ -635,7 +1016,7 @@ function showExpandedContent(column, serviceType) {
             </div>
         </div>
     `;
-    
+
     column.appendChild(expandedContent);
 }
 
@@ -645,7 +1026,7 @@ function closeExpandedContent(event) {
         event.stopPropagation();
         event.preventDefault();
     }
-    
+
     const allColumns = document.querySelectorAll('.service-column');
     allColumns.forEach(col => {
         // Hide expanded content immediately before removing

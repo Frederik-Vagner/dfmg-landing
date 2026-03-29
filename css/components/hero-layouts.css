@@ -62,20 +62,20 @@
 }
 
 /* Service Cards */
-.card--service {
+.card--accent {
     min-width: 320px;
     background: white;
-    border-radius: 24px;
+    border-radius: var(--radius-normal);
     padding: 2.5rem 2rem;
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    border: 1px solid #f1f5f9;
+    border: var(--border-lighter);
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s;
 }
 
-.card--service::before {
+.card--accent::before {
     content: '';
     position: absolute;
     top: 0;
@@ -86,7 +86,7 @@
     transition: left 0.3s;
 }
 
-.card--service:hover::before {
+.card--accent:hover::before {
     left: 0;
 }
 
@@ -167,7 +167,7 @@
         font-size: 0.8rem;
     }
 
-    .card--service {
+    .card--accent {
         min-width: 100%;
     }
 

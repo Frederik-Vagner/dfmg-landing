@@ -4,15 +4,6 @@
    ======================================== */
 
 /* Article Card Base Styles */
-.card--article {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border: 1px solid #f1f5f9;
-    transition: all 0.3s ease;
-}
-
 .article-image {
     height: 220px;
     position: relative;
@@ -76,37 +67,37 @@
     margin-bottom: 0.75rem;
 }
 
-.article-category.sustainability { color: #22c55e; }
-.article-category.innovation { color: #4285f4; }
-.article-category.insights { color: #8b5cf6; }
-.article-category.tips { color: #f59e0b; }
-.article-category.cases { color: #ef4444; }
+.article-category--sustainability { color: #22c55e; }
+.article-category--innovation { color: #4285f4; }
+.article-category--insights { color: #8b5cf6; }
+.article-category--tips { color: #f59e0b; }
+.article-category--cases { color: #ef4444; }
 
 /* Category-Specific Image Gradients */
-.article-image.sustainability {
+.article-image--sustainability {
     background: linear-gradient(135deg, #22c55e, #16a34a);
 }
 
-.article-image.innovation {
+.article-image--innovation {
     background: linear-gradient(135deg, #4285f4, #1d4ed8);
 }
 
-.article-image.insights {
+.article-image--insights {
     background: linear-gradient(135deg, #8b5cf6, #7c3aed);
 }
 
-.article-image.tips {
+.article-image--tips {
     background: linear-gradient(135deg, #f59e0b, #d97706);
 }
 
-.article-image.cases {
+.article-image--cases {
     background: linear-gradient(135deg, #ef4444, #dc2626);
 }
 
 /* Featured Article */
-.card--featured {
+.card--split {
     background: white;
-    border-radius: 24px;
+    border-radius: var(--radius-normal);
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     display: none;
@@ -114,7 +105,7 @@
     min-height: 200px;
 }
 
-.card--featured[data-featured-category="all"] {
+.card--split[data-featured-category="all"] {
     display: grid;
 }
 
@@ -355,7 +346,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .card--featured {
+    .card--split {
         grid-template-columns: 1fr;
         text-align: center;
     }

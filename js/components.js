@@ -30,11 +30,31 @@ async function loadComponents() {
             articleSidebarElement.innerHTML = articleSidebar;
         }
 
+        // Toggle header logo color on scroll
+        initHeaderScroll();
+
         // Initialize chatbot after loading
         initializeChatbotFunctions();
     } catch (error) {
         console.error('Failed to load components:', error);
     }
+}
+
+function initHeaderScroll() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    const threshold = window.innerHeight * 0.6;
+    let scrolled = false;
+
+    const scrollTarget = document.body;
+    scrollTarget.addEventListener('scroll', () => {
+        const shouldBeScrolled = scrollTarget.scrollTop > threshold;
+        if (shouldBeScrolled !== scrolled) {
+            scrolled = shouldBeScrolled;
+            header.classList.toggle('header--scrolled', scrolled);
+        }
+    }, { passive: true });
 }
 
 // Initialize all chatbot functions globally
