@@ -1,6 +1,6 @@
 /* ========================================
    SUSTAINABILITY CAROUSEL COMPONENT
-   Used by: sustainability.html, socialS.html, klimaS.html, governanceS.html
+   Used by: sustainability.html, social.html, klima.html, governance.html
    ======================================== */
 
 /* Scoped Reset (needed for slide math — padding must not add to width/height) */
@@ -369,7 +369,7 @@
     letter-spacing: 1px;
 }
 
-/* Step Number — small variant for klimaS.html (base .step-number is in styles.css) */
+/* Step Number — small variant for klima.html (base .step-number is in styles.css) */
 .step-number--small {
     width: 25px;
     height: 25px;

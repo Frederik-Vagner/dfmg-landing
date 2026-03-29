@@ -5,3 +5,4 @@ pages/components/
 pages/facility/components/
 pages/software/components/
 images/**/*.html
+pages/**/artikler/_*.html
