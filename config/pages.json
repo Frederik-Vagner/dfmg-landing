@@ -74,25 +74,25 @@
   "pages/sustainability/sustainability": {
     "title": "DFMG - Bæredygtighed",
     "description": "DFMG's bæredygtighedsstrategi og ESG-arbejde. Socialt ansvar, klimaindsats og god ledelse.",
-    "components": ["sustainability-carousel", "sustainability-slides"],
+    "components": ["sustainability-carousel", "slides"],
     "scripts": ["/js/sustainability-slider.js"]
   },
   "pages/sustainability/socialS": {
     "title": "DFMG - Socialt Ansvar",
     "description": "DFMG's sociale ansvar og arbejde med medarbejdertrivsel, diversitet og samfundsengagement.",
-    "components": ["sustainability-carousel", "social-slides"],
+    "components": ["sustainability-carousel", "slides"],
     "scripts": ["/js/sustainability-slider.js"]
   },
   "pages/sustainability/klimaS": {
     "title": "DFMG - Klimaindsats",
     "description": "DFMG's klimastrategi og miljøarbejde. Grønne løsninger og CO2-reduktion.",
-    "components": ["sustainability-carousel", "klima-slides"],
+    "components": ["sustainability-carousel", "slides"],
     "scripts": ["/js/sustainability-slider.js"]
   },
   "pages/sustainability/governanceS": {
     "title": "DFMG - Governance",
     "description": "DFMG's ledelsesstruktur, etik og compliance. Ansvarlig forretningsførelse.",
-    "components": ["sustainability-carousel", "governance-slides"],
+    "components": ["sustainability-carousel", "slides"],
     "scripts": ["/js/sustainability-slider.js"]
   },
   "pages/indblik/om": {
