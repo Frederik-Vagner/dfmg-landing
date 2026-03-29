@@ -1,0 +1,323 @@
+<style>
+/* ── Contact Widget ── */
+.contact-widget {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.contact-widget__trigger {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--bg-gradient-charcoal);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-widget__trigger:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-widget__trigger .icon-open,
+.contact-widget__trigger .icon-close {
+    position: absolute;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-widget__trigger .icon-close {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+.contact-widget.active .contact-widget__trigger .icon-open {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.contact-widget.active .contact-widget__trigger .icon-close {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Dropdown panel */
+.contact-widget__panel {
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    width: 280px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px) scale(0.96);
+    transform-origin: bottom left;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    overflow: hidden;
+}
+
+.contact-widget.active .contact-widget__panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Panel header */
+.contact-widget__header {
+    padding: 16px 20px;
+    background: var(--bg-gradient-primary);
+    color: #fff;
+}
+
+.contact-widget__title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.contact-widget__subtitle {
+    font-size: 12px;
+    opacity: 0.75;
+    font-weight: 400;
+}
+
+/* Contact options */
+.contact-widget__options {
+    padding: 8px;
+}
+
+.contact-widget__option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--charcoal);
+    transition: background 0.15s ease;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+}
+
+.contact-widget__option:hover {
+    background: #f8fafc;
+}
+
+.contact-widget__option-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.contact-widget__option-icon--email {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.contact-widget__option-icon--phone {
+    background: #f0fdf4;
+    color: #22c55e;
+}
+
+.contact-widget__option-icon--demo {
+    background: #faf5ff;
+    color: #8b5cf6;
+}
+
+.contact-widget__option-icon--linkedin {
+    background: #eff6ff;
+    color: #0a66c2;
+}
+
+.contact-widget__option-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.contact-widget__option-label {
+    font-weight: 500;
+    color: var(--charcoal);
+    font-size: 14px;
+}
+
+.contact-widget__option-detail {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* Divider */
+.contact-widget__divider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 0 12px;
+}
+
+/* Availability indicator */
+.contact-widget__availability {
+    padding: 10px 20px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.contact-widget__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: cw-pulse 2s ease-in-out infinite;
+}
+
+.contact-widget__dot--offline {
+    background: #94a3b8;
+    animation: none;
+}
+
+@keyframes cw-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* Backdrop for mobile */
+.contact-widget__backdrop {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-widget {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .contact-widget__panel {
+        width: calc(100vw - 40px);
+        left: 0;
+        bottom: 64px;
+    }
+
+    .contact-widget__backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+
+    .contact-widget.active .contact-widget__backdrop {
+        display: block;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .contact-widget__panel {
+        transition: none;
+    }
+
+    .contact-widget__trigger {
+        transition: none;
+    }
+
+    .contact-widget__trigger .icon-open,
+    .contact-widget__trigger .icon-close {
+        transition: none;
+    }
+
+    .contact-widget__dot {
+        animation: none;
+    }
+}
+</style>
+
+<div class="contact-widget" id="contactWidget">
+    <div class="contact-widget__backdrop" onclick="toggleContactWidget()"></div>
+
+    <div class="contact-widget__panel">
+        <div class="contact-widget__header">
+            <div class="contact-widget__title" data-en="Get in touch" data-da="Kontakt os">Get in touch</div>
+            <div class="contact-widget__subtitle" data-en="We usually respond within an hour" data-da="Vi svarer typisk inden for en time">We usually respond within an hour</div>
+        </div>
+
+        <div class="contact-widget__options">
+            <a href="mailto:kontakt@dfmg.dk" class="contact-widget__option">
+                <div class="contact-widget__option-icon contact-widget__option-icon--email">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-widget__option-text">
+                    <span class="contact-widget__option-label" data-en="Send an email" data-da="Send en email">Send an email</span>
+                    <span class="contact-widget__option-detail">kontakt@dfmg.dk</span>
+                </div>
+            </a>
+
+            <a href="tel:+4550480273" class="contact-widget__option">
+                <div class="contact-widget__option-icon contact-widget__option-icon--phone">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-widget__option-text">
+                    <span class="contact-widget__option-label" data-en="Call us" data-da="Ring til os">Call us</span>
+                    <span class="contact-widget__option-detail">+45 50 48 02 73</span>
+                </div>
+            </a>
+
+            <div class="contact-widget__divider"></div>
+
+            <a href="/pages/platform/demo.html" class="contact-widget__option" id="contactWidgetDemoLink">
+                <div class="contact-widget__option-icon contact-widget__option-icon--demo">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="contact-widget__option-text">
+                    <span class="contact-widget__option-label" data-en="Book a demo" data-da="Book en demo">Book a demo</span>
+                    <span class="contact-widget__option-detail" data-en="30-min walkthrough" data-da="30 min gennemgang">30-min walkthrough</span>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/company/dfmg-aps/" target="_blank" rel="noopener" class="contact-widget__option">
+                <div class="contact-widget__option-icon contact-widget__option-icon--linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-widget__option-text">
+                    <span class="contact-widget__option-label">LinkedIn</span>
+                    <span class="contact-widget__option-detail" data-en="Follow DFMG" data-da="Følg DFMG">Follow DFMG</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="contact-widget__availability">
+            <span class="contact-widget__dot" id="contactWidgetDot"></span>
+            <span id="contactWidgetStatus">Available now</span>
+        </div>
+    </div>
+
+    <button class="contact-widget__trigger" onclick="toggleContactWidget()" aria-label="Contact us">
+        <i class="fas fa-headset icon-open"></i>
+        <i class="fas fa-times icon-close"></i>
+    </button>
+</div>
+
+<!-- JS is initialized by components.js via initializeContactWidget() -->

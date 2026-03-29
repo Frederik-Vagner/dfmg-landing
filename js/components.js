@@ -1,12 +1,25 @@
 // Fast, simple component loader with chatbot support
+function isPlatformPage() {
+    return window.location.pathname.startsWith('/pages/platform/');
+}
+
 async function loadComponents() {
     try {
-        // Always load header, footer, and chatbot
+        const platform = isPlatformPage();
+        const headerPath = platform ? '/pages/components/header-platform.html' : '/pages/components/header.html';
+        const footerPath = platform ? '/pages/components/footer-platform.html' : '/pages/components/footer.html';
+
         const fetchPromises = [
-            fetch('/pages/components/header.html'),
-            fetch('/pages/components/footer.html'),
-            fetch('/pages/components/chatbot.html')
+            fetch(headerPath),
+            fetch(footerPath)
         ];
+
+        // Load chatbot on service pages, contact widget on platform pages
+        if (!platform) {
+            fetchPromises.push(fetch('/pages/components/chatbot.html'));
+        } else {
+            fetchPromises.push(fetch('/pages/components/contact-widget.html'));
+        }
 
         // Check if article sidebar exists on page
         const articleSidebarElement = document.getElementById('article-sidebar');
@@ -18,23 +31,38 @@ async function loadComponents() {
 
         const header = await responses[0].text();
         const footer = await responses[1].text();
-        const chatbot = await responses[2].text();
 
         document.getElementById('header').innerHTML = header;
         document.getElementById('footer').innerHTML = footer;
-        document.getElementById('chatbot').innerHTML = chatbot;
+
+        let nextIdx = 2;
+
+        // Inject chatbot or contact widget
+        const widgetHtml = await responses[nextIdx].text();
+        if (!platform) {
+            const chatbotEl = document.getElementById('chatbot');
+            if (chatbotEl) chatbotEl.innerHTML = widgetHtml;
+        } else {
+            const contactEl = document.getElementById('contact-widget');
+            if (contactEl) contactEl.innerHTML = widgetHtml;
+        }
+        nextIdx++;
 
         // Load article sidebar if it exists
-        if (articleSidebarElement && responses[3]) {
-            const articleSidebar = await responses[3].text();
+        if (articleSidebarElement && responses[nextIdx]) {
+            const articleSidebar = await responses[nextIdx].text();
             articleSidebarElement.innerHTML = articleSidebar;
         }
 
         // Toggle header logo color on scroll
         initHeaderScroll();
 
-        // Initialize chatbot after loading
-        initializeChatbotFunctions();
+        // Initialize widget JS after DOM injection
+        if (!platform) {
+            initializeChatbotFunctions();
+        } else {
+            initializeContactWidget();
+        }
     } catch (error) {
         console.error('Failed to load components:', error);
     }
@@ -174,6 +202,68 @@ function initializeChatbotFunctions() {
             });
         }
     }, 100);
+}
+
+
+// Contact widget initialization (platform pages)
+function initializeContactWidget() {
+    window.toggleContactWidget = function() {
+        document.getElementById('contactWidget').classList.toggle('active');
+    };
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            var widget = document.getElementById('contactWidget');
+            if (widget) widget.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        var widget = document.getElementById('contactWidget');
+        if (widget && widget.classList.contains('active') && !widget.contains(e.target)) {
+            widget.classList.remove('active');
+        }
+    });
+
+    // Language detection
+    var lang = document.documentElement.lang === 'da' ? 'da' : 'en';
+
+    var widget = document.getElementById('contactWidget');
+    if (!widget) return;
+
+    // Apply translations
+    widget.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+
+    // On Danish pages, point demo link to service contact page
+    if (lang === 'da') {
+        var demoLink = document.getElementById('contactWidgetDemoLink');
+        if (demoLink) demoLink.href = '/pages/kontakt.html';
+    }
+
+    // Availability: Mon-Fri 08:00-17:00 CET
+    function updateAvailability() {
+        var now = new Date();
+        var cet = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Copenhagen' }));
+        var day = cet.getDay();
+        var hour = cet.getHours();
+        var available = day >= 1 && day <= 5 && hour >= 8 && hour < 17;
+
+        var dot = document.getElementById('contactWidgetDot');
+        var status = document.getElementById('contactWidgetStatus');
+        if (dot && status) {
+            dot.className = available ? 'contact-widget__dot' : 'contact-widget__dot contact-widget__dot--offline';
+            if (available) {
+                status.textContent = lang === 'da' ? 'Tilg\u00e6ngelig nu' : 'Available now';
+            } else {
+                status.textContent = lang === 'da' ? 'Tilbage man\u2013fre 08:00\u201317:00' : 'Back Mon\u2013Fri 08:00\u201317:00';
+            }
+        }
+    }
+
+    updateAvailability();
+    setInterval(updateAvailability, 60000);
 }
 
 

@@ -124,5 +124,48 @@
     "description": "DFMG's cookiepolitik og brug af cookies.",
     "components": [],
     "scripts": []
+  },
+
+  "pages/platform/index": {
+    "title": "DFMG Platform — All-in-One SaaS for Service Companies",
+    "description": "40+ modules for Danish cleaning and service companies. Calendar, tasks, invoicing, payroll, CRM and more.",
+    "components": ["platform"],
+    "scripts": []
+  },
+  "pages/platform/features": {
+    "title": "DFMG Platform — Features & Modules",
+    "description": "Explore 40+ modules: operations, client management, financials, payroll, CRM, documents and analytics.",
+    "components": ["platform"],
+    "scripts": []
+  },
+  "pages/platform/pricing": {
+    "title": "DFMG Platform — Pricing Plans",
+    "description": "Transparent pricing for Danish service companies. Choose the modules you need.",
+    "components": ["platform", "platform-pricing"],
+    "scripts": []
+  },
+  "pages/platform/demo": {
+    "title": "DFMG Platform — Book a Demo",
+    "description": "See the platform in action. Book a 30-minute demo with our team.",
+    "components": ["platform"],
+    "scripts": []
+  },
+  "pages/platform/about": {
+    "title": "DFMG Platform — About",
+    "description": "Built by a Danish service company, for service companies. Learn about our platform vision.",
+    "components": ["platform"],
+    "scripts": []
+  },
+  "pages/platform/contact": {
+    "title": "DFMG Platform — Contact Sales",
+    "description": "Get in touch with our sales team for pricing, demos, or partnership inquiries.",
+    "components": ["platform"],
+    "scripts": []
+  },
+  "pages/platform/tak": {
+    "title": "DFMG Platform — Thank You",
+    "description": "Thank you for your inquiry. We'll get back to you shortly.",
+    "components": ["platform"],
+    "scripts": []
   }
 }

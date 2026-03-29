@@ -1,0 +1,222 @@
+/* ====================================
+   PLATFORM PRICING PAGE
+   ==================================== */
+
+/* ── Tier cards ── */
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.tier-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.tier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tier-card--featured {
+    border-color: var(--primary);
+    position: relative;
+}
+
+.tier-card--featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    border-radius: var(--radius-circle);
+    letter-spacing: 0.03em;
+}
+
+.tier-card__name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.tier-card__desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.tier-card__price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1;
+}
+
+.tier-card__price small {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.tier-card__divider {
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+}
+
+.tier-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    text-align: left;
+}
+
+.tier-card__features li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.tier-card__features li i {
+    color: var(--success);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+/* ── Comparison table ── */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-bottom: var(--border-lighter);
+    font-size: 0.9rem;
+}
+
+.comparison-table th {
+    background: var(--charcoal);
+    color: #fff;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.comparison-table .category-row td {
+    background: #f8fafc;
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 1.25rem;
+}
+
+.comparison-table .check {
+    color: var(--success);
+}
+
+.comparison-table .dash {
+    color: #cbd5e1;
+}
+
+/* ── FAQ accordion ── */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: var(--border-light);
+}
+
+.faq-item__question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.25rem 0;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item__question i {
+    transition: transform var(--transition-fast);
+    color: var(--gray);
+    font-size: 0.8rem;
+}
+
+.faq-item__question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-item__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+}
+
+.faq-item__answer.active {
+    max-height: 300px;
+}
+
+.faq-item__answer p {
+    padding: 0 0 1.25rem;
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .comparison-table {
+        font-size: 0.8rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.5rem;
+    }
+}
