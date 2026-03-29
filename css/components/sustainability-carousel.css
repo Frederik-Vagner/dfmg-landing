@@ -299,15 +299,6 @@
         font-size: 1.1rem;
     }
 
-    .slide-visual1 {
-        height: 250px;
-        font-size: 1rem;
-    }
-
-    .nav-arrow {
-        display: none;
-    }
-
     .slide-nav {
         right: 20px;
     }
@@ -378,8 +369,8 @@
     letter-spacing: 1px;
 }
 
-/* Step Number (used by klimaS.html) */
-.step-number {
+/* Step Number — small variant for klimaS.html (base .step-number is in styles.css) */
+.step-number--small {
     width: 25px;
     height: 25px;
     background: #0ea5e9;
@@ -402,6 +393,3 @@
     background: linear-gradient(135deg, #4285f4, #1d4ed8, #1e40af);
 }
 
-.governance-visual {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9);
-}

@@ -4,14 +4,19 @@
             currentTab = tabName;
 
             // Update button styles
-            document.querySelectorAll('.tab-button').forEach(btn => {
+            document.querySelectorAll('[data-tab]').forEach(btn => {
                 btn.classList.remove('active');
             });
-            document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.add('active');
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
 
             // Update table content
             updateTableContent();
         }
+
+        // Bind tab buttons via data attributes
+        document.querySelectorAll('[data-tab]').forEach(btn => {
+            btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+        });
 
         function updateTableContent() {
             const tableData = {

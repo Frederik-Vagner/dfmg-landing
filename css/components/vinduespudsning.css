@@ -38,24 +38,7 @@
     opacity: 1;
 }
 
-.service-price {
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.price-label {
-    color: var(--gray);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
-}
-
-.price-amount {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-}
+/* .service-price, .price-label, .price-amount — provided by pricing.css */
 
 /* Comparison slider */
 .comparison-slider {

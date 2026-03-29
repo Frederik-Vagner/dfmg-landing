@@ -79,6 +79,7 @@ body {
     flex-grow: 1;
 }
 
+/* NOTE: .service-features also defined in services.css (with animations) — no conflict, pages load one or the other */
 .service-features {
     list-style: none;
     margin-bottom: 1.5rem;
@@ -101,109 +102,6 @@ body {
     width: 14px;
 }
 
-.service-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: auto;
-    border-top: 1px solid var(--color-border);
-    padding-top: 2rem;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    border-radius: 16px;
-    border: 1px solid var(--color-border);
-    background: var(--bg-muted);
-}
-
-.stat-number {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1;
-}
-
-.stat-label {
-    font-size: 0.75rem;
-    color: var(--gray-light);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 0.25rem;
-}
-
-.mini-chart {
-    width: 100%;
-    height: 40px;
-    margin-top: 0.5rem;
-}
-
-.chart-bar {
-    height: 100%;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 0.5rem;
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    transition: width 0.3s;
-    background: var(--charcoal);
-}
-
-/* Type Cards */
-.type-card {
-    background: white;
-    border-radius: 24px;
-    padding: 3rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.type-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: var(--charcoal);
-}
-
-.type-badge {
-    background: var(--charcoal);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-}
-
-.features-list {
-    list-style: none;
-}
-
-.features-list li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    color: var(--charcoal);
-    font-weight: 500;
-}
-
-.features-list i {
-    color: var(--primary);
-    font-size: 1.2rem;
-}
 
 /* Stability Section */
 .section--fullheight {
@@ -583,17 +481,4 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.services-carousel {
-    overflow: hidden;
-}
-.services-track {
-    display: flex;
-    transition: transform var(--transition-normal);
-    width: max-content;
-    gap: 20px;
 }

@@ -85,11 +85,6 @@
     margin-bottom: 0.75rem;
 }
 
-.article-category--sustainability { color: var(--success); }
-.article-category--innovation { color: var(--primary); }
-.article-category--insights { color: var(--governance); }
-.article-category--tips { color: #f59e0b; }
-.article-category--cases { color: var(--red); }
 
 /* Category-Specific Image Gradients */
 .article-image--sustainability {
@@ -276,49 +271,8 @@
     margin-bottom: 4rem;
 }
 
-/* Case Study Cards */
-.case-company {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
 .case-content {
     padding: 1.5rem;
-}
-
-.case-challenge h4 {
-    color: var(--text-primary);
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.case-challenge {
-    margin-bottom: 1rem;
-}
-
-.case-results {
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
-.case-results h5 {
-    color: var(--success);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-/* Metrics Display */
-.result-metrics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.metric {
-    text-align: center;
 }
 
 
@@ -330,20 +284,6 @@
     color: unset;
 }
 
-/* Coming Soon Badge */
-.coming-soon-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(66, 133, 244, 0.9);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
 
 /* Button States */
 .primary.small.coming-soon {

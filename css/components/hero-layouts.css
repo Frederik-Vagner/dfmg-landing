@@ -140,12 +140,6 @@
     top: 2rem;
 }
 
-.category-features i {
-    color: var(--primary);
-    font-size: 0.8rem;
-    width: 12px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-layout::before {
@@ -158,28 +152,11 @@
         gap: 2rem;
     }
 
-    .hero-features {
-        gap: 0.5rem;
-    }
-
-    .hero-feature {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
-    }
-
     .card--accent {
         min-width: 100%;
     }
 
-    .before-after-image {
-        height: 200px;
-    }
-
     .testimonial-text {
         font-size: 1.1rem;
-    }
-
-    .category-content {
-        padding: 2rem;
     }
 }
