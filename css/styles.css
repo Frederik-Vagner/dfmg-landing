@@ -875,6 +875,106 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+/* ── Career Content ── */
+.career-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.job-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.job-benefits li {
+    padding: 0.5rem 0;
+    color: var(--gray);
+}
+
+.job-benefits li::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: var(--font-weight-bold);
+    margin-right: 1rem;
+}
+
+.partner-info .job-benefits li::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: var(--font-weight-bold);
+    margin-left: 1rem;
+    margin-right: 0;
+    float: right;
+}
+
+.partner-info .job-benefits li.unavailable::before {
+    content: '✗';
+    color: var(--red);
+    font-weight: var(--font-weight-bold);
+    margin-left: 1rem;
+    margin-right: 0;
+    float: right;
+}
+
+/* ── FAQ Accordion ── */
+.faq-accordion {
+    margin-top: 3rem;
+}
+
+.faq-item {
+    border: var(--border-light);
+    border-radius: var(--radius-normal);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    transition: background var(--transition-fast);
+}
+
+.faq-question h4 {
+    margin: 0;
+    color: var(--charcoal);
+}
+
+.faq-question iconify-icon {
+    transition: transform var(--transition-normal);
+    color: var(--gray);
+}
+
+.faq-question.active {
+    background: var(--white);
+}
+
+.faq-question.active iconify-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+}
+
+.faq-answer.open {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: var(--padding-md);
+    margin: 0;
+    color: var(--gray);
+}
+
 /* === FOOTER === */
 
 /* Additional utility classes (extended set) */
