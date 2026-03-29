@@ -27,17 +27,26 @@
 
         <!-- CSS-Only Mobile Menu -->
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-        <label for="menu-toggle" class="menu-btn">&#9776;</label>
+        <label for="menu-toggle" class="menu-btn" aria-label="Menu">&#9776;</label>
 
-        <nav class="mobile-nav">
-            <a href="/pages/platform/features.html">Features</a>
-            <a href="/pages/platform/pricing.html">Pricing</a>
-            <a href="/pages/platform/demo.html">Book a Demo</a>
-            <a href="/pages/platform/about.html">About</a>
-            <a href="/pages/platform/contact.html">Contact</a>
-            <a href="/pages/services/services.html">Services</a>
-            <a href="/pages/kontakt.html">Kontakt</a>
-            <a href="/">&#8592; dfmg.dk</a>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <div class="mobile-nav__group">
+                <div class="mobile-nav__label">Platform</div>
+                <a href="/pages/platform/features.html">Features</a>
+                <a href="/pages/platform/pricing.html">Pricing</a>
+                <a href="/pages/platform/about.html">About</a>
+                <a href="/pages/platform/contact.html">Contact</a>
+                <a href="/pages/platform/demo.html" class="mobile-nav__highlight">Book a Demo</a>
+            </div>
+            <div class="mobile-nav__group">
+                <div class="mobile-nav__label">DFMG.dk</div>
+                <a href="/pages/services/services.html">Services</a>
+                <a href="/pages/sustainability/sustainability.html">Bæredygtighed</a>
+                <a href="/pages/indblik/indblik.html">Indblik</a>
+                <a href="/pages/kontakt.html">Kontakt</a>
+                <a href="/pages/prisberegner.html">Prisberegner</a>
+                <a href="/" class="mobile-nav__highlight">&#8592; dfmg.dk</a>
+            </div>
         </nav>
     </div>
 </header>

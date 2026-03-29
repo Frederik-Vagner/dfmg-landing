@@ -39,7 +39,7 @@
             </div>
             
             <a href="/pages/kontakt.html">Kontakt</a>
-            <a href="/pages/platform/index.html" class="nav-cta">Platform</a>
+            <a href="/pages/platform/index.html">Platform</a>
             <a href="/pages/prisberegner.html" class="nav-cta">Prisberegner</a>
         </nav>
         
@@ -51,13 +51,38 @@
         
         <!-- CSS-Only Mobile Menu -->
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-        <label for="menu-toggle" class="menu-btn">☰</label>
-        
-        <nav class="mobile-nav">
-            <a href="/pages/services/services.html">Services</a>
-            <a href="/pages/about/">Om Os</a>
-            <a href="/pages/kontakt.html">Kontakt</a>
-            <a href="/pages/platform/index.html">Platform</a>
+        <label for="menu-toggle" class="menu-btn" aria-label="Menu">&#9776;</label>
+
+        <nav class="mobile-nav" aria-label="Mobilnavigation">
+            <div class="mobile-nav__group">
+                <div class="mobile-nav__label">Services</div>
+                <a href="/pages/services/services.html">Alle Services</a>
+                <a href="/pages/services/rengøring.html">Erhvervsrengøring</a>
+                <a href="/pages/services/ejendomsservice.html">Ejendomsservice</a>
+                <a href="/pages/services/handyman.html">Handyman</a>
+                <a href="/pages/services/produkter.html">Supplies & Produkter</a>
+                <a href="/pages/services/picoline.html">Piccoline Ordning</a>
+                <a href="/pages/services/vinduespudsning.html">Vinduespolering</a>
+            </div>
+            <div class="mobile-nav__group">
+                <div class="mobile-nav__label">Bæredygtighed</div>
+                <a href="/pages/sustainability/sustainability.html">Oversigt</a>
+                <a href="/pages/sustainability/klimaS.html">Miljø & Klima</a>
+                <a href="/pages/sustainability/socialS.html">Social Bæredygtighed</a>
+                <a href="/pages/sustainability/governanceS.html">Governance</a>
+            </div>
+            <div class="mobile-nav__group">
+                <div class="mobile-nav__label">Indblik</div>
+                <a href="/pages/indblik/indblik.html">Oversigt</a>
+                <a href="/pages/indblik/om.html">Om DFMG</a>
+                <a href="/pages/indblik/teknologi.html">Teknologi & Processer</a>
+                <a href="/pages/indblik/nyheder.html">Nyheder & Artikler</a>
+            </div>
+            <div class="mobile-nav__group">
+                <a href="/pages/kontakt.html" class="mobile-nav__highlight">Kontakt</a>
+                <a href="/pages/prisberegner.html" class="mobile-nav__highlight">Prisberegner</a>
+                <a href="/pages/platform/index.html" class="mobile-nav__highlight">Platform &#8594;</a>
+            </div>
         </nav>
     </div>
 </header>
