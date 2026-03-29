@@ -164,7 +164,7 @@
             lines[2].lastElementChild.textContent = `${prices.toilets.toLocaleString('da-DK')} kr`;
             lines[3].lastElementChild.textContent = `${prices.kitchens.toLocaleString('da-DK')} kr`;
             lines[4].lastElementChild.textContent = `${prices.photos.toLocaleString('da-DK')} kr`;
-            lines[6].lastElementChild.textContent = `-${prices.discount}%`; // CHANGE FROM 6 TO 6
+            lines[6].lastElementChild.textContent = `-${prices.discount}%`;
 
             document.getElementById('monthly-price').textContent = `${prices.total.toLocaleString('da-DK')} kr`;
 

@@ -116,7 +116,7 @@
         
         <div class="flex flex-2">
             <div class="grid gap-1">
-                <div class="card p-2 bg-gradient-white border-left-success active" onclick="showCategory('hygiene')">
+                <div class="card p-2 bg-gradient-white border-left-success active" onclick="switchTab('hygiene', this)">
                     <div class="flex">
                         <i class="fas fa-spray-can text-success text-5xl mr-1"></i>
                         <div>
@@ -132,7 +132,7 @@
                     </ul>
                 </div>
                 
-                <div class="card p-2 bg-gradient-white border-left-success" onclick="showCategory('office')">
+                <div class="card p-2 bg-gradient-white border-left-success" onclick="switchTab('office', this)">
                     <div class="flex">
                         <i class="fas fa-pencil-alt text-success text-5xl mr-1"></i>
                         <div>
@@ -148,7 +148,7 @@
                     </ul>
                 </div>
                 
-                <div class="card p-2 bg-gradient-white border-left-success" onclick="showCategory('beverages')">
+                <div class="card p-2 bg-gradient-white border-left-success" onclick="switchTab('beverages', this)">
                     <div class="flex">
                         <i class="fas fa-mug-hot text-success text-5xl mr-1"></i>
                         <div>
@@ -164,7 +164,7 @@
                     </ul>
                 </div>
                 
-                <div class="card p-2 bg-gradient-white border-left-success" onclick="showCategory('snacks')">
+                <div class="card p-2 bg-gradient-white border-left-success" onclick="switchTab('snacks', this)">
                     <div class="flex">
                         <i class="fas fa-cookie text-success text-5xl mr-1"></i>
                         <div>
@@ -294,7 +294,7 @@
                         <div class="custom-request-icon"><i class="fas fa-plus-circle"></i></div>
                         <h5 class="text-charcoal text-xl font-semibold mb-05">Mangler I noget specifikt?</h5>
                         <p class="text-gray mb-2">Send os en anmodning med billede af produktet - vi finder det til den bedste pris og tilføjer det til vores katalog</p>
-                        <a href="#" class="custom-request-btn">
+                        <a href="/pages/kontakt.html" class="custom-request-btn">
                             <i class="fas fa-camera"></i>
                             Send Produktanmodning
                         </a>
@@ -486,8 +486,6 @@
                     </a>
                 </div>
             </div>
-            <div class="cta-right">
-            </div>
         </div>
     </div>
 </section>
@@ -502,7 +500,7 @@
 <!-- Component Loader -->
 <script src="/js/components.js" defer></script>
 
-<script src="/js/produkter.js" defer></script>
+<script src="/js/tab-switcher.js" defer></script>
 
 </body>
 </html>

@@ -259,9 +259,9 @@
         
         <div>
             <div class="flex m-2 justify-center gap-2 flex-wrap mb-4">
-                <div class="tab-button active" onclick="showGallery('renovation')">Renovering</div>
-                <div class="tab-button" onclick="showGallery('furniture')">Møbelmontering</div>
-                <div class="tab-button" onclick="showGallery('painting')">Maling</div>
+                <div class="tab-button active" onclick="switchTab('renovation', this)">Renovering</div>
+                <div class="tab-button" onclick="switchTab('furniture', this)">Møbelmontering</div>
+                <div class="tab-button" onclick="switchTab('painting', this)">Maling</div>
             </div>
             
             <div class="toggle-content active" id="renovation">
@@ -451,8 +451,6 @@
                     </a>
                 </div>
             </div>
-            <div class="cta-right">
-            </div>
         </div>
     </div>
 </section>
@@ -468,7 +466,7 @@
 <script src="/js/components.js" defer></script>
 <script src="/js/carousel.js" defer></script>
 
-<script src="/js/handyman.js" defer></script>
+<script src="/js/tab-switcher.js" defer></script>
 
 </body>
 </html>
