@@ -16,8 +16,6 @@
     line-height: 1.6;
     color: var(--charcoal);
     background: #fff;
-    height: 100vh;
-    overflow: hidden;
     font-weight: 500;
 }
 
@@ -26,7 +24,6 @@
     max-width: none;
     margin: 0 auto;
     padding: 1rem;
-    height: 100vh;
     padding-top: 120px;
 }
 
@@ -36,14 +33,7 @@
     grid-template-columns: 0.8fr 2.5fr 1fr;
     gap: 0.5rem;
     margin: 0 auto;
-    height: calc(100vh - 130px);
-    overflow: hidden;
-}
-
-
-
-.calculator-content h2 {
-    padding-left: 0.5rem;
+    min-height: calc(100vh - 130px);
 }
 
 /* Column styling */
@@ -51,12 +41,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    height: 100%;
-    overflow-y: auto;
     overflow-x: hidden;
-    padding: 0.25rem !important;
-    padding-top: 0 !important;
-    scrollbar-width: thin;
+    padding: 0.25rem;
+    padding-top: 0;
 }
 
 /* Info card styling */
@@ -126,6 +113,26 @@
     text-align: center;
 }
 
+/* Input with unit suffix (e.g. m²) */
+.input-with-unit {
+    position: relative;
+    display: inline-block;
+}
+
+.input-with-unit .form-input {
+    padding-right: 25px;
+}
+
+.input-unit {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--gray-light);
+    font-size: 0.9rem;
+}
+
 /* Planning Table */
 .planning-table td {
     padding: 0.1rem 0.5rem;
@@ -140,11 +147,24 @@
     text-align: right;
 }
 
+.th-count {
+    padding-left: 1.5rem;
+}
+
 /* Service Tasks Grid */
 .service-tasks {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     gap: 0.1rem 0.5rem;
+}
+
+/* Grundig-only task visibility */
+.grundig-only {
+    display: none;
+}
+
+.service-tasks.grundig-mode .grundig-only {
+    display: flex;
 }
 
 .task-item {
@@ -158,7 +178,6 @@
 
 .task-item:hover {
     background: var(--bg-light);
-    border-color: var(--color-border);
 }
 
 .task-checkbox {
@@ -169,16 +188,27 @@
 }
 
 /* Price Section */
+.price-summary {
+    padding: 2rem;
+}
+
 .price-line {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
 }
 
-.price-total {
+.task-summary-line {
+    font-size: 0.85rem;
+    color: var(--gray-light);
+    border-top: 1px solid var(--bg-light);
+    padding-top: 0.5rem;
     margin-top: 0.5rem;
-    padding-top: 1rem;
-    border-top: 2px solid var(--charcoal);
+}
+
+.discount-line {
+    border-bottom: 1px solid var(--bg-light);
+    padding-bottom: 0.75rem;
 }
 
 .price-total-line {
@@ -200,4 +230,37 @@
 #price label,
 #price span {
     font-size: 0.85rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .calculator-content {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .calculator-content > .column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .service-tasks {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        padding-top: 80px;
+    }
+
+    .calculator-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .price-summary {
+        padding: 1rem;
+    }
 }

@@ -24,15 +24,15 @@ scripts:
                                 <tr>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn active" onclick="selectSizeMethod('area')">Areal</div>
-                                            <div class="btn" onclick="selectSizeMethod('employees')">Folk</div>
+                                            <button class="btn active" data-size-method="area">Areal</button>
+                                            <button class="btn" data-size-method="employees">Folk</button>
                                         </div>
                                     </td>
                                     <td>
                                         <div id="area-input">
-                                            <div style="position: relative; display: inline-block;">
-                                                <input class="form-input" id="office-area" placeholder="500" value="500" style="padding-right: 25px;">
-                                                <span style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #64748b; font-size: 0.9rem;">m²</span>
+                                            <div class="input-with-unit">
+                                                <input class="form-input" id="office-area" placeholder="500" value="500">
+                                                <span class="input-unit">m²</span>
                                             </div>
                                         </div>
                                         <div id="employees-input" style="display: none;">
@@ -46,7 +46,7 @@ scripts:
                             <thead>
                                 <tr>
                                     <th>Type</th>
-                                    <th style="padding-left: 1.5rem;">Antal</th>
+                                    <th class="th-count">Antal</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -82,8 +82,8 @@ scripts:
                                     <td>Mandag</td>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn" data-day="monday" data-type="let">Let</div>
-                                            <div class="btn" data-day="monday" data-type="grundig">Grundig</div>
+                                            <button class="btn" data-day="monday" data-type="let">Let</button>
+                                            <button class="btn" data-day="monday" data-type="grundig">Grundig</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -91,8 +91,8 @@ scripts:
                                     <td>Tirsdag</td>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn active" data-day="tuesday" data-type="let">Let</div>
-                                            <div class="btn" data-day="tuesday" data-type="grundig">Grundig</div>
+                                            <button class="btn active" data-day="tuesday" data-type="let">Let</button>
+                                            <button class="btn" data-day="tuesday" data-type="grundig">Grundig</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -100,8 +100,8 @@ scripts:
                                     <td>Onsdag</td>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn" data-day="wednesday" data-type="let">Let</div>
-                                            <div class="btn" data-day="wednesday" data-type="grundig">Grundig</div>
+                                            <button class="btn" data-day="wednesday" data-type="let">Let</button>
+                                            <button class="btn" data-day="wednesday" data-type="grundig">Grundig</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -109,8 +109,8 @@ scripts:
                                     <td>Torsdag</td>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn active" data-day="thursday" data-type="let">Let</div>
-                                            <div class="btn" data-day="thursday" data-type="grundig">Grundig</div>
+                                            <button class="btn active" data-day="thursday" data-type="let">Let</button>
+                                            <button class="btn" data-day="thursday" data-type="grundig">Grundig</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -118,8 +118,8 @@ scripts:
                                     <td>Fredag</td>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn" data-day="friday" data-type="let">Let</div>
-                                            <div class="btn" data-day="friday" data-type="grundig">Grundig</div>
+                                            <button class="btn" data-day="friday" data-type="let">Let</button>
+                                            <button class="btn" data-day="friday" data-type="grundig">Grundig</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -127,8 +127,8 @@ scripts:
                                     <td>Lørdag</td>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn" data-day="saturday" data-type="let">Let</div>
-                                            <div class="btn" data-day="saturday" data-type="grundig">Grundig</div>
+                                            <button class="btn" data-day="saturday" data-type="let">Let</button>
+                                            <button class="btn" data-day="saturday" data-type="grundig">Grundig</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -136,8 +136,8 @@ scripts:
                                     <td>Søndag</td>
                                     <td>
                                         <div class="flex">
-                                            <div class="btn" data-day="sunday" data-type="let">Let</div>
-                                            <div class="btn active" data-day="sunday" data-type="grundig">Grundig</div>
+                                            <button class="btn" data-day="sunday" data-type="let">Let</button>
+                                            <button class="btn active" data-day="sunday" data-type="grundig">Grundig</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -150,9 +150,9 @@ scripts:
                         <h4>Dokumentation</h4>
                         <label>Ønsker I billeder af rengøringen?</label>
                         <div class="flex">
-                            <div class="btn" onclick="selectPhotoOption('none')">Ingen</div>
-                            <div class="btn active" onclick="selectPhotoOption('after')">Efter</div>
-                            <div class="btn" onclick="selectPhotoOption('before-after')">Før & efter</div>
+                            <button class="btn" data-photo="none">Ingen</button>
+                            <button class="btn active" data-photo="after">Efter</button>
+                            <button class="btn" data-photo="before-after">Før & efter</button>
                         </div>
                     </div>
                 </div>
@@ -162,8 +162,8 @@ scripts:
                     <div class="flex justify-between">
                         <h3 class="text-2xl font-bold">Service Skema</h3>
                         <div class="flex">
-                            <div class="btn active" onclick="toggleAllServiceTypes('let')">Let</div>
-                            <div class="btn" onclick="toggleAllServiceTypes('grundig')">Grundig</div>
+                            <button class="btn active" data-service-mode="let">Let</button>
+                            <button class="btn" data-service-mode="grundig">Grundig</button>
                         </div>
                     </div>
 
@@ -316,34 +316,33 @@ scripts:
                 <!-- Column 3: Price Summary -->
                 <div class="column">
                     <h3 class="text-2xl font-bold">Månedlig Pris</h3>
-                    <div class="info-card" id="price-breakdown" style="padding: 2rem;">
-                        <div class="price-line">
-                            <span>Basispris (500 m²)</span>
-                            <span>6.240 kr</span>
+                    <div class="info-card price-summary" id="price-breakdown">
+                        <div class="price-line" data-price="base">
+                            <span data-label>Basispris (500 m²)</span>
+                            <span data-value>6.240 kr</span>
                         </div>
-                        <div class="price-line">
-                            <span>Mødelokaler (4 stk)</span>
-                            <span>867 kr</span>
+                        <div class="price-line" data-price="meetings">
+                            <span data-label>Mødelokaler (4 stk)</span>
+                            <span data-value>867 kr</span>
                         </div>
-                        <div class="price-line">
-                            <span>Toiletter (3 stk)</span>
-                            <span>1.300 kr</span>
+                        <div class="price-line" data-price="toilets">
+                            <span data-label>Toiletter (3 stk)</span>
+                            <span data-value>1.300 kr</span>
                         </div>
-                        <div class="price-line">
-                            <span>Køkkener (2 stk)</span>
-                            <span>650 kr</span>
+                        <div class="price-line" data-price="kitchens">
+                            <span data-label>Køkkener (2 stk)</span>
+                            <span data-value>650 kr</span>
                         </div>
-                        <div class="price-line">
-                            <span>Billeder (efter)</span>
-                            <span>650 kr</span>
+                        <div class="price-line" data-price="photos">
+                            <span data-label>Billeder (efter)</span>
+                            <span data-value>650 kr</span>
                         </div>
-                        <div class="price-line" id="task-summary-line" style="font-size: 0.85rem; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 0.5rem; margin-top: 0.5rem;">
+                        <div class="price-line task-summary-line" id="task-summary-line">
                             <span id="task-summary-text">Standard opgaver inkluderet</span>
-                            <span id="task-summary-price">+0 kr</span>
                         </div>
-                        <div class="price-line" style="border-bottom: 1px solid #f1f5f9; padding-bottom: 0.75rem;">
-                            <span class="text-charcoal font-semibold">Rabat (3x ugentligt)</span>
-                            <span class="text-charcoal font-semibold">-15%</span>
+                        <div class="price-line discount-line" data-price="discount">
+                            <span data-label class="text-charcoal font-semibold">Rabat (3x ugentligt)</span>
+                            <span data-value class="text-charcoal font-semibold">-15%</span>
                         </div>
                         <div class="price-total-line">
                             <span>Pris</span>
@@ -351,12 +350,10 @@ scripts:
                         </div>
                     </div>
 
-
-
-                    <div class="btn active w-full mt-05 text-lg">
+                    <a href="/kontakt/" class="btn active w-full mt-05 text-lg">
                         <i class="fas fa-envelope"></i>
                         Kontakt os for tilbud
-                    </div>
+                    </a>
 
                     <p class="disclaimer">
                         Dette er et estimat baseret på dine oplysninger. Den endelige pris kan variere afhængigt af specifikke forhold og krav. Kontakt os for et præcist tilbud.

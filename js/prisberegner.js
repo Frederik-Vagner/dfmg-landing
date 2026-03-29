@@ -1,4 +1,6 @@
         // Price calculation data
+        const WEEKS_PER_MONTH = 4.33;
+
         const RATES = {
             baseRatePerSqm: { let: 0.6, grundig: 0.9 },
             toiletRate: { let: 100, grundig: 150 },
@@ -6,7 +8,6 @@
             meetingRoomRate: { let: 50, grundig: 75 },
             photoRate: { none: 0, after: 50, 'before-after': 100 },
             discountRates: { 2: 0.10, 3: 0.15, 5: 0.20 },
-            // ADD THESE TASK RATES
             taskRates: {
                 office: {
                     'waste': { let: 5, grundig: 5 },
@@ -46,6 +47,9 @@
                 }
             }
         };
+
+        const PHOTO_LABELS = { none: 'Ingen billeder', after: 'Billeder (efter)', 'before-after': 'Billeder (før & efter)' };
+
         // State management
         let state = {
             sizeMethod: 'area',
@@ -67,51 +71,37 @@
         function calculatePrice() {
             const area = state.sizeMethod === 'area' ? state.area : state.employees * 25;
 
-            let weeklyCost = 0;
-            let baseAreaCost = 0, toiletCost = 0, kitchenCost = 0, meetingRoomCost = 0;
+            // Query checked tasks once before the loop
+            const checkedTasks = document.querySelectorAll('.task-checkbox:checked');
 
-            // Calculate for each selected day WITH TASK COSTS
+            let baseAreaCost = 0, toiletCost = 0, kitchenCost = 0, meetingRoomCost = 0, taskCostTotal = 0;
+
             state.cleaningDays.forEach(day => {
                 const cleaningType = state.cleaningTypes[day];
                 if (cleaningType) {
-                    const areaCost = area * RATES.baseRatePerSqm[cleaningType];
-                    const toiletDayCost = state.toilets * RATES.toiletRate[cleaningType];
-                    const kitchenDayCost = state.kitchens * RATES.kitchenRate[cleaningType];
-                    const meetingRoomDayCost = state.meetingRooms * RATES.meetingRoomRate[cleaningType];
+                    baseAreaCost += area * RATES.baseRatePerSqm[cleaningType] * WEEKS_PER_MONTH;
+                    toiletCost += state.toilets * RATES.toiletRate[cleaningType] * WEEKS_PER_MONTH;
+                    kitchenCost += state.kitchens * RATES.kitchenRate[cleaningType] * WEEKS_PER_MONTH;
+                    meetingRoomCost += state.meetingRooms * RATES.meetingRoomRate[cleaningType] * WEEKS_PER_MONTH;
 
-                    // ADD TASK COSTS BACK
-                    let taskCosts = 0;
-                    document.querySelectorAll('.task-checkbox:checked').forEach(checkbox => {
+                    checkedTasks.forEach(checkbox => {
                         const task = checkbox.dataset.task;
                         const section = checkbox.dataset.section;
-
                         if (task && section && RATES.taskRates[section]?.[task]?.[cleaningType]) {
                             const multiplier = section === 'office' ? 1 :
                                             section === 'kitchen' ? state.kitchens :
                                             section === 'toilet' ? state.toilets : 1;
-                            taskCosts += RATES.taskRates[section][task][cleaningType] * multiplier;
+                            taskCostTotal += RATES.taskRates[section][task][cleaningType] * multiplier * WEEKS_PER_MONTH;
                         }
                     });
-
-                    weeklyCost += areaCost + toiletDayCost + kitchenDayCost + meetingRoomDayCost + taskCosts;
-
-                    // Accumulate monthly costs
-                    baseAreaCost += areaCost * 4.33;
-                    toiletCost += toiletDayCost * 4.33;
-                    kitchenCost += kitchenDayCost * 4.33;
-                    meetingRoomCost += meetingRoomDayCost * 4.33;
                 }
             });
 
             // Photo costs
-            const photoMultiplier = RATES.photoRate[state.photos];
-            let photoCost = 0;
-            if (photoMultiplier > 0) {
-                photoCost = state.cleaningDays.length * photoMultiplier * 4.33;
-                weeklyCost += state.cleaningDays.length * photoMultiplier;
-            }
+            const photoRate = RATES.photoRate[state.photos];
+            const photoCost = photoRate > 0 ? state.cleaningDays.length * photoRate * WEEKS_PER_MONTH : 0;
 
-            let monthlyCost = weeklyCost * 4.33;
+            const subtotal = baseAreaCost + toiletCost + kitchenCost + meetingRoomCost + photoCost + taskCostTotal;
 
             // Frequency discount
             let discount = 0;
@@ -124,8 +114,6 @@
                 }
             }
 
-            monthlyCost = monthlyCost * (1 - discount);
-
             return {
                 base: Math.round(baseAreaCost),
                 meetings: Math.round(meetingRoomCost),
@@ -133,182 +121,159 @@
                 kitchens: Math.round(kitchenCost),
                 photos: Math.round(photoCost),
                 discount: Math.round(discount * 100),
-                total: Math.round(monthlyCost)
+                frequency: frequency,
+                total: Math.round(subtotal * (1 - discount))
             };
         }
 
         function getTaskSummary() {
-            const checkedTasks = document.querySelectorAll('.task-checkbox:checked');
-            const totalTasks = checkedTasks.length;
-
-            // Based on current default (14 tasks) being "Standard"
-            if (totalTasks >= 26) {
-                return { text: "Komplet pakke - alle opgaver", cost: 0 };
-            } else if (totalTasks >= 17) {  // 14 + 3
-                return { text: "Tilpasset pakke", cost: 0 };
-            } else if (totalTasks >= 12) {  // 14 ± 2 for some flexibility
-                return { text: "Standard pakke", cost: 0 };
-            } else {  // 11 or fewer (14 - 3)
-                return { text: "Minimal pakke", cost: 0 };
-            }
+            const totalTasks = document.querySelectorAll('.task-checkbox:checked').length;
+            if (totalTasks >= 26) return 'Komplet pakke - alle opgaver';
+            if (totalTasks >= 17) return 'Tilpasset pakke';
+            if (totalTasks >= 12) return 'Standard pakke';
+            return 'Minimal pakke';
         }
 
-        // Update UI efficiently
+        // Update UI
         function updatePriceDisplay() {
             const prices = calculatePrice();
-            const breakdown = document.getElementById('price-breakdown');
-            const lines = breakdown.querySelectorAll('.price-line');
+            const area = state.sizeMethod === 'area' ? state.area : state.employees * 25;
 
-            lines[0].lastElementChild.textContent = `${prices.base.toLocaleString('da-DK')} kr`;
-            lines[1].lastElementChild.textContent = `${prices.meetings.toLocaleString('da-DK')} kr`;
-            lines[2].lastElementChild.textContent = `${prices.toilets.toLocaleString('da-DK')} kr`;
-            lines[3].lastElementChild.textContent = `${prices.kitchens.toLocaleString('da-DK')} kr`;
-            lines[4].lastElementChild.textContent = `${prices.photos.toLocaleString('da-DK')} kr`;
-            lines[6].lastElementChild.textContent = `-${prices.discount}%`;
-
+            // Update price values via data-price attributes
+            document.querySelector('[data-price="base"] [data-value]').textContent = `${prices.base.toLocaleString('da-DK')} kr`;
+            document.querySelector('[data-price="meetings"] [data-value]').textContent = `${prices.meetings.toLocaleString('da-DK')} kr`;
+            document.querySelector('[data-price="toilets"] [data-value]').textContent = `${prices.toilets.toLocaleString('da-DK')} kr`;
+            document.querySelector('[data-price="kitchens"] [data-value]').textContent = `${prices.kitchens.toLocaleString('da-DK')} kr`;
+            document.querySelector('[data-price="photos"] [data-value]').textContent = `${prices.photos.toLocaleString('da-DK')} kr`;
+            document.querySelector('[data-price="discount"] [data-value]').textContent = `-${prices.discount}%`;
             document.getElementById('monthly-price').textContent = `${prices.total.toLocaleString('da-DK')} kr`;
 
-            // Update descriptions
-            const area = state.sizeMethod === 'area' ? state.area : state.employees * 25;
-            lines[0].firstElementChild.textContent = `Basispris (${area} m²)`;
-            lines[1].firstElementChild.textContent = `Mødelokaler (${state.meetingRooms} stk)`;
-            lines[2].firstElementChild.textContent = `Toiletter (${state.toilets} stk)`;
-            lines[3].firstElementChild.textContent = `Køkkener (${state.kitchens} stk)`;
+            // Update dynamic labels
+            document.querySelector('[data-price="base"] [data-label]').textContent = `Basispris (${area} m²)`;
+            document.querySelector('[data-price="meetings"] [data-label]').textContent = `Mødelokaler (${state.meetingRooms} stk)`;
+            document.querySelector('[data-price="toilets"] [data-label]').textContent = `Toiletter (${state.toilets} stk)`;
+            document.querySelector('[data-price="kitchens"] [data-label]').textContent = `Køkkener (${state.kitchens} stk)`;
+            document.querySelector('[data-price="photos"] [data-label]').textContent = PHOTO_LABELS[state.photos];
+            const discountLine = document.querySelector('[data-price="discount"]');
+            if (prices.discount > 0) {
+                discountLine.style.display = '';
+                discountLine.querySelector('[data-label]').textContent = `Rabat (${prices.frequency}x ugentligt)`;
+            } else {
+                discountLine.style.display = 'none';
+            }
 
             // Update task summary
-            const taskSummary = getTaskSummary();
-            document.getElementById('task-summary-text').textContent = taskSummary.text;
-            document.getElementById('task-summary-price').textContent = taskSummary.cost > 0 ?
-                `+${taskSummary.cost.toLocaleString('da-DK')} kr` : 'inkluderet';
-        }
-
-        // Event handlers
-        function selectSizeMethod(method) {
-            state.sizeMethod = method;
-            document.querySelectorAll('[onclick*="selectSizeMethod"]').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            if (method === 'area') {
-                document.getElementById('area-input').style.display = 'block';
-                document.getElementById('employees-input').style.display = 'none';
-            } else {
-                document.getElementById('area-input').style.display = 'none';
-                document.getElementById('employees-input').style.display = 'block';
-            }
-            updatePriceDisplay();
-        }
-
-        function selectPhotoOption(option) {
-            state.photos = option;
-            document.querySelectorAll('[onclick*="selectPhotoOption"]').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            updatePriceDisplay();
-        }
-
-        function toggleDayType(day, type) {
-            document.querySelectorAll(`[data-day="${day}"]`).forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            if (!state.cleaningDays.includes(day)) {
-                state.cleaningDays.push(day);
-            }
-            updatePriceDisplay();
-        }
-
-        function toggleAllServiceTypes(type) {
-            state.serviceMode = type; // UPDATE STATE
-
-            // Update button states
-            document.querySelectorAll('[onclick*="toggleAllServiceTypes"]').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            const serviceSections = document.querySelectorAll('.service-tasks');
-
-            if (type === 'grundig') {
-                serviceSections.forEach(section => section.classList.add('grundig-mode'));
-                // Check all tasks in grundig mode
-                document.querySelectorAll('.task-checkbox').forEach(checkbox => {
-                    checkbox.checked = true;
-                });
-            } else {
-                serviceSections.forEach(section => section.classList.remove('grundig-mode'));
-                // Only check basic tasks
-                document.querySelectorAll('.task-item:not(.grundig-only) .task-checkbox').forEach(checkbox => {
-                    checkbox.checked = true;
-                });
-                document.querySelectorAll('.grundig-only .task-checkbox').forEach(checkbox => {
-                    checkbox.checked = false;
-                });
-            }
+            document.getElementById('task-summary-text').textContent = getTaskSummary();
         }
 
         // Efficient input handling
         document.addEventListener('DOMContentLoaded', function() {
-            // Debounced input updates
             let timeout;
-            function debouncedUpdate(callback) {
+            function debouncedUpdate() {
                 clearTimeout(timeout);
-                timeout = setTimeout(callback, 150);
+                timeout = setTimeout(updatePriceDisplay, 150);
             }
 
             // Input listeners
             document.getElementById('office-area').addEventListener('input', e => {
                 state.area = parseInt(e.target.value) || 0;
-                debouncedUpdate(updatePriceDisplay);
+                debouncedUpdate();
             });
 
             document.getElementById('employee-count').addEventListener('input', e => {
                 state.employees = parseInt(e.target.value) || 0;
-                debouncedUpdate(updatePriceDisplay);
+                debouncedUpdate();
             });
 
             document.getElementById('meeting-room-count').addEventListener('input', e => {
                 state.meetingRooms = parseInt(e.target.value) || 0;
-                debouncedUpdate(updatePriceDisplay);
+                debouncedUpdate();
             });
 
             document.getElementById('toilet-count').addEventListener('input', e => {
                 state.toilets = parseInt(e.target.value) || 0;
-                debouncedUpdate(updatePriceDisplay);
+                debouncedUpdate();
             });
 
             document.getElementById('kitchen-count').addEventListener('input', e => {
                 state.kitchens = parseInt(e.target.value) || 0;
-                debouncedUpdate(updatePriceDisplay);
+                debouncedUpdate();
             });
 
             // Day buttons
             document.querySelectorAll('[data-day]').forEach(btn => {
-                btn.addEventListener('click', (e) => {
+                btn.addEventListener('click', () => {
                     const day = btn.dataset.day;
                     const type = btn.dataset.type;
 
                     if (btn.classList.contains('active')) {
-                        // Deselect
                         btn.classList.remove('active');
-                        delete state.cleaningTypes[day];  // Use delete instead
+                        delete state.cleaningTypes[day];
                         state.cleaningDays = state.cleaningDays.filter(d => d !== day);
                     } else {
-                        // Select: remove active from other buttons for this day
                         document.querySelectorAll(`[data-day="${day}"]`).forEach(b => b.classList.remove('active'));
                         btn.classList.add('active');
-
                         state.cleaningTypes[day] = type;
                         if (!state.cleaningDays.includes(day)) {
                             state.cleaningDays.push(day);
                         }
                     }
 
-                    debouncedUpdate(updatePriceDisplay);
+                    debouncedUpdate();
                 });
+            });
+
+            // Size method buttons
+            document.querySelectorAll('[data-size-method]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const method = btn.dataset.sizeMethod;
+                    state.sizeMethod = method;
+                    document.querySelectorAll('[data-size-method]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    document.getElementById('area-input').style.display = method === 'area' ? 'block' : 'none';
+                    document.getElementById('employees-input').style.display = method === 'employees' ? 'block' : 'none';
+                    debouncedUpdate();
+                });
+            });
+
+            // Photo option buttons
+            document.querySelectorAll('[data-photo]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    state.photos = btn.dataset.photo;
+                    document.querySelectorAll('[data-photo]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    debouncedUpdate();
+                });
+            });
+
+            // Service mode toggle (let/grundig)
+            document.querySelectorAll('[data-service-mode]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const type = btn.dataset.serviceMode;
+                    state.serviceMode = type;
+                    document.querySelectorAll('[data-service-mode]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const serviceSections = document.querySelectorAll('.service-tasks');
+                    if (type === 'grundig') {
+                        serviceSections.forEach(section => section.classList.add('grundig-mode'));
+                        document.querySelectorAll('.task-checkbox').forEach(cb => { cb.checked = true; });
+                    } else {
+                        serviceSections.forEach(section => section.classList.remove('grundig-mode'));
+                        document.querySelectorAll('.task-item:not(.grundig-only) .task-checkbox').forEach(cb => { cb.checked = true; });
+                        document.querySelectorAll('.grundig-only .task-checkbox').forEach(cb => { cb.checked = false; });
+                    }
+                    debouncedUpdate();
+                });
+            });
+
+            // Task checkbox changes
+            document.addEventListener('change', function(e) {
+                if (e.target.classList.contains('task-checkbox')) {
+                    debouncedUpdate();
+                }
             });
 
             // Initial calculation
             updatePriceDisplay();
-
-            document.addEventListener('change', function(e) {
-                if (e.target.classList.contains('task-checkbox')) {
-                    debouncedUpdate(updatePriceDisplay);
-                }
-            });
         });
