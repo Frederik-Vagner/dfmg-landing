@@ -3,7 +3,7 @@ const serviceDetails = {
     cleaning: {
         title: "Erhvervsrengøring",
         badge: "Mest Populære",
-        url: "/pages/services/rengøring.html",
+        url: "/pages/facility/services/rengøring.html",
         description: "Erhvervsrengøring af kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.",
         detailedDescription: "Vores erfarne rengøringsteams leverer konsistent høj kvalitet gennem certificerede processer og miljøvenlige produkter.",
         stats: [
@@ -34,7 +34,7 @@ const serviceDetails = {
     },
     property: {
         title: "Ejendomsservice",
-        url: "/pages/services/ejendomsservice.html",
+        url: "/pages/facility/services/ejendomsservice.html",
         description: "Vedligeholdelse af trapper, opgange, elevatorer og udendørs områder.",
         stats: [
             { number: "100%", label: "Udførsel" },
@@ -60,7 +60,7 @@ const serviceDetails = {
     },
     handyman: {
         title: "Handyman Services",
-        url: "/pages/services/handyman.html",
+        url: "/pages/facility/services/handyman.html",
         description: "Reparationer, vedligeholdelse og møbelmontering med hurtig responstid.",
         stats: [
             { number: "100%", label: "Udførsel" },
@@ -86,7 +86,7 @@ const serviceDetails = {
     },
     supplies: {
         title: "Supplies & Produkter",
-        url: "/pages/services/produkter.html",
+        url: "/pages/facility/services/produkter.html",
         description: "Hygiejneprodukter og office supplies med automatisk påfyldning.",
         stats: [
             { number: "100+", label: "Produkter" },
@@ -112,7 +112,7 @@ const serviceDetails = {
     },
     piccoline: {
         title: "Piccoline Ordning",
-        url: "/pages/services/picoline.html",
+        url: "/pages/facility/services/picoline.html",
         description: "Mindre administrative opgaver og specialopgaver der gør hverdagen nemmere.",
         stats: [
             { number: "Samme", label: "Medarbejder" },
@@ -138,7 +138,7 @@ const serviceDetails = {
     },
     windows: {
         title: "Vinduespolering",
-        url: "/pages/services/vinduespudsning.html",
+        url: "/pages/facility/services/vinduespudsning.html",
         description: "Professionel vinduesrens indvendig og udvendig med certificeret udstyr.",
         stats: [
             { number: "1000+", label: "Vinuder" },
@@ -260,7 +260,7 @@ function showExpandedContent(column, serviceType) {
                     <a href="${service.url}" class="btn btn--primary btn--md">
                         <i class="fas fa-info-circle"></i> Læs Mere
                     </a>
-                    <a href="/pages/kontakt.html" class="btn btn--secondary btn--md">
+                    <a href="/pages/facility/kontakt.html" class="btn btn--secondary btn--md">
                         <i class="fas fa-calculator"></i> Få Tilbud
                     </a>
                 </div>

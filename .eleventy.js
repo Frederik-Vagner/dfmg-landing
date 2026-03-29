@@ -8,6 +8,8 @@ module.exports = function (eleventyConfig) {
 
   // Pass through component HTML files (loaded by components.js at runtime)
   eleventyConfig.addPassthroughCopy("pages/components");
+  eleventyConfig.addPassthroughCopy("pages/facility/components");
+  eleventyConfig.addPassthroughCopy("pages/software/components");
 
   // Ignores are defined in .eleventyignore
 

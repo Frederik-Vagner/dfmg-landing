@@ -13,13 +13,13 @@
     // --- Component Caching ---
     // Cache component HTML in sessionStorage with TTL
     const cacheable = [
-        '/pages/components/header.html',
-        '/pages/components/header-platform.html',
-        '/pages/components/footer.html',
-        '/pages/components/footer-platform.html',
-        '/pages/components/chatbot.html',
+        '/pages/facility/components/header.html',
+        '/pages/software/components/header-platform.html',
+        '/pages/facility/components/footer.html',
+        '/pages/software/components/footer-platform.html',
+        '/pages/facility/components/chatbot.html',
         '/pages/components/contact-widget.html',
-        '/pages/components/article-sidebar.html'
+        '/pages/facility/components/article-sidebar.html'
     ];
 
     function getCached(key) {

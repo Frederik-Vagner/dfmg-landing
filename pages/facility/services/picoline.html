@@ -1,0 +1,496 @@
+---
+layout: base.html
+title: "DFMG - Piccoline Service"
+description: "Jeres kontor's usynlige hjælper. Piccoline service til erhverv."
+componentCss:
+  - timeline
+scripts:
+  - /js/tab-switcher.js
+---
+
+<!-- Hero Section -->
+<section class="first hero-layout">
+    <div class="container">
+        <div class="text-center">
+            <div class="badge">Piccoline Service</div>
+            <h1 class="title ">Jeres Kontor's Usynlige Hjælper</h1>
+            <p class="body  mb-4">En piccoline er kontorets øjne, ører og arme - den person der sørger for at alt fungerer perfekt, så jeres medarbejdere kan fokusere på det de er bedst til.</p>
+        </div>
+        <div class="flex mb-4">
+            <div class="card p-2 bg-gradient-white text-center">
+                <i class="fas fa-clock text-success text-6xl mb-1"></i>
+                <h3 class="text-charcoal">Møder først</h3>
+                <p class="text-base opacity-90">Klargør kontoret før medarbejderne ankommer</p>
+            </div>
+            <div class="card p-2 bg-gradient-white text-center">
+                <i class="fas fa-coffee text-success text-6xl mb-1"></i>
+                <h3 class="text-charcoal">Kaffe klar</h3>
+                <p class="text-base opacity-90">Sørger for at kaffemaskinen er klar til dagens første kop</p>
+            </div>
+            <div class="card p-2 bg-gradient-white text-center">
+                <i class="fas fa-utensils text-success text-6xl mb-1"></i>
+                <h3 class="text-charcoal">Frokost service</h3>
+                <p class="text-base opacity-90">Klargør og rydder op efter fælles måltider</p>
+            </div>
+            <div class="card p-2 bg-gradient-white text-center">
+                <i class="fas fa-tasks text-success text-6xl mb-1"></i>
+                <h3 class="text-charcoal">Ad hoc opgaver</h3>
+                <p class="text-base opacity-90">Løser de uventede opgaver der opstår i løbet af dagen</p>
+            </div>
+        </div>
+
+        <div class="flex gap-1 flex-wrap justify-center">
+            <a href="#services" class="btn btn--secondary btn--lg">
+                <i class="fas fa-arrow-down"></i>
+                Se Vores Services
+            </a>
+            <a href="#contact" class="btn btn--primary btn--lg">
+                <i class="fas fa-phone"></i>
+                Få Tilbud
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- What is Piccoline Section -->
+<section class="section" id="definition">
+    <div class="container">
+        <div class="text-center mb-4">
+            <div class="subtitle text-success">HVAD ER EN PICCOLINE?</div>
+            <h2 class="text-charcoal">Kontorets Uundværlige Hjælper</h2>
+            <p class="body text-gray">En piccoline fungerer som kontorets øjne, ører og arme og har i løbet af en normal arbejdsdag mange opgaver der sikrer den daglige drift</p>
+        </div>
+
+        <div class="flex flex-2">
+            <div >
+                <p>En piccoline/piccolo har til opgave at sørge for kontorets daglige drift, hvor deres opgaver typisk er mere praktiske end administrative. De er ofte dem, som møder først ind på kontoret - her tænder de lys og kaffemaskine, skruer op eller ned på radiatorer, og tjekker at alt er klar til at de øvrige medarbejdere møder ind.</p>
+
+                <div class="highlight">
+                    "Jeg gør egentlig bare alt for, at de andre får en nemmere hverdag."
+                    <br><strong>- Petrine, Piccoline hos Maigaard & Mølbech</strong>
+                </div>
+
+                <p>Udover de mange praktiske opgaver, varetager en piccoline også ofte såkaldte ad hoc opgaver - de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver.</p>
+            </div>
+
+            <div>
+                <div class="card p-2 bg-gradient-white text-center">
+                    <h3>En Typisk Piccoline Dag</h3>
+                    <div class="grid gap-1">
+                        <div class="card p-1 bg-gradient-white flex">
+                            <div class="time-badge">07:30</div>
+                            <div class="time-task">Ankommer og tænder lys & kaffe</div>
+                        </div>
+                        <div class="card p-1 bg-gradient-white flex">
+                            <div class="time-badge">08:00</div>
+                            <div class="time-task">Tjekker temperatur og faciliteter</div>
+                        </div>
+                        <div class="card p-1 bg-gradient-white flex">
+                            <div class="time-badge">09:00</div>
+                            <div class="time-task">Rengøring af køkken og toilet</div>
+                        </div>
+                        <div class="card p-1 bg-gradient-white flex">
+                            <div class="time-badge">12:00</div>
+                            <div class="time-task">Klargør frokost og fællesområder</div>
+                        </div>
+                        <div class="card p-1 bg-gradient-white flex">
+                            <div class="time-badge">13:00</div>
+                            <div class="time-task">Oprydning efter frokost</div>
+                        </div>
+                        <div class="card p-1 bg-gradient-white flex">
+                            <div class="time-badge">14:00</div>
+                            <div class="time-task">Ad hoc opgaver og vedligeholdelse</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section bg-gradient-white" id="services">
+    <div class="container">
+        <div class="text-center mb-4">
+            <div class="subtitle text-success">VORES PICCOLINE SERVICES</div>
+            <h2 class="text-charcoal">Faste Opgaver & Fleksibel Support</h2>
+            <p class="body text-gray">Vores piccoliner håndterer både daglige rutineopgaver og uforudsete behov, så jeres kontor altid fungerer optimalt</p>
+        </div>
+
+        <div class="flex m-2 justify-center gap-2 mb-4 flex-wrap">
+            <div class="tab-button active" onclick="switchTab('daily', this)">Daglige Opgaver</div>
+            <div class="tab-button" onclick="switchTab('weekly', this)">Ugentlige Opgaver</div>
+            <div class="tab-button" onclick="switchTab('adhoc', this)">Ad Hoc Support</div>
+        </div>
+
+        <div class="toggle-content active" id="daily">
+            <div class="grid-2x2">
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-broom text-success text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Rengøring & Hygiejne</h3>
+                    <p class="text-gray mb-2">Daglig rengøring af toilet, køkken og fællesområder for at sikre et rent og sundt arbejdsmiljø.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Toilet og håndvaske</li>
+                        <li><i class="fas fa-check"></i> Køkken og spiseplads</li>
+                        <li><i class="fas fa-check"></i> Overflader og borde</li>
+                        <li><i class="fas fa-check"></i> Støvsugning efter behov</li>
+                        <li><i class="fas fa-check"></i> Affaldshåndtering</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-utensils text-success text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Frokost & Måltider</h3>
+                    <p class="text-gray mb-2">Klargøring og oprydning efter fælles måltider, så medarbejderne kan nyde deres pause.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Borddækning og klargøring</li>
+                        <li><i class="fas fa-check"></i> Servering ved behov</li>
+                        <li><i class="fas fa-check"></i> Oprydning efter måltider</li>
+                        <li><i class="fas fa-check"></i> Opvask og køkkenrengøring</li>
+                        <li><i class="fas fa-check"></i> Genopfyldning af forsyninger</li>
+                    </ul>
+                </div>
+
+               <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-coffee text-success text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Kaffe & Drikkevarer</h3>
+                    <p class="text-gray mb-2">Sørger for at kaffemaskinen altid er klar og at der er friske drikkevarer til rådighed.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Kaffemaskine klargøring</li>
+                        <li><i class="fas fa-check"></i> Genopfyldning af kaffe og te</li>
+                        <li><i class="fas fa-check"></i> Rengøring af kaffestation</li>
+                        <li><i class="fas fa-check"></i> Kontrol af vandfiltre</li>
+                        <li><i class="fas fa-check"></i> Bestilling af forsyninger</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-thermometer-half text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Faciliteter & Miljø</h3>
+                    <p class="text-gray mb-2">Kontrol og justering af kontorets fysiske miljø for optimal komfort og funktionalitet.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Temperatur og ventilation</li>
+                        <li><i class="fas fa-check"></i> Belysning og el-udstyr</li>
+                        <li><i class="fas fa-check"></i> Sikkerhedstjek</li>
+                        <li><i class="fas fa-check"></i> Adgangskontrol</li>
+                        <li><i class="fas fa-check"></i> Rapportering af fejl</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="toggle-content" id="weekly">
+            <div class="grid-2x2">
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-boxes text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Lager & Forsyninger</h3>
+                    <p class="text-gray mb-2">Ugentlig kontrol og genbestilling af kontorforsyninger og hygiejneprodukter.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Lager inventory</li>
+                        <li><i class="fas fa-check"></i> Bestilling af supplies</li>
+                        <li><i class="fas fa-check"></i> Hygiejneprodukter</li>
+                        <li><i class="fas fa-check"></i> Kontorartikler</li>
+                        <li><i class="fas fa-check"></i> Kaffe og te supplies</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-seedling text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Planter & Dekorationer</h3>
+                    <p class="text-gray mb-2">Pleje af planter og vedligeholdelse af kontorets æstetiske udtryk.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Vanding af planter</li>
+                        <li><i class="fas fa-check"></i> Beskæring og pleje</li>
+                        <li><i class="fas fa-check"></i> Udskiftning af visne planter</li>
+                        <li><i class="fas fa-check"></i> Dekorationsvedligeholdelse</li>
+                        <li><i class="fas fa-check"></i> Sæsonbaseret pynt</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-tools text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Vedligeholdelse & Tjek</h3>
+                    <p class="text-gray mb-2">Grundig gennemgang af faciliteter og mindre vedligeholdelsesopgaver.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Udstyr funktionstest</li>
+                        <li><i class="fas fa-check"></i> Mindre reparationer</li>
+                        <li><i class="fas fa-check"></i> Filter udskiftning</li>
+                        <li><i class="fas fa-check"></i> Sikkerhedsudstyr kontrol</li>
+                        <li><i class="fas fa-check"></i> Dokumentation og rapporter</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-calendar-alt text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Event Support</h3>
+                    <p class="text-gray mb-2">Forberedelse og support til møder, events og særlige arrangementer.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Mødelokale klargøring</li>
+                        <li><i class="fas fa-check"></i> Catering assistance</li>
+                        <li><i class="fas fa-check"></i> AV-udstyr setup</li>
+                        <li><i class="fas fa-check"></i> Gæste modtagelse</li>
+                        <li><i class="fas fa-check"></i> Post-event oprydning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="toggle-content" id="adhoc">
+            <div class="grid-2x2">
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-hand-holding-heart text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Personlig Assistance</h3>
+                    <p class="text-gray mb-2">Små personlige opgaver der gør medarbejdernes hverdag lettere.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Hentning af plastre/medicin</li>
+                        <li><i class="fas fa-check"></i> Post og pakke håndtering</li>
+                        <li><i class="fas fa-check"></i> Transport assistance</li>
+                        <li><i class="fas fa-check"></i> Personlige indkøb</li>
+                        <li><i class="fas fa-check"></i> Akut hjælp og support</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-box-open text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Organisering & Oprydning</h3>
+                    <p class="text-gray mb-2">Organisering af lager, depot og andre opbevaringsområder efter behov.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Depotrum oprydning</li>
+                        <li><i class="fas fa-check"></i> Arkiv organisering</li>
+                        <li><i class="fas fa-check"></i> Lager omstrukturering</li>
+                        <li><i class="fas fa-check"></i> Sæsonbaseret oprydning</li>
+                        <li><i class="fas fa-check"></i> Genbrugshåndtering</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-users text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Møde & Gæste Service</h3>
+                    <p class="text-gray mb-2">Klargøring af te, kaffe og vand til kundemøder og særlige lejligheder.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Mødeforplejning</li>
+                        <li><i class="fas fa-check"></i> Gæstebetjening</li>
+                        <li><i class="fas fa-check"></i> Reception assistance</li>
+                        <li><i class="fas fa-check"></i> Overfladerensning</li>
+                        <li><i class="fas fa-check"></i> Last-minute klargøring</li>
+                    </ul>
+                </div>
+
+                <div class="card p-2 bg-gradient-white">
+                    <i class="fas fa-exclamation-triangle text-6xl mb-1"></i>
+                    <h3 class="text-charcoal">Akut Support</h3>
+                    <p class="text-gray mb-2">Hurtig reaktion på uventede situationer og akutte behov.</p>
+                    <ul class="feature-list list-success">
+                        <li><i class="fas fa-check"></i> Spild og uheld</li>
+                        <li><i class="fas fa-check"></i> Udstyr nedbrud</li>
+                        <li><i class="fas fa-check"></i> Uventede gæster</li>
+                        <li><i class="fas fa-check"></i> Akut indkøb</li>
+                        <li><i class="fas fa-check"></i> Problemløsning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ad Hoc Explanation Section -->
+<section class="section" id="adhoc-explanation">
+    <div class="container">
+        <div class="card p-4 bg-gradient-white border-top-success text-center mb-4">
+            <div class="badge">AD HOC OPGAVER</div>
+            <h3 class="text-charcoal font-semibold text-5xl mb-15">Hvad Er Ad Hoc Opgager?</h3>
+            <p class="text-gray text-lg leading-normal max-w-700 m-auto">Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
+        </div>
+
+        <div class="grid-2x3">
+            <div class="card p-1 bg-gradient-white">
+                <i class="fas fa-box-open text-6xl mb-1"></i>
+                <h4 class="text-charcoal text-xl font-semibold mb-1">Rydde op i depotrummet</h4>
+                <p class="text-gray leading-normal text-md">Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
+            </div>
+
+            <div class="card p-1 bg-gradient-white">
+                <i class="fas fa-mug-hot text-6xl mb-1"></i>
+                <h4 class="text-charcoal text-xl font-semibold mb-1">Klargøre til kundemøde</h4>
+                <p class="text-gray leading-normal text-md">Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
+            </div>
+
+            <div class="card p-1 bg-gradient-white">
+                <i class="fas fa-band-aid text-6xl mb-1"></i>
+                <h4 class="text-charcoal text-xl font-semibold mb-1">Hente plastre i butikken</h4>
+                <p class="text-gray leading-normal text-md">Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
+            </div>
+
+            <div class="card p-1 bg-gradient-white">
+                <i class="fas fa-seedling text-6xl mb-1"></i>
+                <h4 class="text-charcoal text-xl font-semibold mb-1">Vande planterne</h4>
+                <p class="text-gray leading-normal text-md">Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
+            </div>
+
+            <div class="card p-1 bg-gradient-white">
+                <i class="fas fa-tools text-6xl mb-1"></i>
+                <h4 class="text-charcoal text-xl font-semibold mb-1">Mindre reparationer</h4>
+                <p class="text-gray leading-normal text-md">Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
+            </div>
+
+            <div class="card p-1 bg-gradient-white">
+                <i class="fas fa-shopping-bag text-6xl mb-1"></i>
+                <h4 class="text-charcoal text-xl font-semibold mb-1">Akutte indkøb</h4>
+                <p class="text-gray leading-normal text-md">Når der pludselig mangler noget vigtigt til kontoret eller til et møde, håndterer piccolinen indkøbet hurtigt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Piccoline Section -->
+<section class="section bg-gradient-charcoal" id="benefits">
+    <div class="container">
+        <div class="why-choose-content">
+            <div class="text-center mb-4">
+                <div class="subtitle text-success">HVORFOR VÆLGE PICCOLINE?</div>
+                <div class="title text-white">Forskellen En Piccoline Gør</div>
+                <div class="body text-white ">Se hvordan en dedikeret piccoline transformerer jeres kontor fra en arbejdsplads til et velfungerende miljø</div>
+            </div>
+
+            <div class="flex flex-2 gap-4 mt-4">
+                <div class="card bg-gradient-metal p-2">
+                    <div class="text-center mb-2">
+                        <div class="icon-circle red">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <h4 class="text-white text-2xl font-semibold">Uden Piccoline</h4>
+                    </div>
+                    <ul class="feature-list list-red">
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Medarbejdere bruger tid på praktiske opgaver</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Kaffe og faciliteter er ikke altid klar</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Oprydning bliver skubbet til senere</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Mindre problemer bliver til større</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Inkonsistent rengøring og vedligeholdelse</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-times"></i>
+                            <span class="text-white">Stress ved uventede gæster</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card bg-gradient-metal p-2">
+                    <div class="text-center mb-4">
+                        <div class="icon-circle success mb-2">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3 class="text-white m-2">Med DFMG Piccoline</h3>
+                    </div>
+                    <ul class="feature-list list-success">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Medarbejdere fokuserer 100% på deres kerneopgaver</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Alt er klar når medarbejderne ankommer</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Kontinuerlig oprydning og organisering</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Proaktiv problemløsning og forebyggelse</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Konsistent høj standard på alle områder</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="text-white">Altid klar til at imponere gæster</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="section bg-gradient-white" id="testimonial">
+    <div class="container">
+        <div class="text-center mb-4">
+            <div class="subtitle text-success">HVAD SIGER VORES KUNDER</div>
+            <h2 class="text-charcoal">Oplevelser Fra Danske Virksomheder</h2>
+            <p class="body text-gray">Læs hvordan vores piccoline service har gjort en forskel for virksomheder som jeres</p>
+        </div>
+
+        <div class="flex flex-2">
+            <div class="card bg-gradient-white p-2">
+                <div class="mb-2">
+                    "Vores DFMG piccoline har virkelig ændret hverdagen på kontoret. Nu kan vi fokusere på vores kerneopgaver, mens hun sørger for at alt det praktiske bare fungerer. Kaffen er klar når vi kommer, frokosten kører gnidningsløst, og vi behøver aldrig bekymre os om de små ting der ellers kan forstyrre arbejdsdagen."
+                </div>
+                <div class="card card--horizontal">
+                    <img class="author-image avatar" src="/images/people/human.jpg" alt="Kundeudtalelse" width="640" height="640" loading="lazy" decoding="async">
+                    <div>
+                        <h5 class="text-charcoal font-semibold mb-05">Kontorchef</h5>
+                        <span class="text-gray text-base">Facility Officer, SOHO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="grid-2x2">
+                    <div class="card p-1">
+                        <span class="stat__value text-success">95%</span>
+                        <span class="stat__label text-gray">Tidsbesparing</span>
+                    </div>
+                    <div class="card p-1">
+                        <span class="stat__value text-success">100%</span>
+                        <span class="stat__label text-gray">Tilfredshed</span>
+                    </div>
+                    <div class="card p-1">
+                        <span class="stat__value text-success">24/7</span>
+                        <span class="stat__label text-gray">Beredskab</span>
+                    </div>
+                    <div class="card p-1">
+                        <span class="stat__value text-success">15+</span>
+                        <span class="stat__label text-gray">Timers Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA Section -->
+<section class="section">
+    <div class="container">
+        <div class="cta-box">
+            <div class="cta-left">
+                <h2 class="text-white">En fleksibel piccoline-ordning til jeres kontor</h2>
+                <p>Vi tager os af de små opgaver, så jeres medarbejdere kan fokusere på det vigtige.</p>
+                <p class="cta-proof">Populær løsning hos <strong>kontorfællesskaber og kreative miljøer i København</strong>.</p>
+                <div class="flex">
+                    <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md">
+                        <i class="fas fa-phone mr-05"></i>Få et tilbud
+                    </a>
+                    <a href="/pages/facility/kontakt.html" class="btn btn--ghost btn--md">
+                        <i class="fas fa-envelope mr-05"></i>Kontakt os
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

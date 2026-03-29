@@ -1,13 +1,13 @@
 // Fast, simple component loader with chatbot support
 function isPlatformPage() {
-    return window.location.pathname.startsWith('/pages/platform/');
+    return window.location.pathname.startsWith('/pages/software/');
 }
 
 async function loadComponents() {
     try {
         const platform = isPlatformPage();
-        const headerPath = platform ? '/pages/components/header-platform.html' : '/pages/components/header.html';
-        const footerPath = platform ? '/pages/components/footer-platform.html' : '/pages/components/footer.html';
+        const headerPath = platform ? '/pages/software/components/header-platform.html' : '/pages/facility/components/header.html';
+        const footerPath = platform ? '/pages/software/components/footer-platform.html' : '/pages/facility/components/footer.html';
 
         const fetchPromises = [
             fetch(headerPath),
@@ -16,14 +16,14 @@ async function loadComponents() {
 
         // Load chatbot on service pages, contact widget on all pages
         if (!platform) {
-            fetchPromises.push(fetch('/pages/components/chatbot.html'));
+            fetchPromises.push(fetch('/pages/facility/components/chatbot.html'));
         }
         fetchPromises.push(fetch('/pages/components/contact-widget.html'));
 
         // Check if article sidebar exists on page
         const articleSidebarElement = document.getElementById('article-sidebar');
         if (articleSidebarElement) {
-            fetchPromises.push(fetch('/pages/components/article-sidebar.html'));
+            fetchPromises.push(fetch('/pages/facility/components/article-sidebar.html'));
         }
 
         const responses = await Promise.all(fetchPromises);
@@ -241,7 +241,7 @@ function initializeContactWidget() {
     // On Danish pages, point demo link to service contact page
     if (lang === 'da') {
         var demoLink = document.getElementById('contactWidgetDemoLink');
-        if (demoLink) demoLink.href = '/pages/kontakt.html';
+        if (demoLink) demoLink.href = '/pages/facility/kontakt.html';
     }
 
     // Availability: Mon-Fri 08:00-17:00 CET
@@ -271,17 +271,17 @@ function initializeContactWidget() {
 
 // Article data for related articles
 const sidebarArticles = [
-    { path: '/pages/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html', title: 'Mennesker vs. Robotter i Facility Management', time: '5 min læsning', category: 'innovation' },
-    { path: '/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html', title: 'Fra Kaos til Kontrol: DFMG\'s ERP-System Historie', time: '6 min læsning', category: 'innovation' },
-    { path: '/pages/indblik/artikler/indsigt/fra-vip-til-glemt-kunde.html', title: 'Fra VIP til Glemt Kunde: En Alt-for-Almindelig Historie', time: '4 min læsning', category: 'insights' },
-    { path: '/pages/indblik/artikler/indsigt/systematik-vs-talent.html', title: 'Hvorfor Systematik Slår Talent i Facility Management', time: '6 min læsning', category: 'insights' },
-    { path: '/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html', title: '\u00d8jeblikkelige Svar vs. \u201cJeg Vender Tilbage\u201d', time: '5 min læsning', category: 'insights' },
-    { path: '/pages/indblik/artikler/baeredygtighed/100-procent-bilfri-facility-service.html', title: '100% Bilfri Facility Service: S\u00e5dan G\u00f8r Vi Det', time: '3 min læsning', category: 'sustainability' },
-    { path: '/pages/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html', title: 'Fra 5 Leverand\u00f8rer til \u00c9n P\u00e5lidelig Partner', time: '5 min læsning', category: 'cases' },
-    { path: '/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html', title: 'Case: 20% Omkostningsreduktion for Tech-Virksomhed', time: '4 min læsning', category: 'cases' },
-    { path: '/pages/indblik/artikler/tips/saadan-laeser-i-facility-tidsrapport.html', title: 'S\u00e5dan L\u00e6ser I En Facility Tidsrapport', time: '3 min læsning', category: 'tips' },
-    { path: '/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html', title: '5 Tegn P\u00e5 at I Skal Skifte Facility Leverand\u00f8r', time: '4 min læsning', category: 'tips' },
-    { path: '/pages/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html', title: 'Location Guides: Et V\u00e6rkt\u00f8j til Konsistent Kvalitet', time: '4 min læsning', category: 'tips' }
+    { path: '/pages/facility/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html', title: 'Mennesker vs. Robotter i Facility Management', time: '5 min læsning', category: 'innovation' },
+    { path: '/pages/facility/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html', title: 'Fra Kaos til Kontrol: DFMG\'s ERP-System Historie', time: '6 min læsning', category: 'innovation' },
+    { path: '/pages/facility/indblik/artikler/indsigt/fra-vip-til-glemt-kunde.html', title: 'Fra VIP til Glemt Kunde: En Alt-for-Almindelig Historie', time: '4 min læsning', category: 'insights' },
+    { path: '/pages/facility/indblik/artikler/indsigt/systematik-vs-talent.html', title: 'Hvorfor Systematik Slår Talent i Facility Management', time: '6 min læsning', category: 'insights' },
+    { path: '/pages/facility/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html', title: '\u00d8jeblikkelige Svar vs. \u201cJeg Vender Tilbage\u201d', time: '5 min læsning', category: 'insights' },
+    { path: '/pages/facility/indblik/artikler/baeredygtighed/100-procent-bilfri-facility-service.html', title: '100% Bilfri Facility Service: S\u00e5dan G\u00f8r Vi Det', time: '3 min læsning', category: 'sustainability' },
+    { path: '/pages/facility/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html', title: 'Fra 5 Leverand\u00f8rer til \u00c9n P\u00e5lidelig Partner', time: '5 min læsning', category: 'cases' },
+    { path: '/pages/facility/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html', title: 'Case: 20% Omkostningsreduktion for Tech-Virksomhed', time: '4 min læsning', category: 'cases' },
+    { path: '/pages/facility/indblik/artikler/tips/saadan-laeser-i-facility-tidsrapport.html', title: 'S\u00e5dan L\u00e6ser I En Facility Tidsrapport', time: '3 min læsning', category: 'tips' },
+    { path: '/pages/facility/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html', title: '5 Tegn P\u00e5 at I Skal Skifte Facility Leverand\u00f8r', time: '4 min læsning', category: 'tips' },
+    { path: '/pages/facility/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html', title: 'Location Guides: Et V\u00e6rkt\u00f8j til Konsistent Kvalitet', time: '4 min læsning', category: 'tips' }
 ];
 
 // Initialize all sidebar features after injection
