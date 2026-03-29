@@ -32,8 +32,20 @@
     font-weight: var(--font-weight-light);
 }
 
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+}
+
 .footer-section {
     flex: 1;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .footer-description {
