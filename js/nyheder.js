@@ -1,6 +1,6 @@
     document.addEventListener('DOMContentLoaded', function() {
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        const articleCards = document.querySelectorAll('.card--media');
+        const filterTabs = document.querySelectorAll('[data-filter]');
+        const articleCards = document.querySelectorAll('[data-category]');
         const featuredArticles = document.querySelectorAll('[data-featured-category]');
         const searchInput = document.getElementById('searchInput');
 
@@ -36,7 +36,7 @@
             if (searchTerm.length > 0) {
                 featuredArticles.forEach(featured => { featured.style.display = 'none'; });
             } else {
-                const activeFilter = document.querySelector('.filter-tab.active').getAttribute('data-filter');
+                const activeFilter = document.querySelector('[data-filter].active').getAttribute('data-filter');
                 featuredArticles.forEach(featured => {
                     const fc = featured.getAttribute('data-featured-category');
                     featured.style.display = (activeFilter === 'all' ? fc === 'all' : fc === activeFilter) ? 'grid' : 'none';

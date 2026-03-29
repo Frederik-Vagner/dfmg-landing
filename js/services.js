@@ -208,7 +208,7 @@ function showExpandedContent(column, serviceType) {
 
         <div class="expanded-layout">
             <div class="expanded-content-left">
-                <button class="expanded-close-btn" onclick="closeExpandedContent(event)">
+                <button class="expanded-close-btn" data-action="close-expanded">
                     <iconify-icon icon="fluent:arrow-reply-20-filled" inline></iconify-icon>
                 </button>
                 <h3 class="text-charcoal">${service.title}</h3>
@@ -298,6 +298,14 @@ function closeExpandedContent(event) {
 // Add click handlers to service columns
 document.querySelectorAll('.service-column').forEach(column => {
     column.addEventListener('click', () => toggleService(column));
+});
+
+// Close expanded content via data-action
+document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-action="close-expanded"]')) {
+        closeExpandedContent(e);
+        return;
+    }
 });
 
 // Close expanded service when clicking outside

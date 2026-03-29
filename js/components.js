@@ -132,29 +132,40 @@ function initializeChatbotFunctions() {
         }
     };
 
-    window.switchChatbotTab = function(tabName, clickedElement) {
-        document.querySelectorAll('.chatbot-tab').forEach(tab => {
-            tab.classList.remove('active');
-        });
-        clickedElement.classList.add('active');
+    // Chatbot tab switching and FAQ toggle via event delegation
+    document.addEventListener('click', function(e) {
+        var tabEl = e.target.closest('[data-chatbot-tab]');
+        if (tabEl) {
+            document.querySelectorAll('[data-chatbot-tab]').forEach(function(t) { t.classList.remove('active'); });
+            tabEl.classList.add('active');
+            document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+            document.getElementById(tabEl.getAttribute('data-chatbot-tab') + '-tab').classList.add('active');
+            return;
+        }
 
-        document.querySelectorAll('.tab-content').forEach(content => {
-            content.classList.remove('active');
-        });
-        document.getElementById(tabName + '-tab').classList.add('active');
-    };
+        var faqEl = e.target.closest('[data-action="toggle-chatbot-faq"]');
+        if (faqEl) {
+            var answer = faqEl.nextElementSibling;
+            document.querySelectorAll('[data-action="toggle-chatbot-faq"]').forEach(function(q) {
+                if (q !== faqEl) {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                }
+            });
+            faqEl.classList.toggle('active');
+            answer.classList.toggle('active');
+            return;
+        }
 
-    window.toggleFAQ = function(element) {
-        const answer = element.nextElementSibling;
-        document.querySelectorAll('.faq-question').forEach(q => {
-            if (q !== element) {
-                q.classList.remove('active');
-                q.nextElementSibling.classList.remove('active');
-            }
-        });
-        element.classList.toggle('active');
-        answer.classList.toggle('active');
-    };
+        var action = e.target.closest('[data-action]');
+        if (action) {
+            var actionName = action.getAttribute('data-action');
+            if (actionName === 'submit-callback') window.submitCallbackRequest();
+            else if (actionName === 'toggle-callback-form') window.toggleCallbackForm();
+            else if (actionName === 'send-message') window.sendMessage();
+            else if (actionName === 'call-direct') window.callDirect();
+        }
+    });
 
     window.sendMessage = function() {
         const input = document.getElementById('chatInput');
@@ -209,9 +220,9 @@ function initializeChatbotFunctions() {
         }
     };
 
-    // Now attach event listener to chatbot button
+    // Attach event listener to chatbot button via ID
     setTimeout(() => {
-        const chatbotButton = document.querySelector('.chatbot-button');
+        const chatbotButton = document.getElementById('chatbotButton');
         if (chatbotButton) {
             chatbotButton.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -224,9 +235,12 @@ function initializeChatbotFunctions() {
 
 // Contact widget initialization (platform pages)
 function initializeContactWidget() {
-    window.toggleContactWidget = function() {
-        document.getElementById('contactWidget').classList.toggle('active');
-    };
+    // Bind toggle via data-action attributes
+    document.querySelectorAll('[data-action="toggle-contact-widget"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+            document.getElementById('contactWidget').classList.toggle('active');
+        });
+    });
 
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
@@ -249,8 +263,9 @@ function initializeContactWidget() {
     if (!widget) return;
 
     // Apply translations
-    widget.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
-        el.textContent = el.getAttribute('data-' + lang);
+    widget.querySelectorAll('[data-da], [data-en]').forEach(function(el) {
+        var translation = el.getAttribute('data-' + lang);
+        if (translation) el.textContent = translation;
     });
 
     // On Danish pages, point demo link to service contact page
@@ -404,6 +419,15 @@ function initNewsletterForm() {
         document.getElementById('newsletter-success').style.display = 'block';
     });
 }
+
+// Platform FAQ toggle (pricing.html)
+document.addEventListener('click', function(e) {
+    var faq = e.target.closest('[data-action="toggle-platform-faq"]');
+    if (faq) {
+        faq.classList.toggle('active');
+        faq.nextElementSibling.classList.toggle('active');
+    }
+});
 
 // Auto-load when DOM ready
 if (document.readyState === 'loading') {

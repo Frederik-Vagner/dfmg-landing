@@ -256,7 +256,7 @@
 </style>
 
 <div class="contact-widget" id="contactWidget">
-    <div class="contact-widget__backdrop" onclick="toggleContactWidget()"></div>
+    <div class="contact-widget__backdrop" data-action="toggle-contact-widget"></div>
 
     <div class="contact-widget__panel">
         <div class="contact-widget__header">
@@ -314,7 +314,7 @@
         </div>
     </div>
 
-    <button class="contact-widget__trigger" onclick="toggleContactWidget()" aria-label="Contact us">
+    <button class="contact-widget__trigger" data-action="toggle-contact-widget" aria-label="Contact us">
         <iconify-icon icon="fluent:headset-20-filled" inline class="icon-open"></iconify-icon>
         <iconify-icon icon="fluent:dismiss-20-filled" inline class="icon-close"></iconify-icon>
     </button>
