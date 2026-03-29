@@ -5,12 +5,12 @@
 
 /* Timeline Badge - Time labels or status indicators */
 .time-badge {
-    background: linear-gradient(135deg, var(--success), #16a34a);
+    background: var(--bg-gradient-success);
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: var(--radius-normal);
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
     min-width: 60px;
     text-align: center;
 }
@@ -19,7 +19,7 @@
 .time-task {
     flex: 1;
     color: var(--charcoal);
-    font-weight: 500;
+    font-weight: var(--font-weight-semibold);
 }
 
 /* Responsive Design */

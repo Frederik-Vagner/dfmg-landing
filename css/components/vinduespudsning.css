@@ -1,15 +1,15 @@
 .window-panel {
     height: 200px;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     position: relative;
     overflow: hidden;
     border: 3px solid var(--color-border);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all var(--transition-normal);
 }
 
 .window-panel.dirty {
-    background: linear-gradient(45deg, #f1f5f9 25%, #e2e8f0 25%, #e2e8f0 50%, #f1f5f9 50%, #f1f5f9 75%, #e2e8f0 75%);
+    background: linear-gradient(45deg, var(--bg-light) 25%, var(--color-border) 25%, var(--color-border) 50%, var(--bg-light) 50%, var(--bg-light) 75%, var(--color-border) 75%);
     background-size: 20px 20px;
     opacity: 0.7;
 }
@@ -26,12 +26,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity var(--transition-normal);
 }
 
 .window-panel.clean .window-overlay {
@@ -45,9 +45,9 @@
     position: relative;
     max-width: 800px;
     margin: 4rem auto 0;
-    border-radius: 24px;
+    border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-xl);
 }
 
 .slider-container {
@@ -65,11 +65,11 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: opacity 0.3s;
+    transition: opacity var(--transition-normal);
 }
 
 .before-image {
-    background: linear-gradient(45deg, #f1f5f9 25%, #e2e8f0 25%, #e2e8f0 50%, #f1f5f9 50%, #f1f5f9 75%, #e2e8f0 75%);
+    background: linear-gradient(45deg, var(--bg-light) 25%, var(--color-border) 25%, var(--color-border) 50%, var(--bg-light) 50%, var(--bg-light) 75%, var(--color-border) 75%);
     background-size: 30px 30px;
     opacity: 0.8;
 }
@@ -82,11 +82,11 @@
 .image-label {
     position: absolute;
     top: 2rem;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: var(--radius-circle);
+    font-weight: var(--font-weight-medium);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -121,7 +121,7 @@
     background: var(--primary);
     border-radius: 50%;
     border: 4px solid white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .slider-handle::after {
@@ -142,14 +142,14 @@
 }
 
 .comparison-btn {
-    padding: 0.75rem 2rem;
+    padding: var(--padding-sm) var(--padding-lg);
     border: 2px solid var(--color-border);
     background: white;
     color: var(--gray);
-    border-radius: 50px;
+    border-radius: var(--radius-circle);
     cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 600;
+    transition: all var(--transition-normal);
+    font-weight: var(--font-weight-medium);
     text-decoration: none;
 }
 

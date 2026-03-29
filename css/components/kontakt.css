@@ -6,7 +6,7 @@
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-    color: var(--text-secondary);
+    color: var(--gray-light);
     opacity: 0.7;
 }
 
@@ -64,8 +64,8 @@
 }
 
 .dropdown-selected {
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
+    border: var(--border-light);
+    border-radius: var(--radius-normal);
     padding: 15px;
     cursor: pointer;
     display: flex;
@@ -75,7 +75,6 @@
     background: var(--white);
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .dropdown-selected.open {
@@ -90,8 +89,8 @@
     left: 0;
     right: 0;
     background: white;
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
+    border: var(--border-light);
+    border-radius: var(--radius-normal);
     display: none;
     z-index: 100;
     box-sizing: border-box;
@@ -113,7 +112,7 @@
     padding: 0.75rem 1rem;
     cursor: pointer;
     position: relative;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
 }
 
 .dropdown-options label:hover {
@@ -122,7 +121,7 @@
 
 .dropdown-options label.selected {
     color: var(--success);
-    font-weight: 500;
+    font-weight: var(--font-weight-semibold);
 }
 
 .dropdown-options label.selected::after {
@@ -142,7 +141,7 @@
 }
 
 .form-row .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--padding-md);
 }
 
 .form-row.phone-row {
@@ -153,14 +152,14 @@
 .phone-code select {
     font-size: 1.1rem;
     padding: 15px;
-    appearance: none; /* Fjern standard dropdown pil */
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
     background-position: right 15px center;
     background-repeat: no-repeat;
     background-size: 16px;
-    padding-right: 45px; /* Plads til custom pil */
+    padding-right: 45px;
 }
 
 @media (max-width: 768px) {
@@ -181,8 +180,8 @@
 }
 
 .faq-item {
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
+    border: var(--border-light);
+    border-radius: var(--radius-normal);
     margin-bottom: 1rem;
     overflow: hidden;
 }
@@ -194,7 +193,7 @@
     justify-content: space-between;
     align-items: center;
     background: white;
-    transition: background 0.2s ease;
+    transition: background var(--transition-fast);
 }
 
 .faq-question h4 {
@@ -203,7 +202,7 @@
 }
 
 .faq-question iconify-icon {
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-normal);
     color: var(--gray);
 }
 
@@ -218,7 +217,7 @@
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height var(--transition-normal);
 }
 
 .faq-answer.open {
@@ -226,7 +225,7 @@
 }
 
 .faq-answer p {
-    padding: 1.5rem;
+    padding: var(--padding-md);
     margin: 0;
     color: var(--gray);
 }

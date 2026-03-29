@@ -6,7 +6,7 @@
 /* Simple Price Display */
 .service-price {
     text-align: center;
-    padding: 1.5rem;
+    padding: var(--padding-md);
 }
 
 .price-label {
@@ -19,14 +19,14 @@
 
 .price-amount {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--primary);
 }
 
 /* Pricing Table */
 .pricing-table {
-    background: #f8fafc;
-    border-radius: 16px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     margin-bottom: 2rem;
 }
@@ -34,12 +34,12 @@
 .pricing-header {
     background: var(--bg-gradient-charcoal);
     color: white;
-    padding: 1.5rem 2rem;
+    padding: var(--padding-md) var(--padding-lg);
     text-align: center;
 }
 
 .pricing-body {
-    padding: 2rem;
+    padding: var(--padding-lg);
 }
 
 .pricing-item {
@@ -47,7 +47,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: var(--border-light);
 }
 
 .pricing-item:last-child {
@@ -55,7 +55,7 @@
 }
 
 .pricing-name {
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
     color: var(--charcoal);
     flex: 1;
 }
@@ -67,7 +67,7 @@
 }
 
 .pricing-price {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--primary);
     font-size: 1.1rem;
 }
@@ -76,24 +76,24 @@
 .shop-preview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    gap: var(--padding-md);
     margin-bottom: 2rem;
 }
 
 .shop-item {
     background: white;
-    border-radius: 16px;
-    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    padding: var(--padding-md);
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-sm);
     border: 2px solid transparent;
-    transition: all 0.3s;
+    transition: all var(--transition-normal);
 }
 
 .shop-item:hover {
     border-color: var(--primary);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: var(--shadow-md);
 }
 
 .shop-item-icon {
@@ -104,7 +104,7 @@
 
 .shop-item-price {
     color: var(--primary);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     font-size: 1.1rem;
 }
 
@@ -112,9 +112,9 @@
     background: var(--color-border);
     color: var(--gray-light);
     padding: 0.25rem 0.75rem;
-    border-radius: 50px;
+    border-radius: var(--radius-circle);
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
     text-transform: uppercase;
     margin-bottom: 1rem;
     display: inline-block;
@@ -123,12 +123,12 @@
 /* Custom Request Card */
 .custom-request {
     background: linear-gradient(135deg, var(--bg-muted), var(--bg-light));
-    border-radius: 20px;
-    padding: 2rem;
+    border-radius: var(--radius-normal);
+    padding: var(--padding-lg);
     margin-top: 2rem;
     border: 2px dashed #cbd5e1;
     text-align: center;
-    transition: all 0.3s;
+    transition: all var(--transition-normal);
 }
 
 .custom-request:hover {
@@ -145,14 +145,14 @@
 .custom-request-btn {
     background: var(--primary);
     color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
+    padding: var(--padding-sm) var(--padding-lg);
+    border-radius: var(--radius-circle);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    transition: all 0.3s;
+    transition: all var(--transition-normal);
 }
 
 .custom-request-btn:hover {
@@ -193,7 +193,7 @@
     }
 
     .custom-request {
-        padding: 1.5rem;
+        padding: var(--padding-md);
     }
 
     .custom-request-icon {
