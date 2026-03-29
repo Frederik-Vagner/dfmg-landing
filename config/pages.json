@@ -113,6 +113,36 @@
     "components": ["article-listing"],
     "scripts": []
   },
+  "pages/indblik/indblik": {
+    "title": "DFMG - Indblik",
+    "description": "Indblik i DFMG - artikler, cases, nyheder og viden om facility management.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/indblik/teknologi": {
+    "title": "DFMG - Teknologi & Processer",
+    "description": "DFMG Platform, smart automation og procesoptimering i facility management.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/indblik/cases/adnami": {
+    "title": "DFMG - Case: Adnami",
+    "description": "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig service og innovative løsninger.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/indblik/cases/soho": {
+    "title": "DFMG - Case: SOHO",
+    "description": "Hvordan DFMG leverer fleksibel facility service til SOHO's coworking miljø.",
+    "components": [],
+    "scripts": []
+  },
+  "pages/indblik/cases/kgl": {
+    "title": "DFMG - Case: Det Kgl. Haveselskab",
+    "description": "Hvordan DFMG samarbejder med Det Kongelige Danske Haveselskab om facility management.",
+    "components": [],
+    "scripts": []
+  },
   "pages/components/privatlivspolitik": {
     "title": "DFMG - Privatlivspolitik",
     "description": "DFMG's privatlivspolitik og håndtering af persondata.",
