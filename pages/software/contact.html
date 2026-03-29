@@ -28,30 +28,41 @@ og:
     <section class="section">
         <div class="container">
             <div class="demo-split">
-                <div class="demo-split__form">
-                    <h2 class="title text-charcoal" style="font-size: 1.6rem;">Send us a message</h2>
+                <div class="demo-split__visual">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.75rem;">Contact Sales</h2>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem; line-height: 1.6;">Fill out the form and tell us about your needs. We'll get back to you within 24 hours.</p>
 
-                    <form class="platform-form" action="/pages/software/tak.html" method="GET">
-                        <div class="form-row-2">
-                            <div class="form-group">
-                                <label for="contact-name">Full name</label>
-                                <input type="text" id="contact-name" name="name" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-company">Company</label>
-                                <input type="text" id="contact-company" name="company" placeholder="Company name">
-                            </div>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.75rem;"></i>Free and non-binding consultation</li>
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.75rem;"></i>Tailored demo of relevant modules</li>
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.75rem;"></i>Response within 24 hours</li>
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.75rem;"></i>No credit card required</li>
+                    </ul>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><i class="fas fa-envelope"></i> Email</h4>
+                            <p><a href="mailto:{{ site.platformEmail }}" style="color: var(--primary);">{{ site.platformEmail }}</a></p>
                         </div>
-                        <div class="form-row-2">
-                            <div class="form-group">
-                                <label for="contact-email">Email</label>
-                                <input type="email" id="contact-email" name="email" placeholder="you@example.dk" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-phone">Phone</label>
-                                <input type="tel" id="contact-phone" name="phone" placeholder="+45 12 34 56 78">
-                            </div>
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><i class="fas fa-phone"></i> Phone</h4>
+                            <p><a href="tel:{{ site.phone }}" style="color: var(--primary);">{{ site.phoneDisplay }}</a></p>
                         </div>
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><i class="fas fa-clock"></i> Office hours</h4>
+                            <p>Mon - Fri, 08-17 CET</p>
+                        </div>
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><i class="fas fa-building"></i> Company</h4>
+                            <p>{{ site.legalName }}<br>CVR: {{ site.cvr }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-split__form">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.25rem;">Send us a message</h2>
+                    <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
+                        <input type="hidden" name="_subject" value="New inquiry from DFMG Platform">
+                        <input type="hidden" name="_next" value="https://dfmg.dk/pages/software/tak.html">
                         <div class="form-group">
                             <label for="contact-interest">I'm interested in</label>
                             <select id="contact-interest" name="interest">
@@ -62,6 +73,45 @@ og:
                                 <option value="other">Other</option>
                             </select>
                         </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="contact-company">Company</label>
+                                <input type="text" id="contact-company" name="company" placeholder="Company name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-name">Full name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="you@example.dk" required>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group" style="flex: 0 0 30%;">
+                                <label for="contact-code">Code</label>
+                                <select id="contact-code" name="country_code">
+                                    <option value="+45" selected>🇩🇰 +45</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+43">🇦🇹 +43</option>
+                                    <option value="+48">🇵🇱 +48</option>
+                                    <option value="+358">🇫🇮 +358</option>
+                                    <option value="+353">🇮🇪 +353</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="contact-phone">Phone</label>
+                                <input type="tel" id="contact-phone" name="phone" placeholder="12 34 56 78" pattern="[0-9\s]{7,15}" required>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="contact-message">Message</label>
                             <textarea id="contact-message" name="message" placeholder="Tell us about your needs..."></textarea>
@@ -70,24 +120,6 @@ og:
                             <i class="fas fa-paper-plane mr-05"></i> Send Message
                         </button>
                     </form>
-                </div>
-                <div class="demo-split__visual">
-                    <div class="card p-2 bg-gradient-white mb-2">
-                        <h4><i class="fas fa-envelope"></i> Email</h4>
-                        <p><a href="mailto:{{ site.platformEmail }}" style="color: var(--primary);">{{ site.platformEmail }}</a></p>
-                    </div>
-                    <div class="card p-2 bg-gradient-white mb-2">
-                        <h4><i class="fas fa-phone"></i> Phone</h4>
-                        <p><a href="tel:{{ site.phone }}" style="color: var(--primary);">{{ site.phoneDisplay }}</a></p>
-                    </div>
-                    <div class="card p-2 bg-gradient-white mb-2">
-                        <h4><i class="fas fa-clock"></i> Office hours</h4>
-                        <p>Monday - Friday, 08:00 - 17:00 CET</p>
-                    </div>
-                    <div class="card p-2 bg-gradient-white">
-                        <h4><i class="fas fa-building"></i> Company</h4>
-                        <p>{{ site.legalName }}<br>CVR: {{ site.cvr }}<br>Denmark</p>
-                    </div>
                 </div>
             </div>
         </div>
