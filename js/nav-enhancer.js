@@ -6,63 +6,59 @@
 (function() {
     'use strict';
 
-    const CACHE_VERSION = 'v1';
+    const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
     const PREFETCH_CACHE = new Set();
     const HOVER_DELAY = 65; // ms before prefetch starts
 
     // --- Component Caching ---
-    // Monkey-patch fetch to cache component HTML in sessionStorage
-    const componentPaths = [
+    // Cache component HTML and pages.json in sessionStorage with TTL
+    const cacheable = [
         '/pages/components/header.html',
         '/pages/components/header-platform.html',
         '/pages/components/footer.html',
         '/pages/components/footer-platform.html',
         '/pages/components/chatbot.html',
         '/pages/components/contact-widget.html',
-        '/pages/components/article-sidebar.html'
+        '/pages/components/article-sidebar.html',
+        '/config/pages.json'
     ];
+
+    function getCached(key) {
+        try {
+            const raw = sessionStorage.getItem(key);
+            if (!raw) return null;
+            const entry = JSON.parse(raw);
+            if (Date.now() - entry.t > CACHE_TTL) {
+                sessionStorage.removeItem(key);
+                return null;
+            }
+            return entry.d;
+        } catch(e) { return null; }
+    }
+
+    function setCache(key, data) {
+        try { sessionStorage.setItem(key, JSON.stringify({ t: Date.now(), d: data })); } catch(e) {}
+    }
 
     const originalFetch = window.fetch;
     window.fetch = function(url, options) {
         const urlStr = typeof url === 'string' ? url : url.toString();
 
-        // Only cache GET requests for known components
         if (!options?.method || options.method === 'GET') {
-            const isComponent = componentPaths.some(p => urlStr.endsWith(p) || urlStr === p);
-            if (isComponent) {
-                const cacheKey = 'nav_' + CACHE_VERSION + '_' + urlStr;
-                const cached = sessionStorage.getItem(cacheKey);
+            const isCacheable = cacheable.some(p => urlStr.endsWith(p) || urlStr === p);
+            if (isCacheable) {
+                const cacheKey = 'nav_' + urlStr;
+                const cached = getCached(cacheKey);
                 if (cached) {
+                    const contentType = urlStr.endsWith('.json') ? 'application/json' : 'text/html';
                     return Promise.resolve(new Response(cached, {
                         status: 200,
-                        headers: { 'Content-Type': 'text/html' }
-                    }));
-                }
-                // Fetch and cache
-                return originalFetch.call(this, url, options).then(response => {
-                    const clone = response.clone();
-                    clone.text().then(html => {
-                        try { sessionStorage.setItem(cacheKey, html); } catch(e) {}
-                    });
-                    return response;
-                });
-            }
-
-            // Also cache pages.json
-            if (urlStr.endsWith('/config/pages.json')) {
-                const cacheKey = 'nav_' + CACHE_VERSION + '_pages.json';
-                const cached = sessionStorage.getItem(cacheKey);
-                if (cached) {
-                    return Promise.resolve(new Response(cached, {
-                        status: 200,
-                        headers: { 'Content-Type': 'application/json' }
+                        headers: { 'Content-Type': contentType }
                     }));
                 }
                 return originalFetch.call(this, url, options).then(response => {
                     const clone = response.clone();
-                    clone.text().then(json => {
-                        try { sessionStorage.setItem(cacheKey, json); } catch(e) {}
-                    });
+                    clone.text().then(data => setCache(cacheKey, data));
                     return response;
                 });
             }
@@ -148,6 +144,33 @@
 
         // Mousedown navigation
         document.addEventListener('mousedown', navigateOnMousedown, true);
+
+        // Touch devices: prefetch on touchstart
+        document.addEventListener('touchstart', function(e) {
+            const a = e.target.closest('a');
+            if (a && isInternalLink(a)) prefetchUrl(a.href);
+        }, { passive: true });
+    }
+
+    // --- Scroll Position Restoration ---
+    // Save before leaving, restore on back/forward
+    window.addEventListener('beforeunload', function() {
+        sessionStorage.setItem('scrollPos_' + location.pathname,
+            document.body.scrollTop || document.documentElement.scrollTop || 0);
+    });
+
+    if (performance.getEntriesByType) {
+        const navEntry = performance.getEntriesByType('navigation')[0];
+        if (navEntry && navEntry.type === 'back_forward') {
+            const saved = sessionStorage.getItem('scrollPos_' + location.pathname);
+            if (saved) {
+                window.addEventListener('load', function() {
+                    const pos = parseInt(saved, 10);
+                    document.body.scrollTop = pos;
+                    document.documentElement.scrollTop = pos;
+                });
+            }
+        }
     }
 
     // requestIdleCallback polyfill
