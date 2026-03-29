@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Governance</title>
-    <meta name="description" content="DFMG's ledelsesstruktur, etik og compliance. Ansvarlig forretningsførelse.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/sustainability-carousel.css">
-    <link rel="stylesheet" href="/css/components/slides.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body class="sustainability-page" data-slide-theme="governance">
-    <!-- Header Component -->
-    <div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Governance"
+description: "DFMG's ledelsesstruktur, etik og compliance. Ansvarlig forretningsførelse."
+bodyClass: "sustainability-page"
+bodyAttrs: 'data-slide-theme="governance"'
+componentCss:
+  - sustainability-carousel
+  - slides
+scripts:
+  - /js/sustainability-slider.js
+---
 
     <!-- Vertical Scrolling Container -->
     <div class="vertical-container" id="verticalContainer">
-        
+
         <!-- Slide 1: Empty -->
         <section class="slide">
             <div class="slide-content-normal">
@@ -45,7 +21,7 @@
                     <div class="badge">Governance</div>
                     <h1>Systematik Skaber Ansvarlighed</h1>
                     <div class="subtitle">Hos DFMG bygger vi governance på transparens, åbenhed og fair forretningsførelse. Vores ERP-system gør os ansvarlige overfor alle - kunder, medarbejdere og samfundet.</div>
-                    
+
                     <div class="flex">
                         <div class="card bg-gradient-white border-top-charcoal p-1">
                             <i class="fas fa-eye"></i>
@@ -81,7 +57,7 @@
                         <h1>GDPR Excellence Som Konkurrencefordel</h1>
                         <div class="subtitle">Når datasikkerhed bliver til tillid og troværdighed</div>
                         <div class="body">Vi har kigget på de største tech-virksomheder...</div>
-                        
+
                         <div class="grid">
                             <div class="card bg-gradient-white border-left-charcoal p-2">
                                 <div class="card card--horizontal">
@@ -121,11 +97,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content-center"> 
+                    <div class="content-center">
                         <div class="photo">
                             <div>photo</div>
                         </div>
-                    </div>           
+                    </div>
                 </div>
             </div>
         </section>
@@ -164,7 +140,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content-center"> 
+                    <div class="content-center">
                         <div class="badge">Åben Kommunikation</div>
                         <h1>Transparens Som Våben</h1>
                         <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
@@ -187,7 +163,7 @@
                     <div class="badge">Kvalitet & Kontinuitet</div>
                     <h1>Systematisk Kvalitetssikring</h1>
                     <div class="subtitle">Fra procedurer til performance - alt er dokumenteret og måleligt</div>
-                    
+
                     <div class="grid-2x3 mb-4">
                         <div class="card bg-gradient-white p-1">
                             <div class="stat">
@@ -208,19 +184,19 @@
                             <h5>Backup Netværk</h5>
                             <p>Fuldtids, deltids og trusted partnere sikrer kontinuerlig service</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <div class="quality-number slide4">3</div>
                             <h5>Arbejdsskader Totalt</h5>
                             <p>Kun ødelagte lamper - prompt rapportering til kunder og forsikring</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <div class="quality-number slide4">100%</div>
                             <h5>Sikkerhedsinstruktion</h5>
                             <p>Alle medarbejdere får grundig gennemgang af procedurer og produkter</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <div class="quality-number slide4">100%</div>
                             <h5>Sikkerhedsinstruktion</h5>
@@ -233,7 +209,7 @@
                             <h5>Klage Dokumentation</h5>
                             <p>Systematisk opsamling og læring fra feedback i ERP-systemet</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <div class="quality-number slide4">30</div>
                             <h5>Dages Data Retention</h5>
@@ -242,7 +218,7 @@
                     </div>
                     <div class="quote">
                         "Transparens og systematik er fundamentet for tillid. Vores kunder skal altid vide præcist hvad vi gør, hvornår vi gør det, og hvorfor."
-                    </div> 
+                    </div>
                 </div>
             </div>
         </section>
@@ -251,7 +227,7 @@
         <section class="slide">
             <div class="slide-content-wide">
                 <div class="flex flex-2">
-                    <div class="content-center"> 
+                    <div class="content-center">
                         <div class="badge">Åben Kommunikation</div>
                         <h1>Transparens Som Våben</h1>
                         <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
@@ -296,7 +272,7 @@
                                 </div>
                                 <p>Når vi sælger ERP-systemet bygger vi governance-principper ind fra start. Strukturer der guider mod ansvarlig forretningsførelse.</p>
                             </div>
-                            
+
                             <div class="card bg-gradient-white p-1">
                                 <div class="flex">
                                     <i class="fas fa-building text-primary"></i>
@@ -316,7 +292,7 @@
             </div>
         </section>
     </div>
-    
+
     <!-- Slide Navigation -->
     <div class="slide-nav">
         <div class="slide-dot active" data-slide="0"></div>
@@ -325,15 +301,3 @@
         <div class="slide-dot" data-slide="3"></div>
         <div class="slide-dot" data-slide="4"></div>
     </div>
-
-    <div id="footer"></div>
-
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-
-    <!-- Component Loader -->
-    <script src="/js/components.js" defer></script>
-    <script src="/js/sustainability-slider.js" defer></script>
-</body>
-</html>

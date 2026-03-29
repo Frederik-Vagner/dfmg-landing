@@ -1,38 +1,13 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Erhvervsrengøring</title>
-    <meta name="description" content="Professionel erhvervsrengøring fra DFMG. Systematisk kvalitet, transparent dokumentation og personlig service.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/rengoering.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body>
-    <!-- Header Component -->
-    <div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Erhvervsrengøring"
+description: "Professionel erhvervsrengøring fra DFMG. Systematisk kvalitet, transparent dokumentation og personlig service."
+componentCss:
+  - rengoering
+scripts:
+  - /js/rengoering.js
+  - /js/carousel.js
+---
 
     <!-- Floating Calculator Button -->
     <a href="/pages/prisberegner.html" class="btn btn--primary btn--sm floater">
@@ -85,7 +60,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Ejendomsrengøring Card -->
                     <div class="service-card">
                         <div class="service-image-container">
@@ -200,7 +175,7 @@
                         <li><i class="fas fa-check"></i> Kvalitetskontrol og opfølgning</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 border-top-charcoal">
                     <div class="type-badge">Løbende Service</div>
                     <h3>Grunding Rengøring</h3>
@@ -265,9 +240,9 @@
                     <div style="color: #64748b; font-size: 0.85rem; font-style: italic; text-align: center; margin: 2rem 0;">
                         <span>Dog udskift af personale ved sygdom eller ferie</span>
                     </div>
-                    
+
                     <p>Vi kommer altid til tiden som aftalt. I over 1,5 år og +1000 rengøringer har vi haft 0 udeblivelser. Når vi siger vi kommer, så kommer vi - uden undskyldninger eller forsinkelser.</p>
-                    
+
                     <h3>Jeres Skræddersyede Service Skema</h3>
                     <p>Hver kunde får et detaljeret skema - ingen gætteri om hvad der bliver gjort</p>
                     <div style="color: #64748b; font-size: 0.85rem; font-style: italic; display: flex; align-items: center; gap: 1rem; justify-content: center; margin: 2rem 0;">
@@ -275,7 +250,7 @@
                         <i class="fas fa-arrow-right" style="color: #3b82f6; font-size: 1.5rem;"></i>
                     </div>
                 </div>
-                
+
                 <div class="service-schedule-demo">
                     <div class="tab-navigation">
                         <a class="tab-button active" onclick="switchTab('kontor')">KONTOR</a>
@@ -298,7 +273,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="schedule-note">
                 <p><i class="fas fa-check-circle"></i> <strong>Fordelen:</strong> I ved præcis hvad der sker hvornår - og vi kan nemt tilpasse hvis jeres behov ændrer sig</p>
             </div>
@@ -313,7 +288,7 @@
                 <h2 class="title">I ved altid præcis hvad der sker</h2>
                 <p class="body">Fra jeres personlige dashboard kan I følge alt - live under udførelse og bagefter med dokumentation</p>
             </div>
-            
+
             <div class="transparency-grid">
                 <div class="transparency-card">
                     <h3>Rengøringspersonale</h3>
@@ -338,7 +313,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="transparency-card">
                     <h3>Foto Dokumentation</h3>
                     <div style="display:flex;gap:40px;margin:15px 0;font-size:14px;justify-content:space-between">
@@ -356,7 +331,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="transparency-card double-height">
                     <h3>Kalender Overblik</h3>
                     <div style="border-radius:6px; font-size:11px">
@@ -370,7 +345,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="transparency-card double-height">
                     <h3>Slutrapport</h3>
                     <div style="display:flex;margin:15px 0; gap: 10px;">
@@ -378,24 +353,24 @@
                             <div style="display:flex;align-items:center;margin-bottom:12px">
                                 <div style="font-weight:600;color:#344767">📧 Rapport sendt 21:45</div>
                             </div>
-                            
+
                             <div style="margin:8px 0;color:#666;font-size:14px">
                                 <strong>Location:</strong> SOHO<br>
                                 <strong>Task:</strong> Let Rengøring<br>
                                 <strong>Address:</strong> Klosterstræde 9, 1157 København K
                             </div>
-                            
+
                             <div style="margin:12px 0;padding:8px;background:white;border-radius:4px">
                                 <div style="color:#666;margin:4px 0;font-size:13px">⏰ Start: 17:30 | Slut: 21:30</div>
                                 <div style="color:#22c55e;margin:4px 0;font-size:13px">✅ Status: Udført</div>
                                 <div style="color:#344767;margin:4px 0;font-size:13px">👤 Udført af: Diya Phuyal</div>
                             </div>
-                            
+
                             <div style="background:#e8f5e8;padding:8px;border-radius:4px;margin-top:12px;text-align:center">
                                 <div style="color:#22c55e;font-size:12px;font-weight:500">📎 15 billeder vedhæftet</div>
                             </div>
                         </div>
-                        
+
                         <div style="padding:10px; width: 100%;">
                             <div style="color:#666;margin-bottom:8px;text-align:center;font-weight:500">Billeder:</div>
                             <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
@@ -414,7 +389,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="transparency-note">
                 <p><i class="fas fa-lightbulb"></i> <strong>Fordelen:</strong> I kan dokumentere overfor jeres ledelse, kunder eller lejere at rengøringen er udført professionelt - uden selv at være til stede</p>
             </div>
@@ -428,12 +403,12 @@
                 <div class="subtitle text-primary">FLEKSIBILITET</div>
                 <h3>Vi tilpasser os jeres rytme</h3>
                 <p>Fra daglige rutiner til akutte behov - vi følger jeres virksomheds tempo og behov.</p>
-                
+
                 <p>Vores fleksibilitet spænder over tre områder: <strong>Timing</strong> hvor vi arbejder efter arbejdstid, weekender og fleksible starttider så I aldrig bliver forstyrret. <strong>Service tilpasning</strong> hvor vi skalerer op ved events og ned i ferieperioder efter jeres behov. Og <strong>akut respons</strong> hvor vi løser spild, uheld og særlige situationer samme dag når det brenner på.</p>
 
                 <p>Uanset hvad der sker i jeres virksomhed, så finder vi en løsning der passer jer.</p>
             </div>
-            
+
             <div class="flexibility-examples">
                 <!-- Eksempel 1: Ekstra service -->
                 <div class="chat-example">
@@ -509,7 +484,7 @@
                 <h2 class="title">Før & Efter Eksempler</h2>
                 <p class="body">Se transformationen af vores kunders faciliteter gennem erhvervsrengøring</p>
             </div>
-            
+
             <div class="before-after-grid">
                 <div class="before-after-card">
                     <div class="image-container">
@@ -521,7 +496,7 @@
                         <p>Grundig rengøring af køkken og serveringsområde inkl. HACCP compliance</p>
                     </div>
                 </div>
-                
+
                 <div class="before-after-card">
                     <div class="image-container">
                         <div class="image-badge">EFTER</div>
@@ -532,7 +507,7 @@
                         <p>Køkkenet er nu klar til service med højeste hygiejnestandard</p>
                     </div>
                 </div>
-                
+
                 <div class="before-after-card">
                     <div class="image-container">
                         <div class="image-badge">FØR</div>
@@ -543,7 +518,7 @@
                         <p>Reception området havde brug for professionel behandling</p>
                     </div>
                 </div>
-                
+
                 <div class="before-after-card">
                     <div class="image-container">
                         <div class="image-badge">EFTER</div>
@@ -554,7 +529,7 @@
                         <p>Receptionen skaber nu det perfekte første indtryk</p>
                     </div>
                 </div>
-                
+
                 <div class="before-after-card">
                     <div class="image-container">
                         <div class="image-badge">FØR</div>
@@ -565,7 +540,7 @@
                         <p>Toiletområdet krævede specialiseret hygiejnebehandling</p>
                     </div>
                 </div>
-                
+
                 <div class="before-after-card">
                     <div class="image-container">
                         <div class="image-badge">EFTER</div>
@@ -600,18 +575,3 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer Component -->
-    <div id="footer"></div>
-
-    <!-- Component loader -->
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-
-    <script src="/js/components.js" defer></script>
-
-    <script src="/js/rengoering.js" defer></script>
-    <script src="/js/carousel.js" defer></script>
-</body>
-</html>

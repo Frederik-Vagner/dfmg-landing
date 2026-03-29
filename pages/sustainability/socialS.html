@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Socialt Ansvar</title>
-    <meta name="description" content="DFMG's sociale ansvar og arbejde med medarbejdertrivsel, diversitet og samfundsengagement.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/sustainability-carousel.css">
-    <link rel="stylesheet" href="/css/components/slides.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body class="sustainability-page" data-slide-theme="social">
-    <!-- Header Component -->
-    <div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Socialt Ansvar"
+description: "DFMG's sociale ansvar og arbejde med medarbejdertrivsel, diversitet og samfundsengagement."
+bodyClass: "sustainability-page"
+bodyAttrs: 'data-slide-theme="social"'
+componentCss:
+  - sustainability-carousel
+  - slides
+scripts:
+  - /js/sustainability-slider.js
+---
 
     <!-- Vertical Scrolling Container -->
     <div class="vertical-container" id="verticalContainer">
-        
+
         <!-- Slide 1: Empty -->
         <section class="slide">
             <div class="slide-content slide-content4">
@@ -45,7 +21,7 @@
                     <div class="badge text-primary">Social Bæredygtighed</div>
                     <h1 class="text-primary">Mennesker Først - Altid</h1>
                     <div class="text-center mb-4">Hos DFMG er social bæredygtighed ikke politik - det er konkrete handlinger der ændrer menneskers liv. Vi investerer i hjerner, bygger relationer og skaber ægte vækstmuligheder.</div>
-                    
+
                     <div class="flex">
                         <div class="card bg-gradient-white border-top-primary p-2">
                             <i class="fas fa-graduation-cap text-primary"></i>
@@ -95,15 +71,15 @@
                             <p>"Smart not hard" - lærer at tænke og arbejde strategisk frem for bare at udføre</p>
                         </div>
                     </div>
-                </div> 
-                <div class="content-center"> 
+                </div>
+                <div class="content-center">
                     <div class="photo">
                         <div>photo</div>
                     </div>
                     <div class="photo">
                         <div>photo</div>
                     </div>
-                </div>           
+                </div>
             </div>
         </section>
 
@@ -168,7 +144,7 @@
                     <h1>Leading by Example, Ikke Fear</h1>
                     <div class="text-primary">Der er en grund til alt - og det er vigtigt at forklare sig</div>
                     <p>Andre kommer fra steder hvor det er "leading by fear", men vi tror på at forklare hvorfor vi gør som vi gør. Selv når der skal gives kritik eller feedback på fejl.</p>
-                    
+
                     <div class="quote card border-left-primary">
                         "Det er vigtigt at de bliver set og hørt. Der er selvfølgelig en grænse - man kan ikke være bedste venner, men man skal holde det professionelt."
                     </div>
@@ -189,15 +165,15 @@
                             <p>Lærer ergonomi og "smart work" - de skal bruge kroppen hele livet</p>
                         </div>
                     </div>
-                </div> 
-                <div class="content-center"> 
+                </div>
+                <div class="content-center">
                     <div class="photo">
                         <div>photo</div>
                     </div>
                     <div class="photo">
                         <div>photo</div>
                     </div>
-                </div>           
+                </div>
             </div>
         </section>
 
@@ -208,33 +184,33 @@
                     <div class="badge">Fremtid & Vækst</div>
                     <h1>Intet Loft På Deres Rolle</h1>
                     <div class="subtitle">Vi hjælper dem med at vokse - også selvom det betyder de starter egen forretning</div>
-                    
+
                     <div class="grid-2x2">
                         <div class="card bg-gradient-white p-1">
                             <i class="fas fa-rocket"></i>
                             <h4>Iværksætter Mentoring</h4>
                             <p>Sætter mig gerne med medarbejdere og hjælper dem med startskudet til deres egen forretning. Det er mit mål at hjælpe dem opnå deres drømme.</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <i class="fas fa-chart-line"></i>
                             <h4>Vækst Med Virksomheden</h4>
                             <p>Håber at medarbejdere kan vokse med virksomheden og hjælpe andre steder som de interesserer sig for. Der er intet loft for deres rolle.</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <i class="fas fa-lightbulb"></i>
                             <h4>Tankesæt Udvikling</h4>
                             <p>Når vi taler sammen kan man høre at mine ord sætter gang i tanker hos dem. De fortæller om deres drømme og mål for fremtiden.</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <i class="fas fa-users"></i>
                             <h4>Fremtidige Ledere</h4>
                             <p>Når vi vokser i størrelse, håber jeg medarbejdere kan blive supervisors og ledere. Systematikken sikrer at den personlige tilgang ikke forsvinder.</p>
                         </div>
                     </div>
-                    
+
                     <div class="quote">
                         "Det er mit mål at hjælpe dem så meget som muligt med det de gerne vil opnå - også selvom det ikke er i min virksomhed."
                     </div>
@@ -242,7 +218,7 @@
             </div>
         </section>
     </div>
-    
+
     <!-- Slide Navigation -->
     <div class="slide-nav">
         <div class="slide-dot active" data-slide="0"></div>
@@ -251,15 +227,3 @@
         <div class="slide-dot" data-slide="3"></div>
         <div class="slide-dot" data-slide="4"></div>
     </div>
-
-    <div id="footer"></div>
-
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-
-    <!-- Component Loader -->
-    <script src="/js/components.js" defer></script>
-    <script src="/js/sustainability-slider.js" defer></script>
-</body>
-</html>

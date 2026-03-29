@@ -1,44 +1,19 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Bæredygtighed</title>
-    <meta name="description" content="DFMG's bæredygtighedsstrategi og ESG-arbejde. Socialt ansvar, klimaindsats og god ledelse.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/sustainability-carousel.css">
-    <link rel="stylesheet" href="/css/components/slides.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body class="sustainability-page" data-slide-theme="sustainability" data-slide-hashes='{"#miljoe":1,"#social":2,"#governance":3}'>
-
-    <!-- Header Component -->
-    <div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Bæredygtighed"
+description: "DFMG's bæredygtighedsstrategi og ESG-arbejde. Socialt ansvar, klimaindsats og god ledelse."
+bodyClass: "sustainability-page"
+bodyAttrs: "data-slide-theme=\"sustainability\" data-slide-hashes='{\"#miljoe\":1,\"#social\":2,\"#governance\":3}'"
+componentCss:
+  - sustainability-carousel
+  - slides
+scripts:
+  - /js/sustainability-slider.js
+---
 
     <!-- Horizontal Scrolling Container -->
     <div class="horizontal-container" id="horizontalContainer">
-        
+
         <!-- Slide 1: Intro -->
         <section class="slide">
             <div class="slide-content1">
@@ -47,7 +22,7 @@
                     <div class="title text-charcoal">Ansvarlig Vækst Gennem Systematik</div>
                     <div class="body text-gray mb-4">Hos DFMG er bæredygtighed ikke bare et buzzword - det er konkrete handlinger integreret i vores daglige drift. Fra <span class="highlight">100% bilfri transport</span> til systematisk social ansvarlighed.</div>
                 </div>
-                    
+
                     <div class="flex flex-3">
                         <div class="card bg-gradient-white p-2">
                             <i class="fas fa-leaf text-primary"></i>
@@ -174,38 +149,38 @@
                     <div class="title text-charcoal">Systematik Skaber Ansvarlighed</div>
                     <div class="subtitle text-charcoal">Vores ERP-system sikrer transparens, sporbarhed og ansvarlig forretningsførelse i alle led</div>
                 </div>
-                
+
                 <div class="grid-2x3">
                     <div class="card bg-gradient-white text-center p-2">
                         <div class="governance-number">01 - Transparens</div>
                         <h3>Fuldstændig Sporbarhed</h3>
                         <p>Alle opgaver, tider og omkostninger er dokumenteret og tilgængelige. Kunder kan se præcis hvad de betaler for.</p>
                     </div>
-                    
+
                     <div class="card bg-gradient-white text-center p-2">
                         <div class="governance-number">02 - Data Sikkerhed</div>
                         <h3>GDPR Compliance</h3>
                         <p>Systematisk håndtering af persondata med fuld overholdelse af databeskyttelsesregler.</p>
                     </div>
-                    
+
                     <div class="card bg-gradient-white text-center p-2">
                         <div class="governance-number">03 - Kvalitetssikring</div>
                         <h3>Objektiv Måling</h3>
                         <p>Performance metrics og KPI'er eliminerer subjektive vurderinger og sikrer fair behandling.</p>
                     </div>
-                    
+
                     <div class="card bg-gradient-white text-center p-2">
                         <div class="governance-number">04 - Etisk Drift</div>
                         <h3>Fair Prisfastsættelse</h3>
                         <p>Priser baseret på faktisk tidsforbrug og data - ikke gætværk eller tilfældige estimater.</p>
                     </div>
-                    
+
                     <div class="card bg-gradient-white text-center p-2">
                         <div class="governance-number">05 - Kontinuitet</div>
                         <h3>Risikostyring</h3>
                         <p>Systematiske backup-procedurer sikrer service selv ved sygdom eller personaleskift.</p>
                     </div>
-                    
+
                     <div class="card bg-gradient-white text-center p-2">
                         <div class="governance-number">06 - Innovation</div>
                         <h3>Ansvarlig Teknologi</h3>
@@ -215,7 +190,7 @@
             </div>
         </section>
     </div>
-    
+
     <!-- Slide Navigation -->
     <div class="slide-nav">
         <div class="slide-dot active" data-slide="0"></div>
@@ -223,17 +198,3 @@
         <div class="slide-dot" data-slide="2"></div>
         <div class="slide-dot" data-slide="3"></div>
     </div>
-
-    <!-- Component Loader -->
-    <!-- Footer Component -->
-    <div id="footer"></div>
-
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-    
-    <!-- Component Loader -->
-    <script src="/js/components.js" defer></script>
-    <script src="/js/sustainability-slider.js" defer></script>
-</body>
-</html>

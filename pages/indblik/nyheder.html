@@ -1,41 +1,12 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Nyheder & Artikler</title>
-    <meta name="description" content="Seneste nyheder og artikler fra DFMG. Tips, tricks og indsigt i facility management.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/article-listing.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body>
-<!-- Header Component -->
-<div id="header"></div>
-
-<!-- Chatbot Component -->
-<div id="chatbot"></div>
-<div id="contact-widget"></div>
+---
+layout: base.html
+title: "DFMG - Nyheder & Artikler"
+description: "Seneste nyheder og artikler fra DFMG. Tips, tricks og indsigt i facility management."
+componentCss:
+  - article-listing
+scripts:
+  - /js/nyheder.js
+---
 
     <!-- Page Header -->
     <section class="section first">
@@ -92,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                
+
 
                 <!-- Insights Featured Article -->
                 <div class="card card--split" data-featured-category="insights">
@@ -204,7 +175,7 @@
             <div class="articles-section">
                 <h2>Alle Artikler</h2>
                 <div class="articles-grid" id="articlesGrid">
-                    
+
                     <!-- Priority Articles -->
                     <article class="card card--media" data-category="tips">
                         <div class="article-image article-image--tips">
@@ -269,7 +240,7 @@
                     <!-- Sustainability -->
                     <article class="card card--media" data-category="sustainability">
                         <div class="article-image article-image--sustainability">
-                            <div class="article-date">BÆREDYGTIGHED</div>                            
+                            <div class="article-date">BÆREDYGTIGHED</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -289,7 +260,7 @@
 
                     <article class="card card--media" data-category="sustainability">
                         <div class="article-image article-image--sustainability">
-                            <div class="article-date">BÆREDYGTIGHED</div>                            
+                            <div class="article-date">BÆREDYGTIGHED</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -310,7 +281,7 @@
                     <!-- Innovation -->
                     <article class="card card--media" data-category="innovation">
                         <div class="article-image article-image--innovation">
-                            <div class="article-date">INNOVATION</div>                            
+                            <div class="article-date">INNOVATION</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -330,7 +301,7 @@
 
                     <article class="card card--media" data-category="innovation">
                         <div class="article-image article-image--innovation">
-                            <div class="article-date">INNOVATION</div>                            
+                            <div class="article-date">INNOVATION</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -351,7 +322,7 @@
                     <!-- Tips -->
                     <article class="card card--media" data-category="tips">
                         <div class="article-image article-image--tips">
-                            <div class="article-date">TIPS & TRICKS</div>                            
+                            <div class="article-date">TIPS & TRICKS</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -371,7 +342,7 @@
 
                     <article class="card card--media" data-category="tips">
                         <div class="article-image article-image--tips">
-                            <div class="article-date">TIPS & TRICKS</div>                            
+                            <div class="article-date">TIPS & TRICKS</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -392,7 +363,7 @@
                     <!-- Cases -->
                     <article class="card card--media" data-category="cases">
                         <div class="article-image article-image--cases">
-                            <div class="article-date">CASE STUDY</div>                            
+                            <div class="article-date">CASE STUDY</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -412,7 +383,7 @@
 
                     <article class="card card--media" data-category="cases">
                         <div class="article-image article-image--cases">
-                            <div class="article-date">CASE STUDY</div>                            
+                            <div class="article-date">CASE STUDY</div>
                             <img src="/images/article/ipad.jpg" alt="Article Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
                         <div class="article-content">
@@ -430,17 +401,7 @@
                         </div>
                     </article>
 
-                </div>       
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer Component -->
-    <div id="footer"></div>
-    
-    <!-- Component Loader -->
-    <script src="/js/components.js" defer></script>
-
-    <script src="/js/nyheder.js" defer></script>
-</body>
-</html>

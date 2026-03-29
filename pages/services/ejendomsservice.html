@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Ejendomsservice</title>
-    <meta name="description" content="Komplet ejendomsservice til erhvervsejendomme og boligforeninger. Professionel drift og vedligehold.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body>
-<!-- Header Component -->
-<div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Ejendomsservice"
+description: "Komplet ejendomsservice til erhvervsejendomme og boligforeninger. Professionel drift og vedligehold."
+---
 
 <!-- Hero Section -->
 <section class="first bg-gradient-charcoal">
@@ -39,7 +11,7 @@
             <div>
                 <h1 class="title text-white text-8xl font-light leading-tight tracking-tighter">Ejendomsservice</h1>
                 <p class="body text-white mb-4 text-2xl opacity-90">Professionel vedligeholdelse og pleje af ejendomme, fællesarealer og udendørs områder. Vi sikrer at jeres ejendom altid fremstår velholdt og indbydende.</p>
-                
+
                 <div class="flex">
                     <div class="card p-1 bg-charcoal-glass">
                         <span class="stat__value text-success">200+</span>
@@ -54,7 +26,7 @@
                         <span class="stat__label text-white">Tilfredshed</span>
                     </div>
                 </div>
-                
+
                 <div class="flex m-4 gap-1 flex-wrap justify-center">
                     <a href="#contact" class="btn btn--success btn--md">
                         <i class="fas fa-calculator"></i>
@@ -66,7 +38,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="content-center">
                 <div class="grid-3x2 gap-1 justify-center">
                     <div class="card p-1 bg-gradient-success text-white">Tag & Tagrender</div>
@@ -89,7 +61,7 @@
             <h2 class="text-charcoal">Komplet Ejendomsvedligeholdelse</h2>
             <p class="body text-gray">Fra daglig vedligeholdelse til specialiserede opgaver - vi sørger for at jeres ejendom altid fremstår professionel og velholdt</p>
         </div>
-        
+
         <div class="grid-2x3">
             <div class="card p-2 bg-gradient-white text-center border-top-success">
             <div class="card card--horizontal justify-center">
@@ -105,7 +77,7 @@
                     <li><i class="fas fa-check"></i> Mindre reparationer</li>
                 </ul>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center border-top-success">
                 <div class="card card--horizontal justify-center">
                     <i class="fas fa-door-open text-success text-6xl mb-1"></i>
@@ -120,7 +92,7 @@
                     <li><i class="fas fa-check"></i> Sikkerhedscheck og rapportering</li>
                 </ul>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center border-top-success">
             <div class="card card--horizontal justify-center">
                 <i class="fas fa-tree text-success text-6xl mb-1"></i>
@@ -135,7 +107,7 @@
                     <li><i class="fas fa-check"></i> Affaldshåndtering og container service</li>
                 </ul>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center border-top-success">
             <div class="card card--horizontal justify-center">
                 <i class="fas fa-tools text-success text-6xl mb-1"></i>
@@ -150,7 +122,7 @@
                     <li><i class="fas fa-check"></i> Akut service og nødreparationer</li>
                 </ul>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center border-top-success">
             <div class="card card--horizontal justify-center">
                 <i class="fas fa-spray-can text-success text-6xl mb-1"></i>
@@ -165,7 +137,7 @@
                     <li><i class="fas fa-check"></i> Tagrender og nedløb</li>
                 </ul>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center border-top-success">
             <div class="card card--horizontal justify-center">
                 <i class="fas fa-shield-alt text-success text-6xl mb-1"></i>
@@ -192,38 +164,38 @@
             <h2 class="text-charcoal">Hvordan Vi Arbejder</h2>
             <p class="body text-gray">En struktureret tilgang der sikrer konstant høj kvalitet og proaktiv vedligeholdelse af jeres ejendom</p>
         </div>
-        
+
         <div class="grid-2x3">
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat__value text-success">1</div>
                 <h4 class="text-charcoal text-2xl font-semibold">Ejendomsanalyse</h4>
                 <p class="text-gray">Vi starter med en grundig gennemgang af ejendommen for at identificere alle vedligeholdelsesbehov og prioritere opgaverne efter vigtighed</p>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat__value text-success">2</div>
                 <h4 class="text-charcoal">Skræddersyet Plan</h4>
                 <p class="text-gray">Baseret på analysen udarbejder vi en detaljeret vedligeholdelsesplan der passer til jeres budget og specifikke krav</p>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat__value text-success">3</div>
                 <h4 class="text-charcoal">Dedikeret Team</h4>
                 <p class="text-gray">Vi tildeler et fast team af erfarne medarbejdere til jeres ejendom, så I altid har de samme professionelle ansigter</p>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat__value text-success">4</div>
                 <h4 class="text-charcoal">Løbende Udførelse</h4>
                 <p class="text-gray">Vores team udfører alle planlagte opgaver efter tidsplanen og reagerer hurtigt på akutte behov og reparationer</p>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat__value text-success">5</div>
                 <h4 class="text-charcoal">Kvalitetskontrol</h4>
                 <p class="text-gray">Regelmæssige inspektioner og kvalitetscheck sikrer at alle opgaver udføres til perfektion og lever op til vores høje standarder</p>
             </div>
-            
+
             <div class="card p-2 bg-gradient-white text-center">
                 <div class="stat__value text-success">6</div>
                 <h4 class="text-charcoal">Digital Rapportering</h4>
@@ -242,38 +214,38 @@
                 <h2 class="text-white">Hvorfor Vælge DFMG Ejendomsservice?</h2>
                 <p class="body text-white">Vi leverer mere end grundlæggende vedligeholdelse - vi skaber værdi for jeres ejendom og forbedrer beboernes livskvalitet</p>
             </div>
-            
+
             <div class="grid-2x3">
                 <div class="card p-2 text-center">
                     <i class="fas fa-clock text-success text-7xl mb-2"></i>
                     <h4>24/7 Beredskab</h4>
                     <p>Akut service og nødreparationer hele døgnet. Vi er altid klar til at hjælpe når der opstår uventede problemer</p>
                 </div>
-                
+
                 <div class="card p-2 text-center">
                     <i class="fas fa-leaf text-success text-7xl mb-2"></i>
                     <h4>Miljøvenlige Løsninger</h4>
                     <p>Vi bruger miljøcertificerede produkter og bæredygtige metoder der beskytter både miljøet og beboernes sundhed</p>
                 </div>
-                
+
                 <div class="card p-2 text-center">
                     <i class="fas fa-mobile-alt text-success text-7xl mb-2"></i>
                     <h4>Digital Platform</h4>
                     <p>Moderne teknologi giver jer fuld transparens og kontrol med rapportering, planlægning og kommunikation</p>
                 </div>
-                
+
                 <div class="card p-2 text-center">
                     <i class="fas fa-award text-success text-7xl mb-2"></i>
                     <h4>Certificerede Specialister</h4>
                     <p>Vores team består af uddannede fagfolk med certificeringer inden for VVS, el-arbejde og andre specialområder</p>
                 </div>
-                
+
                 <div class="card p-2 text-center">
                     <i class="fas fa-chart-line text-success text-7xl mb-2"></i>
                     <h4>Værdioptimering</h4>
                     <p>Proaktiv vedligeholdelse der forlænger levetiden på jeres ejendom og opretholder eller øger ejendomsværdien</p>
                 </div>
-                
+
                 <div class="card p-2 text-center">
                     <i class="fas fa-handshake text-success text-7xl mb-2"></i>
                     <h4>Troværdig Partner</h4>
@@ -292,14 +264,14 @@
             <h2 class="text-charcoal">Succes Historie: Ejendomsadministration</h2>
             <p class="body text-gray">Se hvordan vi hjælper en af Danmarks største ejendomsadministratorer med at optimere deres ejendomsportefølje</p>
         </div>
-        
+
         <div class="card p-3 bg-gradient-white border-top-charcoal">
             <div class="flex flex-2">
                 <div>
                     <div class="badge bg-gradient-success">Strategisk Partnership</div>
                     <h4 class="text-charcoal text-6xl font-light mb-1">Total Facility Management</h4>
                     <p class="text-gray mb-2 text-lg leading-normal">Vores samarbejde inkluderer alt fra daglig rengøring af fællesarealer til komplekse renoveringsprojekter. Med dedikerede teams og digital rapportering har vi skabt gennemsigtighed og effektiviseret hele processen.</p>
-                    
+
                     <div class="grid-2x2">
                         <div class="card p-1 text-center">
                             <span class="stat__value text-success">150+</span>
@@ -319,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="content-center">
                     <div class="p-2 text-center grid justify-center content-end">
                         <div class="card p-1 bg-gradient-metal mb-2"><h4 class="m-0">24/7 Overvågning</h4></div>
@@ -355,16 +327,3 @@
         </div>
     </div>
 </section>
-
-<!-- Footer Component -->
-<div id="footer"></div>
-
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-
-<!-- Component Loader -->
-<script src="/js/components.js" defer></script>
-
-</body>
-</html>

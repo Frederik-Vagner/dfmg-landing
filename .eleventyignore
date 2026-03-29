@@ -1,0 +1,5 @@
+*.md
+**/*.md
+base-template.html
+pages/components/
+images/**/*.html

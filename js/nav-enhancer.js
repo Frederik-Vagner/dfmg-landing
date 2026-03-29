@@ -11,7 +11,7 @@
     const HOVER_DELAY = 65; // ms before prefetch starts
 
     // --- Component Caching ---
-    // Cache component HTML and pages.json in sessionStorage with TTL
+    // Cache component HTML in sessionStorage with TTL
     const cacheable = [
         '/pages/components/header.html',
         '/pages/components/header-platform.html',
@@ -19,8 +19,7 @@
         '/pages/components/footer-platform.html',
         '/pages/components/chatbot.html',
         '/pages/components/contact-widget.html',
-        '/pages/components/article-sidebar.html',
-        '/config/pages.json'
+        '/pages/components/article-sidebar.html'
     ];
 
     function getCached(key) {

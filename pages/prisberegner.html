@@ -1,38 +1,13 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Prisberegner</title>
-    <meta name="description" content="Beregn prisen på jeres facility service løsning med vores prisberegner. Få et øjeblikkeligt estimat.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/calculator.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body class="calculator-page">
-    <!-- Header Component -->
-    <div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Prisberegner"
+description: "Beregn prisen på jeres facility service løsning med vores prisberegner. Få et øjeblikkeligt estimat."
+bodyClass: calculator-page
+componentCss:
+  - calculator
+scripts:
+  - /js/prisberegner.js
+---
 
     <section id="price">
         <div class="calculator-container">
@@ -191,7 +166,7 @@
                             <div class="btn" onclick="toggleAllServiceTypes('grundig')">Grundig</div>
                         </div>
                     </div>
-                    
+
                     <!-- Office -->
                     <div class="info-card">
                         <h4>Kontor, Mødelokaler</h4>
@@ -376,7 +351,7 @@
                         </div>
                     </div>
 
-                    
+
 
                     <div class="btn active w-full mt-05 text-lg">
                         <i class="fas fa-envelope"></i>
@@ -390,16 +365,3 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer Component -->
-    <div id="footer"></div>
-
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-
-    <!-- Component Loader -->
-    <script src="/js/components.js" defer></script>
-    <script src="/js/prisberegner.js" defer></script>
-</body>
-</html>

@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Klimaindsats</title>
-    <meta name="description" content="DFMG's klimastrategi og miljøarbejde. Grønne løsninger og CO2-reduktion.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/sustainability-carousel.css">
-    <link rel="stylesheet" href="/css/components/slides.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body class="sustainability-page" data-slide-theme="klima">
-    <!-- Header Component -->
-    <div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Klimaindsats"
+description: "DFMG's klimastrategi og miljøarbejde. Grønne løsninger og CO2-reduktion."
+bodyClass: "sustainability-page"
+bodyAttrs: 'data-slide-theme="klima"'
+componentCss:
+  - sustainability-carousel
+  - slides
+scripts:
+  - /js/sustainability-slider.js
+---
 
     <!-- Vertical Scrolling Container -->
     <div class="vertical-container" id="verticalContainer">
-        
+
         <!-- Slide 1: Empty -->
         <section class="slide">
             <div class="slide-content slide-content4">
@@ -45,7 +21,7 @@
                     <div class="badge">Miljø & Klima</div>
                     <h1 class="text-success">Grøn Drift Som Standard</h1>
                     <div class="text-center mb-4">Siden dag ét har DFMG bygget miljøhensyn ind i alt vi gør. Ikke som en eftertanke, men som fundamentet for hvordan vi driver forretning.</div>
-                    
+
                     <div class="flex">
                         <div class="card bg-gradient-white border-top-success p-2">
                             <i class="fas fa-bicycle text-success"></i>
@@ -82,7 +58,7 @@
                         "Jeg er vokset op på en cykel, så jeg er superkomfortabel med at køre rundt i København med store tasker og 4-5 transportposer på styret."
                     </div>
                 </div>
-                <div class="grid"> 
+                <div class="grid">
                     <div class="card bg-gradient-white border-left-charcoal p-2">
                         <div class="card--horizontal">
                             <i class="fas fa-truck text-success"></i>
@@ -119,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                </div>            
+                </div>
             </div>
         </section>
 
@@ -139,27 +115,27 @@
                     <h1>Fra Affald Til Værdi</h1>
                     <div>Markedsplads hvor ting får nyt liv</div>
                     <p class="m-4">Vi har skabt en intern markedsplads hvor vores kunder kan aflevere ting de ikke længere har brug for. Vi <span class="text-primary">rengør og istandsætter</span> dem, så andre kan give dem nyt liv.</p>
-                    
+
                     <div class="flex mb-4">
                         <div class="card bg-gradient-white p-1">
                             <div class="step-number">1</div>
                             <h3>Afhentning</h3>
                             <p>Kunder stiller elektronik, kontorting og møbler til rådighed</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <div class="step-number">2</div>
                             <h3>Istandsættelse</h3>
                             <p>Vi rengør, reparerer og fotograferer tingene professionelt</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <div class="step-number">3</div>
                             <h3>Nyt Liv</h3>
                             <p>Andre kunder kan få tingene og give dem ny værdi</p>
                         </div>
                     </div>
-                    
+
                     <div class="flex">
                         <div class="card bg-gradient-white border-left-charcoal p-2">
                             <div class="card--horizontal">
@@ -192,7 +168,7 @@
                     <h5>Ansvarlig Kemikalievalg</h5>
                     <div>Svanemærkede produkter og korrekt anvendelse</div>
                     <p class="mb-2">Vi bruger primært <span class="text-success">svanemærkede produkter</span> og har en ansvarlig tilgang til stærke kemikalier. Høje pH-niveauer kun når det er nødvendigt, og altid med korrekt instruktion.</p>
-                    
+
                      <div class="grid-2x2">
                         <div class="card bg-gradient-white border-left-charcoal p-2">
                             <div class="card--horizontal">
@@ -231,7 +207,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="quote">
                         "Vi vægter reuse og genbrug højt - både i vores produkter og i måden vi arbejder på."
                     </div>
@@ -254,16 +230,16 @@
                     <div class="badge">Fremtiden</div>
                     <h5>Miljø Som Konkurrencefordel</h5>
                     <div class="subtitle">Grøn facility service uden kompromis på kvalitet eller pris</div>
-                    
+
                     <div class="grid-2x2">
                         <div class="card bg-gradient-white p-1">
-                            <h5> 
+                            <h5>
                                 <i class="fas fa-chart-line text-success"></i>
                                 Omkostningseffektiv Grøn Drift
                             </h5>
                             <p>Vores grønne tilgang er ikke dyrere - den er ofte mere effektiv. Cykel-logistik sparer brændstof, genbrug reducerer indkøb, og korrekt kemikalievalg minimerer spild.</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <h5>
                                 <i class="fas fa-handshake text-success"></i>
@@ -271,7 +247,7 @@
                             </h5>
                             <p>Vi hjælper kunder med at nå deres egne bæredygtighedsmål gennem vores markedsplads, affaldssortering og miljøvenlige processer.</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <h5>
                                 <i class="fas fa-seedling text-success"></i>
@@ -279,7 +255,7 @@
                             </h5>
                             <p>Vi søger konstant nye måder at reducere miljøpåvirkning på - fra bedre sortering til optimeret cykel-ruter og mindre packaging.</p>
                         </div>
-                        
+
                         <div class="card bg-gradient-white p-1">
                             <h5>
                                 <i class="fas fa-globe-europe text-success"></i>
@@ -288,11 +264,11 @@
                             <p>Når vi sælger vores ERP-system til andre, spreder vi også vores miljøvenlige praksisser og beviser at grøn drift virker.</p>
                         </div>
                     </div>
-                    
+
                     <div class="quote">
                         "Vi affaldsorterer hvor vi kan. Det er ikke hos alle vores kunder hvor der er opstillet nok forskellige containere til at udføre den bedst mulige sortering, men hvor vi kan, gør vi det."
                     </div>
-                    
+
                     <div class="grid">
                         <div class="card bg-gradient-white border-left-charcoal p-2">
                             <div class="card--horizontal">
@@ -317,7 +293,7 @@
             </div>
         </section>
     </div>
-    
+
     <!-- Slide Navigation -->
     <div class="slide-nav">
         <div class="slide-dot active" data-slide="0"></div>
@@ -326,15 +302,3 @@
         <div class="slide-dot" data-slide="3"></div>
         <div class="slide-dot" data-slide="4"></div>
     </div>
-
-    <div id="footer"></div>
-
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-
-    <!-- Component Loader -->
-    <script src="/js/components.js" defer></script>
-    <script src="/js/sustainability-slider.js" defer></script>
-</body>
-</html>

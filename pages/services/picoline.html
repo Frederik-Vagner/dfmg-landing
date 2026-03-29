@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page-specific meta (injected by template-loader.js) -->
-    <title>DFMG - Piccoline Service</title>
-    <meta name="description" content="Jeres kontor's usynlige hjælper. Piccoline service til erhverv.">
-
-    <!-- Favicon (root-relative paths) -->
-    <link rel="icon" href="/images/logos/logo.png" type="image/png">
-    <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
-
-    <!-- Performance -->
-    <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/components/timeline.css">
-
-    <script src="/js/nav-enhancer.js"></script>
-    <script src="/js/template-loader.js"></script>
-</head>
-<body>
-<!-- Header Component -->
-<div id="header"></div>
+---
+layout: base.html
+title: "DFMG - Piccoline Service"
+description: "Jeres kontor's usynlige hjælper. Piccoline service til erhverv."
+componentCss:
+  - timeline
+scripts:
+  - /js/tab-switcher.js
+---
 
 <!-- Hero Section -->
 <section class="first hero-layout">
@@ -63,7 +38,7 @@
                 <p class="text-base opacity-90">Løser de uventede opgaver der opstår i løbet af dagen</p>
             </div>
         </div>
-            
+
         <div class="flex gap-1 flex-wrap justify-center">
             <a href="#services" class="btn btn--secondary btn--lg">
                 <i class="fas fa-arrow-down"></i>
@@ -85,19 +60,19 @@
             <h2 class="text-charcoal">Kontorets Uundværlige Hjælper</h2>
             <p class="body text-gray">En piccoline fungerer som kontorets øjne, ører og arme og har i løbet af en normal arbejdsdag mange opgaver der sikrer den daglige drift</p>
         </div>
-        
+
         <div class="flex flex-2">
             <div >
                 <p>En piccoline/piccolo har til opgave at sørge for kontorets daglige drift, hvor deres opgaver typisk er mere praktiske end administrative. De er ofte dem, som møder først ind på kontoret - her tænder de lys og kaffemaskine, skruer op eller ned på radiatorer, og tjekker at alt er klar til at de øvrige medarbejdere møder ind.</p>
-                
+
                 <div class="highlight">
-                    "Jeg gør egentlig bare alt for, at de andre får en nemmere hverdag." 
+                    "Jeg gør egentlig bare alt for, at de andre får en nemmere hverdag."
                     <br><strong>- Petrine, Piccoline hos Maigaard & Mølbech</strong>
                 </div>
-                
+
                 <p>Udover de mange praktiske opgaver, varetager en piccoline også ofte såkaldte ad hoc opgaver - de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver.</p>
             </div>
-            
+
             <div>
                 <div class="card p-2 bg-gradient-white text-center">
                     <h3>En Typisk Piccoline Dag</h3>
@@ -141,13 +116,13 @@
             <h2 class="text-charcoal">Faste Opgaver & Fleksibel Support</h2>
             <p class="body text-gray">Vores piccoliner håndterer både daglige rutineopgaver og uforudsete behov, så jeres kontor altid fungerer optimalt</p>
         </div>
-        
+
         <div class="flex m-2 justify-center gap-2 mb-4 flex-wrap">
             <div class="tab-button active" onclick="switchTab('daily', this)">Daglige Opgaver</div>
             <div class="tab-button" onclick="switchTab('weekly', this)">Ugentlige Opgaver</div>
             <div class="tab-button" onclick="switchTab('adhoc', this)">Ad Hoc Support</div>
         </div>
-        
+
         <div class="toggle-content active" id="daily">
             <div class="grid-2x2">
                 <div class="card p-2 bg-gradient-white">
@@ -162,7 +137,7 @@
                         <li><i class="fas fa-check"></i> Affaldshåndtering</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-utensils text-success text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Frokost & Måltider</h3>
@@ -175,7 +150,7 @@
                         <li><i class="fas fa-check"></i> Genopfyldning af forsyninger</li>
                     </ul>
                 </div>
-                
+
                <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-coffee text-success text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Kaffe & Drikkevarer</h3>
@@ -188,7 +163,7 @@
                         <li><i class="fas fa-check"></i> Bestilling af forsyninger</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-thermometer-half text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Faciliteter & Miljø</h3>
@@ -203,7 +178,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="toggle-content" id="weekly">
             <div class="grid-2x2">
                 <div class="card p-2 bg-gradient-white">
@@ -218,7 +193,7 @@
                         <li><i class="fas fa-check"></i> Kaffe og te supplies</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-seedling text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Planter & Dekorationer</h3>
@@ -231,7 +206,7 @@
                         <li><i class="fas fa-check"></i> Sæsonbaseret pynt</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-tools text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Vedligeholdelse & Tjek</h3>
@@ -244,7 +219,7 @@
                         <li><i class="fas fa-check"></i> Dokumentation og rapporter</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-calendar-alt text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Event Support</h3>
@@ -259,7 +234,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="toggle-content" id="adhoc">
             <div class="grid-2x2">
                 <div class="card p-2 bg-gradient-white">
@@ -274,7 +249,7 @@
                         <li><i class="fas fa-check"></i> Akut hjælp og support</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-box-open text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Organisering & Oprydning</h3>
@@ -287,7 +262,7 @@
                         <li><i class="fas fa-check"></i> Genbrugshåndtering</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-users text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Møde & Gæste Service</h3>
@@ -300,7 +275,7 @@
                         <li><i class="fas fa-check"></i> Last-minute klargøring</li>
                     </ul>
                 </div>
-                
+
                 <div class="card p-2 bg-gradient-white">
                     <i class="fas fa-exclamation-triangle text-6xl mb-1"></i>
                     <h3 class="text-charcoal">Akut Support</h3>
@@ -326,38 +301,38 @@
             <h3 class="text-charcoal font-semibold text-5xl mb-15">Hvad Er Ad Hoc Opgager?</h3>
             <p class="text-gray text-lg leading-normal max-w-700 m-auto">Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
         </div>
-        
+
         <div class="grid-2x3">
             <div class="card p-1 bg-gradient-white">
                 <i class="fas fa-box-open text-6xl mb-1"></i>
                 <h4 class="text-charcoal text-xl font-semibold mb-1">Rydde op i depotrummet</h4>
                 <p class="text-gray leading-normal text-md">Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
             </div>
-            
+
             <div class="card p-1 bg-gradient-white">
                 <i class="fas fa-mug-hot text-6xl mb-1"></i>
                 <h4 class="text-charcoal text-xl font-semibold mb-1">Klargøre til kundemøde</h4>
                 <p class="text-gray leading-normal text-md">Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
             </div>
-            
+
             <div class="card p-1 bg-gradient-white">
                 <i class="fas fa-band-aid text-6xl mb-1"></i>
                 <h4 class="text-charcoal text-xl font-semibold mb-1">Hente plastre i butikken</h4>
                 <p class="text-gray leading-normal text-md">Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
             </div>
-            
+
             <div class="card p-1 bg-gradient-white">
                 <i class="fas fa-seedling text-6xl mb-1"></i>
                 <h4 class="text-charcoal text-xl font-semibold mb-1">Vande planterne</h4>
                 <p class="text-gray leading-normal text-md">Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
             </div>
-            
+
             <div class="card p-1 bg-gradient-white">
                 <i class="fas fa-tools text-6xl mb-1"></i>
                 <h4 class="text-charcoal text-xl font-semibold mb-1">Mindre reparationer</h4>
                 <p class="text-gray leading-normal text-md">Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
             </div>
-            
+
             <div class="card p-1 bg-gradient-white">
                 <i class="fas fa-shopping-bag text-6xl mb-1"></i>
                 <h4 class="text-charcoal text-xl font-semibold mb-1">Akutte indkøb</h4>
@@ -376,7 +351,7 @@
                 <div class="title text-white">Forskellen En Piccoline Gør</div>
                 <div class="body text-white ">Se hvordan en dedikeret piccoline transformerer jeres kontor fra en arbejdsplads til et velfungerende miljø</div>
             </div>
-            
+
             <div class="flex flex-2 gap-4 mt-4">
                 <div class="card bg-gradient-metal p-2">
                     <div class="text-center mb-2">
@@ -412,7 +387,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="card bg-gradient-metal p-2">
                     <div class="text-center mb-4">
                         <div class="icon-circle success mb-2">
@@ -460,7 +435,7 @@
             <h2 class="text-charcoal">Oplevelser Fra Danske Virksomheder</h2>
             <p class="body text-gray">Læs hvordan vores piccoline service har gjort en forskel for virksomheder som jeres</p>
         </div>
-        
+
         <div class="flex flex-2">
             <div class="card bg-gradient-white p-2">
                 <div class="mb-2">
@@ -474,7 +449,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div>
                 <div class="grid-2x2">
                     <div class="card p-1">
@@ -519,18 +494,3 @@
         </div>
     </div>
 </section>
-
-<!-- Footer Component -->
-<div id="footer"></div>
-
-    <!-- Chatbot Component -->
-    <div id="chatbot"></div>
-    <div id="contact-widget"></div>
-
-<!-- Component Loader -->
-<script src="/js/components.js" defer></script>
-
-<script src="/js/tab-switcher.js" defer></script>
-
-</body>
-</html>
