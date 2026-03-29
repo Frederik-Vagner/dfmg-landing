@@ -55,7 +55,7 @@
     position: static;
 }
 
-.card--media .article-meta i {
+.card--media .article-meta iconify-icon {
     font-size: 0.9rem;
 }
 
@@ -258,7 +258,7 @@
     font-size: 0.95rem;
 }
 
-.search-bar i {
+.search-bar iconify-icon {
     color: var(--gray-light);
     margin-right: 10px;
 }

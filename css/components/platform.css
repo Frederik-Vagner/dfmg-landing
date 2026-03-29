@@ -319,7 +319,7 @@
     color: var(--gray);
 }
 
-.trust-item i {
+.trust-item iconify-icon {
     color: var(--success);
 }
 
@@ -444,7 +444,7 @@
     letter-spacing: 0.04em;
 }
 
-.bc-table__category i {
+.bc-table__category iconify-icon {
     margin-right: 0.5rem;
     color: var(--primary);
 }

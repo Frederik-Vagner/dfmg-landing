@@ -202,7 +202,7 @@
     color: var(--charcoal);
 }
 
-.faq-question i {
+.faq-question iconify-icon {
     transition: transform 0.3s ease;
     color: var(--gray);
 }
@@ -211,7 +211,7 @@
     background: white;
 }
 
-.faq-question.active i {
+.faq-question.active iconify-icon {
     transform: rotate(180deg);
 }
 

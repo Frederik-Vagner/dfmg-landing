@@ -140,6 +140,12 @@
     top: 2rem;
 }
 
+.category-features iconify-icon {
+    color: var(--primary);
+    font-size: 0.8rem;
+    width: 12px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-layout::before {

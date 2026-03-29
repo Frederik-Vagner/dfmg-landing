@@ -209,7 +209,7 @@ function showExpandedContent(column, serviceType) {
         <div class="expanded-layout">
             <div class="expanded-content-left">
                 <button class="expanded-close-btn" onclick="closeExpandedContent(event)">
-                    <i class="fa-solid fa-reply"></i>
+                    <iconify-icon icon="fluent:arrow-reply-20-filled" inline></iconify-icon>
                 </button>
                 <h3 class="text-charcoal">${service.title}</h3>
                 <p class="text-charcoal">${service.description}</p>
@@ -249,7 +249,7 @@ function showExpandedContent(column, serviceType) {
                     <div class="fordele-grid">
                         ${service.features.map(feature => `
                             <div class="fordele-card">
-                                <i class="fas fa-check fordele-icon"></i>
+                                <iconify-icon icon="fluent:checkmark-20-filled" inline class="fordele-icon"></iconify-icon>
                                 <span class="fordele-text">${feature}</span>
                             </div>
                         `).join('')}
@@ -258,10 +258,10 @@ function showExpandedContent(column, serviceType) {
 
                 <div class="expanded-actions">
                     <a href="${service.url}" class="btn btn--primary btn--md">
-                        <i class="fas fa-info-circle"></i> Læs Mere
+                        <iconify-icon icon="fluent:info-20-filled" inline></iconify-icon> Læs Mere
                     </a>
                     <a href="/pages/facility/kontakt.html" class="btn btn--secondary btn--md">
-                        <i class="fas fa-calculator"></i> Få Tilbud
+                        <iconify-icon icon="fluent:calculator-20-filled" inline></iconify-icon> Få Tilbud
                     </a>
                 </div>
             </div>

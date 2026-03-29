@@ -186,11 +186,11 @@
     color: var(--white);
 }
 
-.chatbot-container .faq-question i {
+.chatbot-container .faq-question iconify-icon {
     transition: transform var(--transition-normal);
 }
 
-.chatbot-container .faq-question.active i {
+.chatbot-container .faq-question.active iconify-icon {
     transform: rotate(180deg);
 }
 
@@ -415,7 +415,7 @@
             <div class="chatbot-title">DFMG Support</div>
             <div class="live-indicator">
                 <div class="status-dot"></div>
-                <i class="fas fa-headset"></i>
+                <iconify-icon icon="fluent:headset-20-filled" inline></iconify-icon>
                 <span>Online</span>
             </div>
         </div>
@@ -430,7 +430,7 @@
                 <div class="callback-input-group">
                     <input type="tel" id="callbackPhone" placeholder="Indtast dit telefonnummer" class="input">
                     <button  class="btn btn--primary" onclick="submitCallbackRequest()">
-                        <i class="fas fa-phone"></i>
+                        <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                         Ring mig op
                     </button>
                 </div>
@@ -441,10 +441,10 @@
         </div>
         <div class="chatbot-tabs">
             <div class="chatbot-tab active" onclick="switchChatbotTab('faq', this)">
-                <i class="fas fa-question-circle"></i> FAQ
+                <iconify-icon icon="fluent:question-circle-20-filled" inline></iconify-icon> FAQ
             </div>
             <div class="chatbot-tab" onclick="switchChatbotTab('contact', this)">
-                <i class="fas fa-envelope"></i> Kontakt
+                <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> Kontakt
             </div>
         </div>
 
@@ -455,7 +455,7 @@
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             Hvilke services tilbyder DFMG?
-                            <i class="fas fa-chevron-down"></i>
+                            <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
                         <div class="faq-answer">
                             <p>Vi tilbyder Erhvervsrengøring, ejendomsservice, handyman-tjenester, supplies og piccoline ordning til virksomheder i hele Storkøbenhavn.</p>
@@ -465,7 +465,7 @@
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             Hvor hurtigt kan I komme i gang?
-                            <i class="fas fa-chevron-down"></i>
+                            <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
                         <div class="faq-answer">
                             <p>Vi kan typisk starte inden for 1-2 uger efter kontraktindgåelse. Ved akutte behov kan vi ofte hjælpe samme dag.</p>
@@ -475,7 +475,7 @@
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             Arbejder I med både små og store virksomheder?
-                            <i class="fas fa-chevron-down"></i>
+                            <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
                         <div class="faq-answer">
                             <p>Ja, vi betjener alt fra mindre kontorer til store multi-lokations virksomheder med skræddersyede løsninger.</p>
@@ -485,7 +485,7 @@
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             Hvad koster jeres services?
-                            <i class="fas fa-chevron-down"></i>
+                            <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
                         <div class="faq-answer">
                             <p>Prisen afhænger af jeres specifikke behov. Vi laver altid en gratis analyse og giver et fast tilbud uden overraskelser.</p>
@@ -496,7 +496,7 @@
                 <!-- Fixed bottom CTA -->
                 <div class="fixed-cta">
                     <button  class="btn btn--primary btn--sm" onclick="toggleCallbackForm()">
-                        <i class="fas fa-phone"></i>
+                        <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                         Bliv ringet op
                     </button>
                 </div>
@@ -515,14 +515,14 @@
                     <div class="chat-input-section">
                         <input type="text" class="input input-flex" placeholder="Skriv dit spørgsmål her..." id="chatInput">
                         <button  class="btn btn-icon" onclick="sendMessage()">
-                            <i class="fas fa-paper-plane"></i>
+                            <iconify-icon icon="fluent:send-20-filled" inline></iconify-icon>
                         </button>
                     </div>
                     
                     <div class="text-center">
                         <div class="cta-title">Eller kontakt os direkte</div>
                         <button  class="btn btn--primary btn--sm" onclick="callDirect()">
-                            <i class="fas fa-phone"></i>
+                            <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                             Ring: %SITE_PHONE_DISPLAY%
                         </button>
                     </div>
@@ -532,7 +532,7 @@
     </div>
     
     <button  class="chatbot-button" id="chatbotButton">
-        <i class="fas fa-comment"></i>
+        <iconify-icon icon="fluent:comment-20-filled" inline></iconify-icon>
     </button>
 </div>
 <div class="chat-preview" id="chatPreview">
