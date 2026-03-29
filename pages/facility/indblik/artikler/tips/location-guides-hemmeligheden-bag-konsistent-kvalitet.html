@@ -2,39 +2,14 @@
 layout: base.html
 title: "Location Guides: Hemmeligheden bag Konsistent Kvalitet | DFMG"
 description: "Opdag hvordan location guides sikrer ensartet og høj kvalitet i facility service på tværs af lokationer."
+category: "TIPS"
+articleTitle: "Location Guides: Et Værktøj til Konsistent Kvalitet"
+publishDate: "5. december 2024"
+readTime: 4
+views: "1,445"
 ---
 
-    <!-- Article Header -->
-    <section class="article-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="breadcrumb">
-                    <a href="/">Forside</a>
-                    <span>›</span>
-                    <a href="/pages/facility/indblik/nyheder.html">Indblik</a>
-                    <span>›</span>
-                    <span>Artikel</span>
-                </div>
-                <div class="article-category">TIPS & TRICKS</div>
-                <h1 class="article-title">Location Guides: Et Værktøj til Konsistent Kvalitet</h1>
-
-                <div class="article-meta">
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:calendar-20-filled" inline></iconify-icon>
-                        5. december 2024
-                    </div>
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
-                        4 min læsning
-                    </div>
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:eye-20-filled" inline></iconify-icon>
-                        1,445 visninger
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "article-header.html" %}
 
     <!-- Article Content -->
     <section class="article-content">
@@ -243,18 +218,7 @@ description: "Opdag hvordan location guides sikrer ensartet og høj kvalitet i f
                         <p><strong>Vil I opleve forskellen?</strong> Lad os lave en Location Guide til jeres virksomhed og vis jer hvordan detaljeret dokumentation transformerer facility service.</p>
                     </div>
 
-                    <!-- Share Buttons -->
-                    <div class="share-buttons">
-                        <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
-                            <iconify-icon icon="fa6-brands:linkedin-in" inline></iconify-icon>
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn share-facebook" target="_blank">
-                            <iconify-icon icon="fa6-brands:facebook-f" inline></iconify-icon>
-                        </a>
-                        <a href="mailto:{{ site.email }}?subject=Interessant artikel om systematik i facility management&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
-                            <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>
-                        </a>
-                    </div>
+                    {% include "article-share.html" %}
                 </div>
 
                 <div id="article-sidebar"></div>
@@ -262,12 +226,4 @@ description: "Opdag hvordan location guides sikrer ensartet og høj kvalitet i f
         </div>
     </section>
 
-    <!-- Back to News -->
-    <section class="back-to-news">
-        <div class="container">
-            <a href="/pages/facility/indblik/nyheder.html" class="back-btn">
-                <iconify-icon icon="fluent:arrow-left-20-filled" inline></iconify-icon>
-                Tilbage til indblik
-            </a>
-        </div>
-    </section>
+    {% include "article-footer.html" %}

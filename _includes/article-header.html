@@ -1,0 +1,31 @@
+<!-- Article Header -->
+<section class="article-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="breadcrumb">
+                <a href="/">Forside</a>
+                <span>›</span>
+                <a href="/pages/facility/indblik/nyheder.html">Indblik</a>
+                <span>›</span>
+                <span>Artikel</span>
+            </div>
+            <div class="article-category">{{ category }}</div>
+            <h1 class="article-title">{{ articleTitle }}</h1>
+
+            <div class="article-meta">
+                <div class="meta-item">
+                    <iconify-icon icon="fluent:calendar-20-filled" inline></iconify-icon>
+                    {{ publishDate }}
+                </div>
+                <div class="meta-item">
+                    <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
+                    {{ readTime }} min læsning
+                </div>
+                <div class="meta-item">
+                    <iconify-icon icon="fluent:eye-20-filled" inline></iconify-icon>
+                    {{ views }} visninger
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

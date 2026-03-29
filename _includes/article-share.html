@@ -1,0 +1,21 @@
+<!-- Share Buttons -->
+<div class="share-buttons">
+    <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
+        <iconify-icon icon="fa6-brands:linkedin-in" inline></iconify-icon>
+    </a>
+    <a class="share-btn share-facebook" target="_blank" id="share-facebook">
+        <iconify-icon icon="fa6-brands:facebook-f" inline></iconify-icon>
+    </a>
+    <a class="share-btn share-email" id="share-email">
+        <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>
+    </a>
+</div>
+<script>
+    (function() {
+        var url = encodeURIComponent(window.location.href);
+        var fb = document.getElementById('share-facebook');
+        if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+        var em = document.getElementById('share-email');
+        if (em) em.href = 'mailto:{{ site.email }}?subject=Interessant artikel om facility management&body=Hej, jeg vil gerne dele denne artikel med dig: ' + window.location.href;
+    })();
+</script>

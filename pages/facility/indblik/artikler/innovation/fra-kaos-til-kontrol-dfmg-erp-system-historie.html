@@ -2,39 +2,14 @@
 layout: base.html
 title: "Fra Kaos til Kontrol: DFMGs ERP-System Historie | DFMG"
 description: "Læs om DFMGs rejse fra kaotiske processer til et strømlinet ERP-system, der skaber kontrol og effektivitet."
+category: "INNOVATION"
+articleTitle: "Fra Kaos til Kontrol: DFMG's ERP-System Historie"
+publishDate: "3. december 2024"
+readTime: 6
+views: "2,734"
 ---
 
-    <!-- Article Header -->
-    <section class="article-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="breadcrumb">
-                    <a href="/">Forside</a>
-                    <span>›</span>
-                    <a href="/pages/facility/indblik/nyheder.html">Indblik</a>
-                    <span>›</span>
-                    <span>Artikel</span>
-                </div>
-                <div class="article-category">INNOVATION</div>
-                <h1 class="article-title">Fra Kaos til Kontrol: DFMG's ERP-System Historie</h1>
-
-                <div class="article-meta">
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:calendar-20-filled" inline></iconify-icon>
-                        3. december 2024
-                    </div>
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
-                        6 min læsning
-                    </div>
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:eye-20-filled" inline></iconify-icon>
-                        2,734 visninger
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "article-header.html" %}
 
     <!-- Article Content -->
     <section class="article-content">
@@ -378,18 +353,7 @@ description: "Læs om DFMGs rejse fra kaotiske processer til et strømlinet ERP-
 
                         <p><strong>Vil I være med på rejsen?</strong> Kontakt os og oplev hvordan systematisk, teknologi-drevet facility management kan transformere jeres virksomhed.</p>
                     </div>
-                    <!-- Share Buttons -->
-                    <div class="share-buttons">
-                        <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
-                            <iconify-icon icon="fa6-brands:linkedin-in" inline></iconify-icon>
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn share-facebook" target="_blank">
-                            <iconify-icon icon="fa6-brands:facebook-f" inline></iconify-icon>
-                        </a>
-                        <a href="mailto:{{ site.email }}?subject=Interessant artikel om systematik i facility management&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
-                            <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>
-                        </a>
-                    </div>
+                    {% include "article-share.html" %}
                 </div>
 
                 <div id="article-sidebar"></div>
@@ -397,12 +361,4 @@ description: "Læs om DFMGs rejse fra kaotiske processer til et strømlinet ERP-
         </div>
     </section>
 
-    <!-- Back to News -->
-    <section class="back-to-news">
-        <div class="container">
-            <a href="/pages/facility/indblik/nyheder.html" class="back-btn">
-                <iconify-icon icon="fluent:arrow-left-20-filled" inline></iconify-icon>
-                Tilbage til indblik
-            </a>
-        </div>
-    </section>
+    {% include "article-footer.html" %}

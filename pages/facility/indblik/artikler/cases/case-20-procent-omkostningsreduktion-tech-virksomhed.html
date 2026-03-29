@@ -2,37 +2,14 @@
 layout: base.html
 title: "Case: 20% Omkostningsreduktion for Tech-Virksomhed | DFMG"
 description: "Se hvordan en tech-virksomhed opnåede 20% omkostningsreduktion på facility management med DFMG som partner."
+category: "CASES"
+articleTitle: "Case: 20% Omkostningsreduktion for Tech-Virksomhed"
+publishDate: "22. november 2024"
+readTime: 4
+views: "3,245"
 ---
 
-    <!-- Article Header -->
-    <section class="article-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="breadcrumb">
-                    <a href="/">Forside</a>
-                    <span>›</span>
-                    <span>Artikel</span>
-                </div>
-                <div class="article-category">CASE STUDY</div>
-                <h1 class="article-title">Case: 20% Omkostningsreduktion for Tech-Virksomhed</h1>
-
-                <div class="article-meta">
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:calendar-20-filled" inline></iconify-icon>
-                        22. november 2024
-                    </div>
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
-                        4 min læsning
-                    </div>
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:eye-20-filled" inline></iconify-icon>
-                        3,245 visninger
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "article-header.html" %}
 
     <!-- Article Content -->
     <section class="article-content">
@@ -267,18 +244,7 @@ description: "Se hvordan en tech-virksomhed opnåede 20% omkostningsreduktion p�
                         <p><strong>Står I med lignende udfordringer?</strong> Kontakt DFMG for en gratis analyse af jeres facility-omkostninger og optimeringspotentiale.</p>
                     </div>
 
-                    <!-- Share Buttons -->
-                    <div class="share-buttons">
-                        <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
-                            <iconify-icon icon="fa6-brands:linkedin-in" inline></iconify-icon>
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn share-facebook" target="_blank">
-                            <iconify-icon icon="fa6-brands:facebook-f" inline></iconify-icon>
-                        </a>
-                        <a href="mailto:{{ site.email }}?subject=Interessant artikel om systematik i facility management&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
-                            <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>
-                        </a>
-                    </div>
+                    {% include "article-share.html" %}
                 </div>
 
                 <div id="article-sidebar"></div>
@@ -286,12 +252,4 @@ description: "Se hvordan en tech-virksomhed opnåede 20% omkostningsreduktion p�
         </div>
     </section>
 
-    <!-- Back to News -->
-    <section class="back-to-news">
-        <div class="container">
-            <a href="/pages/facility/indblik/nyheder.html" class="back-btn">
-                <iconify-icon icon="fluent:arrow-left-20-filled" inline></iconify-icon>
-                Tilbage til indblik
-            </a>
-        </div>
-    </section>
+    {% include "article-footer.html" %}

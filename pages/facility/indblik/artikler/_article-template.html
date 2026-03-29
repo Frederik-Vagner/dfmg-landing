@@ -1,45 +1,15 @@
 ---
 layout: base.html
-title: "Loading..."
-description: ""
+title: "Your Article Title | DFMG"
+description: "A brief description of your article for SEO."
+category: "CATEGORY"
+articleTitle: "Your Article Title Here"
+publishDate: "1. januar 2025"
+readTime: 5
+views: "0"
 ---
 
-    <!-- Article Header -->
-    <section class="article-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="breadcrumb">
-                    <a href="/">Forside</a>
-                    <span>›</span>
-                    <a href="/pages/facility/indblik/nyheder.html">Indblik</a>
-                    <!-- TODO: Update category name if needed -->
-                    <span>›</span>
-                    <span>[Category Name]</span>
-                </div>
-
-                <!-- TODO: Update category badge
-                     Options: BÆREDYGTIGHED, CASES, INDSIGT, INNOVATION, TIPS
-                -->
-                <div class="article-category">CATEGORY</div>
-
-                <!-- TODO: Update article title -->
-                <h1 class="article-title">Your Article Title Here</h1>
-
-                <div class="article-meta">
-                    <!-- TODO: Update publish date -->
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:calendar-20-filled" inline></iconify-icon>
-                        3. marts 2026
-                    </div>
-                    <!-- TODO: Update reading time estimate -->
-                    <div class="meta-item">
-                        <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
-                        5 min læsning
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "article-header.html" %}
 
     <!-- Article Content -->
     <section class="article-content">
@@ -47,14 +17,14 @@ description: ""
             <div class="content-layout">
                 <!-- Main Content -->
                 <div class="main-content">
+                    <img src="/images/article/ipad.jpg" alt="Systematisk facility management" class="article-image">
+
+                    <div class="article-excerpt">
+                        Write a compelling 1-2 sentence summary of your article here. This appears at the top in a highlighted box.
+                    </div>
+
                     <div class="article-body">
 
-                        <!-- TODO: Add article excerpt (optional but recommended) -->
-                        <div class="article-excerpt">
-                            Write a compelling 1-2 sentence summary of your article here. This appears at the top in a highlighted box.
-                        </div>
-
-                        <!-- TODO: Replace with your article content -->
                         <!-- Use h2 for main sections, h3 for subsections -->
                         <!-- The table of contents will be auto-generated from h2 and h3 tags -->
 
@@ -93,19 +63,7 @@ description: ""
 
                     </div>
 
-                    <!-- TODO: Update share button URLs with your article URL -->
-                    <!-- Share Buttons -->
-                    <div class="share-buttons">
-                        <a href="https://www.linkedin.com/company/dfmg-aps/" class="share-btn share-linkedin" target="_blank">
-                            <iconify-icon icon="fa6-brands:linkedin-in" inline></iconify-icon>
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn share-facebook" target="_blank">
-                            <iconify-icon icon="fa6-brands:facebook-f" inline></iconify-icon>
-                        </a>
-                        <a href="mailto:{{ site.email }}?subject=Interessant artikel&body=Hej, jeg vil gerne dele denne artikel med dig: " class="share-btn share-email">
-                            <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>
-                        </a>
-                    </div>
+                    {% include "article-share.html" %}
                 </div>
 
                 <!-- Sidebar Component -->
@@ -114,12 +72,4 @@ description: ""
         </div>
     </section>
 
-    <!-- Back to News -->
-    <section class="back-to-news">
-        <div class="container">
-            <a href="/pages/facility/indblik/nyheder.html" class="back-btn">
-                <iconify-icon icon="fluent:arrow-left-20-filled" inline></iconify-icon>
-                Tilbage til indblik
-            </a>
-        </div>
-    </section>
+    {% include "article-footer.html" %}
