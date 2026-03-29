@@ -73,11 +73,29 @@ h4 {
 /* Text Style */
 .italic { font-style: italic; }
 
+/* Text Transform */
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Label pattern — uppercase small text (used by subtitles, badges, categories, stat labels) */
+.label {
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* Line Height */
 .leading-none { line-height: 1; }
 .leading-tight { line-height: 1.1; }
+.leading-snug { line-height: 1.2; }
+.leading-relaxed { line-height: 1.4; }
 .leading-normal { line-height: 1.6; }
 
 /* Letter Spacing */
 .tracking-tight { letter-spacing: -1px; }
 .tracking-tighter { letter-spacing: -2px; }
+.tracking-wide { letter-spacing: 0.5px; }
+.tracking-wider { letter-spacing: 1px; }
