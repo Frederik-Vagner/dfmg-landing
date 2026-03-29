@@ -142,3 +142,146 @@
     grid-template-columns: 1fr 1fr;
     min-height: 200px;
 }
+
+/* ── Module Card ── */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding-md);
+}
+
+.module-card {
+    background: var(--bg-gradient-white);
+    border-radius: var(--radius-md);
+    padding: var(--padding-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.module-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.module-card__title {
+    font-size: 1.15rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.module-card__desc {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* ── Value Card ── */
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    text-align: center;
+    padding: var(--padding-lg) var(--padding-md);
+}
+
+.value-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 0 auto 1.25rem;
+}
+
+.value-card__title {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.value-card__desc {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* ── Step Card ── */
+.steps-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step-card {
+    flex: 1;
+    text-align: center;
+    padding: var(--padding-lg) var(--padding-md);
+    background: var(--bg-gradient-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.step-card__number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-bold);
+    margin: 0 auto 1rem;
+}
+
+.step-card__title {
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.step-card__desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* ── Responsive Cards ── */
+@media (max-width: 768px) {
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-row {
+        flex-direction: column;
+    }
+}
