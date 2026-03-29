@@ -140,7 +140,7 @@
 
 .expanded-stat-label {
     font-size: 0.8rem;
-    color: #666;
+    color: var(--gray-light);
     text-transform: uppercase;
 }
 

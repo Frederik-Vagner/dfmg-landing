@@ -3,7 +3,7 @@
     border-radius: 12px;
     position: relative;
     overflow: hidden;
-    border: 3px solid #e2e8f0;
+    border: 3px solid var(--color-border);
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -160,7 +160,7 @@
 
 .comparison-btn {
     padding: 0.75rem 2rem;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--color-border);
     background: white;
     color: var(--gray);
     border-radius: 50px;

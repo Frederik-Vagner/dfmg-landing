@@ -27,7 +27,7 @@ body {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-    border: 1px solid #f1f5f9;
+    border: 1px solid var(--bg-light);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -44,11 +44,11 @@ body {
     height: 280px;
     overflow: hidden;
     border-radius: 16px 16px 0 0;
-    background: #f1f5f9;
+    background: var(--bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
+    color: var(--gray-light);
 }
 
 .photo-dots {
@@ -90,7 +90,7 @@ body {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.5rem;
-    color: #2d3748;
+    color: var(--charcoal);
     font-weight: 500;
     font-size: 0.9rem;
 }
@@ -106,7 +106,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-top: auto;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--color-border);
     padding-top: 2rem;
 }
 
@@ -114,8 +114,8 @@ body {
     text-align: center;
     padding: 1.5rem 1rem;
     border-radius: 16px;
-    border: 1px solid #e2e8f0;
-    background: #f8fafc;
+    border: 1px solid var(--color-border);
+    background: var(--bg-muted);
 }
 
 .stat-number {
@@ -128,7 +128,7 @@ body {
 
 .stat-label {
     font-size: 0.75rem;
-    color: #718096;
+    color: var(--gray-light);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-top: 0.25rem;
@@ -228,7 +228,7 @@ body {
 }
 
 .schedule-table {
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -237,13 +237,13 @@ body {
 .schedule-row {
     display: grid;
     grid-template-columns: 55% 10% 5% 5% 5% 5% 5% 5% 5%;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .schedule-row:first-child {
-    background: #f8fafc;
+    background: var(--bg-muted);
     font-weight: 600;
-    color: #344767;
+    color: var(--charcoal);
 }
 
 .schedule-row:last-child {
@@ -252,7 +252,7 @@ body {
 
 .schedule-row > div {
     padding: 0.75rem 0.25rem;
-    border-right: 1px solid #e2e8f0;
+    border-right: 1px solid var(--color-border);
 }
 
 .schedule-row > div:last-child {
@@ -260,7 +260,7 @@ body {
 }
 
 .task-col {
-    color: #2d3748;
+    color: var(--charcoal);
     font-size: 0.75rem;
     padding-left: 1rem !important;
 }
@@ -280,14 +280,14 @@ body {
 }
 
 .schedule-note p {
-    color: #059669;
+    color: var(--success);
     font-size: 0.95rem;
     margin: 0;
     font-weight: 500;
 }
 
 .schedule-note i {
-    color: #22c55e;
+    color: var(--success);
     margin-right: 0.5rem;
 }
 
@@ -305,7 +305,7 @@ body {
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border);
 }
 
 .transparency-card.double-height {
@@ -313,7 +313,7 @@ body {
 }
 
 .transparency-card h3 {
-    color: #344767;
+    color: var(--charcoal);
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0 0 1rem 0;
@@ -329,14 +329,14 @@ body {
 }
 
 .transparency-note p {
-    color: #3b82f6;
+    color: var(--primary);
     font-size: 1rem;
     margin: 0;
     font-weight: 500;
 }
 
 .transparency-note i {
-    color: #3b82f6;
+    color: var(--primary);
     margin-right: 0.5rem;
 }
 
@@ -358,7 +358,7 @@ body {
 }
 
 .chat-header {
-    background: #344767;
+    background: var(--charcoal);
     color: white;
     padding: 0.75rem;
     font-weight: 600;
@@ -387,8 +387,8 @@ body {
 }
 
 .message.customer span {
-    background: #e5e7eb;
-    color: #1f2937;
+    background: var(--color-border);
+    color: var(--charcoal);
 }
 
 .message.dfmg {
@@ -403,7 +403,7 @@ body {
 
 .time {
     font-size: 0.7rem;
-    color: #6b7280;
+    color: var(--gray-light);
     margin-top: 0.25rem;
 }
 
@@ -433,11 +433,11 @@ body {
 .image-container {
     position: relative;
     height: 200px;
-    background: #f1f5f9;
+    background: var(--bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
+    color: var(--gray-light);
     font-size: 0.9rem;
 }
 
@@ -464,7 +464,7 @@ body {
 }
 
 .card-content p {
-    color: #64748b;
+    color: var(--gray-light);
     font-size: 0.9rem;
 }
 

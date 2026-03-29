@@ -51,12 +51,12 @@
 }
 
 .hero-feature {
-    background: var(--color--gray);
+    background: var(--bg-light);
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
     border: 2px solid var(--color-border);
     font-weight: 600;
-    color: var(--color-charcoal);
+    color: var(--charcoal);
     font-size: 0.9rem;
     transition: all 0.3s;
 }
@@ -82,7 +82,7 @@
     left: -100%;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+    background: linear-gradient(90deg, var(--primary), var(--charcoal));
     transition: left 0.3s;
 }
 
@@ -96,11 +96,11 @@
     border-radius: 20px;
     overflow: hidden;
     height: 300px;
-    background: #f1f5f9;
+    background: var(--bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-dark-gray);
+    color: var(--gray-light);
     font-size: 1rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
@@ -121,7 +121,7 @@
 /* Testimonial Text */
 .testimonial-text {
     font-size: 1.3rem;
-    color: var(--color-charcoal);
+    color: var(--charcoal);
     line-height: 1.6;
     margin-bottom: 3rem;
     font-style: italic;
@@ -141,7 +141,7 @@
 }
 
 .category-features i {
-    color: var(--color-primary);
+    color: var(--primary);
     font-size: 0.8rem;
     width: 12px;
 }

@@ -67,8 +67,8 @@
 }
 
 .screenshot-placeholder--light {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border-color: #e2e8f0;
+    background: linear-gradient(135deg, var(--bg-muted) 0%, var(--bg-light) 100%);
+    border-color: var(--color-border);
     color: #94a3b8;
 }
 
@@ -171,7 +171,7 @@
 }
 
 .module-tag {
-    background: #f1f5f9;
+    background: var(--bg-light);
     color: var(--charcoal);
     padding: 0.35rem 0.75rem;
     border-radius: var(--radius-circle);

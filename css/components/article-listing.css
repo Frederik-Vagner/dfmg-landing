@@ -21,7 +21,7 @@
     top: 1rem;
     left: 1rem;
     background: rgba(255, 255, 255, 0.95);
-    color: #344767;
+    color: var(--charcoal);
     padding: 6px 12px;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -35,7 +35,7 @@
 }
 
 .article-title {
-    color: #344767;
+    color: var(--charcoal);
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.4;
@@ -43,7 +43,7 @@
 }
 
 .card--media .article-excerpt {
-    color: #64748b;
+    color: var(--gray-light);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -64,20 +64,20 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid var(--bg-light);
 }
 
 .read-time {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #64748b;
+    color: var(--gray-light);
     font-size: 0.9rem;
 }
 
 /* Article Category Styles */
 .article-category {
-    color: #4285f4;
+    color: var(--primary);
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -85,11 +85,11 @@
     margin-bottom: 0.75rem;
 }
 
-.article-category--sustainability { color: #22c55e; }
-.article-category--innovation { color: #4285f4; }
-.article-category--insights { color: #8b5cf6; }
+.article-category--sustainability { color: var(--success); }
+.article-category--innovation { color: var(--primary); }
+.article-category--insights { color: var(--governance); }
 .article-category--tips { color: #f59e0b; }
-.article-category--cases { color: #ef4444; }
+.article-category--cases { color: var(--red); }
 
 /* Category-Specific Image Gradients */
 .article-image--sustainability {
@@ -138,7 +138,7 @@
     top: 2rem;
     left: 2rem;
     background: rgba(255, 255, 255, 0.9);
-    color: #344767;
+    color: var(--charcoal);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -158,10 +158,10 @@
     display: flex;
     align-items: center;
     gap: 3rem;
-    color: #64748b;
+    color: var(--gray-light);
     font-size: 0.9rem;
     justify-content: center;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid var(--bg-light);
     padding-top: 1rem;
 }
 
@@ -169,12 +169,12 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #64748b;
+    color: var(--gray-light);
     font-size: 1.1rem;
 }
 
 .featured-category {
-    color: #4285f4;
+    color: var(--primary);
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -183,14 +183,14 @@
 
 .featured-title {
     font-size: 1.5rem;
-    color: #344767;
+    color: var(--charcoal);
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 0.75rem;
 }
 
 .featured-excerpt {
-    color: #64748b;
+    color: var(--gray-light);
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
@@ -205,7 +205,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--color-border);
 }
 
 .filter-container {
@@ -243,7 +243,7 @@
     display: flex;
     align-items: center;
     background: #f8fafc;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--color-border);
     border-radius: 50px;
     padding: 0 10px;
     min-width: 300px;
@@ -251,7 +251,7 @@
 }
 
 .search-bar:focus-within {
-    border-color: #4285f4;
+    border-color: var(--primary);
 }
 
 .search-bar input {
@@ -264,7 +264,7 @@
 }
 
 .search-bar i {
-    color: #64748b;
+    color: var(--gray-light);
     margin-right: 10px;
 }
 

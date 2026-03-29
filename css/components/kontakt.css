@@ -64,7 +64,7 @@
 }
 
 .dropdown-selected {
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border);
     border-radius: 20px;
     padding: 15px;
     cursor: pointer;
@@ -90,7 +90,7 @@
     left: 0;
     right: 0;
     background: white;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border);
     border-radius: 20px;
     display: none;
     z-index: 100;
@@ -117,7 +117,7 @@
 }
 
 .dropdown-options label:hover {
-    background: #f8fafc;
+    background: var(--bg-muted);
 }
 
 .dropdown-options label.selected {
@@ -181,7 +181,7 @@
 }
 
 .faq-item {
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border);
     border-radius: 20px;
     margin-bottom: 1rem;
     overflow: hidden;
