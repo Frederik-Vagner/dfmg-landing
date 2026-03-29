@@ -14,12 +14,11 @@ async function loadComponents() {
             fetch(footerPath)
         ];
 
-        // Load chatbot on service pages, contact widget on platform pages
+        // Load chatbot on service pages, contact widget on all pages
         if (!platform) {
             fetchPromises.push(fetch('/pages/components/chatbot.html'));
-        } else {
-            fetchPromises.push(fetch('/pages/components/contact-widget.html'));
         }
+        fetchPromises.push(fetch('/pages/components/contact-widget.html'));
 
         // Check if article sidebar exists on page
         const articleSidebarElement = document.getElementById('article-sidebar');
@@ -37,15 +36,18 @@ async function loadComponents() {
 
         let nextIdx = 2;
 
-        // Inject chatbot or contact widget
-        const widgetHtml = await responses[nextIdx].text();
+        // Inject chatbot on non-platform pages
         if (!platform) {
+            const chatbotHtml = await responses[nextIdx].text();
             const chatbotEl = document.getElementById('chatbot');
-            if (chatbotEl) chatbotEl.innerHTML = widgetHtml;
-        } else {
-            const contactEl = document.getElementById('contact-widget');
-            if (contactEl) contactEl.innerHTML = widgetHtml;
+            if (chatbotEl) chatbotEl.innerHTML = chatbotHtml;
+            nextIdx++;
         }
+
+        // Inject contact widget on all pages
+        const contactHtml = await responses[nextIdx].text();
+        const contactEl = document.getElementById('contact-widget');
+        if (contactEl) contactEl.innerHTML = contactHtml;
         nextIdx++;
 
         // Load article sidebar if it exists
@@ -60,9 +62,8 @@ async function loadComponents() {
         // Initialize widget JS after DOM injection
         if (!platform) {
             initializeChatbotFunctions();
-        } else {
-            initializeContactWidget();
         }
+        initializeContactWidget();
     } catch (error) {
         console.error('Failed to load components:', error);
     }
