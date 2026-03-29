@@ -397,6 +397,77 @@
     }
 }
 
+/* ── Bank Connect function table ── */
+.bc-table-wrapper {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.bc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #fff;
+}
+
+.bc-table thead th {
+    background: var(--bg-gradient-primary);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.bc-table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.bc-table tbody td {
+    padding: 0.6rem 1.25rem;
+    color: var(--gray);
+}
+
+.bc-table tbody td:first-child {
+    width: 1.5rem;
+}
+
+.bc-table__category td {
+    background: #f8fafc;
+    color: var(--charcoal) !important;
+    font-weight: 600;
+    padding-top: 1rem !important;
+    padding-bottom: 0.75rem !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.bc-table__category i {
+    margin-right: 0.5rem;
+    color: var(--primary);
+}
+
+.bc-table__check {
+    color: var(--success);
+    font-size: 0.8rem;
+}
+
+/* ── Shared placeholder icons ── */
+.placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: var(--primary);
+}
+
+.placeholder-list-icon {
+    color: var(--primary);
+    margin-right: 0.5rem;
+    width: 16px;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
     .platform-hero .title {
