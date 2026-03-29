@@ -150,6 +150,102 @@
     transition: all var(--transition-normal);
 }
 
+/* ── Hero (image background) ── */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: 0% center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-dark);
+    z-index: 2;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+    top: -2.5rem;
+}
+
+.hero .text-charcoal {
+    color: var(--white);
+}
+
+.hero .text-gray {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── CTA Sections ── */
+.cta-box {
+    background: var(--bg-gradient-charcoal);
+    border-radius: var(--radius-normal);
+    padding: 3rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.cta-center {
+    background: var(--bg-gradient-success);
+    padding: 4rem 3rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cta-center h2 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 1rem;
+}
+
+.cta-center p {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-light);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-center .flex {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-center .flex iconify-icon {
+    padding-right: 0.5rem;
+}
+
 /* ── Responsive Sections ── */
 @media (max-width: 768px) {
     .platform-hero .title {

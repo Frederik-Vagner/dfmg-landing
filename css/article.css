@@ -1,0 +1,486 @@
+/* ====================================
+   ARTICLE TEMPLATE
+   Used by: article pages, indblik
+   ==================================== */
+
+/* Article Header */
+.article-header {
+    color: var(--charcoal);
+    padding: 4rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="headerpattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="20" fill="url(%23headerpattern)"/></svg>') repeat;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--charcoal);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+/* Article Category — template variant (dark badge). See also article-listing.css for listing variant (text label) */
+.article-category {
+    display: inline-block;
+    background: var(--bg-gradient-charcoal);
+    color: var(--white);
+    padding: var(--gap-xs) var(--gap-lg);
+    border-radius: var(--radius-circle);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 1rem;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+    margin-top: unset;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.meta-item:last-child {
+    display: none;
+}
+
+/* Main Content Layout */
+.article-content {
+    padding: 1rem 0 0rem;
+    background: var(--bg-muted);
+    min-height: 80vh;
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Main Article Content (individual article pages only) */
+.main-content {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--padding-md);
+    box-shadow: var(--shadow-sm);
+    border: var(--border-light);
+}
+
+.article-excerpt {
+    font-size: 1.25rem;
+    color: var(--gray-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    padding: var(--padding-md);
+    background: var(--bg-callout-sky);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--charcoal);
+    position: relative;
+}
+
+.article-body {
+    line-height: 1.6;
+    color: var(--charcoal-light);
+}
+
+.article-body p {
+    margin-bottom: 1.5rem;
+}
+
+.article-body h1, .article-body h2 {
+    font-size: 1.5rem;
+    color: var(--charcoal);
+    margin: 2rem 0 1rem;
+    font-weight: var(--font-weight-bold);
+    position: relative;
+}
+
+.article-body h3 {
+    font-size: 1.4rem;
+    color: var(--charcoal);
+    margin: 2rem 0 1rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.article-body strong {
+    font-weight: var(--font-weight-bold);
+    color: var(--charcoal);
+}
+
+.article-body ul, .article-body ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.article-body li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+::marker{
+    padding-left: 1rem;
+}
+
+/* Article Images (article pages, not card listings) */
+.main-content > .article-image,
+.article-body .article-image {
+    max-width: 50%;
+    max-height: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin: 1rem auto;
+    display: block;
+}
+
+.article-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    margin: 1rem 0;
+}
+
+/* Metric Display */
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--success);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--gray-light);
+    text-align: center;
+}
+
+/* Step Number (numbered process cards) */
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--charcoal);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    margin: 0 auto 1rem;
+}
+
+/* Showcase Section */
+.showcase-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 500px;
+}
+
+.showcase-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    position: relative;
+}
+
+.showcase-img {
+    width: 100%;
+    height: 200px;
+    background: var(--overlay-light);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.showcase-img:nth-child(1) { transform: translateY(-5px); }
+.showcase-img:nth-child(2) { transform: translateY(-25px); }
+.showcase-img:nth-child(3) { transform: translateY(5px); }
+.showcase-img:nth-child(4) { transform: translateY(25px); }
+
+/* Callout boxes */
+.article-body .callout {
+    background-color: var(--bg-callout-blue);
+    border: 1px solid var(--charcoal);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.article-body .callout p {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.article-body .success {
+    background-color: var(--bg-callout-green);
+    border: 1px solid var(--success);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.article-body .success::before {
+    content: "✓";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--success);
+    font-size: 1.2em;
+    font-weight: var(--font-weight-bold);
+}
+
+.article-body .success p {
+    margin-left: 2rem;
+}
+
+.article-body blockquote {
+    border-left: 4px solid var(--charcoal);
+    padding-left: 1.5rem;
+    font-style: italic;
+    background-color: var(--bg-surface);
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: var(--radius-sm);
+    position: relative;
+}
+
+.article-body blockquote::before {
+    content: "\201C";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 2rem;
+    color: var(--charcoal);
+    opacity: 0.3;
+    font-family: serif;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-section { margin-bottom: 1.5rem; }
+
+/* .sidebar-card — defined in cards.css */
+
+/* Table of Contents */
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toc-list a {
+    color: var(--gray-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.toc-list a:hover {
+    color: var(--charcoal);
+}
+
+/* Related Articles */
+.related-article {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.related-article:last-child {
+    border-bottom: none;
+}
+
+.related-article:hover {
+    background: var(--bg-muted);
+    margin: 0 -1rem;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.related-image {
+    width: 80px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    background: var(--gradient-innovation);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.related-image.sustainability { background: var(--gradient-sustainability); }
+.related-image.innovation { background: var(--gradient-innovation); }
+.related-image.insights { background: var(--gradient-insights); }
+.related-image.cases { background: var(--gradient-tips); }
+.related-image.tips { background: var(--gradient-cyan); }
+
+.related-content h4 {
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+    margin-top: unset;
+}
+
+.related-content a {
+    color: var(--charcoal);
+    text-decoration: none;
+}
+
+.related-content a:hover {
+    color: var(--charcoal);
+}
+
+.related-meta {
+    font-size: 0.8rem;
+    color: var(--gray-light);
+}
+
+/* Share Buttons */
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.share-linkedin { background: var(--linkedin); }
+.share-facebook { background: var(--facebook); }
+.share-email { background: var(--gray-light); }
+
+/* Back to News */
+.back-to-news {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--bg-muted);
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+    border: 2px solid var(--charcoal);
+    color: var(--charcoal);
+    padding: 12px 24px;
+    border-radius: var(--radius-circle);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+}
+
+.back-btn:hover {
+    background: var(--charcoal);
+    color: var(--white);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+}
