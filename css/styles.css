@@ -1217,10 +1217,6 @@ body {
 
 
 
-.sidebar-card ul li {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
 
 .article-body li {
     margin-bottom: 0.75rem;
@@ -1386,28 +1382,7 @@ body {
 
 .sidebar-section { margin-bottom: 1.5rem; }
 
-.sidebar-card {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: var(--padding-md);
-    box-shadow: var(--shadow-sm);
-    border: var(--border-light);
-}
-
-.sidebar-card h3 {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--charcoal);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.sidebar-card h3 iconify-icon {
-    color: var(--charcoal);
-    font-size: 1.1rem;
-}
+/* .sidebar-card — defined in cards.css */
 
 /* Table of Contents */
 .toc-list {
@@ -1656,9 +1631,6 @@ body {
         margin: 0 10px;
     }
 
-    .sidebar-card {
-        margin: 0 10px;
-    }
 }
 
 .meta-item:last-child {

@@ -37,6 +37,212 @@
     color: var(--gray-muted);
 }
 
+/* .module-grid, .module-card — defined in cards.css */
+
+/* ── Feature section (alternating layout) ── */
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem 0;
+}
+
+.feature-row--reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-row__content {
+    flex: 1;
+}
+
+.feature-row__visual {
+    flex: 1;
+}
+
+.feature-row__subtitle {
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.feature-row__title {
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.feature-row__body {
+    font-size: 1.05rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: var(--padding-md);
+}
+
+.feature-row__modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+
+/* .value-grid, .value-card — defined in cards.css */
+
+/* ── Platform CTA banner ── */
+.platform-cta {
+    background: var(--bg-gradient-primary);
+    border-radius: var(--radius-md);
+    padding: 3rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.platform-cta .title {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.platform-cta .body {
+    color: var(--text-on-dark);
+    margin-bottom: var(--padding-md);
+}
+
+/* ── Callout box ── */
+.callout-box {
+    background: var(--bg-surface);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: var(--padding-md) var(--padding-lg);
+    margin-top: 2rem;
+}
+
+.callout-box__title {
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.callout-box__body {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ── Demo form ── */
+.demo-split {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.demo-split__form {
+    flex: 1;
+}
+
+.demo-split__visual {
+    flex: 1;
+}
+
+/* .steps-row, .step-card — defined in cards.css */
+
+/* ── Trust signals ── */
+.trust-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.trust-item iconify-icon {
+    color: var(--success);
+}
+
+/* ── Platform form ── */
+.platform-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.platform-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--charcoal);
+    margin-bottom: 0.35rem;
+}
+
+.platform-form input,
+.platform-form select,
+.platform-form textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: var(--border-light);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.platform-form input:focus,
+.platform-form select:focus,
+.platform-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.platform-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ── View Transitions (Chrome 111+) ── */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: vt-fade-out 0.15s ease-out;
+}
+
+::view-transition-new(root) {
+    animation: vt-fade-in 0.2s ease-in;
+}
+
+@keyframes vt-fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes vt-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+    }
+}
+
 /* ── Bank Connect function table ── */
 .bc-table-wrapper {
     border-radius: var(--radius-md);

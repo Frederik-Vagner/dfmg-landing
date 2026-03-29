@@ -107,15 +107,9 @@
     background: var(--gradient-cases);
 }
 
-/* Featured Article */
+/* Featured Article — base .card--split in cards.css, hidden by default */
 .card--split {
-    background: var(--white);
-    border-radius: var(--radius-normal);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
     display: none;
-    grid-template-columns: 1fr 1fr;
-    min-height: 200px;
 }
 
 .card--split[data-featured-category="all"] {

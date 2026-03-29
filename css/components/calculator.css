@@ -51,21 +51,7 @@
     padding-top: 0;
 }
 
-/* Info card styling */
-.info-card {
-    background: var(--white);
-    padding: 0.35rem 0.5rem;
-    border-radius: var(--radius-normal);
-    box-shadow: var(--shadow-sm);
-    border: var(--border-lighter);
-    display: flex;
-    flex-direction: column;
-}
-
-.info-card h4 {
-    font-size: 0.9rem;
-    margin: 0 0 0.15rem 0;
-}
+/* .info-card — defined in cards.css */
 
 /* Calculator-specific button override */
 #price .btn {

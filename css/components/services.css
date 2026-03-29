@@ -233,13 +233,7 @@
     margin-bottom: 2rem;
 }
 
-.fordele-card {
-    padding: 1rem;
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
+/* .fordele-card — defined in cards.css */
 
 .fordele-icon {
     color: var(--charcoal);
