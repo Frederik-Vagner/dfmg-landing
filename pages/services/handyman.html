@@ -105,8 +105,8 @@
             <p class="body text-gray">Fra småopgaver til større projekter - vores erfarne håndværkere står klar med det rette værktøj og knowhow</p>
         </div>
         
-        <div class="carousel">
-            <div class="carousel-track" id="servicesTrack">
+        <div class="carousel" data-carousel>
+            <div class="carousel-track">
                 <div class="card card--accent">
                     <i class="fas fa-tint text-success text-6xl mb-1"></i>
                     <h3 class="text-charcoal">VVS Småopgaver</h3>
@@ -187,10 +187,10 @@
             </div>
             
             <div class="carousel-controls">
-                <a class="carousel-btn" onclick="slideServices('prev')">
+                <a class="carousel-btn" data-carousel-prev>
                     <i class="fas fa-chevron-left"></i>
                 </a>
-                <a class="carousel-btn" onclick="slideServices('next')">
+                <a class="carousel-btn" data-carousel-next>
                     <i class="fas fa-chevron-right"></i>
                 </a>
             </div>
@@ -465,22 +465,9 @@
 
 <!-- Component Loader -->
 <script src="/js/components.js" defer></script>
+<script src="/js/carousel.js" defer></script>
 
 <script>
-let currentSlide = 0;
-const track = document.getElementById('servicesTrack');
-const cards = track.children;
-const cardWidth = 320 + 32; // card width + gap
-
-function slideServices(direction) {
-    if (direction === 'next') {
-        currentSlide = Math.min(currentSlide + 1, cards.length - 3);
-    } else {
-        currentSlide = Math.max(currentSlide - 1, 0);
-    }
-    track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-}
-
 function showGallery(galleryType) {
     // Hide all services contents
     document.querySelectorAll('.toggle-content').forEach(content => {

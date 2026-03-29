@@ -98,17 +98,17 @@
                 <div class="title text-charcoal">Facility service hele vejen rundt</div>
                 <div class="body text-gray">Transparent drift gennem en samlet leverandør - stabil service kvalitet og fleksible løsninger til alle facility behov.</div>
                 <div class="carousel-controls mb-4">
-                    <a class="carousel-btn" onclick="previousServices()">
+                    <a class="carousel-btn" data-carousel-prev>
                         <i class="fas fa-chevron-left"></i>
                     </a>
-                    <a class="carousel-btn" onclick="nextServices()">
+                    <a class="carousel-btn" data-carousel-next>
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="services-carousel">
-                <div class="services-track" id="servicesTrack">
+            <div class="carousel" data-carousel>
+                <div class="carousel-track">
                     <a href="/pages/services/rengøring.html" class="card card--overlay">
                         <img src="/images/service/cleaning.jpg" alt="Erhvervsrengøring" width="640" height="640" loading="lazy" decoding="async">
                         <h3>Erhvervsrengøring</h3>
@@ -176,5 +176,6 @@
 
     <!-- Component Loader -->
     <script src="/js/components.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
 </body>
 </html>

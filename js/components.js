@@ -267,43 +267,9 @@ function initializeContactWidget() {
 }
 
 
-// Carousel functions for services section
-function initializeServicesCarousel() {
-    let currentIndex = 0;
-    const totalCards = 6;
-    const cardsVisible = 3;
-    const maxIndex = totalCards - cardsVisible;
-
-    function updateCarousel() {
-        const track = document.getElementById('servicesTrack');
-        if (track) {
-            const moveDistance = currentIndex * 400; // 386px card + 14px margin = 400px exactly
-            track.style.transform = `translateX(-${moveDistance}px)`;
-        }
-    }
-
-    window.nextServices = function() {
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-            updateCarousel();
-        }
-    };
-
-    window.previousServices = function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    };
-}
-
 // Auto-load when DOM ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-        loadComponents();
-        initializeServicesCarousel();
-    });
+    document.addEventListener('DOMContentLoaded', loadComponents);
 } else {
     loadComponents();
-    initializeServicesCarousel();
 }

@@ -606,16 +606,16 @@
             </div>
 
             <div class="carousel-controls bot-space2">
-                <a class="carousel-btn" onclick="previousServices()">
+                <a class="carousel-btn" data-carousel-prev>
                     <i class="fas fa-chevron-left"></i>
                 </a>
-                <a class="carousel-btn" onclick="nextServices()">
+                <a class="carousel-btn" data-carousel-next>
                     <i class="fas fa-chevron-right"></i>
                 </a>
             </div>
-            
-            <div class="services-carousel">
-                <div class="services-track" id="servicesTrack">
+
+            <div class="carousel" data-carousel>
+                <div class="carousel-track">
                     <!-- Restauranter & Caféer Card -->
                     <div class="service-card">
                         <div class="service-image-container">
@@ -1276,32 +1276,6 @@
             updateTableContent();
         });
     </script>
-        <script>
-        let currentIndex = 0;
-        const totalCards = 5; // Plan for 6 total cards (add 4 more service cards)
-        const cardsVisible = 2; // Show 2 cards at a time
-        const maxIndex = totalCards - cardsVisible;
-
-        function updateCarousel() {
-            const track = document.getElementById('servicesTrack');
-            const cardWidth = 570; // Fixed card width to fit container
-            const gap = 20;
-            const moveDistance = currentIndex * (cardWidth + gap); // Move by 1 card at a time
-            track.style.transform = `translateX(-${moveDistance}px)`;
-        }
-        function nextServices() {
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateCarousel();
-            }
-        }
-
-        function previousServices() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        }
-    </script>
+    <script src="/js/carousel.js" defer></script>
 </body>
 </html>
