@@ -74,11 +74,11 @@ og:
                 <div class="demo-split__visual">
                     <div class="card p-2 bg-gradient-white mb-2">
                         <h4><i class="fas fa-envelope"></i> Email</h4>
-                        <p><a href="mailto:platform@dfmg.dk" style="color: var(--primary);">platform@dfmg.dk</a></p>
+                        <p><a href="mailto:{{ site.platformEmail }}" style="color: var(--primary);">{{ site.platformEmail }}</a></p>
                     </div>
                     <div class="card p-2 bg-gradient-white mb-2">
                         <h4><i class="fas fa-phone"></i> Phone</h4>
-                        <p><a href="tel:+4550480273" style="color: var(--primary);">+45 50 48 02 73</a></p>
+                        <p><a href="tel:{{ site.phone }}" style="color: var(--primary);">{{ site.phoneDisplay }}</a></p>
                     </div>
                     <div class="card p-2 bg-gradient-white mb-2">
                         <h4><i class="fas fa-clock"></i> Office hours</h4>
@@ -86,7 +86,7 @@ og:
                     </div>
                     <div class="card p-2 bg-gradient-white">
                         <h4><i class="fas fa-building"></i> Company</h4>
-                        <p>DFMG ApS<br>CVR: 44646102<br>Denmark</p>
+                        <p>{{ site.legalName }}<br>CVR: {{ site.cvr }}<br>Denmark</p>
                     </div>
                 </div>
             </div>

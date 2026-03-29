@@ -3,6 +3,21 @@ function isPlatformPage() {
     return window.location.pathname.startsWith('/pages/software/');
 }
 
+// Replace site-data tokens in runtime-loaded component HTML
+function replaceSiteTokens(html) {
+    var s = window.DFMG || {};
+    return html
+        .replace(/%SITE_EMAIL%/g, s.email || '')
+        .replace(/%SITE_PLATFORM_EMAIL%/g, s.platformEmail || '')
+        .replace(/%SITE_PHONE%/g, s.phone || '')
+        .replace(/%SITE_PHONE_DISPLAY%/g, s.phoneDisplay || '')
+        .replace(/%SITE_PHONE_SHORT%/g, s.phoneShort || '')
+        .replace(/%SITE_CVR%/g, s.cvr || '')
+        .replace(/%SITE_CVR_URL%/g, s.cvrUrl || '')
+        .replace(/%SITE_ADDRESS%/g, s.address || '')
+        .replace(/%SITE_LINKEDIN%/g, s.linkedin || '');
+}
+
 async function loadComponents() {
     try {
         const platform = isPlatformPage();
@@ -28,8 +43,8 @@ async function loadComponents() {
 
         const responses = await Promise.all(fetchPromises);
 
-        const header = await responses[0].text();
-        const footer = await responses[1].text();
+        const header = replaceSiteTokens(await responses[0].text());
+        const footer = replaceSiteTokens(await responses[1].text());
 
         document.getElementById('header').innerHTML = header;
         document.getElementById('footer').innerHTML = footer;
@@ -38,21 +53,21 @@ async function loadComponents() {
 
         // Inject chatbot on non-platform pages
         if (!platform) {
-            const chatbotHtml = await responses[nextIdx].text();
+            const chatbotHtml = replaceSiteTokens(await responses[nextIdx].text());
             const chatbotEl = document.getElementById('chatbot');
             if (chatbotEl) chatbotEl.innerHTML = chatbotHtml;
             nextIdx++;
         }
 
         // Inject contact widget on all pages
-        const contactHtml = await responses[nextIdx].text();
+        const contactHtml = replaceSiteTokens(await responses[nextIdx].text());
         const contactEl = document.getElementById('contact-widget');
         if (contactEl) contactEl.innerHTML = contactHtml;
         nextIdx++;
 
         // Load article sidebar if it exists
         if (articleSidebarElement && responses[nextIdx]) {
-            const articleSidebar = await responses[nextIdx].text();
+            const articleSidebar = replaceSiteTokens(await responses[nextIdx].text());
             articleSidebarElement.innerHTML = articleSidebar;
             initArticleSidebar();
         }
@@ -148,18 +163,18 @@ function initializeChatbotFunctions() {
         if (message) {
             window.showNotification('Tak for din besked! Vi svarer inden for 15 minutter.');
             setTimeout(() => {
-                window.open(`mailto:kontakt@dfmg.dk?subject=Spørgsmål fra chatbot&body=Hej DFMG,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AVenlig hilsen`, '_blank');
+                window.open(`mailto:${window.DFMG.email}?subject=Spørgsmål fra chatbot&body=Hej DFMG,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AVenlig hilsen`, '_blank');
             }, 1500);
             input.value = '';
         }
     };
 
     window.callDirect = function() {
-        window.open('tel:+4550480273', '_self');
+        window.open('tel:' + window.DFMG.phone, '_self');
     };
 
     window.sendEmail = function() {
-        window.open('mailto:kontakt@dfmg.dk?subject=Henvendelse fra website', '_blank');
+        window.open('mailto:' + window.DFMG.email + '?subject=Henvendelse fra website', '_blank');
     };
 
     window.submitCallbackRequest = function() {
@@ -383,7 +398,7 @@ function initNewsletterForm() {
         const email = document.getElementById('newsletter-email').value.trim();
         if (!email) return;
 
-        window.location.href = 'mailto:kontakt@dfmg.dk?subject=Nyhedsbrev tilmelding&body=Tilmeld venligst denne email til jeres nyhedsbrev: ' + encodeURIComponent(email);
+        window.location.href = 'mailto:' + window.DFMG.email + '?subject=Nyhedsbrev tilmelding&body=Tilmeld venligst denne email til jeres nyhedsbrev: ' + encodeURIComponent(email);
 
         form.style.display = 'none';
         document.getElementById('newsletter-success').style.display = 'block';
