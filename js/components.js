@@ -54,6 +54,7 @@ async function loadComponents() {
         if (articleSidebarElement && responses[nextIdx]) {
             const articleSidebar = await responses[nextIdx].text();
             articleSidebarElement.innerHTML = articleSidebar;
+            initArticleSidebar();
         }
 
         // Toggle header logo color on scroll
@@ -267,6 +268,127 @@ function initializeContactWidget() {
     setInterval(updateAvailability, 60000);
 }
 
+
+// Article data for related articles
+const sidebarArticles = [
+    { path: '/pages/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html', title: 'Mennesker vs. Robotter i Facility Management', time: '5 min læsning', category: 'innovation' },
+    { path: '/pages/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html', title: 'Fra Kaos til Kontrol: DFMG\'s ERP-System Historie', time: '6 min læsning', category: 'innovation' },
+    { path: '/pages/indblik/artikler/indsigt/fra-vip-til-glemt-kunde.html', title: 'Fra VIP til Glemt Kunde: En Alt-for-Almindelig Historie', time: '4 min læsning', category: 'insights' },
+    { path: '/pages/indblik/artikler/indsigt/systematik-vs-talent.html', title: 'Hvorfor Systematik Slår Talent i Facility Management', time: '6 min læsning', category: 'insights' },
+    { path: '/pages/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html', title: '\u00d8jeblikkelige Svar vs. \u201cJeg Vender Tilbage\u201d', time: '5 min læsning', category: 'insights' },
+    { path: '/pages/indblik/artikler/baeredygtighed/100-procent-bilfri-facility-service.html', title: '100% Bilfri Facility Service: S\u00e5dan G\u00f8r Vi Det', time: '3 min læsning', category: 'sustainability' },
+    { path: '/pages/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html', title: 'Fra 5 Leverand\u00f8rer til \u00c9n P\u00e5lidelig Partner', time: '5 min læsning', category: 'cases' },
+    { path: '/pages/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html', title: 'Case: 20% Omkostningsreduktion for Tech-Virksomhed', time: '4 min læsning', category: 'cases' },
+    { path: '/pages/indblik/artikler/tips/saadan-laeser-i-facility-tidsrapport.html', title: 'S\u00e5dan L\u00e6ser I En Facility Tidsrapport', time: '3 min læsning', category: 'tips' },
+    { path: '/pages/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html', title: '5 Tegn P\u00e5 at I Skal Skifte Facility Leverand\u00f8r', time: '4 min læsning', category: 'tips' },
+    { path: '/pages/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html', title: 'Location Guides: Et V\u00e6rkt\u00f8j til Konsistent Kvalitet', time: '4 min læsning', category: 'tips' }
+];
+
+// Initialize all sidebar features after injection
+function initArticleSidebar() {
+    initTableOfContents();
+    initRelatedArticles();
+    initNewsletterForm();
+}
+
+// Generate table of contents from article headings
+function initTableOfContents() {
+    const articleBody = document.querySelector('.article-body');
+    const tocList = document.getElementById('toc-list');
+    if (!articleBody || !tocList) return;
+
+    const headings = articleBody.querySelectorAll('h2, h3');
+    if (headings.length === 0) {
+        tocList.closest('.sidebar-card').style.display = 'none';
+        return;
+    }
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) heading.id = 'heading-' + index;
+
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent;
+        if (heading.tagName === 'H3') link.style.paddingLeft = '1rem';
+
+        li.appendChild(link);
+        tocList.appendChild(li);
+    });
+
+    tocList.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            e.preventDefault();
+            const target = document.querySelector(e.target.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+
+// Populate related articles, excluding the current page
+function initRelatedArticles() {
+    const container = document.getElementById('related-articles');
+    if (!container) return;
+
+    const currentPath = window.location.pathname;
+    const otherArticles = sidebarArticles.filter(a => a.path !== currentPath);
+
+    // Shuffle and pick 3
+    for (let i = otherArticles.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [otherArticles[i], otherArticles[j]] = [otherArticles[j], otherArticles[i]];
+    }
+
+    otherArticles.slice(0, 3).forEach(article => {
+        const div = document.createElement('div');
+        div.className = 'related-article';
+
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'related-image ' + article.category;
+        const img = document.createElement('img');
+        img.src = '/images/article/ipad.jpg';
+        img.alt = '';
+        img.className = 'w-full h-full object-cover rounded-lg';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        imageDiv.appendChild(img);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'related-content';
+        const h4 = document.createElement('h4');
+        const link = document.createElement('a');
+        link.href = article.path;
+        link.textContent = article.title;
+        link.setAttribute('aria-label', 'Læs artikel: ' + article.title);
+        h4.appendChild(link);
+        const meta = document.createElement('div');
+        meta.className = 'related-meta';
+        meta.textContent = article.time;
+        contentDiv.appendChild(h4);
+        contentDiv.appendChild(meta);
+
+        div.appendChild(imageDiv);
+        div.appendChild(contentDiv);
+        container.appendChild(div);
+    });
+}
+
+// Newsletter form handler
+function initNewsletterForm() {
+    const form = document.getElementById('newsletter-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('newsletter-email').value.trim();
+        if (!email) return;
+
+        window.location.href = 'mailto:kontakt@dfmg.dk?subject=Nyhedsbrev tilmelding&body=Tilmeld venligst denne email til jeres nyhedsbrev: ' + encodeURIComponent(email);
+
+        form.style.display = 'none';
+        document.getElementById('newsletter-success').style.display = 'block';
+    });
+}
 
 // Auto-load when DOM ready
 if (document.readyState === 'loading') {

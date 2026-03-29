@@ -358,6 +358,14 @@
     background: linear-gradient(135deg, #8b5cf6, #7c3aed);
 }
 
+.related-image.cases {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.related-image.tips {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
 .related-content h4 {
     font-size: 0.9rem;
     font-weight: 600;
@@ -412,6 +420,43 @@
     background: #f9fafb;
     color: #1f2937;
     font-size: 0.9rem;
+}
+
+.newsletter-input:focus {
+    border-color: #344767;
+    outline: none;
+}
+
+.newsletter-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #344767;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: #2a3a57;
+}
+
+.newsletter-btn:focus-visible {
+    outline: 2px solid #344767;
+    outline-offset: 2px;
+}
+
+.newsletter-success {
+    color: #16a34a;
+    font-weight: 600;
+    padding: 0.75rem 0;
+}
+
+.newsletter-success i {
+    margin-right: 0.25rem;
 }
 
 /* Share Buttons */
