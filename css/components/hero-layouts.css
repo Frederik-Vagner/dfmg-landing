@@ -7,7 +7,7 @@
 .hero-layout {
     position: relative;
     overflow: hidden;
-    background: white;
+    background: var(--white);
 }
 
 .hero-layout::before {
@@ -64,7 +64,7 @@
 /* Service Cards */
 .card--accent {
     min-width: 320px;
-    background: white;
+    background: var(--white);
     border-radius: var(--radius-normal);
     padding: 2.5rem 2rem;
     box-shadow: var(--shadow-sm);
@@ -105,6 +105,7 @@
     box-shadow: var(--shadow-md);
 }
 
+/* .image-label — base defined in styles.css */
 
 /* Testimonial Text */
 .testimonial-text {
@@ -120,7 +121,7 @@
 
 /* Category Content Card */
 .category-content {
-    background: white;
+    background: var(--white);
     border-radius: var(--radius-xl);
     padding: 3rem;
     box-shadow: var(--shadow-sm);

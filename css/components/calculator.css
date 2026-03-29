@@ -15,7 +15,7 @@
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--charcoal);
-    background: #fff;
+    background: var(--white);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -48,9 +48,9 @@
 
 /* Info card styling */
 .info-card {
-    background: white;
+    background: var(--white);
     padding: 0.35rem 0.5rem;
-    border-radius: 15px;
+    border-radius: var(--radius-normal);
     box-shadow: var(--shadow-sm);
     border: var(--border-lighter);
     display: flex;
@@ -68,7 +68,7 @@
     border: 2px solid var(--color-border);
     border-radius: var(--radius-sm);
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     text-align: center;
     cursor: pointer;
     display: block;
@@ -81,7 +81,7 @@
 
 #price .btn.active {
     background: var(--charcoal);
-    color: white;
+    color: var(--white);
 }
 
 /* Disclaimer text */
@@ -215,13 +215,13 @@
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 #monthly-price {
     color: var(--charcoal);
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 /* Typography overrides */

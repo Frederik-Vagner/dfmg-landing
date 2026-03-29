@@ -13,12 +13,12 @@
 .platform-hero {
     padding: 8rem 0 4rem;
     background: var(--bg-gradient-primary);
-    color: #fff;
+    color: var(--white);
     text-align: center;
 }
 
 .platform-hero .title {
-    color: #fff;
+    color: var(--white);
     font-size: 3rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
@@ -58,7 +58,7 @@
 .screenshot-placeholder--light {
     background: linear-gradient(135deg, var(--bg-muted) 0%, var(--bg-light) 100%);
     border-color: var(--color-border);
-    color: #94a3b8;
+    color: var(--gray-muted);
 }
 
 /* ── Module grid (homepage) ── */
@@ -89,7 +89,7 @@
     height: 48px;
     border-radius: var(--radius-sm);
     background: var(--bg-gradient-primary);
-    color: #fff;
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,7 +177,7 @@
     height: 56px;
     border-radius: 50%;
     background: var(--bg-gradient-primary);
-    color: #fff;
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,11 +204,11 @@
     border-radius: var(--radius-md);
     padding: 3rem;
     text-align: center;
-    color: #fff;
+    color: var(--white);
 }
 
 .platform-cta .title {
-    color: #fff;
+    color: var(--white);
     font-size: 2rem;
     margin-bottom: 0.75rem;
 }
@@ -275,7 +275,7 @@
     height: 40px;
     border-radius: 50%;
     background: var(--bg-gradient-primary);
-    color: #fff;
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -400,12 +400,12 @@
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9rem;
-    background: #fff;
+    background: var(--white);
 }
 
 .bc-table thead th {
     background: var(--bg-gradient-primary);
-    color: #fff;
+    color: var(--white);
     padding: 1rem 1.25rem;
     text-align: left;
     font-weight: var(--font-weight-medium);

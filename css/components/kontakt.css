@@ -36,14 +36,14 @@
 .job-benefits li::before {
     content: '✓';
     color: var(--success);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     margin-right: 1rem;
 }
 
 .partner-info .job-benefits li::before {
     content: '✓';
     color: var(--success);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     margin-left: 1rem;
     margin-right: 0;
     float: right;
@@ -52,7 +52,7 @@
 .partner-info .job-benefits li.unavailable::before {
     content: '✗';
     color: var(--red);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     margin-left: 1rem;
     margin-right: 0;
     float: right;
@@ -66,7 +66,7 @@
 .dropdown-selected {
     border: var(--border-light);
     border-radius: var(--radius-normal);
-    padding: 15px;
+    padding: var(--gap-md);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -88,7 +88,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--white);
     border: var(--border-light);
     border-radius: var(--radius-normal);
     display: none;
@@ -130,7 +130,7 @@
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 /* Form Row */
@@ -151,7 +151,7 @@
 
 .phone-code select {
     font-size: 1.1rem;
-    padding: 15px;
+    padding: var(--gap-md);
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -192,7 +192,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: var(--white);
     transition: background var(--transition-fast);
 }
 
@@ -207,7 +207,7 @@
 }
 
 .faq-question.active {
-    background: white;
+    background: var(--white);
 }
 
 .faq-question.active iconify-icon {

@@ -15,7 +15,7 @@
 }
 
 .window-panel.clean {
-    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    background: var(--bg-callout-sky);
     border-color: var(--primary);
     box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
 }
@@ -75,18 +75,15 @@
 }
 
 .after-image {
-    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    background: var(--bg-callout-sky);
     opacity: 0;
 }
 
 .before-image .badge-overlay {
-    top: 2rem;
     left: 2rem;
 }
 
 .after-image .badge-overlay {
-    top: 2rem;
-    left: auto;
     right: 2rem;
 }
 
@@ -121,8 +118,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
+    color: var(--white);
+    font-weight: var(--font-weight-bold);
     font-size: 1.2rem;
 }
 
@@ -135,7 +132,7 @@
 .comparison-btn {
     padding: var(--padding-sm) var(--padding-lg);
     border: 2px solid var(--color-border);
-    background: white;
+    background: var(--white);
     color: var(--gray);
     border-radius: var(--radius-circle);
     cursor: pointer;
@@ -146,13 +143,13 @@
 
 .comparison-btn.active {
     background: var(--primary);
-    color: white;
+    color: var(--white);
     border-color: var(--primary);
 }
 
 .comparison-btn:hover:not(.active) {
     border-color: var(--primary);
-    background: #f0fdf4;
+    background: var(--bg-muted);
 }
 
 @media (max-width: 768px) {

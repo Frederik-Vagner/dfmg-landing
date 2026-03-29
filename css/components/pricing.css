@@ -33,7 +33,7 @@
 
 .pricing-header {
     background: var(--bg-gradient-charcoal);
-    color: white;
+    color: var(--white);
     padding: var(--padding-md) var(--padding-lg);
     text-align: center;
 }
@@ -81,7 +81,7 @@
 }
 
 .shop-item {
-    background: white;
+    background: var(--white);
     border-radius: var(--radius-lg);
     padding: var(--padding-md);
     text-align: center;
@@ -115,7 +115,7 @@
     border-radius: var(--radius-normal);
     padding: var(--padding-lg);
     margin-top: 2rem;
-    border: 2px dashed #cbd5e1;
+    border: 2px dashed var(--color-border-muted);
     text-align: center;
     transition: all var(--transition-normal);
 }
@@ -133,7 +133,7 @@
 
 .custom-request-btn {
     background: var(--primary);
-    color: white;
+    color: var(--white);
     padding: var(--padding-sm) var(--padding-lg);
     border-radius: var(--radius-circle);
     text-decoration: none;
