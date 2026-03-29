@@ -206,6 +206,32 @@ body {
 }
 
 /* Stability Section */
+.section--fullheight {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.aside-note {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.aside-note--link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.aside-note--link i {
+    color: #3b82f6;
+    font-size: 1.5rem;
+}
+
 .stability-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -290,6 +316,81 @@ body {
     color: var(--success);
     margin-right: 0.5rem;
 }
+
+/* Staff Cards */
+.staff-list {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.staff-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.staff-card__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.staff-card__name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.staff-card__detail {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 1px;
+}
+
+.staff-card__role {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Photo Documentation Options */
+.photo-options {
+    display: flex;
+    gap: 40px;
+    margin: 15px 0;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.photo-option {
+    text-align: center;
+    color: #666;
+}
+
+.photo-option--active {
+    color: var(--charcoal);
+}
+
+.photo-option__label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.photo-option--active .photo-option__label {
+    font-weight: 600;
+}
+
+.photo-option__status {
+    font-size: 12px;
+}
+
+.photo-option__status--red { color: #ef4444; }
+.photo-option__status--green { color: #22c55e; }
+.photo-option__status--blue { color: #3b82f6; }
 
 /* Transparency Section */
 .transparency-grid {
