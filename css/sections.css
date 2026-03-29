@@ -92,9 +92,77 @@
     margin-bottom: var(--padding-md);
 }
 
+/* ── Hero with Skewed Overlay ── */
+.hero-layout {
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.hero-layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--bg-gradient-charcoal);
+    transform: skewX(-15deg);
+    transform-origin: top right;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ── Hero Grid Layout ── */
+.hero-grid {
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--white) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+/* ── Hero Feature Badges ── */
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.hero-feature {
+    background: var(--bg-light);
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--radius-circle);
+    border: 2px solid var(--color-border);
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    transition: all var(--transition-normal);
+}
+
 /* ── Responsive Sections ── */
 @media (max-width: 768px) {
     .platform-hero .title {
         font-size: 2rem;
+    }
+
+    .hero-layout::before {
+        transform: skewX(-10deg);
+        width: 60%;
+    }
+
+    .hero-grid-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }

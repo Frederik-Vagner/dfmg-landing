@@ -848,6 +848,33 @@ body {
     display: grid;
 }
 
+/* Testimonial Text (centered italic quote) */
+.testimonial-text {
+    font-size: 1.3rem;
+    color: var(--charcoal);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Before/After Image Container */
+.before-after-image {
+    position: relative;
+    border-radius: var(--radius-normal);
+    overflow: hidden;
+    height: 300px;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-light);
+    font-size: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
 /* === FOOTER === */
 
 /* Additional utility classes (extended set) */

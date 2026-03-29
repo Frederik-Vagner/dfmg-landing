@@ -271,6 +271,51 @@
     line-height: 1.5;
 }
 
+/* ── Accent Card (animated top-border on hover) ── */
+.card--accent {
+    min-width: 320px;
+    background: var(--white);
+    border-radius: var(--radius-normal);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+    border: var(--border-lighter);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.card--accent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--charcoal));
+    transition: left var(--transition-normal);
+}
+
+.card--accent:hover::before {
+    left: 0;
+}
+
+/* ── Category Content Card (sticky sidebar) ── */
+.category-content {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 2rem;
+}
+
+.category-features iconify-icon {
+    color: var(--primary);
+    font-size: 0.8rem;
+    width: 12px;
+}
+
 /* ── Responsive Cards ── */
 @media (max-width: 768px) {
     .module-grid {
@@ -283,5 +328,9 @@
 
     .steps-row {
         flex-direction: column;
+    }
+
+    .card--accent {
+        min-width: 100%;
     }
 }
