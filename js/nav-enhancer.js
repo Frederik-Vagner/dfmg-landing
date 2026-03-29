@@ -18,7 +18,6 @@
         '/pages/facility/components/footer.html',
         '/pages/software/components/footer-platform.html',
         '/pages/facility/components/chatbot.html',
-        '/pages/components/contact-widget.html',
         '/pages/facility/components/article-sidebar.html'
     ];
 

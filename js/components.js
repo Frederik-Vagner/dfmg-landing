@@ -33,7 +33,6 @@ async function loadComponents() {
         if (!platform) {
             fetchPromises.push(fetch('/pages/facility/components/chatbot.html'));
         }
-        fetchPromises.push(fetch('/pages/components/contact-widget.html'));
 
         // Check if article sidebar exists on page
         const articleSidebarElement = document.getElementById('article-sidebar');
@@ -59,12 +58,6 @@ async function loadComponents() {
             nextIdx++;
         }
 
-        // Inject contact widget on all pages
-        const contactHtml = replaceSiteTokens(await responses[nextIdx].text());
-        const contactEl = document.getElementById('contact-widget');
-        if (contactEl) contactEl.innerHTML = contactHtml;
-        nextIdx++;
-
         // Load article sidebar if it exists
         if (articleSidebarElement && responses[nextIdx]) {
             const articleSidebar = replaceSiteTokens(await responses[nextIdx].text());
@@ -76,7 +69,6 @@ async function loadComponents() {
         if (!platform) {
             initializeChatbotFunctions();
         }
-        initializeContactWidget();
     } catch (error) {
         console.error('Failed to load components:', error);
     }
@@ -213,70 +205,6 @@ function initializeChatbotFunctions() {
 }
 
 
-// Contact widget initialization (platform pages)
-function initializeContactWidget() {
-    // Bind toggle via data-action attributes
-    document.querySelectorAll('[data-action="toggle-contact-widget"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-            document.getElementById('contactWidget').classList.toggle('active');
-        });
-    });
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            var widget = document.getElementById('contactWidget');
-            if (widget) widget.classList.remove('active');
-        }
-    });
-
-    document.addEventListener('click', function(e) {
-        var widget = document.getElementById('contactWidget');
-        if (widget && widget.classList.contains('active') && !widget.contains(e.target)) {
-            widget.classList.remove('active');
-        }
-    });
-
-    // Language detection
-    var lang = document.documentElement.lang === 'da' ? 'da' : 'en';
-
-    var widget = document.getElementById('contactWidget');
-    if (!widget) return;
-
-    // Apply translations
-    widget.querySelectorAll('[data-da], [data-en]').forEach(function(el) {
-        var translation = el.getAttribute('data-' + lang);
-        if (translation) el.textContent = translation;
-    });
-
-    // On Danish pages, point demo link to service contact page
-    if (lang === 'da') {
-        var demoLink = document.getElementById('contactWidgetDemoLink');
-        if (demoLink) demoLink.href = '/pages/facility/kontakt.html';
-    }
-
-    // Availability: Mon-Fri 08:00-17:00 CET
-    function updateAvailability() {
-        var now = new Date();
-        var cet = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Copenhagen' }));
-        var day = cet.getDay();
-        var hour = cet.getHours();
-        var available = day >= 1 && day <= 5 && hour >= 8 && hour < 17;
-
-        var dot = document.getElementById('contactWidgetDot');
-        var status = document.getElementById('contactWidgetStatus');
-        if (dot && status) {
-            dot.className = available ? 'contact-widget__dot' : 'contact-widget__dot contact-widget__dot--offline';
-            if (available) {
-                status.textContent = lang === 'da' ? 'Tilg\u00e6ngelig nu' : 'Available now';
-            } else {
-                status.textContent = lang === 'da' ? 'Tilbage man\u2013fre 08:00\u201317:00' : 'Back Mon\u2013Fri 08:00\u201317:00';
-            }
-        }
-    }
-
-    updateAvailability();
-    setInterval(updateAvailability, 60000);
-}
 
 
 // Article data for related articles
