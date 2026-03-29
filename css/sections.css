@@ -1,0 +1,44 @@
+/* ====================================
+   SECTIONS & CONTAINERS
+   ==================================== */
+
+/* Containers */
+.container {
+    max-width: var(--container-width-normal);
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.container-narrow {
+    max-width: var(--container-width-narrow);
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.container-wide {
+    max-width: var(--container-width-wide);
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+/* Sections */
+.first {
+    padding-top: 150px !important;
+}
+
+.section {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+/* Section Background Variants */
+.section--light    { background: var(--bg-light); }
+.section--surface  { background: var(--bg-surface); }
+.section--sky      { background: var(--bg-gradient-sky); }
+.section--primary  { background: var(--bg-gradient-primary); color: var(--white); }
+.section--charcoal { background: var(--bg-gradient-charcoal); color: var(--white); }
+.section--success  { background: var(--bg-gradient-success); color: var(--white); }
+
+.hero {
+    height: 100vh;
+}

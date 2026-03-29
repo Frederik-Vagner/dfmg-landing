@@ -1,0 +1,144 @@
+/* ====================================
+   CARDS
+   ==================================== */
+
+/* Base card class */
+.card {
+    position: relative;
+    border-radius: var(--radius-normal);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Card layout modifiers */
+.card--horizontal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-weight: var(--font-weight-normal);
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.card iconify-icon {
+    font-size: 1.5rem;
+}
+
+.card .subtitle {
+    margin-bottom: 0.5rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.card .body {
+    margin-bottom: 0;
+    font-weight: var(--font-weight-light);
+}
+
+/* Card variant modifiers */
+
+/* Bordered card variant */
+.card--bordered {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    border-left: 4px solid var(--primary);
+    box-shadow: none;
+}
+
+/* Overlay card variant (for carousel items) */
+.card--overlay {
+    width: 386px;
+    flex-shrink: 0;
+    height: 520px;
+    background: var(--white);
+    border-radius: var(--radius-normal);
+    box-shadow: var(--shadow-lg);
+    border: var(--border-light);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card--overlay img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.card--overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-dark);
+    z-index: 2;
+}
+
+.card--overlay h3,
+.card--overlay p {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    padding: 0 1.5rem;
+    top: 2rem;
+    text-align: left;
+}
+
+.card--overlay h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-semibold);
+    min-height: 1.8rem;
+}
+
+.card--overlay p {
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    min-height: 2.66rem;
+}
+
+/* Media card variant */
+.card--media {
+    background: var(--white);
+    border-radius: var(--radius-normal);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: var(--border-lighter);
+    transition: all var(--transition-normal);
+}
+
+/* Split card variant */
+.card--split {
+    background: var(--white);
+    border-radius: var(--radius-normal);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 200px;
+}
