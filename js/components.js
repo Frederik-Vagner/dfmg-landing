@@ -87,12 +87,12 @@ function initializeChatbotFunctions() {
         }
     };
 
-    window.switchTab = function(tabName, clickedElement) {
+    window.switchChatbotTab = function(tabName, clickedElement) {
         document.querySelectorAll('.chatbot-tab').forEach(tab => {
             tab.classList.remove('active');
         });
         clickedElement.classList.add('active');
-        
+
         document.querySelectorAll('.tab-content').forEach(content => {
             content.classList.remove('active');
         });

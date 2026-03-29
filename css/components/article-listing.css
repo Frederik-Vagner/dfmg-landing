@@ -4,10 +4,16 @@
    ======================================== */
 
 /* Article Card Base Styles */
-.article-image {
+.card--media .article-image {
     height: 220px;
     position: relative;
     overflow: hidden;
+}
+
+.card--media .article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .article-date {
@@ -22,8 +28,10 @@
     font-weight: 600;
 }
 
-.article-content {
+.card--media .article-content {
     padding: 1.5rem;
+    background: none;
+    min-height: unset;
 }
 
 .article-title {
@@ -34,11 +42,21 @@
     margin: unset;
 }
 
-.article-excerpt {
+.card--media .article-excerpt {
     color: #64748b;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    padding: 0;
+    background: none;
+    border-left: none;
+    border-radius: 0;
+    font-style: normal;
+    position: static;
+}
+
+.card--media .article-meta i {
+    font-size: 0.9rem;
 }
 
 .article-meta {
@@ -205,14 +223,20 @@
     gap: 10px;
 }
 
-.small.filter-tab:not(.active) {
+.filter-tab:not(.active) {
     background: var(--bg-gradient-white);
     color: var(--text-primary);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.small.filter-tab:not(.active):hover {
+.filter-tab:not(.active):hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.filter-tab.active {
+    background: var(--charcoal);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .search-bar {
@@ -247,7 +271,7 @@
 /* Articles Grid */
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 4rem;
 }
@@ -297,16 +321,6 @@
     text-align: center;
 }
 
-.metric-value {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--success);
-}
-
-.metric-label {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-}
 
 /* Company Logo */
 .company-logo {

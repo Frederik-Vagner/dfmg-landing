@@ -380,7 +380,9 @@ h4 {
     background: var(--bg-gradient-white); 
     color: var(--charcoal);
 }
-.bg-gradient-white * {
+.bg-gradient-white h1, .bg-gradient-white h2, .bg-gradient-white h3,
+.bg-gradient-white h4, .bg-gradient-white h5, .bg-gradient-white h6,
+.bg-gradient-white p, .bg-gradient-white li, .bg-gradient-white span {
     color: inherit;
 }
 
@@ -511,6 +513,7 @@ h4 {
     border-radius: var(--radius-md);
     padding: 2rem;
     border-left: 4px solid var(--primary);
+    box-shadow: none;
 }
 
 /* Overlay card variant (for carousel items) */
@@ -655,7 +658,12 @@ h4 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+}
+
+.bg-gradient-primary .stat {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
 }
 
 /* Stat element classes (BEM-style) */
@@ -1655,8 +1663,8 @@ h4 {
     gap: 2.5rem;
 }
 
-/* Main Article Content */
-.main-content {
+/* Main Article Content (individual article pages only) */
+main.main-content {
     background: white;
     border-radius: 16px;
     padding: 1.5rem;
@@ -1732,8 +1740,8 @@ h4 {
 }
 
 
-/* Article Images */
-.article-image {
+/* Article Images (inside article body only, not card listings) */
+.article-body .article-image {
     max-width: 50%;
     max-height: 300px;
     height: auto;
@@ -1750,6 +1758,70 @@ h4 {
     border-radius: 8px;
     margin: 1rem 0;
 }
+
+/* Metric Display */
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--success);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* Step Number (numbered process cards) */
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--charcoal);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+/* Showcase Section (teknologi page) */
+.showcase-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 500px;
+}
+
+.showcase-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    position: relative;
+}
+
+.showcase-img {
+    width: 100%;
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.showcase-img:nth-child(1) { transform: translateY(-5px); }
+.showcase-img:nth-child(2) { transform: translateY(-25px); }
+.showcase-img:nth-child(3) { transform: translateY(5px); }
+.showcase-img:nth-child(4) { transform: translateY(25px); }
 
 /* Callout boxes */
 .article-body .callout {

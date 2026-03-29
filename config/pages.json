@@ -8,7 +8,7 @@
   "pages/kontakt": {
     "title": "DFMG - Kontakt",
     "description": "Kontakt DFMG for erhvervsrengøring, facility management og ejendomsservice. Vi besvarer alle henvendelser inden for 24 timer.",
-    "components": ["contact-form"],
+    "components": [],
     "scripts": []
   },
   "pages/prisberegner": {

@@ -177,35 +177,35 @@
     transition: all var(--transition-normal);
 }
 
-.faq-question:hover {
+.chatbot-container .faq-question:hover {
     background: #f1f5f9;
 }
 
-.faq-question.active {
+.chatbot-container .faq-question.active {
     background: var(--bg-gradient-primary);
     color: var(--white);
 }
 
-.faq-question i {
+.chatbot-container .faq-question i {
     transition: transform var(--transition-normal);
 }
 
-.faq-question.active i {
+.chatbot-container .faq-question.active i {
     transform: rotate(180deg);
 }
 
-.faq-answer {
+.chatbot-container .faq-answer {
     display: none;
     padding: 16px;
     background: var(--white);
     border-top: var(--border-lighter);
 }
 
-.faq-answer.active {
+.chatbot-container .faq-answer.active {
     display: block;
 }
 
-.faq-answer p {
+.chatbot-container .faq-answer p {
     font-size: 14px;
     line-height: 1.5;
     color: #64748b;
@@ -440,10 +440,10 @@
             </div>
         </div>
         <div class="chatbot-tabs">
-            <div class="chatbot-tab active" onclick="switchTab('faq', this)">
+            <div class="chatbot-tab active" onclick="switchChatbotTab('faq', this)">
                 <i class="fas fa-question-circle"></i> FAQ
             </div>
-            <div class="chatbot-tab" onclick="switchTab('contact', this)">
+            <div class="chatbot-tab" onclick="switchChatbotTab('contact', this)">
                 <i class="fas fa-envelope"></i> Kontakt
             </div>
         </div>

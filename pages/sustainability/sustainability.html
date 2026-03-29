@@ -33,100 +33,23 @@
     <script src="/js/template-loader.js"></script>
 
 <style>
+/* Safe zones for horizontal layout */
+.horizontal-container .slide { padding: 100px 4rem 80px 4rem; }
+
 /* Slide Background Gradients */
-.slide:nth-child(1) {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-.slide:nth-child(2) {
-    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
-    padding: 10rem 4rem 0rem 4rem;
-}
-.slide:nth-child(3) {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
-    padding: 0rem 4rem 4rem 4rem;
-}
-.slide:nth-child(4) {
-    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
-}
+.slide:nth-child(1) { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+.slide:nth-child(2) { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%); }
+.slide:nth-child(3) { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%); }
+.slide:nth-child(4) { background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%); }
 
 /* Slide Dot Active Colors */
-.slide-dot.active.slide-1-active {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
-}
-.slide-dot.active.slide-2-active {
-    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%) !important;
-}
-.slide-dot.active.slide-3-active {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%) !important;
-}
-.slide-dot.active.slide-4-active {
-    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important;
-}
-
-/* Visual Gradients */
-.environment-visual {
-    background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
-}
-.social-visual {
-    background: linear-gradient(135deg, #4285f4, #1d4ed8, #1e40af);
-}
-.governance-visual {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9);
-}
-
-/* Feature List */
-.feature-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.feature-list li:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* Slide Grid */
-.slide-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1.5rem;
-    max-width: 1200px;
-    width: 100%;
-    height: calc(100vh - 80px);
-    align-items: center;
-    justify-items: center;
-}
-
-.slide-grid > *:nth-child(1),
-.slide-grid > *:nth-child(2) {
-    align-self: end;
-}
-
-.slide-grid > *:nth-child(3),
-.slide-grid > *:nth-child(4) {
-    align-self: start;
-}
-
-/* Governance */
-.governance-number {
-    color: #8b5cf6;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+.slide-dot.active.slide-1-active { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important; }
+.slide-dot.active.slide-2-active { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%) !important; }
+.slide-dot.active.slide-3-active { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%) !important; }
+.slide-dot.active.slide-4-active { background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important; }
 </style>
 </head>
-<body class="sustainability-page">
+<body class="sustainability-page" data-slide-hashes='{"#miljoe":1,"#social":2,"#governance":3}'>
 
     <!-- Header Component -->
     <div id="header"></div>
@@ -328,137 +251,6 @@
     
     <!-- Component Loader -->
     <script src="/js/components.js" defer></script>
-    <script>
-        class SustainabilitySlider {
-            constructor() {
-                this.container = document.getElementById('horizontalContainer');
-                this.dots = document.querySelectorAll('.slide-dot');
-                this.currentSlide = 0;
-                this.totalSlides = 4;
-                this.isAnimating = false;
-                
-                this.init();
-            }
-            
-            init() {
-                this.setupNavigation();
-                this.setupKeyboard();
-                this.setupWheel();
-                this.setupTouch();
-            }
-            
-            setupNavigation() {
-                this.dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => this.goToSlide(index));
-                });
-            }
-            
-            setupKeyboard() {
-                document.addEventListener('keydown', (e) => {
-                    if (this.isAnimating) return;
-                    
-                    switch(e.key) {
-                        case 'ArrowRight':
-                        case 'ArrowDown':
-                            e.preventDefault();
-                            this.nextSlide();
-                            break;
-                        case 'ArrowLeft':
-                        case 'ArrowUp':
-                            e.preventDefault();
-                            this.prevSlide();
-                            break;
-                    }
-                });
-            }
-            
-            setupWheel() {
-                this.container.addEventListener('wheel', (e) => {
-                    if (this.isAnimating) return;
-                    
-                    e.preventDefault();
-                    
-                    if (e.deltaX > 50 || e.deltaY > 50) {
-                        this.nextSlide();
-                    } else if (e.deltaX < -50 || e.deltaY < -50) {
-                        this.prevSlide();
-                    }
-                }, { passive: false });
-            }
-            
-            setupTouch() {
-                let startX = 0;
-                
-                this.container.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                });
-                
-                this.container.addEventListener('touchend', (e) => {
-                    if (this.isAnimating) return;
-                    
-                    const endX = e.changedTouches[0].clientX;
-                    const diff = startX - endX;
-                    
-                    if (Math.abs(diff) > 50) {
-                        if (diff > 0) {
-                            this.nextSlide();
-                        } else {
-                            this.prevSlide();
-                        }
-                    }
-                });
-            }
-            
-            goToSlide(index) {
-                if (index === this.currentSlide || this.isAnimating) return;
-                
-                this.isAnimating = true;
-                this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
-                
-                const translateX = -this.currentSlide * 100;
-                this.container.style.transform = `translateX(${translateX}vw)`;
-                
-                this.updateDots();
-                
-                setTimeout(() => {
-                    this.isAnimating = false;
-                }, 800);
-            }
-            
-            nextSlide() {
-                if (this.currentSlide < this.totalSlides - 1) {
-                    this.goToSlide(this.currentSlide + 1);
-                }
-            }
-            
-            prevSlide() {
-                if (this.currentSlide > 0) {
-                    this.goToSlide(this.currentSlide - 1);
-                }
-            }
-            
-            updateDots() {
-                this.dots.forEach((dot, index) => {
-                    // Remove all active classes
-                    dot.classList.remove('active', 'slide-1-active', 'slide-2-active', 'slide-3-active', 'slide-4-active');
-                    
-                    // Add appropriate class for current slide
-                    if (index === this.currentSlide) {
-                        dot.classList.add('active', `slide-${this.currentSlide + 1}-active`);
-                    }
-                });
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = new SustainabilitySlider();
-            
-            // Handle URL fragments
-            const hash = window.location.hash;
-            if (hash === '#miljoe') slider.goToSlide(1);
-            else if (hash === '#social') slider.goToSlide(2);
-            else if (hash === '#governance') slider.goToSlide(3);
-        });
-    </script>
+    <script src="/js/sustainability-slider.js" defer></script>
 </body>
 </html>

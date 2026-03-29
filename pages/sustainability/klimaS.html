@@ -31,6 +31,22 @@
 
     <!-- Template Loader -->
     <script src="/js/template-loader.js"></script>
+
+<style>
+/* Slide Background Gradients */
+.slide:nth-child(1) { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+.slide:nth-child(2) { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%); }
+.slide:nth-child(3) { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%); }
+.slide:nth-child(4) { background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%); }
+.slide:nth-child(5) { background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%); }
+
+/* Slide Dot Active Colors */
+.slide-dot.active.slide-1-active { background: #64748b !important; }
+.slide-dot.active.slide-2-active { background: #22c55e !important; }
+.slide-dot.active.slide-3-active { background: #3b82f6 !important; }
+.slide-dot.active.slide-4-active { background: #8b5cf6 !important; }
+.slide-dot.active.slide-5-active { background: #f59e0b !important; }
+</style>
 </head>
 <body class="sustainability-page">
     <!-- Header Component -->
@@ -85,7 +101,7 @@
                 </div>
                 <div class="grid"> 
                     <div class="card bg-gradient-white border-left-charcoal p-2">
-                        <div class="card card--horizontal">
+                        <div class="card--horizontal">
                             <i class="fas fa-truck text-success"></i>
                             <div class="card-content">
                                 <h4>Dansk Leverandør</h4>
@@ -94,7 +110,7 @@
                         </div>
                     </div>
                     <div class="card bg-gradient-white border-left-charcoal p-2">
-                        <div class="card card--horizontal">
+                        <div class="card--horizontal">
                             <i class="fas fa-bicycle text-success"></i>
                             <div class="card-content">
                                 <h4>Cykel Distribution</h4>
@@ -103,7 +119,7 @@
                         </div>
                     </div>
                     <div class="card bg-gradient-white border-left-charcoal p-2">
-                        <div class="card card--horizontal">
+                        <div class="card--horizontal">
                             <i class="fas fa-subway text-success"></i>
                             <div class="card-content">
                                 <h4>Offentlig Transport</h4>
@@ -112,7 +128,7 @@
                         </div>
                     </div>
                     <div class="card bg-gradient-white border-left-charcoal p-2">
-                        <div class="card card--horizontal">
+                        <div class="card--horizontal">
                             <i class="fas fa-map-marker-alt text-success"></i>
                             <div class="card-content">
                                 <h4>København Focus</h4>
@@ -163,7 +179,7 @@
                     
                     <div class="flex">
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-laptop text-primary"></i>
                                 <div class="card-content">
                                     <h4>Mest Populært: Elektronik</h4>
@@ -172,7 +188,7 @@
                             </div>
                         </div>
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-tshirt text-primary"></i>
                                 <div class="card-content">
                                     <h4>Kogevask & Genbrug</h4>
@@ -196,7 +212,7 @@
                     
                      <div class="grid-2x2">
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-flask text-success"></i>
                                 <div class="card-content">
                                     <h4>Smart Kemi-Brug</h4>
@@ -205,7 +221,7 @@
                             </div>
                         </div>
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-recycle text-success"></i>
                                 <div class="card-content">
                                     <h4>Minimal Spild</h4>
@@ -214,7 +230,7 @@
                             </div>
                         </div>
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-certificate text-success"></i>
                                 <div class="card-content">
                                     <h4>Svanemærkede Som Standard</h4>
@@ -223,7 +239,7 @@
                             </div>
                         </div>
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-graduation-cap text-success"></i>
                                 <div class="card-content">
                                     <h4>Grundig Instruktion</h4>
@@ -296,7 +312,7 @@
                     
                     <div class="grid">
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-award text-success"></i>
                                 <div class="card-content">
                                     <h4>Autentisk Miljøprofil</h4>
@@ -305,7 +321,7 @@
                             </div>
                         </div>
                         <div class="card bg-gradient-white border-left-charcoal p-2">
-                            <div class="card card--horizontal">
+                            <div class="card--horizontal">
                                 <i class="fas fa-balance-scale text-success"></i>
                                 <div class="card-content">
                                     <h4>Praktisk Miljøtænkning</h4>
@@ -334,145 +350,6 @@
 
     <!-- Component Loader -->
     <script src="/js/components.js" defer></script>
-    <script>
-        class VerticalSlider {
-            constructor() {
-                this.container = document.getElementById('verticalContainer');
-                this.dots = document.querySelectorAll('.slide-dot');
-                this.currentSlide = 0;
-                this.totalSlides = 5;
-                this.isAnimating = false;
-                
-                this.init();
-            }
-            
-            init() {
-                this.setupNavigation();
-                this.setupKeyboard();
-                this.setupWheel();
-                this.setupTouch();
-                this.updateArrows();
-            }
-            
-            setupNavigation() {
-                this.dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => this.goToSlide(index));
-                });
-            }
-            
-            setupKeyboard() {
-                document.addEventListener('keydown', (e) => {
-                    if (this.isAnimating) return;
-                    
-                    switch(e.key) {
-                        case 'ArrowRight':
-                        case 'ArrowDown':
-                            e.preventDefault();
-                            this.nextSlide();
-                            break;
-                        case 'ArrowLeft':
-                        case 'ArrowUp':
-                            e.preventDefault();
-                            this.prevSlide();
-                            break;
-                    }
-                });
-            }
-            
-            setupWheel() {
-                this.container.addEventListener('wheel', (e) => {
-                    if (this.isAnimating) return;
-                    
-                    e.preventDefault();
-                    
-                    if (e.deltaY > 50) {
-                        this.nextSlide();
-                    } else if (e.deltaY < -50) {
-                        this.prevSlide();
-                    }
-                }, { passive: false });
-            }
-            
-            setupTouch() {
-                let startY = 0;
-                
-                this.container.addEventListener('touchstart', (e) => {
-                    startY = e.touches[0].clientY;
-                });
-                
-                this.container.addEventListener('touchend', (e) => {
-                    if (this.isAnimating) return;
-                    
-                    const endY = e.changedTouches[0].clientY;
-                    const diff = startY - endY;
-                    
-                    if (Math.abs(diff) > 50) {
-                        if (diff > 0) {
-                            this.nextSlide();
-                        } else {
-                            this.prevSlide();
-                        }
-                    }
-                });
-            }
-            
-            goToSlide(index) {
-                if (index === this.currentSlide || this.isAnimating) return;
-                
-                this.isAnimating = true;
-                this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
-                
-                const translateY = -this.currentSlide * 100;
-                this.container.style.transform = `translateY(${translateY}vh)`;
-                
-                this.updateDots();
-                this.updateArrows();
-                
-                setTimeout(() => {
-                    this.isAnimating = false;
-                }, 800);
-            }
-            
-            nextSlide() {
-                if (this.currentSlide < this.totalSlides - 1) {
-                    this.goToSlide(this.currentSlide + 1);
-                }
-            }
-            
-            prevSlide() {
-                if (this.currentSlide > 0) {
-                    this.goToSlide(this.currentSlide - 1);
-                }
-            }
-            
-            updateDots() {
-                this.dots.forEach((dot, index) => {
-                    // Remove all active classes
-                    dot.classList.remove('active', 'slide-1-active', 'slide-2-active', 'slide-3-active', 'slide-4-active', 'slide-5-active');
-                    
-                    // Add appropriate class for current slide
-                    if (index === this.currentSlide) {
-                        dot.classList.add('active', `slide-${this.currentSlide + 1}-active`);
-                    }
-                });
-            }
-            
-            updateArrows() {
-                
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = new VerticalSlider();
-            
-            // Handle URL fragments - customize these as needed
-            const hash = window.location.hash;
-            if (hash === '#slide2') slider.goToSlide(1);
-            else if (hash === '#slide3') slider.goToSlide(2);
-            else if (hash === '#slide4') slider.goToSlide(3);
-            else if (hash === '#slide5') slider.goToSlide(4);
-            else slider.goToSlide(0); // Ensure we start at slide 0 if no hash
-        });
-    </script>
+    <script src="/js/sustainability-slider.js" defer></script>
 </body>
 </html>

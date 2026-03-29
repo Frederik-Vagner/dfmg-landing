@@ -3,6 +3,20 @@
    Used by: sustainability.html, socialS.html, klimaS.html, governanceS.html
    ======================================== */
 
+/* Scoped Reset (needed for slide math — padding must not add to width/height) */
+.sustainability-page,
+.sustainability-page *,
+.sustainability-page *::before,
+.sustainability-page *::after {
+    box-sizing: border-box;
+}
+.sustainability-page ul,
+.sustainability-page li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* Reset & Base */
 .sustainability-page {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -72,7 +86,9 @@
     max-width: 1200px;
     height: 100%;
     display: grid;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     gap: 3rem;
 }
 
@@ -138,22 +154,26 @@
 
 .two-column1 {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
     align-items: center;
 }
 
 /* Visual Blocks */
 .slide-visual {
-    border-radius: 20px;
-    padding: 3rem;
-    height: 400px;
+    width: 100%;
+    height: 450px;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     text-align: center;
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
@@ -172,14 +192,14 @@
 
 /* Photo Placeholder */
 .photo {
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px dashed rgba(255, 255, 255, 0.5);
-    border-radius: 16px;
-    padding: 2rem;
+    width: 100%;
+    height: 200px;
+    background: rgb(0 0 0 / 10%);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     text-align: center;
     min-height: 300px;
@@ -188,6 +208,8 @@
 /* Enhanced Navigation - Horizontal (Bottom Center) */
 .horizontal-container ~ .slide-nav {
     position: fixed;
+    top: auto;
+    right: auto;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -289,4 +311,97 @@
     .slide-nav {
         right: 20px;
     }
+}
+
+/* ========================================
+   SHARED COMPONENT STYLES
+   Reusable across sustainability pages
+   ======================================== */
+
+/* Feature List (used by sustainability.html) */
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-list li:last-child {
+    margin-bottom: 0;
+}
+
+.feature-list li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide Grid — 2x2 layout for sustainability overview slides */
+.slide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.slide-grid > *:nth-child(1),
+.slide-grid > *:nth-child(2) {
+    align-self: end;
+}
+
+.slide-grid > *:nth-child(3),
+.slide-grid > *:nth-child(4) {
+    align-self: start;
+}
+
+.slide-grid .slide-visual {
+    height: 100%;
+    max-height: 350px;
+}
+
+/* Governance Number (used by sustainability.html slide 4) */
+.governance-number {
+    color: #8b5cf6;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Step Number (used by klimaS.html) */
+.step-number {
+    width: 25px;
+    height: 25px;
+    background: #0ea5e9;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 auto 1rem;
+}
+
+/* Visual Gradients (used by sustainability.html) */
+.environment-visual {
+    background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+}
+
+.social-visual {
+    background: linear-gradient(135deg, #4285f4, #1d4ed8, #1e40af);
+}
+
+.governance-visual {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9);
 }
