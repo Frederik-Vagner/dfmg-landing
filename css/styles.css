@@ -1394,75 +1394,7 @@ body {
     color: var(--gray-light);
 }
 
-/* Newsletter Signup */
-.newsletter-signup {
-    background: var(--white);
-    color: var(--charcoal);
-    text-align: center;
-}
-
-.newsletter-signup h3 {
-    color: var(--charcoal);
-    margin-bottom: 0.5rem;
-}
-
-.newsletter-subtitle {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    margin-bottom: 1rem;
-}
-
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.newsletter-input {
-    padding: 0.75rem;
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    background: var(--bg-muted);
-    color: var(--charcoal);
-    font-size: 0.9rem;
-}
-
-.newsletter-input:focus {
-    border-color: var(--charcoal);
-    outline: none;
-}
-
-.newsletter-btn {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background: var(--charcoal);
-    color: var(--white);
-    border: none;
-    border-radius: var(--radius-sm);
-    font-weight: var(--font-weight-medium);
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background var(--transition-normal);
-}
-
-.newsletter-btn:hover {
-    background: var(--charcoal-dark);
-}
-
-.newsletter-btn:focus-visible {
-    outline: 2px solid var(--charcoal);
-    outline-offset: 2px;
-}
-
-.newsletter-success {
-    color: var(--success);
-    font-weight: var(--font-weight-medium);
-    padding: 0.75rem 0;
-}
-
-.newsletter-success iconify-icon {
-    margin-right: 0.25rem;
-}
+/* Newsletter — moved to forms.css */
 
 /* Share Buttons */
 .share-buttons {
