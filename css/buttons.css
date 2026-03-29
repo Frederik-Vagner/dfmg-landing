@@ -66,3 +66,215 @@
     width: 100%;
     text-align: center;
 }
+
+/* ── Carousel button (round icon) ── */
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    color: var(--charcoal);
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+}
+
+.carousel-btn:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* ── Newsletter button ── */
+.newsletter-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--charcoal);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-medium);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background var(--transition-normal);
+}
+
+.newsletter-btn:hover {
+    background: var(--charcoal-dark);
+}
+
+.newsletter-btn:focus-visible {
+    outline: 2px solid var(--charcoal);
+    outline-offset: 2px;
+}
+
+/* ── Share button (social) ── */
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* ── Back button ── */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+    border: 2px solid var(--charcoal);
+    color: var(--charcoal);
+    padding: 12px 24px;
+    border-radius: var(--radius-circle);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+}
+
+.back-btn:hover {
+    background: var(--charcoal);
+    color: var(--white);
+}
+
+/* ── Custom request button ── */
+.custom-request-btn {
+    background: var(--primary);
+    color: var(--white);
+    padding: var(--padding-sm) var(--padding-lg);
+    border-radius: var(--radius-circle);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-normal);
+}
+
+.custom-request-btn:hover {
+    background: var(--charcoal);
+    transform: scale(1.05);
+}
+
+/* ── Close button (expanded panels) ── */
+.expanded-close-btn {
+    background: var(--bg-gradient-white);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius-circle);
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-fast);
+    margin-bottom: 1rem;
+}
+
+.expanded-close-btn:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.expanded-close-btn iconify-icon {
+    color: var(--charcoal);
+}
+
+/* ── Comparison button (toggle) ── */
+.comparison-btn {
+    padding: var(--padding-sm) var(--padding-lg);
+    border: 2px solid var(--color-border);
+    background: var(--white);
+    color: var(--gray);
+    border-radius: var(--radius-circle);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+}
+
+.comparison-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.comparison-btn:hover:not(.active) {
+    border-color: var(--primary);
+    background: var(--bg-muted);
+}
+
+/* ── Tab button ── */
+.tab-button {
+    background: var(--bg-light);
+    border: var(--border-light);
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--gray-light);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tab-button.active {
+    background: var(--charcoal);
+    color: var(--white);
+    border-color: var(--charcoal);
+}
+
+.tab-button:hover {
+    background: var(--color-border);
+}
+
+.tab-button.active:hover {
+    background: var(--charcoal);
+}
+
+/* ── Menu button (mobile hamburger) ── */
+.menu-btn {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-on-dark);
+}
+
+/* ── Testimonial button layout ── */
+.testimonial .btn {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    justify-content: center;
+    display: grid;
+}
+
+/* ── Calculator button override ── */
+#price .btn {
+    padding: 6px 12px;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    box-shadow: none;
+    line-height: normal;
+    transition: none;
+    background: transparent;
+    color: inherit;
+}
+
+#price .btn.active {
+    background: var(--charcoal);
+    color: var(--white);
+}

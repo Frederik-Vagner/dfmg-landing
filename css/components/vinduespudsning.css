@@ -129,28 +129,7 @@
     gap: 1rem;
 }
 
-.comparison-btn {
-    padding: var(--padding-sm) var(--padding-lg);
-    border: 2px solid var(--color-border);
-    background: var(--white);
-    color: var(--gray);
-    border-radius: var(--radius-circle);
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    font-weight: var(--font-weight-medium);
-    text-decoration: none;
-}
-
-.comparison-btn.active {
-    background: var(--primary);
-    color: var(--white);
-    border-color: var(--primary);
-}
-
-.comparison-btn:hover:not(.active) {
-    border-color: var(--primary);
-    background: var(--bg-muted);
-}
+/* .comparison-btn — defined in buttons.css */
 
 @media (max-width: 768px) {
     .comparison-controls {

@@ -131,23 +131,7 @@
     margin-bottom: 1rem;
 }
 
-.custom-request-btn {
-    background: var(--primary);
-    color: var(--white);
-    padding: var(--padding-sm) var(--padding-lg);
-    border-radius: var(--radius-circle);
-    text-decoration: none;
-    font-weight: var(--font-weight-medium);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all var(--transition-normal);
-}
-
-.custom-request-btn:hover {
-    background: var(--charcoal);
-    transform: scale(1.05);
-}
+/* .custom-request-btn — defined in buttons.css */
 
 /* Responsive Design */
 @media (max-width: 768px) {

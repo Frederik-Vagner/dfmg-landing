@@ -53,27 +53,7 @@
 
 /* .info-card — defined in cards.css */
 
-/* Calculator-specific button override */
-#price .btn {
-    padding: 6px 12px;
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-bold);
-    text-align: center;
-    cursor: pointer;
-    display: block;
-    box-shadow: none;
-    line-height: normal;
-    transition: none;
-    background: transparent;
-    color: inherit;
-}
-
-#price .btn.active {
-    background: var(--charcoal);
-    color: var(--white);
-}
+/* #price .btn — defined in buttons.css */
 
 /* Disclaimer text */
 .disclaimer {

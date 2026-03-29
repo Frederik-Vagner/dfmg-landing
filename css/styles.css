@@ -708,25 +708,7 @@ body {
     margin-top: 2rem;
 }
 
-.carousel-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 2px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    color: var(--charcoal);
-    text-decoration: none;
-    box-shadow: var(--shadow-md);
-}
-
-.carousel-btn:hover {
-    box-shadow: var(--shadow-lg);
-}
+/* .carousel-btn — defined in buttons.css */
 
 .client-logo {
     height: 40px;
@@ -769,12 +751,7 @@ body {
     border: 3px solid var(--bg-light);
 }
 
-.testimonial .btn {
-    margin-top: 1.5rem;
-    align-self: flex-start;
-    justify-content: center;
-    display: grid;
-}
+/* .testimonial .btn — defined in buttons.css */
 
 /* Testimonial Text (centered italic quote) */
 .testimonial-text {
@@ -910,36 +887,7 @@ body {
 /* Spacing, layout, sizing, appearance utilities — moved to layout.css */
 
 /* Section Utilities */
-/* === TAB BUTTONS === */
-
-/* Tab Button Component */
-.tab-button {
-    background: var(--bg-light);
-    border: var(--border-light);
-    padding: var(--padding-sm) var(--padding-md);
-    border-radius: var(--radius-sm);
-    font-size: 0.85rem;
-    font-weight: var(--font-weight-medium);
-    color: var(--gray-light);
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.tab-button.active {
-    background: var(--charcoal);
-    color: var(--white);
-    border-color: var(--charcoal);
-}
-
-.tab-button:hover {
-    background: var(--color-border);
-}
-
-.tab-button.active:hover {
-    background: var(--charcoal);
-}
+/* .tab-button — defined in buttons.css */
 
 /* Icon Circle Component */
 .icon-circle {
@@ -1394,7 +1342,7 @@ body {
     color: var(--gray-light);
 }
 
-/* Newsletter — moved to forms.css */
+/* Newsletter — moved to forms.css, .newsletter-btn in buttons.css */
 
 /* Share Buttons */
 .share-buttons {
@@ -1403,16 +1351,7 @@ body {
     margin-top: 1rem;
 }
 
-.share-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-decoration: none;
-}
+/* .share-btn — defined in buttons.css */
 
 .share-linkedin {
     background: var(--linkedin);
@@ -1433,23 +1372,7 @@ body {
     background: var(--bg-muted);
 }
 
-.back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--white);
-    border: 2px solid var(--charcoal);
-    color: var(--charcoal);
-    padding: 12px 24px;
-    border-radius: var(--radius-circle);
-    text-decoration: none;
-    font-weight: var(--font-weight-medium);
-}
-
-.back-btn:hover {
-    background: var(--charcoal);
-    color: var(--white);
-}
+/* .back-btn — defined in buttons.css */
 
 /* Responsive Design */
 @media (max-width: 1024px) {

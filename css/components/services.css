@@ -99,26 +99,7 @@
     height: 100vh;
 }
 
-.expanded-close-btn {
-    background: var(--bg-gradient-white);
-    color: var(--white);
-    border: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: var(--radius-circle);
-    cursor: pointer;
-    font-size: 0.9rem;
-    box-shadow: var(--shadow-md);
-    transition: box-shadow var(--transition-fast);
-    margin-bottom: 1rem;
-}
-
-.expanded-close-btn:hover {
-    box-shadow: var(--shadow-lg);
-}
-
-.expanded-close-btn iconify-icon {
-    color: var(--charcoal);
-}
+/* .expanded-close-btn — defined in buttons.css */
 
 .expanded-stats {
     display: grid;
