@@ -61,7 +61,9 @@
 <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}{% if bodyAttrs %} {{ bodyAttrs | safe }}{% endif %}>
     <div id="header"></div>
 
+    <main>
     {{ content | safe }}
+    </main>
 
     <div id="footer"></div>
 

@@ -1730,7 +1730,7 @@ h4 {
 }
 
 /* Main Article Content (individual article pages only) */
-main.main-content {
+.main-content {
     background: white;
     border-radius: 16px;
     padding: 1.5rem;
