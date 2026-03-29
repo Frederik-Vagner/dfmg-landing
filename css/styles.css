@@ -273,6 +273,18 @@ body {
     font-size: 1.25rem;
 }
 
+.btn--full {
+    width: 100%;
+    text-align: center;
+}
+
+/* Button Color Variant: White (light bg, charcoal text) */
+.btn--white {
+    background: var(--white);
+    color: var(--charcoal);
+    border: 2px solid var(--charcoal);
+}
+
 /* ====================================
    6. TYPOGRAPHY UTILITIES
    ==================================== */
@@ -2106,6 +2118,10 @@ main.main-content {
 
 .share-facebook {
     background: #1877f2;
+}
+
+.share-twitter {
+    background: #1da1f2;
 }
 
 .share-email {
