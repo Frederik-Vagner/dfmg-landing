@@ -33,11 +33,9 @@
 
 /* Section Background Variants */
 .section--light    { background: var(--bg-light); }
-.section--surface  { background: var(--bg-surface); }
 .section--sky      { background: var(--bg-gradient-sky); }
 .section--primary  { background: var(--bg-gradient-primary); color: var(--white); }
 .section--charcoal { background: var(--bg-gradient-charcoal); color: var(--white); }
-.section--success  { background: var(--bg-gradient-success); color: var(--white); }
 
 .hero {
     height: 100vh;
@@ -135,25 +133,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     align-items: center;
-}
-
-/* ── Hero Feature Badges ── */
-.hero-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.hero-feature {
-    background: var(--bg-light);
-    padding: var(--padding-sm) var(--padding-md);
-    border-radius: var(--radius-circle);
-    border: 2px solid var(--color-border);
-    font-weight: var(--font-weight-medium);
-    color: var(--charcoal);
-    font-size: 0.9rem;
-    transition: all var(--transition-normal);
 }
 
 /* ── Hero (image background) ── */

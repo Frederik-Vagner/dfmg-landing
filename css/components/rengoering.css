@@ -86,10 +86,7 @@ body {
     padding-top: var(--padding-lg);
 }
 
-/* .stat-item, .stat-number, .stat-label, .mini-chart, .chart-bar — defined in cards.css */
-
-/* Type Cards */
-/* .type-card — defined in cards.css */
+/* .stat-item, .stat-number, .stat-label — defined in cards.css */
 
 /* .type-badge — moved to badges.css */
 
@@ -357,8 +354,6 @@ body {
     color: var(--gray-light);
     font-size: 0.9rem;
 }
-
-/* .image-badge — base defined in badges.css */
 
 /* .card-content — defined in cards.css */
 

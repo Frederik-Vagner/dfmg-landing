@@ -4,7 +4,6 @@
    pricing tables, comparison tables
    ==================================== */
 
-/* ── Bank Connect Table ── */
 .bc-table-wrapper {
     border-radius: var(--radius-md);
     overflow: hidden;

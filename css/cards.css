@@ -253,14 +253,6 @@
     font-size: 1.1rem;
 }
 
-.featured-category {
-    color: var(--primary);
-    font-weight: var(--font-weight-medium);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
 .featured-title {
     font-size: 1.5rem;
     color: var(--charcoal);
@@ -542,22 +534,6 @@
     line-height: 1.5;
 }
 
-/* ── Category content card (sticky sidebar) ── */
-.category-content {
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    padding: 3rem;
-    box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 2rem;
-}
-
-.category-features iconify-icon {
-    color: var(--primary);
-    font-size: 0.8rem;
-    width: 12px;
-}
-
 /* ── Service card (rengøring) ── */
 .service-card {
     width: 570px;
@@ -576,26 +552,6 @@
 
 .service-card:hover {
     box-shadow: var(--shadow-xl);
-}
-
-/* ── Type card (rengøring) ── */
-.type-card {
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    padding: 3rem;
-    box-shadow: var(--shadow-md);
-    position: relative;
-    overflow: hidden;
-}
-
-.type-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: var(--charcoal);
 }
 
 /* ── Staff card (rengøring) ── */
@@ -744,27 +700,6 @@
     margin-top: 0.25rem;
 }
 
-/* ── Mini Chart ── */
-.mini-chart {
-    width: 100%;
-    height: 40px;
-    margin-top: 0.5rem;
-}
-
-.chart-bar {
-    height: 100%;
-    border-radius: var(--radius-xs);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 0.5rem;
-    color: var(--white);
-    font-size: 0.75rem;
-    font-weight: var(--font-weight-medium);
-    transition: width var(--transition-normal);
-    background: var(--charcoal);
-}
-
 /* ── Price Display ── */
 .service-price {
     text-align: center;
@@ -894,21 +829,6 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* ── Before/After Image ── */
-.before-after-image {
-    position: relative;
-    border-radius: var(--radius-normal);
-    overflow: hidden;
-    height: 300px;
-    background: var(--bg-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray-light);
-    font-size: 1rem;
-    box-shadow: var(--shadow-md);
 }
 
 /* ── Responsive ── */
