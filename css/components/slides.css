@@ -186,7 +186,7 @@
 }
 
 /* Photo Placeholder */
-.photo {
+.slide-photo {
     width: 100%;
     height: 200px;
     background: rgb(0 0 0 / 10%);
@@ -305,7 +305,7 @@
    ======================================== */
 
 /* Feature List (used by sustainability.html) */
-.feature-list li {
+.slide-feature-list li {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
@@ -317,11 +317,11 @@
     transition: all var(--transition-normal);
 }
 
-.feature-list li:last-child {
+.slide-feature-list li:last-child {
     margin-bottom: 0;
 }
 
-.feature-list li:hover {
+.slide-feature-list li:hover {
     transform: translateX(10px);
     box-shadow: var(--shadow-md);
 }

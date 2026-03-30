@@ -76,7 +76,7 @@
 }
 
 /* Article Category — listing variant (text label). See also article.css for template variant (dark badge) */
-.article-category {
+.card--media .article-category {
     color: var(--primary);
     font-size: 0.8rem;
     font-weight: var(--font-weight-medium);
@@ -185,15 +185,6 @@
 
 .case-content {
     padding: var(--padding-md);
-}
-
-
-/* Company Logo */
-.company-logo {
-    height: 50px;
-    max-width: 150px;
-    object-fit: contain;
-    color: unset;
 }
 
 

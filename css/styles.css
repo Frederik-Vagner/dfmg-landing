@@ -576,6 +576,7 @@ body {
     height: 50px;
     max-width: 150px;
     object-fit: contain;
+    color: unset;
 }
 
 /* Testimonial */
@@ -731,7 +732,7 @@ body {
     color: var(--gray);
 }
 
-/* FAQ List — BEM variant (used by platform-pricing) */
+/* FAQ List — BEM variant (used by platform pricing section) */
 .faq-list {
     max-width: var(--container-width-narrow);
     margin: 0 auto;
