@@ -262,3 +262,31 @@
         gap: 2rem;
     }
 }
+
+/* ── Section Modifiers ── */
+.section--fullheight {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Aside Note ── */
+.aside-note {
+    color: var(--gray-light);
+    font-size: var(--font-size-small);
+    font-style: italic;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.aside-note--link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.aside-note--link iconify-icon {
+    color: var(--primary);
+    font-size: 1.5rem;
+}

@@ -84,25 +84,7 @@
     text-align: center;
 }
 
-/* Input with unit suffix (e.g. m²) */
-.input-with-unit {
-    position: relative;
-    display: inline-block;
-}
-
-.input-with-unit .form-input {
-    padding-right: 25px;
-}
-
-.input-unit {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: var(--gray-light);
-    font-size: 0.9rem;
-}
+/* .input-with-unit, .input-unit — defined in forms.css */
 
 /* Planning Table */
 .planning-table td {

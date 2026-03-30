@@ -75,7 +75,7 @@
     font-size: 0.9rem;
 }
 
-/* Article Category — listing variant (text label). See also styles.css for article-template variant (dark badge) */
+/* Article Category — listing variant (text label). See also article.css for template variant (dark badge) */
 .article-category {
     color: var(--primary);
     font-size: 0.8rem;
