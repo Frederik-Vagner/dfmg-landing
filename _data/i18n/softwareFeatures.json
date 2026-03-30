@@ -1,0 +1,216 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "FEATURES",
+      "title": "40+ modules designed for service companies",
+      "body": "Everything you need to run operations, manage people, handle finances, and grow your business — in one connected platform."
+    },
+    "sections": [
+      {
+        "id": "operations",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Core Operations",
+        "title": "The daily engine of your business",
+        "body": "Schedule tasks, track time, manage quality, and keep your entire operation visible in real time. Your employees check in via their phones, and you see it all on the dashboard — who's where, what's done, what's pending.",
+        "badges": ["Calendar", "Task Management", "Time Tracking", "Inspections", "Quality Checks", "Recurring Tasks", "Task Reports", "Photo Documentation"],
+        "screenshot": "Screenshot: Calendar week view with tasks + employee assignments",
+        "screenshotAlt": "Alt: Task detail showing check-in time, photos, checklist"
+      },
+      {
+        "id": "clients",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Client Management",
+        "title": "Every client, every location, every detail",
+        "body": "Manage client information, addresses, contact persons, and location-specific guides that tell your team exactly how to service each site. Clients get their own portal to see upcoming tasks, invoices, photos, and floor plans.",
+        "badges": ["Client Portal", "Location Guides", "Feedback System", "Facility Status", "Booking System", "Contact Persons", "Floor Plans"],
+        "screenshot": "Screenshot: Client detail page with location guide sections",
+        "screenshotAlt": "Alt: Client portal view (what your clients see)"
+      },
+      {
+        "id": "employees",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Employee Management",
+        "title": "From hiring to daily performance",
+        "body": "Employees get their own portal with tasks, schedules, salary slips, and holiday requests. Managers track performance through an improvement system with tests, scoring, and incident tracking. The org diagram shows your entire structure at a glance.",
+        "badges": ["Employee Portal", "Holiday Management", "Handbook", "Improvement System", "Tests & Questions", "Org Diagram", "Team Overview", "Notifications"],
+        "screenshot": "Screenshot: Employee dashboard (mobile view) with tasks",
+        "screenshotAlt": "Alt: Holiday calendar or improvement/test system"
+      },
+      {
+        "id": "finance",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Financial Suite",
+        "title": "Complete accounting built for Danish companies",
+        "body": "Full double-entry accounting with Danish chart of accounts, automated invoicing with e-Faktura support, bank reconciliation, BankConnect integration for direct bank payments, and VAT reporting ready for SKAT. Generate income statements and balance sheets with one click.",
+        "badges": ["Chart of Accounts", "Invoicing", "e-Faktura", "Credit Notes", "Bank Reconciliation", "BankConnect", "Vendor Bills", "VAT Reports", "Income Statement", "Balance Sheet", "Journal Entries"],
+        "screenshot": "Screenshot: Billing overview with invoice list + e-Faktura badge",
+        "screenshotAlt": "Alt: Chart of accounts or bank reconciliation view"
+      },
+      {
+        "id": "payroll",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Payroll",
+        "title": "Danish payroll from hours to payslip",
+        "body": "Create payroll runs from tracked hours, calculate taxes and deductions, generate payslips, report to eIndkomst/SKAT, and export bank payment files — all without leaving the platform. Holiday pay and pension calculations follow Danish law automatically.",
+        "badges": ["Payroll Runs", "Salary Profiles", "Payslips", "eIndkomst / SKAT", "Holiday Pay", "Pension & ATP", "Bank Payment Export", "Fixed Expenses"],
+        "screenshot": "Screenshot: Payroll run with employee entries + eIndkomst export",
+        "screenshotAlt": "Alt: Salary overview or payslip preview"
+      },
+      {
+        "id": "inventory",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Inventory & Procurement",
+        "title": "Track every item, from warehouse to client site",
+        "body": "Manage inventory across multiple storage locations, create purchase orders to suppliers, track stock levels, and build loadout templates for what each team needs on the road. Employees report usage directly from the task view.",
+        "badges": ["Inventory Items", "Storage Locations", "Purchase Orders", "Suppliers", "Loadout Templates", "Stock Levels", "Laundry Baskets"],
+        "screenshot": "Screenshot: Inventory list with stock levels + storage locations",
+        "screenshotAlt": "Alt: Purchase order detail or loadout template"
+      },
+      {
+        "id": "crm",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Sales & CRM",
+        "title": "From lead to signed contract",
+        "body": "Build professional offers with equipment lists, cleaning schemes, and auto-generated PDFs. Run email sequences to nurture leads with open/click tracking. Manage your inbox with full IMAP integration. Set up a pricing library with services, add-ons, and notice fees.",
+        "badges": ["Offer Builder", "PDF Generation", "Email Automation", "Lead Management", "IMAP Inbox", "Pricing Library", "Product Library", "Window Cleaning Config"],
+        "screenshot": "Screenshot: Offer detail with cleaning scheme + PDF preview",
+        "screenshotAlt": "Alt: Email sequence list or lead pipeline"
+      },
+      {
+        "id": "documents",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Documents & Analytics",
+        "title": "Templates, signatures, and data-driven decisions",
+        "body": "Create document templates with placeholders that auto-fill from your data, send for e-signature, and generate client reports. Track task KPIs, employee performance, client profitability, and feedback analytics from a unified dashboard.",
+        "badges": ["Document Templates", "E-Signatures", "Floor Plans", "Photo Galleries", "Task KPI Dashboard", "Employee Performance", "Profitability Analytics", "Feedback Analytics", "Export Center"],
+        "screenshot": "Screenshot: Task KPI dashboard or profitability analytics",
+        "screenshotAlt": "Alt: Document template builder or e-signature flow"
+      }
+    ],
+    "admin": {
+      "title": "Platform Administration",
+      "body": "For platform operators: provision tenants, assign pricing plans, control module access per company, set resource quotas (users, storage, employees, clients), and manage subscription billing — all from a dedicated admin console."
+    },
+    "cta": {
+      "title": "See it in action",
+      "body": "Book a 30-minute demo and we'll walk you through the modules that matter most to your business.",
+      "cta_demo": "Book a Demo",
+      "cta_pricing": "See Pricing"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "FUNKTIONER",
+      "title": "40+ moduler designet til servicevirksomheder",
+      "body": "Alt hvad I behover for at drive drift, administrere medarbejdere, styre okonomi og vokse jeres forretning — i en sammenhaengende platform."
+    },
+    "sections": [
+      {
+        "id": "operations",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Kernedrift",
+        "title": "Den daglige motor i jeres forretning",
+        "body": "Planlaeg opgaver, registrer tid, styr kvalitet og hold hele driften synlig i realtid. Jeres medarbejdere tjekker ind via telefonen, og I ser det hele pa dashboardet — hvem der er hvor, hvad der er gjort, og hvad der mangler.",
+        "badges": ["Kalender", "Opgavestyring", "Tidsregistrering", "Inspektioner", "Kvalitetstjek", "Gentagne Opgaver", "Opgaverapporter", "Fotodokumentation"],
+        "screenshot": "Screenshot: Kalenderugevisning med opgaver + medarbejdertildelinger",
+        "screenshotAlt": "Alt: Opgavedetalje med check-in-tid, fotos, tjekliste"
+      },
+      {
+        "id": "clients",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Kundestyring",
+        "title": "Hver kunde, hver lokation, hver detalje",
+        "body": "Administrer kundeinformation, adresser, kontaktpersoner og lokationsspecifikke guides, der fortaeller jeres team praecis, hvordan hver lokation skal serviceres. Kunder far deres egen portal med kommende opgaver, fakturaer, fotos og plantegninger.",
+        "badges": ["Kundeportal", "Lokationsguider", "Feedbacksystem", "Facilitetsstatus", "Bookingsystem", "Kontaktpersoner", "Plantegninger"],
+        "screenshot": "Screenshot: Kundedetalje med lokationsguide-sektioner",
+        "screenshotAlt": "Alt: Kundeportalvisning (hvad jeres kunder ser)"
+      },
+      {
+        "id": "employees",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Medarbejderstyring",
+        "title": "Fra ansaettelse til daglig performance",
+        "body": "Medarbejderne far deres egen portal med opgaver, vagtplaner, lonsedler og ferieanmodninger. Ledere folger performance via et forbedringssystem med tests, scoring og haendelsesregistrering. Organisationsdiagrammet viser hele jeres struktur med et overblik.",
+        "badges": ["Medarbejderportal", "Feriestyring", "Handbog", "Forbedringssystem", "Tests & Sporgsmal", "Organisationsdiagram", "Teamoverblik", "Notifikationer"],
+        "screenshot": "Screenshot: Medarbejder-dashboard (mobilvisning) med opgaver",
+        "screenshotAlt": "Alt: Feriekalender eller forbedrings-/testsystem"
+      },
+      {
+        "id": "finance",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Okonomisuite",
+        "title": "Komplet bogforing bygget til danske virksomheder",
+        "body": "Fuld dobbelt bogforing med dansk kontoplan, automatiseret fakturering med e-Faktura-understottelse, bankafstemning, BankConnect-integration til direkte bankbetalinger og momsindberetning klar til SKAT. Generer resultatopgorelse og balance med et klik.",
+        "badges": ["Kontoplan", "Fakturering", "e-Faktura", "Kreditnotaer", "Bankafstemning", "BankConnect", "Leverandorfakturaer", "Momsrapporter", "Resultatopgorelse", "Balance", "Bogforingsposter"],
+        "screenshot": "Screenshot: Fakturaoversigt med fakturaliste + e-Faktura-badge",
+        "screenshotAlt": "Alt: Kontoplan eller bankafstemningsvisning"
+      },
+      {
+        "id": "payroll",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Lon",
+        "title": "Dansk lon fra timer til lonseddel",
+        "body": "Opret lonkorsel fra registrerede timer, beregn skat og fradrag, generer lonsedler, indberetning til eIndkomst/SKAT og eksporter bankbetalingsfiler — alt uden at forlade platformen. Feriepenge og pensionsberegninger folger automatisk dansk lovgivning.",
+        "badges": ["Lonkorsler", "Lonprofiler", "Lonsedler", "eIndkomst / SKAT", "Feriepenge", "Pension & ATP", "Bankbetalingseksport", "Faste Udgifter"],
+        "screenshot": "Screenshot: Lonkorsel med medarbejderposter + eIndkomst-eksport",
+        "screenshotAlt": "Alt: Lonoversigt eller lonseddelforhandsvisning"
+      },
+      {
+        "id": "inventory",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Lager & Indkob",
+        "title": "Spor hver vare, fra lager til kundelokation",
+        "body": "Administrer lagerbeholdning pa tvaers af flere lagerlokationer, opret indkobsordrer til leverandorer, folg lagerniveauer og byg pakkelister til hvad hvert team skal bruge pa ruten. Medarbejdere rapporterer forbrug direkte fra opgavevisningen.",
+        "badges": ["Lagervarer", "Lagerlokationer", "Indkobsordrer", "Leverandorer", "Pakkelister", "Lagerniveauer", "Vaskerikurve"],
+        "screenshot": "Screenshot: Lagerliste med lagerniveauer + lagerlokationer",
+        "screenshotAlt": "Alt: Indkobsordredetalje eller pakkeskabelon"
+      },
+      {
+        "id": "crm",
+        "sectionClass": "section",
+        "rowClass": "feature-row",
+        "subtitle": "Salg & CRM",
+        "title": "Fra lead til underskrevet kontrakt",
+        "body": "Byg professionelle tilbud med udstyrslister, rengoeringsskemaer og autogenererede PDF'er. Kor emailsekvenser til at pleje leads med abnings-/kliksporing. Administrer jeres indbakke med fuld IMAP-integration. Opret et prisbibliotek med ydelser, tilvalg og opsigelsesbetingelser.",
+        "badges": ["Tilbudsbygger", "PDF-generering", "Email-automatisering", "Leadstyring", "IMAP-indbakke", "Prisbibliotek", "Produktbibliotek", "Vinduespolering-konfiguration"],
+        "screenshot": "Screenshot: Tilbudsdetalje med rengoeringsskema + PDF-forhandsvisning",
+        "screenshotAlt": "Alt: Emailsekvens-liste eller lead-pipeline"
+      },
+      {
+        "id": "documents",
+        "sectionClass": "section section--light",
+        "rowClass": "feature-row feature-row--reverse",
+        "subtitle": "Dokumenter & Analyser",
+        "title": "Skabeloner, signaturer og datadrevne beslutninger",
+        "body": "Opret dokumentskabeloner med pladsholdere, der automatisk udfyldes fra jeres data, send til e-signering og generer kunderapporter. Folg opgave-KPI'er, medarbejderperformance, kunderentabilitet og feedbackanalyser fra et samlet dashboard.",
+        "badges": ["Dokumentskabeloner", "E-signaturer", "Plantegninger", "Fotogallerier", "Opgave-KPI-dashboard", "Medarbejderperformance", "Rentabilitetsanalyser", "Feedbackanalyser", "Eksportcenter"],
+        "screenshot": "Screenshot: Opgave-KPI-dashboard eller rentabilitetsanalyser",
+        "screenshotAlt": "Alt: Dokumentskabelon-builder eller e-signaturflow"
+      }
+    ],
+    "admin": {
+      "title": "Platformsadministration",
+      "body": "For platformsoperatorer: opret lejere, tildel prisplaner, styr moduladgang per virksomhed, saet ressourcekvoter (brugere, lager, medarbejdere, kunder) og administrer abonnementsfakturering — alt fra en dedikeret administrationskonsol."
+    },
+    "cta": {
+      "title": "Se det i praksis",
+      "body": "Book en 30-minutters demo, sa viser vi jer de moduler, der betyder mest for jeres forretning.",
+      "cta_demo": "Book en Demo",
+      "cta_pricing": "Se Priser"
+    }
+  }
+}

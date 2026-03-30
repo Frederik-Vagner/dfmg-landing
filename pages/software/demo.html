@@ -4,6 +4,9 @@ lang: en
 title: "DFMG Platform — Book a Demo"
 description: "See the platform in action. Book a 30-minute demo with our team."
 canonical: "https://dfmg.dk/pages/software/demo.html"
+langAlternate:
+  en: "https://dfmg.dk/pages/software/demo.html"
+  da: "https://dfmg.dk/pages/software/da/demo.html"
 chatbot: false
 componentCss:
   - platform
@@ -15,110 +18,6 @@ og:
   locale: en_GB
 ---
 
-    <!-- Hero -->
-    <section class="platform-hero" style="padding-bottom: 3rem;">
-        <div class="container">
-            <div class="subtitle" style="color: rgba(255,255,255,0.6);">BOOK A DEMO</div>
-            <h1 class="title">See the platform in action</h1>
-            <p class="body">30 minutes. No commitment. We'll walk you through the modules that matter most to your business.</p>
-        </div>
-    </section>
-
-    <!-- Demo form + visual -->
-    <section class="section">
-        <div class="container">
-            <div class="demo-split">
-                <div class="demo-split__form">
-                    <h2 class="title text-charcoal" style="font-size: 1.6rem;">Request a demo</h2>
-                    <p class="body text-gray mb-3">Fill in your details and we'll get back to you within 24 hours to schedule a time.</p>
-
-                    <form class="platform-form" action="/pages/software/tak.html" method="GET">
-                        <div class="form-row-2">
-                            <div class="form-group">
-                                <label for="demo-name">Full name</label>
-                                <input type="text" id="demo-name" name="name" placeholder="Anders Jensen" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="demo-company">Company</label>
-                                <input type="text" id="demo-company" name="company" placeholder="Nordic Clean ApS">
-                            </div>
-                        </div>
-                        <div class="form-row-2">
-                            <div class="form-group">
-                                <label for="demo-email">Email</label>
-                                <input type="email" id="demo-email" name="email" placeholder="anders@example.dk" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="demo-phone">Phone</label>
-                                <input type="tel" id="demo-phone" name="phone" placeholder="+45 12 34 56 78">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="demo-size">Company size</label>
-                            <select id="demo-size" name="size">
-                                <option value="">Select...</option>
-                                <option value="1-5">1-5 employees</option>
-                                <option value="6-15">6-15 employees</option>
-                                <option value="16-50">16-50 employees</option>
-                                <option value="50+">50+ employees</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="demo-message">What are you most interested in?</label>
-                            <textarea id="demo-message" name="message" placeholder="E.g. scheduling & invoicing, payroll, full accounting..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--success btn--md btn--full">
-                            <iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="mr-05"></iconify-icon> Request Demo
-                        </button>
-                    </form>
-                </div>
-                <div class="demo-split__visual">
-                    <!-- TODO: Replace with embedded product video or interactive tour -->
-                    <div class="screenshot-placeholder screenshot-placeholder--light" style="min-height: 400px;">
-                        <div style="text-align: center;">
-                            <iconify-icon icon="fluent:play-circle-20-filled" inline style="font-size: 3rem; margin-bottom: 0.75rem; display: block;"></iconify-icon>
-                            <span>Product preview video or dashboard screenshot</span><br>
-                            <small>Recommended: 90s Loom showing calendar → task → invoice flow</small>
-                        </div>
-                    </div>
-
-                    <div class="trust-row" style="margin-top: 1.5rem;">
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> No commitment required</div>
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> 30-minute session</div>
-                    </div>
-                    <div class="trust-row">
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> Danish-language support</div>
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> EU data hosting</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What to expect -->
-    <section class="section section--light">
-        <div class="container">
-            <div class="text-center">
-                <div class="subtitle text-primary">HOW IT WORKS</div>
-                <div class="title text-charcoal">What to expect</div>
-            </div>
-
-            <div class="steps-row">
-                <div class="step-card">
-                    <div class="step-card__number">1</div>
-                    <div class="step-card__title">Book</div>
-                    <div class="step-card__desc">Fill in the form above. We'll respond within 24 hours to find a time that works.</div>
-                </div>
-                <div class="step-card">
-                    <div class="step-card__number">2</div>
-                    <div class="step-card__title">Demo</div>
-                    <div class="step-card__desc">30-minute walkthrough of the modules relevant to your business. Bring your questions.</div>
-                </div>
-                <div class="step-card">
-                    <div class="step-card__number">3</div>
-                    <div class="step-card__title">Trial</div>
-                    <div class="step-card__desc">Get access to a trial environment with your own data. We help you set everything up.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+{% set prefix = "/pages/software" %}
+{% set t = i18n.softwareDemo.en %}
+{% include "software/demo-content.njk" %}

@@ -1,0 +1,109 @@
+    <!-- Hero -->
+    <section class="platform-hero" style="padding-bottom: 3rem;">
+        <div class="container">
+            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+        </div>
+    </section>
+
+    <!-- Contact form + info -->
+    <section class="section">
+        <div class="container">
+            <div class="demo-split">
+                <div class="demo-split__visual">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.75rem;">{{ t.info.heading }}</h2>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem; line-height: 1.6;">{{ t.info.body }}</p>
+
+                    <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline style="color: var(--success); margin-right: 0.75rem;"></iconify-icon>{{ t.info.bullet1 }}</li>
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline style="color: var(--success); margin-right: 0.75rem;"></iconify-icon>{{ t.info.bullet2 }}</li>
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline style="color: var(--success); margin-right: 0.75rem;"></iconify-icon>{{ t.info.bullet3 }}</li>
+                        <li style="padding: 0.4rem 0; color: var(--gray);"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline style="color: var(--success); margin-right: 0.75rem;"></iconify-icon>{{ t.info.bullet4 }}</li>
+                    </ul>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> {{ t.info.card_email }}</h4>
+                            <p><a href="mailto:{{ site.platformEmail }}" style="color: var(--primary);">{{ site.platformEmail }}</a></p>
+                        </div>
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><iconify-icon icon="fluent:call-20-filled" inline></iconify-icon> {{ t.info.card_phone }}</h4>
+                            <p><a href="tel:{{ site.phone }}" style="color: var(--primary);">{{ site.phoneDisplay }}</a></p>
+                        </div>
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon> {{ t.info.card_hours }}</h4>
+                            <p>{{ t.info.card_hours_value }}</p>
+                        </div>
+                        <div class="card p-2 bg-gradient-white">
+                            <h4><iconify-icon icon="fluent:building-20-filled" inline></iconify-icon> {{ t.info.card_company }}</h4>
+                            <p>{{ site.legalName }}<br>CVR: {{ site.cvr }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-split__form">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.25rem;">{{ t.form.heading }}</h2>
+                    <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
+                        <input type="hidden" name="_subject" value="New inquiry from DFMG Platform">
+                        <input type="hidden" name="_next" value="https://dfmg.dk{{ prefix }}/tak.html">
+                        <div class="form-group">
+                            <label for="contact-interest">{{ t.form.label_interest }}</label>
+                            <select id="contact-interest" name="interest">
+                                <option value="">{{ t.form.option_select }}</option>
+                                <option value="demo">{{ t.form.option_demo }}</option>
+                                <option value="pricing">{{ t.form.option_pricing }}</option>
+                                <option value="partnership">{{ t.form.option_partnership }}</option>
+                                <option value="other">{{ t.form.option_other }}</option>
+                            </select>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="contact-company">{{ t.form.label_company }}</label>
+                                <input type="text" id="contact-company" name="company" placeholder="{{ t.form.placeholder_company }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-name">{{ t.form.label_name }}</label>
+                                <input type="text" id="contact-name" name="name" placeholder="{{ t.form.placeholder_name }}" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">{{ t.form.label_email }}</label>
+                            <input type="email" id="contact-email" name="email" placeholder="{{ t.form.placeholder_email }}" required>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group" style="flex: 0 0 30%;">
+                                <label for="contact-code">{{ t.form.label_code }}</label>
+                                <select id="contact-code" name="country_code">
+                                    <option value="+45" selected>🇩🇰 +45</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+43">🇦🇹 +43</option>
+                                    <option value="+48">🇵🇱 +48</option>
+                                    <option value="+358">🇫🇮 +358</option>
+                                    <option value="+353">🇮🇪 +353</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="contact-phone">{{ t.form.label_phone }}</label>
+                                <input type="tel" id="contact-phone" name="phone" placeholder="{{ t.form.placeholder_phone }}" pattern="[0-9\s]{7,15}" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">{{ t.form.label_message }}</label>
+                            <textarea id="contact-message" name="message" placeholder="{{ t.form.placeholder_message }}"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--success btn--md btn--full">
+                            <iconify-icon icon="fluent:send-20-filled" inline class="mr-05"></iconify-icon> {{ t.form.btn_submit }}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

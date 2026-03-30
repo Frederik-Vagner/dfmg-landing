@@ -89,6 +89,22 @@
     color: var(--charcoal) !important;
 }
 
+.nav-lang {
+    color: rgba(255,255,255,0.6) !important;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.05em;
+    padding: var(--gap-xs) var(--gap-sm);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: var(--radius-circle);
+    transition: var(--transition-normal);
+}
+
+.nav-lang:hover {
+    color: var(--white) !important;
+    border-color: rgba(255,255,255,0.5);
+}
+
 /* --- Dropdown --- */
 
 .dropdown {

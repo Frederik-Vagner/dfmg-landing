@@ -1,0 +1,100 @@
+{
+  "en": {
+    "formAction": "/pages/software/tak.html",
+    "hero": {
+      "subtitle": "BOOK A DEMO",
+      "title": "See the platform in action",
+      "body": "30 minutes. No commitment. We'll walk you through the modules that matter most to your business."
+    },
+    "form": {
+      "heading": "Request a demo",
+      "intro": "Fill in your details and we'll get back to you within 24 hours to schedule a time.",
+      "label_name": "Full name",
+      "placeholder_name": "Anders Jensen",
+      "label_company": "Company",
+      "placeholder_company": "Nordic Clean ApS",
+      "label_email": "Email",
+      "placeholder_email": "anders@example.dk",
+      "label_phone": "Phone",
+      "placeholder_phone": "+45 12 34 56 78",
+      "label_size": "Company size",
+      "option_default": "Select...",
+      "option_1_5": "1-5 employees",
+      "option_6_15": "6-15 employees",
+      "option_16_50": "16-50 employees",
+      "option_50plus": "50+ employees",
+      "label_message": "What are you most interested in?",
+      "placeholder_message": "E.g. scheduling & invoicing, payroll, full accounting...",
+      "submit": "Request Demo"
+    },
+    "visual": {
+      "placeholder_text": "Product preview video or dashboard screenshot",
+      "placeholder_hint": "Recommended: 90s Loom showing calendar → task → invoice flow"
+    },
+    "trust": {
+      "no_commitment": "No commitment required",
+      "session_length": "30-minute session",
+      "danish_support": "Danish-language support",
+      "eu_hosting": "EU data hosting"
+    },
+    "steps": {
+      "subtitle": "HOW IT WORKS",
+      "title": "What to expect",
+      "step1_title": "Book",
+      "step1_desc": "Fill in the form above. We'll respond within 24 hours to find a time that works.",
+      "step2_title": "Demo",
+      "step2_desc": "30-minute walkthrough of the modules relevant to your business. Bring your questions.",
+      "step3_title": "Trial",
+      "step3_desc": "Get access to a trial environment with your own data. We help you set everything up."
+    }
+  },
+  "da": {
+    "formAction": "/pages/software/da/tak.html",
+    "hero": {
+      "subtitle": "BOOK EN DEMO",
+      "title": "Se platformen i praksis",
+      "body": "30 minutter. Ingen forpligtelse. Vi gennemgår de moduler, der er mest relevante for din virksomhed."
+    },
+    "form": {
+      "heading": "Bestil en demo",
+      "intro": "Udfyld dine oplysninger, så kontakter vi dig inden for 24 timer for at aftale et tidspunkt.",
+      "label_name": "Fulde navn",
+      "placeholder_name": "Anders Jensen",
+      "label_company": "Virksomhed",
+      "placeholder_company": "Nordic Clean ApS",
+      "label_email": "E-mail",
+      "placeholder_email": "anders@example.dk",
+      "label_phone": "Telefon",
+      "placeholder_phone": "+45 12 34 56 78",
+      "label_size": "Virksomhedsstørrelse",
+      "option_default": "Vælg...",
+      "option_1_5": "1-5 medarbejdere",
+      "option_6_15": "6-15 medarbejdere",
+      "option_16_50": "16-50 medarbejdere",
+      "option_50plus": "50+ medarbejdere",
+      "label_message": "Hvad er du mest interesseret i?",
+      "placeholder_message": "F.eks. planlægning og fakturering, løn, fuld bogføring...",
+      "submit": "Bestil demo"
+    },
+    "visual": {
+      "placeholder_text": "Produktvideo eller skærmbillede af dashboardet",
+      "placeholder_hint": "Anbefalet: 90s Loom der viser kalender → opgave → faktura-flow"
+    },
+    "trust": {
+      "no_commitment": "Ingen forpligtelse",
+      "session_length": "30 minutters session",
+      "danish_support": "Support på dansk",
+      "eu_hosting": "EU-datahosting"
+    },
+    "steps": {
+      "subtitle": "SÅDAN FUNGERER DET",
+      "title": "Hvad du kan forvente",
+      "step1_title": "Book",
+      "step1_desc": "Udfyld formularen ovenfor. Vi svarer inden for 24 timer og finder et tidspunkt, der passer dig.",
+      "step2_title": "Demo",
+      "step2_desc": "30 minutters gennemgang af de moduler, der er relevante for din virksomhed. Tag dine spørgsmål med.",
+      "step3_title": "Prøveperiode",
+      "step3_desc": "Få adgang til et prøvemiljø med dine egne data. Vi hjælper dig med at sætte det hele op."
+    }
+  }
+}

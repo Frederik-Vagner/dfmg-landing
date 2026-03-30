@@ -1,0 +1,107 @@
+    <!-- Hero -->
+    <section class="platform-hero" style="padding-bottom: 3rem;">
+        <div class="container">
+            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+        </div>
+    </section>
+
+    <!-- Demo form + visual -->
+    <section class="section">
+        <div class="container">
+            <div class="demo-split">
+                <div class="demo-split__form">
+                    <h2 class="title text-charcoal" style="font-size: 1.6rem;">{{ t.form.heading }}</h2>
+                    <p class="body text-gray mb-3">{{ t.form.intro }}</p>
+
+                    <form class="platform-form" action="{{ t.formAction }}" method="GET">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="demo-name">{{ t.form.label_name }}</label>
+                                <input type="text" id="demo-name" name="name" placeholder="{{ t.form.placeholder_name }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-company">{{ t.form.label_company }}</label>
+                                <input type="text" id="demo-company" name="company" placeholder="{{ t.form.placeholder_company }}">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="demo-email">{{ t.form.label_email }}</label>
+                                <input type="email" id="demo-email" name="email" placeholder="{{ t.form.placeholder_email }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-phone">{{ t.form.label_phone }}</label>
+                                <input type="tel" id="demo-phone" name="phone" placeholder="{{ t.form.placeholder_phone }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-size">{{ t.form.label_size }}</label>
+                            <select id="demo-size" name="size">
+                                <option value="">{{ t.form.option_default }}</option>
+                                <option value="1-5">{{ t.form.option_1_5 }}</option>
+                                <option value="6-15">{{ t.form.option_6_15 }}</option>
+                                <option value="16-50">{{ t.form.option_16_50 }}</option>
+                                <option value="50+">{{ t.form.option_50plus }}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-message">{{ t.form.label_message }}</label>
+                            <textarea id="demo-message" name="message" placeholder="{{ t.form.placeholder_message }}"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--success btn--md btn--full">
+                            <iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="mr-05"></iconify-icon> {{ t.form.submit }}
+                        </button>
+                    </form>
+                </div>
+                <div class="demo-split__visual">
+                    <!-- TODO: Replace with embedded product video or interactive tour -->
+                    <div class="screenshot-placeholder screenshot-placeholder--light" style="min-height: 400px;">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:play-circle-20-filled" inline style="font-size: 3rem; margin-bottom: 0.75rem; display: block;"></iconify-icon>
+                            <span>{{ t.visual.placeholder_text }}</span><br>
+                            <small>{{ t.visual.placeholder_hint }}</small>
+                        </div>
+                    </div>
+
+                    <div class="trust-row" style="margin-top: 1.5rem;">
+                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.no_commitment }}</div>
+                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.session_length }}</div>
+                    </div>
+                    <div class="trust-row">
+                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.danish_support }}</div>
+                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.eu_hosting }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to expect -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="text-center">
+                <div class="subtitle text-primary">{{ t.steps.subtitle }}</div>
+                <div class="title text-charcoal">{{ t.steps.title }}</div>
+            </div>
+
+            <div class="steps-row">
+                <div class="step-card">
+                    <div class="step-card__number">1</div>
+                    <div class="step-card__title">{{ t.steps.step1_title }}</div>
+                    <div class="step-card__desc">{{ t.steps.step1_desc }}</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-card__number">2</div>
+                    <div class="step-card__title">{{ t.steps.step2_title }}</div>
+                    <div class="step-card__desc">{{ t.steps.step2_desc }}</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-card__number">3</div>
+                    <div class="step-card__title">{{ t.steps.step3_title }}</div>
+                    <div class="step-card__desc">{{ t.steps.step3_desc }}</div>
+                </div>
+            </div>
+        </div>
+    </section>

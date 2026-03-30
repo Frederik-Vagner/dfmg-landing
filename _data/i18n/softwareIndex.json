@@ -1,0 +1,238 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "DFMG PLATFORM",
+      "title": "Replace five tools with one system built for your industry",
+      "body": "Scheduling, invoicing, payroll, client portals, and CRM — purpose-built for Danish cleaning and service companies. Save hours every week and never lose track of a job again.",
+      "cta_demo": "Book a Demo",
+      "cta_features": "See All Features",
+      "placeholder_text": "Product video or dashboard screenshot",
+      "placeholder_hint": "Recommended: 60s Loom walkthrough or animated dashboard GIF"
+    },
+    "proof": {
+      "text": "Used daily by DFMG to manage <strong class=\"text-charcoal\">[X] employees</strong> across <strong class=\"text-charcoal\">[X] client locations</strong>"
+    },
+    "metrics": {
+      "saved_value": "[X]h",
+      "saved_label": "Saved per week",
+      "ontime_value": "[X]%",
+      "ontime_label": "On-time task completion",
+      "compliance_value": "100%",
+      "compliance_label": "Danish Compliance",
+      "wait_value": "0 min",
+      "wait_label": "Wait for answers"
+    },
+    "why": {
+      "subtitle": "WHY DFMG",
+      "title": "Built by a cleaning company, not a software company",
+      "body": "We run our own facility service business on this platform every day. Every feature exists because we needed it — not because a product manager imagined it. When you call with a question, we can answer instantly because we use the same system.",
+      "card1_title": "Danish-first",
+      "card1_desc": "eIndkomst, SKAT, e-Faktura, Danish holiday law, NemKonto — compliance built in from day one, not bolted on like international tools.",
+      "card2_title": "Modular",
+      "card2_desc": "Start with scheduling and invoicing. Add payroll, CRM, and accounting when you're ready. Only pay for what you use.",
+      "card3_title": "Everything connected",
+      "card3_desc": "When an employee logs hours, it flows into invoicing, payroll, profitability analytics, and client reports. No re-entry, no sync issues."
+    },
+    "modules": {
+      "subtitle": "MODULES",
+      "title": "One platform, every part of your business",
+      "body": "Six capability areas, 40+ modules — replacing spreadsheets, WhatsApp groups, and disconnected tools.",
+      "operations_title": "Core Operations",
+      "operations_desc": "Schedule jobs, track time, manage quality inspections, and see who's where — all in real time from your phone or desktop.",
+      "clients_title": "Client Management",
+      "clients_desc": "Give clients their own portal with upcoming tasks, invoices, and photos. Build location guides so every cleaner knows the job.",
+      "employees_title": "Employee Management",
+      "employees_desc": "Employee app for tasks and schedules. Holiday requests, performance tracking, handbook, and tests — all self-service.",
+      "finance_title": "Financial Suite",
+      "finance_desc": "Full Danish accounting with e-Faktura, bank reconciliation, BankConnect, VAT reports — no need for a separate accounting system.",
+      "crm_title": "Sales & CRM",
+      "crm_desc": "Build professional offers with PDF export, automate outreach emails, track leads, and manage your inbox — win more contracts.",
+      "documents_title": "Documents & Analytics",
+      "documents_desc": "Auto-fill document templates, collect e-signatures, and track KPIs — see profitability per client and per employee."
+    },
+    "walkthrough": {
+      "title": "See how it works in practice",
+      "body": "From scheduling a job to sending the invoice — follow a real workflow through the platform. No slides, no mockups — this is the actual system we use every day.",
+      "cta": "Watch Demo",
+      "placeholder_text": "Product walkthrough video",
+      "placeholder_hint": "2-3 min: Schedule task → Employee checks in → Client sees report → Invoice sent"
+    },
+    "testimonial": {
+      "subtitle": "IN PRACTICE",
+      "title": "How DFMG runs on DFMG Platform",
+      "placeholder_photo": "Founder photo",
+      "quote": "[Your testimonial here — e.g. 'Before building the platform, I spent 3 hours every evening on admin. Now I manage X employees and Y clients in minutes. When a client calls, I have every answer instantly.']",
+      "name": "[Your name]",
+      "role": "Founder, DFMG — [X] employees, [X] clients",
+      "future1_quote": "[Future customer testimonial — specific result, e.g. 'Cut our invoicing time from 2 days to 20 minutes']",
+      "future1_name": "[Name]",
+      "future1_role": "[Company], [X] employees",
+      "future2_quote": "[Future customer testimonial — specific result, e.g. 'We replaced Planday + Billy + Excel with one system']",
+      "future2_name": "[Name]",
+      "future2_role": "[Company], [X] employees",
+      "future3_quote": "[Future customer testimonial — specific result, e.g. 'Danish payroll was a nightmare before — now it just works']",
+      "future3_name": "[Name]",
+      "future3_role": "[Company], [X] employees"
+    },
+    "comparison": {
+      "title": "Stop duct-taping tools together",
+      "body": "Most service companies use 5-8 disconnected systems. DFMG Platform replaces them all.",
+      "without_title": "Without DFMG",
+      "without_items": [
+        "Schedules in Excel or Planday",
+        "Invoicing in Billy or Dinero",
+        "Payroll in Salary.dk or Danløn",
+        "Client updates via email and phone",
+        "Employee communication on WhatsApp",
+        "Reports manually compiled in spreadsheets",
+        "No overview, no connection between systems"
+      ],
+      "with_title": "With DFMG Platform",
+      "with_items": [
+        "One calendar for all jobs and employees",
+        "Invoices generated from tracked hours",
+        "Danish payroll with eIndkomst built in",
+        "Clients see everything in their own portal",
+        "Employees use the app for tasks and updates",
+        "KPI dashboards update automatically",
+        "Everything connected, nothing falls through"
+      ]
+    },
+    "integrations": {
+      "subtitle": "INTEGRATIONS",
+      "title": "Works with the tools you already use",
+      "google": "Google Calendar",
+      "slack": "Slack",
+      "bank": "BankConnect",
+      "efaktura": "e-Faktura",
+      "email": "IMAP Email"
+    },
+    "cta": {
+      "title": "Ready to run your business from one place?",
+      "body": "Book a 30-minute demo. We'll show you the modules that matter most to your business — using real data from our own operation.",
+      "cta_demo": "Book a Demo",
+      "cta_pricing": "See Pricing",
+      "trust1": "No commitment",
+      "trust2": "30 minutes",
+      "trust3": "Danish-language support"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "DFMG PLATFORM",
+      "title": "Erstat fem værktøjer med ét system bygget til jeres branche",
+      "body": "Planlægning, fakturering, løn, kundeportaler og CRM — specialbygget til danske rengørings- og servicevirksomheder. Spar timer hver uge og mist aldrig overblikket over en opgave.",
+      "cta_demo": "Book en Demo",
+      "cta_features": "Se Alle Funktioner",
+      "placeholder_text": "Produktvideo eller dashboard-screenshot",
+      "placeholder_hint": "Anbefalet: 60s Loom-gennemgang eller animeret dashboard-GIF"
+    },
+    "proof": {
+      "text": "Bruges dagligt af DFMG til at styre <strong class=\"text-charcoal\">[X] medarbejdere</strong> på tværs af <strong class=\"text-charcoal\">[X] kundeplaceringer</strong>"
+    },
+    "metrics": {
+      "saved_value": "[X]t",
+      "saved_label": "Sparet per uge",
+      "ontime_value": "[X]%",
+      "ontime_label": "Opgaver til tiden",
+      "compliance_value": "100%",
+      "compliance_label": "Dansk compliance",
+      "wait_value": "0 min",
+      "wait_label": "Ventetid på svar"
+    },
+    "why": {
+      "subtitle": "HVORFOR DFMG",
+      "title": "Bygget af en rengøringsvirksomhed, ikke et softwarefirma",
+      "body": "Vi driver vores egen facility service-virksomhed på denne platform hver dag. Alle funktioner findes, fordi vi selv havde brug for dem — ikke fordi en produktchef forestillede sig dem. Når I ringer med et spørgsmål, kan vi svare med det samme, fordi vi bruger det samme system.",
+      "card1_title": "Danmark først",
+      "card1_desc": "eIndkomst, SKAT, e-Faktura, dansk ferielov, NemKonto — compliance er indbygget fra dag ét, ikke tilføjet efterfølgende som i internationale værktøjer.",
+      "card2_title": "Modulært",
+      "card2_desc": "Start med planlægning og fakturering. Tilføj løn, CRM og bogføring, når I er klar. Betal kun for det I bruger.",
+      "card3_title": "Alt hænger sammen",
+      "card3_desc": "Når en medarbejder registrerer timer, flyder det videre til fakturering, løn, rentabilitetsanalyser og kunderapporter. Ingen genindtastning, ingen synkproblemer."
+    },
+    "modules": {
+      "subtitle": "MODULER",
+      "title": "Én platform, alle dele af jeres forretning",
+      "body": "Seks kompetenceområder, 40+ moduler — erstatter regneark, WhatsApp-grupper og usammenhængende værktøjer.",
+      "operations_title": "Kernedrift",
+      "operations_desc": "Planlæg opgaver, registrer tid, håndtér kvalitetsinspektioner og se hvem der er hvor — alt i realtid fra telefon eller computer.",
+      "clients_title": "Kundestyring",
+      "clients_desc": "Giv kunderne deres egen portal med kommende opgaver, fakturaer og fotos. Byg lokationsguider så enhver rengøringsmedarbejder kender opgaven.",
+      "employees_title": "Medarbejderstyring",
+      "employees_desc": "Medarbejder-app til opgaver og vagtplaner. Ferieanmodninger, performancetracking, håndbog og tests — alt selvbetjening.",
+      "finance_title": "Økonomisuite",
+      "finance_desc": "Fuld dansk bogføring med e-Faktura, bankafstemning, BankConnect, momsrapporter — intet behov for et separat regnskabssystem.",
+      "crm_title": "Salg & CRM",
+      "crm_desc": "Byg professionelle tilbud med PDF-eksport, automatisér outreach-emails, følg leads og håndtér jeres indbakke — vind flere kontrakter.",
+      "documents_title": "Dokumenter & Analyser",
+      "documents_desc": "Auto-udfyld dokumentskabeloner, indsaml e-signaturer og følg KPI'er — se rentabilitet per kunde og per medarbejder."
+    },
+    "walkthrough": {
+      "title": "Se hvordan det fungerer i praksis",
+      "body": "Fra planlægning af en opgave til afsendelse af fakturaen — følg et reelt workflow gennem platformen. Ingen slides, ingen mockups — dette er det faktiske system vi bruger hver dag.",
+      "cta": "Se Demo",
+      "placeholder_text": "Produkt-gennemgangsvideo",
+      "placeholder_hint": "2-3 min: Planlæg opgave → Medarbejder tjekker ind → Kunden ser rapport → Faktura sendt"
+    },
+    "testimonial": {
+      "subtitle": "I PRAKSIS",
+      "title": "Sådan kører DFMG på DFMG Platform",
+      "placeholder_photo": "Stifter-foto",
+      "quote": "[Dit citat her — f.eks. 'Før jeg byggede platformen, brugte jeg 3 timer hver aften på administration. Nu styrer jeg X medarbejdere og Y kunder på få minutter. Når en kunde ringer, har jeg alle svar med det samme.']",
+      "name": "[Dit navn]",
+      "role": "Stifter, DFMG — [X] medarbejdere, [X] kunder",
+      "future1_quote": "[Fremtidig kundeanmeldelse — specifikt resultat, f.eks. 'Halverede vores faktureringstid fra 2 dage til 20 minutter']",
+      "future1_name": "[Navn]",
+      "future1_role": "[Virksomhed], [X] medarbejdere",
+      "future2_quote": "[Fremtidig kundeanmeldelse — specifikt resultat, f.eks. 'Vi erstattede Planday + Billy + Excel med ét system']",
+      "future2_name": "[Navn]",
+      "future2_role": "[Virksomhed], [X] medarbejdere",
+      "future3_quote": "[Fremtidig kundeanmeldelse — specifikt resultat, f.eks. 'Dansk løn var et mareridt før — nu kører det bare']",
+      "future3_name": "[Navn]",
+      "future3_role": "[Virksomhed], [X] medarbejdere"
+    },
+    "comparison": {
+      "title": "Stop med at tape værktøjer sammen",
+      "body": "De fleste servicevirksomheder bruger 5-8 separate systemer. DFMG Platform erstatter dem alle.",
+      "without_title": "Uden DFMG",
+      "without_items": [
+        "Vagtplaner i Excel eller Planday",
+        "Fakturering i Billy eller Dinero",
+        "Løn i Salary.dk eller Danløn",
+        "Kundeopdateringer via email og telefon",
+        "Medarbejderkommunikation på WhatsApp",
+        "Rapporter manuelt samlet i regneark",
+        "Intet overblik, ingen sammenhæng mellem systemer"
+      ],
+      "with_title": "Med DFMG Platform",
+      "with_items": [
+        "Én kalender for alle opgaver og medarbejdere",
+        "Fakturaer genereret fra registrerede timer",
+        "Dansk løn med eIndkomst indbygget",
+        "Kunder ser alt i deres egen portal",
+        "Medarbejdere bruger app'en til opgaver og opdateringer",
+        "KPI-dashboards opdateres automatisk",
+        "Alt hænger sammen, intet falder mellem to stole"
+      ]
+    },
+    "integrations": {
+      "subtitle": "INTEGRATIONER",
+      "title": "Fungerer med de værktøjer I allerede bruger",
+      "google": "Google Calendar",
+      "slack": "Slack",
+      "bank": "BankConnect",
+      "efaktura": "e-Faktura",
+      "email": "IMAP Email"
+    },
+    "cta": {
+      "title": "Klar til at drive jeres forretning fra ét sted?",
+      "body": "Book en 30-minutters demo. Vi viser jer de moduler, der betyder mest for jeres forretning — med rigtige data fra vores egen drift.",
+      "cta_demo": "Book en Demo",
+      "cta_pricing": "Se Priser",
+      "trust1": "Ingen binding",
+      "trust2": "30 minutter",
+      "trust3": "Support på dansk"
+    }
+  }
+}

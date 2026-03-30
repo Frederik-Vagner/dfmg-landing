@@ -1,0 +1,246 @@
+    <!-- Hero -->
+    <section class="platform-hero" style="padding-bottom: 3rem;">
+        <div class="container">
+            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+            <div class="hero-actions">
+                <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.hero.cta_demo }}</a>
+                <a href="#editor" class="btn btn--ghost btn--md">{{ t.hero.cta_how }}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust badges -->
+    <section class="section" style="padding-top: 2.5rem; padding-bottom: 0;">
+        <div class="container">
+            <div class="trust-row">
+                {% for item in t.trust %}
+                <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ item }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Editor -->
+    <section class="section" id="editor">
+        <div class="container">
+            <div class="feature-row">
+                <div class="feature-row__content">
+                    <div class="feature-row__subtitle">{{ t.editor.subtitle }}</div>
+                    <h2 class="feature-row__title">{{ t.editor.title }}</h2>
+                    <p class="feature-row__body">{{ t.editor.body1 }}</p>
+                    <p class="feature-row__body">{{ t.editor.body2 }}</p>
+                    <div class="feature-row__modules">
+                        {% for badge in t.editor.badges %}
+                        <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ badge }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="feature-row__visual">
+                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:ruler-20-filled" inline class="placeholder-icon"></iconify-icon>
+                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.editor.visual_title }}</strong><br><br>
+                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                                {% for item in t.editor.visual_items %}
+                                <iconify-icon icon="{{ item.icon }}" inline class="placeholder-list-icon"></iconify-icon> {{ item.text }}<br>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-world accuracy -->
+    <section class="section section--light" id="accuracy">
+        <div class="container">
+            <div class="feature-row feature-row--reverse">
+                <div class="feature-row__content">
+                    <div class="feature-row__subtitle">{{ t.accuracy.subtitle }}</div>
+                    <h2 class="feature-row__title">{{ t.accuracy.title }}</h2>
+                    <p class="feature-row__body">{{ t.accuracy.body1 }}</p>
+                    <p class="feature-row__body">{{ t.accuracy.body2 }}</p>
+                    <div class="feature-row__modules">
+                        {% for badge in t.accuracy.badges %}
+                        <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ badge }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="feature-row__visual">
+                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:map-20-filled" inline class="placeholder-icon"></iconify-icon>
+                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.accuracy.visual_title }}</strong><br><br>
+                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                                {% for step in t.accuracy.steps %}
+                                <span style="color: var(--primary); font-weight: 600;">{{ loop.index }}.</span> {{ step }}<br>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task mapping -->
+    <section class="section" id="task-mapping">
+        <div class="container">
+            <div class="feature-row">
+                <div class="feature-row__content">
+                    <div class="feature-row__subtitle">{{ t.taskMapping.subtitle }}</div>
+                    <h2 class="feature-row__title">{{ t.taskMapping.title }}</h2>
+                    <p class="feature-row__body">{{ t.taskMapping.body1 }}</p>
+                    <p class="feature-row__body">{{ t.taskMapping.body2 }}</p>
+                    <div class="feature-row__modules">
+                        {% for badge in t.taskMapping.badges %}
+                        <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ badge }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="feature-row__visual">
+                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:task-list-20-filled" inline class="placeholder-icon"></iconify-icon>
+                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.taskMapping.visual_title }}</strong><br><br>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; max-width: 320px; margin: 0 auto;">
+                                {% for room in t.taskMapping.roomTypes %}
+                                <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ room }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Route planning -->
+    <section class="section section--light" id="routes">
+        <div class="container">
+            <div class="feature-row feature-row--reverse">
+                <div class="feature-row__content">
+                    <div class="feature-row__subtitle">{{ t.routes.subtitle }}</div>
+                    <h2 class="feature-row__title">{{ t.routes.title }}</h2>
+                    <p class="feature-row__body">{{ t.routes.body1 }}</p>
+                    <p class="feature-row__body">{{ t.routes.body2 }}</p>
+                    <div class="feature-row__modules">
+                        {% for badge in t.routes.badges %}
+                        <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ badge }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="feature-row__visual">
+                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:arrow-routing-20-filled" inline class="placeholder-icon"></iconify-icon>
+                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.routes.visual_title }}</strong><br><br>
+                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                                {% for step in t.routes.steps %}
+                                <span style="color: var(--primary); font-weight: 600;">{{ loop.index }}.</span> {{ step }}<br>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-floor -->
+    <section class="section" id="multi-floor">
+        <div class="container">
+            <div class="feature-row">
+                <div class="feature-row__content">
+                    <div class="feature-row__subtitle">{{ t.multiFloor.subtitle }}</div>
+                    <h2 class="feature-row__title">{{ t.multiFloor.title }}</h2>
+                    <p class="feature-row__body">{{ t.multiFloor.body1 }}</p>
+                    <p class="feature-row__body">{{ t.multiFloor.body2 }}</p>
+                    <div class="feature-row__modules">
+                        {% for badge in t.multiFloor.badges %}
+                        <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ badge }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="feature-row__visual">
+                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:building-20-filled" inline class="placeholder-icon"></iconify-icon>
+                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.multiFloor.visual_title }}</strong><br><br>
+                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                                {% for item in t.multiFloor.visual_items %}
+                                <iconify-icon icon="{{ item.icon }}" inline class="placeholder-list-icon"></iconify-icon> {{ item.text }}<br>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Annotations & export -->
+    <section class="section section--light" id="annotations">
+        <div class="container">
+            <div class="feature-row feature-row--reverse">
+                <div class="feature-row__content">
+                    <div class="feature-row__subtitle">{{ t.annotations.subtitle }}</div>
+                    <h2 class="feature-row__title">{{ t.annotations.title }}</h2>
+                    <p class="feature-row__body">{{ t.annotations.body1 }}</p>
+                    <p class="feature-row__body">{{ t.annotations.body2 }}</p>
+                    <div class="feature-row__modules">
+                        {% for badge in t.annotations.badges %}
+                        <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ badge }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="feature-row__visual">
+                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:pen-20-filled" inline class="placeholder-icon"></iconify-icon>
+                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.annotations.visual_title }}</strong><br><br>
+                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                                {% for item in t.annotations.visual_items %}
+                                <iconify-icon icon="{{ item.icon }}" inline class="placeholder-list-icon"></iconify-icon> {{ item.text }}<br>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key benefits -->
+    <section class="section">
+        <div class="container">
+            <div class="value-grid">
+                {% for benefit in t.benefits %}
+                <div class="value-card">
+                    <div class="value-card__icon">
+                        <iconify-icon icon="{{ benefit.icon }}" inline></iconify-icon>
+                    </div>
+                    <div class="value-card__title">{{ benefit.title }}</div>
+                    <div class="value-card__desc">{{ benefit.desc }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="platform-cta">
+                <div class="title">{{ t.cta.title }}</div>
+                <div class="body">{{ t.cta.body }}</div>
+                <div class="hero-actions">
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.cta_demo }}</a>
+                    <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ t.cta.cta_features }}</a>
+                </div>
+            </div>
+        </div>
+    </section>

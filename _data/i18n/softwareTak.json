@@ -1,0 +1,18 @@
+{
+  "en": {
+    "platformLink": "/pages/software/index.html",
+    "featuresLink": "/pages/software/features.html",
+    "title": "Thank you!",
+    "body": "We've received your message and will get back to you within 24 hours.",
+    "btn_platform": "Back to Platform",
+    "btn_features": "Explore Features"
+  },
+  "da": {
+    "platformLink": "/pages/software/da/index.html",
+    "featuresLink": "/pages/software/da/features.html",
+    "title": "Tak for din henvendelse!",
+    "body": "Vi har modtaget din besked og vender tilbage inden for 24 timer.",
+    "btn_platform": "Tilbage til platformen",
+    "btn_features": "Udforsk funktioner"
+  }
+}

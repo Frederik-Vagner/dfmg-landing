@@ -1,0 +1,67 @@
+---
+layout: base.html
+lang: da
+title: "DFMG Platform — Alt-i-én SaaS til Servicevirksomheder"
+description: "40+ moduler til danske rengørings- og servicevirksomheder. Kalender, opgaver, fakturering, løn, CRM og meget mere."
+canonical: "https://dfmg.dk/pages/software/da/index.html"
+langAlternate:
+  en: "https://dfmg.dk/pages/software/index.html"
+  da: "https://dfmg.dk/pages/software/da/index.html"
+chatbot: false
+componentCss:
+  - platform
+og:
+  title: "DFMG Platform — Alt-i-én SaaS til Servicevirksomheder"
+  description: "40+ moduler til danske rengørings- og servicevirksomheder. Kalender, opgaver, fakturering, løn, CRM og meget mere."
+  type: website
+  url: "https://dfmg.dk/pages/software/da/index.html"
+  image: "https://dfmg.dk/images/platform/og-image.jpg"
+  locale: da_DK
+jsonLd:
+  "@context": "https://schema.org"
+  "@type": "SoftwareApplication"
+  name: "DFMG Platform"
+  applicationCategory: "BusinessApplication"
+  operatingSystem: "Web"
+  description: "Alt-i-én administrationsplatform til danske rengørings- og servicevirksomheder. 40+ moduler der dækker planlægning, fakturering, løn, CRM, bogføring og meget mere."
+  url: "https://dfmg.dk/pages/software/da/index.html"
+  author:
+    "@type": "Organization"
+    name: "DFMG ApS"
+    url: "https://dfmg.dk"
+    logo: "https://dfmg.dk/images/logos/logo.png"
+    address:
+      "@type": "PostalAddress"
+      addressCountry: "DK"
+    vatID: "DK44646102"
+    contactPoint:
+      "@type": "ContactPoint"
+      telephone: "+45-50-48-02-73"
+      email: "platform@dfmg.dk"
+      contactType: "sales"
+      availableLanguage:
+        - "Danish"
+        - "English"
+  offers:
+    "@type": "AggregateOffer"
+    priceCurrency: "DKK"
+    availability: "https://schema.org/OnlineOnly"
+    offerCount: "3"
+  featureList:
+    - "Opgaveplanlægning og kalender"
+    - "Tidsregistrering"
+    - "Kundeportal"
+    - "Medarbejderportal"
+    - "Dansk bogføring med e-Faktura"
+    - "Løn med eIndkomst/SKAT"
+    - "BankConnect-integration"
+    - "CRM og tilbudsbygger"
+    - "Email-automatisering"
+    - "Lagerstyring"
+    - "Dokumentskabeloner med e-signaturer"
+    - "Analyser og KPI-dashboards"
+---
+
+{% set prefix = "/pages/software/da" %}
+{% set t = i18n.softwareIndex.da %}
+{% include "software/index-content.njk" %}

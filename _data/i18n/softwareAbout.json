@@ -1,0 +1,102 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "ABOUT",
+      "title": "Built by a service company, for service companies",
+      "body": "DFMG Platform wasn't designed in a vacuum. It was built from the inside — by people who run a cleaning business every day."
+    },
+    "story": {
+      "subtitle": "OUR STORY",
+      "title": "From spreadsheets to 40+ modules",
+      "body1": "DFMG started as a facility service company in Denmark. Like every small service business, we managed schedules in spreadsheets, tracked invoices in one system, payroll in another, and client communication through a mix of email and phone calls.",
+      "body2": "We started building tools to solve our own problems. A task scheduler. An invoice generator. A time tracker. One tool led to another, and before we knew it, we had built a complete platform that runs every aspect of our operation.",
+      "body3": "Today, we use DFMG Platform to run our own cleaning business — and we're making it available to other Danish service companies who face the same challenges we did.",
+      "placeholder_text": "Team photo or founder at work",
+      "placeholder_hint": "Best: candid shot, not staged corporate portrait"
+    },
+    "philosophy": {
+      "subtitle": "PHILOSOPHY",
+      "title": "What we believe",
+      "card1_title": "Practitioner-built",
+      "card1_desc": "Every feature exists because we needed it in our own business. We don't build based on market research — we build based on daily operational reality.",
+      "card2_title": "Danish-first",
+      "card2_desc": "We're not a US product with Danish compliance bolted on. eIndkomst, SKAT, Danish holiday law, e-Faktura, NemKonto — it's all native, not an afterthought.",
+      "card3_title": "One connected system",
+      "card3_desc": "When an employee logs hours, it flows into invoicing, payroll, profitability analytics, and client reports. No manual re-entry, no data silos, no sync issues."
+    },
+    "tech": {
+      "subtitle": "TECHNOLOGY",
+      "title": "Modern, secure, scalable",
+      "placeholder_text": "Architecture diagram: Multi-tenant with isolated schemas",
+      "placeholder_hint": "Show: Tenant A/B/C → shared app → isolated DB schemas",
+      "item1_strong": "Multi-tenant architecture",
+      "item1_text": "each company gets its own isolated database schema",
+      "item2_strong": "EU-hosted",
+      "item2_text": "all data stays within the European Union",
+      "item3_strong": "GDPR compliant",
+      "item3_text": "privacy by design, data processing agreements included",
+      "item4_strong": "Real-time",
+      "item4_text": "ASGI server with WebSocket support for live updates",
+      "item5_strong": "Mobile-ready",
+      "item5_text": "employees access their tasks, schedule, and reports from any device",
+      "item6_strong": "Modular",
+      "item6_text": "enable only the modules you need, disable what you don't"
+    },
+    "cta": {
+      "title": "See the company behind the platform",
+      "body": "DFMG runs a facility service company in Denmark — the same company that built and uses this platform every day.",
+      "btn_team": "Meet the Team",
+      "btn_demo": "Book a Demo"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "OM OS",
+      "title": "Bygget af en servicevirksomhed, til servicevirksomheder",
+      "body": "DFMG Platform er ikke designet i et vakuum. Det er bygget indefra — af mennesker, der driver en rengøringsvirksomhed hver eneste dag."
+    },
+    "story": {
+      "subtitle": "VORES HISTORIE",
+      "title": "Fra regneark til 40+ moduler",
+      "body1": "DFMG startede som en facility service-virksomhed i Danmark. Som enhver lille servicevirksomhed styrede vi vagtplaner i regneark, holdt styr på fakturaer i ét system, løn i et andet, og kundekommunikation via en blanding af e-mail og telefonopkald.",
+      "body2": "Vi begyndte at bygge værktøjer til at løse vores egne udfordringer. En opgaveplanlægger. En fakturagenerator. Et tidsregistreringssystem. Ét værktøj førte til det næste, og inden vi vidste af det, havde vi bygget en komplet platform, der styrer alle dele af vores drift.",
+      "body3": "I dag bruger vi DFMG Platform til at drive vores egen rengøringsvirksomhed — og nu gør vi den tilgængelig for andre danske servicevirksomheder, der står med de samme udfordringer, som vi selv gjorde.",
+      "placeholder_text": "Teamfoto eller grundlægger på arbejde",
+      "placeholder_hint": "Bedst: naturligt billede, ikke et opstillet firmaportræt"
+    },
+    "philosophy": {
+      "subtitle": "FILOSOFI",
+      "title": "Det vi tror på",
+      "card1_title": "Bygget af praktikere",
+      "card1_desc": "Hver eneste funktion eksisterer, fordi vi selv havde brug for den i vores virksomhed. Vi bygger ikke ud fra markedsanalyser — vi bygger ud fra daglig operationel virkelighed.",
+      "card2_title": "Dansk først",
+      "card2_desc": "Vi er ikke et amerikansk produkt med dansk lovgivning påklistret bagefter. eIndkomst, SKAT, ferielov, e-Faktura, NemKonto — det hele er indbygget fra dag ét.",
+      "card3_title": "Ét sammenhængende system",
+      "card3_desc": "Når en medarbejder registrerer timer, flyder det automatisk videre til fakturering, løn, rentabilitetsanalyser og kunderapporter. Ingen manuel genindtastning, ingen datasiloer, ingen synkroniseringsproblemer."
+    },
+    "tech": {
+      "subtitle": "TEKNOLOGI",
+      "title": "Moderne, sikker, skalerbar",
+      "placeholder_text": "Arkitekturdiagram: Multi-tenant med isolerede skemaer",
+      "placeholder_hint": "Vis: Virksomhed A/B/C → delt applikation → isolerede DB-skemaer",
+      "item1_strong": "Multi-tenant arkitektur",
+      "item1_text": "hver virksomhed får sit eget isolerede databaseskema",
+      "item2_strong": "EU-hostet",
+      "item2_text": "al data forbliver inden for EU",
+      "item3_strong": "GDPR-kompatibel",
+      "item3_text": "privacy by design, databehandleraftaler inkluderet",
+      "item4_strong": "Realtid",
+      "item4_text": "ASGI-server med WebSocket-understøttelse til live-opdateringer",
+      "item5_strong": "Mobilklar",
+      "item5_text": "medarbejdere tilgår opgaver, vagtplan og rapporter fra enhver enhed",
+      "item6_strong": "Modulært",
+      "item6_text": "aktiver kun de moduler du har brug for, deaktiver resten"
+    },
+    "cta": {
+      "title": "Se virksomheden bag platformen",
+      "body": "DFMG driver en facility service-virksomhed i Danmark — den samme virksomhed, der har bygget og bruger denne platform hver dag.",
+      "btn_team": "Mød Teamet",
+      "btn_demo": "Book en Demo"
+    }
+  }
+}

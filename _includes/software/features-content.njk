@@ -1,0 +1,61 @@
+    <!-- Hero -->
+    <section class="platform-hero" style="padding-bottom: 3rem;">
+        <div class="container">
+            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+        </div>
+    </section>
+
+    <!-- Feature sections -->
+    {% for section in t.sections %}
+    <section class="{{ section.sectionClass }}" id="{{ section.id }}">
+        <div class="container">
+            <div class="{{ section.rowClass }}">
+                <div class="feature-row__content">
+                    <div class="feature-row__subtitle">{{ section.subtitle }}</div>
+                    <h2 class="feature-row__title">{{ section.title }}</h2>
+                    <p class="feature-row__body">{{ section.body }}</p>
+                    <div class="feature-row__modules">
+                        {% for badge in section.badges %}
+                        <span class="badge-inline badge-inline--sm bg-light text-charcoal">{{ badge }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="feature-row__visual">
+                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:image-20-filled" inline style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
+                            {{ section.screenshot }}<br>
+                            <small>{{ section.screenshotAlt }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+    <!-- Platform Admin callout -->
+    <section class="section">
+        <div class="container">
+            <div class="callout-box">
+                <div class="callout-box__title"><iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon> {{ t.admin.title }}</div>
+                <div class="callout-box__body">{{ t.admin.body }}</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="platform-cta">
+                <div class="title">{{ t.cta.title }}</div>
+                <div class="body">{{ t.cta.body }}</div>
+                <div class="hero-actions">
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.cta_demo }}</a>
+                    <a href="{{ prefix }}/pricing.html" class="btn btn--ghost btn--md">{{ t.cta.cta_pricing }}</a>
+                </div>
+            </div>
+        </div>
+    </section>

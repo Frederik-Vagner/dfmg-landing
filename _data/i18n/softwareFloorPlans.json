@@ -1,0 +1,236 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "FEATURE",
+      "title": "Floor Plans",
+      "body": "Draw your buildings, plan your routes, assign tasks by room — and give every team member an interactive map of the job.",
+      "cta_demo": "Book a Demo",
+      "cta_how": "See How It Works"
+    },
+    "trust": [
+      "22 room types",
+      "44+ object types",
+      "Real-world 1:100 scale",
+      "OpenStreetMap integration"
+    ],
+    "editor": {
+      "subtitle": "Built-In Editor",
+      "title": "Draw your buildings with precision",
+      "body1": "Create floor plans directly in the platform — no external software needed. Draw rooms as rectangles or freeform polygons, place walls with configurable thickness, and furnish spaces from a library of 44+ object types across furniture, appliances, and architectural elements.",
+      "body2": "Everything is rendered at industry-standard 1:100 scale with real-world measurements. Upload custom furniture, apply materials and textures, and use full undo/redo as you work.",
+      "badges": ["Room Drawing", "Polygon Shapes", "Wall Tool", "Furniture Library", "Material Picker", "Custom Uploads", "Undo / Redo"],
+      "visual_title": "Editor Tools",
+      "visual_items": [
+        { "icon": "fluent:design-ideas-20-filled", "text": "Rectangular & polygon rooms" },
+        { "icon": "fluent:line-horizontal-3-20-filled", "text": "Interior, exterior & partition walls" },
+        { "icon": "fluent:couch-20-filled", "text": "44+ draggable objects" },
+        { "icon": "fluent:color-20-filled", "text": "Textures, materials & colours" },
+        { "icon": "fluent:cloud-arrow-up-20-filled", "text": "Upload your own furniture" }
+      ]
+    },
+    "accuracy": {
+      "subtitle": "Real-World Accuracy",
+      "title": "Trace over satellite imagery with OpenStreetMap",
+      "body1": "Look up any building address and overlay the real-world footprint directly in the editor. Trace walls, calibrate scale, and anchor your floor plan to GPS coordinates — so every room, corridor, and entrance matches the physical building.",
+      "body2": "The geo-anchoring system maps pixels to metres with configurable rotation and scale. Once verified, your floor plan is spatially accurate and ready for operational use.",
+      "badges": ["Address Lookup", "OSM Overlay", "GPS Anchoring", "Scale Calibration", "Building Dimensions", "Verification Workflow"],
+      "visual_title": "Geographic Anchoring",
+      "steps": [
+        "Search for the building address",
+        "Overlay the OSM building footprint",
+        "Trace and calibrate to real scale",
+        "Verify and lock the anchor"
+      ]
+    },
+    "taskMapping": {
+      "subtitle": "Task Mapping",
+      "title": "Assign tasks to rooms, not just people",
+      "body1": "Each of the 22 room types automatically maps to the right task template — offices get desk cleaning, kitchens get appliance sanitation, toilets get hygiene protocols. Override any mapping manually when you need to.",
+      "body2": "The interactive task map shows completion status per room with overdue warnings, last-completed dates, and frequency badges. Managers see the full picture. Employees see exactly what needs doing and where.",
+      "badges": ["22 Room Types", "Auto Template Mapping", "Per-Room Tasks", "Completion Tracking", "Overdue Warnings", "Frequency Badges"],
+      "visual_title": "Room Types",
+      "roomTypes": ["Office", "Meeting Room", "Kitchen", "Toilet", "Corridor", "Entrance", "Canteen", "Storage", "Lounge", "Staircase", "Terrace", "+11 more"]
+    },
+    "routes": {
+      "subtitle": "Route Planning",
+      "title": "Plan cleaning routes and simulate them step by step",
+      "body1": "Build named cleaning routes with ordered room stops, entry points, and estimated durations. The waypoint network auto-detects paths through doors and corridors so routes follow real walkable paths — not straight lines through walls.",
+      "body2": "Run the animated route simulator to see a character walk the route room by room, completing tasks along the way. Use it for training new employees, verifying route efficiency, or presenting to clients.",
+      "badges": ["Named Routes", "Waypoint Network", "Auto Pathfinding", "Route Simulation", "Duration Estimates", "Cross-Floor Navigation", "Task Assignment"],
+      "visual_title": "Route Simulator",
+      "steps": [
+        "Define entry point and room order",
+        "Waypoints auto-detect walkable paths",
+        "Assign tasks to each stop",
+        "Simulate with animated playback"
+      ]
+    },
+    "multiFloor": {
+      "subtitle": "Multi-Floor & Multi-Building",
+      "title": "Manage entire portfolios of buildings",
+      "body1": "Add unlimited floors per building and unlimited buildings per client. Navigate between floors with a single click, and link doors across floors so routes can span staircases and lifts.",
+      "body2": "Clients see all their locations in a grid view. Employees navigate to their assigned building and floor. Managers get the full picture across every site they operate.",
+      "badges": ["Unlimited Floors", "Unlimited Buildings", "Floor Transitions", "Cross-Floor Door Linking", "Building Grid View"],
+      "visual_title": "Three Views, One Platform",
+      "visual_items": [
+        { "icon": "fluent:shield-person-20-filled", "text": "Admin — full editor & all sites" },
+        { "icon": "fluent:person-20-filled", "text": "Employee — assigned routes & tasks" },
+        { "icon": "fluent:person-20-filled", "text": "Client — view-only exploration" }
+      ]
+    },
+    "annotations": {
+      "subtitle": "Annotations & Export",
+      "title": "Annotate, document, and share",
+      "body1": "Add arrows, text labels, and directional markers directly on floor plans to highlight special instructions, hazard zones, or cleaning priorities. Annotations are drawn on a separate canvas layer so they never interfere with the underlying plan.",
+      "body2": "Export annotated floor plans as PNG images or PDF-ready SVG for client reports, training manuals, or quality documentation.",
+      "badges": ["Arrow Annotations", "Text Labels", "Directional Markers", "PNG Export", "PDF-Ready SVG", "Location Guides"],
+      "visual_title": "Annotation Tools",
+      "visual_items": [
+        { "icon": "fluent:arrow-right-20-filled", "text": "Arrows with direction control" },
+        { "icon": "fluent:text-font-20-filled", "text": "Text with bold, italic, outline" },
+        { "icon": "fluent:image-20-filled", "text": "Export to PNG" },
+        { "icon": "fluent:document-pdf-20-filled", "text": "Export to PDF-ready SVG" }
+      ]
+    },
+    "benefits": [
+      {
+        "icon": "fluent:compass-northwest-20-filled",
+        "title": "Professional Precision",
+        "desc": "Industry-standard 1:100 scale, real-world GPS anchoring, and OpenStreetMap tracing ensure your floor plans match the physical building."
+      },
+      {
+        "icon": "fluent:play-circle-20-filled",
+        "title": "Visual Route Planning",
+        "desc": "Build cleaning routes with auto-pathfinding through doors and corridors, then simulate them with animated playback for training and verification."
+      },
+      {
+        "icon": "fluent:people-20-filled",
+        "title": "Role-Based Access",
+        "desc": "Admins edit, employees navigate their assigned routes and tasks, clients explore their buildings view-only. Everyone sees what they need."
+      }
+    ],
+    "cta": {
+      "title": "See Floor Plans in action",
+      "body": "Book a demo and we'll walk you through the editor, route planner, and task mapping — using your own buildings if you'd like.",
+      "cta_demo": "Book a Demo",
+      "cta_features": "See All Features"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "FUNKTION",
+      "title": "Plantegninger",
+      "body": "Tegn dine bygninger, planlæg dine ruter, tildel opgaver pr. rum — og giv hvert teammedlem et interaktivt kort over opgaven.",
+      "cta_demo": "Book en Demo",
+      "cta_how": "Se Hvordan Det Virker"
+    },
+    "trust": [
+      "22 rumtyper",
+      "44+ objekttyper",
+      "Virkelighedstro 1:100-skala",
+      "OpenStreetMap-integration"
+    ],
+    "editor": {
+      "subtitle": "Indbygget editor",
+      "title": "Tegn dine bygninger med præcision",
+      "body1": "Opret plantegninger direkte i platformen — ingen ekstern software nødvendig. Tegn rum som rektangler eller frie polygoner, placer vægge med konfigurerbar tykkelse, og møbler rum fra et bibliotek med 44+ objekttyper på tværs af møbler, hvidevarer og arkitektoniske elementer.",
+      "body2": "Alt renderes i branchestandard 1:100-skala med virkelighedstro mål. Upload egne møbler, anvend materialer og teksturer, og brug fuld fortryd/gentag mens du arbejder.",
+      "badges": ["Rumtegning", "Polygonformer", "Vægværktøj", "Møbelbibliotek", "Materialevælger", "Egne uploads", "Fortryd / Gentag"],
+      "visual_title": "Editorværktøjer",
+      "visual_items": [
+        { "icon": "fluent:design-ideas-20-filled", "text": "Rektangulære og polygonrum" },
+        { "icon": "fluent:line-horizontal-3-20-filled", "text": "Indvendige, udvendige og skillevægge" },
+        { "icon": "fluent:couch-20-filled", "text": "44+ objekter du kan trække" },
+        { "icon": "fluent:color-20-filled", "text": "Teksturer, materialer og farver" },
+        { "icon": "fluent:cloud-arrow-up-20-filled", "text": "Upload dine egne møbler" }
+      ]
+    },
+    "accuracy": {
+      "subtitle": "Virkelighedstro præcision",
+      "title": "Tegn oven på satellitbilleder med OpenStreetMap",
+      "body1": "Slå en hvilken som helst bygningsadresse op, og læg det virkelige bygningsaftryk direkte ind i editoren. Tegn vægge, kalibrer skala og forankr din plantegning til GPS-koordinater — så hvert rum, hver gang og hver indgang matcher den fysiske bygning.",
+      "body2": "Geo-forankringssystemet mapper pixels til meter med konfigurerbar rotation og skala. Når den er verificeret, er din plantegning rumligt præcis og klar til operationel brug.",
+      "badges": ["Adresseopslag", "OSM-overlay", "GPS-forankring", "Skalakalibrering", "Bygningsdimensioner", "Verificeringsworkflow"],
+      "visual_title": "Geografisk forankring",
+      "steps": [
+        "Søg efter bygningsadressen",
+        "Læg OSM-bygningsaftrykket ind",
+        "Tegn og kalibrer til virkelig skala",
+        "Verificer og lås forankringen"
+      ]
+    },
+    "taskMapping": {
+      "subtitle": "Opgavemapping",
+      "title": "Tildel opgaver til rum, ikke kun til personer",
+      "body1": "Hver af de 22 rumtyper mappes automatisk til den rette opgaveskabelon — kontorer får skrivebordstørring, køkkener får rengøring af hvidevarer, toiletter får hygiejneprotokoller. Tilsidesæt enhver mapping manuelt, når du har brug for det.",
+      "body2": "Det interaktive opgavekort viser færdiggørelsesstatus pr. rum med advarsler om forfaldne opgaver, senest-udført-datoer og frekvensbadges. Ledere ser det fulde billede. Medarbejdere ser præcis, hvad der skal gøres og hvor.",
+      "badges": ["22 rumtyper", "Automatisk skabelonmapping", "Opgaver pr. rum", "Færdiggørelsessporing", "Forfaldne advarsler", "Frekvensbadges"],
+      "visual_title": "Rumtyper",
+      "roomTypes": ["Kontor", "Mødelokale", "Køkken", "Toilet", "Gang", "Indgang", "Kantine", "Depot", "Lounge", "Trappe", "Terrasse", "+11 flere"]
+    },
+    "routes": {
+      "subtitle": "Ruteplanlægning",
+      "title": "Planlæg rengøringsruter og simuler dem trin for trin",
+      "body1": "Byg navngivne rengøringsruter med ordnede rumstop, indgangspunkter og estimerede varigheder. Waypointnetværket registrerer automatisk stier gennem døre og gange, så ruter følger reelle gangbare stier — ikke lige linjer gennem vægge.",
+      "body2": "Kør den animerede rutesimulator for at se en karakter gå ruten rum for rum og udføre opgaver undervejs. Brug den til oplæring af nye medarbejdere, verificering af ruteeffektivitet eller præsentation for kunder.",
+      "badges": ["Navngivne ruter", "Waypointnetværk", "Automatisk stifinding", "Rutesimulering", "Varighedsestimater", "Navigation på tværs af etager", "Opgavetildeling"],
+      "visual_title": "Rutesimulator",
+      "steps": [
+        "Definer indgangspunkt og rumrækkefølge",
+        "Waypoints registrerer gangbare stier automatisk",
+        "Tildel opgaver til hvert stop",
+        "Simuler med animeret afspilning"
+      ]
+    },
+    "multiFloor": {
+      "subtitle": "Flere etager og bygninger",
+      "title": "Administrer hele bygningsporteføljer",
+      "body1": "Tilføj ubegrænsede etager pr. bygning og ubegrænsede bygninger pr. kunde. Naviger mellem etager med ét klik, og link døre på tværs af etager, så ruter kan spænde over trapper og elevatorer.",
+      "body2": "Kunder ser alle deres lokationer i gittervisning. Medarbejdere navigerer til deres tildelte bygning og etage. Ledere får det fulde overblik på tværs af alle steder, de opererer.",
+      "badges": ["Ubegrænsede etager", "Ubegrænsede bygninger", "Etageskift", "Dørkobling på tværs af etager", "Bygningsgittervisning"],
+      "visual_title": "Tre visninger, én platform",
+      "visual_items": [
+        { "icon": "fluent:shield-person-20-filled", "text": "Admin — fuld editor og alle steder" },
+        { "icon": "fluent:person-20-filled", "text": "Medarbejder — tildelte ruter og opgaver" },
+        { "icon": "fluent:person-20-filled", "text": "Kunde — skrivebeskyttet udforskning" }
+      ]
+    },
+    "annotations": {
+      "subtitle": "Annoteringer og eksport",
+      "title": "Annoter, dokumenter og del",
+      "body1": "Tilføj pile, tekstmærkater og retningsmarkører direkte på plantegninger for at fremhæve særlige instruktioner, farezoner eller rengøringsprioriteter. Annoteringer tegnes på et separat canvaslag, så de aldrig forstyrrer den underliggende plan.",
+      "body2": "Eksporter annoterede plantegninger som PNG-billeder eller PDF-klar SVG til kunderapporter, træningsmanualer eller kvalitetsdokumentation.",
+      "badges": ["Pilannoteringer", "Tekstmærkater", "Retningsmarkører", "PNG-eksport", "PDF-klar SVG", "Lokationsguider"],
+      "visual_title": "Annoteringsværktøjer",
+      "visual_items": [
+        { "icon": "fluent:arrow-right-20-filled", "text": "Pile med retningsstyring" },
+        { "icon": "fluent:text-font-20-filled", "text": "Tekst med fed, kursiv, kontur" },
+        { "icon": "fluent:image-20-filled", "text": "Eksporter til PNG" },
+        { "icon": "fluent:document-pdf-20-filled", "text": "Eksporter til PDF-klar SVG" }
+      ]
+    },
+    "benefits": [
+      {
+        "icon": "fluent:compass-northwest-20-filled",
+        "title": "Professionel præcision",
+        "desc": "Branchestandard 1:100-skala, GPS-forankring i den virkelige verden og OpenStreetMap-tegning sikrer, at dine plantegninger matcher den fysiske bygning."
+      },
+      {
+        "icon": "fluent:play-circle-20-filled",
+        "title": "Visuel ruteplanlægning",
+        "desc": "Byg rengøringsruter med automatisk stifinding gennem døre og gange, og simuler dem med animeret afspilning til træning og verificering."
+      },
+      {
+        "icon": "fluent:people-20-filled",
+        "title": "Rollebaseret adgang",
+        "desc": "Administratorer redigerer, medarbejdere navigerer deres tildelte ruter og opgaver, kunder udforsker deres bygninger i skrivebeskyttet tilstand. Alle ser det, de har brug for."
+      }
+    ],
+    "cta": {
+      "title": "Se plantegninger i aktion",
+      "body": "Book en demo, og vi guider dig gennem editoren, ruteplanlæggeren og opgavemapping — gerne med dine egne bygninger.",
+      "cta_demo": "Book en Demo",
+      "cta_features": "Se Alle Funktioner"
+    }
+  }
+}

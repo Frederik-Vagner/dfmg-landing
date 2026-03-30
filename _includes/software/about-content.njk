@@ -1,0 +1,102 @@
+    <!-- Hero -->
+    <section class="platform-hero" style="padding-bottom: 3rem;">
+        <div class="container">
+            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+        </div>
+    </section>
+
+    <!-- Origin story -->
+    <section class="section">
+        <div class="container">
+            <div class="flex flex-2">
+                <div>
+                    <div class="subtitle text-primary">{{ t.story.subtitle }}</div>
+                    <h2 class="title text-charcoal" style="font-size: 1.8rem;">{{ t.story.title }}</h2>
+                    <p class="body text-gray mb-2">{{ t.story.body1 }}</p>
+                    <p class="body text-gray mb-2">{{ t.story.body2 }}</p>
+                    <p class="body text-gray">{{ t.story.body3 }}</p>
+                </div>
+                <div>
+                    <!-- TODO: Replace with team photo or photo of you working -->
+                    <div class="screenshot-placeholder screenshot-placeholder--light" style="min-height: 350px;">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:camera-20-filled" inline style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
+                            {{ t.story.placeholder_text }}<br>
+                            <small>{{ t.story.placeholder_hint }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="subtitle text-primary">{{ t.philosophy.subtitle }}</div>
+                <div class="title text-charcoal">{{ t.philosophy.title }}</div>
+            </div>
+
+            <div class="flex">
+                <div class="card p-2 bg-gradient-white border-left-primary">
+                    <h4>{{ t.philosophy.card1_title }}</h4>
+                    <p>{{ t.philosophy.card1_desc }}</p>
+                </div>
+                <div class="card p-2 bg-gradient-white border-left-primary">
+                    <h4>{{ t.philosophy.card2_title }}</h4>
+                    <p>{{ t.philosophy.card2_desc }}</p>
+                </div>
+                <div class="card p-2 bg-gradient-white border-left-primary">
+                    <h4>{{ t.philosophy.card3_title }}</h4>
+                    <p>{{ t.philosophy.card3_desc }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech approach -->
+    <section class="section">
+        <div class="container">
+            <div class="flex flex-2">
+                <div>
+                    <!-- TODO: Replace with simple architecture visual or tech stack diagram -->
+                    <div class="screenshot-placeholder screenshot-placeholder--light" style="min-height: 300px;">
+                        <div style="text-align: center;">
+                            <iconify-icon icon="fluent:organization-20-filled" inline style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
+                            {{ t.tech.placeholder_text }}<br>
+                            <small>{{ t.tech.placeholder_hint }}</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="subtitle text-primary">{{ t.tech.subtitle }}</div>
+                    <h2 class="title text-charcoal" style="font-size: 1.8rem;">{{ t.tech.title }}</h2>
+                    <ul class="list" style="margin-top: 1rem;">
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item1_strong }}</strong> — {{ t.tech.item1_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item2_strong }}</strong> — {{ t.tech.item2_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item3_strong }}</strong> — {{ t.tech.item3_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item4_strong }}</strong> — {{ t.tech.item4_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item5_strong }}</strong> — {{ t.tech.item5_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item6_strong }}</strong> — {{ t.tech.item6_text }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to service company -->
+    <section class="section">
+        <div class="container">
+            <div class="platform-cta">
+                <div class="title">{{ t.cta.title }}</div>
+                <div class="body">{{ t.cta.body }}</div>
+                <div class="hero-actions">
+                    <a href="/pages/facility/indblik/om.html" class="btn btn--ghost btn--md">{{ t.cta.btn_team }}</a>
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.btn_demo }}</a>
+                </div>
+            </div>
+        </div>
+    </section>

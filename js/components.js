@@ -3,6 +3,10 @@ function isPlatformPage() {
     return window.location.pathname.startsWith('/pages/software/');
 }
 
+function isPlatformDanish() {
+    return window.location.pathname.startsWith('/pages/software/da/');
+}
+
 // Replace site-data tokens in runtime-loaded component HTML
 function replaceSiteTokens(html) {
     var s = window.DFMG || {};
@@ -21,8 +25,13 @@ function replaceSiteTokens(html) {
 async function loadComponents() {
     try {
         const platform = isPlatformPage();
-        const headerPath = platform ? '/pages/software/components/header-platform.html' : '/pages/facility/components/header.html';
-        const footerPath = platform ? '/pages/software/components/footer-platform.html' : '/pages/facility/components/footer.html';
+        const platformDa = isPlatformDanish();
+        const headerPath = platform
+            ? (platformDa ? '/pages/software/components/header-platform-da.html' : '/pages/software/components/header-platform.html')
+            : '/pages/facility/components/header.html';
+        const footerPath = platform
+            ? (platformDa ? '/pages/software/components/footer-platform-da.html' : '/pages/software/components/footer-platform.html')
+            : '/pages/facility/components/footer.html';
 
         const fetchPromises = [
             fetch(headerPath),

@@ -1,0 +1,316 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "PRICING",
+      "title": "Simple, transparent pricing",
+      "body": "Choose the plan that fits your company. Scale up modules as you grow."
+    },
+    "tiers": [
+      {
+        "name": "Starter",
+        "desc": "For small service companies getting started with digital tools.",
+        "price": "Contact us",
+        "featured": false,
+        "badge": "",
+        "features": [
+          "Calendar & task scheduling",
+          "Client management",
+          "Employee portal",
+          "Basic invoicing",
+          "Time tracking",
+          "Up to 10 employees"
+        ],
+        "ctaText": "Get Started",
+        "ctaHref": "/pages/software/demo.html",
+        "ctaClass": "btn btn--secondary btn--md btn--full"
+      },
+      {
+        "name": "Professional",
+        "desc": "For growing companies that need the full operational toolkit.",
+        "price": "Contact us",
+        "featured": true,
+        "badge": "Most Popular",
+        "features": [
+          "Everything in Starter",
+          "Full accounting & e-Faktura",
+          "Payroll with eIndkomst",
+          "Inventory & purchase orders",
+          "Offer builder & CRM",
+          "Document templates",
+          "Analytics & KPI",
+          "Up to 50 employees"
+        ],
+        "ctaText": "Book a Demo",
+        "ctaHref": "/pages/software/demo.html",
+        "ctaClass": "btn btn--success btn--md btn--full"
+      },
+      {
+        "name": "Enterprise",
+        "desc": "For established companies needing full customization and scale.",
+        "price": "Custom",
+        "featured": false,
+        "badge": "",
+        "features": [
+          "Everything in Professional",
+          "BankConnect integration",
+          "Email automation & sequences",
+          "Custom branding",
+          "API access",
+          "Dedicated support",
+          "Unlimited employees"
+        ],
+        "ctaText": "Contact Sales",
+        "ctaHref": "/pages/software/contact.html",
+        "ctaClass": "btn btn--secondary btn--md btn--full"
+      }
+    ],
+    "comparison": {
+      "title": "Module comparison",
+      "body": "See exactly what's included in each plan.",
+      "colModule": "Module",
+      "colStarter": "Starter",
+      "colProfessional": "Professional",
+      "colEnterprise": "Enterprise",
+      "categories": [
+        {
+          "name": "Core Operations",
+          "rows": [
+            { "module": "Calendar & Scheduling", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Task Management", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Time Tracking", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Inspections & Quality", "starter": false, "professional": true, "enterprise": true }
+          ]
+        },
+        {
+          "name": "Client & Employee",
+          "rows": [
+            { "module": "Client Management", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Client Portal", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Employee Portal", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Holiday Management", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Improvement & Tests", "starter": false, "professional": true, "enterprise": true }
+          ]
+        },
+        {
+          "name": "Finance & Payroll",
+          "rows": [
+            { "module": "Basic Invoicing", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Full Accounting", "starter": false, "professional": true, "enterprise": true },
+            { "module": "e-Faktura", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Payroll & eIndkomst", "starter": false, "professional": true, "enterprise": true },
+            { "module": "BankConnect", "starter": false, "professional": false, "enterprise": true }
+          ]
+        },
+        {
+          "name": "Sales & Documents",
+          "rows": [
+            { "module": "Offer Builder", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Email Automation", "starter": false, "professional": false, "enterprise": true },
+            { "module": "Document Templates", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Analytics & KPI", "starter": false, "professional": true, "enterprise": true }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How does billing work?",
+          "answer": "We bill monthly or annually. Annual billing comes with a discount. You can switch plans or cancel at any time with 30 days notice."
+        },
+        {
+          "question": "How long does onboarding take?",
+          "answer": "Most companies are up and running within a week. We help you import existing data (employees, clients) and configure the modules you need. Larger setups with full accounting migration may take 2-3 weeks."
+        },
+        {
+          "question": "Where is my data stored?",
+          "answer": "All data is hosted in the EU on secure, GDPR-compliant infrastructure. Each tenant's data is fully isolated in its own database schema."
+        },
+        {
+          "question": "Can I add modules later?",
+          "answer": "Absolutely. The platform is fully modular. Start with what you need and enable additional modules as your business grows. No data migration needed — everything is already connected."
+        },
+        {
+          "question": "Is Danish tax/payroll compliance included?",
+          "answer": "Yes. eIndkomst reporting to SKAT, Danish holiday law calculations, ATP/pension, and e-Faktura support are built in. We keep the platform updated with regulatory changes."
+        },
+        {
+          "question": "Do you offer a free trial?",
+          "answer": "We offer a guided demo followed by a trial period so you can evaluate the platform with your own data. Contact us to get started."
+        }
+      ]
+    },
+    "trust": {
+      "items": ["No setup fees", "Cancel anytime", "Danish-language support", "EU data hosting"]
+    },
+    "testimonial": {
+      "quote": "[Testimonial about value — e.g. 'We were paying for Planday + Billy + Salary.dk separately. DFMG replaced all three and saved us X kr/month while giving us features none of them had.']",
+      "name": "[Name]",
+      "company": "[Company], [X] employees"
+    },
+    "cta": {
+      "title": "Not sure which plan?",
+      "body": "Book a call and we'll walk you through the right fit for your company — based on what you actually need, not what we want to sell.",
+      "cta_demo": "Book a Demo",
+      "cta_sales": "Contact Sales"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "PRISER",
+      "title": "Enkel, gennemsigtig prissaetning",
+      "body": "Vaelg den plan, der passer til jeres virksomhed. Skaler moduler op, efterhanden som I vokser."
+    },
+    "tiers": [
+      {
+        "name": "Starter",
+        "desc": "Til mindre servicevirksomheder, der vil i gang med digitale vaerktojer.",
+        "price": "Kontakt os",
+        "featured": false,
+        "badge": "",
+        "features": [
+          "Kalender & opgaveplanlægning",
+          "Kundestyring",
+          "Medarbejderportal",
+          "Basal fakturering",
+          "Tidsregistrering",
+          "Op til 10 medarbejdere"
+        ],
+        "ctaText": "Kom i Gang",
+        "ctaHref": "/pages/software/demo.html",
+        "ctaClass": "btn btn--secondary btn--md btn--full"
+      },
+      {
+        "name": "Professional",
+        "desc": "Til virksomheder i vaekst, der har brug for det fulde driftsvaerktoej.",
+        "price": "Kontakt os",
+        "featured": true,
+        "badge": "Mest Populaer",
+        "features": [
+          "Alt i Starter",
+          "Fuld bogforing & e-Faktura",
+          "Lon med eIndkomst",
+          "Lager & indkobsordrer",
+          "Tilbudsbygger & CRM",
+          "Dokumentskabeloner",
+          "Analyser & KPI",
+          "Op til 50 medarbejdere"
+        ],
+        "ctaText": "Book en Demo",
+        "ctaHref": "/pages/software/demo.html",
+        "ctaClass": "btn btn--success btn--md btn--full"
+      },
+      {
+        "name": "Enterprise",
+        "desc": "Til etablerede virksomheder med behov for fuld tilpasning og skalering.",
+        "price": "Tilpasset",
+        "featured": false,
+        "badge": "",
+        "features": [
+          "Alt i Professional",
+          "BankConnect-integration",
+          "Email-automatisering & sekvenser",
+          "Eget branding",
+          "API-adgang",
+          "Dedikeret support",
+          "Ubegrænset antal medarbejdere"
+        ],
+        "ctaText": "Kontakt Salg",
+        "ctaHref": "/pages/software/contact.html",
+        "ctaClass": "btn btn--secondary btn--md btn--full"
+      }
+    ],
+    "comparison": {
+      "title": "Modulsammenligning",
+      "body": "Se praecis hvad der er inkluderet i hver plan.",
+      "colModule": "Modul",
+      "colStarter": "Starter",
+      "colProfessional": "Professional",
+      "colEnterprise": "Enterprise",
+      "categories": [
+        {
+          "name": "Kernedrift",
+          "rows": [
+            { "module": "Kalender & Planlægning", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Opgavestyring", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Tidsregistrering", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Inspektioner & Kvalitet", "starter": false, "professional": true, "enterprise": true }
+          ]
+        },
+        {
+          "name": "Kunde & Medarbejder",
+          "rows": [
+            { "module": "Kundestyring", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Kundeportal", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Medarbejderportal", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Feriestyring", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Forbedring & Tests", "starter": false, "professional": true, "enterprise": true }
+          ]
+        },
+        {
+          "name": "Okonomi & Lon",
+          "rows": [
+            { "module": "Basal Fakturering", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Fuld Bogforing", "starter": false, "professional": true, "enterprise": true },
+            { "module": "e-Faktura", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Lon & eIndkomst", "starter": false, "professional": true, "enterprise": true },
+            { "module": "BankConnect", "starter": false, "professional": false, "enterprise": true }
+          ]
+        },
+        {
+          "name": "Salg & Dokumenter",
+          "rows": [
+            { "module": "Tilbudsbygger", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Email-automatisering", "starter": false, "professional": false, "enterprise": true },
+            { "module": "Dokumentskabeloner", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Analyser & KPI", "starter": false, "professional": true, "enterprise": true }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ofte stillede sporgsmal",
+      "items": [
+        {
+          "question": "Hvordan fungerer faktureringen?",
+          "answer": "Vi fakturerer manedligt eller arligt. Arlig betaling giver rabat. I kan skifte plan eller opsige nar som helst med 30 dages varsel."
+        },
+        {
+          "question": "Hvor lang tid tager onboarding?",
+          "answer": "De fleste virksomheder er oppe at kore inden for en uge. Vi hjaelper med at importere eksisterende data (medarbejdere, kunder) og konfigurere de moduler, I har brug for. Storre opsaetninger med fuld regnskabsmigrering kan tage 2-3 uger."
+        },
+        {
+          "question": "Hvor opbevares mine data?",
+          "answer": "Alle data hostes i EU pa sikker, GDPR-kompatibel infrastruktur. Hver lejers data er fuldt isoleret i sit eget databaseskema."
+        },
+        {
+          "question": "Kan jeg tilfoeje moduler senere?",
+          "answer": "Helt sikkert. Platformen er fuldt modulaer. Start med det I har brug for, og aktiver yderligere moduler efterhanden som jeres forretning vokser. Ingen datamigrering nodvendig — alt er allerede forbundet."
+        },
+        {
+          "question": "Er dansk skatte-/loncompliance inkluderet?",
+          "answer": "Ja. eIndkomst-indberetning til SKAT, dansk ferielovsberegning, ATP/pension og e-Faktura-understottelse er indbygget. Vi holder platformen opdateret med lovgivningsaendringer."
+        },
+        {
+          "question": "Tilbyder I en gratis proveperiode?",
+          "answer": "Vi tilbyder en guidet demo efterfulgt af en proveperiode, sa I kan evaluere platformen med jeres egne data. Kontakt os for at komme i gang."
+        }
+      ]
+    },
+    "trust": {
+      "items": ["Ingen oprettelsesgebyr", "Opsig nar som helst", "Support pa dansk", "EU-datahosting"]
+    },
+    "testimonial": {
+      "quote": "[Udtalelse om vaerdi — f.eks. 'Vi betalte for Planday + Billy + Salary.dk hver for sig. DFMG erstattede alle tre og sparede os X kr/md, samtidig med at vi fik funktioner, ingen af dem havde.']",
+      "name": "[Navn]",
+      "company": "[Virksomhed], [X] medarbejdere"
+    },
+    "cta": {
+      "title": "Ikke sikker pa hvilken plan?",
+      "body": "Book et opkald, sa gennemgar vi den rette losning til jeres virksomhed — baseret pa hvad I faktisk har brug for, ikke hvad vi gerne vil saelge.",
+      "cta_demo": "Book en Demo",
+      "cta_sales": "Kontakt Salg"
+    }
+  }
+}

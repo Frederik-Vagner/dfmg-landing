@@ -1,0 +1,84 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "CONTACT",
+      "title": "Get in touch",
+      "body": "Questions about pricing, partnerships, or the platform? We'd love to hear from you."
+    },
+    "info": {
+      "heading": "Contact Sales",
+      "body": "Fill out the form and tell us about your needs. We'll get back to you within 24 hours.",
+      "bullet1": "Free and non-binding consultation",
+      "bullet2": "Tailored demo of relevant modules",
+      "bullet3": "Response within 24 hours",
+      "bullet4": "No credit card required",
+      "card_email": "Email",
+      "card_phone": "Phone",
+      "card_hours": "Office hours",
+      "card_hours_value": "Mon - Fri, 08-17 CET",
+      "card_company": "Company"
+    },
+    "form": {
+      "heading": "Send us a message",
+      "label_interest": "I'm interested in",
+      "option_select": "Select...",
+      "option_demo": "Booking a demo",
+      "option_pricing": "Pricing information",
+      "option_partnership": "Partnership",
+      "option_other": "Other",
+      "label_company": "Company",
+      "placeholder_company": "Company name",
+      "label_name": "Full name",
+      "placeholder_name": "Your name",
+      "label_email": "Email",
+      "placeholder_email": "you@example.dk",
+      "label_code": "Code",
+      "label_phone": "Phone",
+      "placeholder_phone": "12 34 56 78",
+      "label_message": "Message",
+      "placeholder_message": "Tell us about your needs...",
+      "btn_submit": "Send Message"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "KONTAKT",
+      "title": "Kontakt os",
+      "body": "Spørgsmål om priser, partnerskaber eller platformen? Vi hører gerne fra dig."
+    },
+    "info": {
+      "heading": "Kontakt Salg",
+      "body": "Udfyld formularen og fortæl os om jeres behov. Vi vender tilbage inden for 24 timer.",
+      "bullet1": "Gratis og uforpligtende rådgivning",
+      "bullet2": "Skræddersyet demo af relevante moduler",
+      "bullet3": "Svar inden for 24 timer",
+      "bullet4": "Intet kreditkort påkrævet",
+      "card_email": "E-mail",
+      "card_phone": "Telefon",
+      "card_hours": "Åbningstider",
+      "card_hours_value": "Man - fre, 08-17 CET",
+      "card_company": "Virksomhed"
+    },
+    "form": {
+      "heading": "Send os en besked",
+      "label_interest": "Jeg er interesseret i",
+      "option_select": "Vælg...",
+      "option_demo": "At booke en demo",
+      "option_pricing": "Prisinformation",
+      "option_partnership": "Partnerskab",
+      "option_other": "Andet",
+      "label_company": "Virksomhed",
+      "placeholder_company": "Virksomhedsnavn",
+      "label_name": "Fulde navn",
+      "placeholder_name": "Dit navn",
+      "label_email": "E-mail",
+      "placeholder_email": "dig@eksempel.dk",
+      "label_code": "Kode",
+      "label_phone": "Telefon",
+      "placeholder_phone": "12 34 56 78",
+      "label_message": "Besked",
+      "placeholder_message": "Fortæl os om jeres behov...",
+      "btn_submit": "Send Besked"
+    }
+  }
+}
