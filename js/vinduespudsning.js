@@ -35,19 +35,3 @@ if (sliderHandle && afterImage && sliderContainer) {
         isDragging = false;
     }
 }
-
-// Comparison buttons via data attributes
-document.querySelectorAll('[data-comparison]').forEach(btn => {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-comparison]').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        if (this.getAttribute('data-comparison') === 'before') {
-            afterImage.style.opacity = '0';
-            sliderHandle.style.left = '0%';
-        } else {
-            afterImage.style.opacity = '1';
-            sliderHandle.style.left = '100%';
-        }
-    });
-});

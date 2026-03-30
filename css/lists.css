@@ -121,3 +121,25 @@
 .toc-list a:hover {
     color: var(--charcoal);
 }
+
+/* ── Slide Feature List ── */
+.slide-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all var(--transition-normal);
+}
+
+.slide-feature-list li:last-child {
+    margin-bottom: 0;
+}
+
+.slide-feature-list li:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
+}

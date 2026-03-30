@@ -130,3 +130,44 @@
     z-index: 9999;
     box-shadow: var(--shadow-lg);
 }
+
+/* ── Share Buttons ── */
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.share-linkedin { background: var(--linkedin); }
+.share-facebook { background: var(--facebook); }
+.share-email { background: var(--gray-light); }
+
+/* ── Back Button ── */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+    border: 2px solid var(--charcoal);
+    color: var(--charcoal);
+    padding: 12px 24px;
+    border-radius: var(--radius-circle);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+}
+
+.back-btn:hover {
+    background: var(--charcoal);
+    color: var(--white);
+}

@@ -138,65 +138,8 @@
     }
 }
 
-.two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
-.two-column1 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    align-items: center;
-}
-
-/* Visual Blocks */
-.slide-visual {
-    width: 100%;
-    height: 450px;
-    border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-}
-
-.slide-visual1 {
-    border-radius: var(--radius-normal);
-    padding: var(--padding-lg);
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.1rem;
-    text-align: center;
-    box-shadow: var(--shadow-xl);
-}
-
-/* Photo Placeholder */
-.slide-photo {
-    width: 100%;
-    height: 200px;
-    background: rgb(0 0 0 / 10%);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    text-align: center;
-    min-height: 300px;
-}
+/* .two-column, .two-column1 — moved to layout.css */
+/* .slide-visual, .slide-visual1, .slide-photo — moved to photos.css */
 
 /* Enhanced Navigation - Horizontal (Bottom Center) */
 .horizontal-container ~ .slide-nav {
@@ -281,16 +224,7 @@
         font-size: 2.5rem;
     }
 
-    .two-column,
-    .two-column1 {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .slide-visual {
-        height: 300px;
-        font-size: 1.1rem;
-    }
+    /* .two-column responsive — in layout.css */
 
     .slide-nav {
         right: 20px;
@@ -302,27 +236,7 @@
    Reusable across sustainability pages
    ======================================== */
 
-/* Feature List (used by sustainability.html) */
-.slide-feature-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-    padding: 1rem 1.25rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all var(--transition-normal);
-}
-
-.slide-feature-list li:last-child {
-    margin-bottom: 0;
-}
-
-.slide-feature-list li:hover {
-    transform: translateX(10px);
-    box-shadow: var(--shadow-md);
-}
+/* .slide-feature-list — moved to lists.css */
 
 /* Slide Grid — 2x2 layout for sustainability overview slides */
 .slide-grid {
@@ -352,39 +266,9 @@
     max-height: 350px;
 }
 
-/* Governance Number (used by sustainability.html slide 4) */
-.governance-number {
-    color: var(--governance);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-medium);
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Step Number — small variant for klima.html */
-.step-number--small {
-    width: 25px;
-    height: 25px;
-    background: var(--cyan);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: var(--font-weight-bold);
-    font-size: 0.9rem;
-    margin: 0 auto 1rem;
-}
-
-/* Visual Gradients (used by sustainability.html) */
-.environment-visual {
-    background: var(--bg-gradient-success);
-}
-
-.social-visual {
-    background: var(--gradient-social);
-}
+/* .governance-number — moved to typography.css */
+/* .step-number--small — moved to badges.css */
+/* .environment-visual, .social-visual — moved to photos.css */
 
 /* ========================================
    SLIDE THEMES

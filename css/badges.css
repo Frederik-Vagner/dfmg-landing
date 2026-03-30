@@ -71,3 +71,32 @@
     top: 2rem;
     left: 2rem;
 }
+
+/* Step Number (numbered process circles) */
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--charcoal);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    margin: 0 auto 1rem;
+}
+
+.step-number--small {
+    width: 25px;
+    height: 25px;
+    background: var(--cyan);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-bold);
+    font-size: 0.9rem;
+    margin: 0 auto 1rem;
+}
