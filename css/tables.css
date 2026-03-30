@@ -1,43 +1,10 @@
 /* ====================================
-   PLATFORM-SPECIFIC STYLES
-   Only rules unique to /pages/software/ pages.
-   Generic patterns live in shared CSS files:
-   - sections.css (platform-hero, platform-cta)
-   - cards.css (module-card, value-card, step-card)
-   - forms.css (platform-form, form-row-2)
-   - sections.css (feature-row, trust-row, callout-box, demo-split)
+   TABLES
+   Shared table styles: data tables,
+   pricing tables, comparison tables
    ==================================== */
 
-/* ── Header modifier ── */
-.header--platform .logo-suffix {
-    color: var(--primary);
-    font-weight: var(--font-weight-medium);
-}
-
-/* ── Screenshot placeholder ── */
-.screenshot-placeholder {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-md);
-    padding: 3rem 2rem;
-    color: var(--text-on-dark-subtle);
-    font-size: 0.9rem;
-    text-align: center;
-    max-width: 900px;
-    margin: 2rem auto 0;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.screenshot-placeholder--light {
-    background: linear-gradient(135deg, var(--bg-muted) 0%, var(--bg-light) 100%);
-    border-color: var(--color-border);
-    color: var(--gray-muted);
-}
-
-/* ── Bank Connect function table ── */
+/* ── Bank Connect Table ── */
 .bc-table-wrapper {
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -94,33 +61,7 @@
     font-size: 0.8rem;
 }
 
-/* ── Shared placeholder icons ── */
-.placeholder-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    display: block;
-    color: var(--primary);
-}
-
-.placeholder-list-icon {
-    color: var(--primary);
-    margin-right: 0.5rem;
-    width: 16px;
-}
-
-/* --- Pricing --- */
-
-/* ── Tier cards ── */
-.pricing-tiers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: start;
-}
-
-/* .tier-card — defined in cards.css */
-
-/* ── Comparison table ── */
+/* ── Comparison Table ── */
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
@@ -168,16 +109,57 @@
     color: var(--color-border-muted);
 }
 
-/* .faq-list, .faq-item__* — defined in forms.css */
+/* ── Pricing Table ── */
+.pricing-table {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
 
-/* ── Responsive ── */
+.pricing-header {
+    background: var(--bg-gradient-charcoal);
+    color: var(--white);
+    padding: var(--padding-md) var(--padding-lg);
+    text-align: center;
+}
+
+.pricing-body {
+    padding: var(--padding-lg);
+}
+
+.pricing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: var(--border-light);
+}
+
+.pricing-item:last-child {
+    border-bottom: none;
+}
+
+.pricing-name {
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    flex: 1;
+}
+
+.pricing-specs {
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.pricing-price {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+/* ── Responsive Tables ── */
 @media (max-width: 768px) {
-    .pricing-tiers {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
     .comparison-table {
         font-size: 0.8rem;
     }
@@ -185,5 +167,23 @@
     .comparison-table th,
     .comparison-table td {
         padding: 0.5rem;
+    }
+
+    .pricing-header {
+        padding: 1rem;
+    }
+
+    .pricing-body {
+        padding: 1rem;
+    }
+
+    .pricing-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .pricing-specs {
+        margin-right: 0;
     }
 }

@@ -41,6 +41,13 @@
     padding: var(--gap-sm) var(--gap-lg);
 }
 
+/* --- Platform Header Variant --- */
+
+.header--platform .logo-suffix {
+    color: var(--primary);
+    font-weight: var(--font-weight-medium);
+}
+
 /* --- Desktop Navigation --- */
 
 .nav {

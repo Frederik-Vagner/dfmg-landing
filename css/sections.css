@@ -357,28 +357,7 @@
     flex: 1;
 }
 
-/* ── Photos Grid ── */
-.photos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(3, 150px);
-    gap: var(--gap-md);
-    justify-content: center;
-}
-
-.photo {
-    width: 150px;
-    height: 150px;
-    border-radius: var(--radius-normal);
-    background: var(--color-border);
-}
-
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius-normal);
-}
+/* .photos-grid, .photo — moved to photos.css */
 
 /* ── Carousel ── */
 .carousel {

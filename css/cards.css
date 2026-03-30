@@ -218,6 +218,13 @@
 }
 
 /* ── Tier card (pricing) ── */
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
 .tier-card {
     background: var(--white);
     border-radius: var(--radius-md);
@@ -674,54 +681,7 @@
     color: var(--primary);
 }
 
-/* ── Pricing Table ── */
-.pricing-table {
-    background: var(--bg-surface);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    margin-bottom: 2rem;
-}
-
-.pricing-header {
-    background: var(--bg-gradient-charcoal);
-    color: var(--white);
-    padding: var(--padding-md) var(--padding-lg);
-    text-align: center;
-}
-
-.pricing-body {
-    padding: var(--padding-lg);
-}
-
-.pricing-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: var(--border-light);
-}
-
-.pricing-item:last-child {
-    border-bottom: none;
-}
-
-.pricing-name {
-    font-weight: var(--font-weight-medium);
-    color: var(--charcoal);
-    flex: 1;
-}
-
-.pricing-specs {
-    color: var(--gray-light);
-    font-size: 0.9rem;
-    margin-right: 1rem;
-}
-
-.pricing-price {
-    font-weight: var(--font-weight-bold);
-    color: var(--primary);
-    font-size: 1.1rem;
-}
+/* .pricing-table — moved to tables.css */
 
 /* ── Shop Item ── */
 .shop-preview {
@@ -877,22 +837,12 @@
         font-size: 1.2rem;
     }
 
-    .pricing-header {
-        padding: 1rem;
-    }
+    /* .pricing-table responsive — moved to tables.css */
 
-    .pricing-body {
-        padding: 1rem;
-    }
-
-    .pricing-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .pricing-specs {
-        margin-right: 0;
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .shop-preview {
