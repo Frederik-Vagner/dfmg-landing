@@ -1,0 +1,123 @@
+/* ====================================
+   LISTS
+   Shared list resets, feature lists,
+   checkmark lists, and article/TOC lists
+   ==================================== */
+
+/* ── List Reset ── */
+.list {
+    list-style: none;
+    padding: unset;
+}
+
+/* ── Feature List (icon + label rows) ── */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    color: var(--charcoal);
+    font-weight: var(--font-weight-semibold);
+    font-size: 1rem;
+}
+
+.feature-list iconify-icon {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Icon color variants */
+.feature-list.list-success iconify-icon {
+    color: var(--success);
+}
+
+.feature-list.list-red iconify-icon {
+    color: var(--red);
+}
+
+.feature-list.list-primary iconify-icon {
+    color: var(--primary);
+}
+
+/* ── Checkmark List (job benefits / partner comparison) ── */
+.job-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.job-benefits li {
+    padding: 0.5rem 0;
+    color: var(--gray);
+}
+
+.job-benefits li::before {
+    content: '\2713';
+    color: var(--success);
+    font-weight: var(--font-weight-bold);
+    margin-right: 1rem;
+}
+
+.partner-info .job-benefits li::before {
+    content: '\2713';
+    color: var(--success);
+    font-weight: var(--font-weight-bold);
+    margin-left: 1rem;
+    margin-right: 0;
+    float: right;
+}
+
+.partner-info .job-benefits li.unavailable::before {
+    content: '\2717';
+    color: var(--red);
+    font-weight: var(--font-weight-bold);
+    margin-left: 1rem;
+    margin-right: 0;
+    float: right;
+}
+
+/* ── Article Body Lists ── */
+.article-body ul, .article-body ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.article-body li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+::marker {
+    padding-left: 1rem;
+}
+
+/* ── Table of Contents List ── */
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toc-list a {
+    color: var(--gray-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.toc-list a:hover {
+    color: var(--charcoal);
+}

@@ -2,6 +2,11 @@
    TYPOGRAPHY
    ==================================== */
 
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
 /* Semantic text classes */
 .title {
     font-size: var(--font-size-title);

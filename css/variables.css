@@ -1,0 +1,203 @@
+/* ====================================
+   BASE — RESET, GLOBALS & VARIABLES
+   CSS reset, scrollbar, view transitions,
+   base element styles, design tokens
+   ==================================== */
+
+/* ── Reset & Scrollbar ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+/* ── View Transitions ── */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 150ms;
+    animation-timing-function: ease-out;
+}
+
+::view-transition-old(root) {
+    animation-name: nav-fade-out;
+}
+
+::view-transition-new(root) {
+    animation-name: nav-fade-in;
+}
+
+@keyframes nav-fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes nav-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ── Base Element Styles ── */
+html {
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--charcoal);
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    animation: page-enter 200ms ease-out;
+}
+
+@keyframes page-enter {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ── Design Tokens ── */
+:root {
+    /* Brand Colors */
+    --primary: #4285f4;
+    --charcoal: #344767;
+    --charcoal-dark: #2a3441;
+    --charcoal-light: #374151;
+    --success: #22c55e;
+    --gray: #565656;
+    --gray-light: #64748b;
+    --gray-muted: #9ca3af;
+    --white: #ffffff;
+    --governance: #8b5cf6;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --cyan: #06b6d4;
+    --indigo: #6366f1;
+
+    /* Social Brand Colors */
+    --linkedin: #0077b5;
+    --facebook: #1877f2;
+
+    /* Surface & Border Colors */
+    --color-border: #e2e8f0;
+    --color-border-muted: #cbd5e1;
+    --bg-light: #f1f5f9;
+    --bg-muted: #f9fafb;
+    --bg-surface: #f8fafc;
+
+    /* Tinted Backgrounds */
+    --bg-success-subtle: rgba(34, 197, 94, 0.05);
+    --bg-success-light: rgba(34, 197, 94, 0.1);
+    --bg-primary-subtle: rgba(30, 58, 138, 0.05);
+    --bg-primary-light: rgba(30, 58, 138, 0.1);
+    --border-success: rgba(34, 197, 94, 0.1);
+    --border-primary: rgba(30, 58, 138, 0.1);
+
+    /* Callout Backgrounds */
+    --bg-callout-blue: #dbeafe;
+    --bg-callout-green: #dcfce7;
+    --bg-callout-sky: linear-gradient(135deg, #eff6ff, #dbeafe);
+
+    /* Glass Morphism */
+    --glass-bg: rgba(60, 50, 40, 0.55);
+    --glass-bg-heavy: rgba(60, 50, 40, 0.85);
+    --glass-blur: 20px;
+
+    /* Text on dark backgrounds */
+    --text-on-dark: rgba(255, 255, 255, 0.85);
+    --text-on-dark-muted: rgba(255, 255, 255, 0.6);
+    --text-on-dark-subtle: rgba(255, 255, 255, 0.4);
+
+    /* Background Gradients */
+    --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
+    --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);
+    --bg-gradient-white: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    --bg-gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-dark) 100%);
+    --bg-gradient-sky: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 50%, white 100%);
+    --bg-gradient-red: linear-gradient(135deg, var(--red), #dc2626, #b91c1c);
+
+    /* Category Gradients (articles, related content, section accents) */
+    --gradient-sustainability: linear-gradient(135deg, var(--success), #16a34a);
+    --gradient-innovation: linear-gradient(135deg, var(--primary), #1d4ed8);
+    --gradient-insights: linear-gradient(135deg, var(--governance), #7c3aed);
+    --gradient-tips: linear-gradient(135deg, var(--amber), #d97706);
+    --gradient-cases: linear-gradient(135deg, var(--red), #dc2626);
+    --gradient-social: linear-gradient(135deg, var(--primary), #1d4ed8, #1e40af);
+    --gradient-cyan: linear-gradient(135deg, var(--cyan), #0891b2);
+
+    /* Typography */
+    --font-size-title: 2.5rem;
+    --font-size-subtitle: 0.9rem;
+    --font-size-body: 1.1rem;
+    --font-size-small: 0.85rem;
+    --font-size-disclaimer: 0.75rem;
+    --font-weight-light: 200;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 500;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+
+    /* Layout & Spacing */
+    --container-width-narrow: 800px;
+    --container-width-normal: 1200px;
+    --container-width-wide: 1600px;
+    --container-padding: 0 20px;
+    --section-padding: 4rem 0;
+    --gap-xs: 8px;
+    --gap-sm: 10px;
+    --gap-md: 15px;
+    --gap-lg: 20px;
+    --gap-xl: 40px;
+    --padding-sm: 0.75rem;
+    --padding-md: 1.5rem;
+    --padding-lg: 2rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+
+    /* Border Radius */
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-normal: 20px;
+    --radius-xl: 24px;
+    --radius-circle: 50px;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-md-up: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+    /* Overlays */
+    --overlay-dark: rgba(0, 0, 0, 0.4);
+    --overlay-dark-heavy: rgba(0, 0, 0, 0.8);
+    --overlay-light: rgba(255, 255, 255, 0.1);
+    --overlay-white: rgba(255, 255, 255, 0.95);
+
+    /* Borders */
+    --border-light: 1px solid var(--color-border);
+    --border-lighter: 1px solid var(--bg-light);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}

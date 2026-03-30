@@ -5,7 +5,7 @@
    - sections.css (platform-hero, platform-cta)
    - cards.css (module-card, value-card, step-card)
    - forms.css (platform-form, form-row-2)
-   - styles.css (feature-row, trust-row, callout-box, demo-split)
+   - sections.css (feature-row, trust-row, callout-box, demo-split)
    ==================================== */
 
 /* ── Header modifier ── */
@@ -168,7 +168,7 @@
     color: var(--color-border-muted);
 }
 
-/* .faq-list, .faq-item__* — defined in styles.css */
+/* .faq-list, .faq-item__* — defined in forms.css */
 
 /* ── Responsive ── */
 @media (max-width: 768px) {

@@ -160,19 +160,7 @@
     color: var(--charcoal);
 }
 
-.article-body ul, .article-body ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
-}
-
-.article-body li {
-    margin-bottom: 0.75rem;
-    position: relative;
-}
-
-::marker{
-    padding-left: 1rem;
-}
+/* .article-body ul/ol/li, ::marker — moved to lists.css */
 
 /* Article Images (article pages, not card listings) */
 .main-content > .article-image,
@@ -329,28 +317,7 @@
 
 /* .sidebar-card — defined in cards.css */
 
-/* Table of Contents */
-.toc-list {
-    list-style: none;
-    padding: 0;
-}
-
-.toc-list li {
-    margin-bottom: 0.5rem;
-}
-
-.toc-list a {
-    color: var(--gray-light);
-    text-decoration: none;
-    font-size: 0.9rem;
-    display: block;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--bg-light);
-}
-
-.toc-list a:hover {
-    color: var(--charcoal);
-}
+/* .toc-list — moved to lists.css */
 
 /* Related Articles */
 .related-article {

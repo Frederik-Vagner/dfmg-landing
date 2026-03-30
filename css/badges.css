@@ -50,6 +50,20 @@
     color: var(--white);
 }
 
+/* Image label/badge — positioned over images (legacy variant) */
+.image-label,
+.image-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--overlay-dark-heavy);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-circle);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+}
+
 .badge-overlay--light {
     background: var(--overlay-white);
     color: var(--charcoal);

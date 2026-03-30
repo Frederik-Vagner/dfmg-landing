@@ -2,7 +2,7 @@ body {
     padding-top: 100px;
 }
 
-/* .floater — defined in styles.css */
+/* .floater — defined in buttons.css */
 
 /* Services Grid Styles */
 .services-grid {
@@ -93,23 +93,7 @@ body {
 
 /* .type-badge — moved to badges.css */
 
-.features-list {
-    list-style: none;
-}
-
-.features-list li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    color: var(--charcoal);
-    font-weight: var(--font-weight-semibold);
-}
-
-.features-list iconify-icon {
-    color: var(--primary);
-    font-size: 1.2rem;
-}
+/* .features-list — removed (unused in HTML, use .feature-list from lists.css instead) */
 
 /* Stability Section */
 /* .section--fullheight — defined in sections.css */
@@ -374,7 +358,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* .image-badge — base defined in styles.css */
+/* .image-badge — base defined in badges.css */
 
 /* .card-content — defined in cards.css */
 

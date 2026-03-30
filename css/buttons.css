@@ -121,3 +121,12 @@
 .toggle-content.active {
     display: block;
 }
+
+/* ── Floater (fixed-position CTA) ── */
+.floater {
+    position: fixed;
+    bottom: var(--gap-lg);
+    left: var(--gap-lg);
+    z-index: 9999;
+    box-shadow: var(--shadow-lg);
+}

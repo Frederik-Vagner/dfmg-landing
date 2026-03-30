@@ -4,7 +4,7 @@
    ======================================== */
 
 
-/* box-sizing reset now handled globally in styles.css */
+/* box-sizing reset now handled globally in variables.css */
 .sustainability-page ul,
 .sustainability-page li {
     list-style: none;
@@ -364,7 +364,7 @@
     letter-spacing: 1px;
 }
 
-/* Step Number — small variant for klima.html (base .step-number is in styles.css) */
+/* Step Number — small variant for klima.html */
 .step-number--small {
     width: 25px;
     height: 25px;
