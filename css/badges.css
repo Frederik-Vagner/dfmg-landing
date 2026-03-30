@@ -87,6 +87,19 @@
     margin: 0 auto 1rem;
 }
 
+/* Date badge — positioned over images */
+.article-date {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--overlay-white);
+    color: var(--charcoal);
+    padding: 6px 12px;
+    border-radius: var(--radius-lg);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+}
+
 .step-number--small {
     width: 25px;
     height: 25px;

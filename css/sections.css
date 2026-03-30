@@ -478,6 +478,13 @@
     font-size: 1.5rem;
 }
 
+/* ── Featured Section ── */
+.featured-section {
+    margin-bottom: 2.5rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
 /* ── Back-to Section ── */
 .back-to-news {
     text-align: center;

@@ -132,6 +132,50 @@
     transition: all var(--transition-normal);
 }
 
+.card--media .article-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card--media .article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card--media .article-content {
+    padding: var(--padding-md);
+    background: none;
+    min-height: unset;
+}
+
+.card--media .article-excerpt {
+    color: var(--gray-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    background: none;
+    border-left: none;
+    border-radius: 0;
+    font-style: normal;
+    position: static;
+}
+
+.card--media .article-meta iconify-icon {
+    font-size: 0.9rem;
+}
+
+.card--media .article-category {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
 /* Accent card variant (animated top border on hover) */
 .card--accent {
     min-width: 320px;
@@ -170,6 +214,66 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 200px;
+    display: none;
+}
+
+.card--split[data-featured-category="all"] {
+    display: grid;
+}
+
+.featured-image {
+    background: linear-gradient(135deg, var(--primary), var(--success));
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    justify-content: center;
+    border-top: 1px solid var(--bg-light);
+    padding-top: 1rem;
+}
+
+.featured-read-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-light);
+    font-size: 1.1rem;
+}
+
+.featured-category {
+    color: var(--primary);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.featured-title {
+    font-size: 1.5rem;
+    color: var(--charcoal);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.featured-excerpt {
+    color: var(--gray-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
 /* Sidebar card */
@@ -855,5 +959,10 @@
 
     .custom-request-icon {
         font-size: 2rem;
+    }
+
+    .card--split {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 }

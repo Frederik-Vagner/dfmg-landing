@@ -171,3 +171,9 @@
     background: var(--charcoal);
     color: var(--white);
 }
+
+/* ── Button States ── */
+.primary.small.coming-soon {
+    color: var(--gray-muted);
+    cursor: default;
+}
