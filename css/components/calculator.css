@@ -49,12 +49,6 @@
     padding-top: 0;
 }
 
-/* .info-card — defined in cards.css */
-
-/* #price .btn — defined in buttons.css */
-
-/* .disclaimer — defined in typography.css; page uses utility classes for text-center/mt-1 */
-
 /* Form input override */
 #price .form-input {
     padding: 0.75rem;

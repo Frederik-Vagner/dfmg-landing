@@ -99,8 +99,6 @@
     height: 100vh;
 }
 
-/* .expanded-close-btn — defined in buttons.css */
-
 .expanded-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

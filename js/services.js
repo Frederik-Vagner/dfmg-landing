@@ -208,7 +208,7 @@ function showExpandedContent(column, serviceType) {
 
         <div class="expanded-layout">
             <div class="expanded-content-left">
-                <button class="expanded-close-btn" data-action="close-expanded">
+                <button class="btn--icon expanded-close-btn" data-action="close-expanded">
                     <iconify-icon icon="fluent:arrow-reply-20-filled" inline></iconify-icon>
                 </button>
                 <h3 class="text-charcoal">${service.title}</h3>

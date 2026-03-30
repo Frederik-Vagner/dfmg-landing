@@ -223,8 +223,6 @@
     display: none;
 }
 
-/* .menu-btn — defined in buttons.css */
-
 .mobile-nav {
     display: none;
     flex-direction: column;

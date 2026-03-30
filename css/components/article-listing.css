@@ -372,10 +372,6 @@
     color: var(--gray-light);
 }
 
-/* .share-buttons, .share-btn, .share-* — moved to buttons.css */
-/* .back-to-news — moved to sections.css */
-/* .back-btn — moved to buttons.css */
-
 /* ── Responsive ── */
 @media (max-width: 1024px) {
     .content-layout {

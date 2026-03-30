@@ -16,6 +16,11 @@
     box-shadow: var(--shadow-lg);
 }
 
+.btn:focus-visible {
+    outline: 2px solid var(--charcoal);
+    outline-offset: 2px;
+}
+
 /* Color Variants */
 .btn--primary {
     background: var(--bg-gradient-charcoal);
@@ -40,11 +45,6 @@
     border: 2px solid var(--white);
 }
 
-.btn--white {
-    background: var(--white);
-    color: var(--charcoal);
-    border: 2px solid var(--charcoal);
-}
 
 /* Size Variants */
 .btn--sm {
@@ -173,7 +173,31 @@
 }
 
 /* ── Button States ── */
-.primary.small.coming-soon {
-    color: var(--gray-muted);
+.coming-soon {
+    opacity: 0.6;
     cursor: default;
 }
+
+/* ── Icon Button (round, for carousel arrows, close buttons, etc.) ── */
+.btn--icon {
+    background: var(--bg-light);
+    border: var(--border-light);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--charcoal);
+    transition: all var(--transition-normal);
+    box-shadow: none;
+}
+
+.btn--icon:hover {
+    background: var(--charcoal);
+    color: var(--white);
+    box-shadow: none;
+}
+
