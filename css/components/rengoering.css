@@ -4,14 +4,6 @@ body {
 
 /* .floater — defined in buttons.css */
 
-/* Services Grid Styles */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-    margin-bottom: 4rem;
-}
-
 /* .service-card — defined in cards.css */
 
 .service-image-container {
@@ -75,15 +67,6 @@ body {
     color: var(--primary);
     font-size: 0.9rem;
     width: 14px;
-}
-
-.service-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--padding-md);
-    margin-top: auto;
-    border-top: var(--border-light);
-    padding-top: var(--padding-lg);
 }
 
 /* .stat-item, .stat-number, .stat-label — defined in cards.css */
