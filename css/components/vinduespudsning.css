@@ -38,7 +38,7 @@
     opacity: 1;
 }
 
-/* .service-price, .price-label, .price-amount — provided by pricing.css */
+/* .service-price, .price-label, .price-amount — defined in cards.css */
 
 /* Comparison slider */
 .comparison-slider {
@@ -108,7 +108,7 @@
     height: 40px;
     background: var(--primary);
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid var(--white);
     box-shadow: var(--shadow-md);
 }
 
