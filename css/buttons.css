@@ -96,6 +96,11 @@
     background: var(--charcoal);
 }
 
+.tab-button--sm {
+    padding: 4px 12px;
+    font-size: 0.75rem;
+}
+
 /* ── Icon Circle ── */
 .icon-circle {
     width: 80px;

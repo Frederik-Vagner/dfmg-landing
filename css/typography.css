@@ -21,8 +21,11 @@
     font-weight: var(--font-weight-light);
 }
 
-.disclaimer{
+.disclaimer {
     font-size: var(--font-size-disclaimer);
+    color: var(--gray-light);
+    line-height: 1.4;
+    font-style: italic;
 }
 
 .highlight {

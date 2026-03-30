@@ -45,6 +45,11 @@
 
 /* ── Platform Hero ── */
 .platform-hero {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     padding: 8rem 0 4rem;
     background: var(--bg-gradient-primary);
     color: var(--white);
@@ -55,6 +60,7 @@
     color: var(--white);
     font-size: 3rem;
     font-weight: var(--font-weight-bold);
+    line-height: 1.25;
     margin-bottom: 1rem;
 }
 
@@ -248,6 +254,13 @@
 
 /* ── Responsive Sections ── */
 @media (max-width: 768px) {
+    .platform-hero {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 6rem 0 3rem;
+    }
+
     .platform-hero .title {
         font-size: 2rem;
     }
@@ -264,6 +277,13 @@
 }
 
 /* ── Section Modifiers ── */
+.section--half {
+    height: 50dvh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
 .section--fullheight {
     min-height: 100vh;
     display: flex;

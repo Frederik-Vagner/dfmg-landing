@@ -55,22 +55,7 @@
 
 /* #price .btn — defined in buttons.css */
 
-/* Disclaimer text */
-.disclaimer {
-    font-size: var(--font-size-disclaimer);
-    color: var(--gray-light);
-    text-align: center;
-    margin-top: 1rem;
-    line-height: 1.4;
-    font-style: italic;
-}
-
-/* Calculator-specific flex */
-#price .flex {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-}
+/* .disclaimer — defined in typography.css; page uses utility classes for text-center/mt-1 */
 
 /* Form input override */
 #price .form-input {
@@ -92,7 +77,6 @@
 }
 
 .planning-table td .flex {
-    gap: 0.5rem;
     justify-content: center;
 }
 
@@ -138,6 +122,14 @@
     height: 16px;
     accent-color: var(--charcoal);
     cursor: pointer;
+}
+
+/* Price Column — sticky within its grid cell */
+.calculator-content > .column:last-child {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    overflow: visible;
 }
 
 /* Price Section */
