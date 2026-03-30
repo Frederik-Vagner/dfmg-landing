@@ -14,7 +14,7 @@
                 {% for tier in t.tiers %}
                 <div class="tier-card{% if tier.featured %} tier-card--featured{% endif %}">
                     {% if tier.badge %}
-                    <div class="badge-inline bg-gradient-primary tier-card__badge">{{ tier.badge }}</div>
+                    <div class="badge-inline badge-inline--primary tier-card__badge">{{ tier.badge }}</div>
                     {% endif %}
                     <div class="tier-card__name">{{ tier.name }}</div>
                     <div class="tier-card__desc">{{ tier.desc }}</div>

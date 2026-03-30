@@ -8,127 +8,126 @@ robots: "noindex, nofollow"
     <!-- Buttons -->
     <section class="section first">
         <div class="container">
-            <h1 class="text-charcoal mb-2">Button Showcase</h1>
-            <p class="body text-gray mb-4">All button variants, sizes, and states from buttons.css</p>
+            <h1 class="text-charcoal mb-2">Buttons</h1>
+            <p class="body text-gray mb-4">buttons.css — base + color + size modifiers</p>
 
-            <!-- Color Variants -->
-            <h2 class="text-charcoal mb-2">Color Variants</h2>
-            <div class="flex flex-wrap gap-1 mb-4">
-                <a href="#" class="btn btn--primary btn--md">Primary</a>
-                <a href="#" class="btn btn--success btn--md">Success</a>
-                <a href="#" class="btn btn--secondary btn--md">Secondary</a>
-            </div>
-
-            <!-- Size Variants -->
-            <h2 class="text-charcoal mb-2">Size Variants</h2>
-            <div class="flex flex-wrap gap-1 items-center mb-4">
+            <!-- Primary row -->
+            <h3 class="text-charcoal mb-1">Primary</h3>
+            <div class="flex flex-wrap gap-1 items-center mb-2">
                 <a href="#" class="btn btn--primary btn--sm">Small</a>
                 <a href="#" class="btn btn--primary btn--md">Medium</a>
                 <a href="#" class="btn btn--primary btn--lg">Large</a>
+                <a href="#" class="btn btn--primary btn--md">
+                    <iconify-icon icon="fluent:play-circle-20-filled" inline class="mr-05"></iconify-icon>With Icon
+                </a>
             </div>
 
-            <div class="flex flex-wrap gap-1 items-center mb-4">
+            <!-- Success row -->
+            <h3 class="text-charcoal mb-1">Success</h3>
+            <div class="flex flex-wrap gap-1 items-center mb-2">
                 <a href="#" class="btn btn--success btn--sm">Small</a>
                 <a href="#" class="btn btn--success btn--md">Medium</a>
                 <a href="#" class="btn btn--success btn--lg">Large</a>
+                <a href="#" class="btn btn--success btn--md">
+                    <iconify-icon icon="fluent:call-20-filled" inline class="mr-05"></iconify-icon>With Icon
+                </a>
+            </div>
+
+            <!-- Secondary row -->
+            <h3 class="text-charcoal mb-1">Secondary</h3>
+            <div class="flex flex-wrap gap-1 items-center mb-2">
+                <a href="#" class="btn btn--secondary btn--sm">Small</a>
+                <a href="#" class="btn btn--secondary btn--md">Medium</a>
+                <a href="#" class="btn btn--secondary btn--lg">Large</a>
+                <a href="#" class="btn btn--secondary btn--md">
+                    <iconify-icon icon="fluent:mail-20-filled" inline class="mr-05"></iconify-icon>With Icon
+                </a>
+            </div>
+
+            <!-- Ghost row (on dark) -->
+            <h3 class="text-charcoal mb-1">Ghost (dark bg)</h3>
+            <div class="flex flex-wrap gap-1 items-center mb-2 p-2" style="background: var(--bg-gradient-charcoal); border-radius: var(--radius-normal);">
+                <a href="#" class="btn btn--ghost btn--sm">Small</a>
+                <a href="#" class="btn btn--ghost btn--md">Medium</a>
+                <a href="#" class="btn btn--ghost btn--lg">Large</a>
             </div>
 
             <!-- Full Width -->
-            <h2 class="text-charcoal mb-2">Full Width</h2>
-            <div class="max-w-400 mb-4">
+            <h3 class="text-charcoal mb-1">Full Width</h3>
+            <div class="max-w-400 mb-2">
                 <a href="#" class="btn btn--success btn--md btn--full">Full Width Button</a>
             </div>
 
-            <!-- Button States -->
-            <h2 class="text-charcoal mb-2">States</h2>
-            <div class="flex flex-wrap gap-1 items-center mb-4">
-                <a href="#" class="btn btn--primary btn--md">Normal</a>
-                <span class="btn btn--primary btn--sm coming-soon">Coming Soon</span>
+            <!-- Tab Buttons -->
+            <h3 class="text-charcoal mb-1">Tab Buttons</h3>
+            <div class="flex flex-wrap gap-1 items-center mb-2">
+                <button class="tab-button active">Active</button>
+                <button class="tab-button">Inactive</button>
+                <button class="tab-button tab-button--sm active">Small Active</button>
+                <button class="tab-button tab-button--sm">Small</button>
             </div>
 
-            <!-- With Icons -->
-            <h2 class="text-charcoal mb-2">With Icons</h2>
-            <div class="flex flex-wrap gap-1 mb-4">
-                <a href="#" class="btn btn--success btn--md">
-                    <iconify-icon icon="fluent:call-20-filled" inline class="mr-05"></iconify-icon>Kontakt os
+            <!-- Icon Buttons -->
+            <h3 class="text-charcoal mb-1">Icon / Specialized</h3>
+            <div class="flex flex-wrap gap-1 items-center mb-2">
+                <a class="btn--icon"><iconify-icon icon="fluent:chevron-left-20-filled" inline></iconify-icon></a>
+                <a class="btn--icon"><iconify-icon icon="fluent:chevron-right-20-filled" inline></iconify-icon></a>
+                <a href="#" class="back-btn">
+                    <iconify-icon icon="fluent:arrow-left-20-filled" inline></iconify-icon> Tilbage
                 </a>
-                <a href="#" class="btn btn--primary btn--md">
-                    <iconify-icon icon="fluent:play-circle-20-filled" inline class="mr-05"></iconify-icon>Se demo
-                </a>
-                <a href="#" class="btn btn--secondary btn--md">
-                    <iconify-icon icon="fluent:mail-20-filled" inline class="mr-05"></iconify-icon>Send email
-                </a>
+                <a href="#" class="share-btn share-linkedin"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+                <a href="#" class="share-btn share-facebook"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
+                <a href="#" class="share-btn share-email"><iconify-icon icon="fluent:mail-20-filled"></iconify-icon></a>
             </div>
         </div>
     </section>
 
-    <!-- Tab Buttons -->
+    <!-- Badges -->
     <section class="section section--light">
         <div class="container">
-            <h2 class="text-charcoal mb-2">Tab Buttons</h2>
-            <div class="flex flex-wrap gap-1 mb-4">
-                <button class="tab-button active">Active Tab</button>
-                <button class="tab-button">Inactive Tab</button>
-                <button class="tab-button">Another Tab</button>
-            </div>
+            <h1 class="text-charcoal mb-2">Badges</h1>
+            <p class="body text-gray mb-4">badges.css — hero, inline (color + size), overlay, step numbers</p>
 
-            <h3 class="text-charcoal mb-2">Small Tabs</h3>
-            <div class="flex flex-wrap gap-1 mb-4">
-                <button class="tab-button tab-button--sm active">Small Active</button>
-                <button class="tab-button tab-button--sm">Small Tab</button>
-                <button class="tab-button tab-button--sm">Small Tab</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialized Buttons -->
-    <section class="section">
-        <div class="container">
-            <h2 class="text-charcoal mb-2">Specialized Buttons</h2>
-
-            <!-- Back Button -->
-            <h3 class="text-charcoal mb-1">Back Button</h3>
-            <div class="mb-4">
-                <a href="#" class="back-btn">
-                    <iconify-icon icon="fluent:arrow-left-20-filled" inline></iconify-icon>
-                    Tilbage til nyheder
-                </a>
-            </div>
-
-            <!-- Icon Circles -->
-            <h3 class="text-charcoal mb-1">Icon Circles</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <div class="icon-circle bg-gradient-primary">
-                    <iconify-icon icon="fluent:building-20-filled" style="color: var(--white);"></iconify-icon>
+            <!-- Hero Badge -->
+            <h3 class="text-charcoal mb-1">Hero Badge</h3>
+            <div class="flex flex-wrap gap-2 items-center mb-2">
+                <div class="p-2" style="background: var(--bg-gradient-charcoal); border-radius: var(--radius-normal);">
+                    <div class="badge">Hero Badge</div>
                 </div>
-                <div class="icon-circle success">
-                    <iconify-icon icon="fluent:checkmark-20-filled" style="color: var(--white);"></iconify-icon>
+                <div class="badge text-charcoal">Hero Badge (light)</div>
+            </div>
+
+            <!-- Inline Badges -->
+            <h3 class="text-charcoal mb-1">Inline — Color Variants</h3>
+            <div class="flex flex-wrap gap-1 items-center mb-2">
+                <span class="badge-inline badge-inline--dark">Dark</span>
+                <span class="badge-inline badge-inline--light">Light</span>
+                <span class="badge-inline badge-inline--success">Success</span>
+                <span class="badge-inline badge-inline--primary">Primary</span>
+                <span class="badge-inline badge-inline--sm badge-inline--dark">SM Dark</span>
+                <span class="badge-inline badge-inline--sm badge-inline--light">SM Light</span>
+            </div>
+
+            <!-- Overlay Badges -->
+            <h3 class="text-charcoal mb-1">Overlay (positioned over images)</h3>
+            <div class="flex gap-2 mb-2">
+                <div style="position: relative; width: 180px; height: 100px; background: var(--bg-light); border-radius: var(--radius-normal);">
+                    <div class="badge-inline badge-overlay">Dark</div>
                 </div>
-                <div class="icon-circle red">
-                    <iconify-icon icon="fluent:warning-20-filled" style="color: var(--white);"></iconify-icon>
+                <div style="position: relative; width: 180px; height: 100px; background: var(--charcoal); border-radius: var(--radius-normal);">
+                    <div class="badge-inline badge-overlay badge-overlay--light">Light</div>
                 </div>
             </div>
 
-            <!-- Share Buttons -->
-            <h3 class="text-charcoal mb-1">Share Buttons</h3>
-            <div class="share-buttons mb-4">
-                <a href="#" class="share-btn share-linkedin">
-                    <iconify-icon icon="mdi:linkedin"></iconify-icon>
-                </a>
-                <a href="#" class="share-btn share-facebook">
-                    <iconify-icon icon="mdi:facebook"></iconify-icon>
-                </a>
-                <a href="#" class="share-btn share-email">
-                    <iconify-icon icon="fluent:mail-20-filled"></iconify-icon>
-                </a>
-            </div>
-
-            <!-- Floater Preview (static, not fixed) -->
-            <h3 class="text-charcoal mb-1">Floater CTA (shown inline, normally fixed-position)</h3>
-            <div class="mb-4">
-                <a href="#" class="btn btn--primary btn--sm" style="box-shadow: var(--shadow-lg);">
-                    <iconify-icon icon="fluent:calculator-20-filled" inline class="mr-05"></iconify-icon>Prisberegner
-                </a>
+            <!-- Step Numbers -->
+            <h3 class="text-charcoal mb-1">Step Numbers</h3>
+            <div class="flex flex-wrap gap-2 items-center mb-2">
+                <div class="step-number">1</div>
+                <div class="step-number">2</div>
+                <div class="step-number">3</div>
+                <div class="step-number--small">1</div>
+                <div class="step-number--small">2</div>
+                <div class="step-number--small">3</div>
             </div>
         </div>
     </section>

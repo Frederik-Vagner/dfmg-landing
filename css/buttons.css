@@ -172,11 +172,6 @@
     color: var(--white);
 }
 
-/* ── Button States ── */
-.coming-soon {
-    opacity: 0.6;
-    cursor: default;
-}
 
 /* ── Icon Button (round, for carousel arrows, close buttons, etc.) ── */
 .btn--icon {

@@ -69,16 +69,6 @@ body {
     width: 14px;
 }
 
-/* .stat-item, .stat-number, .stat-label — defined in cards.css */
-
-/* .type-badge — moved to badges.css */
-
-/* .features-list — removed (unused in HTML, use .feature-list from lists.css instead) */
-
-/* Stability Section */
-/* .section--fullheight — defined in sections.css */
-/* .aside-note — defined in sections.css */
-
 .stability-content {
     display: grid;
     grid-template-columns: 1fr 2fr;

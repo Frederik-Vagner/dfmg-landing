@@ -26,7 +26,7 @@
     border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Inline badge — lightweight, composable with utility classes */
+/* Inline badge — base + color variants + size modifier */
 .badge-inline {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -36,6 +36,29 @@
     text-align: center;
 }
 
+/* Color Variants */
+.badge-inline--dark {
+    background: var(--charcoal);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.badge-inline--light {
+    background: var(--bg-surface);
+    color: var(--charcoal);
+}
+
+.badge-inline--success {
+    background: var(--bg-gradient-success);
+    color: var(--white);
+}
+
+.badge-inline--primary {
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+}
+
+/* Size Modifier */
 .badge-inline--sm {
     padding: 0.35rem 0.75rem;
     font-size: 0.75rem;
@@ -54,8 +77,6 @@
     background: var(--overlay-white);
     color: var(--charcoal);
     font-weight: var(--font-weight-bold);
-    top: 2rem;
-    left: 2rem;
 }
 
 /* Step Number (numbered process circles) */
@@ -73,18 +94,6 @@
     margin: 0 auto 1rem;
 }
 
-/* Date badge — positioned over images */
-.article-date {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: var(--overlay-white);
-    color: var(--charcoal);
-    padding: 6px 12px;
-    border-radius: var(--radius-lg);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-medium);
-}
 
 .step-number--small {
     width: 25px;
