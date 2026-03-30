@@ -2,7 +2,7 @@
     <section class="platform-hero">
         <div class="container">
             <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
-            <h1 class="title">{{ t.hero.title }}</h1>
+            <div class="title">{{ t.hero.title }}</div>
             <p class="body">{{ t.hero.body }}</p>
             <div class="hero-actions">
                 <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.hero.cta_demo }}</a>
@@ -20,27 +20,22 @@
         </div>
     </section>
 
-    <!-- Social proof bar — logos + headline metric -->
-    <section class="section" style="padding: 2rem 0;">
+    <!-- Social proof + outcome metrics -->
+    <section class="section section--half">
         <div class="container">
             <div class="text-center mb-2">
                 <div class="body text-gray">{{ t.proof.text | safe }}</div>
             </div>
 
             <!-- TODO: Replace with real partner/client logos or integration logos -->
-            <div class="flex flex-4" style="align-items: center; justify-content: center; opacity: 0.4;">
+            <div class="flex flex-4 mb-2" style="align-items: center; justify-content: center; opacity: 0.4;">
                 <div class="text-center text-gray" style="padding: 1rem;">[Client Logo 1]</div>
                 <div class="text-center text-gray" style="padding: 1rem;">[Client Logo 2]</div>
                 <div class="text-center text-gray" style="padding: 1rem;">[Client Logo 3]</div>
                 <div class="text-center text-gray" style="padding: 1rem;">[Integration Logo]</div>
             </div>
-        </div>
-    </section>
 
-    <!-- Outcome metrics — results, not feature counts -->
-    <section class="section" style="padding-top: 1rem;">
-        <div class="container">
-            <div class="flex flex-4 mb-4">
+            <div class="flex flex-4">
                 <div class="card p-1 bg-gradient-white text-center">
                     <div class="metric-value">{{ t.metrics.saved_value }}</div>
                     <div class="metric-label">{{ t.metrics.saved_label }}</div>
@@ -62,7 +57,7 @@
     </section>
 
     <!-- Built by practitioners — your differentiator -->
-    <section class="section section--light">
+    <section class="section section--light section--half">
         <div class="container">
             <div class="text-center">
                 <div class="subtitle text-primary">{{ t.why.subtitle }}</div>
@@ -117,7 +112,7 @@
                     <div class="module-card__desc">{{ t.modules.clients_desc }}</div>
                 </a>
                 <a href="{{ prefix }}/features.html#employees" class="module-card">
-                    <div class="module-card__icon"><iconify-icon icon="fluent:person-card-20-filled" inline></iconify-icon></div>
+                    <div class="module-card__icon"><iconify-icon icon="fluent:person-20-filled" inline></iconify-icon></div>
                     <div class="module-card__title">{{ t.modules.employees_title }}</div>
                     <div class="module-card__desc">{{ t.modules.employees_desc }}</div>
                 </a>
@@ -145,7 +140,7 @@
         <div class="container">
             <div class="flex flex-2" style="align-items: center;">
                 <div>
-                    <h3 class="text-white" style="font-size: 1.8rem;">{{ t.walkthrough.title }}</h3>
+                    <div class="title text-white" style="font-size: 1.8rem;">{{ t.walkthrough.title }}</div>
                     <p style="color: rgba(255,255,255,0.85); margin-bottom: 1.5rem;">{{ t.walkthrough.body }}</p>
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.walkthrough.cta }}</a>
                 </div>
@@ -228,7 +223,7 @@
 
             <div class="flex flex-2" style="gap: 3rem;">
                 <div class="card p-2" style="background: #fff;">
-                    <h4 style="color: var(--red); margin-bottom: 1rem;"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.without_title }}</h4>
+                    <div class="font-bold" style="color: var(--red); margin-bottom: 1rem;"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.without_title }}</div>
                     <ul class="feature-list list-red">
                         {% for item in t.comparison.without_items %}
                         <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon> {{ item }}</li>
@@ -236,7 +231,7 @@
                     </ul>
                 </div>
                 <div class="card p-2" style="background: #fff;">
-                    <h4 style="color: var(--success); margin-bottom: 1rem;"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.with_title }}</h4>
+                    <div class="font-bold" style="color: var(--success); margin-bottom: 1rem;"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.with_title }}</div>
                     <ul class="feature-list list-success">
                         {% for item in t.comparison.with_items %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ item }}</li>
