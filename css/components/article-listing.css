@@ -3,9 +3,6 @@
    Used by: indblik.html, nyheder.html
    ======================================== */
 
-/* Card styles — moved to cards.css (.card--media, .card--split, .featured-*) */
-/* .featured-section — moved to sections.css */
-
 /* Article listing title (card context) */
 .article-title {
     color: var(--charcoal);
@@ -285,7 +282,7 @@
 
 .sidebar-section { margin-bottom: 1.5rem; }
 
-/* .sidebar-card — defined in cards.css */
+/* .card--sidebar — defined in cards.css */
 
 /* .toc-list — moved to lists.css */
 

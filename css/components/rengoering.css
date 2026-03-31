@@ -4,7 +4,7 @@ body {
 
 /* .floater — defined in buttons.css */
 
-/* .service-card — defined in cards.css */
+/* .card--service — defined in cards.css */
 
 .service-image-container {
     position: relative;
@@ -162,8 +162,6 @@ body {
     margin: var(--gap-md) 0;
 }
 
-/* .staff-card — defined in cards.css */
-
 /* Photo Documentation Options */
 .photo-options {
     display: flex;
@@ -208,8 +206,6 @@ body {
     gap: 2rem;
     margin-top: 2rem;
 }
-
-/* .transparency-card — defined in cards.css */
 
 .transparency-note {
     background: var(--bg-primary-subtle);
@@ -315,8 +311,6 @@ body {
     margin-top: 3rem;
 }
 
-/* .before-after-card — defined in cards.css */
-
 .image-container {
     position: relative;
     height: 200px;
@@ -327,8 +321,6 @@ body {
     color: var(--gray-light);
     font-size: 0.9rem;
 }
-
-/* .card-content — defined in cards.css */
 
 /* Responsive */
 @media (max-width: 768px) {

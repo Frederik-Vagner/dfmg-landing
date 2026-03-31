@@ -212,20 +212,20 @@
     display: grid;
 }
 
-.featured-image {
+.card--split__image {
     background: linear-gradient(135deg, var(--primary), var(--success));
     position: relative;
     overflow: hidden;
 }
 
-.featured-content {
+.card--split__content {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.featured-meta {
+.card--split__meta {
     display: flex;
     align-items: center;
     gap: 3rem;
@@ -236,7 +236,7 @@
     padding-top: 1rem;
 }
 
-.featured-read-time {
+.card--split__time {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -244,7 +244,7 @@
     font-size: 1.1rem;
 }
 
-.featured-title {
+.card--split__title {
     font-size: 1.5rem;
     color: var(--charcoal);
     font-weight: var(--font-weight-semibold);
@@ -252,7 +252,7 @@
     margin-bottom: 0.75rem;
 }
 
-.featured-excerpt {
+.card--split__excerpt {
     color: var(--gray-light);
     font-size: 0.95rem;
     line-height: 1.5;
@@ -260,7 +260,7 @@
 }
 
 /* Sidebar card */
-.sidebar-card {
+.card--sidebar {
     background: var(--white);
     border-radius: var(--radius-lg);
     padding: var(--padding-md);
@@ -268,7 +268,7 @@
     border: var(--border-light);
 }
 
-.sidebar-card h3 {
+.card--sidebar h3 {
     font-size: 1.2rem;
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
@@ -278,28 +278,28 @@
     gap: 0.5rem;
 }
 
-.sidebar-card h3 iconify-icon {
+.card--sidebar h3 iconify-icon {
     color: var(--charcoal);
     font-size: 1.1rem;
 }
 
-.sidebar-card ul li {
+.card--sidebar ul li {
     margin-bottom: 0.5rem;
     line-height: 1.4;
 }
 
-/* Card content (used inside before-after-card etc.) */
-.card-content {
+/* Card content (used inside card--gallery etc.) */
+.card__content {
     padding: var(--padding-md);
 }
 
-.card-content h4 {
+.card__content h4 {
     color: var(--charcoal);
     margin-bottom: 0.5rem;
     font-weight: var(--font-weight-medium);
 }
 
-.card-content p {
+.card__content p {
     color: var(--gray-light);
     font-size: 0.9rem;
 }
@@ -365,7 +365,7 @@
     line-height: 1.5;
 }
 
-/* ── Tier card (pricing) ── */
+/* ── Pricing tier card ── */
 .pricing-tiers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -373,7 +373,7 @@
     align-items: start;
 }
 
-.tier-card {
+.card--tier {
     background: var(--white);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
@@ -383,17 +383,17 @@
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.tier-card:hover {
+.card--tier:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
-.tier-card--featured {
+.card--tier--featured {
     border-color: var(--primary);
     position: relative;
 }
 
-.tier-card__badge {
+.card--tier__badge {
     position: absolute;
     top: -14px;
     left: 50%;
@@ -401,34 +401,34 @@
     /* visual props in badges.css */
 }
 
-.tier-card__name {
+.card--tier__name {
     font-size: 1.3rem;
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
     margin-bottom: 0.5rem;
 }
 
-.tier-card__desc {
+.card--tier__desc {
     font-size: 0.9rem;
     color: var(--gray);
     margin-bottom: var(--padding-md);
     line-height: 1.5;
 }
 
-.tier-card__price {
+.card--tier__price {
     font-size: 2.5rem;
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
     line-height: 1;
 }
 
-.tier-card__price small {
+.card--tier__price small {
     font-size: 0.9rem;
     font-weight: var(--font-weight-normal);
     color: var(--gray);
 }
 
-.tier-card__divider {
+.card--tier__divider {
     width: 40px;
     height: 3px;
     background: var(--primary);
@@ -436,14 +436,14 @@
     border-radius: 2px;
 }
 
-.tier-card__features {
+.card--tier__features {
     list-style: none;
     padding: 0;
     margin: 0 0 2rem;
     text-align: left;
 }
 
-.tier-card__features li {
+.card--tier__features li {
     padding: 0.5rem 0;
     font-size: 0.9rem;
     color: var(--gray);
@@ -452,7 +452,7 @@
     gap: 0.6rem;
 }
 
-.tier-card__features li iconify-icon {
+.card--tier__features li iconify-icon {
     color: var(--success);
     font-size: 0.8rem;
     flex-shrink: 0;
@@ -481,8 +481,8 @@
     flex: 1;
 }
 
-/* ── Service card (rengøring) ── */
-.service-card {
+/* ── Service card (carousel item) ── */
+.card--service {
     width: 570px;
     flex-shrink: 0;
     background: var(--white);
@@ -497,18 +497,18 @@
     transition: all var(--transition-normal);
 }
 
-.service-card:hover {
+.card--service:hover {
     box-shadow: var(--shadow-xl);
 }
 
-/* ── Staff card (rengøring) ── */
-.staff-card {
+/* ── Staff card ── */
+.card--staff {
     display: flex;
     align-items: center;
     gap: var(--gap-sm);
 }
 
-.staff-card__avatar {
+.card--staff__avatar {
     width: 60px;
     height: 60px;
     border-radius: 20%;
@@ -516,25 +516,25 @@
     object-fit: cover;
 }
 
-.staff-card__name {
+.card--staff__name {
     font-size: 0.875rem;
     font-weight: var(--font-weight-medium);
     margin-bottom: 2px;
 }
 
-.staff-card__detail {
+.card--staff__detail {
     font-size: 0.875rem;
     color: var(--gray);
     margin-bottom: 1px;
 }
 
-.staff-card__role {
+.card--staff__role {
     font-size: var(--font-size-disclaimer);
     color: var(--gray);
 }
 
-/* ── Transparency card (rengøring) ── */
-.transparency-card {
+/* ── Panel card (white box with border) ── */
+.card--panel {
     background: var(--white);
     padding: var(--padding-md);
     border-radius: var(--radius-md);
@@ -542,27 +542,27 @@
     border: var(--border-light);
 }
 
-.transparency-card.double-height {
+.card--panel.double-height {
     grid-row: span 2;
 }
 
-.transparency-card h3 {
+.card--panel h3 {
     color: var(--charcoal);
     font-size: 1.2rem;
     font-weight: var(--font-weight-medium);
     margin: 0 0 1rem 0;
 }
 
-/* ── Before/after card (rengøring) ── */
-.before-after-card {
+/* ── Gallery card (image + content) ── */
+.card--gallery {
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
 }
 
-/* ── Fordele card (services) ── */
-.benefits-card {
+/* ── Benefits card (inline icon + text) ── */
+.card--benefits {
     padding: 1rem;
     border-radius: var(--radius-md);
     display: flex;
@@ -570,8 +570,8 @@
     gap: 0.8rem;
 }
 
-/* ── Info card (calculator) ── */
-.info-card {
+/* ── Compact card (small padding, inline data) ── */
+.card--compact {
     background: var(--white);
     padding: 0.35rem 0.5rem;
     border-radius: var(--radius-normal);
@@ -581,7 +581,7 @@
     flex-direction: column;
 }
 
-.info-card h4 {
+.card--compact h4 {
     font-size: 0.9rem;
     margin: 0 0 0.15rem 0;
 }
@@ -624,12 +624,12 @@
 
 
 /* ── Price Display ── */
-.service-price {
+.card--price {
     text-align: center;
     padding: var(--padding-md);
 }
 
-.price-label {
+.card--price__label {
     color: var(--gray);
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -637,7 +637,7 @@
     margin-bottom: 0.5rem;
 }
 
-.price-amount {
+.card--price__amount {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
     color: var(--primary);
@@ -653,7 +653,7 @@
     margin-bottom: 2rem;
 }
 
-.shop-item {
+.card--shop {
     background: var(--white);
     border-radius: var(--radius-lg);
     padding: var(--padding-md);
@@ -663,26 +663,26 @@
     transition: all var(--transition-normal);
 }
 
-.shop-item:hover {
+.card--shop:hover {
     border-color: var(--primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
-.shop-item-icon {
+.card--shop-icon {
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: 1rem;
 }
 
-.shop-item-price {
+.card--shop-price {
     color: var(--primary);
     font-weight: var(--font-weight-bold);
     font-size: 1.1rem;
 }
 
-/* ── Custom Request Card (dashed CTA) ── */
-.custom-request {
+/* ── Dashed card (CTA prompt) ── */
+.card--dashed {
     background: linear-gradient(135deg, var(--bg-muted), var(--bg-light));
     border-radius: var(--radius-normal);
     padding: var(--padding-lg);
@@ -692,19 +692,19 @@
     transition: all var(--transition-normal);
 }
 
-.custom-request:hover {
+.card--dashed:hover {
     border-color: var(--primary);
     background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
 }
 
-.custom-request-icon {
+.card--dashed-icon {
     font-size: 3rem;
     color: var(--primary);
     margin-bottom: 1rem;
 }
 
 /* ── Quote ── */
-.quote {
+.card--quote {
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: var(--radius-normal);
@@ -716,26 +716,8 @@
     box-shadow: var(--shadow-lg);
 }
 
-/* ── Testimonial ── */
-.testimonial {
-    background: var(--white);
-    padding: 2.5rem;
-    border-radius: var(--radius-normal);
-    box-shadow: var(--shadow-lg);
-    border: var(--border-lighter);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
 
-.testimonial blockquote {
-    font-size: 1.1rem;
-    color: var(--gray);
-    line-height: 1.6;
-    margin: 0 0 1.5rem 0;
-    font-style: italic;
-    position: relative;
-}
-
-.author-image {
+.card--quote__avatar {
     width: 60px;
     height: 60px;
     border-radius: var(--radius-circle);
@@ -743,7 +725,7 @@
     border: 3px solid var(--bg-light);
 }
 
-.testimonial-text {
+.card--quote__text {
     font-size: 1.3rem;
     color: var(--charcoal);
     line-height: 1.6;
@@ -760,7 +742,7 @@
         min-width: 100%;
     }
 
-    .sidebar-card {
+    .card--sidebar {
         margin: 0 10px;
     }
 
@@ -776,11 +758,11 @@
         flex-direction: column;
     }
 
-    .service-price {
+    .card--price {
         padding: 1rem;
     }
 
-    .price-amount {
+    .card--price__amount {
         font-size: 1.2rem;
     }
 
@@ -796,11 +778,11 @@
         grid-template-columns: 1fr;
     }
 
-    .custom-request {
+    .card--dashed {
         padding: var(--padding-md);
     }
 
-    .custom-request-icon {
+    .card--dashed-icon {
         font-size: 2rem;
     }
 

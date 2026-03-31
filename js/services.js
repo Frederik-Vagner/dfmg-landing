@@ -248,7 +248,7 @@ function showExpandedContent(column, serviceType) {
                     <h4 class="benefits-title">Hvorfor DFMG</h4>
                     <div class="benefits-grid">
                         ${service.features.map(feature => `
-                            <div class="benefits-card">
+                            <div class="card--benefits">
                                 <iconify-icon icon="fluent:checkmark-20-filled" inline class="benefits-icon"></iconify-icon>
                                 <span class="benefits-text">${feature}</span>
                             </div>

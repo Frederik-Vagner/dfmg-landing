@@ -12,15 +12,15 @@
         <div class="container">
             <div class="pricing-tiers">
                 {% for tier in t.tiers %}
-                <div class="tier-card{% if tier.featured %} tier-card--featured{% endif %}">
+                <div class="card--tier{% if tier.featured %} card--tier--featured{% endif %}">
                     {% if tier.badge %}
-                    <div class="badge-inline badge-inline--primary tier-card__badge">{{ tier.badge }}</div>
+                    <div class="badge-inline badge-inline--primary card--tier__badge">{{ tier.badge }}</div>
                     {% endif %}
-                    <div class="tier-card__name">{{ tier.name }}</div>
-                    <div class="tier-card__desc">{{ tier.desc }}</div>
-                    <div class="tier-card__price">{{ tier.price }}</div>
-                    <div class="tier-card__divider"></div>
-                    <ul class="tier-card__features">
+                    <div class="card--tier__name">{{ tier.name }}</div>
+                    <div class="card--tier__desc">{{ tier.desc }}</div>
+                    <div class="card--tier__price">{{ tier.price }}</div>
+                    <div class="card--tier__divider"></div>
+                    <ul class="card--tier__features">
                         {% for feature in tier.features %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ feature }}</li>
                         {% endfor %}

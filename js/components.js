@@ -246,7 +246,7 @@ function initTableOfContents() {
 
     const headings = articleBody.querySelectorAll('h2, h3');
     if (headings.length === 0) {
-        tocList.closest('.sidebar-card').style.display = 'none';
+        tocList.closest('.card--sidebar').style.display = 'none';
         return;
     }
 

@@ -37,7 +37,3 @@
 .window-panel.clean .window-overlay {
     opacity: 1;
 }
-
-/* .service-price, .price-label, .price-amount — defined in cards.css */
-/* .comparison-slider, .slider-*, .before-image, .after-image — moved to photos.css */
-
