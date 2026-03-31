@@ -304,6 +304,67 @@
     font-size: 0.9rem;
 }
 
+/* ── Feature card (icon + title + desc) ── */
+.card--feature {
+    padding: var(--padding-lg) var(--padding-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card--feature--filled {
+    background: var(--bg-gradient-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.card--feature--hover {
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card--feature--hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.card--feature--center {
+    text-align: center;
+}
+
+.card--feature__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card--feature--center .card--feature__icon {
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 1.3rem;
+}
+
+.card--feature__title {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.card--feature__desc {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
 /* ── Tier card (pricing) ── */
 .pricing-tiers {
     display: grid;
@@ -397,132 +458,27 @@
     flex-shrink: 0;
 }
 
-/* ── Module card (platform) ── */
+/* ── Feature card grids ── */
 .module-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--padding-md);
 }
 
-.module-card {
-    background: var(--bg-gradient-white);
-    border-radius: var(--radius-md);
-    padding: var(--padding-lg);
-    box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.module-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.module-card__icon {
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-sm);
-    background: var(--bg-gradient-primary);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.module-card__title {
-    font-size: 1.15rem;
-    font-weight: var(--font-weight-medium);
-    color: var(--charcoal);
-    margin-bottom: 0.5rem;
-}
-
-.module-card__desc {
-    font-size: 0.95rem;
-    color: var(--gray);
-    line-height: 1.5;
-}
-
-/* ── Value card (platform) ── */
 .value-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.value-card {
-    text-align: center;
-    padding: var(--padding-lg) var(--padding-md);
-}
-
-.value-card__icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: var(--bg-gradient-primary);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    margin: 0 auto 1.25rem;
-}
-
-.value-card__title {
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-medium);
-    color: var(--charcoal);
-    margin-bottom: 0.5rem;
-}
-
-.value-card__desc {
-    font-size: 0.95rem;
-    color: var(--gray);
-    line-height: 1.6;
-}
-
-/* ── Step card (platform) ── */
 .steps-row {
     display: flex;
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.step-card {
+.steps-row > * {
     flex: 1;
-    text-align: center;
-    padding: var(--padding-lg) var(--padding-md);
-    background: var(--bg-gradient-white);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-}
-
-.step-card__number {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--bg-gradient-primary);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: var(--font-weight-bold);
-    margin: 0 auto 1rem;
-}
-
-.step-card__title {
-    font-weight: var(--font-weight-medium);
-    color: var(--charcoal);
-    margin-bottom: 0.5rem;
-}
-
-.step-card__desc {
-    font-size: 0.9rem;
-    color: var(--gray);
-    line-height: 1.5;
 }
 
 /* ── Service card (rengøring) ── */
@@ -606,7 +562,7 @@
 }
 
 /* ── Fordele card (services) ── */
-.fordele-card {
+.benefits-card {
     padding: 1rem;
     border-radius: var(--radius-md);
     display: flex;
@@ -666,30 +622,6 @@
     opacity: 0.8;
 }
 
-/* ── Stat Item (bordered variant) ── */
-.stat-item {
-    text-align: center;
-    padding: var(--padding-md) 1rem;
-    border-radius: var(--radius-lg);
-    border: var(--border-light);
-    background: var(--bg-muted);
-}
-
-.stat-number {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--primary);
-    line-height: 1;
-}
-
-.stat-label {
-    font-size: 0.75rem;
-    color: var(--gray-light);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 0.25rem;
-}
 
 /* ── Price Display ── */
 .service-price {

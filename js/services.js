@@ -244,13 +244,13 @@ function showExpandedContent(column, serviceType) {
                 <div class="expanded-image">
                     <img src="/images/service/${getImageName(serviceType)}.jpg" alt="${service.title}" class="w-full h-full object-cover rounded-15" loading="lazy" decoding="async">
                 </div>
-                <div class="fordele-section">
-                    <h4 class="fordele-title">Hvorfor DFMG</h4>
-                    <div class="fordele-grid">
+                <div class="benefits-section">
+                    <h4 class="benefits-title">Hvorfor DFMG</h4>
+                    <div class="benefits-grid">
                         ${service.features.map(feature => `
-                            <div class="fordele-card">
-                                <iconify-icon icon="fluent:checkmark-20-filled" inline class="fordele-icon"></iconify-icon>
-                                <span class="fordele-text">${feature}</span>
+                            <div class="benefits-card">
+                                <iconify-icon icon="fluent:checkmark-20-filled" inline class="benefits-icon"></iconify-icon>
+                                <span class="benefits-text">${feature}</span>
                             </div>
                         `).join('')}
                     </div>

@@ -198,23 +198,23 @@
     font-weight: var(--font-weight-semibold);
 }
 
-.fordele-title {
+.benefits-title {
     margin-bottom: 1rem;
     color: var(--charcoal);
     font-size: 1.3rem;
     font-weight: var(--font-weight-medium);
 }
 
-.fordele-grid {
+.benefits-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
     margin-bottom: 2rem;
 }
 
-/* .fordele-card — defined in cards.css */
+/* .benefits-card — defined in cards.css */
 
-.fordele-icon {
+.benefits-icon {
     color: var(--charcoal);
     font-size: 1rem;
     background: var(--bg-success-light);
@@ -228,7 +228,7 @@
     flex-shrink: 0;
 }
 
-.fordele-text {
+.benefits-text {
     font-size: 0.9rem;
     color: var(--charcoal);
     font-weight: var(--font-weight-semibold);

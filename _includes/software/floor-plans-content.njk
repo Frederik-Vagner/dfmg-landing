@@ -219,12 +219,12 @@
         <div class="container">
             <div class="value-grid">
                 {% for benefit in t.benefits %}
-                <div class="value-card">
-                    <div class="value-card__icon">
+                <div class="card--feature card--feature--center">
+                    <div class="card--feature__icon">
                         <iconify-icon icon="{{ benefit.icon }}" inline></iconify-icon>
                     </div>
-                    <div class="value-card__title">{{ benefit.title }}</div>
-                    <div class="value-card__desc">{{ benefit.desc }}</div>
+                    <div class="card--feature__title">{{ benefit.title }}</div>
+                    <div class="card--feature__desc">{{ benefit.desc }}</div>
                 </div>
                 {% endfor %}
             </div>
