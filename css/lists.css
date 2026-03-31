@@ -35,15 +35,15 @@
 }
 
 /* Icon color variants */
-.feature-list.list-success iconify-icon {
+.feature-list.list--success iconify-icon {
     color: var(--success);
 }
 
-.feature-list.list-red iconify-icon {
+.feature-list.list--red iconify-icon {
     color: var(--red);
 }
 
-.feature-list.list-primary iconify-icon {
+.feature-list.list--primary iconify-icon {
     color: var(--primary);
 }
 

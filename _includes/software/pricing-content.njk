@@ -76,11 +76,11 @@
             <div class="faq-list">
                 {% for item in t.faq.items %}
                 <div class="faq-item">
-                    <button class="faq-item__question" data-action="toggle-platform-faq">
-                        {{ item.question }}
+                    <div class="faq-question" data-action="toggle-platform-faq">
+                        <h4>{{ item.question }}</h4>
                         <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
-                    </button>
-                    <div class="faq-item__answer">
+                    </div>
+                    <div class="faq-answer">
                         <p>{{ item.answer }}</p>
                     </div>
                 </div>

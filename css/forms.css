@@ -377,53 +377,10 @@
     color: var(--gray);
 }
 
-/* FAQ List — BEM variant (used by platform pricing section) */
+/* FAQ List (narrow container variant) */
 .faq-list {
     max-width: var(--container-width-narrow);
     margin: 0 auto;
-}
-
-.faq-item__question {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 1.25rem 0;
-    font-family: inherit;
-    font-size: 1.05rem;
-    font-weight: var(--font-weight-medium);
-    color: var(--charcoal);
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-item__question iconify-icon {
-    transition: transform var(--transition-fast);
-    color: var(--gray);
-    font-size: 0.8rem;
-}
-
-.faq-item__question.active iconify-icon {
-    transform: rotate(180deg);
-}
-
-.faq-item__answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height var(--transition-normal);
-}
-
-.faq-item__answer.active {
-    max-height: 300px;
-}
-
-.faq-item__answer p {
-    padding: 0 0 1.25rem;
-    font-size: 0.95rem;
-    color: var(--gray);
-    line-height: 1.7;
 }
 
 /* ── Responsive Forms ── */

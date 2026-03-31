@@ -342,7 +342,7 @@ document.addEventListener('click', function(e) {
     var faq = e.target.closest('[data-action="toggle-platform-faq"]');
     if (faq) {
         faq.classList.toggle('active');
-        faq.nextElementSibling.classList.toggle('active');
+        faq.nextElementSibling.classList.toggle('open');
     }
 });
 
