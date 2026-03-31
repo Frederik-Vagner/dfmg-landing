@@ -240,7 +240,6 @@
     gap: var(--gap-sm);
 }
 
-/* .filter-tab — replaced by .tab-button from buttons.css */
 
 .search-bar {
     display: flex;
@@ -309,7 +308,6 @@
     outline: none;
 }
 
-/* .newsletter-btn — replaced by .btn .btn--primary .btn--sm .btn--full */
 
 .newsletter-success {
     color: var(--success);

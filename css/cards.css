@@ -643,8 +643,6 @@
     color: var(--primary);
 }
 
-/* .pricing-table — moved to tables.css */
-
 /* ── Shop Item ── */
 .shop-preview {
     display: grid;
@@ -765,8 +763,6 @@
     .card--price__amount {
         font-size: 1.2rem;
     }
-
-    /* .pricing-table responsive — moved to tables.css */
 
     .pricing-tiers {
         grid-template-columns: 1fr;

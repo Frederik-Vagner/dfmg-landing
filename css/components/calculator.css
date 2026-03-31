@@ -61,9 +61,6 @@
     text-align: center;
 }
 
-/* .input-with-unit, .input-unit — defined in forms.css */
-/* .planning-table, .th-count — moved to tables.css */
-
 /* Service Tasks Grid */
 .service-tasks {
     display: grid;

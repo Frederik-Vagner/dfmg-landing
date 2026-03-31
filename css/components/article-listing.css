@@ -192,8 +192,6 @@
     color: var(--charcoal);
 }
 
-/* .article-body ul/ol/li, ::marker — moved to lists.css */
-
 /* Article Images (article pages, not card listings) */
 .main-content > .article-image,
 .article-body .article-image {
@@ -281,10 +279,6 @@
 }
 
 .sidebar-section { margin-bottom: 1.5rem; }
-
-/* .card--sidebar — defined in cards.css */
-
-/* .toc-list — moved to lists.css */
 
 /* Related Articles */
 .related-article {
