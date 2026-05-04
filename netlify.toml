@@ -1,3 +1,9 @@
 [build]
   command = "npx @11ty/eleventy"
   publish = "_site"
+
+# Redirect software pages (temporarily hidden)
+[[redirects]]
+  from = "/pages/software/*"
+  to = "/"
+  status = 301
