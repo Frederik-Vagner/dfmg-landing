@@ -15,7 +15,9 @@
                     <h2 class="title text-charcoal" style="font-size: 1.6rem;">{{ t.form.heading }}</h2>
                     <p class="body text-gray mb-3">{{ t.form.intro }}</p>
 
-                    <form class="platform-form" action="{{ t.formAction }}" method="GET">
+                    <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
+                        <input type="hidden" name="_subject" value="Demo request - DFMG Platform">
+                        <input type="hidden" name="_next" value="https://dfmg.dk{{ t.formAction }}">
                         <div class="form-row-2">
                             <div class="form-group">
                                 <label for="demo-name">{{ t.form.label_name }}</label>

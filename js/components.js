@@ -184,9 +184,18 @@ function initializeChatbotFunctions() {
             return;
         }
         
-        window.showNotification('Tak! Vi ringer dig op inden for 15 minutter i åbningstid.');
-        document.getElementById('callbackForm').classList.remove('active');
-        phoneInput.value = '';
+        fetch('https://formspree.io/f/xdkdrqkw', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({ _subject: 'Ring-mig-op anmodning fra chatbot', telefon: phoneNumber })
+        }).then(function(res) {
+            if (!res.ok) throw new Error('send failed');
+            window.showNotification('Tak! Vi ringer dig op inden for 15 minutter i åbningstid.');
+            document.getElementById('callbackForm').classList.remove('active');
+            phoneInput.value = '';
+        }).catch(function() {
+            window.showNotification('Noget gik galt. Ring til os på ' + window.DFMG.phoneDisplay + ' i stedet.');
+        });
     };
 
     window.showNotification = function(message) {
@@ -330,10 +339,17 @@ function initNewsletterForm() {
         const email = document.getElementById('newsletter-email').value.trim();
         if (!email) return;
 
-        window.location.href = 'mailto:' + window.DFMG.email + '?subject=Nyhedsbrev tilmelding&body=Tilmeld venligst denne email til jeres nyhedsbrev: ' + encodeURIComponent(email);
-
-        form.style.display = 'none';
-        document.getElementById('newsletter-success').style.display = 'block';
+        fetch('https://formspree.io/f/xdkdrqkw', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({ _subject: 'Nyhedsbrev tilmelding', email: email })
+        }).then((res) => {
+            if (!res.ok) throw new Error('send failed');
+            form.style.display = 'none';
+            document.getElementById('newsletter-success').style.display = 'block';
+        }).catch(() => {
+            window.location.href = 'mailto:' + window.DFMG.email + '?subject=Nyhedsbrev tilmelding&body=Tilmeld venligst denne email til jeres nyhedsbrev: ' + encodeURIComponent(email);
+        });
     });
 }
 
