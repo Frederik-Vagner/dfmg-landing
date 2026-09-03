@@ -3,6 +3,6 @@
 base-template.html
 pages/components/
 pages/facility/components/
-pages/software/**
+pages/software/components/
 images/**/*.html
 pages/**/artikler/_*.html
