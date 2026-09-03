@@ -178,7 +178,7 @@
           "Op til 10 medarbejdere"
         ],
         "ctaText": "Kom i Gang",
-        "ctaHref": "/pages/software/demo.html",
+        "ctaHref": "/pages/software/da/demo.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       },
       {
@@ -198,7 +198,7 @@
           "Op til 50 medarbejdere"
         ],
         "ctaText": "Book en Demo",
-        "ctaHref": "/pages/software/demo.html",
+        "ctaHref": "/pages/software/da/demo.html",
         "ctaClass": "btn btn--success btn--md btn--full"
       },
       {
@@ -217,7 +217,7 @@
           "Ubegrænset antal medarbejdere"
         ],
         "ctaText": "Kontakt Salg",
-        "ctaHref": "/pages/software/contact.html",
+        "ctaHref": "/pages/software/da/contact.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       }
     ],
