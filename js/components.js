@@ -115,6 +115,7 @@ function initializeChatbotFunctions() {
 
     // Chatbot tab switching and FAQ toggle via event delegation
     document.addEventListener('click', function(e) {
+        if (!e.target || typeof e.target.closest !== 'function') return;
         var tabEl = e.target.closest('[data-chatbot-tab]');
         if (tabEl) {
             document.querySelectorAll('[data-chatbot-tab]').forEach(function(t) { t.classList.remove('active'); });
@@ -355,6 +356,7 @@ function initNewsletterForm() {
 
 // Platform FAQ toggle (pricing.html)
 document.addEventListener('click', function(e) {
+    if (!e.target || typeof e.target.closest !== 'function') return;
     var faq = e.target.closest('[data-action="toggle-platform-faq"]');
     if (faq) {
         faq.classList.toggle('active');

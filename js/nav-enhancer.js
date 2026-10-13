@@ -86,12 +86,18 @@
         document.head.appendChild(link);
     }
 
+    // pointerenter/pointerleave also fire on `document` itself, whose target has no
+    // .closest() — guard every delegated lookup so the handler can't throw.
+    function closestFrom(target, sel) {
+        return target && typeof target.closest === 'function' ? target.closest(sel) : null;
+    }
+
     // --- Mousedown Navigation ---
     function navigateOnMousedown(e) {
         // Only left-click, no modifier keys
         if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
-        const a = e.target.closest('a');
+        const a = closestFrom(e.target, 'a');
         if (!a || !isInternalLink(a)) return;
 
         // Skip links with onclick handlers or javascript: hrefs
@@ -108,14 +114,14 @@
         let hoverTimer = null;
 
         document.addEventListener('pointerenter', function(e) {
-            const a = e.target.closest('a');
+            const a = closestFrom(e.target, 'a');
             if (a && isInternalLink(a)) {
                 hoverTimer = setTimeout(() => prefetchUrl(a.href), HOVER_DELAY);
             }
         }, true);
 
         document.addEventListener('pointerleave', function(e) {
-            if (e.target.closest('a') && hoverTimer) {
+            if (closestFrom(e.target, 'a') && hoverTimer) {
                 clearTimeout(hoverTimer);
                 hoverTimer = null;
             }
@@ -145,7 +151,7 @@
 
         // Touch devices: prefetch on touchstart
         document.addEventListener('touchstart', function(e) {
-            const a = e.target.closest('a');
+            const a = closestFrom(e.target, 'a');
             if (a && isInternalLink(a)) prefetchUrl(a.href);
         }, { passive: true });
     }

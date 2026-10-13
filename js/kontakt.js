@@ -54,6 +54,7 @@
 
         // FAQ toggle via event delegation
         document.addEventListener('click', function(event) {
+            if (!event.target || typeof event.target.closest !== 'function') return;
             const faqQuestion = event.target.closest('[data-action="toggle-faq"]');
             if (!faqQuestion) return;
 

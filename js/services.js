@@ -263,6 +263,7 @@ document.querySelectorAll('.service-column').forEach(column => {
 
 // Close expanded content via data-action
 document.addEventListener('click', (e) => {
+    if (!e.target || typeof e.target.closest !== 'function') return;
     if (e.target.closest('[data-action="close-expanded"]')) {
         closeExpandedContent(e);
         return;
