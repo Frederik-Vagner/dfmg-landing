@@ -2,7 +2,7 @@
     <section class="platform-hero">
         <div class="container">
             <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
-            <div class="title">{{ t.hero.title }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
             <div class="hero-actions">
                 <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.hero.cta_demo }}</a>
@@ -14,47 +14,15 @@
                 <div style="text-align: center;">
                     <iconify-icon icon="fluent:play-circle-20-filled" inline style="font-size: 3rem; margin-bottom: 1rem; display: block; opacity: 0.5;"></iconify-icon>
                     <span>{{ t.hero.placeholder_text }}</span><br>
-                    <small style="opacity: 0.5;">{{ t.hero.placeholder_hint }}</small>
+                    {# note to self (not rendered): {{ t.hero.placeholder_hint }} #}
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social proof + outcome metrics -->
-    <section class="section section--half">
-        <div class="container">
-            <div class="text-center mb-2">
-                <div class="body text-gray">{{ t.proof.text | safe }}</div>
-            </div>
-
-            <!-- TODO: Replace with real partner/client logos or integration logos -->
-            <div class="flex flex-4 mb-2" style="align-items: center; justify-content: center; opacity: 0.4;">
-                <div class="text-center text-gray" style="padding: 1rem;">[Client Logo 1]</div>
-                <div class="text-center text-gray" style="padding: 1rem;">[Client Logo 2]</div>
-                <div class="text-center text-gray" style="padding: 1rem;">[Client Logo 3]</div>
-                <div class="text-center text-gray" style="padding: 1rem;">[Integration Logo]</div>
-            </div>
-
-            <div class="flex flex-4">
-                <div class="card p-1 bg-gradient-white text-center">
-                    <div class="metric-value">{{ t.metrics.saved_value }}</div>
-                    <div class="metric-label">{{ t.metrics.saved_label }}</div>
-                </div>
-                <div class="card p-1 bg-gradient-white text-center">
-                    <div class="metric-value">{{ t.metrics.ontime_value }}</div>
-                    <div class="metric-label">{{ t.metrics.ontime_label }}</div>
-                </div>
-                <div class="card p-1 bg-gradient-white text-center">
-                    <div class="metric-value">{{ t.metrics.compliance_value }}</div>
-                    <div class="metric-label">{{ t.metrics.compliance_label }}</div>
-                </div>
-                <div class="card p-1 bg-gradient-white text-center">
-                    <div class="metric-value">{{ t.metrics.wait_value }}</div>
-                    <div class="metric-label">{{ t.metrics.wait_label }}</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {# Social proof + metrics section removed: the figures were "[X]h saved per week",
+       "[X]% on-time" and a "[X] employees / [X] clients" line — placeholders, not measurements.
+       Re-add the section once the numbers come from the platform's own data. #}
 
     <!-- Built by practitioners — your differentiator -->
     <section class="section section--light section--half">
@@ -149,69 +117,16 @@
                     <div style="text-align: center;">
                         <iconify-icon icon="fluent:video-20-filled" inline style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
                         <span>{{ t.walkthrough.placeholder_text }}</span><br>
-                        <small style="opacity: 0.5;">{{ t.walkthrough.placeholder_hint }}</small>
+                        {# note to self (not rendered): {{ t.walkthrough.placeholder_hint }} #}
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial / Case study — your own story -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center mb-4">
-                <div class="subtitle text-primary">{{ t.testimonial.subtitle }}</div>
-                <div class="title text-charcoal">{{ t.testimonial.title }}</div>
-            </div>
-
-            <div class="flex flex-2" style="align-items: center; gap: 3rem;">
-                <!-- TODO: Replace with photo of you/team + real quote -->
-                <div class="screenshot-placeholder screenshot-placeholder--light" style="min-height: 300px; flex: 0 0 300px;">
-                    <div style="text-align: center;">
-                        <iconify-icon icon="fluent:person-circle-20-filled" inline style="font-size: 3rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
-                        <span>{{ t.testimonial.placeholder_photo }}</span>
-                    </div>
-                </div>
-                <div>
-                    <blockquote style="font-size: 1.2rem; font-style: italic; color: var(--charcoal); line-height: 1.7; margin: 0 0 1.5rem; border-left: 4px solid var(--primary); padding-left: 1.5rem;">
-                        "{{ t.testimonial.quote }}"
-                    </blockquote>
-                    <div>
-                        <strong style="color: var(--charcoal);">{{ t.testimonial.name }}</strong><br>
-                        <span class="text-gray">{{ t.testimonial.role }}</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional case studies placeholder -->
-            <div class="flex mt-4" style="gap: 1.5rem;">
-                <div class="card p-2 bg-gradient-white" style="flex: 1;">
-                    <div style="color: var(--primary); margin-bottom: 0.5rem;"><iconify-icon icon="fluent:text-quote-20-filled" inline></iconify-icon></div>
-                    <p class="text-gray" style="font-style: italic; margin-bottom: 1rem;">"{{ t.testimonial.future1_quote }}"</p>
-                    <div>
-                        <strong class="text-charcoal">{{ t.testimonial.future1_name }}</strong><br>
-                        <small class="text-gray">{{ t.testimonial.future1_role }}</small>
-                    </div>
-                </div>
-                <div class="card p-2 bg-gradient-white" style="flex: 1;">
-                    <div style="color: var(--primary); margin-bottom: 0.5rem;"><iconify-icon icon="fluent:text-quote-20-filled" inline></iconify-icon></div>
-                    <p class="text-gray" style="font-style: italic; margin-bottom: 1rem;">"{{ t.testimonial.future2_quote }}"</p>
-                    <div>
-                        <strong class="text-charcoal">{{ t.testimonial.future2_name }}</strong><br>
-                        <small class="text-gray">{{ t.testimonial.future2_role }}</small>
-                    </div>
-                </div>
-                <div class="card p-2 bg-gradient-white" style="flex: 1;">
-                    <div style="color: var(--primary); margin-bottom: 0.5rem;"><iconify-icon icon="fluent:text-quote-20-filled" inline></iconify-icon></div>
-                    <p class="text-gray" style="font-style: italic; margin-bottom: 1rem;">"{{ t.testimonial.future3_quote }}"</p>
-                    <div>
-                        <strong class="text-charcoal">{{ t.testimonial.future3_name }}</strong><br>
-                        <small class="text-gray">{{ t.testimonial.future3_role }}</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {# Testimonial section removed: it shipped "[Your testimonial here...]" plus three
+       "[Future customer testimonial]" blocks attributed to "[Name], [Company]".
+       Re-add with a real, attributed quote — your own counts as one. #}
 
     <!-- Comparison — what you're replacing -->
     <section class="section section--light">

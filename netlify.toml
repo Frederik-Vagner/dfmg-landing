@@ -1,3 +1,41 @@
 [build]
   command = "npx @11ty/eleventy"
   publish = "_site"
+
+# The SOHO and Kgl. Haveselskab case pages were unpublished (they carried
+# Adnami's content). Send any old links or indexed URLs to the Indblik overview.
+[[redirects]]
+  from = "/pages/facility/indblik/cases/soho"
+  to = "/pages/facility/indblik/indblik.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/facility/indblik/cases/soho.html"
+  to = "/pages/facility/indblik/indblik.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/facility/indblik/cases/kgl"
+  to = "/pages/facility/indblik/indblik.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/facility/indblik/cases/kgl.html"
+  to = "/pages/facility/indblik/indblik.html"
+  status = 301
+
+# Erhvervsrengøring moved off the non-ASCII filename; keep the old URLs working.
+[[redirects]]
+  from = "/pages/facility/services/rengøring.html"
+  to = "/pages/facility/services/rengoering.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/facility/services/reng%C3%B8ring.html"
+  to = "/pages/facility/services/rengoering.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/facility/services/rengøring"
+  to = "/pages/facility/services/rengoering.html"
+  status = 301

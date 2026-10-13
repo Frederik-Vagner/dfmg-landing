@@ -44,7 +44,7 @@
                 <div class="demo-split__form">
                     <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.25rem;">{{ t.form.heading }}</h2>
                     <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
-                        <input type="hidden" name="_subject" value="New inquiry from DFMG Platform">
+                        <input type="hidden" name="_subject" value="{{ t.form.email_subject }}">
                         <input type="hidden" name="_next" value="https://dfmg.dk{{ prefix }}/tak.html">
                         <div class="form-group">
                             <label for="contact-interest">{{ t.form.label_interest }}</label>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>DFMG - Cookiepolitik</title>
-    <meta name="description" content="DFMG's cookiepolitik og brug af cookies.">
+    <meta name="description" content="dfmg.dk bruger ingen cookies, ingen analyseværktøjer og ingen annoncesporing. Her kan du læse, hvad siden gemmer i din browser, og hvorfor der ikke er et cookie-banner.">
 
     <!-- Favicon (root-relative paths) -->
     <link rel="icon" href="/images/logos/logo.png" type="image/png">
@@ -14,15 +14,25 @@
 
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
 
     <!-- Icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js" defer></script>
     <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/badges.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="/css/lists.css">
+    <link rel="stylesheet" href="/css/photos.css">
+    <link rel="stylesheet" href="/css/tables.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <script src="/js/nav-enhancer.js"></script>
 
@@ -56,170 +66,99 @@
 
 <section class="section first">
     <div class="container">
-        <h1>Cookie Politik</h1>
-        <div class="update-date">Sidst opdateret: 23. august 2025</div>
+        <h1>Cookiepolitik</h1>
+        <div class="update-date">Sidst opdateret: 13. oktober 2026</div>
+
+        <h2>Kort fortalt</h2>
+        <p><strong>Vi bruger ingen cookies på dfmg.dk.</strong> Vi har ingen statistik- eller analyseværktøjer, ingen annoncesporing, ingen pixels og ingen profilering af besøgende. Derfor møder du heller ikke et cookie-banner, når du kommer ind på siden.</p>
+        <p>Vi gemmer to tekniske oplysninger lokalt i din browser, så siden fungerer og føles hurtig. De forlader aldrig din enhed, og de slettes automatisk, når du lukker fanen. Det beskriver vi nedenfor.</p>
 
         <h2>Hvad er cookies?</h2>
-        <p>Cookies er små tekstfiler, som gemmes på din computer, tablet eller smartphone, når du besøger vores hjemmeside. De hjælper os med at:</p>
+        <p>Cookies er små tekstfiler, som en hjemmeside kan gemme på din computer, tablet eller telefon, og som typisk sendes med, hver gang du besøger siden igen. De bruges ofte til at genkende besøgende på tværs af besøg og hjemmesider.</p>
+        <p>Browsere har også andre former for lokal lagring, for eksempel <em>sessionStorage</em>. Den slags data bliver liggende i browseren og sendes ikke automatisk til hjemmesiden eller til andre. Det er udelukkende denne type, vi benytter.</p>
+
+        <h2>Hvad vi gemmer i din browser</h2>
+        <table class="cookie-table">
+            <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Type</th>
+                    <th>Formål</th>
+                    <th>Slettes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/pages/&hellip;/components/&hellip;.html</td>
+                    <td>sessionStorage</td>
+                    <td>Gemmer menu, sidefod og chat-boks kortvarigt, så de ikke skal hentes igen på hver side</td>
+                    <td>Når du lukker fanen</td>
+                </tr>
+                <tr>
+                    <td>scrollPos_&hellip;</td>
+                    <td>sessionStorage</td>
+                    <td>Husker hvor langt du var scrollet ned, hvis du går tilbage til en side</td>
+                    <td>Når du lukker fanen</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Ingen af delene indeholder personoplysninger, og ingen af delene bruges til at genkende dig ved et senere besøg.</p>
+
+        <h2>Hvorfor der ikke er et cookie-banner</h2>
+        <p>Kravet om samtykke gælder lagring og adgang til oplysninger på dit udstyr, som ikke er nødvendig for at levere den tjeneste, du har bedt om. Vi gemmer kun det, der er teknisk nødvendigt for at vise siden, og vi indsamler ingen oplysninger om din adfærd. Derfor beder vi ikke om samtykke.</p>
+        <p>Vælger vi senere at tilføje besøgsstatistik eller markedsføringsværktøjer, indfører vi et samtykkebanner først, og denne politik bliver opdateret, inden det tages i brug.</p>
+
+        <h2>Tredjeparter</h2>
+        <p>Skrifttyper hentes fra vores egen server. Enkelte andre dele af siden hentes fra eksterne tjenester. De sætter ikke cookies hos os, men de modtager din IP-adresse og oplysninger om din browser, fordi din browser kontakter dem direkte:</p>
+        <table class="cookie-table">
+            <thead>
+                <tr>
+                    <th>Tjeneste</th>
+                    <th>Hvad den leverer</th>
+                    <th>Hvornår</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>jsDelivr og Iconify</td>
+                    <td>Ikonerne på siden</td>
+                    <td>På alle sider</td>
+                </tr>
+                <tr>
+                    <td>Netlify</td>
+                    <td>Hosting af hjemmesiden</td>
+                    <td>På alle sider</td>
+                </tr>
+                <tr>
+                    <td>Formspree</td>
+                    <td>Modtager og videresender indholdet af vores formularer</td>
+                    <td>Kun når du selv sender en formular</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Sender du en formular, en besked via chatten eller en tilmelding til nyhedsbrevet, behandler vi de oplysninger, du selv skriver. Det er beskrevet i vores <a href="/pages/facility/components/privatlivspolitik.html">privatlivspolitik</a>.</p>
+
+        <h2>Sådan rydder du lokal lagring</h2>
+        <p>Du kan altid rydde det, vi gemmer, ved at lukke fanen. Vil du rydde alt lokalt indhold fra hjemmesider manuelt, kan du gøre det i din browser:</p>
         <ul>
-            <li>Huske dine præferencer og indstillinger</li>
-            <li>Analysere hvordan hjemmesiden bruges</li>
-            <li>Forbedre brugeroplevelsen</li>
-            <li>Vise relevante annoncer</li>
-        </ul>
-
-        <h2>Hvilke cookies bruger vi?</h2>
-
-        <div class="cookie-category">
-            <h3>Strengt nødvendige cookies</h3>
-            <p>Disse cookies er nødvendige for at hjemmesiden kan fungere korrekt. De kan ikke slås fra.</p>
-            
-            <table class="cookie-table">
-                <thead>
-                    <tr>
-                        <th>Cookie navn</th>
-                        <th>Formål</th>
-                        <th>Udløber</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>PHPSESSID</td>
-                        <td>Session-håndtering og sikkerhed</td>
-                        <td>Ved session-afslutning</td>
-                    </tr>
-                    <tr>
-                        <td>cookie_consent</td>
-                        <td>Husker dit cookie-samtykke</td>
-                        <td>1 år</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="cookie-category">
-            <h3>Statistik cookies</h3>
-            <p>Hjælper os med at forstå hvordan besøgende bruger hjemmesiden, så vi kan forbedre den.</p>
-            
-            <table class="cookie-table">
-                <thead>
-                    <tr>
-                        <th>Tjeneste</th>
-                        <th>Formål</th>
-                        <th>Cookie navne</th>
-                        <th>Udløber</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Google Analytics</td>
-                        <td>Besøgsstatistikker og brugeradfærd</td>
-                        <td>_ga, _ga_*, _gid</td>
-                        <td>2 år / 24 timer</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><small>Læs mere om Google Analytics cookies på: <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage" target="_blank">Google's officielle side</a></small></p>
-        </div>
-
-        <div class="cookie-category">
-            <h3>Marketing cookies</h3>
-            <p>Bruges til at vise dig relevante annoncer og måle effektiviteten af vores markedsføring.</p>
-            
-            <table class="cookie-table">
-                <thead>
-                    <tr>
-                        <th>Tjeneste</th>
-                        <th>Formål</th>
-                        <th>Cookie navne</th>
-                        <th>Udløber</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Google Ads</td>
-                        <td>Remarketing og konverteringsmåling</td>
-                        <td>_gcl_*, ads-id</td>
-                        <td>90 dage</td>
-                    </tr>
-                    <tr>
-                        <td>Facebook Pixel</td>
-                        <td>Målrettet annoncering på Facebook</td>
-                        <td>_fbp, _fbc</td>
-                        <td>90 dage</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="cookie-category">
-            <h3>Funktionalitet cookies</h3>
-            <p>Forbedrer funktionaliteten og personaliseringen af hjemmesiden.</p>
-            
-            <table class="cookie-table">
-                <thead>
-                    <tr>
-                        <th>Tjeneste</th>
-                        <th>Formål</th>
-                        <th>Udløber</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Chatbot indstillinger</td>
-                        <td>Husker chatbot præferencer</td>
-                        <td>30 dage</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2>Sådan administrerer du cookies</h2>
-
-        <h3>Vores cookie-banner</h3>
-        <p>Når du besøger vores hjemmeside første gang, får du mulighed for at acceptere eller afvise ikke-nødvendige cookies via vores cookie-banner.</p>
-
-        <div class="browser-instructions">
-            <h3>Browser-indstillinger</h3>
-            <p>Du kan også administrere cookies direkte i din browser:</p>
-            <ul>
-                <li><strong>Chrome:</strong> Indstillinger → Avanceret → Privatliv og sikkerhed → Cookies</li>
-                <li><strong>Firefox:</strong> Indstillinger → Privatliv og sikkerhed → Cookies og webstedsdata</li>
-                <li><strong>Safari:</strong> Præferencer → Privatliv → Administrer webstedsdata</li>
-                <li><strong>Edge:</strong> Indstillinger → Cookies og webstedsrettigheder</li>
-            </ul>
-            <p><strong>Bemærk:</strong> Hvis du sletter alle cookies, kan det påvirke funktionaliteten af hjemmesiden.</p>
-        </div>
-
-        <h2>Tredjepartstjenester</h2>
-        <p>Vi bruger følgende tredjepartstjenester, som kan sætte deres egne cookies:</p>
-        <ul>
-            <li><strong>Google Analytics:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-            <li><strong>Google Ads:</strong> <a href="https://policies.google.com/technologies/ads" target="_blank">Google Ads Settings</a></li>
-            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/privacy/explanation" target="_blank">Facebook Privacy Policy</a></li>
-        </ul>
-
-        <h2>Dit samtykke</h2>
-        <p>Ved at acceptere cookies på vores hjemmeside giver du samtykke til, at vi behandler dine oplysninger som beskrevet i denne politik og vores <a href="privatlivspolitik.html">privatlivspolitik</a>.</p>
-        <p>Du kan til enhver tid trække dit samtykke tilbage ved at:</p>
-        <ul>
-            <li>Slette cookies i din browser</li>
-            <li>Kontakte os på kontakt@dfmg.dk</li>
-            <li>Ændre indstillinger i vores cookie-banner (hvis tilgængelig)</li>
+            <li><strong>Chrome:</strong> Indstillinger → Privatliv og sikkerhed → Slet browserdata</li>
+            <li><strong>Firefox:</strong> Indstillinger → Privatliv og sikkerhed → Cookies og webstedsdata</li>
+            <li><strong>Safari:</strong> Indstillinger → Privatliv → Administrer webstedsdata</li>
+            <li><strong>Edge:</strong> Indstillinger → Cookies og webstedstilladelser</li>
         </ul>
 
         <h2>Kontakt os</h2>
-        <p>Har du spørgsmål til vores brug af cookies, kan du kontakte os:</p>
+        <p>Har du spørgsmål til denne politik, er du velkommen til at skrive eller ringe:</p>
         <div class="cookie-category">
             <strong>DFMG ApS</strong><br>
-            CVR-nr: 44646102<br>
-            Adresse: Borups Allé 21, 2200 København<br>
-            Email: kontakt@dfmg.dk<br>
-            Telefon: 50480273
+            CVR-nr.: 44646102<br>
+            Borups Allé 21, 2200 København<br>
+            E-mail: <a href="mailto:kontakt@dfmg.dk">kontakt@dfmg.dk</a><br>
+            Telefon: +45 50 48 02 73
         </div>
 
         <h2>Opdateringer</h2>
-        <p>Denne cookie-politik kan opdateres fra tid til anden. Væsentlige ændringer vil blive kommunikeret på hjemmesiden.</p>
+        <p>Denne politik opdateres, hvis vi ændrer, hvad hjemmesiden gemmer eller henter. Datoen øverst viser, hvornår den sidst blev ændret.</p>
     </div>
 </section>
 
@@ -229,6 +168,7 @@
     <!-- Chatbot Component -->
     <div id="chatbot"></div>
     <!-- Component Loader -->
+    <script src="/js/site-config.js"></script>
     <script src="/js/components.js" defer></script>
 </body>
 </html>

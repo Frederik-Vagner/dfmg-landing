@@ -3,14 +3,9 @@ const serviceDetails = {
     cleaning: {
         title: "Erhvervsrengøring",
         badge: "Mest Populære",
-        url: "/pages/facility/services/rengøring.html",
+        url: "/pages/facility/services/rengoering",
         description: "Erhvervsrengøring af kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.",
         detailedDescription: "Vores erfarne rengøringsteams leverer konsistent høj kvalitet gennem certificerede processer og miljøvenlige produkter.",
-        stats: [
-            { number: "2000+", label: "Udførte rengøringer" },
-            { number: "100%", label: "Udførsel" },
-            { number: "24/7", label: "Support" }
-        ],
         categories: [
             {
                 name: "Kontorrengøring",
@@ -36,11 +31,6 @@ const serviceDetails = {
         title: "Ejendomsservice",
         url: "/pages/facility/services/ejendomsservice.html",
         description: "Vedligeholdelse af trapper, opgange, elevatorer og udendørs områder.",
-        stats: [
-            { number: "100%", label: "Udførsel" },
-            { number: "2", label: "Års erfaring" },
-            { number: "99%", label: "Tilfredshed" }
-        ],
         categories: [
             {
                 name: "Fællesarealer & Opgange",
@@ -62,11 +52,6 @@ const serviceDetails = {
         title: "Handyman Services",
         url: "/pages/facility/services/handyman.html",
         description: "Reparationer, vedligeholdelse og møbelmontering med hurtig responstid.",
-        stats: [
-            { number: "100%", label: "Udførsel" },
-            { number: "2 timer", label: "Responstid" },
-            { number: "100%", label: "Garanti" }
-        ],
         categories: [
             {
                 name: "VVS & El-arbejde",
@@ -88,11 +73,6 @@ const serviceDetails = {
         title: "Supplies & Produkter",
         url: "/pages/facility/services/produkter.html",
         description: "Hygiejneprodukter og office supplies med automatisk påfyldning.",
-        stats: [
-            { number: "100+", label: "Produkter" },
-            { number: "72 timer", label: "Leveringstid" },
-            { number: "God", label: "Besparelse" }
-        ],
         categories: [
             {
                 name: "Hygiejneprodukter",
@@ -114,11 +94,6 @@ const serviceDetails = {
         title: "Piccoline Ordning",
         url: "/pages/facility/services/picoline.html",
         description: "Mindre administrative opgaver og specialopgaver der gør hverdagen nemmere.",
-        stats: [
-            { number: "Samme", label: "Medarbejder" },
-            { number: "2 timer", label: "Responstid" },
-            { number: "Flexible", label: "Løsninger" }
-        ],
         categories: [
             {
                 name: "Administrative Opgaver",
@@ -140,11 +115,6 @@ const serviceDetails = {
         title: "Vinduespolering",
         url: "/pages/facility/services/vinduespudsning.html",
         description: "Professionel vinduesrens indvendig og udvendig med certificeret udstyr.",
-        stats: [
-            { number: "1000+", label: "Vinuder" },
-            { number: "10.000+", label: "m² vinduer" },
-            { number: "0", label: "Ulykker" }
-        ],
         categories: [
             {
                 name: "Indvendig Vinduesrens",
@@ -214,15 +184,6 @@ function showExpandedContent(column, serviceType) {
                 <h3 class="text-charcoal">${service.title}</h3>
                 <p class="text-charcoal">${service.description}</p>
 
-                <div class="expanded-stats">
-                    ${service.stats.map(stat => `
-                        <div class="expanded-stat-item">
-                            <div class="expanded-stat-number">${stat.number}</div>
-                            <div class="expanded-stat-label">${stat.label}</div>
-                        </div>
-                    `).join('')}
-                </div>
-
                 <div class="specialomrader-section">
                     <h4 class="text-charcoal">Specialområder</h4>
                     <div class="grid-2x2">
@@ -242,7 +203,7 @@ function showExpandedContent(column, serviceType) {
 
             <div class="expanded-content-right">
                 <div class="expanded-image">
-                    <img src="/images/service/${getImageName(serviceType)}.jpg" alt="${service.title}" class="w-full h-full object-cover rounded-15" loading="lazy" decoding="async">
+                    <img src="/images/service/${getImageName(serviceType)}.webp" alt="${service.title}" class="w-full h-full object-cover rounded-15" loading="lazy" decoding="async">
                 </div>
                 <div class="benefits-section">
                     <h4 class="benefits-title">Hvorfor DFMG</h4>

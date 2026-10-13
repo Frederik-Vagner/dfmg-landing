@@ -226,6 +226,18 @@
     }
 }
 
+/* Slide headings: only the first slide carries the page's <h1>; the rest are
+   <h2> for a valid document outline but keep the same visual weight. */
+.slide h2 {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .slide .full-width h2 {
+        font-size: 2.5rem;
+    }
+}
+
 /* ========================================
    SHARED COMPONENT STYLES
    Reusable across sustainability pages

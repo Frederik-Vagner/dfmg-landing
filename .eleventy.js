@@ -9,7 +9,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   // Pass through component HTML files (loaded by components.js at runtime)
@@ -36,8 +38,19 @@ module.exports = function (eleventyConfig) {
   });
 
   // Minify CSS and JS after build
-  eleventyConfig.on("eleventy.after", async () => {
-    const outDir = "_site";
+  eleventyConfig.on("eleventy.after", async ({ dir } = {}) => {
+    const outDir = (dir && dir.output) || "_site";
+
+    // The policy pages under pages/**/components are passed through verbatim, so
+    // they never get base.html's inline window.DFMG and their header/footer
+    // rendered with empty %SITE_*% tokens. Emit the same config as a file they
+    // can load, generated from _data/site.json so there is one source of truth.
+    const siteConfig = JSON.parse(fs.readFileSync("_data/site.json", "utf8"));
+    fs.mkdirSync(path.join(outDir, "js"), { recursive: true });
+    fs.writeFileSync(
+      path.join(outDir, "js", "site-config.js"),
+      "window.DFMG=" + JSON.stringify(siteConfig) + ";"
+    );
 
     // Minify CSS files
     const cssDir = path.join(outDir, "css");

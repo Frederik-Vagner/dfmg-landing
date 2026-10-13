@@ -54,7 +54,8 @@
     font-size: var(--font-size-subtitle);
 }
 
-.footer-contact a {
+.footer-contact a,
+.footer-contact .footer-address {
     color: var(--white);
     text-decoration: none;
     display: flex;
@@ -62,6 +63,10 @@
     gap: var(--gap-sm);
     transition: var(--transition-fast);
     font-weight: var(--font-weight-light);
+}
+
+.footer-contact .footer-address {
+    font-style: normal;
 }
 
 .footer-contact a:hover {

@@ -37,7 +37,8 @@
       "placeholder_phone": "12 34 56 78",
       "label_message": "Message",
       "placeholder_message": "Tell us about your needs...",
-      "btn_submit": "Send Message"
+      "btn_submit": "Send Message",
+      "email_subject": "New inquiry from DFMG Platform"
     }
   },
   "da": {
@@ -78,7 +79,8 @@
       "placeholder_phone": "12 34 56 78",
       "label_message": "Besked",
       "placeholder_message": "Fortæl os om jeres behov...",
-      "btn_submit": "Send Besked"
+      "btn_submit": "Send Besked",
+      "email_subject": "Ny henvendelse fra DFMG Platform"
     }
   }
 }

@@ -302,7 +302,7 @@ function initRelatedArticles() {
         const imageDiv = document.createElement('div');
         imageDiv.className = 'related-image ' + article.category;
         const img = document.createElement('img');
-        img.src = '/images/article/ipad.jpg';
+        img.src = '/images/article/ipad.webp';
         img.alt = '';
         img.className = 'w-full h-full object-cover rounded-lg';
         img.loading = 'lazy';

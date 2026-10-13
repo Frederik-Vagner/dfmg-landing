@@ -10,24 +10,35 @@
     <meta name="robots" content="{{ robots }}">
     {% endif %}
 
-    {% if og %}
+    {#- Canonical and Open Graph are derived from the page unless front matter overrides them -#}
+    {%- set pageUrl = site.url + ("/" if page.url == "/index.html" else page.url) -%}
+    {%- set canonicalUrl = canonical | default(pageUrl) -%}
+    {%- set ogData = og | default({}) -%}
+
     <!-- Open Graph -->
-    <meta property="og:title" content="{{ og.title | default(title) }}">
-    <meta property="og:description" content="{{ og.description | default(description) }}">
-    <meta property="og:type" content="{{ og.type | default('website') }}">
-    <meta property="og:url" content="{{ og.url }}">
-    <meta property="og:image" content="{{ og.image }}">
-    <meta property="og:locale" content="{{ og.locale | default('da_DK') }}">
-    {% endif %}
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ ogData.title | default(title) }}">
+    <meta property="og:description" content="{{ ogData.description | default(description) }}">
+    <meta property="og:type" content="{{ ogData.type | default('website') }}">
+    <meta property="og:url" content="{{ ogData.url | default(canonicalUrl) }}">
+    <meta property="og:image" content="{{ ogData.image | default(site.url + '/images/og-image.jpg') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="{{ ogData.locale | default('da_DK') }}">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ ogData.title | default(title) }}">
+    <meta name="twitter:description" content="{{ ogData.description | default(description) }}">
+    <meta name="twitter:image" content="{{ ogData.image | default(site.url + '/images/og-image.jpg') }}">
 
     <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/images/logos/logo.png" type="image/png">
     <link rel="icon" href="/images/logos/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="/images/logos/apple-touch-icon.png" sizes="180x180">
 
-    {% if canonical %}
-    <link rel="canonical" href="{{ canonical }}">
-    {% endif %}
+    <link rel="canonical" href="{{ canonicalUrl }}">
 
     {% if langAlternate %}
     {% for altLang, altUrl in langAlternate %}
@@ -38,12 +49,12 @@
 
     <!-- Performance -->
     <meta name="theme-color" content="#344767">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://api.iconify.design" crossorigin>
+    <link rel="preload" href="/fonts/montserrat-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/montserrat-latin-500.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font (selvhostet) -->
+    <link rel="stylesheet" href="/css/fonts.css">
 
     <!-- Icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js" defer></script>
@@ -70,10 +81,40 @@
 
     <script src="/js/nav-enhancer.js"></script>
 
-    {% if jsonLd %}
     <!-- Structured Data -->
+    {% if jsonLd %}
     <script type="application/ld+json">
     {{ jsonLd | dump(2) | safe }}
+    </script>
+    {% else %}
+    <script type="application/ld+json">
+    {{ {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": site.url + "/#organization",
+      "name": site.name,
+      "legalName": site.legalName,
+      "url": site.url,
+      "logo": site.url + "/images/logos/logo.png",
+      "image": site.url + "/images/og-image.jpg",
+      "email": site.email,
+      "telephone": site.phone,
+      "vatID": "DK" + site.cvr,
+      "taxID": site.cvr,
+      "foundingDate": "2023",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Borups Allé 21",
+        "postalCode": "2200",
+        "addressLocality": "København",
+        "addressCountry": "DK"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Storkøbenhavn"
+      },
+      "sameAs": [site.linkedin, site.cvrUrl]
+    } | dump(2) | safe }}
     </script>
     {% endif %}
 </head>

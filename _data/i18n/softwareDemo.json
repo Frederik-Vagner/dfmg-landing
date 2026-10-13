@@ -25,7 +25,8 @@
       "option_50plus": "50+ employees",
       "label_message": "What are you most interested in?",
       "placeholder_message": "E.g. scheduling & invoicing, payroll, full accounting...",
-      "submit": "Request Demo"
+      "submit": "Request Demo",
+      "email_subject": "Demo request - DFMG Platform"
     },
     "visual": {
       "placeholder_text": "Product preview video or dashboard screenshot",
@@ -74,7 +75,8 @@
       "option_50plus": "50+ medarbejdere",
       "label_message": "Hvad er du mest interesseret i?",
       "placeholder_message": "F.eks. planlægning og fakturering, løn, fuld bogføring...",
-      "submit": "Bestil demo"
+      "submit": "Bestil demo",
+      "email_subject": "Demoforespørgsel - DFMG Platform"
     },
     "visual": {
       "placeholder_text": "Produktvideo eller skærmbillede af dashboardet",
