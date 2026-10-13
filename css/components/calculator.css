@@ -169,12 +169,27 @@
 }
 
 @media (max-width: 768px) {
+    /* The three columns are side by side inside a 100vh box that hides its
+       overflow. Stacked on a phone they are several screens tall, so the page
+       itself has to scroll instead of the box clipping them. */
+    .calculator-page {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
     .calculator-container {
         padding-top: 80px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .column {
+        overflow: visible;
     }
 
     .calculator-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         min-height: auto;
     }
 

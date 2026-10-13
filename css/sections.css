@@ -384,6 +384,12 @@
 
 /* ── Responsive Sections ── */
 @media (max-width: 768px) {
+    /* Contact page: info column above the form instead of beside it. */
+    .career-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
     .platform-hero {
         height: auto;
         min-height: 100vh;
@@ -433,6 +439,19 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+
+/* The container is a flex item in these sections, so its automatic minimum
+   size is its min-content width — without this it refuses to shrink to a
+   phone screen and a single long word pushes the whole column off the edge. */
+.section--fullheight > .container,
+.section--fullheight > .container-narrow,
+.section--fullheight > .container-wide,
+.section--half > .container,
+.section--half > .container-narrow,
+.section--half > .container-wide {
+    min-width: 0;
+    width: 100%;
 }
 
 /* ── Aside Note ── */
@@ -497,6 +516,21 @@
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Declared here, after the base rules above, because the responsive block
+   earlier in this file would otherwise be overridden by them. */
+@media (max-width: 768px) {
+    /* Text column above the image collage instead of beside it. */
+    .showcase-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+        min-height: 0;
+    }
+
+    .showcase-img {
+        height: 140px;
+    }
 }
 
 .showcase-img:nth-child(1) { transform: translateY(-5px); }

@@ -161,3 +161,11 @@
         align-self: center;
     }
 }
+
+/* The chat bubble is fixed to the bottom-right corner, which on a phone lands
+   on the last line of the footer. Give that line room to clear it. */
+@media (max-width: 768px) {
+    .footer-bottom {
+        padding-bottom: calc(var(--gap-lg) + 60px);
+    }
+}

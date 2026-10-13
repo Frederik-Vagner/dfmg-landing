@@ -306,6 +306,10 @@
     }
 
     .service-column {
+        /* flex: 1 from the base rule sets flex-basis: 0 on this now-vertical
+           axis, which beats the height below and collapses the band to its
+           title. Opt the column out of flexing so the height holds. */
+        flex: 0 0 auto;
         height: 200px;
         align-items: center;
         justify-content: center;
@@ -319,6 +323,28 @@
     .service-title {
         font-size: 1.3rem;
         color: var(--white);
+        white-space: normal;
+        width: auto;
+    }
+
+    /* The content block is offset 70vh down the column, which lands inside a
+       100vh desktop column but far below a 200px band — that offset is why
+       nothing but the photo shows here. Sit it in the band instead. */
+    .service-content {
+        top: 0;
+        height: 100%;
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    /* Collapsed, these are transparent but still ~230px of layout, which is
+       what pushed the title out of the band. Tapping a column opens the
+       .expanded-content overlay that services.js builds, so nothing here is
+       lost by taking them out of flow. */
+    .service-description,
+    .service-features,
+    .service-actions {
+        display: none;
     }
 }
 
@@ -333,4 +359,93 @@
 .service-column.collapsed:hover {
     flex: 0.2 !important;
     filter: none !important;
+}
+
+/* ========================================
+   MOBILE: the expanded panel
+   On desktop a tapped column grows to flex: 3, the others shrink to slivers
+   and .expanded-content covers the column as a full-height overlay. Stacked
+   on a phone there is no sideways room to trade, so the tapped band simply
+   grows downwards and the other bands stay as they were.
+   At the end of the file so it wins over the state rules above.
+   ======================================== */
+@media (max-width: 768px) {
+    /* Opening one band must not shrink the others to unreadable strips. */
+    .service-column.collapsed,
+    .service-column.collapsed:hover {
+        flex: 0 0 auto !important;
+        height: 200px;
+    }
+
+    .service-column.collapsed .service-content {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* The band grows to fit the panel instead of clipping it to 100vh, and
+       stacks it under the photo rather than beside it. */
+    .service-column.expanded {
+        flex: 0 0 auto;
+        height: auto;
+        overflow: visible;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .service-column.expanded .service-content {
+        flex: 0 0 auto;
+        min-height: 200px;
+        padding: 1rem;
+    }
+
+    .service-column.expanded .service-title {
+        font-size: 1.3rem;
+    }
+
+    .expanded-content {
+        position: relative;
+        height: auto;
+        padding: 1.5rem 1.25rem 2rem;
+    }
+
+    .expanded-layout {
+        flex-direction: column;
+        /* The base rule aligns to flex-start, which in this direction leaves
+           both halves at their natural width and pushes them past the edge. */
+        align-items: stretch;
+        gap: 2rem;
+        height: auto;
+    }
+
+    .expanded-content-left,
+    .expanded-content-right {
+        width: 100%;
+        min-width: 0;
+        padding-right: 0;
+    }
+
+    .benefits-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .expanded-content-left {
+        padding-right: 0;
+    }
+
+    /* The panel is long and the header is fixed, so the back arrow would sit
+       under it for most of the scroll. Keep it reachable. */
+    .expanded-close-btn {
+        position: sticky;
+        top: 88px;
+        z-index: 5;
+    }
+
+    .expanded-image {
+        height: 200px;
+    }
+
+    .expanded-actions {
+        flex-direction: column;
+    }
 }

@@ -26,7 +26,27 @@ class SustainabilitySlider {
         this.totalSlides = this.container.querySelectorAll('.slide').length;
         this.isAnimating = false;
 
+        // Below 768px a slide's content is taller than the screen, so stepping
+        // by whole viewport heights would skip past the bottom of each one.
+        // There the CSS lays the slides out as ordinary stacked sections and
+        // the page scrolls normally, so the slider must not take over wheel,
+        // touch or the transform.
+        this.mq = window.matchMedia('(max-width: 768px)');
+
         this.init();
+
+        // Keep the two modes in sync when the viewport crosses the breakpoint
+        // (rotation, or a desktop window dragged narrow).
+        const onChange = () => {
+            if (this.isMobile()) this.container.style.transform = '';
+            else this.applyTransform();
+        };
+        if (this.mq.addEventListener) this.mq.addEventListener('change', onChange);
+        else if (this.mq.addListener) this.mq.addListener(onChange);
+    }
+
+    isMobile() {
+        return this.mq.matches;
     }
 
     init() {
@@ -45,7 +65,7 @@ class SustainabilitySlider {
 
     setupKeyboard() {
         document.addEventListener('keydown', (e) => {
-            if (this.isAnimating) return;
+            if (this.isMobile() || this.isAnimating) return;
 
             switch (e.key) {
                 case 'ArrowRight':
@@ -64,7 +84,7 @@ class SustainabilitySlider {
 
     setupWheel() {
         this.container.addEventListener('wheel', (e) => {
-            if (this.isAnimating) return;
+            if (this.isMobile() || this.isAnimating) return;
             e.preventDefault();
 
             const delta = this.direction === 'horizontal'
@@ -85,7 +105,7 @@ class SustainabilitySlider {
         });
 
         this.container.addEventListener('touchend', (e) => {
-            if (this.isAnimating) return;
+            if (this.isMobile() || this.isAnimating) return;
 
             const endPos = e.changedTouches[0][axis];
             const diff = startPos - endPos;
@@ -96,17 +116,33 @@ class SustainabilitySlider {
         });
     }
 
-    goToSlide(index) {
-        if (index === this.currentSlide || this.isAnimating) return;
-
-        this.isAnimating = true;
-        this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
-
+    applyTransform() {
         const value = -this.currentSlide * 100;
         this.container.style.transform = this.direction === 'horizontal'
             ? `translateX(${value}vw)`
             : `translateY(${value}vh)`;
+    }
 
+    goToSlide(index) {
+        if (this.isAnimating) return;
+
+        const target = Math.max(0, Math.min(index, this.totalSlides - 1));
+
+        // Stacked layout: the slides are ordinary sections, so move the page
+        // to the one asked for instead of sliding the whole container.
+        if (this.isMobile()) {
+            this.currentSlide = target;
+            const slide = this.container.querySelectorAll('.slide')[target];
+            if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            this.updateDots();
+            return;
+        }
+
+        if (target === this.currentSlide) return;
+
+        this.isAnimating = true;
+        this.currentSlide = target;
+        this.applyTransform();
         this.updateDots();
 
         setTimeout(() => {

@@ -321,16 +321,59 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* minmax(0, …): a bare 1fr track still grows to its content's min-content
+       width, which the schedule demo pushes well past the viewport. */
     .stability-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .transparency-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .flexibility-examples {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
+    /* The four room tabs do not fit on one line at 390px. */
+    .tab-navigation {
+        flex-wrap: wrap;
+    }
+
+    /* Staff cards do not fit side by side on a phone. */
+    .staff-list {
+        flex-wrap: wrap;
+        gap: var(--gap-md);
+    }
+
+    /* Three photo-documentation options with non-breaking labels. */
+    .photo-options {
+        flex-wrap: wrap;
+        gap: var(--gap-md);
+        justify-content: flex-start;
+    }
+
+    /* Give the schedule grid the full width of its card. */
+    .service-schedule-demo {
+        padding: var(--padding-md) 0.75rem;
+    }
+
+    .task-col {
+        padding-left: 0.5rem !important;
+    }
+
+    /* The seven day columns are 5% each, which is narrower than the weekday
+       abbreviations, so the last one was cut off by the table's own clip. */
+    .schedule-row {
+        grid-template-columns: 42% 10% repeat(7, minmax(0, 1fr));
+    }
+
+    .schedule-row > div {
+        padding: 0.6rem 0.15rem;
+    }
+
+    .freq-col,
+    .day-col {
+        font-size: 0.6rem;
+    }
 }

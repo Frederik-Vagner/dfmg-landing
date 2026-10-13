@@ -740,6 +740,18 @@
         min-width: 100%;
     }
 
+    /* Carousel cards keep a fixed pixel width so the track can measure them,
+       but that width is wider than a phone screen, so the card is cut off at
+       the right edge. Cap it at the viewport minus the container gutters. */
+    .card--overlay {
+        width: min(386px, calc(100vw - 40px));
+    }
+
+    .card--service {
+        width: min(570px, calc(100vw - 40px));
+        min-height: 0;
+    }
+
     .card--sidebar {
         margin: 0 10px;
     }

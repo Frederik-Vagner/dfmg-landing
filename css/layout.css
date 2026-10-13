@@ -200,3 +200,65 @@
         gap: 2rem;
     }
 }
+
+/* ====================================
+   MOBILE: collapse layout utilities
+   The utilities above are desktop-first and keep their columns at any
+   width, so content is pushed outside the viewport and clipped by
+   body { overflow-x: hidden }. Below 768px they become a single column.
+   ==================================== */
+@media (max-width: 768px) {
+    /* Rows wrap instead of squeezing their children off the edge.
+       Short rows (icon + label, button pairs) still sit side by side. */
+    .flex {
+        flex-wrap: wrap;
+        gap: var(--gap-md);
+    }
+
+    /* The brand lockup is a .flex row too, and at 768px the desktop header is
+       still in effect — without this the wordmark drops under the icon. */
+    .logo {
+        flex-wrap: nowrap;
+    }
+
+    /* Multi-column content blocks: one full-width column each. */
+    .flex-2 > *,
+    .flex-3 > *,
+    .flex-4 > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    /* A column-direction container is already stacked. Wrapping one makes it
+       break into extra columns to the right instead, and a 100% basis there
+       means full height, not full width — so leave those two alone. */
+    .flex-col {
+        flex-wrap: nowrap;
+    }
+
+    .flex-col > * {
+        flex: 0 1 auto;
+    }
+
+    /* Column grids collapse; rows become content-sized instead of equal
+       fractions, which would otherwise stretch every cell to the tallest. */
+    .grid-cols-2,
+    .grid-2x2,
+    .grid-2x3,
+    .grid-3x2,
+    .grid-2x3-offset {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: var(--gap-md);
+    }
+
+    /* The offset grid places its children on an explicit 6-column track,
+       so clearing the columns alone is not enough. */
+    .grid-2x3-offset > div:nth-child(1),
+    .grid-2x3-offset > div:nth-child(2),
+    .grid-2x3-offset > div:nth-child(3),
+    .grid-2x3-offset > div:nth-child(4),
+    .grid-2x3-offset > div:nth-child(5) {
+        grid-column: auto;
+    }
+}

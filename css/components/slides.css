@@ -370,3 +370,80 @@
 [data-slide-theme="social"] .slide-dot.active.slide-3-active { background: var(--slide-3) !important; }
 [data-slide-theme="social"] .slide-dot.active.slide-4-active { background: var(--slide-4) !important; }
 [data-slide-theme="social"] .slide-dot.active.slide-5-active { background: var(--slide-5) !important; }
+
+/* ========================================
+   MOBILE: stacked slides instead of a deck
+   A slide is 100vh and the slider steps the container by whole viewport
+   heights. On a phone the collapsed content of a slide is two to three
+   screens tall, so everything below the first screen of each slide is
+   unreachable. Below 768px the deck becomes an ordinary scrolling page:
+   slides are auto-height sections, the page scrolls natively and
+   sustainability-slider.js stands down (see isMobile() there).
+   Placed at the end of the file so it wins over the base rules above.
+   ======================================== */
+@media (max-width: 768px) {
+    .sustainability-page {
+        height: auto;
+        overflow: visible;
+    }
+
+    .horizontal-container,
+    .vertical-container {
+        display: block;
+        width: 100%;
+        height: auto;
+        /* The slider writes transform as an inline style; if the viewport is
+           resized across the breakpoint it must not survive into this mode. */
+        transform: none !important;
+        transition: none;
+    }
+
+    .slide {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow-y: visible;
+        padding: 3rem 1rem;
+    }
+
+    .vertical-container .slide,
+    .horizontal-container .slide {
+        padding: 3rem 1rem;
+    }
+
+    /* The first slide clears the fixed header. */
+    .slide:first-child {
+        padding-top: 2rem;
+    }
+
+    .slide-content,
+    .slide-content1,
+    .slide-content4 {
+        height: auto;
+        gap: 2rem;
+    }
+
+    /* The 2x2 overview grid: one column, and content-sized rows so a cell is
+       not stretched to the tallest one. */
+    .slide-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .slide-grid > *:nth-child(1),
+    .slide-grid > *:nth-child(2),
+    .slide-grid > *:nth-child(3),
+    .slide-grid > *:nth-child(4) {
+        align-self: auto;
+    }
+
+    /* The dots address slides that are now simply further down the page.
+       Listed with the same sibling selectors used above, so this matches
+       their specificity rather than losing to it. */
+    .horizontal-container ~ .slide-nav,
+    .vertical-container ~ .slide-nav,
+    .slide-nav {
+        display: none;
+    }
+}

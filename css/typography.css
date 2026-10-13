@@ -139,3 +139,29 @@ h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* ====================================
+   MOBILE TYPOGRAPHY
+   Danish compound words ("Vinduespolering", "Erhvervsrengøring") are a single
+   unbreakable run, so the large display sizes do not fit a 390px column and
+   run off the edge. Scale the display sizes down below 768px and let anything
+   still too long break rather than be clipped.
+   ==================================== */
+@media (max-width: 768px) {
+    .text-6xl { font-size: 1.9rem; }
+    .text-7xl { font-size: 2.1rem; }
+    .text-8xl { font-size: 2.3rem; }
+    .text-9xl { font-size: 2.5rem; }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    /* hyphens first so a compound breaks with a hyphen at a sensible point
+       (the documents carry lang="da"/"en"); break-word only as a fallback for
+       anything the hyphenation dictionary does not cover. */
+    h1, h2, h3, h4, .title, .subtitle {
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        overflow-wrap: break-word;
+    }
+}

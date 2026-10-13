@@ -69,12 +69,20 @@
    Used by: article pages, indblik
    ==================================== */
 
-/* Article Header */
+/* Article Header
+   The band sits on the charcoal page background, so charcoal text here is
+   invisible — title, breadcrumb and date all rendered but unreadable. */
 .article-header {
-    color: var(--charcoal);
+    color: var(--white);
     padding: 4rem 0 2rem;
     position: relative;
     overflow: hidden;
+}
+
+.article-header .breadcrumb a,
+.article-header .article-title,
+.article-header .article-meta {
+    color: var(--white);
 }
 
 .article-header::before {
@@ -135,7 +143,10 @@
 
 .content-layout {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    /* minmax(0, …) instead of a bare 1fr: a grid track's automatic minimum is
+       its content's min-content width, so one long Danish compound word in a
+       heading widens the whole column past the viewport. */
+    grid-template-columns: minmax(0, 1fr) 320px;
     gap: 2.5rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -341,12 +352,16 @@
 /* ── Responsive ── */
 @media (max-width: 1024px) {
     .content-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 2rem;
     }
 
     .sidebar {
         order: -1;
+    }
+
+    .articles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -355,13 +370,31 @@
         font-size: 2rem;
     }
 
+    /* Danish compound words ("Implementeringsprocessen") are longer than a
+       390px column, so let them break rather than run off the edge. */
+    .article-title,
+    .article-body,
+    .article-excerpt,
+    .card--sidebar {
+        overflow-wrap: break-word;
+    }
+
     .article-meta {
         flex-direction: column;
         gap: 1rem;
     }
 
-    .main-content {
+    /* Scoped to the article card: .main-content is also the page section on
+       the listing page, where the extra inset squeezed the card grid. */
+    .content-layout .main-content {
         padding: 1.5rem;
         margin: 0 10px;
+    }
+
+    /* Three article cards per row leaves about one character per line at
+       390px. The grid had no mobile rule at all. */
+    .articles-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
     }
 }

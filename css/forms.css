@@ -157,6 +157,18 @@
     box-sizing: border-box;
 }
 
+/* The label is long enough to push the chevron off a 390px screen; let it
+   wrap inside the box and keep the chevron at its natural size. */
+.dropdown-selected > span {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.dropdown-selected > iconify-icon {
+    flex: 0 0 auto;
+    margin-left: 0.75rem;
+}
+
 .dropdown-selected.open {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
