@@ -537,3 +537,28 @@
 .showcase-img:nth-child(2) { transform: translateY(-25px); }
 .showcase-img:nth-child(3) { transform: translateY(5px); }
 .showcase-img:nth-child(4) { transform: translateY(25px); }
+
+/* ====================================
+   MOBILE: sections with a fixed height
+   .hero and .section--half pin themselves to a fraction of the viewport and
+   hide the overflow. That holds on a desktop, where the content is a couple
+   of lines; on a phone the same text wraps to three times the height and the
+   bottom of it is silently cut off. Let both grow and keep the fixed height
+   as a minimum, so they still fill the screen when the content is short.
+   At the end of the file so it wins over the base rules above.
+   ==================================== */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .section--half {
+        height: auto;
+        min-height: 50dvh;
+        overflow: visible;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}

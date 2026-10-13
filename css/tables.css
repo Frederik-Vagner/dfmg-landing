@@ -174,14 +174,12 @@
     padding-left: 1.5rem;
 }
 
-/* A four-column feature matrix cannot be squeezed into 390px and stay
-   readable, so let it scroll sideways inside its own box rather than be
-   clipped by the page. */
+/* Wrapper for the feature matrix. It carries the table's own top margin,
+   which no longer collapses through it, so spacing is unchanged. It must NOT
+   set overflow at desktop: that would make it the scroll container for the
+   table's position: sticky header row, which would then stop pinning to the
+   top of the page as you scroll. */
 .table-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    /* Carry the table's own top margin, which no longer collapses through
-       the new wrapper, so desktop spacing is unchanged. */
     margin-top: 2rem;
 }
 
@@ -193,6 +191,14 @@
 @media (max-width: 768px) {
     .comparison-table {
         font-size: 0.8rem;
+    }
+
+    /* Below 768px a four-column matrix cannot stay readable, so let it scroll
+       sideways in its own box rather than be clipped by the page. The sticky
+       header is given up here, which costs nothing on a short phone screen. */
+    .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .table-scroll > .comparison-table {
