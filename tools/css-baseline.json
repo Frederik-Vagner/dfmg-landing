@@ -29,6 +29,7 @@
     "inlineStyles": 0,
     "important": 1,
     "hardcodedColours": 0,
-    "fontSizeLiterals": 0
+    "fontSizeLiterals": 0,
+    "spacingLiterals": 0
   }
 }

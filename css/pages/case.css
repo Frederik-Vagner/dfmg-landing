@@ -21,18 +21,18 @@
 }
 
 .case-section {
-    padding: 3rem;
+    padding: var(--space-xl);
 }
 
 .case-section--spaced {
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
 }
 
 .case-company {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .case-section__text {
@@ -40,7 +40,7 @@
 }
 
 .case-section__title {
-    padding-left: 1rem;
+    padding-left: var(--space-sm);
 }
 
 .case-section__title--success {
@@ -55,12 +55,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-top: 2rem;
-    gap: 2rem;
+    margin-top: var(--space-lg);
+    gap: var(--space-lg);
 }
 
 .case-solution {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .case-solution--primary {
@@ -76,7 +76,7 @@
 }
 
 .case-solution__icon {
-    margin-right: 0.5rem;
+    margin-right: var(--space-2xs);
 }
 
 .case-solution__icon--primary {
@@ -96,7 +96,7 @@
 }
 
 .case-stat {
-    padding: 2rem;
+    padding: var(--space-lg);
     text-align: center;
 }
 
@@ -104,7 +104,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .case-quote__role {
@@ -114,12 +114,12 @@
 .cta-center__actions {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--space-sm);
     flex-wrap: wrap;
 }
 
 .cta-center__actions iconify-icon {
-    padding-right: 0.5rem;
+    padding-right: var(--space-2xs);
 }
 
 .sidebar-section--centered {

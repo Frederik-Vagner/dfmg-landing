@@ -46,7 +46,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 8rem 0 4rem;
+    padding: var(--space-4xl) 0 var(--space-2xl);
     background: var(--bg-gradient-primary);
     color: var(--white);
     text-align: center;
@@ -57,19 +57,19 @@
     font-size: var(--heading-1);
     font-weight: var(--font-weight-bold);
     line-height: 1.25;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .platform-hero .body {
     color: var(--text-on-dark);
     font-size: var(--text-xl);
     max-width: 640px;
-    margin: 0 auto 2rem;
+    margin: 0 auto var(--space-lg);
 }
 
 .platform-hero .hero-actions {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-sm);
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -78,7 +78,7 @@
 .platform-cta {
     background: var(--bg-gradient-primary);
     border-radius: var(--radius-md);
-    padding: 3rem;
+    padding: var(--space-xl);
     text-align: center;
     color: var(--white);
 }
@@ -86,12 +86,12 @@
 .platform-cta .title {
     color: var(--white);
     font-size: var(--heading-2);
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-xs);
 }
 
 .platform-cta .body {
     color: var(--text-on-dark);
-    margin-bottom: var(--padding-md);
+    margin-bottom: var(--space-md);
 }
 
 /* ── Hero with Skewed Overlay ── */
@@ -129,7 +129,7 @@
 .hero-grid-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    gap: var(--space-3xl);
     align-items: center;
 }
 
@@ -176,19 +176,19 @@
 .cta-box {
     background: var(--bg-gradient-charcoal);
     border-radius: var(--radius-normal);
-    padding: 3rem;
+    padding: var(--space-xl);
     color: var(--white);
     position: relative;
     overflow: hidden;
     min-height: 300px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .cta-center {
     background: var(--bg-gradient-success);
-    padding: 4rem 3rem;
+    padding: var(--space-2xl) var(--space-xl);
     color: var(--white);
     position: relative;
     overflow: hidden;
@@ -198,14 +198,14 @@
 .cta-center h2 {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-semibold);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .cta-center p {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-light);
     opacity: 0.9;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -215,8 +215,8 @@
 .feature-row {
     display: flex;
     align-items: center;
-    gap: 4rem;
-    padding: 3rem 0;
+    gap: var(--space-2xl);
+    padding: var(--space-xl) 0;
 }
 
 .feature-row--reverse {
@@ -237,41 +237,41 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 .feature-row__title {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .feature-row__body {
     font-size: var(--text-base);
     color: var(--gray);
     line-height: 1.7;
-    margin-bottom: var(--padding-md);
+    margin-bottom: var(--space-md);
 }
 
 .feature-row__modules {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: var(--space-2xs);
 }
 
 /* ── Trust Signals ── */
 .trust-row {
     display: flex;
-    gap: 2rem;
+    gap: var(--space-lg);
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
 }
 
 .trust-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-2xs);
     font-size: var(--text-sm);
     color: var(--gray);
 }
@@ -285,14 +285,14 @@
     background: var(--bg-surface);
     border-left: 4px solid var(--primary);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    padding: var(--padding-md) var(--padding-lg);
-    margin-top: 2rem;
+    padding: var(--space-md) var(--space-lg);
+    margin-top: var(--space-lg);
 }
 
 .callout-box__title {
     font-weight: var(--font-weight-medium);
     color: var(--charcoal);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 .callout-box__body {
@@ -304,7 +304,7 @@
 /* ── Demo Split (2-column form layout) ── */
 .demo-split {
     display: flex;
-    gap: 4rem;
+    gap: var(--space-2xl);
     align-items: flex-start;
 }
 
@@ -326,14 +326,14 @@
     display: flex;
     transition: transform 0.4s ease;
     width: max-content;
-    gap: var(--gap-lg);
+    gap: var(--space-md);
 }
 
 .carousel-controls {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
 }
 
 /* ── Logos ── */
@@ -357,7 +357,7 @@
 .career-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: var(--space-3xl);
     align-items: start;
 }
 
@@ -366,14 +366,14 @@
     /* Contact page: info column above the form instead of beside it. */
     .career-content {
         grid-template-columns: minmax(0, 1fr);
-        gap: 2.5rem;
+        gap: var(--space-xl);
     }
 
     .platform-hero {
         height: auto;
         min-height: 100vh;
         min-height: 100dvh;
-        padding: 6rem 0 3rem;
+        padding: var(--space-3xl) 0 var(--space-xl);
     }
 
     .hero-layout::before {
@@ -383,13 +383,13 @@
 
     .hero-grid-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: var(--space-lg);
     }
 
     .feature-row,
     .feature-row--reverse {
         flex-direction: column;
-        gap: 2rem;
+        gap: var(--space-lg);
     }
 
     .demo-split {
@@ -435,13 +435,13 @@
     font-size: var(--text-sm);
     font-style: italic;
     text-align: center;
-    margin: 2rem 0;
+    margin: var(--space-lg) 0;
 }
 
 .aside-note--link {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-sm);
     justify-content: center;
 }
 
@@ -452,7 +452,7 @@
 
 /* ── Featured Section ── */
 .featured-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: var(--space-xl);
     max-width: 1000px;
     margin: auto;
 }
@@ -460,7 +460,7 @@
 /* ── Back-to Section ── */
 .back-to-news {
     text-align: center;
-    padding: 2rem 0;
+    padding: var(--space-lg) 0;
     background: var(--bg-muted);
 }
 
@@ -468,7 +468,7 @@
 .showcase-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: var(--space-2xl);
     align-items: center;
     min-height: 500px;
 }
@@ -476,7 +476,7 @@
 .showcase-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: var(--space-lg);
     position: relative;
 }
 
@@ -499,7 +499,7 @@
     /* Text column above the image collage instead of beside it. */
     .showcase-content {
         grid-template-columns: minmax(0, 1fr);
-        gap: 2rem;
+        gap: var(--space-lg);
         min-height: 0;
     }
 
@@ -533,8 +533,8 @@
         height: auto;
         min-height: 50dvh;
         overflow: visible;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-xl);
     }
 }
 
@@ -551,7 +551,7 @@
    it outranks every section's own padding in the core layer, which is what
    "!important" used to achieve. */
 .first {
-    padding-top: 150px;
+    padding-top: calc(var(--header-clearance) + var(--space-xl));
 }
 
 }

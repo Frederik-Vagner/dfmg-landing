@@ -6,7 +6,7 @@
 
 /* "Kontakt os" and the other job buttons under the open positions. */
 .job-buttons {
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 /* generated:start */
@@ -34,7 +34,7 @@
 .kontakt-faq__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .kontakt-careers__header {

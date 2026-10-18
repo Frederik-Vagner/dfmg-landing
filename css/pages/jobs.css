@@ -8,11 +8,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .job-card {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .job-card__title {
@@ -28,7 +28,7 @@
 }
 
 .job-card__apply {
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
     text-align: center;
 }
 
@@ -36,16 +36,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .job-perk {
-    padding: 2rem;
+    padding: var(--space-lg);
     text-align: center;
 }
 
 .job-perk__emoji {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
     font-size: var(--icon-display);
 }
 

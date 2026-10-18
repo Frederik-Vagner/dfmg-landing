@@ -9,13 +9,13 @@
 .badge {
     display: inline-block;
     background: var(--white-a15);
-    padding: 8px 16px;
+    padding: var(--space-2xs) var(--space-sm);
     border-radius: var(--radius-circle);
     font-size: var(--text-xs);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     box-shadow: var(--shadow-lg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-on-dark);
@@ -24,7 +24,7 @@
 /* Inline badge — base + color variants + size modifier */
 .badge-inline {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: var(--space-2xs) var(--space-sm);
     border-radius: var(--radius-circle);
     font-size: var(--text-xs);
     font-weight: var(--font-weight-medium);
@@ -55,7 +55,7 @@
 
 /* Size Modifier */
 .badge-inline--sm {
-    padding: 0.35rem 0.75rem;
+    padding: var(--space-3xs) var(--space-xs);
     font-size: var(--text-xs);
 }
 
@@ -86,7 +86,7 @@
     justify-content: center;
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
-    margin: 0 auto 1rem;
+    margin: 0 auto var(--space-sm);
 }
 
 .step-number--small {
@@ -100,7 +100,7 @@
     justify-content: center;
     font-weight: var(--font-weight-bold);
     font-size: var(--text-sm);
-    margin: 0 auto 1rem;
+    margin: 0 auto var(--space-sm);
 }
 
 }

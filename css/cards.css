@@ -15,18 +15,18 @@
 .card--horizontal {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-sm);
     text-align: left;
 }
 
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
     margin-top: 0;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-xs);
     font-weight: var(--font-weight-semibold);
 }
 
 .card p {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
     line-height: 1.5;
     font-weight: var(--font-weight-normal);
 }
@@ -46,7 +46,7 @@
 }
 
 .card .subtitle {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -61,7 +61,7 @@
 .card--bordered {
     background: var(--white);
     border-radius: var(--radius-md);
-    padding: 2rem;
+    padding: var(--space-lg);
     border-left: 4px solid var(--primary);
     box-shadow: none;
 }
@@ -110,21 +110,21 @@
     position: relative;
     z-index: 3;
     color: var(--white);
-    margin-bottom: 0.5rem;
-    padding: 0 1.5rem;
+    margin-bottom: var(--space-2xs);
+    padding: 0 var(--space-md);
     top: 2rem;
     text-align: left;
 }
 
 .card--overlay h3 {
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-xs);
     font-size: var(--text-xl);
     font-weight: var(--font-weight-semibold);
     min-height: 1.8rem;
 }
 
 .card--overlay p {
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 var(--space-md) 0;
     font-size: var(--text-base);
     line-height: 1.4;
     min-height: 2.66rem;
@@ -153,7 +153,7 @@
 }
 
 .card--media .article-content {
-    padding: var(--padding-md);
+    padding: var(--space-md);
     background: none;
     min-height: unset;
 }
@@ -162,7 +162,7 @@
     color: var(--gray-light);
     font-size: var(--text-base);
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
     padding: 0;
     background: none;
     border-left: none;
@@ -180,7 +180,7 @@
     min-width: 320px;
     background: var(--white);
     border-radius: var(--radius-normal);
-    padding: 2.5rem 2rem;
+    padding: var(--space-xl) var(--space-lg);
     box-shadow: var(--shadow-sm);
     border: var(--border-lighter);
     position: relative;
@@ -227,7 +227,7 @@
 }
 
 .card--split__content {
-    padding: 1rem;
+    padding: var(--space-sm);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,18 +236,18 @@
 .card--split__meta {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: var(--space-xl);
     color: var(--gray-light);
     font-size: var(--text-sm);
     justify-content: center;
     border-top: 1px solid var(--bg-light);
-    padding-top: 1rem;
+    padding-top: var(--space-sm);
 }
 
 .card--split__time {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-2xs);
     color: var(--gray-light);
     font-size: var(--text-lg);
 }
@@ -257,21 +257,21 @@
     color: var(--charcoal);
     font-weight: var(--font-weight-semibold);
     line-height: 1.2;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-xs);
 }
 
 .card--split__excerpt {
     color: var(--gray-light);
     font-size: var(--text-base);
     line-height: 1.5;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
 }
 
 /* Sidebar card */
 .card--sidebar {
     background: var(--white);
     border-radius: var(--radius-lg);
-    padding: var(--padding-md);
+    padding: var(--space-md);
     box-shadow: var(--shadow-sm);
     border: var(--border-light);
 }
@@ -280,10 +280,10 @@
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-2xs);
 }
 
 .card--sidebar h3 iconify-icon {
@@ -292,18 +292,18 @@
 }
 
 .card--sidebar ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
     line-height: 1.4;
 }
 
 /* Card content (used inside card--gallery etc.) */
 .card__content {
-    padding: var(--padding-md);
+    padding: var(--space-md);
 }
 
 .card__content h4 {
     color: var(--charcoal);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
     font-weight: var(--font-weight-medium);
 }
 
@@ -314,7 +314,7 @@
 
 /* ── Feature card (icon + title + desc) ── */
 .card--feature {
-    padding: var(--padding-lg) var(--padding-md);
+    padding: var(--space-lg) var(--space-md);
     border-radius: var(--radius-md);
     text-decoration: none;
     color: inherit;
@@ -349,11 +349,11 @@
     align-items: center;
     justify-content: center;
     font-size: var(--text-xl);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .card--feature--center .card--feature__icon {
-    margin: 0 auto 1.25rem;
+    margin: 0 auto var(--space-md);
     border-radius: 50%;
     width: 56px;
     height: 56px;
@@ -364,7 +364,7 @@
     font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
     color: var(--charcoal);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 .card--feature__desc {
@@ -377,7 +377,7 @@
 .pricing-tiers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: var(--space-lg);
     align-items: start;
 }
 
@@ -385,7 +385,7 @@
     background: var(--white);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
-    padding: 2.5rem 2rem;
+    padding: var(--space-xl) var(--space-lg);
     text-align: center;
     border: 2px solid transparent;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -413,13 +413,13 @@
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 .card--tier__desc {
     font-size: var(--text-sm);
     color: var(--gray);
-    margin-bottom: var(--padding-md);
+    margin-bottom: var(--space-md);
     line-height: 1.5;
 }
 
@@ -440,14 +440,14 @@
     width: 40px;
     height: 3px;
     background: var(--primary);
-    margin: var(--padding-md) auto;
+    margin: var(--space-md) auto;
     border-radius: 2px;
 }
 
 .card--tier__features {
     list-style: none;
     padding: 0;
-    margin: 0 0 2rem;
+    margin: 0 0 var(--space-lg);
     text-align: left;
 }
 
@@ -455,19 +455,19 @@
 .module-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--padding-md);
+    gap: var(--space-md);
 }
 
 .value-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .steps-row {
     display: flex;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
 }
 
 .steps-row > * {
@@ -498,7 +498,7 @@
 .card--staff {
     display: flex;
     align-items: center;
-    gap: var(--gap-sm);
+    gap: var(--space-xs);
 }
 
 .card--staff__avatar {
@@ -529,7 +529,7 @@
 /* ── Panel card (white box with border) ── */
 .card--panel {
     background: var(--white);
-    padding: var(--padding-md);
+    padding: var(--space-md);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     border: var(--border-light);
@@ -543,7 +543,7 @@
     color: var(--charcoal);
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
-    margin: 0 0 1rem 0;
+    margin: 0 0 var(--space-sm) 0;
 }
 
 /* ── Gallery card (image + content) ── */
@@ -556,17 +556,17 @@
 
 /* ── Benefits card (inline icon + text) ── */
 .card--benefits {
-    padding: 1rem;
+    padding: var(--space-sm);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: var(--space-xs);
 }
 
 /* ── Compact card (small padding, inline data) ── */
 .card--compact {
     background: var(--white);
-    padding: 0.35rem 0.5rem;
+    padding: var(--space-3xs) var(--space-2xs);
     border-radius: var(--radius-normal);
     box-shadow: var(--shadow-sm);
     border: var(--border-lighter);
@@ -585,14 +585,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.5rem;
+    padding: var(--space-md);
 }
 
 .stat__value {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-semibold);
     line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
     display: block;
 }
 
@@ -601,7 +601,7 @@
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--space-3xs);
 }
 
 .stat__description {
@@ -613,7 +613,7 @@
 /* ── Price Display ── */
 .card--price {
     text-align: center;
-    padding: var(--padding-md);
+    padding: var(--space-md);
 }
 
 .card--price__label {
@@ -621,7 +621,7 @@
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 .card--price__amount {
@@ -634,14 +634,14 @@
 .shop-preview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--padding-md);
-    margin-bottom: 2rem;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .card--shop {
     background: var(--white);
     border-radius: var(--radius-lg);
-    padding: var(--padding-md);
+    padding: var(--space-md);
     text-align: center;
     box-shadow: var(--shadow-sm);
     border: 2px solid transparent;
@@ -657,7 +657,7 @@
 .card--shop-icon {
     font-size: var(--text-3xl);
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .card--shop-price {
@@ -670,8 +670,8 @@
 .card--dashed {
     background: linear-gradient(135deg, var(--bg-muted), var(--bg-light));
     border-radius: var(--radius-normal);
-    padding: var(--padding-lg);
-    margin-top: 2rem;
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
     border: 2px dashed var(--color-border-muted);
     text-align: center;
     transition: all var(--transition-normal);
@@ -685,15 +685,15 @@
 .card--dashed-icon {
     font-size: var(--icon-display);
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 /* ── Quote ── */
 .card--quote {
     background: var(--overlay-light);
-    padding: 1.5rem;
+    padding: var(--space-md);
     border-radius: var(--radius-normal);
-    margin: 1rem 0;
+    margin: var(--space-sm) 0;
     font-style: italic;
     font-weight: var(--font-weight-light);
     backdrop-filter: blur(10px);
@@ -720,7 +720,7 @@
     }
 
     .card--sidebar {
-        margin: 0 10px;
+        margin: 0 var(--space-xs);
     }
 
     .module-grid {
@@ -736,7 +736,7 @@
     }
 
     .card--price {
-        padding: 1rem;
+        padding: var(--space-sm);
     }
 
     .card--price__amount {
@@ -754,7 +754,7 @@
     }
 
     .card--dashed {
-        padding: var(--padding-md);
+        padding: var(--space-md);
     }
 
     .card--dashed-icon {

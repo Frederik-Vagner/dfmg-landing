@@ -12,7 +12,7 @@
 
 /* Subpages: less space below the hero than the home page. */
 .platform-hero--page {
-    padding-bottom: 3rem;
+    padding-bottom: var(--space-xl);
 }
 
 /* Thank-you page: a shorter, vertically centred hero. */
@@ -24,25 +24,25 @@
 
 .confirmation__mark {
     font-size: var(--icon-display);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 /* Screenshot slot under the home hero. */
 .platform-hero__media {
     min-height: 400px;
-    margin-top: 3rem;
+    margin-top: var(--space-xl);
 }
 
 /* ── Screenshot placeholders ── */
 .screenshot-placeholder__icon {
     display: block;
     font-size: var(--text-2xl);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 .platform-hero__media .screenshot-placeholder__icon {
     font-size: var(--icon-display);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     opacity: 0.5;
 }
 
@@ -52,7 +52,7 @@
 
 .demo-split__media .screenshot-placeholder__icon {
     font-size: var(--icon-display);
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-xs);
 }
 
 .walkthrough__media { min-height: 280px; }
@@ -83,7 +83,7 @@
 .feature-visual__tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: var(--space-2xs);
     justify-content: center;
     max-width: 320px;
     margin: 0 auto;
@@ -100,12 +100,12 @@
 
 .walkthrough__body {
     color: var(--text-on-dark);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
 }
 
 /* ── With / without comparison (home) ── */
 .comparison {
-    gap: 3rem;
+    gap: var(--space-xl);
 }
 
 .comparison__card {
@@ -113,7 +113,7 @@
 }
 
 .comparison__title {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .comparison__title--without { color: var(--red); }
@@ -123,25 +123,25 @@
 .integrations {
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: var(--space-xl);
     flex-wrap: wrap;
     opacity: 0.5;
 }
 
 .integrations__item {
-    padding: 1.5rem;
+    padding: var(--space-md);
 }
 
 .integrations__icon {
     font-size: var(--text-3xl);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 /* ── Trust rows ── */
 /* The strip of trust badges directly under a subpage hero. */
 .trust-strip {
-    padding-top: 2.5rem;
+    padding-top: var(--space-xl);
     padding-bottom: 0;
 }
 
@@ -156,7 +156,7 @@
 
 /* Under a CTA's buttons. */
 .trust-row--after-actions {
-    margin-top: 1.5rem;
+    margin-top: var(--space-md);
 }
 
 .trust-row--on-dark .trust-item {
@@ -169,7 +169,7 @@
 
 /* ── About: tech list ── */
 .about-tech__list {
-    margin-top: 1rem;
+    margin-top: var(--space-sm);
 }
 
 /* ── Contact: info column ── */
@@ -180,23 +180,23 @@
     color: var(--charcoal);
 }
 
-.contact-info__heading { margin-bottom: 0.75rem; }
-.contact-form__heading { margin-bottom: 1.25rem; }
+.contact-info__heading { margin-bottom: var(--space-xs); }
+.contact-form__heading { margin-bottom: var(--space-md); }
 
 .contact-info__intro {
     color: var(--gray);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
     line-height: 1.6;
 }
 
 .contact-info__checklist {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem;
+    margin: 0 0 var(--space-md);
 }
 
 .contact-info__cards {
-    gap: 0.75rem;
+    gap: var(--space-xs);
 }
 
 .contact-info__link {
@@ -212,7 +212,7 @@
 /* generated:start */
 .walkthrough {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .walkthrough > * {
@@ -232,7 +232,7 @@
 }
 
 .comparison__card {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .comparison__title {
@@ -250,7 +250,7 @@
 
 .about-split {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .about-split > * {
@@ -270,16 +270,16 @@
 }
 
 .about-split__text--spaced {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .about-values {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .about-value {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     border-left: 4px solid var(--primary);
@@ -295,7 +295,7 @@
 }
 
 .contact-info__card {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
@@ -309,7 +309,7 @@
 }
 
 .demo-split__intro {
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-xl);
     color: var(--gray);
 }
 

@@ -17,7 +17,7 @@
     color: var(--white);
     display: flex;
     align-items: stretch;
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 var(--space-lg) var(--space-lg) var(--space-lg);
     overflow: hidden;
 }
 
@@ -27,7 +27,7 @@
 
 .service-column:hover:not(.expanded):not(.collapsed) .service-title {
     transform: scale(1.3);
-    padding-bottom: 5rem;
+    padding-bottom: var(--space-3xl);
 }
 
 .service-column.expanded {
@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem;
+    padding-bottom: var(--space-xl);
     top: 70vh;
 }
 
@@ -96,7 +96,7 @@
     bottom: 0;
     background: var(--white);
     color: var(--charcoal);
-    padding: 7rem 2rem 1rem 2rem;
+    padding: var(--space-4xl) var(--space-lg) var(--space-sm) var(--space-lg);
     z-index: 4;
     overflow-y: auto;
     height: 100vh;
@@ -105,7 +105,7 @@
 /* Expanded overlay content — dynamically created by services.js */
 .expanded-layout {
     display: flex;
-    gap: 3rem;
+    gap: var(--space-xl);
     align-items: flex-start;
     height: 100%;
     max-width: var(--container-width-normal);
@@ -114,7 +114,7 @@
 
 .expanded-content-left {
     flex: 1;
-    padding-right: 2rem;
+    padding-right: var(--space-lg);
 }
 
 .expanded-content-left > h3 {
@@ -139,7 +139,7 @@
 }
 
 .specialomrader-section {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .specialomrader-section h4,
@@ -149,15 +149,15 @@
 
 .specialomrade-list {
     list-style: none;
-    padding: 0.5rem;
+    padding: var(--space-2xs);
     margin: 0;
 }
 
 .specialomrade-item {
     font-size: var(--text-sm);
     color: var(--charcoal);
-    margin-bottom: 0.3rem;
-    padding-left: 1rem;
+    margin-bottom: var(--space-3xs);
+    padding-left: var(--space-sm);
     position: relative;
     align-items: center;
 }
@@ -178,7 +178,7 @@
 }
 
 .benefits-title {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--charcoal);
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
@@ -187,15 +187,15 @@
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-    margin-bottom: 2rem;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
 }
 
 .benefits-icon {
     color: var(--charcoal);
     font-size: var(--text-base);
     background: var(--bg-success-light);
-    padding: 0.4rem;
+    padding: var(--space-2xs);
     border-radius: 50%;
     width: 28px;
     height: 28px;
@@ -215,13 +215,13 @@
 .expanded-actions {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
 }
 
 .service-column.expanded .service-title {
     font-size: var(--heading-1);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .service-description {
@@ -229,7 +229,7 @@
     transform: translateY(20px);
     transition: all var(--transition-normal) 0.2s;
     font-size: var(--text-lg);
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     text-align: center;
 }
 
@@ -244,7 +244,7 @@
     transition: all var(--transition-normal) 0.3s;
     list-style: none;
     padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .service-column.expanded .service-features {
@@ -266,7 +266,7 @@
     transform: translateY(20px);
     transition: all var(--transition-normal) 0.4s;
     display: flex;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .service-column.expanded .service-actions {
@@ -365,7 +365,7 @@
     .service-column.expanded .service-content {
         flex: 0 0 auto;
         min-height: 200px;
-        padding: 1rem;
+        padding: var(--space-sm);
     }
 
     .service-column.expanded .service-title {
@@ -375,7 +375,7 @@
     .expanded-content {
         position: relative;
         height: auto;
-        padding: 1.5rem 1.25rem 2rem;
+        padding: var(--space-md) var(--space-md) var(--space-lg);
     }
 
     .expanded-layout {
@@ -383,7 +383,7 @@
         /* The base rule aligns to flex-start, which in this direction leaves
            both halves at their natural width and pushes them past the edge. */
         align-items: stretch;
-        gap: 2rem;
+        gap: var(--space-lg);
         height: auto;
     }
 
@@ -450,11 +450,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .specialomrade {
-    padding: 0.5rem;
+    padding: var(--space-2xs);
 }
 
 .expanded-image__photo {

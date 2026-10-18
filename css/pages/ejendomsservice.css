@@ -6,7 +6,7 @@
 
 .estate-hero {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .estate-hero > * {
@@ -21,7 +21,7 @@
 }
 
 .estate-hero__lead {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
     opacity: 0.9;
     font-size: var(--text-xl);
 }
@@ -35,11 +35,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .area-chip {
-    padding: 1rem;
+    padding: var(--space-sm);
     background: var(--bg-gradient-success);
 }
 
@@ -47,11 +47,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .estate-service {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     border-top: 4px solid var(--success);
@@ -63,7 +63,7 @@
 }
 
 .estate-service__icon {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--success);
 }
 
@@ -71,28 +71,28 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .estate-features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .estate-feature {
-    padding: 2rem;
+    padding: var(--space-lg);
     text-align: center;
 }
 
 .estate-feature__icon {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     color: var(--success);
 }
 
 .estate-case {
-    padding: 3rem;
+    padding: var(--space-xl);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     border-top: 4px solid var(--charcoal);
@@ -100,7 +100,7 @@
 
 .estate-case__layout {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .estate-case__layout > * {
@@ -122,18 +122,18 @@
 .estate-case__pillars {
     justify-content: center;
     align-content: end;
-    padding: 2rem;
+    padding: var(--space-lg);
     text-align: center;
 }
 
 .estate-case__pillar {
-    padding: 1rem;
+    padding: var(--space-sm);
     background: var(--overlay-light);
     border: 1px solid var(--border-on-dark);
 }
 
 .estate-case__pillar:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 @media (max-width: 768px) {

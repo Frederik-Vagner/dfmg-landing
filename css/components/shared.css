@@ -6,16 +6,16 @@
 @layer components {
 
 .section-intro {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
     text-align: center;
 }
 
 .section-intro--spacious {
-    margin-bottom: 5rem;
+    margin-bottom: var(--space-3xl);
 }
 
 .section-intro--tight {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .section-intro__eyebrow {
@@ -59,11 +59,11 @@
 }
 
 .page-intro__text--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .page-intro__text--tight {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .cover-image {
@@ -77,18 +77,18 @@
 }
 
 .icon-tile {
-    padding: 1rem;
+    padding: var(--space-sm);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     text-align: center;
 }
 
 .icon-tile--large {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .icon-tile__icon {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--success);
 }
 
@@ -101,28 +101,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .tab-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 4rem;
-    gap: 2rem;
+    margin-bottom: var(--space-2xl);
+    gap: var(--space-lg);
 }
 
 .cta-actions {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .btn__icon {
-    margin-right: 0.5rem;
+    margin-right: var(--space-2xs);
 }
 
 .process-step {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     text-align: center;
@@ -146,7 +146,7 @@
 
 .logo {
     display: flex;
-    gap: 0.625rem;
+    gap: var(--space-xs);
 }
 
 .footer-links__row {
@@ -154,7 +154,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.25rem;
+    gap: var(--space-md);
 }
 
 .footer-info {
@@ -165,7 +165,7 @@
 .footer-contact {
     display: flex;
     flex-direction: column;
-    gap: 0.625rem;
+    gap: var(--space-xs);
 }
 
 .footer-logo__link {
@@ -175,17 +175,17 @@
 .footer-social {
     display: flex;
     flex-direction: row;
-    gap: 1.25rem;
+    gap: var(--space-md);
 }
 
 .footer-bottom {
     display: flex;
-    gap: 1.25rem;
+    gap: var(--space-md);
     border-top: 1px solid var(--bg-light);
 }
 
 .article-header__category {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
 }
 
 .sidebar-cta {
@@ -193,7 +193,7 @@
 }
 
 .sidebar-cta__text {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--gray);
 }
 
@@ -215,7 +215,7 @@
 
 .hero__actions {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
     justify-content: center;
 }
 
@@ -249,7 +249,7 @@
 
 @media (min-width: 768px) and (max-width: 860px) {
     .nav {
-        gap: 0.5rem;
+        gap: var(--space-2xs);
     }
 }
 

@@ -51,7 +51,7 @@
 
 .window-hero {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .window-hero > * {
@@ -67,25 +67,25 @@
 }
 
 .window-hero__lead {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
     color: var(--gray);
 }
 
 .window-hero__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .window-panels {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .window-service {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
@@ -96,7 +96,7 @@
 
 .window-service__layout {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 @media (max-width: 768px) {

@@ -8,13 +8,12 @@
 .footer {
     background: var(--bg-gradient-charcoal);
     color: var(--white);
-    padding: calc(var(--section-padding) * 0.6) 0 calc(var(--section-padding) * 0.3);
 }
 
 .footer-container {
     max-width: var(--container-width-normal);
     margin: 0 auto;
-    padding: var(--gap-lg);
+    padding: var(--space-md);
 }
 
 .link-footer {
@@ -29,8 +28,8 @@
 .link-footer:hover { color: var(--gray-light); }
 
 .footer-bottom {
-    padding-top: var(--gap-sm);
-    padding-bottom: var(--gap-lg);
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-md);
     text-align: center;
     font-weight: var(--font-weight-light);
 }
@@ -38,7 +37,7 @@
 .footer-main {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-lg);
+    gap: var(--space-md);
 }
 
 .footer-section {
@@ -63,7 +62,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: var(--gap-sm);
+    gap: var(--space-xs);
     transition: var(--transition-fast);
     font-weight: var(--font-weight-light);
 }
@@ -94,7 +93,7 @@
     text-decoration: none;
     font-size: var(--text-base);
     transition: var(--transition-fast);
-    margin-top: var(--gap-sm);
+    margin-top: var(--space-xs);
     background: var(--overlay-light);
 }
 
@@ -102,7 +101,7 @@
     color: var(--white);
     text-decoration: none;
     font-size: var(--text-sm);
-    margin-right: var(--gap-lg);
+    margin-right: var(--space-md);
 }
 
 .footer-bottom a:hover {
@@ -122,9 +121,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: var(--gap-lg);
+    margin-bottom: var(--space-md);
     margin-left: auto;
-    margin-top: var(--gap-md);
+    margin-top: var(--space-sm);
 }
 
 .footer-logo img {
@@ -139,7 +138,7 @@
     .footer-main {
         flex-direction: row;
         align-items: flex-start;
-        padding-bottom: var(--gap-sm);
+        padding-bottom: var(--space-xs);
     }
 
     .footer-bottom {
@@ -169,7 +168,7 @@
    on the last line of the footer. Give that line room to clear it. */
 @media (max-width: 768px) {
     .footer-bottom {
-        padding-bottom: calc(var(--gap-lg) + 60px);
+        padding-bottom: calc(var(--space-md) + var(--chat-clearance));
     }
 }
 
@@ -180,7 +179,7 @@
 
 /* The middle row of footer links, spaced from the rows above and below. */
 .footer-links__row--spaced {
-    padding: 20px 0;
+    padding: var(--space-md) 0;
 }
 
 }

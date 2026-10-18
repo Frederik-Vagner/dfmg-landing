@@ -5,24 +5,24 @@
 @layer pages {
 
 .tak__icon {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     color: var(--success);
     font-size: var(--icon-display);
 }
 
 .tak__message {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .tak__actions {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
 }
 
 .tak-next {
-    padding: 2rem;
-    margin-top: 3rem;
+    padding: var(--space-lg);
+    margin-top: var(--space-xl);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }

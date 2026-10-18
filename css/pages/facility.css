@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .package-overview > div:nth-child(1) {
@@ -32,7 +32,7 @@
 }
 
 .package-item {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .package-item__title {
@@ -47,11 +47,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .package-benefit {
-    padding: 2rem;
+    padding: var(--space-lg);
     border-left: 4px solid var(--success);
 }
 
@@ -61,7 +61,7 @@
 
 .package-comparison {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .package-comparison > * {
@@ -69,7 +69,7 @@
 }
 
 .package-comparison__card {
-    padding: 3rem;
+    padding: var(--space-xl);
 }
 
 .package-comparison__card--ours {
@@ -84,7 +84,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 @media (max-width: 768px) {

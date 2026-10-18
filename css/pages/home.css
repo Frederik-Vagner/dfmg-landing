@@ -5,13 +5,13 @@
 @layer pages {
 
 .home-about__eyebrow-row {
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-xl);
     text-align: center;
 }
 
 .home-about {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .home-about > * {
@@ -27,7 +27,7 @@
 }
 
 .home-services__controls {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 @media (max-width: 768px) {

@@ -9,18 +9,18 @@
 }
 
 .picoline-hero__lead {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .picoline-hero__tiles {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
-    margin-bottom: 4rem;
+    gap: var(--layout-gap);
+    margin-bottom: var(--space-2xl);
 }
 
 .picoline-definition {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .picoline-definition > * {
@@ -28,7 +28,7 @@
 }
 
 .day-schedule {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     text-align: center;
@@ -36,8 +36,8 @@
 
 .day-schedule__item {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
-    padding: 1rem;
+    gap: var(--layout-gap);
+    padding: var(--space-sm);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
@@ -54,17 +54,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .task-card {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 
 .task-card__icon {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .task-card__icon--accent {
@@ -72,8 +72,8 @@
 }
 
 .adhoc-intro {
-    padding: 4rem;
-    margin-bottom: 4rem;
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     border-top: 4px solid var(--success);
@@ -94,17 +94,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .adhoc-card {
-    padding: 1rem;
+    padding: var(--space-sm);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 
 .adhoc-card__icon {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .adhoc-card__title {
@@ -117,8 +117,8 @@
 
 .comparison-pair {
     display: flex;
-    margin-top: 4rem;
-    gap: 4rem;
+    margin-top: var(--space-2xl);
+    gap: var(--space-2xl);
 }
 
 .comparison-pair > * {
@@ -126,18 +126,18 @@
 }
 
 .comparison-pair__card {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--overlay-light);
     border: 1px solid var(--border-on-dark);
 }
 
 .comparison-pair__header {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     text-align: center;
 }
 
 .comparison-pair__header--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .comparison-pair__title--without {
@@ -162,7 +162,7 @@
 
 .testimonial-row {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .testimonial-row > * {
@@ -170,13 +170,13 @@
 }
 
 .testimonial-card {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 
 .testimonial-card__quote {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .testimonial-card__role {

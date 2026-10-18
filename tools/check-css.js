@@ -18,8 +18,9 @@
 //               outside css/tokens.css (colours inside url(...) such as inline
 //               SVG images are not CSS values and do not count) and font sizes
 //               that are not a token from the type scale (an em value, which
-//               sizes an icon to the text around it, is allowed). These may only
-//               go down.
+//               sizes an icon to the text around it, is allowed), and padding,
+//               margin and gap lengths that are not from the spacing scale (a
+//               nudge of 3px or less is allowed). These may only go down.
 //
 // The baseline holds today's known debt so the check can be strict about
 // anything new. Classes that are intentional (built by JavaScript, for
@@ -173,6 +174,11 @@ function check() {
             .filter(({ f }) => !f.endsWith(path.join("css", "tokens.css")))
             .reduce((n, { css }) => n + [...css.matchAll(/font-size\s*:\s*([^;}]+)/g)]
                 .filter((m) => !/^var\(--(text-|heading-|icon-)/.test(m[1].trim()) && !/^[\d.]+em$/.test(m[1].trim())).length, 0),
+        spacingLiterals: sourceCss
+            .filter(({ f }) => !f.endsWith(path.join("css", "tokens.css")))
+            .reduce((n, { css }) => n + [...css.matchAll(/(?:^|[;{\s])(?:padding|margin|gap|row-gap|column-gap)(?:-[a-z-]+)?\s*:\s*([^;}]+)/g)]
+                .flatMap((m) => m[1].match(/-?[\d.]+(?:px|rem)\b/g) || [])
+                .filter((len) => Math.abs(parseFloat(len)) * (len.endsWith("rem") ? 16 : 1) > 3).length, 0),
     };
 
     return { undefinedClasses, unusedClasses, unlayered, counts, used };

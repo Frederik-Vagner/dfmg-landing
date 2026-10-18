@@ -9,11 +9,11 @@
 /* Running text: a heading starts a new part of the page, so it gets room
    above as well as below (the base spacing only puts --space-text below). */
 .policy h2 {
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
 }
 
 .policy h3 {
-    margin-top: 1.5rem;
+    margin-top: var(--space-md);
 }
 
 .policy > div {
@@ -23,7 +23,7 @@
 .cookie-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1rem 0;
+    margin: var(--space-sm) 0;
     background: white;
     box-shadow: 0 2px 10px var(--black-a10);
     border-radius: 8px;
@@ -32,11 +32,11 @@
 .cookie-table th {
     background: var(--charcoal);
     color: white;
-    padding: 1rem;
+    padding: var(--space-sm);
     text-align: left;
 }
 .cookie-table td {
-    padding: 1rem;
+    padding: var(--space-sm);
     border-bottom: 1px solid var(--neutral-200);
 }
 .cookie-table tr:last-child td {

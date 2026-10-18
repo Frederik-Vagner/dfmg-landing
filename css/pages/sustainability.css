@@ -12,14 +12,14 @@
 .two-column1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 2rem;
+    gap: var(--space-lg);
     align-items: center;
 }
 
 @media (max-width: 768px) {
     .two-column1 {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: var(--space-lg);
     }
 }
 
@@ -80,13 +80,13 @@
     justify-content: center;
     position: relative;
     flex-shrink: 0;
-    padding: 4rem;
+    padding: var(--space-2xl);
 }
 
 /* Vertical slides need header offset */
 .vertical-container .slide {
-    padding: 2rem 5rem 2rem 3rem;
-    padding-top: calc(2rem + 80px);
+    padding: var(--space-lg) var(--space-3xl) var(--space-lg) var(--space-xl);
+    padding-top: calc(var(--space-lg) + var(--header-clearance));
 }
 
 /* Slide Content Layouts */
@@ -100,7 +100,7 @@
        overflowing upward under the header, where it cannot be scrolled to. */
     align-content: safe center;
     text-align: center;
-    gap: 3rem;
+    gap: var(--space-xl);
 }
 
 .slide-content1 {
@@ -108,7 +108,7 @@
     max-width: var(--container-width-narrow);
     display: grid;
     align-items: center;
-    gap: 3rem;
+    gap: var(--space-xl);
 }
 
 .slide-content4 {
@@ -117,21 +117,21 @@
     display: grid;
     align-items: center;
     text-align: center;
-    gap: 3rem;
+    gap: var(--space-xl);
 }
 
 .slide-content-normal {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--space-lg);
 }
 
 .slide-content-wide {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--space-lg);
 }
 
 @media (max-width: 1440px) {
@@ -144,7 +144,7 @@
     .slide-content-normal,
     .slide-content-wide {
         max-width: 1000px;
-        padding: 0 var(--padding-md);
+        padding: 0 var(--space-md);
     }
 }
 
@@ -152,7 +152,7 @@
     .slide-content-normal,
     .slide-content-wide {
         max-width: 100%;
-        padding: 0 1rem;
+        padding: 0 var(--space-sm);
     }
 }
 
@@ -161,7 +161,7 @@
     position: fixed;
     top: auto;
     right: auto;
-    bottom: var(--gap-sm);
+    bottom: var(--space-xs);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -169,7 +169,7 @@
     gap: var(--radius-md);
     z-index: 1000;
     background: var(--overlay-white);
-    padding: var(--radius-md) var(--gap-lg);
+    padding: var(--radius-md) var(--space-md);
     border-radius: var(--radius-circle);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--overlay-light);
@@ -187,7 +187,7 @@
     gap: var(--radius-md);
     z-index: 1000;
     background: var(--overlay-white);
-    padding: var(--gap-md) var(--gap-sm);
+    padding: var(--space-sm) var(--space-xs);
     border-radius: var(--radius-circle);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--overlay-light);
@@ -215,20 +215,20 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding-top: 80px;
+        padding-top: var(--space-3xl);
     }
 
     .slide {
-        padding: 2rem;
-        padding-top: calc(2rem + 80px);
+        padding: var(--space-lg);
+        padding-top: calc(var(--space-lg) + var(--header-clearance));
     }
 
     .horizontal-container .slide {
-        padding: 2rem;
+        padding: var(--space-lg);
     }
 
     .slide-content {
-        gap: 2rem;
+        gap: var(--space-lg);
     }
 
     .slide-nav {
@@ -253,7 +253,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--padding-md);
+    gap: var(--space-md);
     max-width: var(--container-width-normal);
     width: 100%;
     height: 100%;
@@ -316,7 +316,7 @@
     --slide-4: linear-gradient(135deg, var(--purple-50) 0%, var(--purple-100) 50%, var(--purple-200) 100%);
 }
 
-[data-slide-theme="sustainability"] .slide { padding: 100px 4rem 80px 4rem; }
+[data-slide-theme="sustainability"] .slide { padding: var(--space-3xl) var(--space-2xl) var(--space-3xl) var(--space-2xl); }
 
 [data-slide-theme="sustainability"] .slide:nth-child(1) { background: var(--slide-1); }
 [data-slide-theme="sustainability"] .slide:nth-child(2) { background: var(--slide-2); }
@@ -402,24 +402,24 @@
         height: auto;
         min-height: 0;
         overflow-y: visible;
-        padding: 3rem 1rem;
+        padding: var(--space-xl) var(--space-sm);
     }
 
     .vertical-container .slide,
     .horizontal-container .slide {
-        padding: 3rem 1rem;
+        padding: var(--space-xl) var(--space-sm);
     }
 
     /* The first slide clears the fixed header. */
     .slide:first-child {
-        padding-top: 2rem;
+        padding-top: var(--space-lg);
     }
 
     .slide-content,
     .slide-content1,
     .slide-content4 {
         height: auto;
-        gap: 2rem;
+        gap: var(--space-lg);
     }
 
     /* The 2x2 overview grid: one column, and content-sized rows so a cell is
@@ -452,22 +452,22 @@
 @layer pages {
 
 .slide-card {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 
 .slide-card--compact {
-    padding: 1rem;
+    padding: var(--space-sm);
 }
 
 .slide-card--row {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .slide-card--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .slide-card--rule-left {
@@ -504,16 +504,16 @@
 
 .slide-row {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .slide-row--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .slide-split {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .slide-split > * {
@@ -522,7 +522,7 @@
 
 .slide-columns {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .slide-columns > * {
@@ -532,24 +532,24 @@
 .slide-stack {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: var(--space-md);
 }
 
 .slide-card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .slide-card-grid--three {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .slide-card-grid--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .slide-aside {
@@ -561,15 +561,15 @@
 }
 
 .slide-lead {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .slide-text--spaced {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .slide-text--loose {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .slide-body {
@@ -577,7 +577,7 @@
 }
 
 .slide-body--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 @media (max-width: 768px) {

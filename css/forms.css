@@ -6,13 +6,13 @@
 @layer core {
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
 }
 
 .form-input,
 .form-textarea {
     width: 100%;
-    padding: var(--gap-md);
+    padding: var(--space-sm);
     border: var(--border-light);
     border-radius: var(--radius-normal);
     font-size: var(--text-lg);
@@ -33,7 +33,7 @@
 
 /* ── Platform Form (compact variant) ── */
 .platform-form .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: var(--space-md);
 }
 
 .platform-form label {
@@ -41,14 +41,14 @@
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
-    margin-bottom: 0.35rem;
+    margin-bottom: var(--space-3xs);
 }
 
 .platform-form input,
 .platform-form select,
 .platform-form textarea {
     width: 100%;
-    padding: 0.7rem 1rem;
+    padding: var(--space-xs) var(--space-sm);
     border: var(--border-light);
     border-radius: var(--radius-sm);
     font-family: inherit;
@@ -72,7 +72,7 @@
 .form-row-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 /* ── Contact Form ── */
@@ -96,21 +96,21 @@
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .form-row .form-group {
-    margin-bottom: var(--padding-md);
+    margin-bottom: var(--space-md);
 }
 
 .form-row.phone-row {
     grid-template-columns: 25% auto;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .phone-code select {
     font-size: var(--text-lg);
-    padding: var(--gap-md);
+    padding: var(--space-sm);
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -118,7 +118,7 @@
     background-position: right 15px center;
     background-repeat: no-repeat;
     background-size: 16px;
-    padding-right: 45px;
+    padding-right: var(--space-xl);
 }
 
 /* ── Input with Unit Suffix (e.g. m²) ── */
@@ -128,7 +128,7 @@
 }
 
 .input-with-unit .form-input {
-    padding-right: 25px;
+    padding-right: var(--space-md);
 }
 
 .input-unit {
@@ -149,7 +149,7 @@
 .dropdown-selected {
     border: var(--border-light);
     border-radius: var(--radius-normal);
-    padding: var(--gap-md);
+    padding: var(--space-sm);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -169,7 +169,7 @@
 
 .dropdown-selected > iconify-icon {
     flex: 0 0 auto;
-    margin-left: 0.75rem;
+    margin-left: var(--space-xs);
 }
 
 .dropdown-selected.open {
@@ -204,7 +204,7 @@
 
 .dropdown-options label {
     display: block;
-    padding: 0.75rem 1rem;
+    padding: var(--space-xs) var(--space-sm);
     cursor: pointer;
     position: relative;
     transition: all var(--transition-fast);
@@ -245,14 +245,14 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: var(--gap-sm) 0;
+    gap: var(--space-sm);
+    padding: var(--space-xs) 0;
 }
 
 .filter-tabs {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gap-sm);
+    gap: var(--space-xs);
 }
 
 
@@ -262,7 +262,7 @@
     background: var(--bg-surface);
     border: 2px solid var(--color-border);
     border-radius: var(--radius-circle);
-    padding: 0 var(--gap-sm);
+    padding: 0 var(--space-xs);
     min-width: 300px;
     transition: all var(--transition-normal);
 }
@@ -276,13 +276,13 @@
     background: none;
     outline: none;
     width: 100%;
-    padding: 8px 0;
+    padding: var(--space-2xs) 0;
     font-size: var(--text-base);
 }
 
 .search-bar iconify-icon {
     color: var(--gray-light);
-    margin-right: var(--gap-sm);
+    margin-right: var(--space-xs);
 }
 
 /* ── Newsletter Signup ── */
@@ -294,23 +294,23 @@
 
 .newsletter-signup h3 {
     color: var(--charcoal);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2xs);
 }
 
 .newsletter-subtitle {
     font-size: var(--text-sm);
     opacity: 0.9;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
 }
 
 .newsletter-form {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-xs);
 }
 
 .newsletter-input {
-    padding: 0.75rem;
+    padding: var(--space-xs);
     border: 2px solid var(--color-border);
     border-radius: var(--radius-sm);
     background: var(--bg-muted);
@@ -327,27 +327,27 @@
 .newsletter-success {
     color: var(--success);
     font-weight: var(--font-weight-medium);
-    padding: 0.75rem 0;
+    padding: var(--space-xs) 0;
 }
 
 .newsletter-success iconify-icon {
-    margin-right: 0.25rem;
+    margin-right: var(--space-3xs);
 }
 
 /* ── FAQ Accordion ── */
 .faq-accordion {
-    margin-top: 3rem;
+    margin-top: var(--space-xl);
 }
 
 .faq-item {
     border: var(--border-light);
     border-radius: var(--radius-normal);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     overflow: hidden;
 }
 
 .faq-question {
-    padding: 1rem;
+    padding: var(--space-sm);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -385,7 +385,7 @@
 }
 
 .faq-answer p {
-    padding: var(--padding-md);
+    padding: var(--space-md);
     margin: 0;
     color: var(--gray);
 }

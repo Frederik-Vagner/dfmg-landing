@@ -6,7 +6,7 @@
 
 .handyman-hero {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .handyman-hero__title {
@@ -14,7 +14,7 @@
 }
 
 .handyman-hero__lead {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
     color: var(--gray);
 }
 
@@ -22,24 +22,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .handyman-hero__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .handyman-hero__tools {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .trade-card__icon {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--success);
 }
 
@@ -55,11 +55,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .skill-card {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     border-top: 4px solid var(--success);
@@ -67,12 +67,12 @@
 }
 
 .skill-card__icon {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--success);
 }
 
 .project {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .project__title {
@@ -80,13 +80,13 @@
 }
 
 .project__text {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     color: var(--gray);
 }
 
 .project__layout {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .project__layout > * {
@@ -94,7 +94,7 @@
 }
 
 .project__tasks {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     border-left: 4px solid var(--success);
@@ -102,7 +102,7 @@
 
 .project__photos {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .project__photo {
@@ -118,11 +118,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .handyman-step {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
 }

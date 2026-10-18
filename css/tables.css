@@ -22,7 +22,7 @@
 .bc-table thead th {
     background: var(--bg-gradient-primary);
     color: var(--white);
-    padding: 1rem 1.25rem;
+    padding: var(--space-sm) var(--space-md);
     text-align: left;
     font-weight: var(--font-weight-medium);
     font-size: var(--text-base);
@@ -33,7 +33,7 @@
 }
 
 .bc-table tbody td {
-    padding: 0.6rem 1.25rem;
+    padding: var(--space-2xs) var(--space-md);
     color: var(--gray);
 }
 
@@ -46,15 +46,15 @@
     background: var(--bg-surface);
     color: var(--charcoal);
     font-weight: var(--font-weight-medium);
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-xs);
     font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
 
 .bc-table__category iconify-icon {
-    margin-right: 0.5rem;
+    margin-right: var(--space-2xs);
     color: var(--primary);
 }
 
@@ -67,12 +67,12 @@
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
 }
 
 .comparison-table th,
 .comparison-table td {
-    padding: 0.75rem 1rem;
+    padding: var(--space-xs) var(--space-sm);
     text-align: center;
     border-bottom: var(--border-lighter);
     font-size: var(--text-sm);
@@ -100,7 +100,7 @@
     font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding-top: 1.25rem;
+    padding-top: var(--space-md);
 }
 
 .comparison-table .check {
@@ -116,25 +116,25 @@
     background: var(--bg-surface);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 .pricing-header {
     background: var(--bg-gradient-charcoal);
     color: var(--white);
-    padding: var(--padding-md) var(--padding-lg);
+    padding: var(--space-md) var(--space-lg);
     text-align: center;
 }
 
 .pricing-body {
-    padding: var(--padding-lg);
+    padding: var(--space-lg);
 }
 
 .pricing-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: var(--space-sm) 0;
     border-bottom: var(--border-light);
 }
 
@@ -151,7 +151,7 @@
 .pricing-specs {
     color: var(--gray-light);
     font-size: var(--text-sm);
-    margin-right: 1rem;
+    margin-right: var(--space-sm);
 }
 
 .pricing-price {
@@ -162,7 +162,7 @@
 
 /* ── Planning Table (calculator) ── */
 .planning-table td {
-    padding: 0.1rem 0.5rem;
+    padding: 0.1rem var(--space-2xs);
 }
 
 .planning-table td:last-child {
@@ -170,7 +170,7 @@
 }
 
 .th-count {
-    padding-left: 1.5rem;
+    padding-left: var(--space-md);
 }
 
 /* Wrapper for the feature matrix. It carries the table's own top margin,
@@ -179,7 +179,7 @@
    table's position: sticky header row, which would then stop pinning to the
    top of the page as you scroll. */
 .table-scroll {
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
 }
 
 .table-scroll > .comparison-table {
@@ -206,21 +206,21 @@
 
     .comparison-table th,
     .comparison-table td {
-        padding: 0.5rem;
+        padding: var(--space-2xs);
     }
 
     .pricing-header {
-        padding: 1rem;
+        padding: var(--space-sm);
     }
 
     .pricing-body {
-        padding: 1rem;
+        padding: var(--space-sm);
     }
 
     .pricing-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: var(--space-2xs);
     }
 
     .pricing-specs {

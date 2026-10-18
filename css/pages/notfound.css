@@ -5,12 +5,12 @@
 @layer pages {
 
 .notfound__actions {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .notfound-links {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .notfound-links > * {
@@ -18,7 +18,7 @@
 }
 
 .notfound-links__card {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .notfound-links__title {

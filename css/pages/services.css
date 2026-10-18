@@ -7,7 +7,7 @@
 .service-builder {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: var(--space-xl);
 }
 
 .service-builder > * {
@@ -15,7 +15,7 @@
 }
 
 .service-builder__intro {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .service-builder__title {
@@ -23,12 +23,12 @@
 }
 
 .service-builder__text {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     color: var(--gray);
 }
 
 .package-card {
-    padding: 2rem;
+    padding: var(--space-lg);
     border-left: 4px solid var(--charcoal);
 }
 
@@ -43,11 +43,11 @@
 .package-card__stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .package-stat {
-    padding: 1rem;
+    padding: var(--space-sm);
     text-align: center;
 }
 
@@ -64,7 +64,7 @@
 
 .package-card__actions {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .advantage-group__label {
@@ -73,7 +73,7 @@
 
 .advantage-grid {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .advantage-grid > * {
@@ -81,11 +81,11 @@
 }
 
 .advantage-grid--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .advantage-card {
-    padding: 1rem;
+    padding: var(--space-sm);
 }
 
 .advantage-card--centered {
@@ -94,7 +94,7 @@
 
 .advantage-card__header {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
     justify-content: center;
 }
 
@@ -108,7 +108,7 @@
 
 .service-steps {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .service-steps > * {
@@ -116,7 +116,7 @@
 }
 
 .service-step {
-    padding: 2rem;
+    padding: var(--space-lg);
     text-align: center;
 }
 

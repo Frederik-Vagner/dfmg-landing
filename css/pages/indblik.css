@@ -6,12 +6,12 @@
 
 .indblik-topics {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
-    margin-bottom: 4rem;
+    gap: var(--layout-gap);
+    margin-bottom: var(--space-2xl);
 }
 
 .indblik-topic {
-    padding: 1rem;
+    padding: var(--space-sm);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     text-align: center;
@@ -19,7 +19,7 @@
 
 .indblik-featured {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .indblik-featured > * {
@@ -27,7 +27,7 @@
 }
 
 .indblik-feature {
-    padding: 2rem;
+    padding: var(--space-lg);
     background: var(--bg-gradient-white);
     color: var(--charcoal);
     border-left: 4px solid var(--primary);
@@ -36,7 +36,7 @@
 .indblik-articles {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 @media (max-width: 768px) {

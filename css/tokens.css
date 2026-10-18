@@ -135,17 +135,28 @@
     --container-width-narrow: 800px;
     --container-width-normal: 1200px;
     --container-width-wide: 1600px;
-    --container-padding: 0 20px;
-    --section-padding: 4rem 0;
-    --gap-xs: 8px;
-    --gap-sm: 10px;
-    --gap-md: 15px;
-    --gap-lg: 20px;
-    --gap-xl: 40px;
-    --space-text: 1rem;     /* below a heading, paragraph or list (base.css) */
-    --padding-sm: 0.75rem;
-    --padding-md: 1.5rem;
-    --padding-lg: 2rem;
+
+    /* Spacing: one scale on a 4px rhythm. Every padding, margin and gap in
+       the CSS is one of these (or 0, auto, a percentage, an em value, or a
+       nudge of 3px or less for optical alignment). */
+    --space-3xs: 0.25rem;   /*   4px */
+    --space-2xs: 0.5rem;    /*   8px */
+    --space-xs: 0.75rem;    /*  12px */
+    --space-sm: 1rem;       /*  16px */
+    --space-md: 1.5rem;     /*  24px */
+    --space-lg: 2rem;       /*  32px */
+    --space-xl: 3rem;       /*  48px */
+    --space-2xl: 4rem;      /*  64px */
+    --space-3xl: 6rem;      /*  96px */
+    --space-4xl: 8rem;      /* 128px */
+
+    /* Named uses of the scale */
+    --container-padding: 0 var(--space-sm);        /* the page's side gutter */
+    --section-padding: var(--space-2xl) 0;
+    --layout-gap: var(--space-md);                 /* default gap in component grids and rows */
+    --space-text: var(--space-sm);                 /* below a heading, paragraph or list (base.css) */
+    --header-clearance: 80px;                      /* room under the fixed header */
+    --chat-clearance: 60px;                        /* room above the fixed chat bubble */
 
     /* Border Radius */
     --radius-sm: 8px;
@@ -235,12 +246,11 @@
     --transition-normal: 0.3s ease;
 }
 
-/* Default gap for the flex and grid layouts in components: tighter on
-   phones. Components read var(--layout-gap, <desktop value>), so an
-   explicit gap on a component still wins at every width. */
+/* The default gap for component grids and rows is tighter on phones. A
+   component that sets its own gap keeps it at every width. */
 @media (max-width: 768px) {
     :root {
-        --layout-gap: var(--gap-md);
+        --layout-gap: var(--space-sm);
     }
 }
 

@@ -6,7 +6,7 @@
 
 .om-hero {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .om-hero > * {
@@ -23,13 +23,13 @@
 
 .om-story {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .om-team {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
-    padding: 3rem;
+    gap: var(--layout-gap);
+    padding: var(--space-xl);
     background: var(--bg-gradient-primary);
     color: var(--white);
     border-radius: var(--radius-normal);
@@ -41,18 +41,18 @@
 
 .om-values {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .om-value {
-    padding: 1rem;
+    padding: var(--space-sm);
     border-top: 4px solid var(--success);
     text-align: center;
 }
 
 .om-philosophy {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .om-philosophy > * {
@@ -69,11 +69,11 @@
 
 .om-innovation {
     display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
+    gap: var(--layout-gap);
 }
 
 .om-cta {
-    padding: 3rem;
+    padding: var(--space-xl);
     background: var(--bg-gradient-primary);
     color: var(--white);
     border-radius: var(--radius-normal);
@@ -81,7 +81,7 @@
 }
 
 .om-cta__text {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
 }
 
 @media (max-width: 768px) {

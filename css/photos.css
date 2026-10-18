@@ -11,12 +11,12 @@
     background: linear-gradient(135deg, var(--white-a08) 0%, var(--white-a03) 100%);
     border: 1px solid var(--white-a12);
     border-radius: var(--radius-md);
-    padding: 3rem 2rem;
+    padding: var(--space-xl) var(--space-lg);
     color: var(--text-on-dark-subtle);
     font-size: var(--text-sm);
     text-align: center;
     max-width: 900px;
-    margin: 2rem auto 0;
+    margin: var(--space-lg) auto 0;
     min-height: 300px;
     display: flex;
     align-items: center;
@@ -32,14 +32,14 @@
 /* ── Placeholder Icons ── */
 .placeholder-icon {
     font-size: var(--text-4xl);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     display: block;
     color: var(--primary);
 }
 
 .placeholder-list-icon {
     color: var(--primary);
-    margin-right: 0.5rem;
+    margin-right: var(--space-2xs);
     width: 16px;
 }
 
@@ -48,7 +48,7 @@
     display: grid;
     grid-template-columns: repeat(2, 150px);
     grid-template-rows: repeat(3, 150px);
-    gap: var(--gap-md);
+    gap: var(--space-sm);
     justify-content: center;
 }
 
@@ -70,7 +70,7 @@
 .comparison-slider {
     position: relative;
     max-width: 800px;
-    margin: 4rem auto 0;
+    margin: var(--space-2xl) auto 0;
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-xl);

@@ -9,7 +9,7 @@
 .logo-swatch {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-2xs);
     align-items: center;
 }
 
@@ -59,7 +59,7 @@
 .logo-banners {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-2xs);
 }
 
 .logo-banner {
@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: var(--space-sm);
 }
 
 .logo-banner--navy { background: var(--swatch-navy); }
@@ -119,68 +119,68 @@
 /* ── Page layout (formerly utility classes) ── */
 /* generated:start */
 .showcase-title {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     color: var(--charcoal);
 }
 
 .showcase-section-title {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--charcoal);
 }
 
 .showcase-label {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     color: var(--charcoal);
 }
 
 .showcase-intro {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
     color: var(--gray);
 }
 
 .showcase-intro--tight {
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-xl);
 }
 
 .showcase-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
+    margin-bottom: var(--space-lg);
+    gap: var(--space-sm);
 }
 
 .showcase-row--wide {
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .showcase-row--padded {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .showcase-pair {
     display: flex;
-    margin-bottom: 2rem;
-    gap: 2rem;
+    margin-bottom: var(--space-lg);
+    gap: var(--space-lg);
 }
 
 .showcase-dark-panel--padded {
-    padding: 2rem;
+    padding: var(--space-lg);
 }
 
 .showcase-narrow {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     max-width: 400px;
 }
 
 .logo-swatches {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .logo-swatches--spaced {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .logo-swatch__caption {
