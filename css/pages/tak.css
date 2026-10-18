@@ -1,0 +1,45 @@
+/* ========================================
+   TAK — page styles
+   ======================================== */
+
+@layer pages {
+
+.tak__icon {
+    margin-bottom: 2rem;
+    color: var(--success);
+    font-size: 4rem;
+}
+
+.tak__message {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tak__actions {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.tak-next {
+    padding: 2rem;
+    margin-top: 3rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.tak-next__title {
+    color: var(--white);
+}
+
+.tak-next__list {
+    max-width: 400px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .tak__icon {
+        font-size: 2.5rem;
+    }
+}
+
+}

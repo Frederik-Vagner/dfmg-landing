@@ -19,7 +19,7 @@ pageCss:
 
                 <!-- Column 1: Information -->
                 <div class="column">
-                    <h3 class="text-2xl font-bold">Oplysninger</h3>
+                    <h3 class="calc-column__title">Oplysninger</h3>
                     <div class="card--compact">
                         <h4>Størrelse</h4>
                         <label>Hvor stort er jeres kontor?</label>
@@ -27,7 +27,7 @@ pageCss:
                             <tbody>
                                 <tr>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm active" data-size-method="area">Areal</button>
                                             <button class="tab-button tab-button--sm" data-size-method="employees">Folk</button>
                                         </div>
@@ -85,7 +85,7 @@ pageCss:
                                 <tr>
                                     <td>Mandag</td>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm" data-day="monday" data-type="let">Let</button>
                                             <button class="tab-button tab-button--sm" data-day="monday" data-type="grundig">Grundig</button>
                                         </div>
@@ -94,7 +94,7 @@ pageCss:
                                 <tr>
                                     <td>Tirsdag</td>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm active" data-day="tuesday" data-type="let">Let</button>
                                             <button class="tab-button tab-button--sm" data-day="tuesday" data-type="grundig">Grundig</button>
                                         </div>
@@ -103,7 +103,7 @@ pageCss:
                                 <tr>
                                     <td>Onsdag</td>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm" data-day="wednesday" data-type="let">Let</button>
                                             <button class="tab-button tab-button--sm" data-day="wednesday" data-type="grundig">Grundig</button>
                                         </div>
@@ -112,7 +112,7 @@ pageCss:
                                 <tr>
                                     <td>Torsdag</td>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm active" data-day="thursday" data-type="let">Let</button>
                                             <button class="tab-button tab-button--sm" data-day="thursday" data-type="grundig">Grundig</button>
                                         </div>
@@ -121,7 +121,7 @@ pageCss:
                                 <tr>
                                     <td>Fredag</td>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm" data-day="friday" data-type="let">Let</button>
                                             <button class="tab-button tab-button--sm" data-day="friday" data-type="grundig">Grundig</button>
                                         </div>
@@ -130,7 +130,7 @@ pageCss:
                                 <tr>
                                     <td>Lørdag</td>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm" data-day="saturday" data-type="let">Let</button>
                                             <button class="tab-button tab-button--sm" data-day="saturday" data-type="grundig">Grundig</button>
                                         </div>
@@ -139,7 +139,7 @@ pageCss:
                                 <tr>
                                     <td>Søndag</td>
                                     <td>
-                                        <div class="flex gap-05 items-center">
+                                        <div class="calc-field">
                                             <button class="tab-button tab-button--sm" data-day="sunday" data-type="let">Let</button>
                                             <button class="tab-button tab-button--sm active" data-day="sunday" data-type="grundig">Grundig</button>
                                         </div>
@@ -153,7 +153,7 @@ pageCss:
                     <div class="card--compact">
                         <h4>Dokumentation</h4>
                         <label>Ønsker I billeder af rengøringen?</label>
-                        <div class="flex gap-05 items-center">
+                        <div class="calc-toggle-row">
                             <button class="tab-button tab-button--sm" data-photo="none">Ingen</button>
                             <button class="tab-button tab-button--sm active" data-photo="after">Efter</button>
                             <button class="tab-button tab-button--sm" data-photo="before-after">Før & efter</button>
@@ -163,9 +163,9 @@ pageCss:
 
                 <!-- Column 2: Service Templates -->
                 <div class="column">
-                    <div class="flex justify-between gap-05 items-center">
-                        <h3 class="text-2xl font-bold">Service Skema</h3>
-                        <div class="flex gap-05 items-center">
+                    <div class="calc-schedule__header">
+                        <h3 class="calc-column__title">Service Skema</h3>
+                        <div class="calc-toggle-row">
                             <button class="tab-button tab-button--sm active" data-service-mode="let">Let</button>
                             <button class="tab-button tab-button--sm" data-service-mode="grundig">Grundig</button>
                         </div>
@@ -319,7 +319,7 @@ pageCss:
 
                 <!-- Column 3: Price Summary -->
                 <div class="column">
-                    <h3 class="text-2xl font-bold">Månedlig Pris</h3>
+                    <h3 class="calc-column__title">Månedlig Pris</h3>
                     <div class="card--compact price-summary" id="price-breakdown">
                         <div class="price-line" data-price="base">
                             <span data-label>Basispris (500 m²)</span>
@@ -345,8 +345,8 @@ pageCss:
                             <span id="task-summary-text">Standard opgaver inkluderet</span>
                         </div>
                         <div class="price-line discount-line" data-price="discount">
-                            <span data-label class="text-charcoal font-semibold">Rabat (3x ugentligt)</span>
-                            <span data-value class="text-charcoal font-semibold">-15%</span>
+                            <span data-label class="price-line__emphasis">Rabat (3x ugentligt)</span>
+                            <span data-value class="price-line__emphasis">-15%</span>
                         </div>
                         <div class="price-total-line">
                             <span>Pris</span>
@@ -354,12 +354,12 @@ pageCss:
                         </div>
                     </div>
 
-                    <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md w-full mt-05">
+                    <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md calc-summary__cta">
                         <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>
                         Kontakt os for tilbud
                     </a>
 
-                    <p class="disclaimer text-center mt-1">
+                    <p class="disclaimer calc-summary__note">
                         Dette er et estimat baseret på dine oplysninger. Den endelige pris kan variere afhængigt af specifikke forhold og krav. Kontakt os for et præcist tilbud.
                     </p>
                 </div>

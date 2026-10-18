@@ -72,6 +72,7 @@
     --text-on-dark-muted: rgba(255, 255, 255, 0.6);
     --text-on-dark-subtle: rgba(255, 255, 255, 0.4);
     --text-on-dark-soft: rgba(255, 255, 255, 0.7);
+    --text-on-dark-strong: rgba(255, 255, 255, 0.9);
     --icon-on-dark: rgba(255, 255, 255, 0.5);
     --border-on-dark: rgba(255, 255, 255, 0.2);
     --border-subtle: rgba(0, 0, 0, 0.08);

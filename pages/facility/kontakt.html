@@ -14,7 +14,7 @@ pageCss:
             <div class="container">
                 <div class="career-content">
                     <div class="contact-info">
-                        <h1 class="text-charcoal">Få et tilbud</h1>
+                        <h1 class="kontakt__title">Få et tilbud</h1>
                         <p>Udfyld formularen og beskriv jeres behov. Vi vender tilbage med et skræddersyet tilbud inden for 24 timer.</p>
 
                         <ul class="job-benefits">
@@ -27,7 +27,7 @@ pageCss:
                     </div>
 
                     <div class="contact-form">
-                        <h2 class="text-charcoal text-center">Kontakt formular</h2>
+                        <h2 class="kontakt-form__title">Kontakt formular</h2>
                         <form action="https://formspree.io/f/xdkdrqkw" method="POST">
                         <!-- Hidden fields for Formspree -->
                         <input type="hidden" name="_subject" value="Ny henvendelse fra DFMG hjemmeside">
@@ -96,7 +96,7 @@ pageCss:
                             <div class="form-group">
                                 <textarea name="message" placeholder="Beskriv jeres behov, så vi kan forberede os bedst muligt" class="form-textarea" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn--success btn--md text-center w-full">SEND FORESPØRGSEL</button>
+                            <button type="submit" class="btn btn--success btn--md kontakt-form__submit">SEND FORESPØRGSEL</button>
                         </form>
                     </div>
                 </div>
@@ -106,11 +106,11 @@ pageCss:
         <!-- FAQ Section -->
         <section class="section">
             <div class="container">
-                <div class="text-center">
-                    <h3 class="text-charcoal">Ofte stillede spørgsmål</h3>
+                <div class="kontakt-faq__header">
+                    <h3 class="kontakt-faq__title">Ofte stillede spørgsmål</h3>
                 </div>
 
-                <div class="faq-accordion grid-cols-2 gap-2">
+                <div class="faq-accordion kontakt-faq__list">
                     <!-- Kolonne 1 -->
                     <div>
                         <div class="faq-item">
@@ -263,14 +263,14 @@ pageCss:
         <!-- Career Section -->
         <section class="section">
             <div class="container">
-                <div class="text-center">
-                    <h3 class="text-charcoal">Karriere</h3>
-                    <p class="text-lg">Søger du job hos DFMG? Bliv en del af et professionelt facility service team</p>
+                <div class="kontakt-careers__header">
+                    <h3 class="kontakt-careers__title">Karriere</h3>
+                    <p class="kontakt-careers__lead">Søger du job hos DFMG? Bliv en del af et professionelt facility service team</p>
                 </div>
 
                 <div class="career-content">
                     <div>
-                        <h3 class="text-charcoal">Søger du job?</h3>
+                        <h3 class="kontakt-careers__subtitle">Søger du job?</h3>
                         <p>Hvis du er interesseret i et job hos DFMG, kan du kontakte os direkte eller se vores ledige stillinger for at finde den rigtige mulighed.</p>
 
                         <ul class="job-benefits">
@@ -281,7 +281,7 @@ pageCss:
                             <li>Fleksible arbejdstider</li>
                         </ul>
 
-                        <div class="job-buttons flex">
+                        <div class="job-buttons job-buttons--row">
                             <a href="mailto:{{ site.email }}?subject=Uopfordret ansøgning" class="btn btn--primary btn--md">
                                 Kontakt os
                             </a>
@@ -291,8 +291,8 @@ pageCss:
                         </div>
                     </div>
 
-                    <div class="partner-info text-right">
-                        <h3 class="text-charcoal">Partnerskab & Samarbejde</h3>
+                    <div class="partner-info">
+                        <h3 class="partner-info__title">Partnerskab & Samarbejde</h3>
                         <p>Vi søger samarbejdspartnere til at udvide vores servicetilbud og løse større facility management projekter sammen.</p>
 
                         <ul class="job-benefits">

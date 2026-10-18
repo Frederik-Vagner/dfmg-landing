@@ -3,31 +3,33 @@ layout: base.html
 title: "DFMG - Tak for din besked"
 description: "Tak for din henvendelse til DFMG. Vi vender tilbage hurtigst muligt."
 robots: "noindex, follow"
+pageCss:
+  - tak
 ---
 
     <!-- Main Content -->
         <section class="section first hero">
-            <div class="container-narrow text-center">
-                <div class="success-icon text-9xl text-success mb-2">
+            <div class="container-narrow">
+                <div class="success-icon tak__icon">
                     <iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>
                 </div>
 
-                <h1 class="text-charcoal">Tak for din henvendelse!</h1>
+                <h1 class="hero__title">Tak for din henvendelse!</h1>
 
-                <p class="body text-gray my-2">
+                <p class="body hero__text tak__message">
                     Vi har modtaget din forespørgsel og vender tilbage med et skræddersyet tilbud inden for 24 timer.
                 </p>
 
-                <div class="my-3">
+                <div class="tak__actions">
                     <a href="/" class="btn btn--primary btn--lg">
-                        <iconify-icon icon="fluent:home-20-filled" inline class="mr-05"></iconify-icon>
+                        <iconify-icon icon="fluent:home-20-filled" inline class="btn__icon"></iconify-icon>
                         Tilbage til forsiden
                     </a>
                 </div>
 
-                <div class="card bg-gradient-white p-2 mt-3">
-                    <h3 class="text-charcoal">Hvad sker der nu?</h3>
-                    <ul class="feature-list list--success text-left max-w-400 m-auto">
+                <div class="card tak-next">
+                    <h3 class="tak-next__title">Hvad sker der nu?</h3>
+                    <ul class="feature-list list--success tak-next__list">
                         <li><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> Vi gennemgår din forespørgsel</li>
                         <li><iconify-icon icon="fluent:clipboard-text-20-filled" inline></iconify-icon> Vi forbereder os ud fra din information</li>
                         <li><iconify-icon icon="fluent:call-20-filled" inline></iconify-icon> Vi kontakter dig inden for 24 timer</li>

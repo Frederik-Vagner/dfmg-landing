@@ -1,0 +1,43 @@
+/* ========================================
+   404 — page styles
+   ======================================== */
+
+@layer pages {
+
+.notfound__actions {
+    margin-bottom: 4rem;
+}
+
+.notfound-links {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.notfound-links > * {
+    flex: 1;
+}
+
+.notfound-links__card {
+    padding: 2rem;
+}
+
+.notfound-links__title {
+    color: var(--charcoal);
+}
+
+.notfound__text {
+    color: var(--gray);
+}
+
+@media (max-width: 768px) {
+    .notfound-links {
+        flex-wrap: wrap;
+    }
+
+    .notfound-links > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+}
+
+}

@@ -1,0 +1,44 @@
+/* ========================================
+   FORSIDE — page styles
+   ======================================== */
+
+@layer pages {
+
+.home-about__eyebrow-row {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.home-about {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.home-about > * {
+    flex: 1;
+}
+
+.home-about__text {
+    text-align: center;
+}
+
+.team-photo--low {
+    object-position: bottom;
+}
+
+.home-services__controls {
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .home-about {
+        flex-wrap: wrap;
+    }
+
+    .home-about > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+}
+
+}

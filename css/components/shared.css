@@ -201,6 +201,29 @@
     text-align: center;
 }
 
+.hero__content {
+    text-align: center;
+}
+
+.hero__title {
+    color: var(--white);
+}
+
+.hero__text {
+    color: var(--text-on-dark-strong);
+}
+
+.hero__actions {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+    justify-content: center;
+}
+
+.icon-circle--primary {
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+}
+
 @media (max-width: 768px) {
     .cta-actions {
         flex-wrap: wrap;
@@ -217,6 +240,10 @@
     .footer-bottom {
         flex-wrap: nowrap;
         flex-direction: column;
+    }
+
+    .hero__actions {
+        flex-wrap: wrap;
     }
 }
 

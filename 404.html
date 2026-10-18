@@ -4,19 +4,21 @@ title: "DFMG - Siden findes ikke"
 description: "Siden her findes ikke længere, eller adressen er skrevet forkert. Find vej videre til vores services, prisberegner eller kontaktside."
 robots: "noindex, follow"
 permalink: /404.html
+pageCss:
+  - notfound
 ---
 
 <section class="section first">
     <div class="container">
-        <div class="text-center">
-            <div class="subtitle text-primary">FEJL 404</div>
-            <h1 class="title text-charcoal">Siden her findes ikke</h1>
-            <p class="body text-gray mb-4">
+        <div class="page-intro">
+            <div class="subtitle page-intro__eyebrow">FEJL 404</div>
+            <h1 class="title page-intro__title">Siden her findes ikke</h1>
+            <p class="body page-intro__text page-intro__text--spaced">
                 Adressen er måske skrevet forkert, eller også er siden flyttet.
                 Herunder er de steder folk oftest skal hen.
             </p>
 
-            <div class="flex gap-1 flex-wrap justify-center mb-4">
+            <div class="button-row notfound__actions">
                 <a href="/" class="btn btn--primary btn--md">
                     <iconify-icon icon="fluent:home-20-filled" inline></iconify-icon>
                     Til forsiden
@@ -28,9 +30,9 @@ permalink: /404.html
             </div>
         </div>
 
-        <div class="flex flex-3">
-            <div class="card p-2">
-                <h3 class="text-charcoal">Services</h3>
+        <div class="notfound-links">
+            <div class="card notfound-links__card">
+                <h3 class="notfound-links__title">Services</h3>
                 <ul class="feature-list">
                     <li><a href="/pages/facility/services/rengoering.html">Erhvervsrengøring</a></li>
                     <li><a href="/pages/facility/services/ejendomsservice.html">Ejendomsservice</a></li>
@@ -41,8 +43,8 @@ permalink: /404.html
                 </ul>
             </div>
 
-            <div class="card p-2">
-                <h3 class="text-charcoal">Om DFMG</h3>
+            <div class="card notfound-links__card">
+                <h3 class="notfound-links__title">Om DFMG</h3>
                 <ul class="feature-list">
                     <li><a href="/pages/facility/indblik/om.html">Vores historie</a></li>
                     <li><a href="/pages/facility/indblik/teknologi.html">Teknologi &amp; processer</a></li>
@@ -52,14 +54,14 @@ permalink: /404.html
                 </ul>
             </div>
 
-            <div class="card p-2">
-                <h3 class="text-charcoal">Kom videre</h3>
+            <div class="card notfound-links__card">
+                <h3 class="notfound-links__title">Kom videre</h3>
                 <ul class="feature-list">
                     <li><a href="/pages/facility/prisberegner.html">Beregn en pris</a></li>
                     <li><a href="/pages/software/">DFMG Platform</a></li>
                     <li><a href="/pages/facility/kontakt.html">Få et tilbud</a></li>
                 </ul>
-                <p class="body text-gray">
+                <p class="body notfound__text">
                     Kan I ikke finde det, I leder efter? Ring på
                     <a href="tel:+4550480273">+45 50 48 02 73</a>.
                 </p>
