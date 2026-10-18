@@ -452,13 +452,7 @@
 @layer pages {
 
 .slide-card {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
     color: var(--charcoal);
-}
-
-.slide-card--compact {
-    padding: var(--space-sm);
 }
 
 .slide-card--row {
@@ -468,26 +462,6 @@
 
 .slide-card--spaced {
     margin-bottom: var(--space-2xl);
-}
-
-.slide-card--rule-left {
-    border-left: 4px solid var(--charcoal);
-}
-
-.slide-card--rule-top {
-    border-top: 4px solid var(--charcoal);
-}
-
-.slide-card--rule-bottom {
-    border-bottom: 4px solid var(--charcoal);
-}
-
-.slide-card--rule-top-success {
-    border-top: 4px solid var(--success);
-}
-
-.slide-card--rule-top-primary {
-    border-top: 4px solid var(--primary);
 }
 
 .slide-accent--success {

@@ -11,10 +11,6 @@
     gap: var(--layout-gap);
 }
 
-.job-card {
-    padding: var(--space-lg);
-}
-
 .job-card__title {
     color: var(--charcoal);
 }

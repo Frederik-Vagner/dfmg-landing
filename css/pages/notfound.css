@@ -17,10 +17,6 @@
     flex: 1;
 }
 
-.notfound-links__card {
-    padding: var(--space-lg);
-}
-
 .notfound-links__title {
     color: var(--charcoal);
 }

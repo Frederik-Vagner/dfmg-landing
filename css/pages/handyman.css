@@ -59,11 +59,7 @@
 }
 
 .skill-card {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
     color: var(--charcoal);
-    border-top: 4px solid var(--success);
-    text-align: center;
 }
 
 .skill-card__icon {

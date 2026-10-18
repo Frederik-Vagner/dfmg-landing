@@ -108,10 +108,6 @@
     gap: var(--space-xl);
 }
 
-.comparison__card {
-    background: var(--white);
-}
-
 .comparison__title {
     margin-bottom: var(--space-sm);
 }
@@ -231,10 +227,6 @@
     flex: 1;
 }
 
-.comparison__card {
-    padding: var(--space-lg);
-}
-
 .comparison__title {
     font-weight: var(--font-weight-bold);
 }
@@ -295,8 +287,6 @@
 }
 
 .contact-info__card {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 

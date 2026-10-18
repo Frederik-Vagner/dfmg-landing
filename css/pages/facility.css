@@ -68,14 +68,6 @@
     flex: 1;
 }
 
-.package-comparison__card {
-    padding: var(--space-xl);
-}
-
-.package-comparison__card--ours {
-    border-top: 4px solid var(--success);
-}
-
 .package-comparison__title {
     color: var(--charcoal);
 }

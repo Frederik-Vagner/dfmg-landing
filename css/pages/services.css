@@ -27,11 +27,6 @@
     color: var(--gray);
 }
 
-.package-card {
-    padding: var(--space-lg);
-    border-left: 4px solid var(--charcoal);
-}
-
 .package-card__title {
     color: var(--charcoal);
 }
@@ -82,14 +77,6 @@
 
 .advantage-grid--spaced {
     margin-bottom: var(--space-2xl);
-}
-
-.advantage-card {
-    padding: var(--space-sm);
-}
-
-.advantage-card--centered {
-    text-align: center;
 }
 
 .advantage-card__header {

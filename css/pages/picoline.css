@@ -58,8 +58,6 @@
 }
 
 .task-card {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 
@@ -98,8 +96,6 @@
 }
 
 .adhoc-card {
-    padding: var(--space-sm);
-    background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 
@@ -123,12 +119,6 @@
 
 .comparison-pair > * {
     flex: 1;
-}
-
-.comparison-pair__card {
-    padding: var(--space-lg);
-    background: var(--overlay-light);
-    border: 1px solid var(--border-on-dark);
 }
 
 .comparison-pair__header {
@@ -170,8 +160,6 @@
 }
 
 .testimonial-card {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
     color: var(--charcoal);
 }
 

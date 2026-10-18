@@ -95,10 +95,7 @@
 }
 
 .product-card {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
     color: var(--charcoal);
-    text-align: center;
 }
 
 .product-card__category {
@@ -128,12 +125,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap);
-}
-
-.benefit-card {
-    padding: var(--space-sm);
-    background: var(--overlay-light);
-    border: 1px solid var(--border-on-dark);
 }
 
 .benefit-card__title {

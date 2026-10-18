@@ -4,19 +4,59 @@
 
 @layer core {
 
-/* Base card class */
+/* Base card: one look everywhere. A component adds layout and content
+   styles; its look comes from these tokens and the modifiers below. */
 .card {
     position: relative;
-    border-radius: var(--radius-normal);
-    box-shadow: var(--shadow-lg);
+    background: var(--card-bg);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+/* Smaller cards in dense grids */
+.card--compact {
+    padding: var(--card-padding-compact);
+}
+
+/* Icon, title and text centred */
+.card--center {
+    text-align: center;
+}
+
+/* A 4px stripe in --card-accent (charcoal unless a colour modifier sets it) */
+.card--accent-top {
+    border-top: 4px solid var(--card-accent, var(--charcoal));
+}
+
+.card--accent-left {
+    border-left: 4px solid var(--card-accent, var(--charcoal));
+}
+
+.card--accent-success {
+    --card-accent: var(--success);
+}
+
+.card--accent-primary {
+    --card-accent: var(--primary);
+}
+
+/* On a dark or coloured background: translucent, with a light edge */
+.card--glass {
+    background: var(--overlay-light);
+    border: 1px solid var(--border-on-dark);
 }
 
 /* Card layout modifiers */
+/* Icon beside text in a row: a layout, not a boxed card, so no padding or
+   background of its own. */
 .card--horizontal {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
     text-align: left;
+    padding: 0;
+    background: none;
 }
 
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
@@ -57,24 +97,14 @@
 
 /* Card variant modifiers */
 
-/* Bordered card variant */
-.card--bordered {
-    background: var(--white);
-    border-radius: var(--radius-md);
-    padding: var(--space-lg);
-    border-left: 4px solid var(--primary);
-    box-shadow: none;
-}
+
 
 /* Overlay card variant (for carousel items) */
 .card--overlay {
+    padding: 0;
     width: 386px;
     flex-shrink: 0;
     height: 520px;
-    background: var(--white);
-    border-radius: var(--radius-normal);
-    box-shadow: var(--shadow-lg);
-    border: var(--border-light);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -132,11 +162,8 @@
 
 /* Media card variant */
 .card--media {
-    background: var(--white);
-    border-radius: var(--radius-normal);
+    padding: 0;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: var(--border-lighter);
     transition: all var(--transition-normal);
 }
 
@@ -176,20 +203,15 @@
 }
 
 /* Accent card variant (animated top border on hover) */
-.card--accent {
+.card--hover-line {
     min-width: 320px;
-    background: var(--white);
-    border-radius: var(--radius-normal);
-    padding: var(--space-xl) var(--space-lg);
-    box-shadow: var(--shadow-sm);
-    border: var(--border-lighter);
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: all var(--transition-normal);
 }
 
-.card--accent::before {
+.card--hover-line::before {
     content: '';
     position: absolute;
     top: 0;
@@ -200,16 +222,14 @@
     transition: left var(--transition-normal);
 }
 
-.card--accent:hover::before {
+.card--hover-line:hover::before {
     left: 0;
 }
 
 /* Split card variant */
 .card--split {
-    background: var(--white);
-    border-radius: var(--radius-normal);
+    padding: 0;
     overflow: hidden;
-    box-shadow: var(--shadow-xl);
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 200px;
@@ -322,8 +342,9 @@
 }
 
 .card--feature--filled {
-    background: var(--bg-gradient-white);
-    box-shadow: var(--shadow-sm);
+    border-radius: var(--card-radius);
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
 }
 
 .card--feature--hover {
@@ -332,7 +353,6 @@
 
 .card--feature--hover:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
 }
 
 .card--feature--center {
@@ -478,11 +498,10 @@
 .card--service {
     width: 570px;
     flex-shrink: 0;
-    background: var(--white);
-    border-radius: var(--radius-xl);
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    border: var(--border-lighter);
+    box-shadow: var(--card-shadow);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -495,13 +514,13 @@
 }
 
 /* ── Staff card ── */
-.card--staff {
+.staff-member {
     display: flex;
     align-items: center;
     gap: var(--space-xs);
 }
 
-.card--staff__avatar {
+.staff-member__avatar {
     width: 60px;
     height: 60px;
     border-radius: 20%;
@@ -509,30 +528,29 @@
     object-fit: cover;
 }
 
-.card--staff__name {
+.staff-member__name {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
     margin-bottom: 2px;
 }
 
-.card--staff__detail {
+.staff-member__detail {
     font-size: var(--text-sm);
     color: var(--gray);
     margin-bottom: 1px;
 }
 
-.card--staff__role {
+.staff-member__role {
     font-size: var(--text-xs);
     color: var(--gray);
 }
 
 /* ── Panel card (white box with border) ── */
 .card--panel {
-    background: var(--white);
-    padding: var(--space-md);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    border: var(--border-light);
+    background: var(--card-bg);
+    padding: var(--card-padding-compact);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
 }
 
 .card--panel.double-height {
@@ -548,10 +566,10 @@
 
 /* ── Gallery card (image + content) ── */
 .card--gallery {
-    background: var(--white);
-    border-radius: var(--radius-lg);
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--card-shadow);
 }
 
 /* ── Benefits card (inline icon + text) ── */
@@ -564,7 +582,7 @@
 }
 
 /* ── Compact card (small padding, inline data) ── */
-.card--compact {
+.calc-box {
     background: var(--white);
     padding: var(--space-3xs) var(--space-2xs);
     border-radius: var(--radius-normal);
@@ -574,7 +592,7 @@
     flex-direction: column;
 }
 
-.card--compact h4 {
+.calc-box h4 {
     font-size: var(--text-sm);
     margin: 0 0 0.15rem 0;
 }
@@ -611,12 +629,12 @@
 }
 
 /* ── Price Display ── */
-.card--price {
+.price-tag {
     text-align: center;
     padding: var(--space-md);
 }
 
-.card--price__label {
+.price-tag__label {
     color: var(--gray);
     font-size: var(--text-xs);
     text-transform: uppercase;
@@ -624,7 +642,7 @@
     margin-bottom: var(--space-2xs);
 }
 
-.card--price__amount {
+.price-tag__amount {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);
     color: var(--primary);
@@ -639,11 +657,11 @@
 }
 
 .card--shop {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-md);
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding-compact);
     text-align: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--card-shadow);
     border: 2px solid transparent;
     transition: all var(--transition-normal);
 }
@@ -651,7 +669,6 @@
 .card--shop:hover {
     border-color: var(--primary);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 .card--shop-icon {
@@ -669,7 +686,7 @@
 /* ── Dashed card (CTA prompt) ── */
 .card--dashed {
     background: linear-gradient(135deg, var(--bg-muted), var(--bg-light));
-    border-radius: var(--radius-normal);
+    border-radius: var(--card-radius);
     padding: var(--space-lg);
     margin-top: var(--space-lg);
     border: 2px dashed var(--color-border-muted);
@@ -691,8 +708,8 @@
 /* ── Quote ── */
 .card--quote {
     background: var(--overlay-light);
-    padding: var(--space-md);
-    border-radius: var(--radius-normal);
+    padding: var(--card-padding-compact);
+    border-radius: var(--card-radius);
     margin: var(--space-sm) 0;
     font-style: italic;
     font-weight: var(--font-weight-light);
@@ -703,7 +720,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-    .card--accent {
+    .card--hover-line {
         min-width: 100%;
     }
 
@@ -735,11 +752,11 @@
         flex-direction: column;
     }
 
-    .card--price {
+    .price-tag {
         padding: var(--space-sm);
     }
 
-    .card--price__amount {
+    .price-tag__amount {
         font-size: var(--text-xl);
     }
 
