@@ -76,4 +76,19 @@ body {
     to   { opacity: 1; }
 }
 
+/* ── Text spacing ──
+   Browsers give headings, paragraphs and lists their own em-based margins
+   (0.83em on h2, 1em on p, 1.33em on h4), above as well as below, so the gap
+   depended on the font size and a heading at the top of a box was pushed
+   down. Here they are replaced: no margin above, --space-text below, and
+   none after the last element in a box, so the box's padding sets its edges.
+   :where() keeps this at zero specificity: any component rule wins. */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, blockquote, pre, address) {
+    margin: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, figure, blockquote, pre, address):where(:not(:last-child)) {
+    margin-bottom: var(--space-text);
+}
+
 }

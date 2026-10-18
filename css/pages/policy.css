@@ -6,6 +6,20 @@
 
 @layer core {
 
+/* Running text: a heading starts a new part of the page, so it gets room
+   above as well as below (the base spacing only puts --space-text below). */
+.policy h2 {
+    margin-top: 2rem;
+}
+
+.policy h3 {
+    margin-top: 1.5rem;
+}
+
+.policy > div {
+    margin-bottom: var(--space-text);
+}
+
 .cookie-table {
     width: 100%;
     border-collapse: collapse;

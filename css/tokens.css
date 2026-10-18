@@ -132,6 +132,7 @@
     --gap-md: 15px;
     --gap-lg: 20px;
     --gap-xl: 40px;
+    --space-text: 1rem;     /* below a heading, paragraph or list (base.css) */
     --padding-sm: 0.75rem;
     --padding-md: 1.5rem;
     --padding-lg: 2rem;
