@@ -39,6 +39,7 @@
     --amber: #f59e0b;
     --cyan: #06b6d4;
     --indigo: #6366f1;
+    --link: var(--primary);      /* links without a class of their own (base.css) */
 
     /* Social Brand Colors */
     --linkedin: #0077b5;

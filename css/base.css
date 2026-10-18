@@ -91,4 +91,72 @@ body {
     margin-bottom: var(--space-text);
 }
 
+:where(ul, ol) {
+    padding-left: 1.5rem;
+}
+
+/* ── Inline text ──
+   The browser's "bolder" depends on the parent's weight; ours is a token. */
+:where(b, strong) {
+    font-weight: var(--font-weight-bold);
+}
+
+/* ── Links ──
+   Without this a link with no class is the browser's #0000ee. */
+:where(a) {
+    color: var(--link);
+}
+
+/* ── Form controls ──
+   The browser gives buttons and fields their own type (Arial 13.3px, black,
+   a monospace textarea) and buttons a grey background with a 2px outset
+   border. They take the page's type instead, and a button starts with no
+   box, so a button.btn and an a.btn are the same size. */
+:where(button, input, select, textarea) {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
+
+/* The page's 1.6 line height would make every field 5-7px taller. */
+:where(input, select, textarea) {
+    line-height: normal;
+}
+
+:where(button) {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+    accent-color: var(--primary);
+}
+
+/* ── Tables ── */
+:where(table) {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:where(th) {
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+}
+
+/* ── Media ──
+   Never wider than the column they sit in. */
+:where(img, svg, video, canvas, iframe) {
+    max-width: 100%;
+}
+
+/* ── Keyboard focus ──
+   One focus ring everywhere instead of the browser's, which differs between
+   browsers and is hard to see on the dark panels. */
+:where(:focus-visible) {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
 }

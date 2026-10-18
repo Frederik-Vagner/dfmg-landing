@@ -335,17 +335,19 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    /* minmax(0, …): a bare 1fr track still grows to its content's min-content
-       width, which the schedule demo pushes well past the viewport. */
-    .stability-content {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
+/* Below 1024px these two-column layouts do not fit: the schedule demo needs
+   570px beside its text, and the transparency panels (staff, photos,
+   calendar, report) about 1000px in all, so both overflowed the page. They
+   stack instead. minmax(0, …): a bare 1fr track still grows to its content's
+   min-content width. */
+@media (max-width: 1024px) {
+    .stability-content,
     .transparency-grid {
         grid-template-columns: minmax(0, 1fr);
     }
+}
 
+@media (max-width: 768px) {
     .flexibility-examples {
         grid-template-columns: minmax(0, 1fr);
     }
