@@ -40,13 +40,6 @@
     padding: var(--space-lg);
 }
 
-.tech-platform__visual {
-    display: flex;
-    gap: var(--layout-gap);
-    justify-content: center;
-    align-items: center;
-}
-
 .tech-benefits {
     display: flex;
     gap: var(--layout-gap);
@@ -97,10 +90,6 @@
     .tech-platform > * {
         flex: 1 1 100%;
         min-width: 0;
-    }
-
-    .tech-platform__visual {
-        flex-wrap: wrap;
     }
 
     .tech-benefits {

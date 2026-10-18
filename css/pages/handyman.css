@@ -9,6 +9,11 @@
     gap: var(--layout-gap);
 }
 
+/* Keeps the text on the light side of the diagonal background. */
+.handyman-hero > div {
+    max-width: 640px;
+}
+
 .handyman-hero__title {
     color: var(--charcoal);
 }
@@ -29,13 +34,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
-}
-
-.handyman-hero__tools {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
 }
 
 .trade-card__icon {
@@ -96,20 +94,6 @@
     border-left: 4px solid var(--success);
 }
 
-.project__photos {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.project__photo {
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-}
-
-.project__photo :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
 .handyman-steps {
     display: flex;
     flex-wrap: wrap;
@@ -120,6 +104,7 @@
 .handyman-step {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
+
     color: var(--charcoal);
 }
 
@@ -129,11 +114,6 @@
     }
 
     .handyman-hero__trades {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .handyman-hero__tools {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;
     }
@@ -150,10 +130,6 @@
     .project__layout > * {
         flex: 1 1 100%;
         min-width: 0;
-    }
-
-    .project__photos {
-        flex-wrap: wrap;
     }
 }
 

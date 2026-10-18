@@ -378,6 +378,12 @@
         padding: var(--space-md) var(--space-md) var(--space-lg);
     }
 
+    /* The photo band above already shows the title and description. */
+    .expanded-title,
+    .expanded-description {
+        display: none;
+    }
+
     .expanded-layout {
         flex-direction: column;
         /* The base rule aligns to flex-start, which in this direction leaves

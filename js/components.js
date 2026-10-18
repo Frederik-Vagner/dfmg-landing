@@ -88,7 +88,7 @@ function initializeChatbotFunctions() {
         const message = input.value.trim();
         
         if (message) {
-            window.showNotification('Tak for din besked! Vi svarer inden for 15 minutter.');
+            window.showNotification('Tak for din besked! Vi svarer samme dag på hverdage.');
             setTimeout(() => {
                 window.open(`mailto:${window.DFMG.email}?subject=Spørgsmål fra chatbot&body=Hej DFMG,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AVenlig hilsen`, '_blank');
             }, 1500);
@@ -125,7 +125,7 @@ function initializeChatbotFunctions() {
             body: JSON.stringify({ _subject: 'Ring-mig-op anmodning fra chatbot', telefon: phoneNumber })
         }).then(function(res) {
             if (!res.ok) throw new Error('send failed');
-            window.showNotification('Tak! Vi ringer dig op inden for 15 minutter i åbningstid.');
+            window.showNotification('Tak! Vi ringer tilbage samme dag (hverdage 8–16).');
             document.getElementById('callbackForm').classList.remove('active');
             phoneInput.value = '';
         }).catch(function() {

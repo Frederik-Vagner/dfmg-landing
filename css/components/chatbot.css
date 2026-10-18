@@ -101,14 +101,6 @@
     border-radius: var(--radius-normal);
 }
 
-.status-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--success);
-    border-radius: var(--radius-circle);
-    animation: pulse 2s infinite;
-}
-
 /* Tabs */
 .chatbot-tabs {
     display: flex;
@@ -237,13 +229,6 @@
     margin-bottom: var(--space-sm);
 }
 
-.status-indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: var(--radius-circle);
-    background: var(--success);
-    animation: pulse 2s infinite;
-}
 .chat-description {
     color: var(--gray-light);
     font-size: var(--text-sm);
@@ -359,18 +344,6 @@
 
 .notification.show {
     transform: translateX(0);
-}
-
-/* Animations */
-@keyframes pulse {
-    0%, 100% { 
-        opacity: 1; 
-        transform: scale(1); 
-    }
-    50% { 
-        opacity: 0.7; 
-        transform: scale(1.1); 
-    }
 }
 
 /* Mobile Responsive */

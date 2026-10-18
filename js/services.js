@@ -5,7 +5,7 @@ const serviceDetails = {
         badge: "Mest Populære",
         url: "/pages/facility/services/rengoering.html",
         description: "Erhvervsrengøring af kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.",
-        detailedDescription: "Vores erfarne rengøringsteams leverer konsistent høj kvalitet gennem certificerede processer og miljøvenlige produkter.",
+        detailedDescription: "Vores erfarne rengøringsteams leverer konsistent høj kvalitet gennem faste processer og miljøvenlige produkter.",
         categories: [
             {
                 name: "Kontorrengøring",
@@ -13,7 +13,7 @@ const serviceDetails = {
             },
             {
                 name: "Restauranter & Caféer",
-                items: ["Køkkenrengøring og fedtfjerning", "Ventilationsrensning", "Fødevaresikkerhed", "Specialudstyr til foodservice"]
+                items: ["Køkkenrengøring og fedtfjerning", "Ventilationsrensning via samarbejdspartner", "Fødevaresikkerhed", "Specialudstyr til foodservice"]
             },
             {
                 name: "Skoler & Institutioner",
@@ -22,7 +22,7 @@ const serviceDetails = {
         ],
         features: [
             "Miljøvenlige og allergivenlige produkter",
-            "Certificerede og forsikrede medarbejdere",
+            "Faste og forsikrede medarbejdere",
             "Fleksible tidsplaner der passer jeres drift",
             "Digital rapportering og kvalitetskontrol"
         ]
@@ -43,8 +43,8 @@ const serviceDetails = {
         ],
         features: [
             "Proaktiv vedligeholdelse",
-            "24/7 beredskab",
-            "Certificerede specialister",
+            "Akut hjælp efter aftale",
+            "Fagopgaver via samarbejdspartner",
             "Digital rapportering"
         ]
     },
@@ -54,8 +54,8 @@ const serviceDetails = {
         description: "Reparationer, vedligeholdelse og møbelmontering med hurtig responstid.",
         categories: [
             {
-                name: "VVS & El-arbejde",
-                items: ["Vandhane reparationer", "Belysning", "Mindre lækager", "Certificeret service"]
+                name: "VVS & El via samarbejdspartner",
+                items: ["Vandhane reparationer", "Belysning", "Mindre lækager", "Udføres via samarbejdspartner"]
             },
             {
                 name: "Maling & Spartling",
@@ -65,7 +65,7 @@ const serviceDetails = {
         features: [
             "Bred ekspertise",
             "Akut service",
-            "Certificerede fagfolk",
+            "Fagopgaver via samarbejdspartner",
             "Garanti på arbejde"
         ]
     },
@@ -114,7 +114,7 @@ const serviceDetails = {
     windows: {
         title: "Vinduespolering",
         url: "/pages/facility/services/vinduespudsning.html",
-        description: "Professionel vinduesrens indvendig og udvendig med certificeret udstyr.",
+        description: "Professionel vinduesrens indvendig og udvendig.",
         categories: [
             {
                 name: "Indvendig Vinduesrens",
@@ -122,11 +122,10 @@ const serviceDetails = {
             },
             {
                 name: "Udvendig Polering",
-                items: ["Højdearbejde", "Facade og rammer", "Solafskærmning", "Tagvinduer"]
+                items: ["Højdearbejde via samarbejdspartner", "Facade og rammer", "Solafskærmning", "Tagvinduer"]
             }
         ],
         features: [
-            "Certificeret højdearbejde",
             "Miljøvenlige midler",
             "Erfarne vinduespolere",
             "Fuld forsikring"

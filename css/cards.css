@@ -97,8 +97,6 @@
 
 /* Card variant modifiers */
 
-
-
 /* Overlay card variant (for carousel items) */
 .card--overlay {
     padding: 0;
@@ -565,12 +563,6 @@
 }
 
 /* ── Gallery card (image + content) ── */
-.card--gallery {
-    background: var(--card-bg);
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-}
 
 /* ── Benefits card (inline icon + text) ── */
 .card--benefits {
@@ -598,13 +590,6 @@
 }
 
 /* ── Stat Card ── */
-.stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: var(--space-md);
-}
 
 .stat__value {
     font-size: var(--heading-2);

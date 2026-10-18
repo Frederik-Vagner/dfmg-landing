@@ -35,28 +35,6 @@
     color: var(--gray);
 }
 
-.package-card__stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-sm);
-}
-
-.package-stat {
-    padding: var(--space-sm);
-    text-align: center;
-}
-
-.package-stat__value {
-    color: var(--success);
-    font-size: var(--heading-2);
-    font-weight: var(--font-weight-medium);
-}
-
-.package-stat__label {
-    color: var(--charcoal);
-    font-size: var(--text-xs);
-}
-
 .package-card__actions {
     display: flex;
     gap: var(--space-sm);
@@ -123,11 +101,6 @@
     .service-builder > * {
         flex: 1 1 100%;
         min-width: 0;
-    }
-
-    .package-card__stats {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
     }
 
     .package-card__actions {
