@@ -156,10 +156,11 @@ body {
     border-right: none;
 }
 
-.task-col {
+/* ".schedule-row > .x" so it outranks ".schedule-row > div" on specificity. */
+.schedule-row > .task-col {
     color: var(--charcoal);
     font-size: 0.75rem;
-    padding-left: 1rem !important;
+    padding-left: 1rem;
 }
 
 .freq-col, .day-col {
@@ -395,8 +396,8 @@ body {
         padding: var(--padding-md) 0.75rem;
     }
 
-    .task-col {
-        padding-left: 0.5rem !important;
+    .schedule-row > .task-col {
+        padding-left: 0.5rem;
     }
 
     /* The seven day columns are 5% each, which is narrower than the weekday

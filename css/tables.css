@@ -41,12 +41,13 @@
     width: 1.5rem;
 }
 
-.bc-table__category td {
+/* ".bc-table .x td" so it outranks ".bc-table tbody td" on specificity. */
+.bc-table .bc-table__category td {
     background: var(--bg-surface);
-    color: var(--charcoal) !important;
+    color: var(--charcoal);
     font-weight: var(--font-weight-medium);
-    padding-top: 1rem !important;
-    padding-bottom: 0.75rem !important;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
     font-size: var(--font-size-small);
     text-transform: uppercase;
     letter-spacing: 0.04em;

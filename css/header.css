@@ -84,24 +84,24 @@
     margin: calc(-1 * var(--gap-sm)) 0;
 }
 
-.nav-cta {
+/* ".nav .x" so these outrank ".nav a" (a class plus an element) on specificity.
+   Their text weight comes from ".nav a", as it always has. */
+.nav .nav-cta {
     background: var(--white);
-    color: var(--charcoal) !important;
+    color: var(--charcoal);
     padding: var(--gap-sm) 22px;
     border-radius: var(--radius-circle);
-    font-weight: var(--font-weight-semibold);
     transition: var(--transition-normal);
 }
 
-.nav-cta:hover {
+.nav .nav-cta:hover {
     background: var(--bg-light);
-    color: var(--charcoal) !important;
+    color: var(--charcoal);
 }
 
-.nav-lang {
-    color: rgba(255,255,255,0.6) !important;
+.nav .nav-lang {
+    color: rgba(255,255,255,0.6);
     font-size: 0.8rem;
-    font-weight: var(--font-weight-semibold);
     letter-spacing: 0.05em;
     padding: var(--gap-xs) var(--gap-sm);
     border: 1px solid rgba(255,255,255,0.25);
@@ -109,8 +109,8 @@
     transition: var(--transition-normal);
 }
 
-.nav-lang:hover {
-    color: var(--white) !important;
+.nav .nav-lang:hover {
+    color: var(--white);
     border-color: rgba(255,255,255,0.5);
 }
 
@@ -311,8 +311,8 @@
     }
 
     .nav-item > a,
-    .nav-cta,
-    .nav-lang {
+    .nav .nav-cta,
+    .nav .nav-lang {
         font-size: 0.9rem;
     }
 

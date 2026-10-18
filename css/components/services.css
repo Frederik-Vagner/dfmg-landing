@@ -334,12 +334,6 @@
     transition: all var(--transition-normal);
 }
 
-/* Disable hover effects on collapsed columns */
-.service-column.collapsed:hover {
-    flex: 0.2 !important;
-    filter: none !important;
-}
-
 /* ========================================
    MOBILE: the expanded panel
    On desktop a tapped column grows to flex: 3, the others shrink to slivers
@@ -352,7 +346,7 @@
     /* Opening one band must not shrink the others to unreadable strips. */
     .service-column.collapsed,
     .service-column.collapsed:hover {
-        flex: 0 0 auto !important;
+        flex: 0 0 auto;
         height: 200px;
     }
 

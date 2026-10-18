@@ -150,11 +150,11 @@
 }
 
 .tab-content {
-    display: none !important;
+    display: none;
 }
 
 .tab-content.active {
-    display: block !important;
+    display: block;
 }
 
 /* FAQ Items */
@@ -273,9 +273,8 @@
     margin-bottom: 16px;
 }
 
+/* display comes from .tab-content / .tab-content.active (block when shown). */
 #faq-tab {
-    display: flex;
-    flex-direction: column;
     height: 100%;
 }
 

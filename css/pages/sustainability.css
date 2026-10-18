@@ -311,11 +311,11 @@
 [data-slide-theme="governance"] .slide:nth-child(4) { background: var(--slide-4); color: #f0fdf4; }
 [data-slide-theme="governance"] .slide:nth-child(5) { background: var(--slide-5); color: var(--bg-surface); }
 
-[data-slide-theme="governance"] .slide-dot.active.slide-1-active { background: var(--slide-1) !important; }
-[data-slide-theme="governance"] .slide-dot.active.slide-2-active { background: var(--slide-2) !important; }
-[data-slide-theme="governance"] .slide-dot.active.slide-3-active { background: var(--slide-3) !important; }
-[data-slide-theme="governance"] .slide-dot.active.slide-4-active { background: var(--slide-4) !important; }
-[data-slide-theme="governance"] .slide-dot.active.slide-5-active { background: var(--slide-5) !important; }
+[data-slide-theme="governance"] .slide-dot.active.slide-1-active { background: var(--slide-1); }
+[data-slide-theme="governance"] .slide-dot.active.slide-2-active { background: var(--slide-2); }
+[data-slide-theme="governance"] .slide-dot.active.slide-3-active { background: var(--slide-3); }
+[data-slide-theme="governance"] .slide-dot.active.slide-4-active { background: var(--slide-4); }
+[data-slide-theme="governance"] .slide-dot.active.slide-5-active { background: var(--slide-5); }
 
 [data-slide-theme="governance"] .slide:nth-child(2) .badge { background: rgba(59, 130, 246, 0.1); color: var(--primary); }
 [data-slide-theme="governance"] .slide:nth-child(3) .badge { background: rgba(6, 182, 212, 0.1); color: var(--cyan); }
@@ -337,10 +337,10 @@
 [data-slide-theme="sustainability"] .slide:nth-child(3) { background: var(--slide-3); }
 [data-slide-theme="sustainability"] .slide:nth-child(4) { background: var(--slide-4); }
 
-[data-slide-theme="sustainability"] .slide-dot.active.slide-1-active { background: var(--slide-1) !important; }
-[data-slide-theme="sustainability"] .slide-dot.active.slide-2-active { background: var(--slide-2) !important; }
-[data-slide-theme="sustainability"] .slide-dot.active.slide-3-active { background: var(--slide-3) !important; }
-[data-slide-theme="sustainability"] .slide-dot.active.slide-4-active { background: var(--slide-4) !important; }
+[data-slide-theme="sustainability"] .slide-dot.active.slide-1-active { background: var(--slide-1); }
+[data-slide-theme="sustainability"] .slide-dot.active.slide-2-active { background: var(--slide-2); }
+[data-slide-theme="sustainability"] .slide-dot.active.slide-3-active { background: var(--slide-3); }
+[data-slide-theme="sustainability"] .slide-dot.active.slide-4-active { background: var(--slide-4); }
 
 /* --- Klima (light pastels, 5 slides, solid dot colors) --- */
 [data-slide-theme="klima"] {
@@ -357,11 +357,11 @@
 [data-slide-theme="klima"] .slide:nth-child(4) { background: var(--slide-4); }
 [data-slide-theme="klima"] .slide:nth-child(5) { background: var(--slide-5); }
 
-[data-slide-theme="klima"] .slide-dot.active.slide-1-active { background: var(--gray-light) !important; }
-[data-slide-theme="klima"] .slide-dot.active.slide-2-active { background: var(--success) !important; }
-[data-slide-theme="klima"] .slide-dot.active.slide-3-active { background: var(--primary) !important; }
-[data-slide-theme="klima"] .slide-dot.active.slide-4-active { background: var(--governance) !important; }
-[data-slide-theme="klima"] .slide-dot.active.slide-5-active { background: var(--amber) !important; }
+[data-slide-theme="klima"] .slide-dot.active.slide-1-active { background: var(--gray-light); }
+[data-slide-theme="klima"] .slide-dot.active.slide-2-active { background: var(--success); }
+[data-slide-theme="klima"] .slide-dot.active.slide-3-active { background: var(--primary); }
+[data-slide-theme="klima"] .slide-dot.active.slide-4-active { background: var(--governance); }
+[data-slide-theme="klima"] .slide-dot.active.slide-5-active { background: var(--amber); }
 
 /* --- Social (pink/orange/red pastels, 5 slides) --- */
 [data-slide-theme="social"] {
@@ -378,11 +378,11 @@
 [data-slide-theme="social"] .slide:nth-child(4) { background: var(--slide-4); }
 [data-slide-theme="social"] .slide:nth-child(5) { background: var(--slide-5); }
 
-[data-slide-theme="social"] .slide-dot.active.slide-1-active { background: var(--slide-1) !important; }
-[data-slide-theme="social"] .slide-dot.active.slide-2-active { background: var(--slide-2) !important; }
-[data-slide-theme="social"] .slide-dot.active.slide-3-active { background: var(--slide-3) !important; }
-[data-slide-theme="social"] .slide-dot.active.slide-4-active { background: var(--slide-4) !important; }
-[data-slide-theme="social"] .slide-dot.active.slide-5-active { background: var(--slide-5) !important; }
+[data-slide-theme="social"] .slide-dot.active.slide-1-active { background: var(--slide-1); }
+[data-slide-theme="social"] .slide-dot.active.slide-2-active { background: var(--slide-2); }
+[data-slide-theme="social"] .slide-dot.active.slide-3-active { background: var(--slide-3); }
+[data-slide-theme="social"] .slide-dot.active.slide-4-active { background: var(--slide-4); }
+[data-slide-theme="social"] .slide-dot.active.slide-5-active { background: var(--slide-5); }
 
 /* ========================================
    MOBILE: stacked slides instead of a deck

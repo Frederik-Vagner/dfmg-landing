@@ -24,10 +24,6 @@
 }
 
 /* Sections */
-.first {
-    padding-top: 150px !important;
-}
-
 .section {
     padding: var(--section-padding);
     background: var(--white);
@@ -553,6 +549,13 @@
 
 .hero-image--home {
     background-image: url('/images/service/hero1.jpg');
+}
+
+/* The first section on a page starts below the fixed header. In this layer
+   it outranks every section's own padding in the core layer, which is what
+   "!important" used to achieve. */
+.first {
+    padding-top: 150px;
 }
 
 }
