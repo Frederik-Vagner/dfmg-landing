@@ -14,8 +14,16 @@
     margin-bottom: 5rem;
 }
 
+.section-intro--tight {
+    margin-bottom: 2rem;
+}
+
 .section-intro__eyebrow {
     color: var(--success);
+}
+
+.section-intro__eyebrow--primary {
+    color: var(--primary);
 }
 
 .section-intro__title {
@@ -95,6 +103,7 @@
 }
 
 .badge--light {
+    color: var(--charcoal);
     background: var(--bg-light);
     box-shadow: none;
     backdrop-filter: none;

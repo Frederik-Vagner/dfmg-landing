@@ -1,0 +1,172 @@
+/* ========================================
+   FACILITY SERVICES (overview) — page styles
+   ======================================== */
+
+@layer pages {
+
+.service-builder {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.service-builder > * {
+    flex: 1;
+}
+
+.service-builder__intro {
+    padding: 2rem;
+}
+
+.service-builder__title {
+    color: var(--charcoal);
+}
+
+.service-builder__text {
+    margin-bottom: 2rem;
+    color: var(--gray);
+}
+
+.package-card {
+    padding: 2rem;
+    border-left: 4px solid var(--charcoal);
+}
+
+.package-card__title {
+    color: var(--charcoal);
+}
+
+.package-card__text {
+    color: var(--gray);
+}
+
+.package-card__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.package-stat {
+    padding: 1rem;
+    text-align: center;
+}
+
+.package-stat__value {
+    color: var(--success);
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.package-stat__label {
+    color: var(--charcoal);
+    font-size: 0.8rem;
+}
+
+.package-card__actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.advantage-group__label {
+    text-align: center;
+}
+
+.advantage-grid {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.advantage-grid > * {
+    flex: 1;
+}
+
+.advantage-grid--spaced {
+    margin-bottom: 4rem;
+}
+
+.advantage-card {
+    padding: 1rem;
+}
+
+.advantage-card--centered {
+    text-align: center;
+}
+
+.advantage-card__header {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+    justify-content: center;
+}
+
+.advantage-card__title {
+    color: var(--charcoal);
+}
+
+.advantage-card__text {
+    color: var(--gray);
+}
+
+.service-steps {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.service-steps > * {
+    flex: 1;
+}
+
+.service-step {
+    padding: 2rem;
+    text-align: center;
+}
+
+.service-step__title {
+    color: var(--charcoal);
+}
+
+.service-step__text {
+    color: var(--gray);
+}
+
+@media (max-width: 768px) {
+    .service-builder {
+        flex-wrap: wrap;
+    }
+
+    .service-builder > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .package-card__stats {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .package-card__actions {
+        flex-wrap: wrap;
+    }
+
+    .advantage-grid {
+        flex-wrap: wrap;
+    }
+
+    .advantage-grid > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .advantage-card__header {
+        flex-wrap: wrap;
+    }
+
+    .service-steps {
+        flex-wrap: wrap;
+    }
+
+    .service-steps > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+}
+
+}

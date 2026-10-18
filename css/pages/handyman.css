@@ -64,10 +64,6 @@
     text-align: center;
 }
 
-.skill-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
 .skill-card__icon {
     margin-bottom: 1rem;
     color: var(--success);
@@ -127,10 +123,6 @@
     padding: 2rem;
     background: var(--bg-gradient-white);
     color: var(--charcoal);
-}
-
-.handyman-step :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
 }
 
 @media (max-width: 768px) {
