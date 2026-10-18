@@ -2,7 +2,6 @@
    CARDS
    ==================================== */
 
-
 /* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
 @layer legacy {
 
@@ -599,11 +598,6 @@
     padding: 1.5rem;
 }
 
-.bg-gradient-primary .stat {
-    background: var(--overlay-light);
-    border-radius: var(--radius-md);
-}
-
 .stat__value {
     font-size: 2rem;
     font-weight: var(--font-weight-semibold);
@@ -625,7 +619,6 @@
     font-weight: var(--font-weight-light);
     opacity: 0.8;
 }
-
 
 /* ── Price Display ── */
 .card--price {
@@ -716,26 +709,6 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: var(--shadow-lg);
-}
-
-
-.card--quote__avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--radius-circle);
-    object-fit: cover;
-    border: 3px solid var(--bg-light);
-}
-
-.card--quote__text {
-    font-size: 1.3rem;
-    color: var(--charcoal);
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    font-style: italic;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* ── Responsive ── */

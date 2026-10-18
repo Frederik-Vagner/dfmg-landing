@@ -165,4 +165,13 @@
     --transition-normal: 0.3s ease;
 }
 
+/* Default gap for the flex and grid layouts in components: tighter on
+   phones. Components read var(--layout-gap, <desktop value>), so an
+   explicit gap on a component still wins at every width. */
+@media (max-width: 768px) {
+    :root {
+        --layout-gap: var(--gap-md);
+    }
+}
+
 }

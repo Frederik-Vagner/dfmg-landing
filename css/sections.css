@@ -2,7 +2,6 @@
    SECTIONS & CONTAINERS
    ==================================== */
 
-
 /* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
 @layer legacy {
 
@@ -178,14 +177,6 @@
     top: -2.5rem;
 }
 
-.hero .text-charcoal {
-    color: var(--white);
-}
-
-.hero .text-gray {
-    color: rgba(255, 255, 255, 0.9);
-}
-
 /* ── CTA Sections ── */
 .cta-box {
     background: var(--bg-gradient-charcoal);
@@ -223,16 +214,6 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.cta-center .flex {
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.cta-center .flex iconify-icon {
-    padding-right: 0.5rem;
 }
 
 /* ── Feature Row (alternating content/visual layout) ── */
@@ -339,7 +320,6 @@
 .demo-split__visual {
     flex: 1;
 }
-
 
 /* ── Carousel ── */
 .carousel {

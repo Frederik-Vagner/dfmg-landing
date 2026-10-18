@@ -3,7 +3,6 @@
    Global badge system — hero, inline, overlay
    ======================================== */
 
-
 /* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
 @layer legacy {
 
@@ -21,13 +20,6 @@
     box-shadow: var(--shadow-lg);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.badge.text-charcoal {
-    background: var(--bg-light);
-    box-shadow: none;
-    backdrop-filter: none;
-    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* Inline badge — base + color variants + size modifier */
@@ -97,7 +89,6 @@
     font-weight: var(--font-weight-bold);
     margin: 0 auto 1rem;
 }
-
 
 .step-number--small {
     width: 25px;

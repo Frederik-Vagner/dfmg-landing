@@ -2,14 +2,8 @@
    TYPOGRAPHY
    ==================================== */
 
-
 /* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
 @layer legacy {
-
-/* Text Alignment */
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
 
 /* Semantic text classes */
 .title {
@@ -42,7 +36,7 @@
     font-weight: var(--font-weight-medium);
 }
 
-/* Headings carrying a utility class keep that class's spacing */
+/* Headings using a text style take its spacing, not the heading's */
 h1.title, h2.title, h3.title,
 h1.subtitle, h2.subtitle, h3.subtitle {
     margin-top: 0;
@@ -82,58 +76,6 @@ h4 {
     font-weight: var(--font-weight-semibold);
 }
 
-/* Font Sizes */
-.text-xs { font-size: 0.8rem; }      /* 12.8px */
-.text-base { font-size: 0.9rem; }    /* 14.4px */
-.text-md { font-size: 0.95rem; }     /* 15.2px */
-.text-lg { font-size: 1.1rem; }      /* 17.6px */
-.text-xl { font-size: 1.2rem; }      /* 19.2px */
-.text-2xl { font-size: 1.3rem; }     /* 20.8px */
-.text-4xl { font-size: 1.8rem; }     /* 28.8px */
-.text-5xl { font-size: 2rem; }       /* 32px */
-.text-6xl { font-size: 2.5rem; }     /* 40px */
-.text-7xl { font-size: 3rem; }       /* 48px */
-.text-8xl { font-size: 3.5rem; }     /* 56px */
-.text-9xl { font-size: 4rem; }       /* 64px */
-
-/* Font Weights */
-.font-light { font-weight: var(--font-weight-light); }
-.font-semibold { font-weight: var(--font-weight-medium); }
-.font-bold { font-weight: var(--font-weight-bold); }
-
-/* Text Style */
-.italic { font-style: italic; }
-
-/* Text Transform */
-.text-uppercase {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Line Height */
-.leading-none { line-height: 1; }
-.leading-tight { line-height: 1.1; }
-.leading-normal { line-height: 1.6; }
-
-/* Letter Spacing */
-.tracking-tight { letter-spacing: -1px; }
-.tracking-tighter { letter-spacing: -2px; }
-
-/* ── Metric Display ── */
-.metric-value {
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--success);
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.metric-label {
-    font-size: 0.8rem;
-    color: var(--gray-light);
-    text-align: center;
-}
-
 /* ── Governance Number ── */
 .governance-number {
     color: var(--governance);
@@ -148,15 +90,10 @@ h4 {
    MOBILE TYPOGRAPHY
    Danish compound words ("Vinduespolering", "Erhvervsrengøring") are a single
    unbreakable run, so the large display sizes do not fit a 390px column and
-   run off the edge. Scale the display sizes down below 768px and let anything
+   run off the edge. Scale the heading sizes down below 768px and let anything
    still too long break rather than be clipped.
    ==================================== */
 @media (max-width: 768px) {
-    .text-6xl { font-size: 1.9rem; }
-    .text-7xl { font-size: 2.1rem; }
-    .text-8xl { font-size: 2.3rem; }
-    .text-9xl { font-size: 2.5rem; }
-
     h1 { font-size: 2rem; }
     h2 { font-size: 1.6rem; }
 

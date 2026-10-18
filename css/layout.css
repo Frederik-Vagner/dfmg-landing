@@ -1,172 +1,11 @@
 /* ====================================
-   LAYOUT & SPACING UTILITIES
+   LAYOUT — small layout components
+   The utility classes that used to live here were replaced by named
+   components in 2026 (see css/components/shared.css and css/pages/).
    ==================================== */
-
 
 /* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
 @layer legacy {
-
-/* ── Flex ── */
-.flex {
-    display: flex;
-    gap: var(--layout-gap, var(--gap-lg));
-}
-
-.flex-2 > * { flex: 1; }
-.flex-3 > * { flex: 1; }
-.flex-4 > * { flex: 1; }
-
-.flex-row { display: flex; flex-direction: row; }
-.flex-col { display: flex; flex-direction: column; }
-.flex-wrap { flex-wrap: wrap; }
-
-/* ── Alignment ── */
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.items-center { align-items: center; }
-.content-center { align-content: center; }
-.content-end { align-content: end; }
-
-/* ── Grid ── */
-.grid-cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--layout-gap, 0); }
-.grid-2x2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
-}
-
-.grid-2x3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
-}
-
-.grid-3x2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
-}
-
-.grid-2x3-offset {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap, var(--gap-lg));
-}
-
-.grid-2x3-offset > div:nth-child(1) { grid-column: 1 / 3; }
-.grid-2x3-offset > div:nth-child(2) { grid-column: 3 / 5; }
-.grid-2x3-offset > div:nth-child(3) { grid-column: 5 / 7; }
-.grid-2x3-offset > div:nth-child(4) { grid-column: 2 / 4; }
-.grid-2x3-offset > div:nth-child(5) { grid-column: 4 / 6; }
-
-/* ── Display ── */
-.block { display: block; }
-
-/* ── Padding ── */
-.p-05 { padding: 0.5rem; }
-.p-1 { padding: 1rem; }
-.p-2 { padding: 2rem; }
-.p-3 { padding: 3rem; }
-.p-4 { padding: 4rem; }
-.pl-1 { padding-left: 1rem; }
-
-/* ── Margin ── */
-.m-0 { margin: 0; }
-.m-auto { margin: auto; }
-
-.mb-05 { margin-bottom: 0.5rem; }
-.mb-1 { margin-bottom: 1rem; }
-.mb-15 { margin-bottom: 1.5rem; }
-.mb-2 { margin-bottom: 2rem; }
-.mb-3 { margin-bottom: 3rem; }
-.mb-4 { margin-bottom: 4rem; }
-.mb-5 { margin-bottom: 5rem; }
-
-.mt-05 { margin-top: 0.5rem; }
-.mt-2 { margin-top: 2rem; }
-.mt-3 { margin-top: 3rem; }
-.mt-4 { margin-top: 4rem; }
-
-.mr-05 { margin-right: 0.5rem; }
-.mr-075 { margin-right: 0.75rem; }
-.mr-1 { margin-right: 1rem; }
-
-.my-2 { margin-top: 2rem; margin-bottom: 2rem; }
-.my-3 { margin-top: 3rem; margin-bottom: 3rem; }
-
-/* ── Gap ── */
-.gap-05 { gap: 0.5rem; }
-.gap-1 { gap: 1rem; }
-.gap-2 { gap: 2rem; }
-.gap-3 { gap: 3rem; }
-.gap-4 { gap: 4rem; }
-.gap-sm { gap: 0.625rem; }   /* 10px */
-.gap-md { gap: 1.25rem; }    /* 20px */
-.gap-lg { gap: 2.5rem; }     /* 40px */
-
-/* ── Sizing ── */
-.w-full { width: 100%; }
-.h-full { height: 100%; }
-.min-h-120 { min-height: 120px; }
-.max-w-400 { max-width: 400px; }
-.max-w-700 { max-width: 700px; }
-
-/* ── Appearance ── */
-.opacity-80 { opacity: 0.8; }
-.opacity-90 { opacity: 0.9; }
-
-.rounded-15 { border-radius: var(--radius-lg); }
-
-.border-top { border-top: 1px solid var(--bg-light); }
-.border-bottom { border-bottom: 1px solid var(--bg-light); }
-
-/* ── Text Color ── */
-.text-primary { color: var(--primary); }
-.text-charcoal { color: var(--charcoal); }
-.text-success { color: var(--success); }
-.text-governance { color: var(--governance); }
-.text-gray { color: var(--gray); }
-.text-white { color: var(--white); }
-
-/* ── Background ── */
-.bg-gradient-primary { background: var(--bg-gradient-primary); color: var(--white); }
-.bg-gradient-success { background: var(--bg-gradient-success); }
-.bg-charcoal { background: var(--charcoal); }
-
-.bg-success { background: var(--bg-gradient-success); color: var(--white); border: none; }
-.bg-red { background: var(--bg-gradient-red); color: var(--white); border: none; }
-.bg-gradient-white {
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-}
-.bg-gradient-white h1, .bg-gradient-white h2, .bg-gradient-white h3,
-.bg-gradient-white h4, .bg-gradient-white h5, .bg-gradient-white h6,
-.bg-gradient-white p, .bg-gradient-white li, .bg-gradient-white span {
-    color: inherit;
-}
-
-.bg-gradient-metal { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); }
-.bg-gradient-charcoal { background: var(--bg-gradient-charcoal); }
-
-.radius-normal { border-radius: var(--radius-normal); }
-
-/* ── Colored Borders ── */
-.border-top-success { border-top: 4px solid var(--success); }
-.border-top-primary { border-top: 4px solid var(--primary); }
-.border-top-charcoal { border-top: 4px solid var(--charcoal); }
-.border-bottom-charcoal { border-bottom: 4px solid var(--charcoal); }
-.border-left-success { border-left: 4px solid var(--success); }
-.border-left-primary { border-left: 4px solid var(--primary); }
-.border-left-charcoal { border-left: 4px solid var(--charcoal); }
-.border-left-red { border-left: 4px solid var(--red); }
-
-/* ── Image ── */
-.object-cover { object-fit: cover; }
-.object-bottom { object-position: bottom; }
 
 /* ── Avatar ── */
 .avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
@@ -190,7 +29,7 @@
     opacity: 0.7;
 }
 
-/* ── Two-Column Grid ── */
+/* ── Two-Column Grid (one narrow, one wide column) ── */
 .two-column1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -203,73 +42,11 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-}
 
-/* ====================================
-   MOBILE: collapse layout utilities
-   The utilities above are desktop-first and keep their columns at any
-   width, so content is pushed outside the viewport and clipped by
-   body { overflow-x: hidden }. Below 768px they become a single column.
-   ==================================== */
-@media (max-width: 768px) {
-    /* Tighter default spacing for .flex and the column grids. This changes
-       the default they read rather than setting gap here: a gap declared in
-       this block would come after the .gap-* utilities and override every
-       explicit one on the page. */
-    :root {
-        --layout-gap: var(--gap-md);
-    }
-
-    /* Rows wrap instead of squeezing their children off the edge.
-       Short rows (icon + label, button pairs) still sit side by side. */
-    .flex {
-        flex-wrap: wrap;
-    }
-
-    /* The brand lockup is a .flex row too, and at 768px the desktop header is
+    /* The brand lockup is a flex row, and at 768px the desktop header is
        still in effect — without this the wordmark drops under the icon. */
     .logo {
         flex-wrap: nowrap;
-    }
-
-    /* Multi-column content blocks: one full-width column each. */
-    .flex-2 > *,
-    .flex-3 > *,
-    .flex-4 > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    /* A column-direction container is already stacked. Wrapping one makes it
-       break into extra columns to the right instead, and a 100% basis there
-       means full height, not full width — so leave those two alone. */
-    .flex-col {
-        flex-wrap: nowrap;
-    }
-
-    .flex-col > * {
-        flex: 0 1 auto;
-    }
-
-    /* Column grids collapse; rows become content-sized instead of equal
-       fractions, which would otherwise stretch every cell to the tallest. */
-    .grid-cols-2,
-    .grid-2x2,
-    .grid-2x3,
-    .grid-3x2,
-    .grid-2x3-offset {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    /* The offset grid places its children on an explicit 6-column track,
-       so clearing the columns alone is not enough. */
-    .grid-2x3-offset > div:nth-child(1),
-    .grid-2x3-offset > div:nth-child(2),
-    .grid-2x3-offset > div:nth-child(3),
-    .grid-2x3-offset > div:nth-child(4),
-    .grid-2x3-offset > div:nth-child(5) {
-        grid-column: auto;
     }
 }
 

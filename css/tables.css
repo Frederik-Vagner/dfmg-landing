@@ -4,7 +4,6 @@
    pricing tables, comparison tables
    ==================================== */
 
-
 /* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
 @layer legacy {
 
@@ -164,10 +163,6 @@
 /* ── Planning Table (calculator) ── */
 .planning-table td {
     padding: 0.1rem 0.5rem;
-}
-
-.planning-table td .flex {
-    justify-content: center;
 }
 
 .planning-table td:last-child {

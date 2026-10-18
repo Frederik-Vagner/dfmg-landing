@@ -1,6 +1,5 @@
 /* === HEADER & NAVIGATION === */
 
-
 /* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
 @layer legacy {
 
@@ -308,15 +307,10 @@
    language switcher and the brand do not all fit on one line and the last
    item is pushed off the right edge. Tighten the spacing over that range. */
 @media (min-width: 768px) and (max-width: 860px) {
-    .nav.gap-lg {
-        gap: 0.5rem;
-    }
-
     .nav {
         padding-left: 0.75rem;
     }
 
-    .nav-link,
     .nav-item > a,
     .nav-cta,
     .nav-lang {
