@@ -127,7 +127,14 @@
 
     function initPhotoCarousel(container) {
         var photos = container.querySelectorAll('img.photo');
-        if (!photos.length) return;            // still a placeholder frame
+        if (!photos.length) {
+            // Still a placeholder frame. The dots in the markup describe photos
+            // that do not exist yet, so hide them rather than offer navigation
+            // through nothing.
+            var empty = container.querySelector('.photo-dots');
+            if (empty) empty.hidden = true;
+            return;
+        }
 
         var dots = container.querySelector('.photo-dots');
         if (!dots) {
