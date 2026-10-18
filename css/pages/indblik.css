@@ -34,7 +34,8 @@
 }
 
 .indblik-articles {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -53,7 +54,7 @@
     }
 
     .indblik-articles {
-        flex-wrap: wrap;
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 

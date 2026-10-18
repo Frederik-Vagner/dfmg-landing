@@ -160,25 +160,9 @@ function initializeChatbotFunctions() {
 
 
 
-// Article data for related articles
-const sidebarArticles = [
-    { path: '/pages/facility/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html', title: 'Mennesker vs. Robotter i Facility Management', time: '5 min læsning', category: 'innovation' },
-    { path: '/pages/facility/indblik/artikler/innovation/fra-kaos-til-kontrol-dfmg-erp-system-historie.html', title: 'Fra Kaos til Kontrol: DFMG\'s ERP-System Historie', time: '6 min læsning', category: 'innovation' },
-    { path: '/pages/facility/indblik/artikler/indsigt/fra-vip-til-glemt-kunde.html', title: 'Fra VIP til Glemt Kunde: En Alt-for-Almindelig Historie', time: '4 min læsning', category: 'insights' },
-    { path: '/pages/facility/indblik/artikler/indsigt/systematik-vs-talent.html', title: 'Hvorfor Systematik Slår Talent i Facility Management', time: '6 min læsning', category: 'insights' },
-    { path: '/pages/facility/indblik/artikler/indsigt/oejeblikkelige-svar-vs-jeg-vender-tilbage.html', title: '\u00d8jeblikkelige Svar vs. \u201cJeg Vender Tilbage\u201d', time: '5 min læsning', category: 'insights' },
-    { path: '/pages/facility/indblik/artikler/baeredygtighed/100-procent-bilfri-facility-service.html', title: '100% Bilfri Facility Service: S\u00e5dan G\u00f8r Vi Det', time: '3 min læsning', category: 'sustainability' },
-    { path: '/pages/facility/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html', title: 'Fra 5 Leverand\u00f8rer til \u00c9n P\u00e5lidelig Partner', time: '5 min læsning', category: 'cases' },
-    { path: '/pages/facility/indblik/artikler/cases/case-20-procent-omkostningsreduktion-tech-virksomhed.html', title: 'Case: 20% Omkostningsreduktion for Tech-Virksomhed', time: '4 min læsning', category: 'cases' },
-    { path: '/pages/facility/indblik/artikler/tips/saadan-laeser-i-facility-tidsrapport.html', title: 'S\u00e5dan L\u00e6ser I En Facility Tidsrapport', time: '3 min læsning', category: 'tips' },
-    { path: '/pages/facility/indblik/artikler/tips/5-tegn-paa-at-skifte-leverandoer.html', title: '5 Tegn P\u00e5 at I Skal Skifte Facility Leverand\u00f8r', time: '4 min læsning', category: 'tips' },
-    { path: '/pages/facility/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html', title: 'Location Guides: Et V\u00e6rkt\u00f8j til Konsistent Kvalitet', time: '4 min læsning', category: 'tips' }
-];
-
 // Initialize all sidebar features after injection
 function initArticleSidebar() {
     initTableOfContents();
-    initRelatedArticles();
     initNewsletterForm();
 }
 
@@ -213,54 +197,6 @@ function initTableOfContents() {
             const target = document.querySelector(e.target.getAttribute('href'));
             if (target) target.scrollIntoView({ behavior: 'smooth' });
         }
-    });
-}
-
-// Populate related articles, excluding the current page
-function initRelatedArticles() {
-    const container = document.getElementById('related-articles');
-    if (!container) return;
-
-    const currentPath = window.location.pathname;
-    const otherArticles = sidebarArticles.filter(a => a.path !== currentPath);
-
-    // Shuffle and pick 3
-    for (let i = otherArticles.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [otherArticles[i], otherArticles[j]] = [otherArticles[j], otherArticles[i]];
-    }
-
-    otherArticles.slice(0, 3).forEach(article => {
-        const div = document.createElement('div');
-        div.className = 'related-article';
-
-        const imageDiv = document.createElement('div');
-        imageDiv.className = 'related-image ' + article.category;
-        const img = document.createElement('img');
-        img.src = '/images/article/ipad.webp';
-        img.alt = '';
-        img.className = 'cover-image';
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        imageDiv.appendChild(img);
-
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'related-content';
-        const h4 = document.createElement('h4');
-        const link = document.createElement('a');
-        link.href = article.path;
-        link.textContent = article.title;
-        link.setAttribute('aria-label', 'Læs artikel: ' + article.title);
-        h4.appendChild(link);
-        const meta = document.createElement('div');
-        meta.className = 'related-meta';
-        meta.textContent = article.time;
-        contentDiv.appendChild(h4);
-        contentDiv.appendChild(meta);
-
-        div.appendChild(imageDiv);
-        div.appendChild(contentDiv);
-        container.appendChild(div);
     });
 }
 

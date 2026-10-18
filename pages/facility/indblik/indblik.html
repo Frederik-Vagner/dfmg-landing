@@ -86,63 +86,10 @@ pageCss:
             </div>
 
             <div class="indblik-articles">
-                <article class="card card--media" data-category="insights">
-                    <div class="article-image article-image--insights">
-                        <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">Case Study</div>
-                        <img src="/images/article/rengoering-vogn-hotel.webp" alt="Servicemedarbejder skifter affaldspose på en rengøringsvogn i en hotelgang" class="cover-image" loading="lazy" decoding="async">
-                    </div>
-                    <div class="article-content">
-                        <h4 class="article-title">Fra 5 Leverandører til Én Pålidelig Partner</h4>
-                        <p class="article-excerpt">Historien om hvordan en københavnsk virksomhed forenklede deres facility management og opnåede bedre service til lavere omkostninger.</p>
-                        <div class="article-meta">
-                            <div class="read-time">
-                                <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
-                                4 min læsning
-                            </div>
-                            <a href="/pages/facility/indblik/artikler/cases/fra-5-leverandoerer-til-en-paalidelig-partner.html" class="btn btn--primary btn--sm">
-                                Læs artikel <iconify-icon icon="fluent:arrow-right-20-filled" inline></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                <article class="card card--media" data-category="insights">
-                    <div class="article-image article-image--insights">
-                        <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">INNOVATION</div>
-                        <img src="/images/article/rengoering-korridor.webp" alt="Rengøringsvogn med udstyr parkeret i en lang korridor" class="cover-image" loading="lazy" decoding="async">
-                    </div>
-                    <div class="article-content">
-                        <h4 class="article-title">Mennesker vs. Robotter i Facility Management</h4>
-                        <p class="article-excerpt">Hvorfor den menneskelige faktor aldrig bliver erstattet af teknologi, og hvordan vi positionerer os til fremtidens udfordringer.</p>
-                        <div class="article-meta">
-                            <div class="read-time">
-                                <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
-                                3 min læsning
-                            </div>
-                            <a href="/pages/facility/indblik/artikler/innovation/mennesker-vs-robotter-facility-management.html" class="btn btn--primary btn--sm">
-                                Læs artikel <iconify-icon icon="fluent:arrow-right-20-filled" inline></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                <article class="card card--media" data-category="insights">
-                    <div class="article-image article-image--insights">
-                        <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">TIPS & TRICKS</div>
-                        <img src="/images/article/vaadt-gulv-skilt.webp" alt="Gul moppespand og advarselsskilt om vådt gulv foran et indgangsparti i glas" class="cover-image" loading="lazy" decoding="async">
-                    </div>
-                    <div class="article-content">
-                        <h4 class="article-title">Location Guides: Et Værktøj til Konsistent Kvalitet</h4>
-                        <p class="article-excerpt">Lær hvordan detaljeret dokumentation og kunde-specifikke instrukser eliminerer gætværk og sikrer perfekt service hver gang.</p>
-                        <div class="article-meta">
-                            <div class="read-time">
-                                <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
-                                4 min læsning
-                            </div>
-                            <a href="/pages/facility/indblik/artikler/tips/location-guides-hemmeligheden-bag-konsistent-kvalitet.html" class="btn btn--primary btn--sm">
-                                Læs artikel <iconify-icon icon="fluent:arrow-right-20-filled" inline></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                {%- from "partials/article-cards.njk" import gridCard %}
+                {%- for article in collections.artikel | newestFirst | head(3) %}
+                {{ gridCard(article, "h4") }}
+                {%- endfor %}
             </div>
         </div>
     </section>

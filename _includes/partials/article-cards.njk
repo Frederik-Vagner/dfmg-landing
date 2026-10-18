@@ -1,0 +1,64 @@
+{#- Article cards. Every value comes from the article's own front matter
+    (see pages/facility/indblik/artikler/artikler.11tydata.js). -#}
+
+{#- Large card at the top of Nyheder; `slot` is the filter it shows for. -#}
+{% macro featuredCard(article, slot) %}
+{%- set a = article.data -%}
+<div class="card card--split" data-featured-category="{{ slot }}">
+    <div class="card--split__image {{ a.categoryKey }}">
+        <div class="badge-inline badge-overlay badge-overlay--light news-card__category">{{ a.category }}</div>
+        <img src="{{ a.image }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
+    </div>
+    <div class="card--split__content">
+        <h2 class="card--split__title">{{ a.articleTitle }}</h2>
+        <p class="card--split__excerpt">{{ a.excerpt }}</p>
+        <div class="card--split__meta">
+            <div class="card--split__time">
+                <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
+                {{ a.readTime }} min læsning
+            </div>
+            <a href="{{ article.url }}" class="btn btn--primary btn--md">
+                Læs artikel <iconify-icon icon="fluent:arrow-right-20-filled" inline></iconify-icon>
+            </a>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{#- Grid card (Nyheder "Alle Artikler", Indblik "Seneste Artikler"). -#}
+{% macro gridCard(article, heading = "h3") %}
+{%- set a = article.data -%}
+<article class="card card--media" data-category="{{ a.categoryKey }}">
+    <div class="article-image article-image--{{ a.categoryKey }}">
+        <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">{{ a.category }}</div>
+        <img src="{{ a.image }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
+    </div>
+    <div class="article-content">
+        <{{ heading }} class="article-title">{{ a.articleTitle }}</{{ heading }}>
+        <p class="article-excerpt">{{ a.excerpt }}</p>
+        <div class="article-meta">
+            <div class="read-time">
+                <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
+                {{ a.readTime }} min læsning
+            </div>
+            <a href="{{ article.url }}" class="btn btn--primary btn--sm">
+                Læs artikel <iconify-icon icon="fluent:arrow-right-20-filled" inline></iconify-icon>
+            </a>
+        </div>
+    </div>
+</article>
+{% endmacro %}
+
+{#- One line in an article's "Relaterede Artikler" box. -#}
+{% macro relatedItem(article) %}
+{%- set a = article.data -%}
+<div class="related-article">
+    <div class="related-image {{ a.categoryKey }}">
+        <img src="{{ a.image }}" alt="" class="cover-image" loading="lazy" decoding="async">
+    </div>
+    <div class="related-content">
+        <h4><a href="{{ article.url }}" aria-label="Læs artikel: {{ a.articleTitle }}">{{ a.articleTitle }}</a></h4>
+        <div class="related-meta">{{ a.readTime }} min læsning</div>
+    </div>
+</div>
+{% endmacro %}

@@ -57,6 +57,27 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Articles (collections.artikel, see pages/facility/indblik/artikler/artikler.11tydata.js)
+  const newestFirst = (articles) => [...articles].sort((a, b) => b.data.sortDate - a.data.sortDate);
+  eleventyConfig.addFilter("newestFirst", newestFirst);
+  eleventyConfig.addFilter("head", (items, n) => items.slice(0, n));
+
+  // An article by its file name, e.g. "systematik-vs-talent".
+  eleventyConfig.addFilter("articleBySlug", (articles, slug) => {
+    const found = articles.find((a) => a.page.fileSlug === slug);
+    if (!found) throw new Error(`articleBySlug: no article "${slug}"`);
+    return found;
+  });
+
+  // Other articles for the "Relaterede Artikler" box: the same category
+  // first, then the rest, newest first within each.
+  eleventyConfig.addFilter("relatedArticles", (articles, current, count = 3) => {
+    const others = newestFirst(articles.filter((a) => a.url !== current.url));
+    const same = others.filter((a) => a.data.categoryKey === current.data.categoryKey);
+    const rest = others.filter((a) => a.data.categoryKey !== current.data.categoryKey);
+    return [...same, ...rest].slice(0, count);
+  });
+
   // Ignores are defined in .eleventyignore
 
   return {
