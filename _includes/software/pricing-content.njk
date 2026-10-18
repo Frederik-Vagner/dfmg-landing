@@ -35,9 +35,9 @@
     <!-- Comparison table -->
     <section class="section section--light">
         <div class="container">
-            <div class="text-center mb-4">
-                <div class="title text-charcoal">{{ t.comparison.title }}</div>
-                <div class="body text-gray">{{ t.comparison.body }}</div>
+            <div class="section-intro">
+                <div class="title section-intro__title">{{ t.comparison.title }}</div>
+                <div class="body section-intro__text">{{ t.comparison.body }}</div>
             </div>
 
             <div class="table-scroll">
@@ -71,8 +71,8 @@
     <!-- FAQ -->
     <section class="section">
         <div class="container">
-            <div class="text-center mb-4">
-                <div class="title text-charcoal">{{ t.faq.title }}</div>
+            <div class="section-intro">
+                <div class="title section-intro__title">{{ t.faq.title }}</div>
             </div>
 
             <div class="faq-list">
@@ -113,7 +113,7 @@
                 <div class="title">{{ t.cta.title }}</div>
                 <div class="body">{{ t.cta.body }}</div>
                 <div class="hero-actions">
-                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="mr-05"></iconify-icon> {{ t.cta.cta_demo }}</a>
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="btn__icon"></iconify-icon> {{ t.cta.cta_demo }}</a>
                     <a href="{{ prefix }}/contact.html" class="btn btn--ghost btn--md">{{ t.cta.cta_sales }}</a>
                 </div>
             </div>

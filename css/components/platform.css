@@ -221,4 +221,153 @@
 .form-group--code { flex: 0 0 30%; }
 .form-group--phone { flex: 1; }
 
+/* ── Layout and spacing of the parts above (kept in sync with the markup;
+   formerly utility classes) ── */
+/* generated:start */
+.walkthrough {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.walkthrough > * {
+    flex: 1;
+}
+
+.walkthrough__title {
+    color: var(--white);
+}
+
+.comparison {
+    display: flex;
+}
+
+.comparison > * {
+    flex: 1;
+}
+
+.comparison__card {
+    padding: 2rem;
+}
+
+.comparison__title {
+    font-weight: var(--font-weight-bold);
+}
+
+.integrations {
+    display: flex;
+}
+
+.integrations__item {
+    color: var(--gray);
+    text-align: center;
+}
+
+.about-split {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.about-split > * {
+    flex: 1;
+}
+
+.about-split__eyebrow {
+    color: var(--primary);
+}
+
+.about-split__title {
+    color: var(--charcoal);
+}
+
+.about-split__text {
+    color: var(--gray);
+}
+
+.about-split__text--spaced {
+    margin-bottom: 2rem;
+}
+
+.about-values {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.about-value {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-left: 4px solid var(--primary);
+}
+
+.about-value :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.contact-info__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-info__card {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.contact-info__card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.demo-split__title {
+    color: var(--charcoal);
+}
+
+.demo-split__intro {
+    margin-bottom: 3rem;
+    color: var(--gray);
+}
+
+@media (max-width: 768px) {
+    .walkthrough {
+        flex-wrap: wrap;
+    }
+
+    .walkthrough > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .comparison {
+        flex-wrap: wrap;
+    }
+
+    .comparison > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .integrations {
+        flex-wrap: wrap;
+    }
+
+    .about-split {
+        flex-wrap: wrap;
+    }
+
+    .about-split > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .about-values {
+        flex-wrap: wrap;
+    }
+
+    .contact-info__cards {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+}
+/* generated:end */
+
 }

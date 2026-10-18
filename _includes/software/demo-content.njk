@@ -12,8 +12,8 @@
         <div class="container">
             <div class="demo-split">
                 <div class="demo-split__form">
-                    <h2 class="title title--small text-charcoal">{{ t.form.heading }}</h2>
-                    <p class="body text-gray mb-3">{{ t.form.intro }}</p>
+                    <h2 class="title title--small demo-split__title">{{ t.form.heading }}</h2>
+                    <p class="body demo-split__intro">{{ t.form.intro }}</p>
 
                     <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
                         <input type="hidden" name="_subject" value="{{ t.form.email_subject }}">
@@ -53,7 +53,7 @@
                             <textarea id="demo-message" name="message" placeholder="{{ t.form.placeholder_message }}"></textarea>
                         </div>
                         <button type="submit" class="btn btn--success btn--md btn--full">
-                            <iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="mr-05"></iconify-icon> {{ t.form.submit }}
+                            <iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="btn__icon"></iconify-icon> {{ t.form.submit }}
                         </button>
                     </form>
                 </div>
@@ -83,9 +83,9 @@
     <!-- What to expect -->
     <section class="section section--light">
         <div class="container">
-            <div class="text-center">
-                <div class="subtitle text-primary">{{ t.steps.subtitle }}</div>
-                <div class="title text-charcoal">{{ t.steps.title }}</div>
+            <div class="page-intro">
+                <div class="subtitle page-intro__eyebrow">{{ t.steps.subtitle }}</div>
+                <div class="title page-intro__title">{{ t.steps.title }}</div>
             </div>
 
             <div class="steps-row">

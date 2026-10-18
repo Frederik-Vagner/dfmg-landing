@@ -10,13 +10,13 @@
     <!-- Origin story -->
     <section class="section">
         <div class="container">
-            <div class="flex flex-2">
+            <div class="about-split">
                 <div>
-                    <div class="subtitle text-primary">{{ t.story.subtitle }}</div>
-                    <h2 class="title title--compact text-charcoal">{{ t.story.title }}</h2>
-                    <p class="body text-gray mb-2">{{ t.story.body1 }}</p>
-                    <p class="body text-gray mb-2">{{ t.story.body2 }}</p>
-                    <p class="body text-gray">{{ t.story.body3 }}</p>
+                    <div class="subtitle about-split__eyebrow">{{ t.story.subtitle }}</div>
+                    <h2 class="title title--compact about-split__title">{{ t.story.title }}</h2>
+                    <p class="body about-split__text about-split__text--spaced">{{ t.story.body1 }}</p>
+                    <p class="body about-split__text about-split__text--spaced">{{ t.story.body2 }}</p>
+                    <p class="body about-split__text">{{ t.story.body3 }}</p>
                 </div>
                 <div>
                     <!-- TODO: Replace with team photo or photo of you working -->
@@ -35,21 +35,21 @@
     <!-- Philosophy -->
     <section class="section section--light">
         <div class="container">
-            <div class="text-center mb-4">
-                <div class="subtitle text-primary">{{ t.philosophy.subtitle }}</div>
-                <div class="title text-charcoal">{{ t.philosophy.title }}</div>
+            <div class="section-intro">
+                <div class="subtitle section-intro__eyebrow section-intro__eyebrow--primary">{{ t.philosophy.subtitle }}</div>
+                <div class="title section-intro__title">{{ t.philosophy.title }}</div>
             </div>
 
-            <div class="flex">
-                <div class="card p-2 bg-gradient-white border-left-primary">
+            <div class="about-values">
+                <div class="card about-value">
                     <h4>{{ t.philosophy.card1_title }}</h4>
                     <p>{{ t.philosophy.card1_desc }}</p>
                 </div>
-                <div class="card p-2 bg-gradient-white border-left-primary">
+                <div class="card about-value">
                     <h4>{{ t.philosophy.card2_title }}</h4>
                     <p>{{ t.philosophy.card2_desc }}</p>
                 </div>
-                <div class="card p-2 bg-gradient-white border-left-primary">
+                <div class="card about-value">
                     <h4>{{ t.philosophy.card3_title }}</h4>
                     <p>{{ t.philosophy.card3_desc }}</p>
                 </div>
@@ -60,7 +60,7 @@
     <!-- Tech approach -->
     <section class="section">
         <div class="container">
-            <div class="flex flex-2">
+            <div class="about-split">
                 <div>
                     <!-- TODO: Replace with simple architecture visual or tech stack diagram -->
                     <div class="screenshot-placeholder screenshot-placeholder--light about-tech__media">
@@ -72,8 +72,8 @@
                     </div>
                 </div>
                 <div>
-                    <div class="subtitle text-primary">{{ t.tech.subtitle }}</div>
-                    <h2 class="title title--compact text-charcoal">{{ t.tech.title }}</h2>
+                    <div class="subtitle about-split__eyebrow">{{ t.tech.subtitle }}</div>
+                    <h2 class="title title--compact about-split__title">{{ t.tech.title }}</h2>
                     <ul class="list about-tech__list">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item1_strong }}</strong> — {{ t.tech.item1_text }}</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item2_strong }}</strong> — {{ t.tech.item2_text }}</li>
