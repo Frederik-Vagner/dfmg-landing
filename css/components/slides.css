@@ -5,8 +5,10 @@
 
 
 /* box-sizing reset now handled globally in variables.css */
-.sustainability-page ul,
-.sustainability-page li {
+/* Zero specificity, so it only removes the browser's bullets and indent.
+   As a plain class selector it outranked .slide-feature-list li by source
+   order and stripped the cards' padding and spacing. */
+:where(.sustainability-page) :where(ul, li) {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -18,17 +20,6 @@
     background: var(--white);
     height: 100vh;
     overflow: hidden;
-}
-
-/* Header Protection */
-.sustainability-page #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000 !important;
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
 }
 
 .sustainability-page .vertical-container,
@@ -85,7 +76,9 @@
     height: 100%;
     display: grid;
     justify-content: center;
-    align-content: center;
+    /* safe: content taller than the slide starts at the top instead of
+       overflowing upward under the header, where it cannot be scrolled to. */
+    align-content: safe center;
     text-align: center;
     gap: 3rem;
 }

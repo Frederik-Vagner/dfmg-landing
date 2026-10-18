@@ -23,7 +23,8 @@ class SustainabilitySlider {
 
         this.dots = document.querySelectorAll('.slide-dot');
         this.currentSlide = 0;
-        this.totalSlides = this.container.querySelectorAll('.slide').length;
+        this.slides = this.container.querySelectorAll('.slide');
+        this.totalSlides = this.slides.length;
         this.isAnimating = false;
 
         // Below 768px a slide's content is taller than the screen, so stepping
@@ -49,6 +50,18 @@ class SustainabilitySlider {
         return this.mq.matches;
     }
 
+    // A slide whose content is taller than the screen scrolls inside itself
+    // (overflow-y: auto in slides.css). Wheel, touch and arrow keys scroll it
+    // first and only move to the next slide once it is at that edge;
+    // otherwise everything below the fold would be unreachable.
+    canScroll(direction) {
+        const slide = this.slides[this.currentSlide];
+        if (!slide) return false;
+        return direction > 0
+            ? slide.scrollTop + slide.clientHeight < slide.scrollHeight - 1
+            : slide.scrollTop > 0;
+    }
+
     init() {
         this.setupNavigation();
         this.setupKeyboard();
@@ -67,25 +80,34 @@ class SustainabilitySlider {
         document.addEventListener('keydown', (e) => {
             if (this.isMobile() || this.isAnimating) return;
 
-            switch (e.key) {
-                case 'ArrowRight':
-                case 'ArrowDown':
-                    e.preventDefault();
-                    this.nextSlide();
-                    break;
-                case 'ArrowLeft':
-                case 'ArrowUp':
-                    e.preventDefault();
-                    this.prevSlide();
-                    break;
+            const step = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+            if (!step) return;
+            e.preventDefault();
+
+            const vertical = e.key === 'ArrowDown' || e.key === 'ArrowUp';
+            if (vertical && this.canScroll(step)) {
+                this.slides[this.currentSlide].scrollBy({
+                    top: step * this.slides[this.currentSlide].clientHeight * 0.4,
+                    behavior: 'smooth'
+                });
+            } else if (step > 0) {
+                this.nextSlide();
+            } else {
+                this.prevSlide();
             }
         });
     }
 
     setupWheel() {
         this.container.addEventListener('wheel', (e) => {
-            if (this.isMobile() || this.isAnimating) return;
+            if (this.isMobile()) return;
+
+            // Vertical wheel movement scrolls an overflowing slide natively.
+            const verticalWheel = Math.abs(e.deltaY) >= Math.abs(e.deltaX);
+            if (verticalWheel && e.deltaY !== 0 && this.canScroll(Math.sign(e.deltaY))) return;
+
             e.preventDefault();
+            if (this.isAnimating) return;
 
             const delta = this.direction === 'horizontal'
                 ? (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY)
@@ -98,10 +120,14 @@ class SustainabilitySlider {
 
     setupTouch() {
         let startPos = 0;
+        let couldScroll = { 1: false, '-1': false };
         const axis = this.direction === 'horizontal' ? 'clientX' : 'clientY';
 
         this.container.addEventListener('touchstart', (e) => {
             startPos = e.touches[0][axis];
+            // Judged at the start: by touchend the swipe has already scrolled
+            // the slide, possibly right up to its edge.
+            couldScroll = { 1: this.canScroll(1), '-1': this.canScroll(-1) };
         });
 
         this.container.addEventListener('touchend', (e) => {
@@ -111,6 +137,8 @@ class SustainabilitySlider {
             const diff = startPos - endPos;
 
             if (Math.abs(diff) > 50) {
+                // A vertical swipe that scrolled the slide is not a slide change.
+                if (this.direction === 'vertical' && couldScroll[Math.sign(diff)]) return;
                 diff > 0 ? this.nextSlide() : this.prevSlide();
             }
         });
@@ -132,13 +160,18 @@ class SustainabilitySlider {
         // to the one asked for instead of sliding the whole container.
         if (this.isMobile()) {
             this.currentSlide = target;
-            const slide = this.container.querySelectorAll('.slide')[target];
+            const slide = this.slides[target];
             if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
             this.updateDots();
             return;
         }
 
         if (target === this.currentSlide) return;
+
+        // Arrive at the edge you came from: the top going forward, the bottom
+        // going back, so a tall slide continues where the previous one ended.
+        const incoming = this.slides[target];
+        if (incoming) incoming.scrollTop = target > this.currentSlide ? 0 : incoming.scrollHeight;
 
         this.isAnimating = true;
         this.currentSlide = target;
