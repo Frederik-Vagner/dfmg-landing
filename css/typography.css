@@ -2,6 +2,10 @@
    TYPOGRAPHY
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* Text Alignment */
 .text-left { text-align: left; }
 .text-center { text-align: center; }
@@ -164,4 +168,6 @@ h4 {
         -webkit-hyphens: auto;
         overflow-wrap: break-word;
     }
+}
+
 }

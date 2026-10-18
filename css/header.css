@@ -1,5 +1,9 @@
 /* === HEADER & NAVIGATION === */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* --- Header Wrapper --- */
 
 .header {
@@ -322,4 +326,6 @@
     .header-container {
         gap: 0.5rem;
     }
+}
+
 }

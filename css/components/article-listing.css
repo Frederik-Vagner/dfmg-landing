@@ -3,6 +3,10 @@
    Used by: indblik.html, nyheder.html
    ======================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* Article listing title (card context) */
 .article-title {
     color: var(--charcoal);
@@ -397,4 +401,6 @@
         grid-template-columns: minmax(0, 1fr);
         gap: 1.5rem;
     }
+}
+
 }

@@ -1,0 +1,79 @@
+/* ====================================
+   BASE — RESET & ELEMENT DEFAULTS
+   Box sizing, hidden scrollbars, page and navigation transitions, and the
+   html/body defaults. Layer order is declared in tokens.css.
+   ==================================== */
+
+/* Cross-document view transitions (an at-rule for the document, so it sits
+   outside the layers; the animations it uses are below). */
+@view-transition {
+    navigation: auto;
+}
+
+@layer base {
+
+/* ── Reset & Scrollbar ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+/* ── View Transitions ── */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 150ms;
+    animation-timing-function: ease-out;
+}
+
+::view-transition-old(root) {
+    animation-name: nav-fade-out;
+}
+
+::view-transition-new(root) {
+    animation-name: nav-fade-in;
+}
+
+@keyframes nav-fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes nav-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ── Base Element Styles ── */
+html {
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--charcoal);
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    animation: page-enter 200ms ease-out;
+}
+
+@keyframes page-enter {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+}

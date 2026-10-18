@@ -1,5 +1,6 @@
 [build]
-  command = "npx @11ty/eleventy"
+  # Builds, then fails the deploy if CSS use got worse (tools/check-css.js).
+  command = "npm run build"
   publish = "_site"
 
 # The SOHO and Kgl. Haveselskab case pages were unpublished (they carried

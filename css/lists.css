@@ -4,6 +4,10 @@
    checkmark lists, and article/TOC lists
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* ── List Reset ── */
 .list {
     list-style: none;
@@ -147,4 +151,6 @@
 .slide-feature-list li:hover {
     transform: translateX(10px);
     box-shadow: var(--shadow-md);
+}
+
 }

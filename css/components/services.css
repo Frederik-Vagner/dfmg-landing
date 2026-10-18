@@ -1,4 +1,8 @@
 /* Hero Services Carousel - CRITICAL LAYOUT */
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 .services-hero {
     height: 100vh;
     display: flex;
@@ -448,4 +452,6 @@
     .expanded-actions {
         flex-direction: column;
     }
+}
+
 }

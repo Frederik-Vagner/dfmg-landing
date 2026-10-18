@@ -3,6 +3,10 @@
    Used by: prisberegner.html
    ======================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* Calculator-specific reset */
 #price h2, #price h3, #price h4, #price p, #price label, #price th, #price td {
     margin: 0;
@@ -196,4 +200,6 @@
     .price-summary {
         padding: 1rem;
     }
+}
+
 }

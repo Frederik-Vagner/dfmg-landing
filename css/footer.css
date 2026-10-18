@@ -2,6 +2,10 @@
    FOOTER
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 .footer {
     background: var(--bg-gradient-charcoal);
     color: var(--white);
@@ -168,4 +172,6 @@
     .footer-bottom {
         padding-bottom: calc(var(--gap-lg) + 60px);
     }
+}
+
 }

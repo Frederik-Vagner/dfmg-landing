@@ -2,6 +2,10 @@
    CARDS
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* Base card class */
 .card {
     position: relative;
@@ -798,4 +802,6 @@
         grid-template-columns: 1fr;
         text-align: center;
     }
+}
+
 }

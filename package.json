@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && node tools/check-css.js",
     "serve": "eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check:css": "node tools/check-css.js",
+    "css:baseline": "node tools/check-css.js --update"
   },
   "repository": {
     "type": "git",

@@ -2,6 +2,10 @@
    SECTIONS & CONTAINERS
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* Containers */
 .container {
     max-width: var(--container-width-normal);
@@ -561,4 +565,6 @@
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
+}
+
 }

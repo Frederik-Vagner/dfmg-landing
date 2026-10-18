@@ -4,7 +4,11 @@
    ======================================== */
 
 
-/* box-sizing reset now handled globally in variables.css */
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
+/* box-sizing reset now handled globally in base.css */
 /* Zero specificity, so it only removes the browser's bullets and indent.
    As a plain class selector it outranked .slide-feature-list li by source
    order and stripped the cards' padding and spacing. */
@@ -439,4 +443,6 @@
     .slide-nav {
         display: none;
     }
+}
+
 }

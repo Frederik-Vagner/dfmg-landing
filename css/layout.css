@@ -2,6 +2,10 @@
    LAYOUT & SPACING UTILITIES
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 /* ── Flex ── */
 .flex {
     display: flex;
@@ -267,4 +271,6 @@
     .grid-2x3-offset > div:nth-child(5) {
         grid-column: auto;
     }
+}
+
 }

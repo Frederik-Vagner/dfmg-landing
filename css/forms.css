@@ -2,6 +2,10 @@
    FORMS
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -416,4 +420,6 @@
     .search-bar {
         min-width: 100%;
     }
+}
+
 }

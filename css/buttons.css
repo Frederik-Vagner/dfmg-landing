@@ -3,6 +3,10 @@
    Global button system — base, colors, sizes
    ======================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 .btn {
     text-decoration: none;
     border-radius: var(--radius-normal);
@@ -196,3 +200,4 @@
     box-shadow: none;
 }
 
+}

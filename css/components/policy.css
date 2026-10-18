@@ -3,6 +3,10 @@
    Was an inline <style> block in cookiepolitik.html, which could not survive
    the page moving onto the shared base layout. Loaded via componentCss.
    ==================================== */
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 .cookie-table {
     width: 100%;
     border-collapse: collapse;
@@ -24,4 +28,6 @@
 }
 .cookie-table tr:last-child td {
     border-bottom: none;
+}
+
 }

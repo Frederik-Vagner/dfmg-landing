@@ -4,6 +4,10 @@
    pricing tables, comparison tables
    ==================================== */
 
+
+/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
+@layer legacy {
+
 .bc-table-wrapper {
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -227,4 +231,6 @@
     .pricing-specs {
         margin-right: 0;
     }
+}
+
 }
