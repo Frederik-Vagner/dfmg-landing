@@ -20,7 +20,7 @@
                     <div class="card--tier__desc">{{ tier.desc }}</div>
                     <div class="card--tier__price">{{ tier.price }}</div>
                     <div class="card--tier__divider"></div>
-                    <ul class="card--tier__features">
+                    <ul class="checklist checklist--success checklist--compact card--tier__features">
                         {% for feature in tier.features %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ feature }}</li>
                         {% endfor %}

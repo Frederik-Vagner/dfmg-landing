@@ -1,54 +1,60 @@
 /* ====================================
    LISTS
-   Shared list resets, feature lists,
-   checkmark lists, and article/TOC lists
+   Checklists (an icon followed by text), the job-benefits
+   lists, and article/TOC lists
    ==================================== */
 
 
 @layer core {
 
-/* ── List Reset ── */
-.list {
-    list-style: none;
-    padding: unset;
-}
-
-/* ── Feature List (icon + label rows) ── */
-.feature-list {
+/* ── Checklist: an icon followed by a line of text ──
+   The icon sits in its own column, so text that wraps lines up with the
+   text above it rather than running under the icon, and it is centred on
+   the first line (height: 1lh) rather than the middle of the whole item.
+   Text is charcoal; a list on a dark background sets its own colour (see
+   .service-features). Icon colour comes from the modifiers. */
+.checklist {
     list-style: none;
     padding: 0;
+}
+
+/* Zero specificity, so the list's context (a pricing tier, a contact column)
+   can set its own margin whichever file loads first. */
+:where(.checklist) {
     margin: 0;
 }
 
-.feature-list li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.checklist > li {
     padding: 0.5rem 0;
     color: var(--charcoal);
+    font-size: 1rem;
     font-weight: var(--font-weight-semibold);
-    font-size: 1rem;
 }
 
-.feature-list iconify-icon {
-    font-size: 1rem;
-    width: 20px;
-    text-align: center;
-    flex-shrink: 0;
+/* Items that start with an icon: icon column + text column. (A checklist of
+   plain links, as on the 404 page, keeps ordinary block items.) */
+.checklist > li:has(> iconify-icon:first-child) {
+    display: grid;
+    grid-template-columns: 1.25rem minmax(0, 1fr);
+    column-gap: 0.75rem;
+    align-items: start;
 }
 
-/* Icon color variants */
-.feature-list.list--success iconify-icon {
-    color: var(--success);
+.checklist > li > iconify-icon:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1lh;
+    font-size: 1em;
 }
 
-.feature-list.list--red iconify-icon {
-    color: var(--red);
+.checklist--compact > li {
+    font-size: 0.9rem;
 }
 
-.feature-list.list--primary iconify-icon {
-    color: var(--primary);
-}
+.checklist--success > li > iconify-icon:first-child { color: var(--success); }
+.checklist--red > li > iconify-icon:first-child { color: var(--red); }
+.checklist--primary > li > iconify-icon:first-child { color: var(--primary); }
 
 /* ── Checkmark List (job benefits / partner comparison) ── */
 .job-benefits {
@@ -62,14 +68,18 @@
     color: var(--gray);
 }
 
-.job-benefits li::before {
+/* The partnership list still draws its tick as text, on the right; the
+   others are checklists with an icon. */
+.job-benefits:not(.checklist) li::before {
     content: '\2713';
     color: var(--success);
     font-weight: var(--font-weight-bold);
     margin-right: 1rem;
 }
 
-.partner-info .job-benefits li::before {
+.partner-info /* The partnership list still draws its tick as text, on the right; the
+   others are checklists with an icon. */
+.job-benefits:not(.checklist) li::before {
     content: '\2713';
     color: var(--success);
     font-weight: var(--font-weight-bold);

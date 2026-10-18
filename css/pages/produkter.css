@@ -83,15 +83,6 @@
     font-size: 1.8rem;
 }
 
-.category-panel__list li {
-    margin-bottom: 0.5rem;
-}
-
-.category-panel__list iconify-icon {
-    margin-right: 0.75rem;
-    color: var(--success);
-}
-
 .price-list__title {
     font-size: 1.1rem;
 }

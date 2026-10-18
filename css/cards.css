@@ -445,21 +445,6 @@
     text-align: left;
 }
 
-.card--tier__features li {
-    padding: 0.5rem 0;
-    font-size: 0.9rem;
-    color: var(--gray);
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.card--tier__features li iconify-icon {
-    color: var(--success);
-    font-size: 0.8rem;
-    flex-shrink: 0;
-}
-
 /* ── Feature card grids ── */
 .module-grid {
     display: grid;

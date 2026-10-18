@@ -172,10 +172,6 @@
     margin-top: 1rem;
 }
 
-.about-tech__list iconify-icon {
-    color: var(--success);
-}
-
 /* ── Contact: info column ── */
 .contact-info__heading,
 .contact-form__heading {
@@ -197,16 +193,6 @@
     list-style: none;
     padding: 0;
     margin: 0 0 1.5rem;
-}
-
-.contact-info__checklist li {
-    padding: 0.4rem 0;
-    color: var(--gray);
-}
-
-.contact-info__checklist iconify-icon {
-    color: var(--success);
-    margin-right: 0.75rem;
 }
 
 .contact-info__cards {

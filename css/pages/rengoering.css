@@ -80,29 +80,6 @@ body {
     flex-grow: 1;
 }
 
-/* NOTE: .service-features also defined in services.css (with animations) — no conflict, pages load one or the other */
-.service-features {
-    list-style: none;
-    margin-bottom: var(--padding-md);
-    flex-grow: 1;
-}
-
-.service-features li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
-    color: var(--charcoal);
-    font-weight: var(--font-weight-semibold);
-    font-size: 0.9rem;
-}
-
-.service-features iconify-icon {
-    color: var(--primary);
-    font-size: 0.9rem;
-    width: 14px;
-}
-
 .stability-content {
     display: grid;
     grid-template-columns: 1fr 2fr;

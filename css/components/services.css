@@ -238,7 +238,6 @@
     transform: translateY(0);
 }
 
-/* NOTE: .service-features also defined in rengoering.css (static layout) — no conflict, pages load one or the other */
 .service-features {
     opacity: 0;
     transform: translateY(20px);
@@ -253,11 +252,9 @@
     transform: translateY(0);
 }
 
-.service-features li {
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+/* On the photo columns the list takes the column's white text. */
+.service-features > li {
+    color: inherit;
 }
 
 .service-features iconify-icon {
