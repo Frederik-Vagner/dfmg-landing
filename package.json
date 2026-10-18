@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy && node tools/check-css.js",
+    "build": "rm -rf _site && eleventy && node tools/check-css.js",
     "serve": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:css": "node tools/check-css.js",
