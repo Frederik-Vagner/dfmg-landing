@@ -1,9 +1,6 @@
 *.md
 **/*.md
 base-template.html
-pages/components/
-pages/facility/components/
-pages/software/components/
 images/**/*.html
 pages/**/artikler/_*.html
 pages/**/cases/_*.html

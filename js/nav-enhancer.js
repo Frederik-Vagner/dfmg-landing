@@ -1,69 +1,17 @@
 // Navigation Enhancer — A-grade MPA navigation
-// 1. Caches shared components in sessionStorage
-// 2. Prefetches pages on link hover
-// 3. Navigates on mousedown (saves ~100ms)
-// 4. Smooth crossfade via View Transitions API
+// 1. Prefetches pages on link hover
+// 2. Navigates on mousedown (saves ~100ms)
+// 3. Smooth crossfade via View Transitions API
+//
+// This used to also wrap window.fetch to cache the header, footer, chatbot and
+// article sidebar in sessionStorage, because every page fetched them at
+// runtime. Eleventy renders all four into the HTML now, so nothing requests
+// them and the global fetch override has been removed with the cache.
 (function() {
     'use strict';
 
-    const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
     const PREFETCH_CACHE = new Set();
     const HOVER_DELAY = 65; // ms before prefetch starts
-
-    // --- Component Caching ---
-    // Cache component HTML in sessionStorage with TTL
-    const cacheable = [
-        '/pages/facility/components/header.html',
-        '/pages/software/components/header-platform.html',
-        '/pages/facility/components/footer.html',
-        '/pages/software/components/footer-platform.html',
-        '/pages/facility/components/chatbot.html',
-        '/pages/facility/components/article-sidebar.html'
-    ];
-
-    function getCached(key) {
-        try {
-            const raw = sessionStorage.getItem(key);
-            if (!raw) return null;
-            const entry = JSON.parse(raw);
-            if (Date.now() - entry.t > CACHE_TTL) {
-                sessionStorage.removeItem(key);
-                return null;
-            }
-            return entry.d;
-        } catch(e) { return null; }
-    }
-
-    function setCache(key, data) {
-        try { sessionStorage.setItem(key, JSON.stringify({ t: Date.now(), d: data })); } catch(e) {}
-    }
-
-    const originalFetch = window.fetch;
-    window.fetch = function(url, options) {
-        const urlStr = typeof url === 'string' ? url : url.toString();
-
-        if (!options?.method || options.method === 'GET') {
-            const isCacheable = cacheable.some(p => urlStr.endsWith(p) || urlStr === p);
-            if (isCacheable) {
-                const cacheKey = 'nav_' + urlStr;
-                const cached = getCached(cacheKey);
-                if (cached) {
-                    const contentType = urlStr.endsWith('.json') ? 'application/json' : 'text/html';
-                    return Promise.resolve(new Response(cached, {
-                        status: 200,
-                        headers: { 'Content-Type': contentType }
-                    }));
-                }
-                return originalFetch.call(this, url, options).then(response => {
-                    const clone = response.clone();
-                    clone.text().then(data => setCache(cacheKey, data));
-                    return response;
-                });
-            }
-        }
-
-        return originalFetch.call(this, url, options);
-    };
 
     // --- Link Prefetch on Hover ---
     function isInternalLink(a) {

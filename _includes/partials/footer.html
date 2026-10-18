@@ -32,21 +32,21 @@
             <div class="footer-section">
                 <div class="flex-row">
                     <div class="footer-contact flex-col gap-sm">
-                        <a href="tel:%SITE_PHONE%">
+                        <a href="tel:{{ site.phone }}">
                             <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
-                            %SITE_PHONE_DISPLAY%
+                            {{ site.phoneDisplay }}
                         </a>
-                        <a href="mailto:%SITE_EMAIL%">
+                        <a href="mailto:{{ site.email }}">
                             <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>
-                            %SITE_EMAIL%
+                            {{ site.email }}
                         </a>
-                        <a href="%SITE_CVR_URL%" target="_blank" rel="noopener">
+                        <a href="{{ site.cvrUrl }}" target="_blank" rel="noopener">
                             <iconify-icon icon="fluent:building-20-filled" inline></iconify-icon>
-                            CVR: %SITE_CVR%
+                            CVR: {{ site.cvr }}
                         </a>
                         <address class="footer-address">
                             <iconify-icon icon="fluent:location-20-filled" inline></iconify-icon>
-                            %SITE_ADDRESS%
+                            {{ site.address }}
                         </address>
                     </div>
                     <div class="footer-logo">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="flex-row gap-md">
-                    <a href="%SITE_LINKEDIN%" class="social-icon" target="_blank">
+                    <a href="{{ site.linkedin }}" class="social-icon" target="_blank">
                         <iconify-icon icon="fa6-brands:linkedin-in" inline></iconify-icon>
                     </a>
                 </div>

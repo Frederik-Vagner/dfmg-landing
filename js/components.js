@@ -1,85 +1,19 @@
-// Fast, simple component loader with chatbot support
-function isPlatformPage() {
-    return window.location.pathname.startsWith('/pages/software/');
-}
+// Behaviour for the header, footer, chatbot and article sidebar.
+//
+// These used to be fetched here and injected at runtime, which meant the page
+// arrived without its navigation and the site data had to be swapped into
+// %SITE_*% placeholders in the browser. Eleventy now renders all four into
+// every page at build time (see _includes/base.html), so this file only wires
+// up behaviour against markup that is already in the document.
+function initComponents() {
+    // The chatbot markup is only present on facility pages.
+    if (document.getElementById('chatbotButton')) {
+        initializeChatbotFunctions();
+    }
 
-function isPlatformDanish() {
-    return window.location.pathname.startsWith('/pages/software/da/');
-}
-
-// Replace site-data tokens in runtime-loaded component HTML
-function replaceSiteTokens(html) {
-    var s = window.DFMG || {};
-    return html
-        .replace(/%SITE_EMAIL%/g, s.email || '')
-        .replace(/%SITE_PLATFORM_EMAIL%/g, s.platformEmail || '')
-        .replace(/%SITE_PHONE%/g, s.phone || '')
-        .replace(/%SITE_PHONE_DISPLAY%/g, s.phoneDisplay || '')
-        .replace(/%SITE_PHONE_SHORT%/g, s.phoneShort || '')
-        .replace(/%SITE_CVR%/g, s.cvr || '')
-        .replace(/%SITE_CVR_URL%/g, s.cvrUrl || '')
-        .replace(/%SITE_ADDRESS%/g, s.address || '')
-        .replace(/%SITE_LINKEDIN%/g, s.linkedin || '');
-}
-
-async function loadComponents() {
-    try {
-        const platform = isPlatformPage();
-        const platformDa = isPlatformDanish();
-        const headerPath = platform
-            ? (platformDa ? '/pages/software/components/header-platform-da.html' : '/pages/software/components/header-platform.html')
-            : '/pages/facility/components/header.html';
-        const footerPath = platform
-            ? (platformDa ? '/pages/software/components/footer-platform-da.html' : '/pages/software/components/footer-platform.html')
-            : '/pages/facility/components/footer.html';
-
-        const fetchPromises = [
-            fetch(headerPath),
-            fetch(footerPath)
-        ];
-
-        // Load chatbot on service pages, contact widget on all pages
-        if (!platform) {
-            fetchPromises.push(fetch('/pages/facility/components/chatbot.html'));
-        }
-
-        // Check if article sidebar exists on page
-        const articleSidebarElement = document.getElementById('article-sidebar');
-        if (articleSidebarElement) {
-            fetchPromises.push(fetch('/pages/facility/components/article-sidebar.html'));
-        }
-
-        const responses = await Promise.all(fetchPromises);
-
-        const header = replaceSiteTokens(await responses[0].text());
-        const footer = replaceSiteTokens(await responses[1].text());
-
-        document.getElementById('header').innerHTML = header;
-        document.getElementById('footer').innerHTML = footer;
-
-        let nextIdx = 2;
-
-        // Inject chatbot on non-platform pages
-        if (!platform) {
-            const chatbotHtml = replaceSiteTokens(await responses[nextIdx].text());
-            const chatbotEl = document.getElementById('chatbot');
-            if (chatbotEl) chatbotEl.innerHTML = chatbotHtml;
-            nextIdx++;
-        }
-
-        // Load article sidebar if it exists
-        if (articleSidebarElement && responses[nextIdx]) {
-            const articleSidebar = replaceSiteTokens(await responses[nextIdx].text());
-            articleSidebarElement.innerHTML = articleSidebar;
-            initArticleSidebar();
-        }
-
-        // Initialize widget JS after DOM injection
-        if (!platform) {
-            initializeChatbotFunctions();
-        }
-    } catch (error) {
-        console.error('Failed to load components:', error);
+    // Only the article sidebar partial carries these.
+    if (document.getElementById('toc-list')) {
+        initArticleSidebar();
     }
 }
 
@@ -364,9 +298,9 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Auto-load when DOM ready
+// Auto-init when DOM ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadComponents);
+    document.addEventListener('DOMContentLoaded', initComponents);
 } else {
-    loadComponents();
+    initComponents();
 }

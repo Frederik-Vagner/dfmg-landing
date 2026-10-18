@@ -11,7 +11,7 @@
             <div class="nav-item">
                 <a href="/pages/facility/services/services.html">Services</a>
                 <div class="dropdown">
-                    <a href="/pages/facility/services/rengoering"><strong>Erhvervsrengøring</strong><small>Kontorer, skoler, restauranter og eventlokaler</small></a>
+                    <a href="/pages/facility/services/rengoering.html"><strong>Erhvervsrengøring</strong><small>Kontorer, skoler, restauranter og eventlokaler</small></a>
                     <a href="/pages/facility/services/ejendomsservice.html"><strong>Ejendomsservice</strong><small>Vedligeholdelse af trapper, opgange og elevatorer</small></a>
                     <a href="/pages/facility/services/handyman.html"><strong>Handyman Services</strong><small>Reparationer, vedligeholdelse og møbelmontering</small></a>
                     <a href="/pages/facility/services/produkter.html"><strong>Supplies & Produkter</strong><small>Hygiejneprodukter og office supplies</small></a>
@@ -47,8 +47,8 @@
         
         <!-- Contact Info -->
         <div class="contact">
-            <span>%SITE_EMAIL%</span>
-            <span>%SITE_PHONE_DISPLAY%</span>
+            <span>{{ site.email }}</span>
+            <span>{{ site.phoneDisplay }}</span>
         </div>
         
         <!-- CSS-Only Mobile Menu -->
@@ -59,7 +59,7 @@
             <div class="mobile-nav__group">
                 <div class="mobile-nav__label">Services</div>
                 <a href="/pages/facility/services/services.html">Alle Services</a>
-                <a href="/pages/facility/services/rengoering">Erhvervsrengøring</a>
+                <a href="/pages/facility/services/rengoering.html">Erhvervsrengøring</a>
                 <a href="/pages/facility/services/ejendomsservice.html">Ejendomsservice</a>
                 <a href="/pages/facility/services/handyman.html">Handyman</a>
                 <a href="/pages/facility/services/produkter.html">Supplies & Produkter</a>

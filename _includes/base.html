@@ -119,16 +119,27 @@
     {% endif %}
 </head>
 <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}{% if bodyAttrs %} {{ bodyAttrs | safe }}{% endif %}>
-    <div id="header"></div>
+    {#- The header and footer used to be empty divs filled by a fetch in
+        components.js. Rendering them here instead means every page ships
+        complete: no second round trip, and the navigation is in the HTML
+        rather than appearing only after JavaScript runs.
+        `shell` comes from the directory data files under pages/software. -#}
+    {% if shell == "platform" %}{% include "partials/header-platform.html" %}
+    {% elif shell == "platform-da" %}{% include "partials/header-platform-da.html" %}
+    {% else %}{% include "partials/header.html" %}{% endif %}
 
     <main>
     {{ content | safe }}
     </main>
 
-    <div id="footer"></div>
+    {% if shell == "platform" %}{% include "partials/footer-platform.html" %}
+    {% elif shell == "platform-da" %}{% include "partials/footer-platform-da.html" %}
+    {% else %}{% include "partials/footer.html" %}{% endif %}
 
+    {#- Platform pages all set chatbot: false, so this matches what the runtime
+        loader actually rendered: the widget on facility pages only. -#}
     {% if chatbot !== false %}
-    <div id="chatbot"></div>
+    {% include "partials/chatbot.html" %}
     {% endif %}
     <script>window.DFMG={{ site | dump | safe }};</script>
     <script src="/js/components.js" defer></script>
