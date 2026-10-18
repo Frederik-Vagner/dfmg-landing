@@ -1,0 +1,60 @@
+/* ========================================
+   INDBLIK — page styles
+   ======================================== */
+
+@layer pages {
+
+.indblik-topics {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+    margin-bottom: 4rem;
+}
+
+.indblik-topic {
+    padding: 1rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    text-align: center;
+}
+
+.indblik-featured {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.indblik-featured > * {
+    flex: 1;
+}
+
+.indblik-feature {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-left: 4px solid var(--primary);
+}
+
+.indblik-articles {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+@media (max-width: 768px) {
+    .indblik-topics {
+        flex-wrap: wrap;
+    }
+
+    .indblik-featured {
+        flex-wrap: wrap;
+    }
+
+    .indblik-featured > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .indblik-articles {
+        flex-wrap: wrap;
+    }
+}
+
+}

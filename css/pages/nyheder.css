@@ -1,0 +1,12 @@
+/* ========================================
+   NYHEDER — page styles
+   ======================================== */
+
+@layer pages {
+
+.news-card__category {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+}

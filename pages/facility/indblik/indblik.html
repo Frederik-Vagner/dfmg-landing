@@ -4,36 +4,38 @@ title: "DFMG - Indblik"
 description: "Indblik i DFMG - artikler, cases, nyheder og viden om facility management."
 scripts:
   - /js/carousel.js
+pageCss:
+  - indblik
 ---
 
     <!-- How We Work Section -->
     <section class="section first">
         <div class="container-wide">
-            <div class="text-center">
-                <h1 class="title text-charcoal">Hvordan Vi Arbejder</h1>
-                <div class="body text-gray mb-4">Vores succesformel bygger på systematisk tilgang, høje standarder og konstant fokus på forbedring</div>
+            <div class="page-intro">
+                <h1 class="title page-intro__title">Hvordan Vi Arbejder</h1>
+                <div class="body page-intro__text page-intro__text--spaced">Vores succesformel bygger på systematisk tilgang, høje standarder og konstant fokus på forbedring</div>
             </div>
 
-            <div class="flex mb-4">
-                <div class="card bg-gradient-white p-1 text-center">
+            <div class="indblik-topics">
+                <div class="card indblik-topic">
                     <div class="stat__value">1</div>
                     <h3>Analyse & Forståelse</h3>
                     <p>Vi starter altid med en grundig analyse af kundens behov, udfordringer og målsætninger for at skabe den perfekte løsning.</p>
                 </div>
 
-                <div class="card bg-gradient-white p-1 text-center">
+                <div class="card indblik-topic">
                     <div class="stat__value">2</div>
                     <h3>Skræddersyet Plan</h3>
                     <p>Baseret på analysen udvikler vi en detaljeret serviceplan der er tilpasset specifikke krav og forventninger.</p>
                 </div>
 
-                <div class="card bg-gradient-white p-1 text-center">
+                <div class="card indblik-topic">
                     <div class="stat__value">3</div>
                     <h3>Professionel Udførelse</h3>
                     <p>Vores erfarne teams udfører alle opgaver med højeste kvalitet, sikkerhed og opmærksomhed på detaljer.</p>
                 </div>
 
-                <div class="card bg-gradient-white p-1 text-center">
+                <div class="card indblik-topic">
                     <div class="stat__value">4</div>
                     <h3>Kontinuerlig Optimering</h3>
                     <p>Vi monitorerer løbende performance, indsamler feedback og optimerer vores services for bedst mulige resultater.</p>
@@ -42,8 +44,8 @@ scripts:
         </div>
         <div class="container">
 
-            <div class="flex flex-2">
-                <div class="card bg-gradient-white border-left-primary p-2">
+            <div class="indblik-featured">
+                <div class="card indblik-feature">
                     <h3>
                         <iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon>
                         Kvalitetssikring
@@ -58,7 +60,7 @@ scripts:
                     </ul>
                 </div>
 
-                <div class="card bg-gradient-white border-left-primary p-2">
+                <div class="card indblik-feature">
                     <h3>
                         <iconify-icon icon="fluent:handshake-20-filled" inline></iconify-icon>
                         Kundeforhold
@@ -79,15 +81,15 @@ scripts:
     <!-- Article Section -->
     <section class="section" id="articles">
         <div class="container">
-            <div class="text-center">
-                <div class="title text-charcoal">Seneste Artikler</div>
+            <div class="page-intro">
+                <div class="title page-intro__title">Seneste Artikler</div>
             </div>
 
-            <div class="flex">
+            <div class="indblik-articles">
                 <article class="card card--media" data-category="insights">
                     <div class="article-image article-image--insights">
                         <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">Case Study</div>
-                        <img src="/images/article/rengoering-vogn-hotel.webp" alt="Servicemedarbejder skifter affaldspose på en rengøringsvogn i en hotelgang" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        <img src="/images/article/rengoering-vogn-hotel.webp" alt="Servicemedarbejder skifter affaldspose på en rengøringsvogn i en hotelgang" class="cover-image" loading="lazy" decoding="async">
                     </div>
                     <div class="article-content">
                         <h4 class="article-title">Fra 5 Leverandører til Én Pålidelig Partner</h4>
@@ -106,7 +108,7 @@ scripts:
                 <article class="card card--media" data-category="insights">
                     <div class="article-image article-image--insights">
                         <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">INNOVATION</div>
-                        <img src="/images/article/rengoering-korridor.webp" alt="Rengøringsvogn med udstyr parkeret i en lang korridor" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        <img src="/images/article/rengoering-korridor.webp" alt="Rengøringsvogn med udstyr parkeret i en lang korridor" class="cover-image" loading="lazy" decoding="async">
                     </div>
                     <div class="article-content">
                         <h4 class="article-title">Mennesker vs. Robotter i Facility Management</h4>
@@ -125,7 +127,7 @@ scripts:
                 <article class="card card--media" data-category="insights">
                     <div class="article-image article-image--insights">
                         <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">TIPS & TRICKS</div>
-                        <img src="/images/article/vaadt-gulv-skilt.webp" alt="Gul moppespand og advarselsskilt om vådt gulv foran et indgangsparti i glas" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        <img src="/images/article/vaadt-gulv-skilt.webp" alt="Gul moppespand og advarselsskilt om vådt gulv foran et indgangsparti i glas" class="cover-image" loading="lazy" decoding="async">
                     </div>
                     <div class="article-content">
                         <h4 class="article-title">Location Guides: Et Værktøj til Konsistent Kvalitet</h4>
