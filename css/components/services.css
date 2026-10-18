@@ -467,4 +467,44 @@
 .service-bg--picoline { background-image: url('/images/service/picoline.webp'); }
 .service-bg--windowcleaning { background-image: url('/images/service/windowcleaning.webp'); }
 
+/* The expanded service panel, built by js/services.js (formerly utility classes). */
+/* generated:start */
+.expanded-title {
+    color: var(--charcoal);
+}
+
+.expanded-description {
+    color: var(--charcoal);
+}
+
+.specialomrader-title {
+    color: var(--charcoal);
+}
+
+.specialomrader-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.specialomrade {
+    padding: 0.5rem;
+}
+
+.expanded-image__photo {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .specialomrader-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+}
+/* generated:end */
+
 }

@@ -239,7 +239,7 @@ function initRelatedArticles() {
         const img = document.createElement('img');
         img.src = '/images/article/ipad.webp';
         img.alt = '';
-        img.className = 'w-full h-full object-cover rounded-lg';
+        img.className = 'cover-image';
         img.loading = 'lazy';
         img.decoding = 'async';
         imageDiv.appendChild(img);

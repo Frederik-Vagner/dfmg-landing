@@ -181,14 +181,14 @@ function showExpandedContent(column, serviceType) {
                 <button class="btn--icon expanded-close-btn" data-action="close-expanded">
                     <iconify-icon icon="fluent:arrow-reply-20-filled" inline></iconify-icon>
                 </button>
-                <h3 class="text-charcoal">${service.title}</h3>
-                <p class="text-charcoal">${service.description}</p>
+                <h3 class="expanded-title">${service.title}</h3>
+                <p class="expanded-description">${service.description}</p>
 
                 <div class="specialomrader-section">
-                    <h4 class="text-charcoal">Specialområder</h4>
-                    <div class="grid-2x2">
+                    <h4 class="specialomrader-title">Specialområder</h4>
+                    <div class="specialomrader-grid">
                         ${service.categories.map(category => `
-                            <div class="p-05">
+                            <div class="specialomrade">
                                 <h5 class="specialomrade-title">${category.name}</h5>
                                 <ul class="specialomrade-list">
                                     ${category.items.map(item => `
@@ -203,7 +203,7 @@ function showExpandedContent(column, serviceType) {
 
             <div class="expanded-content-right">
                 <div class="expanded-image">
-                    <img src="/images/service/${getImageName(serviceType)}.webp" alt="${service.title}" class="w-full h-full object-cover rounded-15" loading="lazy" decoding="async">
+                    <img src="/images/service/${getImageName(serviceType)}.webp" alt="${service.title}" class="expanded-image__photo" loading="lazy" decoding="async">
                 </div>
                 <div class="benefits-section">
                     <h4 class="benefits-title">Hvorfor DFMG</h4>
