@@ -116,4 +116,82 @@
 .showcase-overlay-frame--light { background: var(--bg-light); }
 .showcase-overlay-frame--dark { background: var(--charcoal); }
 
+/* ── Page layout (formerly utility classes) ── */
+/* generated:start */
+.showcase-title {
+    margin-bottom: 2rem;
+    color: var(--charcoal);
+}
+
+.showcase-section-title {
+    margin-bottom: 1rem;
+    color: var(--charcoal);
+}
+
+.showcase-label {
+    margin-bottom: 1rem;
+    color: var(--charcoal);
+}
+
+.showcase-intro {
+    margin-bottom: 4rem;
+    color: var(--gray);
+}
+
+.showcase-intro--tight {
+    margin-bottom: 3rem;
+}
+
+.showcase-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.showcase-row--wide {
+    gap: 2rem;
+}
+
+.showcase-row--padded {
+    padding: 2rem;
+}
+
+.showcase-pair {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.showcase-dark-panel--padded {
+    padding: 2rem;
+}
+
+.showcase-narrow {
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+.logo-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.logo-swatches--spaced {
+    margin-bottom: 4rem;
+}
+
+.logo-swatch__caption {
+    color: var(--gray);
+}
+
+@media (max-width: 768px) {
+    .showcase-pair {
+        flex-wrap: wrap;
+    }
+}
+/* generated:end */
+
 }
