@@ -1,0 +1,255 @@
+/* ========================================
+   PICCOLINE — page styles
+   ======================================== */
+
+@layer pages {
+
+.picoline-hero__intro {
+    text-align: center;
+}
+
+.picoline-hero__lead {
+    margin-bottom: 4rem;
+}
+
+.picoline-hero__tiles {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+    margin-bottom: 4rem;
+}
+
+.picoline-definition {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.picoline-definition > * {
+    flex: 1;
+}
+
+.day-schedule {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    text-align: center;
+}
+
+.day-schedule__item {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+    padding: 1rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.day-schedule__item :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.day-schedule__task {
+    font-weight: var(--font-weight-medium);
+}
+
+.tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.task-card {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.task-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.task-card__icon {
+    margin-bottom: 1rem;
+}
+
+.task-card__icon--accent {
+    color: var(--success);
+}
+
+.adhoc-intro {
+    padding: 4rem;
+    margin-bottom: 4rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-top: 4px solid var(--success);
+    text-align: center;
+}
+
+.adhoc-intro :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.adhoc-intro__title {
+    font-size: 2rem;
+}
+
+.adhoc-intro__text {
+    margin: auto;
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+.adhoc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.adhoc-card {
+    padding: 1rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.adhoc-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.adhoc-card__icon {
+    margin-bottom: 1rem;
+}
+
+.adhoc-card__title {
+    font-size: 1.2rem;
+}
+
+.adhoc-card__text {
+    font-size: 0.95rem;
+}
+
+.comparison-pair {
+    display: flex;
+    margin-top: 4rem;
+    gap: 4rem;
+}
+
+.comparison-pair > * {
+    flex: 1;
+}
+
+.comparison-pair__card {
+    padding: 2rem;
+    background: var(--overlay-light);
+    border: 1px solid var(--border-on-dark);
+}
+
+.comparison-pair__header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.comparison-pair__header--spaced {
+    margin-bottom: 4rem;
+}
+
+.comparison-pair__title--without {
+    font-size: 1.3rem;
+}
+
+.comparison-pair__card span {
+    color: var(--white);
+}
+
+.icon-circle--negative {
+    background: var(--bg-gradient-red);
+    color: var(--white);
+    border: none;
+}
+
+.icon-circle--positive {
+    background: var(--bg-gradient-success);
+    color: var(--white);
+    border: none;
+}
+
+.testimonial-row {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.testimonial-row > * {
+    flex: 1;
+}
+
+.testimonial-card {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.testimonial-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.testimonial-card__quote {
+    margin-bottom: 2rem;
+}
+
+.testimonial-card__role {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .picoline-hero__tiles {
+        flex-wrap: wrap;
+    }
+
+    .picoline-definition {
+        flex-wrap: wrap;
+    }
+
+    .picoline-definition > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .day-schedule__item {
+        flex-wrap: wrap;
+    }
+
+    .task-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .adhoc-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .comparison-pair {
+        flex-wrap: wrap;
+    }
+
+    .comparison-pair > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .testimonial-row {
+        flex-wrap: wrap;
+    }
+
+    .testimonial-row > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+}
+
+}

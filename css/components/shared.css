@@ -41,9 +41,18 @@
     text-align: center;
 }
 
+.icon-tile--large {
+    padding: 2rem;
+}
+
 .icon-tile__icon {
     margin-bottom: 1rem;
     color: var(--success);
+}
+
+.icon-tile__text {
+    opacity: 0.9;
+    font-size: 0.9rem;
 }
 
 .button-row {
