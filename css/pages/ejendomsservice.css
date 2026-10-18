@@ -1,0 +1,190 @@
+/* ========================================
+   EJENDOMSSERVICE — page styles
+   ======================================== */
+
+@layer pages {
+
+.estate-hero {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.estate-hero > * {
+    flex: 1;
+}
+
+.estate-hero__title {
+    font-size: 3.5rem;
+    font-weight: var(--font-weight-light);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.estate-hero__lead {
+    margin-bottom: 4rem;
+    opacity: 0.9;
+    font-size: 1.3rem;
+}
+
+.estate-hero__aside {
+    align-content: center;
+}
+
+.estate-hero__areas {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.area-chip {
+    padding: 1rem;
+    background: var(--bg-gradient-success);
+}
+
+.estate-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.estate-service {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-top: 4px solid var(--success);
+    text-align: center;
+}
+
+.estate-service :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.estate-service__header {
+    justify-content: center;
+}
+
+.estate-service__icon {
+    margin-bottom: 1rem;
+    color: var(--success);
+}
+
+.estate-process {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.estate-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.estate-feature {
+    padding: 2rem;
+    text-align: center;
+}
+
+.estate-feature__icon {
+    margin-bottom: 2rem;
+    color: var(--success);
+}
+
+.estate-case {
+    padding: 3rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-top: 4px solid var(--charcoal);
+}
+
+.estate-case :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.estate-case__layout {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.estate-case__layout > * {
+    flex: 1;
+}
+
+.estate-case__title {
+    font-size: 2.5rem;
+}
+
+.estate-case__text {
+    font-size: 1.1rem;
+}
+
+.estate-case__aside {
+    align-content: center;
+}
+
+.estate-case__pillars {
+    justify-content: center;
+    align-content: end;
+    padding: 2rem;
+    text-align: center;
+}
+
+.estate-case__pillar {
+    padding: 1rem;
+    background: var(--overlay-light);
+    border: 1px solid var(--border-on-dark);
+}
+
+.estate-case__pillar:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .estate-hero {
+        flex-wrap: wrap;
+    }
+
+    .estate-hero > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .estate-hero__title {
+        font-size: 2.3rem;
+    }
+
+    .estate-hero__areas {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .estate-services {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .estate-process {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .estate-features {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .estate-case__layout {
+        flex-wrap: wrap;
+    }
+
+    .estate-case__layout > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .estate-case__title {
+        font-size: 1.9rem;
+    }
+}
+
+}

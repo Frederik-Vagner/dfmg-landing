@@ -54,10 +54,6 @@
     border-left: 4px solid var(--success);
 }
 
-.category-tab :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
 .category-tab__header {
     display: flex;
     gap: var(--layout-gap, var(--gap-lg));
@@ -126,25 +122,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
-}
-
-.process-step {
-    padding: 2rem;
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-    text-align: center;
-}
-
-.process-step :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
-.process-step__number {
-    color: var(--success);
-}
-
-.process-step__title {
-    font-size: 1.3rem;
 }
 
 .benefits-panel {

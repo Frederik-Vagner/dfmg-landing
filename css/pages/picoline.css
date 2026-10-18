@@ -71,10 +71,6 @@
     color: var(--charcoal);
 }
 
-.task-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
 .task-card__icon {
     margin-bottom: 1rem;
 }
@@ -92,10 +88,6 @@
     text-align: center;
 }
 
-.adhoc-intro :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
 .adhoc-intro__title {
     font-size: 2rem;
 }
@@ -109,6 +101,7 @@
 .adhoc-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -116,10 +109,6 @@
     padding: 1rem;
     background: var(--bg-gradient-white);
     color: var(--charcoal);
-}
-
-.adhoc-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
 }
 
 .adhoc-card__icon {
@@ -194,10 +183,6 @@
     color: var(--charcoal);
 }
 
-.testimonial-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
 .testimonial-card__quote {
     margin-bottom: 2rem;
 }
@@ -231,6 +216,7 @@
 
     .adhoc-grid {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .comparison-pair {
