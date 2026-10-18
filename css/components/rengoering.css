@@ -41,6 +41,12 @@ body {
     gap: var(--gap-xs);
 }
 
+/* display: flex above beats the hidden attribute's default display: none,
+   so a single-photo frame would still show one stray dot. */
+.photo-dots[hidden] {
+    display: none;
+}
+
 .photo-dot {
     width: 8px;
     height: 8px;
