@@ -1,7 +1,7 @@
     <!-- Hero -->
-    <section class="platform-hero" style="padding-bottom: 3rem;">
+    <section class="platform-hero platform-hero--page">
         <div class="container">
-            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
             <div class="hero-actions">
@@ -12,7 +12,7 @@
     </section>
 
     <!-- Trust badges -->
-    <section class="section" style="padding-top: 2.5rem; padding-bottom: 0;">
+    <section class="section trust-strip">
         <div class="container">
             <div class="trust-row">
                 {% for item in t.trust %}
@@ -39,10 +39,10 @@
                 </div>
                 <div class="feature-row__visual">
                     <div class="screenshot-placeholder screenshot-placeholder--light">
-                        <div style="text-align: center;">
+                        <div>
                             <iconify-icon icon="fluent:ruler-20-filled" inline class="placeholder-icon"></iconify-icon>
-                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.editor.visual_title }}</strong><br><br>
-                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                            <strong class="feature-visual__title">{{ t.editor.visual_title }}</strong><br><br>
+                            <div class="feature-visual__list">
                                 {% for item in t.editor.visual_items %}
                                 <iconify-icon icon="{{ item.icon }}" inline class="placeholder-list-icon"></iconify-icon> {{ item.text }}<br>
                                 {% endfor %}
@@ -71,12 +71,12 @@
                 </div>
                 <div class="feature-row__visual">
                     <div class="screenshot-placeholder screenshot-placeholder--light">
-                        <div style="text-align: center;">
+                        <div>
                             <iconify-icon icon="fluent:map-20-filled" inline class="placeholder-icon"></iconify-icon>
-                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.accuracy.visual_title }}</strong><br><br>
-                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                            <strong class="feature-visual__title">{{ t.accuracy.visual_title }}</strong><br><br>
+                            <div class="feature-visual__list">
                                 {% for step in t.accuracy.steps %}
-                                <span style="color: var(--primary); font-weight: 600;">{{ loop.index }}.</span> {{ step }}<br>
+                                <span class="feature-visual__step-number">{{ loop.index }}.</span> {{ step }}<br>
                                 {% endfor %}
                             </div>
                         </div>
@@ -103,10 +103,10 @@
                 </div>
                 <div class="feature-row__visual">
                     <div class="screenshot-placeholder screenshot-placeholder--light">
-                        <div style="text-align: center;">
+                        <div>
                             <iconify-icon icon="fluent:task-list-20-filled" inline class="placeholder-icon"></iconify-icon>
-                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.taskMapping.visual_title }}</strong><br><br>
-                            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; max-width: 320px; margin: 0 auto;">
+                            <strong class="feature-visual__title">{{ t.taskMapping.visual_title }}</strong><br><br>
+                            <div class="feature-visual__tags">
                                 {% for room in t.taskMapping.roomTypes %}
                                 <span class="badge-inline badge-inline--sm badge-inline--light">{{ room }}</span>
                                 {% endfor %}
@@ -135,12 +135,12 @@
                 </div>
                 <div class="feature-row__visual">
                     <div class="screenshot-placeholder screenshot-placeholder--light">
-                        <div style="text-align: center;">
+                        <div>
                             <iconify-icon icon="fluent:arrow-routing-20-filled" inline class="placeholder-icon"></iconify-icon>
-                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.routes.visual_title }}</strong><br><br>
-                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                            <strong class="feature-visual__title">{{ t.routes.visual_title }}</strong><br><br>
+                            <div class="feature-visual__list">
                                 {% for step in t.routes.steps %}
-                                <span style="color: var(--primary); font-weight: 600;">{{ loop.index }}.</span> {{ step }}<br>
+                                <span class="feature-visual__step-number">{{ loop.index }}.</span> {{ step }}<br>
                                 {% endfor %}
                             </div>
                         </div>
@@ -167,10 +167,10 @@
                 </div>
                 <div class="feature-row__visual">
                     <div class="screenshot-placeholder screenshot-placeholder--light">
-                        <div style="text-align: center;">
+                        <div>
                             <iconify-icon icon="fluent:building-20-filled" inline class="placeholder-icon"></iconify-icon>
-                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.multiFloor.visual_title }}</strong><br><br>
-                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                            <strong class="feature-visual__title">{{ t.multiFloor.visual_title }}</strong><br><br>
+                            <div class="feature-visual__list">
                                 {% for item in t.multiFloor.visual_items %}
                                 <iconify-icon icon="{{ item.icon }}" inline class="placeholder-list-icon"></iconify-icon> {{ item.text }}<br>
                                 {% endfor %}
@@ -199,10 +199,10 @@
                 </div>
                 <div class="feature-row__visual">
                     <div class="screenshot-placeholder screenshot-placeholder--light">
-                        <div style="text-align: center;">
+                        <div>
                             <iconify-icon icon="fluent:pen-20-filled" inline class="placeholder-icon"></iconify-icon>
-                            <strong style="color: var(--charcoal); font-size: 1.1rem;">{{ t.annotations.visual_title }}</strong><br><br>
-                            <div style="text-align: left; max-width: 300px; margin: 0 auto; color: var(--gray); font-size: 0.9rem; line-height: 2;">
+                            <strong class="feature-visual__title">{{ t.annotations.visual_title }}</strong><br><br>
+                            <div class="feature-visual__list">
                                 {% for item in t.annotations.visual_items %}
                                 <iconify-icon icon="{{ item.icon }}" inline class="placeholder-list-icon"></iconify-icon> {{ item.text }}<br>
                                 {% endfor %}

@@ -1,7 +1,7 @@
     <!-- Hero — outcome-driven, not feature-driven -->
     <section class="platform-hero">
         <div class="container">
-            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
             <div class="hero-actions">
@@ -10,9 +10,9 @@
             </div>
 
             <!-- TODO: Replace with actual dashboard screenshot or 60s product video -->
-            <div class="screenshot-placeholder" style="min-height: 400px; margin-top: 3rem;">
-                <div style="text-align: center;">
-                    <iconify-icon icon="fluent:play-circle-20-filled" inline style="font-size: 3rem; margin-bottom: 1rem; display: block; opacity: 0.5;"></iconify-icon>
+            <div class="screenshot-placeholder platform-hero__media">
+                <div>
+                    <iconify-icon icon="fluent:play-circle-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                     <span>{{ t.hero.placeholder_text }}</span><br>
                     {# note to self (not rendered): {{ t.hero.placeholder_hint }} #}
                 </div>
@@ -106,16 +106,16 @@
     <!-- Product walkthrough — visual proof -->
     <section class="section section--primary">
         <div class="container">
-            <div class="flex flex-2" style="align-items: center;">
+            <div class="flex flex-2 walkthrough">
                 <div>
-                    <div class="title text-white" style="font-size: 1.8rem;">{{ t.walkthrough.title }}</div>
-                    <p style="color: rgba(255,255,255,0.85); margin-bottom: 1.5rem;">{{ t.walkthrough.body }}</p>
+                    <div class="title title--compact text-white">{{ t.walkthrough.title }}</div>
+                    <p class="walkthrough__body">{{ t.walkthrough.body }}</p>
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.walkthrough.cta }}</a>
                 </div>
                 <!-- TODO: Replace with embedded video (Loom/YouTube) or animated GIF walkthrough -->
-                <div class="screenshot-placeholder" style="min-height: 280px;">
-                    <div style="text-align: center;">
-                        <iconify-icon icon="fluent:video-20-filled" inline style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
+                <div class="screenshot-placeholder walkthrough__media">
+                    <div>
+                        <iconify-icon icon="fluent:video-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                         <span>{{ t.walkthrough.placeholder_text }}</span><br>
                         {# note to self (not rendered): {{ t.walkthrough.placeholder_hint }} #}
                     </div>
@@ -136,17 +136,17 @@
                 <div class="body text-gray">{{ t.comparison.body }}</div>
             </div>
 
-            <div class="flex flex-2" style="gap: 3rem;">
-                <div class="card p-2" style="background: #fff;">
-                    <div class="font-bold" style="color: var(--red); margin-bottom: 1rem;"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.without_title }}</div>
+            <div class="flex flex-2 comparison">
+                <div class="card p-2 comparison__card">
+                    <div class="font-bold comparison__title comparison__title--without"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.without_title }}</div>
                     <ul class="feature-list list--red">
                         {% for item in t.comparison.without_items %}
                         <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon> {{ item }}</li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="card p-2" style="background: #fff;">
-                    <div class="font-bold" style="color: var(--success); margin-bottom: 1rem;"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.with_title }}</div>
+                <div class="card p-2 comparison__card">
+                    <div class="font-bold comparison__title comparison__title--with"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="mr-05"></iconify-icon> {{ t.comparison.with_title }}</div>
                     <ul class="feature-list list--success">
                         {% for item in t.comparison.with_items %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ item }}</li>
@@ -166,25 +166,25 @@
             </div>
 
             <!-- TODO: Replace with actual integration logos -->
-            <div class="flex" style="justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; opacity: 0.5;">
-                <div class="text-center text-gray" style="padding: 1.5rem;">
-                    <iconify-icon icon="fa6-brands:google" inline style="font-size: 2rem; display: block; margin-bottom: 0.5rem;"></iconify-icon>
+            <div class="flex integrations">
+                <div class="text-center text-gray integrations__item">
+                    <iconify-icon icon="fa6-brands:google" inline class="integrations__icon"></iconify-icon>
                     {{ t.integrations.google }}
                 </div>
-                <div class="text-center text-gray" style="padding: 1.5rem;">
-                    <iconify-icon icon="fa6-brands:slack" inline style="font-size: 2rem; display: block; margin-bottom: 0.5rem;"></iconify-icon>
+                <div class="text-center text-gray integrations__item">
+                    <iconify-icon icon="fa6-brands:slack" inline class="integrations__icon"></iconify-icon>
                     {{ t.integrations.slack }}
                 </div>
-                <div class="text-center text-gray" style="padding: 1.5rem;">
-                    <iconify-icon icon="fluent:building-bank-20-filled" inline style="font-size: 2rem; display: block; margin-bottom: 0.5rem;"></iconify-icon>
+                <div class="text-center text-gray integrations__item">
+                    <iconify-icon icon="fluent:building-bank-20-filled" inline class="integrations__icon"></iconify-icon>
                     {{ t.integrations.bank }}
                 </div>
-                <div class="text-center text-gray" style="padding: 1.5rem;">
-                    <iconify-icon icon="fluent:receipt-20-filled" inline style="font-size: 2rem; display: block; margin-bottom: 0.5rem;"></iconify-icon>
+                <div class="text-center text-gray integrations__item">
+                    <iconify-icon icon="fluent:receipt-20-filled" inline class="integrations__icon"></iconify-icon>
                     {{ t.integrations.efaktura }}
                 </div>
-                <div class="text-center text-gray" style="padding: 1.5rem;">
-                    <iconify-icon icon="fluent:mail-20-filled" inline style="font-size: 2rem; display: block; margin-bottom: 0.5rem;"></iconify-icon>
+                <div class="text-center text-gray integrations__item">
+                    <iconify-icon icon="fluent:mail-20-filled" inline class="integrations__icon"></iconify-icon>
                     {{ t.integrations.email }}
                 </div>
             </div>
@@ -201,10 +201,10 @@
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="mr-05"></iconify-icon> {{ t.cta.cta_demo }}</a>
                     <a href="{{ prefix }}/pricing.html" class="btn btn--ghost btn--md">{{ t.cta.cta_pricing }}</a>
                 </div>
-                <div class="trust-row" style="margin-top: 1.5rem;">
-                    <div class="trust-item" style="color: rgba(255,255,255,0.7);"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline style="color: rgba(255,255,255,0.5);"></iconify-icon> {{ t.cta.trust1 }}</div>
-                    <div class="trust-item" style="color: rgba(255,255,255,0.7);"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline style="color: rgba(255,255,255,0.5);"></iconify-icon> {{ t.cta.trust2 }}</div>
-                    <div class="trust-item" style="color: rgba(255,255,255,0.7);"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline style="color: rgba(255,255,255,0.5);"></iconify-icon> {{ t.cta.trust3 }}</div>
+                <div class="trust-row trust-row--after-actions trust-row--on-dark">
+                    <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust1 }}</div>
+                    <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust2 }}</div>
+                    <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust3 }}</div>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
     <!-- Hero -->
-    <section class="platform-hero" style="padding-bottom: 3rem;">
+    <section class="platform-hero platform-hero--page">
         <div class="container">
-            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
         </div>
@@ -24,8 +24,8 @@
                 </div>
                 <div class="feature-row__visual">
                     <div class="screenshot-placeholder screenshot-placeholder--light">
-                        <div style="text-align: center;">
-                            <iconify-icon icon="fluent:image-20-filled" inline style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
+                        <div>
+                            <iconify-icon icon="fluent:image-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                             {{ section.screenshot }}<br>
                             {# intern note til alt-tekst, ikke til visning: {{ section.screenshotAlt }} #}
                         </div>

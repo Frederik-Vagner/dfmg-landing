@@ -1,7 +1,7 @@
     <!-- Hero -->
-    <section class="platform-hero" style="padding-bottom: 3rem;">
+    <section class="platform-hero platform-hero--page">
         <div class="container">
-            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
         </div>
@@ -92,9 +92,9 @@
     </section>
 
     <!-- Trust signals -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section trust-section">
         <div class="container">
-            <div class="trust-row" style="justify-content: center;">
+            <div class="trust-row trust-row--centered">
                 {% for item in t.trust.items %}
                 <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ item }}</div>
                 {% endfor %}

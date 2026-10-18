@@ -7,6 +7,8 @@ componentCss:
 scripts:
   - /js/rengoering.js
   - /js/carousel.js
+pageCss:
+  - rengoering
 ---
 
     <!-- Floating Calculator Button -->
@@ -336,56 +338,56 @@ scripts:
 
                 <div class="card--panel double-height">
                     <h3>Kalender Overblik</h3>
-                    <div style="border-radius:6px; font-size:11px">
-                        <div style="text-align:center;font-weight:600;font-size:18px;margin-bottom:15px;color:#344767">Februar</div>
-                        <div style="display:grid;grid-template-columns:0.5fr 1.5fr 0.5fr 1.5fr 0.5fr 0.5fr 1.5fr;gap:3px 0;text-align:center;font-weight:500;">
-                            <div style="font-weight:600;padding:8px">M</div><div style="font-weight:600;padding:8px">T</div><div style="font-weight:600;padding:8px">O</div><div style="font-weight:600;padding:8px">T</div><div style="font-weight:600;padding:8px">F</div><div style="font-weight:600;padding:8px">L</div><div style="font-weight:600;padding:8px">S</div>
-                            <div style="padding:8px">1</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">3</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">5</div><div style="padding:8px">6</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
-                            <div style="padding:8px">8</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">10</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">12</div><div style="padding:8px">13</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
-                            <div style="padding:8px">15</div><div style="background:#22c55e;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">17</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">19</div><div style="padding:8px">20</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
-                            <div style="padding:8px">22</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">24</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring let</div><div>18:00-22:00</div></div><div style="padding:8px">26</div><div style="padding:8px">27</div><div style="background:#f59e0b;color:white;border-radius:10px;padding:3px 0;line-height:1.2"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                    <div class="schedule-mock">
+                        <div class="schedule-mock__month">Februar</div>
+                        <div class="schedule-mock__grid">
+                            <div class="schedule-mock__weekday">M</div><div class="schedule-mock__weekday">T</div><div class="schedule-mock__weekday">O</div><div class="schedule-mock__weekday">T</div><div class="schedule-mock__weekday">F</div><div class="schedule-mock__weekday">L</div><div class="schedule-mock__weekday">S</div>
+                            <div class="schedule-mock__day">1</div><div class="schedule-mock__visit schedule-mock__visit--completed"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">3</div><div class="schedule-mock__visit schedule-mock__visit--completed"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">5</div><div class="schedule-mock__day">6</div><div class="schedule-mock__visit schedule-mock__visit--completed"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div class="schedule-mock__day">8</div><div class="schedule-mock__visit schedule-mock__visit--completed"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">10</div><div class="schedule-mock__visit schedule-mock__visit--completed"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">12</div><div class="schedule-mock__day">13</div><div class="schedule-mock__visit schedule-mock__visit--completed"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div class="schedule-mock__day">15</div><div class="schedule-mock__visit schedule-mock__visit--completed"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">17</div><div class="schedule-mock__visit schedule-mock__visit--upcoming"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">19</div><div class="schedule-mock__day">20</div><div class="schedule-mock__visit schedule-mock__visit--upcoming"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
+                            <div class="schedule-mock__day">22</div><div class="schedule-mock__visit schedule-mock__visit--upcoming"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">24</div><div class="schedule-mock__visit schedule-mock__visit--upcoming"><div>Rengøring let</div><div>18:00-22:00</div></div><div class="schedule-mock__day">26</div><div class="schedule-mock__day">27</div><div class="schedule-mock__visit schedule-mock__visit--upcoming"><div>Rengøring grundig</div><div>18:00-22:00</div></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="card--panel double-height">
                     <h3>Slutrapport</h3>
-                    <div style="display:flex;margin:15px 0; gap: 10px;">
-                        <div style="flex:0 0 70%;background:#f8f9fa;padding:15px;border-radius:8px;border-left:4px solid #344767">
-                            <div style="display:flex;align-items:center;margin-bottom:12px">
-                                <div style="font-weight:600;color:#344767">📧 Rapport sendt 21:45</div>
+                    <div class="report-mock">
+                        <div class="report-mock__summary">
+                            <div class="report-mock__header">
+                                <div class="report-mock__sent">📧 Rapport sendt 21:45</div>
                             </div>
 
-                            <div style="margin:8px 0;color:#666;font-size:14px">
+                            <div class="report-mock__details">
                                 <strong>Location:</strong> SOHO<br>
                                 <strong>Task:</strong> Let Rengøring<br>
                                 <strong>Address:</strong> Klosterstræde 9, 1157 København K
                             </div>
 
-                            <div style="margin:12px 0;padding:8px;background:white;border-radius:4px">
-                                <div style="color:#666;margin:4px 0;font-size:13px">⏰ Start: 17:30 | Slut: 21:30</div>
-                                <div style="color:#22c55e;margin:4px 0;font-size:13px">✅ Status: Udført</div>
-                                <div style="color:#344767;margin:4px 0;font-size:13px">👤 Udført af: Diya Phuyal</div>
+                            <div class="report-mock__times">
+                                <div class="report-mock__line">⏰ Start: 17:30 | Slut: 21:30</div>
+                                <div class="report-mock__line report-mock__line--done">✅ Status: Udført</div>
+                                <div class="report-mock__line report-mock__line--worker">👤 Udført af: Diya Phuyal</div>
                             </div>
 
-                            <div style="background:#e8f5e8;padding:8px;border-radius:4px;margin-top:12px;text-align:center">
-                                <div style="color:#22c55e;font-size:12px;font-weight:500">📎 15 billeder vedhæftet</div>
+                            <div class="report-mock__attachments">
+                                <div class="report-mock__attachments-label">📎 15 billeder vedhæftet</div>
                             </div>
                         </div>
 
-                        <div style="padding:10px; width: 100%;">
-                            <div style="color:#666;margin-bottom:8px;text-align:center;font-weight:500">Billeder:</div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
-                                <div style="width:100%;height:40px;background:#ddd;border-radius:3px;border:1px solid #ccc"></div>
+                        <div class="report-mock__photos">
+                            <div class="report-mock__photos-title">Billeder:</div>
+                            <div class="report-mock__photo-grid">
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
+                                <div class="report-mock__photo"></div>
                             </div>
                         </div>
                     </div>

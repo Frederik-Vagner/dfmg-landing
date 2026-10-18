@@ -1,0 +1,140 @@
+/* ========================================
+   ERHVERVSRENGØRING — page styles
+   The app mockups drawn in the "Kalender Overblik" and "Slutrapport"
+   panels. The rest of the page still lives in components/rengoering.css
+   (legacy layer).
+   ======================================== */
+
+@layer pages {
+
+/* ── Schedule mockup ── */
+.schedule-mock {
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.schedule-mock__month {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--charcoal);
+}
+
+/* Seven columns; the wide ones are the days with a booked visit. */
+.schedule-mock__grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 0.5fr 1.5fr 0.5fr 0.5fr 1.5fr;
+    gap: 3px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.schedule-mock__weekday {
+    font-weight: 600;
+    padding: 8px;
+}
+
+.schedule-mock__day {
+    padding: 8px;
+}
+
+.schedule-mock__visit {
+    color: var(--white);
+    border-radius: 10px;
+    padding: 3px 0;
+    line-height: 1.2;
+}
+
+.schedule-mock__visit--completed { background: var(--success); }
+.schedule-mock__visit--upcoming { background: var(--amber); }
+
+/* ── Report mockup ── */
+.report-mock {
+    display: flex;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+.report-mock__summary {
+    flex: 0 0 70%;
+    background: var(--mockup-surface);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--charcoal);
+}
+
+.report-mock__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.report-mock__sent {
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+.report-mock__details {
+    margin: 8px 0;
+    color: var(--mockup-text);
+    font-size: 14px;
+}
+
+.report-mock__times {
+    margin: 12px 0;
+    padding: 8px;
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.report-mock__line {
+    margin: 4px 0;
+    font-size: 13px;
+    color: var(--mockup-text);
+}
+
+.report-mock__line--done { color: var(--success); }
+.report-mock__line--worker { color: var(--charcoal); }
+
+.report-mock__attachments {
+    background: var(--mockup-success-bg);
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.report-mock__attachments-label {
+    color: var(--success);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.report-mock__photos {
+    padding: 10px;
+    width: 100%;
+}
+
+.report-mock__photos-title {
+    color: var(--mockup-text);
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.report-mock__photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.report-mock__photo {
+    width: 100%;
+    height: 40px;
+    background: var(--mockup-photo);
+    border-radius: 3px;
+    border: 1px solid var(--mockup-photo-border);
+}
+
+}

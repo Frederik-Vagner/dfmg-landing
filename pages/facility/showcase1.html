@@ -3,6 +3,8 @@ layout: base.html
 title: "DFMG - Style Showcase"
 description: "Internal style guide and component showcase."
 robots: "noindex, nofollow"
+pageCss:
+  - showcase
 ---
 
     <!-- Logo — iPhone app icon -->
@@ -14,25 +16,25 @@ robots: "noindex, nofollow"
             <div class="flex flex-wrap gap-2 items-end">
 
                 <!-- On white -->
-                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                    <div style="width: 160px; height: 160px; border-radius: 36px; background: #ffffff; border: 1px solid #e0e0e0; display: flex; align-items: center; justify-content: center;">
-                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="width: 110px; height: 110px; object-fit: contain;">
+                <div class="logo-swatch">
+                    <div class="logo-swatch__tile logo-swatch__tile--app logo-swatch__tile--white">
+                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-swatch__image">
                     </div>
                     <p class="body-sm text-gray">White bg</p>
                 </div>
 
                 <!-- On navy -->
-                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                    <div style="width: 160px; height: 160px; border-radius: 36px; background: #2c3e50; display: flex; align-items: center; justify-content: center;">
-                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="width: 110px; height: 110px; object-fit: contain;">
+                <div class="logo-swatch">
+                    <div class="logo-swatch__tile logo-swatch__tile--app logo-swatch__tile--navy">
+                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-swatch__image">
                     </div>
                     <p class="body-sm text-gray">Navy bg</p>
                 </div>
 
                 <!-- On taupe -->
-                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                    <div style="width: 160px; height: 160px; border-radius: 36px; background: #7a6a58; display: flex; align-items: center; justify-content: center;">
-                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="width: 110px; height: 110px; object-fit: contain;">
+                <div class="logo-swatch">
+                    <div class="logo-swatch__tile logo-swatch__tile--app logo-swatch__tile--taupe">
+                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-swatch__image">
                     </div>
                     <p class="body-sm text-gray">Taupe bg</p>
                 </div>
@@ -53,25 +55,25 @@ robots: "noindex, nofollow"
             <div class="flex flex-wrap gap-2 items-end mb-4">
 
                 <!-- Circle on white -->
-                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                    <div style="width: 130px; height: 130px; border-radius: 50%; background: #ffffff; border: 1px solid #e0e0e0; display: flex; align-items: center; justify-content: center;">
-                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="width: 90px; height: 90px; object-fit: contain;">
+                <div class="logo-swatch">
+                    <div class="logo-swatch__tile logo-swatch__tile--profile logo-swatch__tile--white">
+                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-swatch__image">
                     </div>
                     <p class="body-sm text-gray">White bg</p>
                 </div>
 
                 <!-- Circle on navy -->
-                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                    <div style="width: 130px; height: 130px; border-radius: 50%; background: #2c3e50; display: flex; align-items: center; justify-content: center;">
-                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="width: 90px; height: 90px; object-fit: contain;">
+                <div class="logo-swatch">
+                    <div class="logo-swatch__tile logo-swatch__tile--profile logo-swatch__tile--navy">
+                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-swatch__image">
                     </div>
                     <p class="body-sm text-gray">Navy bg</p>
                 </div>
 
                 <!-- Circle on taupe -->
-                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                    <div style="width: 130px; height: 130px; border-radius: 50%; background: #7a6a58; display: flex; align-items: center; justify-content: center;">
-                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="width: 90px; height: 90px; object-fit: contain;">
+                <div class="logo-swatch">
+                    <div class="logo-swatch__tile logo-swatch__tile--profile logo-swatch__tile--taupe">
+                        <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-swatch__image">
                     </div>
                     <p class="body-sm text-gray">Taupe bg</p>
                 </div>
@@ -82,19 +84,19 @@ robots: "noindex, nofollow"
             <h3 class="text-charcoal mb-1">Banner</h3>
             <p class="body text-gray mb-3">1584×396px — displayed at 4:1 ratio</p>
 
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="logo-banners">
 
                 <!-- Navy banner -->
-                <div style="width: 100%; max-width: 600px; aspect-ratio: 4/1; border-radius: 8px; background: #2c3e50; display: flex; align-items: center; justify-content: center; gap: 16px;">
-                    <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="height: 60%; object-fit: contain; filter: brightness(0) invert(1);">
-                    <span style="color: #ffffff; font-size: 24px; font-weight: 500; letter-spacing: 4px;">DFMG</span>
+                <div class="logo-banner logo-banner--navy">
+                    <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-banner__image">
+                    <span class="logo-banner__wordmark">DFMG</span>
                 </div>
                 <p class="body-sm text-gray">Navy banner</p>
 
                 <!-- Light banner -->
-                <div style="width: 100%; max-width: 600px; aspect-ratio: 4/1; border-radius: 8px; background: #f0f4f8; border: 1px solid #e0e0e0; display: flex; align-items: center; justify-content: center; gap: 16px;">
-                    <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" style="height: 60%; object-fit: contain;">
-                    <span style="color: #2c3e50; font-size: 24px; font-weight: 500; letter-spacing: 4px;">DFMG</span>
+                <div class="logo-banner logo-banner--light">
+                    <img src="/images/logos/internal/logoV3trans.webp" alt="DFMG logo" class="logo-banner__image">
+                    <span class="logo-banner__wordmark">DFMG</span>
                 </div>
                 <p class="body-sm text-gray">Light banner</p>
 

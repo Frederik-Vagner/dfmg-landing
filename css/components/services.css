@@ -455,3 +455,16 @@
 }
 
 }
+
+/* Migrated rules (see the layer order in tokens.css). */
+@layer components {
+
+/* Photo behind each service tile (services.html and facility.html). */
+.service-bg--cleaning { background-image: url('/images/service/cleaning.webp'); }
+.service-bg--janitor { background-image: url('/images/service/janitor.webp'); }
+.service-bg--handyman { background-image: url('/images/service/handyman.webp'); }
+.service-bg--delivery { background-image: url('/images/service/delivery.webp'); }
+.service-bg--picoline { background-image: url('/images/service/picoline.webp'); }
+.service-bg--windowcleaning { background-image: url('/images/service/windowcleaning.webp'); }
+
+}

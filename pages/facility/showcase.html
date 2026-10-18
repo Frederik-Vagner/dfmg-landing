@@ -3,6 +3,8 @@ layout: base.html
 title: "DFMG - Style Showcase"
 description: "Internal style guide and component showcase."
 robots: "noindex, nofollow"
+pageCss:
+  - showcase
 ---
 
     <!-- Buttons -->
@@ -46,7 +48,7 @@ robots: "noindex, nofollow"
 
             <!-- Ghost row (on dark) -->
             <h3 class="text-charcoal mb-1">Ghost (dark bg)</h3>
-            <div class="flex flex-wrap gap-1 items-center mb-2 p-2" style="background: var(--bg-gradient-charcoal); border-radius: var(--radius-normal);">
+            <div class="flex flex-wrap gap-1 items-center mb-2 p-2 showcase-dark-panel">
                 <a href="#" class="btn btn--ghost btn--sm">Small</a>
                 <a href="#" class="btn btn--ghost btn--md">Medium</a>
                 <a href="#" class="btn btn--ghost btn--lg">Large</a>
@@ -91,7 +93,7 @@ robots: "noindex, nofollow"
             <!-- Hero Badge -->
             <h3 class="text-charcoal mb-1">Hero Badge</h3>
             <div class="flex flex-wrap gap-2 items-center mb-2">
-                <div class="p-2" style="background: var(--bg-gradient-charcoal); border-radius: var(--radius-normal);">
+                <div class="p-2 showcase-dark-panel">
                     <div class="badge">Hero Badge</div>
                 </div>
                 <div class="badge text-charcoal">Hero Badge (light)</div>
@@ -111,10 +113,10 @@ robots: "noindex, nofollow"
             <!-- Overlay Badges -->
             <h3 class="text-charcoal mb-1">Overlay (positioned over images)</h3>
             <div class="flex gap-2 mb-2">
-                <div style="position: relative; width: 180px; height: 100px; background: var(--bg-light); border-radius: var(--radius-normal);">
+                <div class="showcase-overlay-frame showcase-overlay-frame--light">
                     <div class="badge-inline badge-overlay">Dark</div>
                 </div>
-                <div style="position: relative; width: 180px; height: 100px; background: var(--charcoal); border-radius: var(--radius-normal);">
+                <div class="showcase-overlay-frame showcase-overlay-frame--dark">
                     <div class="badge-inline badge-overlay badge-overlay--light">Light</div>
                 </div>
             </div>

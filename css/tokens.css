@@ -71,6 +71,23 @@
     --text-on-dark: rgba(255, 255, 255, 0.85);
     --text-on-dark-muted: rgba(255, 255, 255, 0.6);
     --text-on-dark-subtle: rgba(255, 255, 255, 0.4);
+    --text-on-dark-soft: rgba(255, 255, 255, 0.7);
+    --icon-on-dark: rgba(255, 255, 255, 0.5);
+    --border-on-dark: rgba(255, 255, 255, 0.2);
+    --placeholder-tint: rgb(16 15 15 / 10%);
+
+    /* App mockups (the schedule and report drawn on the cleaning page) */
+    --mockup-surface: #f8f9fa;
+    --mockup-text: #666666;
+    --mockup-success-bg: #e8f5e8;
+    --mockup-photo: #dddddd;
+    --mockup-photo-border: #cccccc;
+
+    /* Logo swatches (internal showcase page) */
+    --swatch-navy: #2c3e50;
+    --swatch-taupe: #7a6a58;
+    --swatch-light: #f0f4f8;
+    --swatch-border: #e0e0e0;
 
     /* Background Gradients */
     --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);

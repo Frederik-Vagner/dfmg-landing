@@ -76,8 +76,16 @@
     <link rel="stylesheet" href="/css/footer.css">
 
     <!-- Component Stylesheets -->
+    {% if shell == "platform" or shell == "platform-da" %}
+    <link rel="stylesheet" href="/css/components/platform.css">
+    {% endif %}
     {% for css in componentCss %}
     <link rel="stylesheet" href="/css/components/{{ css }}.css">
+    {% endfor %}
+
+    <!-- Page Stylesheets (css/pages, layer "pages") -->
+    {% for css in pageCss %}
+    <link rel="stylesheet" href="/css/pages/{{ css }}.css">
     {% endfor %}
 
     <script src="/js/nav-enhancer.js"></script>

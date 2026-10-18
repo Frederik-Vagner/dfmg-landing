@@ -1,0 +1,12 @@
+/* ========================================
+   KONTAKT — page styles
+   ======================================== */
+
+@layer pages {
+
+/* "Kontakt os" and the other job buttons under the open positions. */
+.job-buttons {
+    gap: 1rem;
+}
+
+}

@@ -1,0 +1,224 @@
+/* ========================================
+   PLATFORM — DFMG Platform (software) pages
+   Loaded on every page under pages/software (see _includes/base.html).
+   ======================================== */
+
+@layer components {
+
+/* ── Hero ── */
+.platform-hero .subtitle {
+    color: var(--text-on-dark-muted);
+}
+
+/* Subpages: less space below the hero than the home page. */
+.platform-hero--page {
+    padding-bottom: 3rem;
+}
+
+/* Thank-you page: a shorter, vertically centred hero. */
+.platform-hero--confirmation {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.confirmation__mark {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Screenshot slot under the home hero. */
+.platform-hero__media {
+    min-height: 400px;
+    margin-top: 3rem;
+}
+
+/* ── Screenshot placeholders ── */
+.screenshot-placeholder__icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.platform-hero__media .screenshot-placeholder__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.walkthrough__media .screenshot-placeholder__icon {
+    font-size: 2rem;
+}
+
+.demo-split__media .screenshot-placeholder__icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+.walkthrough__media { min-height: 280px; }
+.about-story__media { min-height: 350px; }
+.about-tech__media { min-height: 300px; }
+.demo-split__media { min-height: 400px; }
+
+/* ── Feature visuals (the summary panel beside each feature row) ── */
+.feature-visual__title {
+    color: var(--charcoal);
+    font-size: 1.1rem;
+}
+
+.feature-visual__list {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+.feature-visual__step-number {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.feature-visual__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* ── Section titles a step below the default size ── */
+.title--compact { font-size: 1.8rem; }
+.title--small { font-size: 1.6rem; }
+
+/* ── Product walkthrough (home) ── */
+.walkthrough {
+    align-items: center;
+}
+
+.walkthrough__body {
+    color: var(--text-on-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* ── With / without comparison (home) ── */
+.comparison {
+    gap: 3rem;
+}
+
+.comparison__card {
+    background: var(--white);
+}
+
+.comparison__title {
+    margin-bottom: 1rem;
+}
+
+.comparison__title--without { color: var(--red); }
+.comparison__title--with { color: var(--success); }
+
+/* ── Integrations (home) ── */
+.integrations {
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    opacity: 0.5;
+}
+
+.integrations__item {
+    padding: 1.5rem;
+}
+
+.integrations__icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* ── Trust rows ── */
+/* The strip of trust badges directly under a subpage hero. */
+.trust-strip {
+    padding-top: 2.5rem;
+    padding-bottom: 0;
+}
+
+/* Pricing: the trust row sits right under the plans. */
+.trust-section {
+    padding-top: 0;
+}
+
+.trust-row--centered {
+    justify-content: center;
+}
+
+/* Under a CTA's buttons. */
+.trust-row--after-actions {
+    margin-top: 1.5rem;
+}
+
+.trust-row--on-dark .trust-item {
+    color: var(--text-on-dark-soft);
+}
+
+.trust-row--on-dark .trust-item iconify-icon {
+    color: var(--icon-on-dark);
+}
+
+/* ── About: tech list ── */
+.about-tech__list {
+    margin-top: 1rem;
+}
+
+.about-tech__list iconify-icon {
+    color: var(--success);
+}
+
+/* ── Contact: info column ── */
+.contact-info__heading,
+.contact-form__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--charcoal);
+}
+
+.contact-info__heading { margin-bottom: 0.75rem; }
+.contact-form__heading { margin-bottom: 1.25rem; }
+
+.contact-info__intro {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.contact-info__checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.contact-info__checklist li {
+    padding: 0.4rem 0;
+    color: var(--gray);
+}
+
+.contact-info__checklist iconify-icon {
+    color: var(--success);
+    margin-right: 0.75rem;
+}
+
+.contact-info__cards {
+    gap: 0.75rem;
+}
+
+.contact-info__link {
+    color: var(--primary);
+}
+
+/* ── Contact: phone field (country code beside the number) ── */
+.form-group--code { flex: 0 0 30%; }
+.form-group--phone { flex: 1; }
+
+}

@@ -175,3 +175,13 @@
 }
 
 }
+
+/* Migrated rules (see the layer order in tokens.css). */
+@layer components {
+
+/* The middle row of footer links, spaced from the rows above and below. */
+.footer-links__row--spaced {
+    padding: 20px 0;
+}
+
+}

@@ -568,3 +568,12 @@
 }
 
 }
+
+/* Migrated rules (see the layer order in tokens.css). */
+@layer components {
+
+.hero-image--home {
+    background-image: url('/images/service/hero1.jpg');
+}
+
+}

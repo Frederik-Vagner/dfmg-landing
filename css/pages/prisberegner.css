@@ -1,0 +1,15 @@
+/* ========================================
+   PRISBEREGNER — page styles
+   The rest of the calculator still lives in components/calculator.css
+   (legacy layer).
+   ======================================== */
+
+@layer pages {
+
+/* Employee-count field: hidden until "per medarbejder" pricing is picked
+   (js/prisberegner.js shows it by setting display on the element). */
+.employees-field {
+    display: none;
+}
+
+}

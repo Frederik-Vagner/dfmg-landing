@@ -1,7 +1,7 @@
     <!-- Hero -->
-    <section class="platform-hero" style="padding-bottom: 3rem;">
+    <section class="platform-hero platform-hero--page">
         <div class="container">
-            <div class="subtitle" style="color: rgba(255,255,255,0.6);">{{ t.hero.subtitle }}</div>
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
         </div>
@@ -13,16 +13,16 @@
             <div class="flex flex-2">
                 <div>
                     <div class="subtitle text-primary">{{ t.story.subtitle }}</div>
-                    <h2 class="title text-charcoal" style="font-size: 1.8rem;">{{ t.story.title }}</h2>
+                    <h2 class="title title--compact text-charcoal">{{ t.story.title }}</h2>
                     <p class="body text-gray mb-2">{{ t.story.body1 }}</p>
                     <p class="body text-gray mb-2">{{ t.story.body2 }}</p>
                     <p class="body text-gray">{{ t.story.body3 }}</p>
                 </div>
                 <div>
                     <!-- TODO: Replace with team photo or photo of you working -->
-                    <div class="screenshot-placeholder screenshot-placeholder--light" style="min-height: 350px;">
-                        <div style="text-align: center;">
-                            <iconify-icon icon="fluent:camera-20-filled" inline style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
+                    <div class="screenshot-placeholder screenshot-placeholder--light about-story__media">
+                        <div>
+                            <iconify-icon icon="fluent:camera-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                             {{ t.story.placeholder_text }}<br>
                             {# note to self (not rendered): {{ t.story.placeholder_hint }} #}
                         </div>
@@ -63,9 +63,9 @@
             <div class="flex flex-2">
                 <div>
                     <!-- TODO: Replace with simple architecture visual or tech stack diagram -->
-                    <div class="screenshot-placeholder screenshot-placeholder--light" style="min-height: 300px;">
-                        <div style="text-align: center;">
-                            <iconify-icon icon="fluent:organization-20-filled" inline style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></iconify-icon>
+                    <div class="screenshot-placeholder screenshot-placeholder--light about-tech__media">
+                        <div>
+                            <iconify-icon icon="fluent:organization-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                             {{ t.tech.placeholder_text }}<br>
                             {# note to self (not rendered): {{ t.tech.placeholder_hint }} #}
                         </div>
@@ -73,14 +73,14 @@
                 </div>
                 <div>
                     <div class="subtitle text-primary">{{ t.tech.subtitle }}</div>
-                    <h2 class="title text-charcoal" style="font-size: 1.8rem;">{{ t.tech.title }}</h2>
-                    <ul class="list" style="margin-top: 1rem;">
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item1_strong }}</strong> — {{ t.tech.item1_text }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item2_strong }}</strong> — {{ t.tech.item2_text }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item3_strong }}</strong> — {{ t.tech.item3_text }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item4_strong }}</strong> — {{ t.tech.item4_text }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item5_strong }}</strong> — {{ t.tech.item5_text }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline style="color: var(--success);"></iconify-icon> <strong>{{ t.tech.item6_strong }}</strong> — {{ t.tech.item6_text }}</li>
+                    <h2 class="title title--compact text-charcoal">{{ t.tech.title }}</h2>
+                    <ul class="list about-tech__list">
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item1_strong }}</strong> — {{ t.tech.item1_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item2_strong }}</strong> — {{ t.tech.item2_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item3_strong }}</strong> — {{ t.tech.item3_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item4_strong }}</strong> — {{ t.tech.item4_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item5_strong }}</strong> — {{ t.tech.item5_text }}</li>
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <strong>{{ t.tech.item6_strong }}</strong> — {{ t.tech.item6_text }}</li>
                     </ul>
                 </div>
             </div>

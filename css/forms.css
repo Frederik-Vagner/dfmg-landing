@@ -423,3 +423,13 @@
 }
 
 }
+
+/* Migrated rules (see the layer order in tokens.css). */
+@layer components {
+
+/* Hidden until the form is sent; js/components.js shows it. */
+.newsletter-success {
+    display: none;
+}
+
+}
