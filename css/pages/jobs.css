@@ -46,7 +46,7 @@
 
 .job-perk__emoji {
     margin-bottom: 1.5rem;
-    font-size: 3rem;
+    font-size: var(--icon-display);
 }
 
 .job-perk__title {
@@ -69,7 +69,7 @@
     }
 
     .job-perk__emoji {
-        font-size: 2.1rem;
+        font-size: var(--text-3xl);
     }
 }
 

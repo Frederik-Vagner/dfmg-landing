@@ -13,7 +13,7 @@
     gap: 1rem;
     margin-bottom: 1.5rem;
     opacity: 0.9;
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
 }
 
 .breadcrumb a {
@@ -29,7 +29,7 @@
 /* Article listing title (card context) */
 .article-title {
     color: var(--charcoal);
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
     line-height: 1.4;
     margin: unset;
@@ -48,7 +48,7 @@
     align-items: center;
     gap: 0.5rem;
     color: var(--gray-light);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
 }
 
 /* Category-Specific Image Gradients */
@@ -128,8 +128,12 @@
 }
 
 
+/* The article page's own title; cards use .article-title at their size. */
+.article-header .article-title {
+    font-size: var(--heading-1);
+}
+
 .article-title {
-    font-size: 2.5rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
     margin-top: unset;
@@ -150,7 +154,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
 }
 
 .meta-item:last-child {
@@ -185,7 +189,7 @@
 }
 
 .article-excerpt {
-    font-size: 1.25rem;
+    font-size: var(--text-xl);
     color: var(--gray-light);
     font-style: italic;
     line-height: 1.6;
@@ -207,7 +211,7 @@
 }
 
 .article-body h1, .article-body h2 {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     color: var(--charcoal);
     margin: 2rem 0 1rem;
     font-weight: var(--font-weight-bold);
@@ -215,7 +219,7 @@
 }
 
 .article-body h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl);
     color: var(--charcoal);
     margin: 2rem 0 1rem;
     font-weight: var(--font-weight-medium);
@@ -299,7 +303,7 @@
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     color: var(--charcoal);
     opacity: 0.3;
     font-family: serif;
@@ -350,7 +354,7 @@
 .related-image.tips { background: var(--gradient-cyan); }
 
 .related-content h4 {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
     color: var(--charcoal);
     line-height: 1.3;
@@ -368,7 +372,7 @@
 }
 
 .related-meta {
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
     color: var(--gray-light);
 }
 
@@ -389,10 +393,6 @@
 }
 
 @media (max-width: 768px) {
-    .article-title {
-        font-size: 2rem;
-    }
-
     /* Danish compound words ("Implementeringsprocessen") are longer than a
        390px column, so let them break rather than run off the edge. */
     .article-title,

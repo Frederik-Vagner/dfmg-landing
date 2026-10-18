@@ -72,7 +72,7 @@
 }
 
 .service-title {
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-semibold);
     color: var(--white);
     white-space: nowrap;
@@ -154,7 +154,7 @@
 }
 
 .specialomrade-item {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     color: var(--charcoal);
     margin-bottom: 0.3rem;
     padding-left: 1rem;
@@ -167,7 +167,7 @@
     color: var(--charcoal);
     position: absolute;
     left: 0;
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     line-height: 1;
     top: 50%;
     transform: translateY(-55%);
@@ -180,7 +180,7 @@
 .benefits-title {
     margin-bottom: 1rem;
     color: var(--charcoal);
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
 }
 
@@ -193,7 +193,7 @@
 
 .benefits-icon {
     color: var(--charcoal);
-    font-size: 1rem;
+    font-size: var(--text-base);
     background: var(--bg-success-light);
     padding: 0.4rem;
     border-radius: 50%;
@@ -206,7 +206,7 @@
 }
 
 .benefits-text {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     color: var(--charcoal);
     font-weight: var(--font-weight-semibold);
     line-height: 1.4;
@@ -220,7 +220,7 @@
 }
 
 .service-column.expanded .service-title {
-    font-size: 2.5rem;
+    font-size: var(--heading-1);
     margin-bottom: 1rem;
 }
 
@@ -228,7 +228,7 @@
     opacity: 0;
     transform: translateY(20px);
     transition: all var(--transition-normal) 0.2s;
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -297,7 +297,6 @@
     }
 
     .service-title {
-        font-size: 1.3rem;
         color: var(--white);
         white-space: normal;
         width: auto;
@@ -370,7 +369,7 @@
     }
 
     .service-column.expanded .service-title {
-        font-size: 1.3rem;
+        font-size: var(--text-xl);
     }
 
     .expanded-content {

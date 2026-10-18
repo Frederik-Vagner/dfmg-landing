@@ -231,14 +231,6 @@
         gap: 2rem;
     }
 
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-
-    .full-width h1 {
-        font-size: 2.5rem;
-    }
-
     .slide-nav {
         right: 20px;
     }
@@ -247,14 +239,8 @@
 /* Slide headings: only the first slide carries the page's <h1>; the rest are
    <h2> for a valid document outline but keep the same visual weight. */
 .slide h2 {
-    font-size: 2.5rem;
+    font-size: var(--heading-1);
     margin-block: 0.67em; /* samme afstand som den <h1> de erstattede */
-}
-
-@media (max-width: 768px) {
-    .slide .full-width h2 {
-        font-size: 2.5rem;
-    }
 }
 
 /* ========================================

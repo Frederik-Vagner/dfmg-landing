@@ -14,7 +14,7 @@
 }
 
 .estate-hero__title {
-    font-size: 3.5rem;
+    font-size: var(--heading-1);
     font-weight: var(--font-weight-light);
     line-height: 1.1;
     letter-spacing: -2px;
@@ -23,7 +23,7 @@
 .estate-hero__lead {
     margin-bottom: 4rem;
     opacity: 0.9;
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
 }
 
 .estate-hero__aside {
@@ -108,11 +108,11 @@
 }
 
 .estate-case__title {
-    font-size: 2.5rem;
+    font-size: var(--heading-2);
 }
 
 .estate-case__text {
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .estate-case__aside {
@@ -146,10 +146,6 @@
         min-width: 0;
     }
 
-    .estate-hero__title {
-        font-size: 2.3rem;
-    }
-
     .estate-hero__areas {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;
@@ -179,9 +175,6 @@
         min-width: 0;
     }
 
-    .estate-case__title {
-        font-size: 1.9rem;
-    }
 }
 
 }

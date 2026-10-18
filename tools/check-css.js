@@ -14,9 +14,11 @@
 //   unlayered   CSS outside an @layer block. Unlayered CSS outranks every
 //               layer whatever its specificity, which defeats the layer order
 //               declared in css/tokens.css.
-//   counts      inline style="" attributes, !important and hard-coded colours
+//   counts      inline style="" attributes, !important, hard-coded colours
 //               outside css/tokens.css (colours inside url(...) such as inline
-//               SVG images are not CSS values and do not count). These may only
+//               SVG images are not CSS values and do not count) and font sizes
+//               that are not a token from the type scale (an em value, which
+//               sizes an icon to the text around it, is allowed). These may only
 //               go down.
 //
 // The baseline holds today's known debt so the check can be strict about
@@ -167,6 +169,10 @@ function check() {
         hardcodedColours: sourceCss
             .filter(({ f }) => !f.endsWith(path.join("css", "tokens.css")))
             .reduce((n, { css }) => n + (css.replace(/url\((['"])[\s\S]*?\1\)|url\([^)'"]*\)/g, '').match(/#[0-9a-fA-F]{3,8}\b|\brgba?\(|\bhsla?\(/g) || []).length, 0),
+        fontSizeLiterals: sourceCss
+            .filter(({ f }) => !f.endsWith(path.join("css", "tokens.css")))
+            .reduce((n, { css }) => n + [...css.matchAll(/font-size\s*:\s*([^;}]+)/g)]
+                .filter((m) => !/^var\(--(text-|heading-|icon-)/.test(m[1].trim()) && !/^[\d.]+em$/.test(m[1].trim())).length, 0),
     };
 
     return { undefinedClasses, unusedClasses, unlayered, counts, used };

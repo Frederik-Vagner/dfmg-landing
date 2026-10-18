@@ -52,17 +52,17 @@
 /* Size Variants */
 .btn--sm {
     padding: 10px 20px;
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
 }
 
 .btn--md {
     padding: 14px 28px;
-    font-size: 1rem;
+    font-size: var(--text-base);
 }
 
 .btn--lg {
     padding: 16px 32px;
-    font-size: 1.25rem;
+    font-size: var(--text-xl);
 }
 
 .btn--full {
@@ -76,7 +76,7 @@
     border: var(--border-light);
     padding: var(--padding-sm) var(--padding-md);
     border-radius: var(--radius-sm);
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
     color: var(--gray-light);
     cursor: pointer;
@@ -101,7 +101,7 @@
 
 .tab-button--sm {
     padding: 4px 12px;
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
 }
 
 /* ── Icon Circle ── */
@@ -112,7 +112,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     margin: 1rem auto;
 }
 
@@ -187,7 +187,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     color: var(--charcoal);
     transition: all var(--transition-normal);
     box-shadow: none;

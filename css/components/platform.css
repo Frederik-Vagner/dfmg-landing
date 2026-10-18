@@ -23,7 +23,7 @@
 }
 
 .confirmation__mark {
-    font-size: 3rem;
+    font-size: var(--icon-display);
     margin-bottom: 1rem;
 }
 
@@ -36,22 +36,22 @@
 /* ── Screenshot placeholders ── */
 .screenshot-placeholder__icon {
     display: block;
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     margin-bottom: 0.5rem;
 }
 
 .platform-hero__media .screenshot-placeholder__icon {
-    font-size: 3rem;
+    font-size: var(--icon-display);
     margin-bottom: 1rem;
     opacity: 0.5;
 }
 
 .walkthrough__media .screenshot-placeholder__icon {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
 }
 
 .demo-split__media .screenshot-placeholder__icon {
-    font-size: 3rem;
+    font-size: var(--icon-display);
     margin-bottom: 0.75rem;
 }
 
@@ -63,7 +63,7 @@
 /* ── Feature visuals (the summary panel beside each feature row) ── */
 .feature-visual__title {
     color: var(--charcoal);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .feature-visual__list {
@@ -71,7 +71,7 @@
     max-width: 300px;
     margin: 0 auto;
     color: var(--gray);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     line-height: 2;
 }
 
@@ -90,8 +90,8 @@
 }
 
 /* ── Section titles a step below the default size ── */
-.title--compact { font-size: 1.8rem; }
-.title--small { font-size: 1.6rem; }
+.title--compact { font-size: var(--heading-2); }
+.title--small { font-size: var(--text-2xl); }
 
 /* ── Product walkthrough (home) ── */
 .walkthrough {
@@ -133,7 +133,7 @@
 }
 
 .integrations__icon {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -175,7 +175,7 @@
 /* ── Contact: info column ── */
 .contact-info__heading,
 .contact-form__heading {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     font-weight: 700;
     color: var(--charcoal);
 }

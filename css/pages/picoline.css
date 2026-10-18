@@ -81,13 +81,13 @@
 }
 
 .adhoc-intro__title {
-    font-size: 2rem;
+    font-size: var(--heading-2);
 }
 
 .adhoc-intro__text {
     margin: auto;
     max-width: 700px;
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .adhoc-grid {
@@ -108,11 +108,11 @@
 }
 
 .adhoc-card__title {
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
 }
 
 .adhoc-card__text {
-    font-size: 0.95rem;
+    font-size: var(--text-base);
 }
 
 .comparison-pair {
@@ -141,7 +141,7 @@
 }
 
 .comparison-pair__title--without {
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
 }
 
 .comparison-pair__card span {
@@ -180,7 +180,7 @@
 }
 
 .testimonial-card__role {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
 }
 
 @media (max-width: 768px) {

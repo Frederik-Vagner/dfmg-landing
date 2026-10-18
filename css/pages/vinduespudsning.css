@@ -60,7 +60,7 @@
 
 .window-hero__title {
     color: var(--charcoal);
-    font-size: 3.5rem;
+    font-size: var(--heading-1);
     font-weight: var(--font-weight-light);
     line-height: 1;
     letter-spacing: -2px;
@@ -107,10 +107,6 @@
     .window-hero > * {
         flex: 1 1 100%;
         min-width: 0;
-    }
-
-    .window-hero__title {
-        font-size: 2.3rem;
     }
 
     .window-panels {

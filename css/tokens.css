@@ -110,12 +110,21 @@
     --gradient-social: linear-gradient(135deg, var(--primary), #1d4ed8, #1e40af);
     --gradient-cyan: linear-gradient(135deg, var(--cyan), #0891b2);
 
-    /* Typography */
-    --font-size-title: 2.5rem;
-    --font-size-subtitle: 0.9rem;
-    --font-size-body: 1.1rem;
-    --font-size-small: 0.85rem;
-    --font-size-disclaimer: 0.75rem;
+    /* Typography: one scale. Every font-size in the CSS is one of these
+       (or an em value, for an icon sized to the text around it). */
+    --text-2xs: 0.625rem;   /* 10px  only the dense mock-ups of our own screens */
+    --text-xs: 0.75rem;     /* 12px  badges, labels, fine print */
+    --text-sm: 0.875rem;    /* 14px  meta, captions, footer, tables */
+    --text-base: 1rem;      /* 16px  body text, lists, buttons */
+    --text-lg: 1.125rem;    /* 18px  lead and intro text */
+    --text-xl: 1.25rem;     /* 20px  card titles */
+    --text-2xl: 1.5rem;     /* 24px  h3, sub-sections */
+    --text-3xl: 2rem;       /* 32px  large numbers and icons */
+    --text-4xl: 2.5rem;     /* 40px  large icons */
+    --icon-display: 3rem;   /* 48px  the one big decorative icon or mark */
+    /* Headings shrink with the screen, so phones need no override. */
+    --heading-2: clamp(1.75rem, 1.5rem + 1vw, 2rem);    /* 28-32px  h2, section titles */
+    --heading-1: clamp(2rem, 1.4rem + 2.5vw, 2.5rem);   /* 32-40px  h1, page and hero titles */
     --font-weight-light: 200;
     --font-weight-normal: 400;
     --font-weight-semibold: 500;

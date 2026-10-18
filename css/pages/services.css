@@ -53,13 +53,13 @@
 
 .package-stat__value {
     color: var(--success);
-    font-size: 1.8rem;
+    font-size: var(--heading-2);
     font-weight: var(--font-weight-medium);
 }
 
 .package-stat__label {
     color: var(--charcoal);
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
 }
 
 .package-card__actions {

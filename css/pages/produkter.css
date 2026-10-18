@@ -6,7 +6,7 @@
 
 .product-hero__title {
     color: var(--charcoal);
-    font-size: 4rem;
+    font-size: var(--heading-1);
     font-weight: var(--font-weight-bold);
     line-height: 1.1;
 }
@@ -14,7 +14,7 @@
 .product-hero__lead {
     margin-bottom: 4rem;
     color: var(--gray);
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
 }
 
 .product-hero__perks {
@@ -34,7 +34,7 @@
 
 .product-categories__title {
     color: var(--charcoal);
-    font-size: 3rem;
+    font-size: var(--heading-2);
     font-weight: var(--font-weight-light);
     letter-spacing: -1px;
 }
@@ -80,11 +80,11 @@
 }
 
 .category-panel__title {
-    font-size: 1.8rem;
+    font-size: var(--heading-2);
 }
 
 .price-list__title {
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .product-grid {
@@ -107,7 +107,7 @@
 }
 
 .request-card__title {
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
 }
 
 .process-steps {
@@ -137,7 +137,7 @@
 }
 
 .benefit-card__title {
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
 }
 
 .benefit-card__text {
@@ -145,9 +145,6 @@
 }
 
 @media (max-width: 768px) {
-    .product-hero__title {
-        font-size: 2.5rem;
-    }
 
     .product-hero__perks {
         grid-template-columns: minmax(0, 1fr);
@@ -157,10 +154,6 @@
     .product-hero__range {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;
-    }
-
-    .product-categories__title {
-        font-size: 2.1rem;
     }
 
     .product-categories {

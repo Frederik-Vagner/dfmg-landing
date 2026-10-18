@@ -35,8 +35,14 @@
     margin-bottom: 0;
 }
 
+/* A heading in a card is a card title: one step below a section's h3.
+   :where() keeps this at h3's own weight, so a card's title class wins. */
+:where(.card) h3 {
+    font-size: var(--text-xl);
+}
+
 .card iconify-icon {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
 }
 
 .card .subtitle {
@@ -112,14 +118,14 @@
 
 .card--overlay h3 {
     margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-semibold);
     min-height: 1.8rem;
 }
 
 .card--overlay p {
     margin: 0 0 1.5rem 0;
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     line-height: 1.4;
     min-height: 2.66rem;
 }
@@ -154,7 +160,7 @@
 
 .card--media .article-excerpt {
     color: var(--gray-light);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     padding: 0;
@@ -166,7 +172,7 @@
 }
 
 .card--media .article-meta iconify-icon {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
 }
 
 /* Accent card variant (animated top border on hover) */
@@ -232,7 +238,7 @@
     align-items: center;
     gap: 3rem;
     color: var(--gray-light);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     justify-content: center;
     border-top: 1px solid var(--bg-light);
     padding-top: 1rem;
@@ -243,11 +249,11 @@
     align-items: center;
     gap: 0.5rem;
     color: var(--gray-light);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .card--split__title {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     color: var(--charcoal);
     font-weight: var(--font-weight-semibold);
     line-height: 1.2;
@@ -256,7 +262,7 @@
 
 .card--split__excerpt {
     color: var(--gray-light);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     line-height: 1.5;
     margin-bottom: 1.5rem;
 }
@@ -271,7 +277,7 @@
 }
 
 .card--sidebar h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
     margin-bottom: 1rem;
@@ -282,7 +288,7 @@
 
 .card--sidebar h3 iconify-icon {
     color: var(--charcoal);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .card--sidebar ul li {
@@ -303,7 +309,7 @@
 
 .card__content p {
     color: var(--gray-light);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
 }
 
 /* ── Feature card (icon + title + desc) ── */
@@ -342,7 +348,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     margin-bottom: 1rem;
 }
 
@@ -351,18 +357,18 @@
     border-radius: 50%;
     width: 56px;
     height: 56px;
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
 }
 
 .card--feature__title {
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
     color: var(--charcoal);
     margin-bottom: 0.5rem;
 }
 
 .card--feature__desc {
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     color: var(--gray);
     line-height: 1.5;
 }
@@ -404,28 +410,28 @@
 }
 
 .card--tier__name {
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
     margin-bottom: 0.5rem;
 }
 
 .card--tier__desc {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     color: var(--gray);
     margin-bottom: var(--padding-md);
     line-height: 1.5;
 }
 
 .card--tier__price {
-    font-size: 2.5rem;
+    font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
     line-height: 1;
 }
 
 .card--tier__price small {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-normal);
     color: var(--gray);
 }
@@ -504,19 +510,19 @@
 }
 
 .card--staff__name {
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
     margin-bottom: 2px;
 }
 
 .card--staff__detail {
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
     color: var(--gray);
     margin-bottom: 1px;
 }
 
 .card--staff__role {
-    font-size: var(--font-size-disclaimer);
+    font-size: var(--text-xs);
     color: var(--gray);
 }
 
@@ -535,7 +541,7 @@
 
 .card--panel h3 {
     color: var(--charcoal);
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
     margin: 0 0 1rem 0;
 }
@@ -569,7 +575,7 @@
 }
 
 .card--compact h4 {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     margin: 0 0 0.15rem 0;
 }
 
@@ -583,7 +589,7 @@
 }
 
 .stat__value {
-    font-size: 2rem;
+    font-size: var(--heading-2);
     font-weight: var(--font-weight-semibold);
     line-height: 1;
     margin-bottom: 0.5rem;
@@ -591,7 +597,7 @@
 }
 
 .stat__label {
-    font-size: var(--font-size-subtitle);
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -599,7 +605,7 @@
 }
 
 .stat__description {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-light);
     opacity: 0.8;
 }
@@ -612,14 +618,14 @@
 
 .card--price__label {
     color: var(--gray);
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 0.5rem;
 }
 
 .card--price__amount {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);
     color: var(--primary);
 }
@@ -649,7 +655,7 @@
 }
 
 .card--shop-icon {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     color: var(--primary);
     margin-bottom: 1rem;
 }
@@ -657,7 +663,7 @@
 .card--shop-price {
     color: var(--primary);
     font-weight: var(--font-weight-bold);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 /* ── Dashed card (CTA prompt) ── */
@@ -677,7 +683,7 @@
 }
 
 .card--dashed-icon {
-    font-size: 3rem;
+    font-size: var(--icon-display);
     color: var(--primary);
     margin-bottom: 1rem;
 }
@@ -734,7 +740,7 @@
     }
 
     .card--price__amount {
-        font-size: 1.2rem;
+        font-size: var(--text-xl);
     }
 
     .pricing-tiers {
@@ -752,7 +758,7 @@
     }
 
     .card--dashed-icon {
-        font-size: 2rem;
+        font-size: var(--text-3xl);
     }
 
     .card--split {

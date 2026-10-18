@@ -46,7 +46,7 @@
 }
 
 .kontakt-careers__lead {
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .kontakt-careers__subtitle {

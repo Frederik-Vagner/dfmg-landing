@@ -27,7 +27,7 @@
 .checklist > li {
     padding: 0.5rem 0;
     color: var(--charcoal);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -49,7 +49,7 @@
 }
 
 .checklist--compact > li {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
 }
 
 .checklist--success > li > iconify-icon:first-child { color: var(--success); }
@@ -125,7 +125,7 @@
 .toc-list a {
     color: var(--gray-light);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     display: block;
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--bg-light);
@@ -149,7 +149,7 @@
 }
 
 .slide-feature-list li iconify-icon {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     flex-shrink: 0;
 }
 

@@ -56,7 +56,7 @@
     padding: 0.75rem;
     border: 2px solid var(--color-border);
     border-radius: var(--radius-sm);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     font-family: inherit;
     transition: border-color var(--transition-normal);
     width: 80px;
@@ -85,7 +85,7 @@
     padding: 0.25rem 0.5rem;
     transition: all var(--transition-fast);
     align-items: center;
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
 }
 
 .task-item:hover {
@@ -119,7 +119,7 @@
 }
 
 .task-summary-line {
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     color: var(--gray-light);
     border-top: 1px solid var(--bg-light);
     padding-top: 0.5rem;
@@ -134,13 +134,13 @@
 .price-total-line {
     display: flex;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
 }
 
 #monthly-price {
     color: var(--charcoal);
-    font-size: 1.4rem;
+    font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);
 }
 
@@ -149,7 +149,7 @@
 #price td,
 #price label,
 #price span {
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
 }
 
 /* ========================================
@@ -212,7 +212,7 @@
 
 /* generated:start */
 .calc-column__title {
-    font-size: 1.3rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
 }
 

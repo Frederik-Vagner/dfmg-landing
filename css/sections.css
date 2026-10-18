@@ -54,7 +54,7 @@
 
 .platform-hero .title {
     color: var(--white);
-    font-size: 3rem;
+    font-size: var(--heading-1);
     font-weight: var(--font-weight-bold);
     line-height: 1.25;
     margin-bottom: 1rem;
@@ -62,7 +62,7 @@
 
 .platform-hero .body {
     color: var(--text-on-dark);
-    font-size: 1.2rem;
+    font-size: var(--text-xl);
     max-width: 640px;
     margin: 0 auto 2rem;
 }
@@ -85,7 +85,7 @@
 
 .platform-cta .title {
     color: var(--white);
-    font-size: 2rem;
+    font-size: var(--heading-2);
     margin-bottom: 0.75rem;
 }
 
@@ -196,13 +196,13 @@
 }
 
 .cta-center h2 {
-    font-size: 2rem;
+    font-size: var(--heading-2);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 1rem;
 }
 
 .cta-center p {
-    font-size: var(--font-size-body);
+    font-size: var(--text-lg);
     font-weight: var(--font-weight-light);
     opacity: 0.9;
     margin-bottom: 2rem;
@@ -232,7 +232,7 @@
 }
 
 .feature-row__subtitle {
-    font-size: var(--font-size-subtitle);
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -241,14 +241,14 @@
 }
 
 .feature-row__title {
-    font-size: 1.8rem;
+    font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
     margin-bottom: 1rem;
 }
 
 .feature-row__body {
-    font-size: 1.05rem;
+    font-size: var(--text-base);
     color: var(--gray);
     line-height: 1.7;
     margin-bottom: var(--padding-md);
@@ -272,7 +272,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     color: var(--gray);
 }
 
@@ -297,7 +297,7 @@
 
 .callout-box__body {
     color: var(--gray);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     line-height: 1.6;
 }
 
@@ -376,10 +376,6 @@
         padding: 6rem 0 3rem;
     }
 
-    .platform-hero .title {
-        font-size: 2rem;
-    }
-
     .hero-layout::before {
         transform: skewX(-10deg);
         width: 60%;
@@ -436,7 +432,7 @@
 /* ── Aside Note ── */
 .aside-note {
     color: var(--gray-light);
-    font-size: var(--font-size-small);
+    font-size: var(--text-sm);
     font-style: italic;
     text-align: center;
     margin: 2rem 0;
@@ -451,7 +447,7 @@
 
 .aside-note--link iconify-icon {
     color: var(--primary);
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
 }
 
 /* ── Featured Section ── */
@@ -493,7 +489,7 @@
     align-items: center;
     justify-content: center;
     color: var(--text-on-dark-soft);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     border: 1px solid var(--border-on-dark);
 }
 

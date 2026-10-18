@@ -54,7 +54,7 @@
 .footer-description {
     color: var(--white);
     line-height: 1.6;
-    font-size: var(--font-size-subtitle);
+    font-size: var(--text-sm);
 }
 
 .footer-contact a,
@@ -80,7 +80,7 @@
     width: 16px;
     text-align: center;
     color: var(--white);
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
 }
 
 .social-icon {
@@ -92,7 +92,7 @@
     justify-content: center;
     color: var(--white);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: var(--text-base);
     transition: var(--transition-fast);
     margin-top: var(--gap-sm);
     background: var(--overlay-light);
@@ -101,7 +101,7 @@
 .footer-bottom a {
     color: var(--white);
     text-decoration: none;
-    font-size: var(--font-size-subtitle);
+    font-size: var(--text-sm);
     margin-right: var(--gap-lg);
 }
 
@@ -111,7 +111,7 @@
 
 .copyright {
     color: var(--white);
-    font-size: var(--font-size-subtitle);
+    font-size: var(--text-sm);
 }
 
 .footer-logo {
