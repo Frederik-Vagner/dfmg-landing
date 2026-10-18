@@ -3,7 +3,7 @@ const serviceDetails = {
     cleaning: {
         title: "Erhvervsrengøring",
         badge: "Mest Populære",
-        url: "/pages/facility/services/rengoering",
+        url: "/pages/facility/services/rengoering.html",
         description: "Erhvervsrengøring af kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.",
         detailedDescription: "Vores erfarne rengøringsteams leverer konsistent høj kvalitet gennem certificerede processer og miljøvenlige produkter.",
         categories: [
