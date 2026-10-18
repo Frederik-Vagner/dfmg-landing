@@ -196,6 +196,12 @@
 
 .chatbot-container .faq-answer {
     display: none;
+    /* .faq-answer in forms.css is a max-height accordion (max-height: 0,
+       overflow: hidden) that opens via .open. This one opens via display
+       instead, so the clamp has to be released — otherwise the answer stays
+       at zero height and all that shows is the padding. */
+    max-height: none;
+    overflow: visible;
     padding: 16px;
     background: var(--white);
     border-top: var(--border-lighter);
@@ -210,6 +216,9 @@
     line-height: 1.5;
     color: #64748b;
     margin: 0;
+    /* forms.css pads .faq-answer p; the 16px above is the only inset wanted
+       here. */
+    padding: 0;
 }
 
 /* Chat Section */
