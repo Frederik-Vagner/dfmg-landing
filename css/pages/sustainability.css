@@ -1,0 +1,169 @@
+/* ========================================
+   SUSTAINABILITY — styles shared by the four sustainability pages
+   (sustainability, klima, social, governance)
+   ======================================== */
+
+@layer pages {
+
+.slide-card {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.slide-card--compact {
+    padding: 1rem;
+}
+
+.slide-card--row {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.slide-card--spaced {
+    margin-bottom: 4rem;
+}
+
+.slide-card--rule-left {
+    border-left: 4px solid var(--charcoal);
+}
+
+.slide-card--rule-top {
+    border-top: 4px solid var(--charcoal);
+}
+
+.slide-card--rule-bottom {
+    border-bottom: 4px solid var(--charcoal);
+}
+
+.slide-card--rule-top-success {
+    border-top: 4px solid var(--success);
+}
+
+.slide-card--rule-top-primary {
+    border-top: 4px solid var(--primary);
+}
+
+.slide-accent--success {
+    color: var(--success);
+}
+
+.slide-accent--primary {
+    color: var(--primary);
+}
+
+.slide-quote--on-dark {
+    color: var(--white);
+}
+
+.slide-row {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.slide-row--spaced {
+    margin-bottom: 4rem;
+}
+
+.slide-split {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.slide-split > * {
+    flex: 1;
+}
+
+.slide-columns {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.slide-columns > * {
+    flex: 1;
+}
+
+.slide-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.slide-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.slide-card-grid--three {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.slide-card-grid--spaced {
+    margin-bottom: 4rem;
+}
+
+.slide-aside {
+    align-content: center;
+}
+
+.slide-centered {
+    text-align: center;
+}
+
+.slide-lead {
+    margin-bottom: 4rem;
+}
+
+.slide-text--spaced {
+    margin-bottom: 2rem;
+}
+
+.slide-text--loose {
+    margin-bottom: 4rem;
+}
+
+.slide-body {
+    color: var(--gray);
+}
+
+.slide-body--spaced {
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .slide-card--row {
+        flex-wrap: wrap;
+    }
+
+    .slide-row {
+        flex-wrap: wrap;
+    }
+
+    .slide-split {
+        flex-wrap: wrap;
+    }
+
+    .slide-split > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .slide-columns {
+        flex-wrap: wrap;
+    }
+
+    .slide-columns > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .slide-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+}

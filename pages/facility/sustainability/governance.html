@@ -8,6 +8,8 @@ componentCss:
   - slides
 scripts:
   - /js/sustainability-slider.js
+pageCss:
+  - sustainability
 ---
 
     <!-- Vertical Scrolling Container -->
@@ -21,23 +23,23 @@ scripts:
                     <h1>Systematik Skaber Ansvarlighed</h1>
                     <div class="subtitle">Hos DFMG bygger vi governance på transparens, åbenhed og fair forretningsførelse. Vores ERP-system gør os ansvarlige overfor alle - kunder, medarbejdere og samfundet.</div>
 
-                    <div class="flex">
-                        <div class="card bg-gradient-white border-top-charcoal p-1">
+                    <div class="slide-row">
+                        <div class="card slide-card slide-card--compact slide-card--rule-top">
                             <iconify-icon icon="fluent:eye-20-filled" inline></iconify-icon>
                             <h3>Fuldstændig Transparens</h3>
                             <p>Alt dokumenteret og tilgængeligt</p>
                         </div>
-                        <div class="card bg-gradient-white border-top-charcoal p-1">
+                        <div class="card slide-card slide-card--compact slide-card--rule-top">
                             <iconify-icon icon="fluent:handshake-20-filled" inline></iconify-icon>
                             <h3>Åben Kommunikation</h3>
                             <p>Deler tanker og beslutninger</p>
                         </div>
-                        <div class="card bg-gradient-white border-top-charcoal p-1">
+                        <div class="card slide-card slide-card--compact slide-card--rule-top">
                             <iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon>
                             <h3>Fair Konkurrence</h3>
                             <p>Sort arbejde tolereres ikke</p>
                         </div>
-                        <div class="card bg-gradient-white border-top-charcoal p-1">
+                        <div class="card slide-card slide-card--compact slide-card--rule-top">
                             <iconify-icon icon="fluent:data-trending-20-filled" inline></iconify-icon>
                             <h3>Data-Drevet Ansvar</h3>
                             <p>Beslutninger baseret på fakta</p>
@@ -50,44 +52,44 @@ scripts:
         <!-- Slide 2: Empty -->
         <section class="slide">
             <div class="slide-content-wide">
-                <div class="flex flex-2">
-                    <div class="text-center">
+                <div class="slide-split">
+                    <div class="slide-centered">
                         <div class="badge">Data & Transparens</div>
                         <h2>GDPR Excellence Som Konkurrencefordel</h2>
                         <div class="subtitle">Når datasikkerhed bliver til tillid og troværdighed</div>
                         <div class="body">Vi har kigget på de største tech-virksomheder...</div>
 
-                        <div class="flex-col gap-md">
-                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                        <div class="slide-stack">
+                            <div class="card slide-card slide-card--rule-left">
                                 <div class="card--horizontal">
-                                    <iconify-icon icon="fluent:lock-closed-20-filled" inline class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="fluent:lock-closed-20-filled" inline class="slide-accent--primary"></iconify-icon>
                                     <div class="card__content">
                                         <h4>Rollbaseret Adgang</h4>
                                         <p>Kun relevante medarbejdere har adgang til kundedata og adgangskoder</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                            <div class="card slide-card slide-card--rule-left">
                                 <div class="card--horizontal">
-                                    <iconify-icon icon="fluent:key-20-filled" inline class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="fluent:key-20-filled" inline class="slide-accent--primary"></iconify-icon>
                                     <div class="card__content">
                                         <h4>Nøgle-Inventar Tracking</h4>
                                         <p>Systematisk sporbarhed af hvem der har hvilke nøgler med timestamps</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                            <div class="card slide-card slide-card--rule-left">
                                 <div class="card--horizontal">
-                                    <iconify-icon icon="fluent:cloud-20-filled" inline class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="fluent:cloud-20-filled" inline class="slide-accent--primary"></iconify-icon>
                                     <div class="card__content">
                                         <h4>Sikker Hosting</h4>
                                         <p>Heroku + AWS infrastruktur med automatiske backups og 30-dages sletning</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-gradient-white border-left-charcoal p-2">
+                            <div class="card slide-card slide-card--rule-left">
                                 <div class="card--horizontal">
-                                    <iconify-icon icon="fluent:document-text-20-filled" inline class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="fluent:document-text-20-filled" inline class="slide-accent--primary"></iconify-icon>
                                     <div class="card__content">
                                         <h4>Digital Kontrakter</h4>
                                         <p>Integreret kontrakthåndtering fjerner eksterne leverandører og øger sikkerheden</p>
@@ -96,7 +98,7 @@ scripts:
                             </div>
                         </div>
                     </div>
-                    <div class="content-center">
+                    <div class="slide-aside">
                         {# Tomt fotofelt — udkommenteret indtil der er et rigtigt billede.
                            Sæt det ind igen med <img>, eller fjern blokken helt:
                            <div class="slide-photo"><div>photo</div></div> #}
@@ -108,30 +110,30 @@ scripts:
         <!-- Slide 3: Empty -->
         <section class="slide">
             <div class="slide-content-wide">
-                <div class="flex flex-2">
-                    <div class="flex-col gap-md">
-                        <div class="card bg-gradient-white flex p-1">
+                <div class="slide-split">
+                    <div class="slide-stack">
+                        <div class="card slide-card slide-card--compact slide-card--row">
                             <iconify-icon icon="fluent:calculator-20-filled" inline></iconify-icon>
                             <div>
                                 <div>Åben Prisfastsættelse</div>
                                 <div>Kunder kan se præcis hvordan priser beregnes ud fra tidsdata og omkostninger</div>
                             </div>
                         </div>
-                        <div class="card bg-gradient-white flex p-1">
+                        <div class="card slide-card slide-card--compact slide-card--row">
                             <iconify-icon icon="fluent:people-20-filled" inline></iconify-icon>
                             <div>
                                 <div>Involvering I Beslutninger</div>
                                 <div>Medarbejdere forstår virksomhedens udfordringer og tanker bag beslutninger</div>
                             </div>
                         </div>
-                        <div class="card bg-gradient-white flex p-1">
+                        <div class="card slide-card slide-card--compact slide-card--row">
                             <iconify-icon icon="fluent:warning-20-filled" inline></iconify-icon>
                             <div>
                                 <div>Klager Som Læremuligheder</div>
                                 <div>"Det er faktisk det vi gror mest af" - systematisk håndtering og forbedring</div>
                             </div>
                         </div>
-                        <div class="card bg-gradient-white flex p-1">
+                        <div class="card slide-card slide-card--compact slide-card--row">
                             <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
                             <div>
                                 <div>Same-Day Respons</div>
@@ -139,12 +141,12 @@ scripts:
                             </div>
                         </div>
                     </div>
-                    <div class="content-center">
+                    <div class="slide-aside">
                         <div class="badge">Åben Kommunikation</div>
                         <h2>Transparens Som Våben</h2>
                         <div class="subtitle">Vi viser mellemregninger og deler tankeprocesser</div>
                         <p>Mange virksomheder skjuler deres processer. Vi gør det modsatte - <span class="highlight">åbenhed skaber tillid</span> og differentiere os fra konkurrenterne.</p>
-                        <div class="card--quote border-left-charcoal text-white">
+                        <div class="card--quote slide-quote--on-dark">
                             "Jeg er rimelig åben overfor mine kunder og giver dem også gerne mine mellemregninger på hvorfor prisen er som den er."
                         </div>
                         {# Tomt fotofelt — udkommenteret indtil der er et rigtigt billede.
@@ -163,47 +165,47 @@ scripts:
                     <h2>Systematisk Kvalitetssikring</h2>
                     <div class="subtitle">Fra procedurer til performance - alt er dokumenteret og måleligt</div>
 
-                    <div class="grid-2x3 mb-4">
-                        <div class="card bg-gradient-white p-1">
+                    <div class="slide-card-grid slide-card-grid--three slide-card-grid--spaced">
+                        <div class="card slide-card slide-card--compact">
                             <div class="stat">
-                                <div class="stat__value text-success">100%</div>
+                                <div class="stat__value slide-accent--success">100%</div>
                                 <div class="stat__label">Kvalitetsgaranti</div>
                                 <div class="stat__description">Gratis rettelser så hurtigt som muligt hvis standarden ikke nås</div>
                             </div>
                         </div>
 
-                        <div class="card bg-gradient-white p-1">
+                        <div class="card slide-card slide-card--compact">
                             <div class="quality-number slide4">100%</div>
                             <h5>Produkttræning</h5>
                             <p>Alle medarbejdere får grundig gennemgang af procedurer og produkter</p>
                         </div>
 
-                        <div class="card bg-gradient-white p-1">
+                        <div class="card slide-card slide-card--compact">
                             <div class="quality-number slide4">24/7</div>
                             <h5>Backup Netværk</h5>
                             <p>Fuldtids, deltids og trusted partnere sikrer kontinuerlig service</p>
                         </div>
 
-                        <div class="card bg-gradient-white p-1">
+                        <div class="card slide-card slide-card--compact">
                             <div class="quality-number slide4">3</div>
                             <h5>Arbejdsskader Totalt</h5>
                             <p>Kun ødelagte lamper - prompt rapportering til kunder og forsikring</p>
                         </div>
 
-                        <div class="card bg-gradient-white p-1">
+                        <div class="card slide-card slide-card--compact">
                             <div class="quality-number slide4">100%</div>
                             <h5>Sikkerhedsinstruktion</h5>
                             <p>Alle medarbejdere får grundig gennemgang af procedurer og produkter</p>
                         </div>
                     </div>
-                    <div class="flex mb-4">
-                        <div class="card bg-gradient-white p-1">
+                    <div class="slide-row slide-row--spaced">
+                        <div class="card slide-card slide-card--compact">
                             <div class="quality-number slide4">∞</div>
                             <h5>Klage Dokumentation</h5>
                             <p>Systematisk opsamling og læring fra feedback i ERP-systemet</p>
                         </div>
 
-                        <div class="card bg-gradient-white p-1">
+                        <div class="card slide-card slide-card--compact">
                             <div class="quality-number slide4">30</div>
                             <h5>Dages Data Retention</h5>
                             <p>GDPR-compliant sletning med mulighed for forlængelse ved lovkrav</p>
@@ -219,35 +221,35 @@ scripts:
         <!-- Slide 5: Governance i praksis -->
         <section class="slide">
             <div class="slide-content-wide">
-                <div class="flex flex-2">
-                    <div class="content-center">
+                <div class="slide-split">
+                    <div class="slide-aside">
                         <div class="badge">Ansvarlig Drift</div>
                         <h2>Governance I Praksis</h2>
                         <div class="subtitle">Etik, strukturer og ansvar i det daglige arbejde</div>
                         <p>Governance er ikke et dokument i en skuffe. Det er <span class="highlight">de valg vi træffer hver dag</span> — om konkurrence, om systemer og om hvordan vi behandler hinanden.</p>
-                        <div class="grid-2x2">
-                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                        <div class="slide-card-grid">
+                            <div class="card slide-card slide-card--compact slide-card--rule-bottom">
                                 <iconify-icon icon="fluent:scales-20-filled" inline></iconify-icon>
                                 <div>
                                     <div>Fair Konkurrence</div>
                                     <div>Står for etisk forretningsførelse og afslører unfair practices</div>
                                 </div>
                             </div>
-                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                            <div class="card slide-card slide-card--compact slide-card--rule-bottom">
                                 <iconify-icon icon="fluent:settings-20-filled" inline></iconify-icon>
                                 <div>
                                     <div>Strukturer, Ikke Kontrol</div>
                                     <div>ERP-systemet bygger governance-strukturer ind, men brugerne vælger selv at følge dem</div>
                                 </div>
                             </div>
-                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                            <div class="card slide-card slide-card--compact slide-card--rule-bottom">
                                 <iconify-icon icon="fluent:people-settings-20-filled" inline></iconify-icon>
                                 <div>
                                     <div>Supervisor Empowerment</div>
                                     <div>Involverer medarbejdere i virksomhedens udfordringer så de kan handle selvstændigt</div>
                                 </div>
                             </div>
-                            <div class="card bg-gradient-white border-bottom-charcoal p-1">
+                            <div class="card slide-card slide-card--compact slide-card--rule-bottom">
                                 <iconify-icon icon="fluent:arrow-expand-20-filled" inline></iconify-icon>
                                 <div>
                                     <div>Skalerbar Governance</div>
@@ -257,24 +259,24 @@ scripts:
                         </div>
                     </div>
                     <div>
-                        <div class="flex">
-                            <div class="card bg-gradient-white p-1">
-                                <div class="flex">
-                                    <iconify-icon icon="fluent:building-20-filled" inline class="text-primary"></iconify-icon>
+                        <div class="slide-row">
+                            <div class="card slide-card slide-card--compact">
+                                <div class="slide-row">
+                                    <iconify-icon icon="fluent:building-20-filled" inline class="slide-accent--primary"></iconify-icon>
                                     <h3>Fremtidens Facility Management</h3>
                                 </div>
                                 <p>Når vi sælger ERP-systemet bygger vi governance-principper ind fra start. Strukturer der guider mod ansvarlig forretningsførelse.</p>
                             </div>
 
-                            <div class="card bg-gradient-white p-1">
-                                <div class="flex">
-                                    <iconify-icon icon="fluent:building-20-filled" inline class="text-primary"></iconify-icon>
+                            <div class="card slide-card slide-card--compact">
+                                <div class="slide-row">
+                                    <iconify-icon icon="fluent:building-20-filled" inline class="slide-accent--primary"></iconify-icon>
                                     <h3>Enabler, Ikke Dommer</h3>
                                 </div>
                                 <p>Vi skaber værktøjer til ansvarlig drift, men tvinger ikke andre til at følge vores værdier. Valget er deres - konsekvenserne også.</p>
                             </div>
                         </div>
-                        <div class="card--quote border-left-charcoal">
+                        <div class="card--quote">
                             "Sort arbejde tolereres ikke, da virksomheder som gør sig i dette ødelægger det for alle os andre - og det vil være noget som jeg vil afsløre hvis opdaget."
                         </div>
                         {# Tomt fotofelt — udkommenteret indtil der er et rigtigt billede.

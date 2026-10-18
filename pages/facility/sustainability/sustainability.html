@@ -8,6 +8,8 @@ componentCss:
   - slides
 scripts:
   - /js/sustainability-slider.js
+pageCss:
+  - sustainability
 ---
 
     <!-- Horizontal Scrolling Container -->
@@ -16,25 +18,25 @@ scripts:
         <!-- Slide 1: Intro -->
         <section class="slide">
             <div class="slide-content1">
-                <div class="text-center">
+                <div class="slide-centered">
                     <div class="subtitle">Bæredygtighed</div>
-                    <h1 class="title text-charcoal">Ansvarlig Vækst Gennem Systematik</h1>
-                    <div class="body text-gray mb-4">Hos DFMG er bæredygtighed ikke bare et buzzword - det er konkrete handlinger integreret i vores daglige drift. Fra <span class="highlight">100% bilfri transport</span> til systematisk social ansvarlighed.</div>
+                    <h1 class="title">Ansvarlig Vækst Gennem Systematik</h1>
+                    <div class="body slide-body slide-body--spaced">Hos DFMG er bæredygtighed ikke bare et buzzword - det er konkrete handlinger integreret i vores daglige drift. Fra <span class="highlight">100% bilfri transport</span> til systematisk social ansvarlighed.</div>
                 </div>
 
-                    <div class="flex flex-3">
-                        <div class="card bg-gradient-white p-2">
-                            <iconify-icon icon="fluent:leaf-one-20-filled" inline class="text-primary"></iconify-icon>
+                    <div class="slide-columns">
+                        <div class="card slide-card">
+                            <iconify-icon icon="fluent:leaf-one-20-filled" inline class="slide-accent--primary"></iconify-icon>
                             <h3>Grøn Drift</h3>
                             <p>CO2-neutral facility service gennem bilfri transport og miljøvenlige processer</p>
                         </div>
-                            <div class="card bg-gradient-white p-2">
-                            <iconify-icon icon="fluent:people-20-filled" inline class="text-primary"></iconify-icon>
+                            <div class="card slide-card">
+                            <iconify-icon icon="fluent:people-20-filled" inline class="slide-accent--primary"></iconify-icon>
                             <h3>Mennesker Først</h3>
                             <p>Værdifulde medarbejdere og stærke lokalsamfundsrelationer</p>
                         </div>
-                            <div class="card bg-gradient-white p-2">
-                            <iconify-icon icon="fluent:data-trending-20-filled" inline class="text-primary"></iconify-icon>
+                            <div class="card slide-card">
+                            <iconify-icon icon="fluent:data-trending-20-filled" inline class="slide-accent--primary"></iconify-icon>
                             <h3>Systematisk Ansvar</h3>
                             <p>Data-drevet bæredygtighed og transparent rapportering</p>
                         </div>
@@ -47,9 +49,9 @@ scripts:
             <div class="slide-grid">
                 <div class="content-section">
                     <div class="badge">Miljø & Klima</div>
-                    <div class="title text-charcoal">100% Bilfri Facility Service</div>
+                    <div class="title">100% Bilfri Facility Service</div>
                     <div class="subtitle">Vi beviser at høj service og grøn drift går hånd i hånd</div>
-                    <div class="body text-gray">Siden starten har DFMG kørt <span class="highlight">100% bilfri</span> - ikke som et marketingtrick, men som en fundamental del af vores forretningsmodel. Vores medarbejdere bruger offentlig transport og cykler, hvilket reducerer CO2-udslip betydeligt.</div>
+                    <div class="body slide-body">Siden starten har DFMG kørt <span class="highlight">100% bilfri</span> - ikke som et marketingtrick, men som en fundamental del af vores forretningsmodel. Vores medarbejdere bruger offentlig transport og cykler, hvilket reducerer CO2-udslip betydeligt.</div>
                 </div>
                 <div class="slide-visual environment-visual">
                     <div>Miljø & Klima<br>Konkrete Handlinger</div>
@@ -57,14 +59,14 @@ scripts:
                 <div>
                     <ul class="slide-feature-list">
                         <li>
-                            <iconify-icon icon="fluent:vehicle-bicycle-20-filled" inline class="text-success"></iconify-icon>
+                            <iconify-icon icon="fluent:vehicle-bicycle-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div class="feature-content">
                                 <h3>Bilfri Transport Policy</h3>
                                 <h4>Alle DFMG medarbejdere transporterer sig bilfrit - cykler, offentlig transport og til fods</h4>
                             </div>
                         </li>
                         <li>
-                            <iconify-icon icon="fluent:leaf-one-20-filled" inline class="text-success"></iconify-icon>
+                            <iconify-icon icon="fluent:leaf-one-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div>
                                 <h3>Miljøcertificerede Produkter</h3>
                                 <h4>Kun EU Ecolabel og Svanen-certificerede rengøringsmidler i vores supply chain</h4>
@@ -75,14 +77,14 @@ scripts:
                 <div>
                     <ul class="slide-feature-list">
                         <li>
-                            <iconify-icon icon="fluent:chart-multiple-20-filled" inline class="text-success"></iconify-icon>
+                            <iconify-icon icon="fluent:chart-multiple-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div>
                                 <h3>CO2-Tracking</h3>
                                 <h4>Real-time måling og rapportering af vores klimaaftryk gennem vores ERP-system</h4>
                             </div>
                         </li>
                         <li>
-                            <iconify-icon icon="fluent:arrow-sync-20-filled" inline class="text-success"></iconify-icon>
+                            <iconify-icon icon="fluent:arrow-sync-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div>
                                 <h3>Cirkulære Processer</h3>
                                 <h4>Systematisk affaldssortering og genbrug af materialer i alle vores services</h4>
@@ -133,9 +135,9 @@ scripts:
                 </div>
                 <div class="content-section">
                     <div class="badge">Social Bæredygtighed</div>
-                    <div class="title text-charcoal">Medarbejdere Som Mennesker, Ikke Numre</div>
+                    <div class="title">Medarbejdere Som Mennesker, Ikke Numre</div>
                     <div class="subtitle">Vores systematik skaber overskud til at investere i mennesker</div>
-                    <div class="body text-gray">Når teknologi håndterer administrationen, får vi tid til det vigtige: at værne om vores medarbejdere og bidrage til lokalsamfundet. <span class="highlight">100% af medarbejdere</span> - har egne systemadgange og månedlig feedback.</div>
+                    <div class="body slide-body">Når teknologi håndterer administrationen, får vi tid til det vigtige: at værne om vores medarbejdere og bidrage til lokalsamfundet. <span class="highlight">100% af medarbejdere</span> - har egne systemadgange og månedlig feedback.</div>
                 </div>
             </div>
         </section>
@@ -143,44 +145,44 @@ scripts:
         <!-- Slide 4: Governance -->
         <section class="slide">
             <div class="slide-content4 governance-layout">
-                <div class="text-center">
+                <div class="slide-centered">
                     <div class="badge">Governance</div>
-                    <div class="title text-charcoal">Systematik Skaber Ansvarlighed</div>
-                    <div class="subtitle text-charcoal">Vores ERP-system sikrer transparens, sporbarhed og ansvarlig forretningsførelse i alle led</div>
+                    <div class="title">Systematik Skaber Ansvarlighed</div>
+                    <div class="subtitle">Vores ERP-system sikrer transparens, sporbarhed og ansvarlig forretningsførelse i alle led</div>
                 </div>
 
-                <div class="grid-2x3">
-                    <div class="card bg-gradient-white text-center p-2">
+                <div class="slide-card-grid slide-card-grid--three">
+                    <div class="card slide-card">
                         <div class="governance-number">01 - Transparens</div>
                         <h3>Fuldstændig Sporbarhed</h3>
                         <p>Alle opgaver, tider og omkostninger er dokumenteret og tilgængelige. Kunder kan se præcis hvad de betaler for.</p>
                     </div>
 
-                    <div class="card bg-gradient-white text-center p-2">
+                    <div class="card slide-card">
                         <div class="governance-number">02 - Data Sikkerhed</div>
                         <h3>GDPR Compliance</h3>
                         <p>Systematisk håndtering af persondata med fuld overholdelse af databeskyttelsesregler.</p>
                     </div>
 
-                    <div class="card bg-gradient-white text-center p-2">
+                    <div class="card slide-card">
                         <div class="governance-number">03 - Kvalitetssikring</div>
                         <h3>Objektiv Måling</h3>
                         <p>Performance metrics og KPI'er eliminerer subjektive vurderinger og sikrer fair behandling.</p>
                     </div>
 
-                    <div class="card bg-gradient-white text-center p-2">
+                    <div class="card slide-card">
                         <div class="governance-number">04 - Etisk Drift</div>
                         <h3>Fair Prisfastsættelse</h3>
                         <p>Priser baseret på faktisk tidsforbrug og data - ikke gætværk eller tilfældige estimater.</p>
                     </div>
 
-                    <div class="card bg-gradient-white text-center p-2">
+                    <div class="card slide-card">
                         <div class="governance-number">05 - Kontinuitet</div>
                         <h3>Risikostyring</h3>
                         <p>Systematiske backup-procedurer sikrer service selv ved sygdom eller personaleskift.</p>
                     </div>
 
-                    <div class="card bg-gradient-white text-center p-2">
+                    <div class="card slide-card">
                         <div class="governance-number">06 - Innovation</div>
                         <h3>Ansvarlig Teknologi</h3>
                         <p>Teknologi der styrker mennesker fremfor at erstatte dem - fremtidssikret og menneskelig.</p>
