@@ -13,7 +13,6 @@
       "body-sm",
       "border-top-governance",
       "bot-space2",
-      "card-horizontal",
       "case-hero",
       "case-sidebar",
       "contact-box",
@@ -57,9 +56,9 @@
       "why-choose-content"
     ],
     "unused": [
-      "badge--glass",
       "bg-charcoal",
       "bg-gradient-charcoal",
+      "bg-gradient-metal",
       "bg-gradient-success",
       "bg-red",
       "bg-success",
@@ -92,6 +91,7 @@
       "p-4",
       "slide-photo",
       "text-5xl",
+      "text-6xl",
       "text-md",
       "text-xl",
       "tracking-tight"

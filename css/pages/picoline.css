@@ -50,14 +50,6 @@
     font-weight: var(--font-weight-medium);
 }
 
-.tab-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 4rem;
-    gap: 2rem;
-}
-
 .task-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,7 +93,6 @@
 .adhoc-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -216,7 +207,6 @@
 
     .adhoc-grid {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
     }
 
     .comparison-pair {

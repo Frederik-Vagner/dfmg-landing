@@ -62,6 +62,14 @@
     gap: 1rem;
 }
 
+.tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
 .cta-actions {
     display: flex;
     gap: var(--layout-gap, var(--gap-lg));
@@ -84,11 +92,6 @@
 
 .process-step__title {
     font-size: 1.3rem;
-}
-
-.badge--glass {
-    background: var(--overlay-light);
-    border: 1px solid var(--border-on-dark);
 }
 
 .badge--light {

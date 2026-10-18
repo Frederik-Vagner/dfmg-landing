@@ -5,25 +5,27 @@ description: "Professionelle håndværkere til alle opgaver. Fra små reparation
 scripts:
   - /js/carousel.js
   - /js/tab-switcher.js
+pageCss:
+  - handyman
 ---
 
 <!-- Hero Section -->
 <section class="first hero-layout">
     <div class="container">
-        <div class="flex hero-content">
+        <div class="hero-content handyman-hero">
             <div>
-                <h1 class="title text-charcoal">Handyman Service</h1>
-                <p class="body text-gray mb-4">Professionelle håndværkere der løser alle jeres små og store opgaver. Fra akutte reparationer til planlagte vedligeholdelsesprojekter.</p>
+                <h1 class="title handyman-hero__title">Handyman Service</h1>
+                <p class="body handyman-hero__lead">Professionelle håndværkere der løser alle jeres små og store opgaver. Fra akutte reparationer til planlagte vedligeholdelsesprojekter.</p>
 
-                <div class="grid-2x3">
-                    <div class="badge bg-gradient-metal">VVS & El-arbejde</div>
-                    <div class="badge bg-gradient-metal">Maling & Spartling</div>
-                    <div class="badge bg-gradient-metal">Møbelmontering</div>
-                    <div class="badge bg-gradient-metal">Akut Service</div>
-                    <div class="badge bg-gradient-metal">Små Renoveringer</div>
+                <div class="handyman-hero__trades">
+                    <div class="badge">VVS & El-arbejde</div>
+                    <div class="badge">Maling & Spartling</div>
+                    <div class="badge">Møbelmontering</div>
+                    <div class="badge">Akut Service</div>
+                    <div class="badge">Små Renoveringer</div>
                 </div>
 
-                <div class="flex gap-1 flex-wrap">
+                <div class="handyman-hero__actions">
                     <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md">
                         <iconify-icon icon="fluent:wrench-20-filled" inline></iconify-icon>
                         Book Handyman
@@ -36,30 +38,30 @@ scripts:
             </div>
 
             <div>
-                <div class="grid-2x3">
-                    <div class="card p-1 bg-gradient-white text-center">
-                        <iconify-icon icon="fluent:hammer-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                        <h4 class="text-charcoal">Hammer</h4>
+                <div class="handyman-hero__tools">
+                    <div class="card icon-tile">
+                        <iconify-icon icon="fluent:hammer-20-filled" inline class="icon-tile__icon"></iconify-icon>
+                        <h4>Hammer</h4>
                     </div>
-                    <div class="card p-1 bg-gradient-white text-center">
-                        <iconify-icon icon="fluent:screwdriver-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                        <h4 class="text-charcoal">Skruetrækker</h4>
+                    <div class="card icon-tile">
+                        <iconify-icon icon="fluent:screwdriver-20-filled" inline class="icon-tile__icon"></iconify-icon>
+                        <h4>Skruetrækker</h4>
                     </div>
-                    <div class="card p-1 bg-gradient-white text-center">
-                        <iconify-icon icon="fluent:wrench-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                        <h4 class="text-charcoal">Skruenøgle</h4>
+                    <div class="card icon-tile">
+                        <iconify-icon icon="fluent:wrench-20-filled" inline class="icon-tile__icon"></iconify-icon>
+                        <h4>Skruenøgle</h4>
                     </div>
-                    <div class="card p-1 bg-gradient-white text-center">
-                        <iconify-icon icon="fluent:paint-brush-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                        <h4 class="text-charcoal">Pensel</h4>
+                    <div class="card icon-tile">
+                        <iconify-icon icon="fluent:paint-brush-20-filled" inline class="icon-tile__icon"></iconify-icon>
+                        <h4>Pensel</h4>
                     </div>
-                    <div class="card p-1 bg-gradient-white text-center">
-                        <iconify-icon icon="fluent:wrench-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                        <h4 class="text-charcoal">Boremaskine</h4>
+                    <div class="card icon-tile">
+                        <iconify-icon icon="fluent:wrench-20-filled" inline class="icon-tile__icon"></iconify-icon>
+                        <h4>Boremaskine</h4>
                     </div>
-                    <div class="card p-1 bg-gradient-white text-center">
-                        <iconify-icon icon="fluent:ruler-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                        <h4 class="text-charcoal">Målestok</h4>
+                    <div class="card icon-tile">
+                        <iconify-icon icon="fluent:ruler-20-filled" inline class="icon-tile__icon"></iconify-icon>
+                        <h4>Målestok</h4>
                     </div>
                 </div>
             </div>
@@ -70,18 +72,18 @@ scripts:
 <!-- Services Carousel Section -->
 <section class="section" id="services">
     <div class="container">
-        <div class="text-center mb-4">
-            <div class="subtitle text-success">VORES SPECIALER</div>
-            <h2 class="text-charcoal">Handyman Services for Alle Behov</h2>
-            <p class="body text-gray">Fra småopgaver til større projekter - vores erfarne håndværkere står klar med det rette værktøj og knowhow</p>
+        <div class="section-intro">
+            <div class="subtitle section-intro__eyebrow">VORES SPECIALER</div>
+            <h2 class="section-intro__title">Handyman Services for Alle Behov</h2>
+            <p class="body section-intro__text">Fra småopgaver til større projekter - vores erfarne håndværkere står klar med det rette værktøj og knowhow</p>
         </div>
 
         <div class="carousel" data-carousel>
             <div class="carousel-track">
                 <div class="card card--accent">
-                    <iconify-icon icon="fluent:drop-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                    <h3 class="text-charcoal">VVS Småopgaver</h3>
-                    <p class="text-gray mb-2">Reparation af vandhaner, toilet, afløb og andre mindre VVS-opgaver der holder jeres faciliteter funktionsdygtige.</p>
+                    <iconify-icon icon="fluent:drop-20-filled" inline class="trade-card__icon"></iconify-icon>
+                    <h3 class="trade-card__title">VVS Småopgaver</h3>
+                    <p class="trade-card__text">Reparation af vandhaner, toilet, afløb og andre mindre VVS-opgaver der holder jeres faciliteter funktionsdygtige.</p>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Vandhane reparationer</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Toilet og cisterne</li>
@@ -92,9 +94,9 @@ scripts:
                 </div>
 
                 <div class="card card--accent">
-                    <iconify-icon icon="fluent:flash-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                    <h3 class="text-charcoal">El-arbejde & Belysning</h3>
-                    <p class="text-gray mb-2">Sikker håndtering af mindre el-opgaver, udskiftning af belysning og installeringer af strømforsyning.</p>
+                    <iconify-icon icon="fluent:flash-20-filled" inline class="trade-card__icon"></iconify-icon>
+                    <h3 class="trade-card__title">El-arbejde & Belysning</h3>
+                    <p class="trade-card__text">Sikker håndtering af mindre el-opgaver, udskiftning af belysning og installeringer af strømforsyning.</p>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Udskiftning af pærer og armaturer</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kontakter og afbrydere</li>
@@ -105,9 +107,9 @@ scripts:
                 </div>
 
                 <div class="card card--accent">
-                    <iconify-icon icon="fluent:paint-brush-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                    <h3 class="text-charcoal">Maling & Spartling</h3>
-                    <p class="text-gray mb-2">Professionel maling af vægge, lofter og træværk samt reparation af huller og skader i gips og puds.</p>
+                    <iconify-icon icon="fluent:paint-brush-20-filled" inline class="trade-card__icon"></iconify-icon>
+                    <h3 class="trade-card__title">Maling & Spartling</h3>
+                    <p class="trade-card__text">Professionel maling af vægge, lofter og træværk samt reparation af huller og skader i gips og puds.</p>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Væg- og loftsmaling</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Spartling af huller</li>
@@ -118,9 +120,9 @@ scripts:
                 </div>
 
                 <div class="card card--accent">
-                    <iconify-icon icon="fluent:couch-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                    <h3 class="text-charcoal">Møbelmontering</h3>
-                    <p class="text-gray mb-2">Montering af kontormøbler, hylder, skabe og andre møbler til jeres arbejdsplads eller private hjem.</p>
+                    <iconify-icon icon="fluent:couch-20-filled" inline class="trade-card__icon"></iconify-icon>
+                    <h3 class="trade-card__title">Møbelmontering</h3>
+                    <p class="trade-card__text">Montering af kontormøbler, hylder, skabe og andre møbler til jeres arbejdsplads eller private hjem.</p>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kontormøbler og skriveborde</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Hylder og opbevaring</li>
@@ -131,9 +133,9 @@ scripts:
                 </div>
 
                 <div class="card card--accent">
-                    <iconify-icon icon="fluent:door-arrow-right-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                    <h3 class="text-charcoal">Døre & Vinduer</h3>
-                    <p class="text-gray mb-2">Reparation og justering af døre og vinduer, udskiftning af låse og håndtag samt montering af nye elementer.</p>
+                    <iconify-icon icon="fluent:door-arrow-right-20-filled" inline class="trade-card__icon"></iconify-icon>
+                    <h3 class="trade-card__title">Døre & Vinduer</h3>
+                    <p class="trade-card__text">Reparation og justering af døre og vinduer, udskiftning af låse og håndtag samt montering af nye elementer.</p>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Dørjustering og reparation</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Låseskift og nøgler</li>
@@ -144,9 +146,9 @@ scripts:
                 </div>
 
                 <div class="card card--accent">
-                    <iconify-icon icon="fluent:grid-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                    <h3 class="text-charcoal">Fliser & Badeværelse</h3>
-                    <p class="text-gray mb-2">Reparation og udskiftning af fliser, fugning og mindre renoveringer i badeværelser og køkkener.</p>
+                    <iconify-icon icon="fluent:grid-20-filled" inline class="trade-card__icon"></iconify-icon>
+                    <h3 class="trade-card__title">Fliser & Badeværelse</h3>
+                    <p class="trade-card__text">Reparation og udskiftning af fliser, fugning og mindre renoveringer i badeværelser og køkkener.</p>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Flisereparationer</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Ny fugning</li>
@@ -172,47 +174,47 @@ scripts:
 <!-- Skills Section -->
 <section class="section">
     <div class="container">
-        <div class="text-center mb-4">
-            <div class="subtitle text-success">VORES KOMPETENCER</div>
-            <h2 class="text-charcoal">Erfarne Håndværkere med Bred Ekspertise</h2>
-            <p class="body text-gray">Vores team dækker alle almindelige håndværksfag og har den rette uddannelse og certificering til at løse opgaverne sikkert</p>
+        <div class="section-intro">
+            <div class="subtitle section-intro__eyebrow">VORES KOMPETENCER</div>
+            <h2 class="section-intro__title">Erfarne Håndværkere med Bred Ekspertise</h2>
+            <p class="body section-intro__text">Vores team dækker alle almindelige håndværksfag og har den rette uddannelse og certificering til at løse opgaverne sikkert</p>
         </div>
 
-        <div class="grid-2x3">
-            <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <iconify-icon icon="fluent:wrench-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                <h4 class="text-charcoal">Almindeligt Håndværk</h4>
-                <p class="text-gray">Generelle reparationer og vedligeholdelse</p>
+        <div class="skill-grid">
+            <div class="card skill-card">
+                <iconify-icon icon="fluent:wrench-20-filled" inline class="skill-card__icon"></iconify-icon>
+                <h4>Almindeligt Håndværk</h4>
+                <p>Generelle reparationer og vedligeholdelse</p>
             </div>
 
-            <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <iconify-icon icon="fluent:hammer-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                <h4 class="text-charcoal">Tømrerarbejde</h4>
-                <p class="text-gray">Træarbejde, montering og reparationer</p>
+            <div class="card skill-card">
+                <iconify-icon icon="fluent:hammer-20-filled" inline class="skill-card__icon"></iconify-icon>
+                <h4>Tømrerarbejde</h4>
+                <p>Træarbejde, montering og reparationer</p>
             </div>
 
-            <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <iconify-icon icon="fluent:paint-brush-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                <h4 class="text-charcoal">Malerarbejde</h4>
-                <p class="text-gray">Professionel maling og overfladebehandling</p>
+            <div class="card skill-card">
+                <iconify-icon icon="fluent:paint-brush-20-filled" inline class="skill-card__icon"></iconify-icon>
+                <h4>Malerarbejde</h4>
+                <p>Professionel maling og overfladebehandling</p>
             </div>
 
-            <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <iconify-icon icon="fluent:plug-connected-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                <h4 class="text-charcoal">El-installation</h4>
-                <p class="text-gray">Mindre el-opgaver og belysning</p>
+            <div class="card skill-card">
+                <iconify-icon icon="fluent:plug-connected-20-filled" inline class="skill-card__icon"></iconify-icon>
+                <h4>El-installation</h4>
+                <p>Mindre el-opgaver og belysning</p>
             </div>
 
-            <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <iconify-icon icon="fluent:drop-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                <h4 class="text-charcoal">VVS Service</h4>
-                <p class="text-gray">Rørarbejde og sanitære installationer</p>
+            <div class="card skill-card">
+                <iconify-icon icon="fluent:drop-20-filled" inline class="skill-card__icon"></iconify-icon>
+                <h4>VVS Service</h4>
+                <p>Rørarbejde og sanitære installationer</p>
             </div>
 
-            <div class="card p-2 bg-gradient-white text-center border-top-success">
-                <iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="text-success text-6xl mb-1"></iconify-icon>
-                <h4 class="text-charcoal">Maskinreparation</h4>
-                <p class="text-gray">Service på udstyr og maskiner</p>
+            <div class="card skill-card">
+                <iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="skill-card__icon"></iconify-icon>
+                <h4>Maskinreparation</h4>
+                <p>Service på udstyr og maskiner</p>
             </div>
         </div>
     </div>
@@ -221,26 +223,26 @@ scripts:
 <!-- Gallery Section with Tabs -->
 <section class="section" id="gallery">
     <div class="container-narrow">
-        <div class="text-center mb-4">
-            <div class="subtitle text-success">VORES ARBEJDE</div>
-            <h2 class="text-charcoal">Før & Efter Transformationer</h2>
-            <p class="body text-gray">Se eksempler på vores håndværksarbejde og de resultater vi leverer til vores kunder</p>
+        <div class="section-intro">
+            <div class="subtitle section-intro__eyebrow">VORES ARBEJDE</div>
+            <h2 class="section-intro__title">Før & Efter Transformationer</h2>
+            <p class="body section-intro__text">Se eksempler på vores håndværksarbejde og de resultater vi leverer til vores kunder</p>
         </div>
 
         <div>
-            <div class="flex m-2 justify-center gap-2 flex-wrap mb-4">
+            <div class="tab-bar">
                 <div class="tab-button active" data-tab="renovation">Renovering</div>
                 <div class="tab-button" data-tab="furniture">Møbelmontering</div>
                 <div class="tab-button" data-tab="painting">Maling</div>
             </div>
 
             <div class="toggle-content active" id="renovation">
-                <div class="mb-4">
-                    <h3 class="text-charcoal">Komplet Toiletrum Renovering</h3>
-                    <p class="body text-gray mb-2">Vi udførte en total renovering af toiletfaciliteterne på Adnami's hovedkontor, inkl. nye fliser, fugning, maling og VVS-arbejde.</p>
-                    <div class="flex flex-2">
-                        <div class="card bg-gradient-white border-left-success p-2">
-                            <h4 class="text-charcoal">Opgaver udført:</h4>
+                <div class="project">
+                    <h3 class="project__title">Komplet Toiletrum Renovering</h3>
+                    <p class="body project__text">Vi udførte en total renovering af toiletfaciliteterne på Adnami's hovedkontor, inkl. nye fliser, fugning, maling og VVS-arbejde.</p>
+                    <div class="project__layout">
+                        <div class="card project__tasks">
+                            <h4>Opgaver udført:</h4>
                             <ul class="feature-list list--success">
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fjernelse af gamle fliser og fuge</li>
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Nyt flisearbejde på vægge og gulv</li>
@@ -249,12 +251,12 @@ scripts:
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Installation af nyt inventar</li>
                             </ul>
                         </div>
-                        <div class="flex">
-                            <div class="card bg-gradient-white">
+                        <div class="project__photos">
+                            <div class="card project__photo">
                                 <div class="badge-inline badge-overlay">FØR</div>
                                 <div>Nedslidt kontor toiletrum</div>
                             </div>
-                            <div class="card bg-gradient-white">
+                            <div class="card project__photo">
                                 <div class="badge-inline badge-overlay">EFTER</div>
                                 <div>Renoveret moderne toiletrum</div>
                             </div>
@@ -264,12 +266,12 @@ scripts:
             </div>
 
             <div class="toggle-content" id="furniture">
-                <div class="mb-4">
-                    <h3 class="text-charcoal">Komplet Kontorindretning</h3>
-                    <p class="body text-gray mb-2">Montering af over 25 arbejdspladser inkl. skriveborde, stole, opbevaring og fællesområde møbler for SOHO's nye lokaler.</p>
-                    <div class="flex flex-2">
-                        <div class="card bg-gradient-white border-left-success p-2">
-                            <h4 class="text-charcoal">Opgaver udført:</h4>
+                <div class="project">
+                    <h3 class="project__title">Komplet Kontorindretning</h3>
+                    <p class="body project__text">Montering af over 25 arbejdspladser inkl. skriveborde, stole, opbevaring og fællesområde møbler for SOHO's nye lokaler.</p>
+                    <div class="project__layout">
+                        <div class="card project__tasks">
+                            <h4>Opgaver udført:</h4>
                             <ul class="feature-list list--success">
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> 25 arbejdspladser med skriveborde</li>
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Ergonomiske kontorstole</li>
@@ -278,12 +280,12 @@ scripts:
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Koordineret leverance og montering</li>
                             </ul>
                         </div>
-                        <div class="flex">
-                            <div class="card bg-gradient-white">
+                        <div class="project__photos">
+                            <div class="card project__photo">
                                 <div class="badge-inline badge-overlay">FØR</div>
                                 <div>Tomt kontorlokale før indretning</div>
                             </div>
-                            <div class="card bg-gradient-white">
+                            <div class="card project__photo">
                                 <div class="badge-inline badge-overlay">EFTER</div>
                                 <div>Fuldt møbleret kontorarbejdsplads</div>
                             </div>
@@ -293,12 +295,12 @@ scripts:
             </div>
 
             <div class="toggle-content" id="painting">
-                <div class="mb-4">
-                    <h3 class="text-charcoal">Professionel Maling af Kontorfaciliteter</h3>
-                    <p class="body text-gray mb-2">Oprydning og maling af hele kontoretagen hos Soho, inkl. vægge, lofter og træværk i deres corporate farver.</p>
-                    <div class="flex flex-2">
-                        <div class="card bg-gradient-white border-left-success p-2">
-                            <h4 class="text-charcoal">Opgaver udført:</h4>
+                <div class="project">
+                    <h3 class="project__title">Professionel Maling af Kontorfaciliteter</h3>
+                    <p class="body project__text">Oprydning og maling af hele kontoretagen hos Soho, inkl. vægge, lofter og træværk i deres corporate farver.</p>
+                    <div class="project__layout">
+                        <div class="card project__tasks">
+                            <h4>Opgaver udført:</h4>
                             <ul class="feature-list list--success">
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Spartling og forberedelse</li>
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Professionel grundmaling</li>
@@ -307,12 +309,12 @@ scripts:
                                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Oprydning og beskyttelse</li>
                             </ul>
                         </div>
-                        <div class="flex">
-                            <div class="card bg-gradient-white">
+                        <div class="project__photos">
+                            <div class="card project__photo">
                                 <div class="badge-inline badge-overlay">FØR</div>
                                 <div>Falmet og beskidet væg</div>
                             </div>
-                            <div class="card bg-gradient-white">
+                            <div class="card project__photo">
                                 <div class="badge-inline badge-overlay">EFTER</div>
                                 <div>Nymalet væg i corporate farver</div>
                             </div>
@@ -327,39 +329,39 @@ scripts:
 <!-- Process Section -->
 <section class="section section--charcoal" id="process">
     <div class="container">
-        <div class="text-center mb-4">
-            <div class="subtitle text-success">VORES METODE</div>
-            <h2 class="text-white">Fra Ide til Færdigt Resultat</h2>
-            <p class="body text-white">En struktureret proces der sikrer kvalitet, overholdelse af tidsfrister og dit fulde tilfredshed</p>
+        <div class="section-intro">
+            <div class="subtitle section-intro__eyebrow">VORES METODE</div>
+            <h2 class="section-intro__title section-intro__title--on-dark">Fra Ide til Færdigt Resultat</h2>
+            <p class="body section-intro__text section-intro__text--on-dark">En struktureret proces der sikrer kvalitet, overholdelse af tidsfrister og dit fulde tilfredshed</p>
         </div>
 
-        <div class="flex gap-2 flex-wrap justify-center">
-            <div class="card bg-gradient-white p-2 card-horizontal">
-                <h3 class="text-success">1</h3>
+        <div class="handyman-steps">
+            <div class="card handyman-step">
+                <h3>1</h3>
                 <div>
-                    <h4 class="text-charcoal">Konsultation</h4>
-                    <p class="text-gray">Vi gennemgår opgaven og giver dig et fast tilbud</p>
+                    <h4>Konsultation</h4>
+                    <p>Vi gennemgår opgaven og giver dig et fast tilbud</p>
                 </div>
             </div>
-            <div class="card bg-gradient-white p-2 card-horizontal">
-                <h3 class="text-success">2</h3>
+            <div class="card handyman-step">
+                <h3>2</h3>
                 <div>
-                    <h4 class="text-charcoal">Planlægning</h4>
-                    <p class="text-gray">Materialer bestilles og tidsplan aftales</p>
+                    <h4>Planlægning</h4>
+                    <p>Materialer bestilles og tidsplan aftales</p>
                 </div>
             </div>
-            <div class="card bg-gradient-white p-2 card-horizontal">
-                <h3 class="text-success">3</h3>
+            <div class="card handyman-step">
+                <h3>3</h3>
                 <div>
-                    <h4 class="text-charcoal">Udførelse</h4>
-                    <p class="text-gray">Professionel håndværk med højeste kvalitet</p>
+                    <h4>Udførelse</h4>
+                    <p>Professionel håndværk med højeste kvalitet</p>
                 </div>
             </div>
-            <div class="card bg-gradient-white p-2 card-horizontal">
-                <h3 class="text-success">4</h3>
+            <div class="card handyman-step">
+                <h3>4</h3>
                 <div>
-                    <h4 class="text-charcoal">Aflevering</h4>
-                    <p class="text-gray">Kvalitetskontrol og kundetilfredshed</p>
+                    <h4>Aflevering</h4>
+                    <p>Kvalitetskontrol og kundetilfredshed</p>
                 </div>
             </div>
         </div>
@@ -377,15 +379,15 @@ scripts:
     <div class="container">
         <div class="cta-box">
             <div class="cta-left">
-                <h2 class="text-white">Få hjælp til det praktiske – når I har brug for det</h2>
+                <h2>Få hjælp til det praktiske – når I har brug for det</h2>
                 <p>Ingen faste bindinger – vi rykker hurtigt ud, når I har brug for ekstra hænder.</p>
                 <p class="cta-proof">Brugt af <strong>kontorfællesskaber og ejendomsejere i København</strong>.</p>
-                <div class="flex">
+                <div class="cta-actions">
                     <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md">
-                        <iconify-icon icon="fluent:call-20-filled" inline class="mr-05"></iconify-icon>Få et tilbud
+                        <iconify-icon icon="fluent:call-20-filled" inline class="btn__icon"></iconify-icon>Få et tilbud
                     </a>
                     <a href="/pages/facility/kontakt.html" class="btn btn--ghost btn--md">
-                        <iconify-icon icon="fluent:mail-20-filled" inline class="mr-05"></iconify-icon>Kontakt os
+                        <iconify-icon icon="fluent:mail-20-filled" inline class="btn__icon"></iconify-icon>Kontakt os
                     </a>
                 </div>
             </div>

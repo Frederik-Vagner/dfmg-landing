@@ -1,0 +1,167 @@
+/* ========================================
+   HANDYMAN — page styles
+   ======================================== */
+
+@layer pages {
+
+.handyman-hero {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.handyman-hero__title {
+    color: var(--charcoal);
+}
+
+.handyman-hero__lead {
+    margin-bottom: 4rem;
+    color: var(--gray);
+}
+
+.handyman-hero__trades {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.handyman-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.handyman-hero__tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.trade-card__icon {
+    margin-bottom: 1rem;
+    color: var(--success);
+}
+
+.trade-card__title {
+    color: var(--charcoal);
+}
+
+.trade-card__text {
+    color: var(--gray);
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.skill-card {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-top: 4px solid var(--success);
+    text-align: center;
+}
+
+.skill-card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.skill-card__icon {
+    margin-bottom: 1rem;
+    color: var(--success);
+}
+
+.project {
+    margin-bottom: 4rem;
+}
+
+.project__title {
+    color: var(--charcoal);
+}
+
+.project__text {
+    margin-bottom: 2rem;
+    color: var(--gray);
+}
+
+.project__layout {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.project__layout > * {
+    flex: 1;
+}
+
+.project__tasks {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-left: 4px solid var(--success);
+}
+
+.project__photos {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.project__photo {
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.project__photo :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.handyman-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.handyman-step {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.handyman-step :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .handyman-hero {
+        flex-wrap: wrap;
+    }
+
+    .handyman-hero__trades {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .handyman-hero__tools {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skill-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project__layout {
+        flex-wrap: wrap;
+    }
+
+    .project__layout > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .project__photos {
+        flex-wrap: wrap;
+    }
+}
+
+}
