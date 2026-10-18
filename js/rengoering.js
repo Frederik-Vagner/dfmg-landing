@@ -108,3 +108,76 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateTableContent();
         });
+
+/* ── Specialty photo carousel ──────────────────────────────────────────────
+ * Each .service-image-container holds the photos for one specialty, stacked,
+ * with dot indicators underneath. The dots in the markup are placeholders
+ * until the photos exist, so this only takes over once there is at least one
+ * <img class="photo"> to page through — it then rebuilds the dots to match
+ * the number of photos actually present, so adding or removing a photo needs
+ * no change here.
+ *
+ * Kept separate from carousel.js on purpose: that one is arrow-driven, moves
+ * a .carousel-track, and finds its buttons via container.closest('section').
+ * These sit INSIDE that carousel, so reusing it would have the inner and
+ * outer carousels fighting over the same selectors.
+ */
+(function () {
+    'use strict';
+
+    function initPhotoCarousel(container) {
+        var photos = container.querySelectorAll('img.photo');
+        if (!photos.length) return;            // still a placeholder frame
+
+        var dots = container.querySelector('.photo-dots');
+        if (!dots) {
+            dots = document.createElement('div');
+            dots.className = 'photo-dots';
+            container.appendChild(dots);
+        }
+        dots.innerHTML = '';
+
+        var index = 0;
+        function show(i) {
+            index = (i + photos.length) % photos.length;
+            photos.forEach(function (p, n) { p.classList.toggle('active', n === index); });
+            dots.querySelectorAll('.photo-dot').forEach(function (d, n) {
+                d.classList.toggle('active', n === index);
+            });
+        }
+
+        photos.forEach(function (_, n) {
+            var dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'photo-dot';
+            dot.setAttribute('aria-label', 'Vis billede ' + (n + 1) + ' af ' + photos.length);
+            dot.addEventListener('click', function () { show(n); });
+            dots.appendChild(dot);
+        });
+
+        // One photo needs no navigation.
+        dots.hidden = photos.length < 2;
+
+        // Swipe, so the photos are reachable on a phone without aiming at an 8px dot.
+        var startX = null;
+        container.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        container.addEventListener('touchend', function (e) {
+            if (startX === null) return;
+            var dx = startX - e.changedTouches[0].clientX;
+            if (Math.abs(dx) > 40) show(index + (dx > 0 ? 1 : -1));
+            startX = null;
+        });
+
+        show(0);
+    }
+
+    function init() {
+        document.querySelectorAll('.service-image-container').forEach(initPhotoCarousel);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
