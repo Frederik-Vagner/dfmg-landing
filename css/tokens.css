@@ -161,6 +161,64 @@
     --border-light: 1px solid var(--color-border);
     --border-lighter: 1px solid var(--bg-light);
 
+    /* Palette — further tints, shades and transparencies, named after the
+       Tailwind scale they come from (sky-50, green-900, ...). */
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --neutral-200: #eeeeee;
+    --sky-50: #f0f9ff;
+    --sky-100: #e0f2fe;
+    --sky-200: #bae6fd;
+    --sky-600: #0284c7;
+    --cyan-600: #0891b2;
+    --cyan-900: #164e63;
+    --blue-50: #eff6ff;
+    --blue-200: #bfdbfe;
+    --green-50: #f0fdf4;
+    --green-700: #15803d;
+    --green-800: #166534;
+    --green-900: #14532d;
+    --emerald-50: #ecfdf5;
+    --emerald-100: #d1fae5;
+    --emerald-200: #a7f3d0;
+    --indigo-600: #4f46e5;
+    --indigo-700: #4338ca;
+    --indigo-800: #3730a3;
+    --purple-50: #faf5ff;
+    --purple-100: #f3e8ff;
+    --purple-200: #e9d5ff;
+    --lilac-50: #fef7ff;
+    --yellow-50: #fefce8;
+    --amber-100: #fef3c7;
+    --amber-200: #fde68a;
+    --orange-50: #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-300: #fdba74;
+    --red-50: #fef2f2;
+    --red-200: #fecaca;
+    --red-300: #fca5a5;
+    --white-a03: rgba(255, 255, 255, 0.03);
+    --white-a05: rgba(255, 255, 255, 0.05);
+    --white-a08: rgba(255, 255, 255, 0.08);
+    --white-a12: rgba(255, 255, 255, 0.12);
+    --white-a15: rgba(255, 255, 255, 0.15);
+    --white-a25: rgba(255, 255, 255, 0.25);
+    --white-a30: rgba(255, 255, 255, 0.3);
+    --white-a80: rgba(255, 255, 255, 0.8);
+    --black-a10: rgba(0, 0, 0, 0.1);
+    --black-a15: rgba(0, 0, 0, 0.15);
+    --black-a25: rgba(0, 0, 0, 0.25);
+    --black-a30: rgba(0, 0, 0, 0.3);
+    --charcoal-a30: rgba(52, 71, 103, 0.3);
+    --charcoal-a50: rgba(52, 71, 103, 0.5);
+    --success-a20: rgba(34, 197, 94, 0.2);
+    --success-a30: rgba(34, 197, 94, 0.3);
+    --blue-500-a10: rgba(59, 130, 246, 0.1);
+    --cyan-500-a10: rgba(6, 182, 212, 0.1);
+    --governance-a10: rgba(139, 92, 246, 0.1);
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;

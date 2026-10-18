@@ -8,8 +8,8 @@
 
 /* ── Screenshot Placeholder ── */
 .screenshot-placeholder {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, var(--white-a08) 0%, var(--white-a03) 100%);
+    border: 1px solid var(--white-a12);
     border-radius: var(--radius-md);
     padding: 3rem 2rem;
     color: var(--text-on-dark-subtle);
@@ -159,10 +159,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--white-a80);
     font-size: 1.2rem;
     font-weight: var(--font-weight-semibold);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px var(--black-a30);
     text-align: center;
     position: relative;
     overflow: hidden;

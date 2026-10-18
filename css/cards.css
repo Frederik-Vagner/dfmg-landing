@@ -688,7 +688,7 @@
 
 .card--dashed:hover {
     border-color: var(--primary);
-    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    background: linear-gradient(135deg, var(--green-50), var(--emerald-50));
 }
 
 .card--dashed-icon {
@@ -699,14 +699,14 @@
 
 /* ── Quote ── */
 .card--quote {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-light);
     padding: 1.5rem;
     border-radius: var(--radius-normal);
     margin: 1rem 0;
     font-style: italic;
     font-weight: var(--font-weight-light);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--white-a15);
     box-shadow: var(--shadow-lg);
 }
 

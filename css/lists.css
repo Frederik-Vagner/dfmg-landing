@@ -132,9 +132,9 @@
     gap: 1rem;
     margin-bottom: 0.75rem;
     padding: 1rem 1.25rem;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--white-a80);
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--white-a30);
     transition: all var(--transition-normal);
 }
 

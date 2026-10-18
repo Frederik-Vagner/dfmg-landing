@@ -15,7 +15,9 @@
 //               layer whatever its specificity, which defeats the layer order
 //               declared in css/tokens.css.
 //   counts      inline style="" attributes, !important and hard-coded colours
-//               outside css/tokens.css. These may only go down.
+//               outside css/tokens.css (colours inside url(...) such as inline
+//               SVG images are not CSS values and do not count). These may only
+//               go down.
 //
 // The baseline holds today's known debt so the check can be strict about
 // anything new. Classes that are intentional (built by JavaScript, for
@@ -164,7 +166,7 @@ function check() {
         important: sourceCss.reduce((n, { css }) => n + (css.match(/!important/g) || []).length, 0),
         hardcodedColours: sourceCss
             .filter(({ f }) => !f.endsWith(path.join("css", "tokens.css")))
-            .reduce((n, { css }) => n + (css.match(/#[0-9a-fA-F]{3,8}\b|\brgba?\(|\bhsla?\(/g) || []).length, 0),
+            .reduce((n, { css }) => n + (css.replace(/url\((['"])[\s\S]*?\1\)|url\([^)'"]*\)/g, '').match(/#[0-9a-fA-F]{3,8}\b|\brgba?\(|\bhsla?\(/g) || []).length, 0),
     };
 
     return { undefinedClasses, unusedClasses, unlayered, counts, used };

@@ -8,7 +8,7 @@
 /* Hero/decorative badge — glassmorphism style for dark backgrounds */
 .badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--white-a15);
     padding: 8px 16px;
     border-radius: var(--radius-circle);
     font-size: 0.8rem;
@@ -18,7 +18,7 @@
     margin-bottom: 1rem;
     box-shadow: var(--shadow-lg);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-on-dark);
 }
 
 /* Inline badge — base + color variants + size modifier */
