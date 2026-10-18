@@ -1,0 +1,78 @@
+/* ========================================
+   SHARED COMPONENTS — used across many pages
+   Loaded on every page. Values come from css/tokens.css.
+   ======================================== */
+
+@layer components {
+
+.section-intro {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.section-intro--spacious {
+    margin-bottom: 5rem;
+}
+
+.section-intro__eyebrow {
+    color: var(--success);
+}
+
+.section-intro__title {
+    color: var(--charcoal);
+}
+
+.section-intro__title--on-dark {
+    color: var(--white);
+}
+
+.section-intro__text {
+    color: var(--gray);
+}
+
+.section-intro__text--on-dark {
+    color: var(--white);
+}
+
+.icon-tile {
+    padding: 1rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    text-align: center;
+}
+
+.icon-tile__icon {
+    margin-bottom: 1rem;
+    color: var(--success);
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta-actions {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.btn__icon {
+    margin-right: 0.5rem;
+}
+
+.badge--light {
+    background: var(--bg-light);
+    box-shadow: none;
+    backdrop-filter: none;
+    border: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+    .cta-actions {
+        flex-wrap: wrap;
+    }
+}
+
+}

@@ -1,0 +1,221 @@
+/* ========================================
+   SUPPLIES & PRODUKTER — page styles
+   ======================================== */
+
+@layer pages {
+
+.product-hero__title {
+    color: var(--charcoal);
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+}
+
+.product-hero__lead {
+    margin-bottom: 4rem;
+    color: var(--gray);
+    font-size: 1.3rem;
+}
+
+.product-hero__perks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+    margin-bottom: 4rem;
+}
+
+.product-hero__range {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.product-categories__title {
+    color: var(--charcoal);
+    font-size: 3rem;
+    font-weight: var(--font-weight-light);
+    letter-spacing: -1px;
+}
+
+.product-categories {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.product-categories > * {
+    flex: 1;
+}
+
+.category-tab {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    border-left: 4px solid var(--success);
+}
+
+.category-tab :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.category-tab__header {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.category-tab__icon {
+    margin-right: 1rem;
+    color: var(--success);
+}
+
+.category-panel {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+}
+
+.category-panel :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.category-panel__intro {
+    margin-bottom: 4rem;
+}
+
+.category-panel__title {
+    font-size: 1.8rem;
+}
+
+.category-panel__list li {
+    margin-bottom: 0.5rem;
+}
+
+.category-panel__list iconify-icon {
+    margin-right: 0.75rem;
+    color: var(--success);
+}
+
+.price-list__title {
+    font-size: 1.1rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.product-card {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    text-align: center;
+}
+
+.product-card__category {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.request-card__title {
+    font-size: 1.2rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.process-step {
+    padding: 2rem;
+    background: var(--bg-gradient-white);
+    color: var(--charcoal);
+    text-align: center;
+}
+
+.process-step :is(h1, h2, h3, h4, h5, h6, p, li, span) {
+    color: inherit;
+}
+
+.process-step__number {
+    color: var(--success);
+}
+
+.process-step__title {
+    font-size: 1.3rem;
+}
+
+.benefits-panel {
+    padding: 2rem;
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.benefit-card {
+    padding: 1rem;
+    background: var(--overlay-light);
+    border: 1px solid var(--border-on-dark);
+}
+
+.benefit-card__title {
+    font-size: 1.3rem;
+}
+
+.benefit-card__text {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .product-hero__title {
+        font-size: 2.5rem;
+    }
+
+    .product-hero__perks {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-hero__range {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .product-categories__title {
+        font-size: 2.1rem;
+    }
+
+    .product-categories {
+        flex-wrap: wrap;
+    }
+
+    .product-categories > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .category-tab__header {
+        flex-wrap: wrap;
+    }
+
+    .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .process-steps {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .benefit-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+}

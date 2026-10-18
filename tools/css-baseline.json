@@ -69,10 +69,15 @@
       "expanded-stat-label",
       "expanded-stat-number",
       "expanded-stats",
+      "italic",
+      "mb-5",
       "metric-label",
       "metric-value",
+      "mr-075",
+      "mr-1",
       "nav-link",
-      "slide-photo"
+      "slide-photo",
+      "tracking-tight"
     ]
   },
   "counts": {

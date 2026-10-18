@@ -74,6 +74,7 @@
     --text-on-dark-soft: rgba(255, 255, 255, 0.7);
     --icon-on-dark: rgba(255, 255, 255, 0.5);
     --border-on-dark: rgba(255, 255, 255, 0.2);
+    --border-subtle: rgba(0, 0, 0, 0.08);
     --placeholder-tint: rgb(16 15 15 / 10%);
 
     /* App mockups (the schedule and report drawn on the cleaning page) */
