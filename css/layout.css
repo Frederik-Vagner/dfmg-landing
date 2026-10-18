@@ -5,7 +5,7 @@
 /* ── Flex ── */
 .flex {
     display: flex;
-    gap: var(--gap-lg);
+    gap: var(--layout-gap, var(--gap-lg));
 }
 
 .flex-2 > * { flex: 1; }
@@ -24,33 +24,33 @@
 .content-end { align-content: end; }
 
 /* ── Grid ── */
-.grid-cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); }
+.grid-cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--layout-gap, 0); }
 .grid-2x2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--gap-lg);
+    gap: var(--layout-gap, var(--gap-lg));
 }
 
 .grid-2x3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--gap-lg);
+    gap: var(--layout-gap, var(--gap-lg));
 }
 
 .grid-3x2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: var(--gap-lg);
+    gap: var(--layout-gap, var(--gap-lg));
 }
 
 .grid-2x3-offset {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: var(--gap-lg);
+    gap: var(--layout-gap, var(--gap-lg));
 }
 
 .grid-2x3-offset > div:nth-child(1) { grid-column: 1 / 3; }
@@ -208,11 +208,18 @@
    body { overflow-x: hidden }. Below 768px they become a single column.
    ==================================== */
 @media (max-width: 768px) {
+    /* Tighter default spacing for .flex and the column grids. This changes
+       the default they read rather than setting gap here: a gap declared in
+       this block would come after the .gap-* utilities and override every
+       explicit one on the page. */
+    :root {
+        --layout-gap: var(--gap-md);
+    }
+
     /* Rows wrap instead of squeezing their children off the edge.
        Short rows (icon + label, button pairs) still sit side by side. */
     .flex {
         flex-wrap: wrap;
-        gap: var(--gap-md);
     }
 
     /* The brand lockup is a .flex row too, and at 768px the desktop header is
@@ -249,7 +256,6 @@
     .grid-2x3-offset {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;
-        gap: var(--gap-md);
     }
 
     /* The offset grid places its children on an explicit 6-column track,
