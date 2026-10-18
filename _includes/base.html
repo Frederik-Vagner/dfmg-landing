@@ -89,6 +89,12 @@
     <link rel="stylesheet" href="/css/pages/{{ css }}.css">
     {% endfor %}
 
+    {#- The support widget's styles, last so they keep the cascade position
+        its inline <style> block used to have. -#}
+    {% if chatbot !== false %}
+    <link rel="stylesheet" href="/css/components/chatbot.css">
+    {% endif %}
+
     <script src="/js/nav-enhancer.js"></script>
 
     <!-- Structured Data -->

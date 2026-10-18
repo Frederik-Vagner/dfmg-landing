@@ -50,10 +50,7 @@
       "update-date",
       "why-choose-content"
     ],
-    "unused": [
-      "btn-full",
-      "cta-buttons"
-    ]
+    "unused": []
   },
   "counts": {
     "inlineStyles": 0,
