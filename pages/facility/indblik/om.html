@@ -2,20 +2,22 @@
 layout: base.html
 title: "DFMG - Om DFMG"
 description: "Mød teamet bag DFMG - den passionerede programmør der revolutionerer facility service med teknologi og personlig opmærksomhed."
+pageCss:
+  - om
 ---
 
     <!-- Hero Section -->
     <section class="section first">
         <div class="container">
-            <div class="flex flex-2">
+            <div class="om-hero">
                 <div>
                     <div class="subtitle">OM DFMG</div>
-                    <h1 class="title text-charcoal">Den <span class="highlight">Programmør</span> Der Revolutionerer Facility Service</h1>
-                    <div class="body text-gray">Hej, jeg hedder Frederik Vagner Pedersen og jeg er den administrerende direktør og grundlægger af DFMG. Som passioneret udvikler har jeg bygget et helt system, der gør facility service mere pålideligt, transparent og personligt.</div>
-                    <div class="body text-gray">Jeg tror på at teknologi skal gøre mennesker bedre - ikke erstatte dem. Det er derfor DFMG kombinerer systematik med personlig opmærksomhed.</div>
+                    <h1 class="title om-hero__title">Den <span class="highlight">Programmør</span> Der Revolutionerer Facility Service</h1>
+                    <div class="body om-hero__text">Hej, jeg hedder Frederik Vagner Pedersen og jeg er den administrerende direktør og grundlægger af DFMG. Som passioneret udvikler har jeg bygget et helt system, der gør facility service mere pålideligt, transparent og personligt.</div>
+                    <div class="body om-hero__text">Jeg tror på at teknologi skal gøre mennesker bedre - ikke erstatte dem. Det er derfor DFMG kombinerer systematik med personlig opmærksomhed.</div>
                 </div>
                 <div class="portrait-frame">
-                    <img src="/images/people/frederik.webp" alt="Frederik Vagner Pedersen, grundlægger og administrerende direktør i DFMG" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                    <img src="/images/people/frederik.webp" alt="Frederik Vagner Pedersen, grundlægger og administrerende direktør i DFMG" class="cover-image" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -24,12 +26,12 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
     <!-- Personal Story -->
     <section class="section">
         <div class="container">
-            <div class="text-center">
-                <div class="title text-charcoal">Hvorfor Jeg Startede DFMG</div>
-                <div class="body text-gray mb-4">Historien om hvordan en programmørs frustration blev til en mission om at gøre facility service bedre</div>
+            <div class="page-intro">
+                <div class="title page-intro__title">Hvorfor Jeg Startede DFMG</div>
+                <div class="body page-intro__text page-intro__text--spaced">Historien om hvordan en programmørs frustration blev til en mission om at gøre facility service bedre</div>
             </div>
 
-            <div class="flex">
+            <div class="om-story">
                 <div class="card card--bordered">
                     <h4>Problemer Overalt</h4>
                     <p>Jeg så hvordan traditionelle facility virksomheder skuffede deres kunder gang på gang. Manglende kommunikation, ustabil kvalitet, og kunder der følte sig glemt efter et par år.</p>
@@ -54,7 +56,7 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
     <!-- Team Philosophy -->
     <section class="section">
         <div class="container">
-            <div class="flex flex-2 bg-gradient-primary p-3 radius-normal">
+            <div class="om-team">
                 <div class="team-text">
                     <h3>Teamet Bag Kvaliteten</h3>
                     <p>Mine medarbejdere er ikke bare rengøringspersonale - de er professionelle serviceteknikere med deres eget login, omfattende træning og månedlig feedback.</p>
@@ -68,13 +70,13 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
     <!-- Values -->
     <section class="section">
         <div class="container">
-            <div class="text-center">
-                <div class="title text-charcoal">Hvad Vi Tror På</div>
-                <div class="body text-gray mb-4">De principper der styrer alt vi gør</div>
+            <div class="page-intro">
+                <div class="title page-intro__title">Hvad Vi Tror På</div>
+                <div class="body page-intro__text page-intro__text--spaced">De principper der styrer alt vi gør</div>
             </div>
 
-            <div class="flex">
-                <div class="card p-1 border-top-success text-center">
+            <div class="om-values">
+                <div class="card om-value">
                     <div>
                         <iconify-icon icon="fluent:handshake-20-filled" inline></iconify-icon>
                     </div>
@@ -82,7 +84,7 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
                     <p>I er ikke bare en kontrakt. I er en partner vi bygger et langsigtet forhold med baseret på tillid og gensidig respekt.</p>
                 </div>
 
-                <div class="card p-1 border-top-success text-center">
+                <div class="card om-value">
                     <div>
                         <iconify-icon icon="fluent:data-trending-20-filled" inline></iconify-icon>
                     </div>
@@ -90,7 +92,7 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
                     <p>Vi træffer beslutninger baseret på faktiske data, ikke følelser eller gætværk. Det giver bedre service og fair priser.</p>
                 </div>
 
-                <div class="card p-1 border-top-success text-center">
+                <div class="card om-value">
                     <div>
                         <iconify-icon icon="fluent:eye-20-filled" inline></iconify-icon>
                     </div>
@@ -98,7 +100,7 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
                     <p>Ingen hemmeligheder. I kan se præcis hvad vi laver, hvornår vi laver det, og hvorfor det koster det det gør.</p>
                 </div>
 
-                <div class="card p-1 border-top-success text-center">
+                <div class="card om-value">
                     <div>
                         <iconify-icon icon="fluent:settings-20-filled" inline></iconify-icon>
                     </div>
@@ -112,12 +114,12 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
     <!-- Philosophy -->
     <section class="section">
         <div class="container">
-            <div class="flex flex-2">
+            <div class="om-philosophy">
                 <div>
-                    <div class="title text-charcoal">Mennesker + Teknologi = Vindende Kombination</div>
-                    <div class="body text-gray">AI og automatisering kommer hastigt, men jeg tror ikke på at erstatte mennesker. Jeg tror på at gøre mennesker markant bedre gennem teknologi.</div>
-                    <div class="body text-gray">Service handler ikke kun om opgaven - det handler om oplevelsen. Det menneskelige smil, samtalen, forståelsen. Det kan ingen robot levere.</div>
-                    <div class="body text-gray">Men hvis jeg tager fejl? Hvis robotter overtager alt? Så er vi også klar. Vi bygger allerede infrastrukturen og kundegrundlaget. Som passioneret programmør er jeg klar til at styre den robotflåde også.</div>
+                    <div class="title om-philosophy__title">Mennesker + Teknologi = Vindende Kombination</div>
+                    <div class="body om-philosophy__text">AI og automatisering kommer hastigt, men jeg tror ikke på at erstatte mennesker. Jeg tror på at gøre mennesker markant bedre gennem teknologi.</div>
+                    <div class="body om-philosophy__text">Service handler ikke kun om opgaven - det handler om oplevelsen. Det menneskelige smil, samtalen, forståelsen. Det kan ingen robot levere.</div>
+                    <div class="body om-philosophy__text">Men hvis jeg tager fejl? Hvis robotter overtager alt? Så er vi også klar. Vi bygger allerede infrastrukturen og kundegrundlaget. Som passioneret programmør er jeg klar til at styre den robotflåde også.</div>
                 </div>
                 <div class="illustration-placeholder">
                     Future Vision<br>Human + Tech illustration
@@ -129,12 +131,12 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
     <!-- Innovation -->
     <section class="section">
         <div class="container">
-            <div class="text-center">
-                <div class="title text-charcoal">Innovation Med Ansvar</div>
-                <div class="body text-gray mb-4">Hvordan vi bruger teknologi til at skabe værdi for alle</div>
+            <div class="page-intro">
+                <div class="title page-intro__title">Innovation Med Ansvar</div>
+                <div class="body page-intro__text page-intro__text--spaced">Hvordan vi bruger teknologi til at skabe værdi for alle</div>
             </div>
 
-            <div class="flex">
+            <div class="om-innovation">
                 <div class="card card--bordered">
                     <h4>For Vores Kunder</h4>
                     <p>Øjeblikkelige svar på spørgsmål, transparent dokumentation, konsistent kvalitet og fair priser baseret på faktiske data.</p>
@@ -156,9 +158,9 @@ description: "Mød teamet bag DFMG - den passionerede programmør der revolution
     <!-- Personal CTA -->
     <section class="section">
         <div class="container">
-            <div class="bg-gradient-primary p-3 radius-normal text-center">
+            <div class="om-cta">
                 <h3>Lad Os Tage En Snak</h3>
-                <p class="text-white mb-2">Jeg tager alle møder personligt, fordi jeg tror på at lære jer at kende før vi begynder at arbejde sammen. Ingen salgspres, ingen standardpitch - bare en ærlig samtale om jeres behov.</p>
+                <p class="om-cta__text">Jeg tager alle møder personligt, fordi jeg tror på at lære jer at kende før vi begynder at arbejde sammen. Ingen salgspres, ingen standardpitch - bare en ærlig samtale om jeres behov.</p>
                 <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md">Book Et Møde Med Mig</a>
             </div>
         </div>

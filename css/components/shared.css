@@ -42,6 +42,40 @@
     color: var(--white);
 }
 
+.page-intro {
+    text-align: center;
+}
+
+.page-intro__eyebrow {
+    color: var(--primary);
+}
+
+.page-intro__title {
+    color: var(--charcoal);
+}
+
+.page-intro__text {
+    color: var(--gray);
+}
+
+.page-intro__text--spaced {
+    margin-bottom: 4rem;
+}
+
+.page-intro__text--tight {
+    margin-bottom: 2rem;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-center--rounded {
+    border-radius: var(--radius-normal);
+}
+
 .icon-tile {
     padding: 1rem;
     background: var(--bg-gradient-white);

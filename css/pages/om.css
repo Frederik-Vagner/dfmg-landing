@@ -1,0 +1,128 @@
+/* ========================================
+   OM DFMG — page styles
+   ======================================== */
+
+@layer pages {
+
+.om-hero {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.om-hero > * {
+    flex: 1;
+}
+
+.om-hero__title {
+    color: var(--charcoal);
+}
+
+.om-hero__text {
+    color: var(--gray);
+}
+
+.om-story {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.om-team {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+    padding: 3rem;
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-normal);
+}
+
+.om-team > * {
+    flex: 1;
+}
+
+.om-values {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.om-value {
+    padding: 1rem;
+    border-top: 4px solid var(--success);
+    text-align: center;
+}
+
+.om-philosophy {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.om-philosophy > * {
+    flex: 1;
+}
+
+.om-philosophy__title {
+    color: var(--charcoal);
+}
+
+.om-philosophy__text {
+    color: var(--gray);
+}
+
+.om-innovation {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.om-cta {
+    padding: 3rem;
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-normal);
+    text-align: center;
+}
+
+.om-cta__text {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .om-hero {
+        flex-wrap: wrap;
+    }
+
+    .om-hero > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .om-story {
+        flex-wrap: wrap;
+    }
+
+    .om-team {
+        flex-wrap: wrap;
+    }
+
+    .om-team > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .om-values {
+        flex-wrap: wrap;
+    }
+
+    .om-philosophy {
+        flex-wrap: wrap;
+    }
+
+    .om-philosophy > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .om-innovation {
+        flex-wrap: wrap;
+    }
+}
+
+}

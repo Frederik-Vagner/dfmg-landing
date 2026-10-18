@@ -2,27 +2,29 @@
 layout: base.html
 title: "DFMG - Ledige Stillinger"
 description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facility management."
+pageCss:
+  - jobs
 ---
 
     <!-- Jobs Section -->
     <section class="section first">
         <div class="container">
-            <div class="text-center mb-4">
-                <div class="subtitle text-success">KARRIEREMULIGHEDER</div>
-                <h1 class="text-charcoal">Aktuelle stillinger</h1>
-                <p class="body text-gray">Vi søger engagerede medarbejdere der vil være med til at løfte facility management til næste niveau</p>
+            <div class="section-intro">
+                <div class="subtitle section-intro__eyebrow">KARRIEREMULIGHEDER</div>
+                <h1 class="section-intro__title">Aktuelle stillinger</h1>
+                <p class="body section-intro__text">Vi søger engagerede medarbejdere der vil være med til at løfte facility management til næste niveau</p>
             </div>
 
-            <div class="grid-2x3">
+            <div class="job-grid">
                 <!-- Rengøringsassistent (deltid) -->
-                <div class="card p-2">
+                <div class="card job-card">
                     <div class="badge">Deltid</div>
-                    <h3 class="text-charcoal">Rengøringsassistent</h3>
+                    <h3 class="job-card__title">Rengøringsassistent</h3>
                     <p>📍 København & omegn</p>
 
-                    <p class="mb-2 min-h-120">Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.</p>
+                    <p class="job-card__summary">Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.</p>
 
-                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <h4 class="job-card__subheading">Vi forventer:</h4>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Interesse for rengøringsarbejde</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Ansvarsfuldhed og pålidelighed</li>
@@ -30,7 +32,7 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og egen transport</li>
                     </ul>
 
-                    <div class="text-center mt-2">
+                    <div class="job-card__apply">
                         <a href="mailto:{{ site.email }}?subject=Ansøgning: Rengøringsassistent (deltid)" class="btn btn--success btn--md">
                             Ansøg nu
                         </a>
@@ -38,14 +40,14 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                 </div>
 
                 <!-- Rengøringsassistent (fuldtid) -->
-                <div class="card p-2">
+                <div class="card job-card">
                     <div class="badge">Fuldtid</div>
-                    <h3 class="text-charcoal">Rengøringsassistent</h3>
+                    <h3 class="job-card__title">Rengøringsassistent</h3>
                     <p>📍 København & omegn</p>
 
-                    <p class="mb-2 min-h-120">Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.</p>
+                    <p class="job-card__summary">Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.</p>
 
-                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <h4 class="job-card__subheading">Vi forventer:</h4>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Interesse for rengøringsarbejde</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Ansvarsfuldhed og pålidelighed</li>
@@ -53,7 +55,7 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og egen transport</li>
                     </ul>
 
-                    <div class="text-center mt-2">
+                    <div class="job-card__apply">
                         <a href="mailto:{{ site.email }}?subject=Ansøgning: Rengøringsassistent (fuldtid)" class="btn btn--success btn--md">
                             Ansøg nu
                         </a>
@@ -61,14 +63,14 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                 </div>
 
                 <!-- Rengøringsmedarbejder -->
-                <div class="card p-2">
+                <div class="card job-card">
                     <div class="badge">Fuldtid</div>
-                    <h3 class="text-charcoal">Rengøringsmedarbejder</h3>
+                    <h3 class="job-card__title">Rengøringsmedarbejder</h3>
                     <p>📍 København & omegn</p>
 
-                    <p class="mb-2 min-h-120">Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.</p>
+                    <p class="job-card__summary">Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.</p>
 
-                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <h4 class="job-card__subheading">Vi forventer:</h4>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med Erhvervsrengøring</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Selvstændighed og initiativ</li>
@@ -76,7 +78,7 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og egen transport</li>
                     </ul>
 
-                    <div class="text-center mt-2">
+                    <div class="job-card__apply">
                         <a href="mailto:{{ site.email }}?subject=Ansøgning: Rengøringsmedarbejder" class="btn btn--success btn--md">
                             Ansøg nu
                         </a>
@@ -84,14 +86,14 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                 </div>
 
                 <!-- Handyman -->
-                <div class="card p-2">
+                <div class="card job-card">
                     <div class="badge">Deltid</div>
-                    <h3 class="text-charcoal">Handyman</h3>
+                    <h3 class="job-card__title">Handyman</h3>
                     <p>📍 Storkøbenhavn</p>
 
-                    <p class="mb-2 min-h-120">Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.</p>
+                    <p class="job-card__summary">Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.</p>
 
-                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <h4 class="job-card__subheading">Vi forventer:</h4>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Håndværkerfaglig baggrund</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med VVS og el-opgaver</li>
@@ -99,7 +101,7 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og eget værktøj</li>
                     </ul>
 
-                    <div class="text-center mt-2">
+                    <div class="job-card__apply">
                         <a href="mailto:{{ site.email }}?subject=Ansøgning: Handyman (deltid)" class="btn btn--success btn--md">
                             Ansøg nu
                         </a>
@@ -107,14 +109,14 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                 </div>
 
                 <!-- Salgskonsulent -->
-                <div class="card p-2">
+                <div class="card job-card">
                     <div class="badge">Fuldtid</div>
-                    <h3 class="text-charcoal">Salgskonsulent</h3>
+                    <h3 class="job-card__title">Salgskonsulent</h3>
                     <p>📍 København (hybrid)</p>
 
-                    <p class="mb-2 min-h-120">Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.</p>
+                    <p class="job-card__summary">Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.</p>
 
-                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <h4 class="job-card__subheading">Vi forventer:</h4>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med B2B salg</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Stærke kommunikationsevner</li>
@@ -122,7 +124,7 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og bil til rådighed</li>
                     </ul>
 
-                    <div class="text-center mt-2">
+                    <div class="job-card__apply">
                         <a href="mailto:{{ site.email }}?subject=Ansøgning: Salgskonsulent" class="btn btn--success btn--md">
                             Ansøg nu
                         </a>
@@ -130,14 +132,14 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                 </div>
 
                 <!-- Ejendomsservicetekniker -->
-                <div class="card p-2">
+                <div class="card job-card">
                     <div class="badge">Fuldtid</div>
-                    <h3 class="text-charcoal">Ejendomsservicetekniker</h3>
+                    <h3 class="job-card__title">Ejendomsservicetekniker</h3>
                     <p>📍 København</p>
 
-                    <p class="mb-2 min-h-120">Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.</p>
+                    <p class="job-card__summary">Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.</p>
 
-                    <h4 class="text-charcoal">Vi forventer:</h4>
+                    <h4 class="job-card__subheading">Vi forventer:</h4>
                     <ul class="feature-list list--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med ejendomsvedligeholdelse</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Teknisk forståelse</li>
@@ -145,7 +147,7 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fleksibilitet og initiativ</li>
                     </ul>
 
-                    <div class="text-center mt-2">
+                    <div class="job-card__apply">
                         <a href="mailto:{{ site.email }}?subject=Ansøgning: Ejendomsservicetekniker" class="btn btn--success btn--md">
                             Ansøg nu
                         </a>
@@ -158,35 +160,35 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
     <!-- Benefits Section -->
     <section class="section">
         <div class="container">
-            <div class="text-center mb-4">
-                <div class="subtitle text-success">MEDARBEJDERFORDELE</div>
-                <h2 class="text-charcoal">Hvorfor arbejde hos DFMG?</h2>
-                <p class="body text-gray">Vi tilbyder et inspirerende arbejdsmiljø med gode vilkår og muligheder for udvikling</p>
+            <div class="section-intro">
+                <div class="subtitle section-intro__eyebrow">MEDARBEJDERFORDELE</div>
+                <h2 class="section-intro__title">Hvorfor arbejde hos DFMG?</h2>
+                <p class="body section-intro__text">Vi tilbyder et inspirerende arbejdsmiljø med gode vilkår og muligheder for udvikling</p>
             </div>
 
-            <div class="grid-2x2">
-                <div class="card p-2 text-center">
-                    <div class="text-7xl mb-15 block">💰</div>
-                    <h4 class="text-charcoal">Konkurrencedygtig løn</h4>
-                    <p class="body text-gray">Attraktive løn- og ansættelsesvilkår med mulighed for bonus og provision</p>
+            <div class="job-perks">
+                <div class="card job-perk">
+                    <div class="job-perk__emoji">💰</div>
+                    <h4 class="job-perk__title">Konkurrencedygtig løn</h4>
+                    <p class="body job-perk__text">Attraktive løn- og ansættelsesvilkår med mulighed for bonus og provision</p>
                 </div>
 
-                <div class="card p-2 text-center">
-                    <div class="text-7xl mb-15 block">🎓</div>
-                    <h4 class="text-charcoal">Udvikling & uddannelse</h4>
-                    <p class="body text-gray">Kontinuerlige kurser og udvikling af dine faglige og personlige kompetencer</p>
+                <div class="card job-perk">
+                    <div class="job-perk__emoji">🎓</div>
+                    <h4 class="job-perk__title">Udvikling & uddannelse</h4>
+                    <p class="body job-perk__text">Kontinuerlige kurser og udvikling af dine faglige og personlige kompetencer</p>
                 </div>
 
-                <div class="card p-2 text-center">
-                    <div class="text-7xl mb-15 block">👥</div>
-                    <h4 class="text-charcoal">Godt arbejdsmiljø</h4>
-                    <p class="body text-gray">Stærkt teamwork og fællesskab med kollegaer der støtter hinanden</p>
+                <div class="card job-perk">
+                    <div class="job-perk__emoji">👥</div>
+                    <h4 class="job-perk__title">Godt arbejdsmiljø</h4>
+                    <p class="body job-perk__text">Stærkt teamwork og fællesskab med kollegaer der støtter hinanden</p>
                 </div>
 
-                <div class="card p-2 text-center">
-                    <div class="text-7xl mb-15 block">🚀</div>
-                    <h4 class="text-charcoal">Karrieremuligheder</h4>
-                    <p class="body text-gray">Reelle muligheder for faglig udvikling og avancement i virksomheden</p>
+                <div class="card job-perk">
+                    <div class="job-perk__emoji">🚀</div>
+                    <h4 class="job-perk__title">Karrieremuligheder</h4>
+                    <p class="body job-perk__text">Reelle muligheder for faglig udvikling og avancement i virksomheden</p>
                 </div>
             </div>
         </div>
@@ -195,7 +197,7 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
     <!-- CTA Section -->
     <section class="section">
         <div class="container">
-            <div class="cta-center radius-normal">
+            <div class="cta-center cta-center--rounded">
                 <h2>Klar til din næste udfordring?</h2>
                 <p>Send din ansøgning eller få mere information om karrieremuligheder hos DFMG</p>
                 <a href="mailto:{{ site.email }}?subject=Uopfordret ansøgning" class="btn btn--ghost btn--md">

@@ -1,0 +1,73 @@
+/* ========================================
+   JOBS — page styles
+   ======================================== */
+
+@layer pages {
+
+.job-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.job-card {
+    padding: 2rem;
+}
+
+.job-card__title {
+    color: var(--charcoal);
+}
+
+.job-card__summary {
+    min-height: 120px;
+}
+
+.job-card__subheading {
+    color: var(--charcoal);
+}
+
+.job-card__apply {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.job-perks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--layout-gap, var(--gap-lg));
+}
+
+.job-perk {
+    padding: 2rem;
+    text-align: center;
+}
+
+.job-perk__emoji {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.job-perk__title {
+    color: var(--charcoal);
+}
+
+.job-perk__text {
+    color: var(--gray);
+}
+
+@media (max-width: 768px) {
+    .job-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .job-perks {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .job-perk__emoji {
+        font-size: 2.1rem;
+    }
+}
+
+}
