@@ -6,9 +6,17 @@
 
 .job-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
     gap: var(--layout-gap);
+}
+
+/* Job titles are long Danish compounds ("Rengøringsmedarbejder") that need
+   about 320px a card, so three columns only fit from 1200px. */
+@media (max-width: 1200px) {
+    .job-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .job-card__title {
@@ -56,7 +64,7 @@
 @media (max-width: 768px) {
     .job-grid {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
+        grid-auto-rows: auto;
     }
 
     .job-perks {
