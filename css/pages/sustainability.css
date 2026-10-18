@@ -98,6 +98,7 @@
 
 .slide-card-grid--three {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -162,6 +163,10 @@
 
     .slide-card-grid {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .slide-card-grid--three {
         grid-template-rows: auto;
     }
 }

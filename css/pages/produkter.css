@@ -20,6 +20,7 @@
 .product-hero__perks {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
     margin-bottom: 4rem;
 }
@@ -121,6 +122,7 @@
 .process-steps {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -133,6 +135,7 @@
 .benefit-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -157,6 +160,7 @@
 
     .product-hero__perks {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .product-hero__range {
@@ -188,10 +192,12 @@
 
     .process-steps {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .benefit-grid {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 }
 

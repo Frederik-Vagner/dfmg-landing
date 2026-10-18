@@ -34,6 +34,7 @@
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
 }
 
@@ -76,6 +77,7 @@
 .estate-features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -150,10 +152,12 @@
 
     .estate-hero__areas {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .estate-services {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .estate-process {
@@ -163,6 +167,7 @@
 
     .estate-features {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .estate-case__layout {

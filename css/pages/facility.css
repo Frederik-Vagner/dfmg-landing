@@ -83,6 +83,7 @@
 .package-details {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -114,6 +115,7 @@
 
     .package-benefits {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .package-comparison {
@@ -127,6 +129,7 @@
 
     .package-details {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 }
 

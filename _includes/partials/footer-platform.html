@@ -12,24 +12,24 @@
 
             <div class="footer-section">
                 <div class="footer-links">
-                    <div class="flex-row gap-md flex-wrap justify-center">
+                    <div class="footer-links__row">
                         <a href="/pages/software/features.html" class="link-footer">Features</a>
                         <a href="/pages/software/pricing.html" class="link-footer">Pricing</a>
                         <a href="/pages/software/demo.html" class="link-footer">Book a Demo</a>
                     </div>
-                    <div class="flex-row gap-md flex-wrap justify-center footer-links__row--spaced">
+                    <div class="footer-links__row footer-links__row--spaced">
                         <a href="/pages/software/about.html" class="link-footer">About</a>
                         <a href="/pages/software/contact.html" class="link-footer">Contact Sales</a>
                     </div>
-                    <div class="flex-row gap-md flex-wrap justify-center">
+                    <div class="footer-links__row">
                         <a href="/" class="link-footer">DFMG Service Company</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-section">
-                <div class="flex-row">
-                    <div class="footer-contact flex-col gap-sm">
+                <div class="footer-info">
+                    <div class="footer-contact">
                         <a href="tel:{{ site.phone }}">
                             <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                             {{ site.phoneDisplay }}
@@ -48,12 +48,12 @@
                         </address>
                     </div>
                     <div class="footer-logo">
-                        <a href="/pages/software/index.html" class="leading-none">
+                        <a href="/pages/software/index.html" class="footer-logo__link">
                             <img src="/images/logos/logo.png" alt="DFMG Logo" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
-                <div class="flex-row gap-md">
+                <div class="footer-social">
                     <a href="{{ site.linkedin }}" class="social-icon" target="_blank">
                         <iconify-icon icon="fa6-brands:linkedin-in" inline></iconify-icon>
                     </a>
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div class="footer-bottom flex-col gap-md border-top">
+        <div class="footer-bottom">
             <div class="footer-section">
                 <a href="/pages/facility/components/privatlivspolitik.html">Privacy Policy</a>
                 <a href="/pages/facility/components/cookiepolitik.html">Cookie Policy</a>

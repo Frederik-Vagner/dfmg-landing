@@ -21,6 +21,7 @@
 .handyman-hero__trades {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -33,6 +34,7 @@
 .handyman-hero__tools {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--layout-gap, var(--gap-lg));
 }
 
@@ -132,14 +134,17 @@
 
     .handyman-hero__trades {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .handyman-hero__tools {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .skill-grid {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
     }
 
     .project__layout {
