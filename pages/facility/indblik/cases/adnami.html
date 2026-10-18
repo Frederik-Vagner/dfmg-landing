@@ -2,15 +2,17 @@
 layout: base.html
 title: "DFMG - Case: Adnami"
 description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig service og innovative løsninger."
+pageCss:
+  - case
 ---
 
     <!-- Case Study Hero -->
     <section class="case-hero">
         <div class="container">
-            <div class="text-center">
-                <div class="subtitle text-white">CASE STUDY</div>
-                <h1 class="title text-white">Adnami: Revolutionering af AdTech Facility Management</h1>
-                <div class="body text-white">Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig service og innovative løsninger</div>
+            <div class="case-hero__content">
+                <div class="subtitle case-hero__eyebrow">CASE STUDY</div>
+                <h1 class="title case-hero__title">Adnami: Revolutionering af AdTech Facility Management</h1>
+                <div class="body case-hero__text">Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig service og innovative løsninger</div>
             </div>
         </div>
     </section>
@@ -20,21 +22,21 @@ description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig se
         <div class="case-content">
             <!-- Main Content -->
             <!-- Company Overview -->
-            <div class="card p-3">
-                <div class="flex items-center mb-2">
+            <div class="card case-section">
+                <div class="case-company">
                     <div>
                         <h2>Om Adnami</h2>
-                        <p class="body text-gray">Adnami er en førende adtech-virksomhed, der specialiserer sig i innovative reklameløsninger og programmatisk annoncering. Med hovedsæde i København beskæftiger virksomheden over 50 medarbejdere på tværs af flere afdelinger.</p>
+                        <p class="body case-section__text">Adnami er en førende adtech-virksomhed, der specialiserer sig i innovative reklameløsninger og programmatisk annoncering. Med hovedsæde i København beskæftiger virksomheden over 50 medarbejdere på tværs af flere afdelinger.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Challenge Section -->
-            <div class="card p-3 mt-2">
-                <h2 class="border-left-red pl-1">Udfordringen</h2>
-                <p class="body text-gray">Adnami stod overfor flere facility management udfordringer der påvirkede deres daglige drift og medarbejdertilfredshed:</p>
+            <div class="card case-section case-section--spaced">
+                <h2 class="case-section__title case-section__title--problem">Udfordringen</h2>
+                <p class="body case-section__text">Adnami stod overfor flere facility management udfordringer der påvirkede deres daglige drift og medarbejdertilfredshed:</p>
 
-                <ul class="feature-list list--red my-2">
+                <ul class="feature-list list--red">
                     <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon>Inkonsistent rengøringskvalitet fra tidligere leverandør</li>
                     <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon>Dårlig kommunikation og langsomme reaktionstider</li>
                     <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon>Manglende koordination mellem forskellige service leverandører</li>
@@ -44,17 +46,17 @@ description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig se
 
             <!-- Stats -->
             <div class="stats-grid">
-                <div class="card p-2 text-center">
+                <div class="card case-stat">
                     <span class="stat__value">30%</span>
                     <div class="stat__label">Omkostningsbesparelse</div>
                     <div class="stat__description">Årlig reduktion i facility udgifter</div>
                 </div>
-                <div class="card p-2 text-center">
+                <div class="card case-stat">
                     <span class="stat__value">95%</span>
                     <div class="stat__label">Tilfredshedsrate</div>
                     <div class="stat__description">Medarbejdertilfredshed med rengøring</div>
                 </div>
-                <div class="card p-2 text-center">
+                <div class="card case-stat">
                     <span class="stat__value">24/7</span>
                     <div class="stat__label">Support</div>
                     <div class="stat__description">Dedikeret kundeservice</div>
@@ -62,32 +64,32 @@ description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig se
             </div>
 
             <!-- Solution Section -->
-            <div class="card p-3">
-                <h2 class="border-left-success pl-1">DFMG's Løsning</h2>
-                <p class="body text-gray">DFMG implementerede en omfattende facility management strategi skræddersyet til Adnamis specifikke behov:</p>
+            <div class="card case-section">
+                <h2 class="case-section__title case-section__title--success">DFMG's Løsning</h2>
+                <p class="body case-section__text">DFMG implementerede en omfattende facility management strategi skræddersyet til Adnamis specifikke behov:</p>
 
-                <div class="grid-2x2 mt-2 gap-2">
-                    <div class="card p-2 border-top-primary">
-                        <h4><iconify-icon icon="fluent:broom-20-filled" inline class="mr-05 text-primary"></iconify-icon>Daglig Rengøring</h4>
+                <div class="case-solutions">
+                    <div class="card case-solution case-solution--primary">
+                        <h4><iconify-icon icon="fluent:broom-20-filled" inline class="case-solution__icon case-solution__icon--primary"></iconify-icon>Daglig Rengøring</h4>
                         <p class="body">Skræddersyet rengøringsplan med fokus på high-traffic områder og teknisk udstyr</p>
                     </div>
-                    <div class="card p-2 border-top-success">
-                        <h4><iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="mr-05 text-success"></iconify-icon>Proaktiv Vedligeholdelse</h4>
+                    <div class="card case-solution case-solution--success">
+                        <h4><iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="case-solution__icon case-solution__icon--success"></iconify-icon>Proaktiv Vedligeholdelse</h4>
                         <p class="body">Forebyggende vedligeholdelse af møbler, teknisk udstyr og fællesarealer</p>
                     </div>
-                    <div class="card p-2 border-top-governance">
-                        <h4><iconify-icon icon="fluent:box-20-filled" inline class="mr-05 text-governance"></iconify-icon>Supply Management</h4>
+                    <div class="card case-solution">
+                        <h4><iconify-icon icon="fluent:box-20-filled" inline class="case-solution__icon case-solution__icon--governance"></iconify-icon>Supply Management</h4>
                         <p class="body">Automatisk påfyldning af office supplies og hygiejneprodukter</p>
                     </div>
-                    <div class="card p-2 border-top-charcoal">
-                        <h4><iconify-icon icon="fluent:headset-20-filled" inline class="mr-05 text-charcoal"></iconify-icon>Dedikeret Support</h4>
+                    <div class="card case-solution case-solution--charcoal">
+                        <h4><iconify-icon icon="fluent:headset-20-filled" inline class="case-solution__icon case-solution__icon--charcoal"></iconify-icon>Dedikeret Support</h4>
                         <p class="body">Fast kontaktperson og hurtig responstid på alle henvendelser</p>
                     </div>
                 </div>
             </div>
 
             <!-- Photo Gallery -->
-            <div class="card p-3">
+            <div class="card case-section">
                 <h2>Før & Efter</h2>
                 <div class="photo-gallery">
                     <div class="gallery-item">
@@ -106,28 +108,28 @@ description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig se
             </div>
 
             <!-- Implementation Timeline -->
-            <div class="card p-3">
+            <div class="card case-section">
                 <h2>Implementering</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">Uge 1-2</div>
                         <h4>Analyse & Planlægning</h4>
-                        <p class="body text-gray">Grundig gennemgang af eksisterende setup og identificering af forbedringspotentialer</p>
+                        <p class="body case-section__text">Grundig gennemgang af eksisterende setup og identificering af forbedringspotentialer</p>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Uge 3</div>
                         <h4>Skræddersyet Løsning</h4>
-                        <p class="body text-gray">Udvikling af en personlig service plan baseret på Adnamis specifikke behov</p>
+                        <p class="body case-section__text">Udvikling af en personlig service plan baseret på Adnamis specifikke behov</p>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Uge 4</div>
                         <h4>Pilot Program</h4>
-                        <p class="body text-gray">Test af nye procedurer og systemer med løbende feedback fra medarbejdere</p>
+                        <p class="body case-section__text">Test af nye procedurer og systemer med løbende feedback fra medarbejdere</p>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Uge 5+</div>
                         <h4>Fuld Implementation</h4>
-                        <p class="body text-gray">Opstart af alle services med kontinuerlig overvågning og optimering</p>
+                        <p class="body case-section__text">Opstart af alle services med kontinuerlig overvågning og optimering</p>
                     </div>
                 </div>
             </div>
@@ -135,18 +137,18 @@ description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig se
             <!-- Quote Section -->
             <div class="quote-section">
                 <blockquote>"DFMG har virkelig imponeret os med deres personlige tilgang. Vi føler os værdsat som kunde og har opnået den professionalisme vi søgte. Det er en helt anden oplevelse end vores tidligere leverandør."</blockquote>
-                <div class="flex justify-center items-center gap-1">
+                <div class="case-quote__author">
                     <img src="/images/people/joergen.webp" alt="Jørgen Gosvig" class="avatar" loading="lazy" decoding="async">
                     <div>
                         <strong>Jørgen Gosvig</strong><br>
-                        <span class="opacity-80">CFO & Operations Manager, Adnami</span>
+                        <span class="case-quote__role">CFO & Operations Manager, Adnami</span>
                     </div>
                 </div>
             </div>
 
             <!-- Results Section -->
-            <div class="card p-3">
-                <h2 class="border-left-success pl-1">Resultater</h2>
+            <div class="card case-section">
+                <h2 class="case-section__title case-section__title--success">Resultater</h2>
                 <ul class="feature-list list--success">
                     <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>30% reduktion i facility omkostninger årligt</li>
                     <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>95% medarbejdertilfredshed med rengøringskvalitet</li>
@@ -157,26 +159,26 @@ description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig se
             </div>
 
             <!-- CTA Section -->
-            <div class="cta-center radius-normal">
+            <div class="cta-center cta-center--rounded">
                 <h2>Vil I også opleve den DFMG forskel?</h2>
                 <p>Kontakt os for en uforpligtende samtale om, hvordan vi kan optimere jeres facility management</p>
-                <div class="flex">
-                    <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:call-20-filled" inline class="mr-05"></iconify-icon>Kontakt Os</a>
-                    <a href="/pages/facility/prisberegner.html" class="btn btn--ghost btn--md"><iconify-icon icon="fluent:calculator-20-filled" inline class="mr-05"></iconify-icon>Prisberegner</a>
+                <div class="cta-center__actions">
+                    <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:call-20-filled" inline class="btn__icon"></iconify-icon>Kontakt Os</a>
+                    <a href="/pages/facility/prisberegner.html" class="btn btn--ghost btn--md"><iconify-icon icon="fluent:calculator-20-filled" inline class="btn__icon"></iconify-icon>Prisberegner</a>
                 </div>
             </div>
 
             <!-- Sidebar -->
             <div class="case-sidebar">
-                <div class="sidebar-section text-center">
-                        <img src="/images/logos/adnami.webp" alt="Adnami Logo" class="object-cover company-logo" loading="lazy" decoding="async">
+                <div class="sidebar-section sidebar-section--centered">
+                        <img src="/images/logos/adnami.webp" alt="Adnami Logo" class="company-logo" loading="lazy" decoding="async">
                     </div>
                 {# "Andre Kunder" skjult: Adnami er lige nu den eneste publicerede case.
                    Genindsæt blokken når case nummer to er klar (se _case-template.html). #}
 
                 <div class="sidebar-section">
                     <h3>Services Leveret</h3>
-                    <ul class="feature-list list--primary text-base">
+                    <ul class="feature-list list--primary case-sidebar__list">
                         <li><iconify-icon icon="fluent:broom-20-filled" inline></iconify-icon>Daglig Rengøring</li>
                         <li><iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline></iconify-icon>Handyman Services</li>
                         <li><iconify-icon icon="fluent:box-20-filled" inline></iconify-icon>Supply Management</li>
@@ -186,7 +188,7 @@ description: "Hvordan DFMG transformerede Adnamis arbejdsmiljø med personlig se
 
                 <div class="sidebar-section">
                     <h3>Projektinfo</h3>
-                    <div class="text-base">
+                    <div class="case-sidebar__info">
                         <p><strong>Periode:</strong> 18+ måneder</p>
                         <p><strong>Lokationer:</strong> København HQ</p>
                         <p><strong>Medarbejdere:</strong> 50+</p>

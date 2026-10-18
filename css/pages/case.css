@@ -1,0 +1,157 @@
+/* ========================================
+   CASE STUDY — page styles (adnami.html and _case-template.html)
+   ======================================== */
+
+@layer pages {
+
+.case-hero__content {
+    text-align: center;
+}
+
+.case-hero__eyebrow {
+    color: var(--white);
+}
+
+.case-hero__title {
+    color: var(--white);
+}
+
+.case-hero__text {
+    color: var(--white);
+}
+
+.case-section {
+    padding: 3rem;
+}
+
+.case-section--spaced {
+    margin-top: 2rem;
+}
+
+.case-company {
+    display: flex;
+    gap: var(--layout-gap, var(--gap-lg));
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.case-section__text {
+    color: var(--gray);
+}
+
+.case-section__title {
+    padding-left: 1rem;
+}
+
+.case-section__title--success {
+    border-left: 4px solid var(--success);
+}
+
+.case-section__title--problem {
+    border-left: 4px solid var(--red);
+}
+
+.case-solutions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.case-solution {
+    padding: 2rem;
+}
+
+.case-solution--primary {
+    border-top: 4px solid var(--primary);
+}
+
+.case-solution--success {
+    border-top: 4px solid var(--success);
+}
+
+.case-solution--charcoal {
+    border-top: 4px solid var(--charcoal);
+}
+
+.case-solution__icon {
+    margin-right: 0.5rem;
+}
+
+.case-solution__icon--primary {
+    color: var(--primary);
+}
+
+.case-solution__icon--success {
+    color: var(--success);
+}
+
+.case-solution__icon--governance {
+    color: var(--governance);
+}
+
+.case-solution__icon--charcoal {
+    color: var(--charcoal);
+}
+
+.case-stat {
+    padding: 2rem;
+    text-align: center;
+}
+
+.case-quote__author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.case-quote__role {
+    opacity: 0.8;
+}
+
+.cta-center__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-center__actions iconify-icon {
+    padding-right: 0.5rem;
+}
+
+.sidebar-section--centered {
+    text-align: center;
+}
+
+.case-sidebar__list {
+    font-size: 0.9rem;
+}
+
+.case-sidebar__info {
+    font-size: 0.9rem;
+}
+
+.client-link__meta {
+    color: var(--gray);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .case-company {
+        flex-wrap: wrap;
+    }
+
+    .case-solutions {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .case-quote__author {
+        flex-wrap: wrap;
+    }
+}
+
+}
