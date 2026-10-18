@@ -3,8 +3,7 @@
    Global badge system — hero, inline, overlay
    ======================================== */
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
 
 /* Hero/decorative badge — glassmorphism style for dark backgrounds */
 .badge {

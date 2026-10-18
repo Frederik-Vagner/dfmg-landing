@@ -1,7 +1,6 @@
 /* === HEADER & NAVIGATION === */
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
 
 /* --- Header Wrapper --- */
 
@@ -319,6 +318,14 @@
 
     .header-container {
         gap: 0.5rem;
+    }
+}
+
+/* The brand lockup is a flex row, and at 768px the desktop header is still
+   in effect — without this the wordmark drops under the icon. */
+@media (max-width: 768px) {
+    .logo {
+        flex-wrap: nowrap;
     }
 }
 

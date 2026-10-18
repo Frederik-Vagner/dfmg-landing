@@ -4,8 +4,7 @@
    placeholders, and placeholder icons
    ==================================== */
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
 
 /* ── Screenshot Placeholder ── */
 .screenshot-placeholder {
@@ -185,6 +184,9 @@
         font-size: 1.1rem;
     }
 }
+
+/* ── Avatar ── */
+.avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
 
 }
 

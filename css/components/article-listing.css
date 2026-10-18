@@ -4,8 +4,27 @@
    ======================================== */
 
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--charcoal);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.7;
+}
+
 
 /* Article listing title (card context) */
 .article-title {

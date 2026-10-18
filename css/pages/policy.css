@@ -4,8 +4,7 @@
    the page moving onto the shared base layout. Loaded via componentCss.
    ==================================== */
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
 
 .cookie-table {
     width: 100%;

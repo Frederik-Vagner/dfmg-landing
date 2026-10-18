@@ -1,7 +1,6 @@
 /* Hero Services Carousel - CRITICAL LAYOUT */
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
 
 .services-hero {
     height: 100vh;

@@ -1,8 +1,206 @@
 /* ========================================
    PRISBEREGNER — page styles
-   The rest of the calculator still lives in components/calculator.css
-   (legacy layer).
    ======================================== */
+
+/* The calculator layout (formerly css/components/calculator.css). */
+@layer core {
+
+/* Calculator-specific reset */
+#price h2, #price h3, #price h4, #price p, #price label, #price th, #price td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Calculator page body (font-family, line-height inherited from body) */
+.calculator-page {
+    color: var(--charcoal);
+    background: var(--white);
+    font-weight: var(--font-weight-semibold);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Calculator container */
+.calculator-container {
+    max-width: none;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 120px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Three Column Layout */
+.calculator-content {
+    display: grid;
+    grid-template-columns: 0.8fr 2.5fr 1fr;
+    gap: 0.5rem;
+    margin: 0 auto;
+    min-height: calc(100vh - 130px);
+}
+
+/* Column styling */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.25rem;
+    padding-top: 0;
+}
+
+/* Form input override */
+#price .form-input {
+    padding: 0.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color var(--transition-normal);
+    width: 80px;
+    text-align: center;
+}
+
+/* Service Tasks Grid */
+.service-tasks {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 0.1rem 0.5rem;
+}
+
+/* Grundig-only task visibility */
+.grundig-only {
+    display: none;
+}
+
+.service-tasks.grundig-mode .grundig-only {
+    display: flex;
+}
+
+.task-item {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    transition: all var(--transition-fast);
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.task-item:hover {
+    background: var(--bg-light);
+}
+
+.task-checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--charcoal);
+    cursor: pointer;
+}
+
+/* Price Column — sticky within its grid cell */
+.calculator-content > .column:last-child {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    overflow: visible;
+}
+
+/* Price Section */
+.price-summary {
+    padding: var(--padding-lg);
+}
+
+.price-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.task-summary-line {
+    font-size: 0.85rem;
+    color: var(--gray-light);
+    border-top: 1px solid var(--bg-light);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.discount-line {
+    border-bottom: 1px solid var(--bg-light);
+    padding-bottom: 0.75rem;
+}
+
+.price-total-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+#monthly-price {
+    color: var(--charcoal);
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Typography overrides */
+#price th,
+#price td,
+#price label,
+#price span {
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .calculator-content {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .calculator-content > .column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .service-tasks {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* The three columns are side by side inside a 100vh box that hides its
+       overflow. Stacked on a phone they are several screens tall, so the page
+       itself has to scroll instead of the box clipping them. */
+    .calculator-page {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
+    .calculator-container {
+        padding-top: 80px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .column {
+        overflow: visible;
+    }
+
+    .calculator-content {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: auto;
+    }
+
+    .price-summary {
+        padding: 1rem;
+    }
+}
+
+}
 
 @layer pages {
 

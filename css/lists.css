@@ -5,8 +5,7 @@
    ==================================== */
 
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
 
 /* ── List Reset ── */
 .list {

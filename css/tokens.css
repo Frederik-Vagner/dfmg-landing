@@ -12,13 +12,14 @@
 
      tokens      design values (this file)
      base        reset and element defaults (base.css)
-     legacy      everything not yet migrated: the existing files, unchanged
-     components  migrated component styles
+     core        the base styles of the building blocks: containers,
+                 sections, text, buttons, cards, forms, header, footer
+     components  named components built on them (shared.css, platform.css)
      pages       styles that belong to a single page
 
    Inline style="" attributes sit above all of these. CSS outside any layer
    would too, so every stylesheet and <style> block declares its layer. */
-@layer tokens, base, legacy, components, pages;
+@layer tokens, base, core, components, pages;
 
 @layer tokens {
 

@@ -3,8 +3,7 @@
    ==================================== */
 
 
-/* Not yet migrated: kept as-is in the legacy layer (order in tokens.css). */
-@layer legacy {
+@layer core {
 
 .footer {
     background: var(--bg-gradient-charcoal);
