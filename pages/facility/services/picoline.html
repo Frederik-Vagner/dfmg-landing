@@ -11,12 +11,12 @@ pageCss:
 <!-- Hero Section -->
 <section class="first hero-layout hero-layout--plain">
     <div class="container">
-        <div class="picoline-hero__intro">
+        <div class="page-intro">
             <div class="badge">Piccoline Service</div>
             <h1 class="title">Jeres Kontor's Usynlige Hjælper</h1>
-            <p class="body picoline-hero__lead">En piccoline er kontorets øjne, ører og arme - den person der sørger for at alt fungerer perfekt, så jeres medarbejdere kan fokusere på det de er bedst til.</p>
+            <p class="lead">En piccoline er kontorets øjne, ører og arme - den person der sørger for at alt fungerer perfekt, så jeres medarbejdere kan fokusere på det de er bedst til.</p>
         </div>
-        <div class="picoline-hero__tiles">
+        <div class="grid grid--4 picoline-hero__tiles">
             <div class="card icon-tile icon-tile--large">
                 <iconify-icon icon="fluent:clock-20-filled" inline class="icon-tile__icon"></iconify-icon>
                 <h3>Møder først</h3>
@@ -74,32 +74,32 @@ pageCss:
             </div>
 
             <div>
-                <div class="card day-schedule">
+                <div class="card card--soft card--center">
                     <h3>En Typisk Piccoline Dag</h3>
                     <div>
-                        <div class="card day-schedule__item">
+                        <div class="card card--soft card--compact day-item">
                             <div class="badge-inline badge-inline--success">07:30</div>
-                            <div class="day-schedule__task">Ankommer og tænder lys & kaffe</div>
+                            <strong>Ankommer og tænder lys & kaffe</strong>
                         </div>
-                        <div class="card day-schedule__item">
+                        <div class="card card--soft card--compact day-item">
                             <div class="badge-inline badge-inline--success">08:00</div>
-                            <div class="day-schedule__task">Tjekker temperatur og faciliteter</div>
+                            <strong>Tjekker temperatur og faciliteter</strong>
                         </div>
-                        <div class="card day-schedule__item">
+                        <div class="card card--soft card--compact day-item">
                             <div class="badge-inline badge-inline--success">09:00</div>
-                            <div class="day-schedule__task">Rengøring af køkken og toilet</div>
+                            <strong>Rengøring af køkken og toilet</strong>
                         </div>
-                        <div class="card day-schedule__item">
+                        <div class="card card--soft card--compact day-item">
                             <div class="badge-inline badge-inline--success">12:00</div>
-                            <div class="day-schedule__task">Klargør frokost og fællesområder</div>
+                            <strong>Klargør frokost og fællesområder</strong>
                         </div>
-                        <div class="card day-schedule__item">
+                        <div class="card card--soft card--compact day-item">
                             <div class="badge-inline badge-inline--success">13:00</div>
-                            <div class="day-schedule__task">Oprydning efter frokost</div>
+                            <strong>Oprydning efter frokost</strong>
                         </div>
-                        <div class="card day-schedule__item">
+                        <div class="card card--soft card--compact day-item">
                             <div class="badge-inline badge-inline--success">14:00</div>
-                            <div class="day-schedule__task">Ad hoc opgaver og vedligeholdelse</div>
+                            <strong>Ad hoc opgaver og vedligeholdelse</strong>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ pageCss:
         <div class="toggle-content active" id="daily">
             <div class="grid grid--2">
                 <div class="card">
-                    <iconify-icon icon="fluent:broom-20-filled" inline class="task-card__icon task-card__icon--accent"></iconify-icon>
+                    <iconify-icon icon="fluent:broom-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Rengøring & Hygiejne</h3>
                     <p>Daglig rengøring af toilet, køkken og fællesområder for at sikre et rent og sundt arbejdsmiljø.</p>
                     <ul class="checklist checklist--success">
@@ -139,7 +139,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:food-20-filled" inline class="task-card__icon task-card__icon--accent"></iconify-icon>
+                    <iconify-icon icon="fluent:food-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Frokost & Måltider</h3>
                     <p>Klargøring og oprydning efter fælles måltider, så medarbejderne kan nyde deres pause.</p>
                     <ul class="checklist checklist--success">
@@ -152,7 +152,7 @@ pageCss:
                 </div>
 
                <div class="card">
-                    <iconify-icon icon="fluent:drink-coffee-20-filled" inline class="task-card__icon task-card__icon--accent"></iconify-icon>
+                    <iconify-icon icon="fluent:drink-coffee-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Kaffe & Drikkevarer</h3>
                     <p>Sørger for at kaffemaskinen altid er klar og at der er friske drikkevarer til rådighed.</p>
                     <ul class="checklist checklist--success">
@@ -165,7 +165,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:temperature-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:temperature-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Faciliteter & Miljø</h3>
                     <p>Kontrol og justering af kontorets fysiske miljø for optimal komfort og funktionalitet.</p>
                     <ul class="checklist checklist--success">
@@ -182,7 +182,7 @@ pageCss:
         <div class="toggle-content" id="weekly">
             <div class="grid grid--2">
                 <div class="card">
-                    <iconify-icon icon="fluent:box-multiple-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:box-multiple-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Lager & Forsyninger</h3>
                     <p>Ugentlig kontrol og genbestilling af kontorforsyninger og hygiejneprodukter.</p>
                     <ul class="checklist checklist--success">
@@ -195,7 +195,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:plant-grass-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:plant-grass-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Planter & Dekorationer</h3>
                     <p>Pleje af planter og vedligeholdelse af kontorets æstetiske udtryk.</p>
                     <ul class="checklist checklist--success">
@@ -208,7 +208,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Vedligeholdelse & Tjek</h3>
                     <p>Grundig gennemgang af faciliteter og mindre vedligeholdelsesopgaver.</p>
                     <ul class="checklist checklist--success">
@@ -221,7 +221,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:calendar-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:calendar-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Event Support</h3>
                     <p>Forberedelse og support til møder, events og særlige arrangementer.</p>
                     <ul class="checklist checklist--success">
@@ -238,7 +238,7 @@ pageCss:
         <div class="toggle-content" id="adhoc">
             <div class="grid grid--2">
                 <div class="card">
-                    <iconify-icon icon="fluent:heart-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:heart-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Personlig Assistance</h3>
                     <p>Små personlige opgaver der gør medarbejdernes hverdag lettere.</p>
                     <ul class="checklist checklist--success">
@@ -251,7 +251,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:box-arrow-up-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:box-arrow-up-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Organisering & Oprydning</h3>
                     <p>Organisering af lager, depot og andre opbevaringsområder efter behov.</p>
                     <ul class="checklist checklist--success">
@@ -264,7 +264,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:people-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:people-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Møde & Gæste Service</h3>
                     <p>Klargøring af te, kaffe og vand til kundemøder og særlige lejligheder.</p>
                     <ul class="checklist checklist--success">
@@ -277,7 +277,7 @@ pageCss:
                 </div>
 
                 <div class="card">
-                    <iconify-icon icon="fluent:warning-20-filled" inline class="task-card__icon"></iconify-icon>
+                    <iconify-icon icon="fluent:warning-20-filled" inline class="card__icon"></iconify-icon>
                     <h3>Akut Support</h3>
                     <p>Hurtig reaktion på uventede situationer og akutte behov.</p>
                     <ul class="checklist checklist--success">
@@ -296,47 +296,47 @@ pageCss:
 <!-- Ad Hoc Explanation Section -->
 <section class="section" id="adhoc-explanation">
     <div class="container">
-        <div class="card adhoc-intro">
+        <div class="card card--soft card--center card--accent-top card--accent-success adhoc-intro">
             <div class="badge">AD HOC OPGAVER</div>
-            <h3 class="adhoc-intro__title">Hvad Er Ad Hoc Opgager?</h3>
-            <p class="adhoc-intro__text">Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
+            <h3 class="title">Hvad Er Ad Hoc Opgager?</h3>
+            <p class="lead">Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
         </div>
 
         <div class="grid grid--3">
             <div class="card card--compact">
-                <iconify-icon icon="fluent:box-arrow-up-20-filled" inline class="adhoc-card__icon"></iconify-icon>
-                <h4 class="adhoc-card__title">Rydde op i depotrummet</h4>
-                <p class="adhoc-card__text">Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
+                <iconify-icon icon="fluent:box-arrow-up-20-filled" inline class="card__icon"></iconify-icon>
+                <h3>Rydde op i depotrummet</h3>
+                <p>Når depotrummet bliver rodet, tager vores piccoline initiativ til at organisere og rydde op, så alt har sin plads.</p>
             </div>
 
             <div class="card card--compact">
-                <iconify-icon icon="fluent:drink-coffee-20-filled" inline class="adhoc-card__icon"></iconify-icon>
-                <h4 class="adhoc-card__title">Klargøre til kundemøde</h4>
-                <p class="adhoc-card__text">Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
+                <iconify-icon icon="fluent:drink-coffee-20-filled" inline class="card__icon"></iconify-icon>
+                <h3>Klargøre til kundemøde</h3>
+                <p>Hurtig klargøring af te, kaffe og vand når der pludselig kommer vigtige gæster eller kunder på besøg.</p>
             </div>
 
             <div class="card card--compact">
-                <iconify-icon icon="fluent:bandage-20-filled" inline class="adhoc-card__icon"></iconify-icon>
-                <h4 class="adhoc-card__title">Hente plastre i butikken</h4>
-                <p class="adhoc-card__text">Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
+                <iconify-icon icon="fluent:bandage-20-filled" inline class="card__icon"></iconify-icon>
+                <h3>Hente plastre i butikken</h3>
+                <p>Når førstehjælpskassen er tom, eller der er brug for specifikke ting, tager piccolinen ud og skaffer det nødvendige.</p>
             </div>
 
             <div class="card card--compact">
-                <iconify-icon icon="fluent:plant-grass-20-filled" inline class="adhoc-card__icon"></iconify-icon>
-                <h4 class="adhoc-card__title">Vande planterne</h4>
-                <p class="adhoc-card__text">Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
+                <iconify-icon icon="fluent:plant-grass-20-filled" inline class="card__icon"></iconify-icon>
+                <h3>Vande planterne</h3>
+                <p>Når planterne hænger med næbbet og har brug for ekstra opmærksomhed, sørger piccolinen for at de får det de har brug for.</p>
             </div>
 
             <div class="card card--compact">
-                <iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="adhoc-card__icon"></iconify-icon>
-                <h4 class="adhoc-card__title">Mindre reparationer</h4>
-                <p class="adhoc-card__text">Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
+                <iconify-icon icon="fluent:wrench-screwdriver-20-filled" inline class="card__icon"></iconify-icon>
+                <h3>Mindre reparationer</h3>
+                <p>Løse dørhåndtag, defekte lamper eller andre små reparationer der ikke kræver professionel håndværker.</p>
             </div>
 
             <div class="card card--compact">
-                <iconify-icon icon="fluent:shopping-bag-20-filled" inline class="adhoc-card__icon"></iconify-icon>
-                <h4 class="adhoc-card__title">Akutte indkøb</h4>
-                <p class="adhoc-card__text">Når der pludselig mangler noget vigtigt til kontoret eller til et møde, håndterer piccolinen indkøbet hurtigt.</p>
+                <iconify-icon icon="fluent:shopping-bag-20-filled" inline class="card__icon"></iconify-icon>
+                <h3>Akutte indkøb</h3>
+                <p>Når der pludselig mangler noget vigtigt til kontoret eller til et møde, håndterer piccolinen indkøbet hurtigt.</p>
             </div>
         </div>
     </div>
@@ -358,7 +358,7 @@ pageCss:
                         <div class="icon-circle icon-circle--negative">
                             <iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon>
                         </div>
-                        <h4 class="comparison-pair__title--without">Uden Piccoline</h4>
+                        <h3>Uden Piccoline</h3>
                     </div>
                     <ul class="checklist checklist--red">
                         <li>

@@ -4,79 +4,19 @@
 
 @layer pages {
 
-.picoline-hero__intro {
-    text-align: center;
-}
-
-.picoline-hero__lead {
-    margin-bottom: var(--space-2xl);
-}
-
 .picoline-hero__tiles {
-    display: flex;
-    gap: var(--layout-gap);
     margin-bottom: var(--space-2xl);
 }
 
-.day-schedule {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    text-align: center;
-    color: var(--charcoal);
-}
-
-.day-schedule__item {
+/* "En typisk piccoline dag": the time pill beside its task */
+.day-item {
     display: flex;
+    align-items: center;
     gap: var(--layout-gap);
-    padding: var(--space-sm);
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-}
-
-.day-schedule__item :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
-.day-schedule__task {
-    font-weight: var(--font-weight-semibold);
-}
-
-.task-card__icon {
-    margin-bottom: var(--space-sm);
-}
-
-.task-card__icon--accent {
-    color: var(--success);
 }
 
 .adhoc-intro {
-    padding: var(--space-2xl);
     margin-bottom: var(--space-2xl);
-    background: var(--bg-gradient-white);
-    border-top: 4px solid var(--success);
-    text-align: center;
-}
-
-.adhoc-intro__title {
-    font-size: var(--heading-2);
-}
-
-.adhoc-intro__text {
-    margin: auto;
-    max-width: 700px;
-    font-size: var(--text-lg);
-}
-
-.adhoc-card__icon {
-    margin-bottom: var(--space-sm);
-}
-
-.adhoc-card__title {
-    font-size: var(--text-xl);
-}
-
-.adhoc-card__text {
-    font-size: var(--text-base);
 }
 
 .comparison-pair {
@@ -92,12 +32,8 @@
     margin-bottom: var(--space-2xl);
 }
 
-.comparison-pair__title--without {
-    font-size: var(--text-xl);
-}
-
 .comparison-pair__card span {
-color: var(--white);
+    color: var(--white);
 }
 
 .icon-circle--negative {
@@ -118,16 +54,6 @@ color: var(--white);
 
 .testimonial-card__role {
     font-size: var(--text-sm);
-}
-
-@media (max-width: 768px) {
-    .picoline-hero__tiles {
-        flex-wrap: wrap;
-    }
-
-    .day-schedule__item {
-        flex-wrap: wrap;
-    }
 }
 
 }

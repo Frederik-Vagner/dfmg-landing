@@ -5,27 +5,7 @@
 @layer pages {
 
 .indblik-topics {
-    display: flex;
-    gap: var(--layout-gap);
     margin-bottom: var(--space-2xl);
-}
-
-.indblik-topic {
-    padding: var(--space-sm);
-    background: var(--bg-gradient-white);
-    text-align: center;
-}
-
-.indblik-feature {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    border-left: 4px solid var(--primary);
-}
-
-@media (max-width: 768px) {
-    .indblik-topics {
-        flex-wrap: wrap;
-    }
 }
 
 }

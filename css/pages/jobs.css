@@ -21,18 +21,9 @@
     text-align: center;
 }
 
-.job-perk {
-    padding: var(--space-lg);
-    text-align: center;
-}
-
 .job-perk__emoji {
     margin-bottom: var(--space-md);
     font-size: var(--icon-display);
-}
-
-.job-perk__text {
-    color: var(--gray);
 }
 
 @media (max-width: 768px) {

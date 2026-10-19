@@ -1,67 +1,12 @@
 /* ========================================
-   SUPPLIES & PRODUKTER — page styles
+   PRODUKTER — page styles
    ======================================== */
 
 @layer pages {
 
-.product-hero__title {
-    font-size: var(--heading-1);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.1;
-}
-
-.product-hero__lead {
-    margin-bottom: var(--space-2xl);
-    color: var(--gray);
-    font-size: var(--text-xl);
-}
-
-.product-hero__perks {
-    margin-bottom: var(--space-2xl);
-}
-
-.product-categories__title {
-    font-size: var(--heading-2);
-    font-weight: var(--font-weight-light);
-    letter-spacing: -1px;
-}
-
-.category-tab {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    border-left: 4px solid var(--success);
-}
-
-.category-tab__header {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.category-tab__icon {
-    margin-right: var(--space-sm);
-    color: var(--success);
-}
-
-.category-panel {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-}
-
-.category-panel :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
+.product-hero__perks,
 .category-panel__intro {
     margin-bottom: var(--space-2xl);
-}
-
-.category-panel__title {
-    font-size: var(--heading-2);
-}
-
-.price-list__title {
-    font-size: var(--text-lg);
 }
 
 .product-card__category {
@@ -69,35 +14,16 @@
     letter-spacing: 1px;
 }
 
-.request-card__title {
-    font-size: var(--text-xl);
-}
-
+/* The "Hvorfor vælge DFMG" panel: a blue card holding glass cards */
 .benefits-panel {
     padding: var(--space-lg);
     background: var(--bg-gradient-primary);
     color: var(--white);
 }
 
-/* The panel is a navy-to-blue gradient: the green eyebrow used on white
-   sections is unreadable here, so it is white like the rest of the panel. */
+/* The green eyebrow used on white sections is unreadable here. */
 .benefits-panel .section-intro__eyebrow {
-color: var(--white);
-}
-
-.benefit-card__title {
-    font-size: var(--text-xl);
-}
-
-.benefit-card__text {
-    opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-
-    .category-tab__header {
-        flex-wrap: wrap;
-    }
+    color: var(--white);
 }
 
 }

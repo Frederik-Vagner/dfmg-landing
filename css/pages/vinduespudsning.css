@@ -49,35 +49,14 @@
 
 @layer pages {
 
-.window-hero__title {
-    font-size: var(--heading-1);
-    font-weight: var(--font-weight-light);
-    line-height: 1;
-    letter-spacing: -2px;
-}
 
-.window-hero__lead {
-    margin-bottom: var(--space-2xl);
-    color: var(--gray);
-}
-
-.window-service {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-}
-
-.window-service :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
+/* Icon, text and price in one line; the icon keeps its size. */
 .window-service__layout {
     display: flex;
     gap: var(--layout-gap);
 }
 
 @media (max-width: 768px) {
-
     .window-service__layout {
         flex-wrap: wrap;
     }

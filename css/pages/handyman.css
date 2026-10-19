@@ -19,60 +19,13 @@
     }
 }
 
-.handyman-hero {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
 /* Keeps the text on the light side of the diagonal background. */
-.handyman-hero > div {
+.handyman-hero {
     max-width: 640px;
-}
-
-.handyman-hero__lead {
-    margin-bottom: var(--space-2xl);
-    color: var(--gray);
-}
-
-.trade-card__icon {
-    margin-bottom: var(--space-sm);
-    color: var(--success);
-}
-
-.trade-card__text {
-    color: var(--gray);
-}
-
-.skill-card__icon {
-    margin-bottom: var(--space-sm);
-    color: var(--success);
 }
 
 .project {
     margin-bottom: var(--space-2xl);
-}
-
-.project__text {
-    margin-bottom: var(--space-lg);
-    color: var(--gray);
-}
-
-.project__tasks {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    border-left: 4px solid var(--success);
-}
-
-.handyman-step {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    color: var(--charcoal);
-}
-
-@media (max-width: 768px) {
-    .handyman-hero {
-        flex-wrap: wrap;
-    }
 }
 
 }

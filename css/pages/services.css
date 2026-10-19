@@ -8,59 +8,11 @@
     padding: var(--space-lg);
 }
 
-.service-builder__text {
-    margin-bottom: var(--space-lg);
-    color: var(--gray);
-}
-
-.package-card__text {
-    color: var(--gray);
-}
-
-.package-card__actions {
-    display: flex;
-    gap: var(--space-sm);
-}
-
-.advantage-group__label {
-    text-align: center;
-}
-
 .advantage-grid--spaced {
     margin-bottom: var(--space-2xl);
 }
 
-.advantage-card__header {
-    display: flex;
-    gap: var(--layout-gap);
-    justify-content: center;
-}
-
-.advantage-card__text {
-    color: var(--gray);
-}
-
 /* Four steps fit side by side from about 1100px; below that two by two, so
    the fourth card no longer runs off the edge at tablet widths. */
-
-.service-step {
-    padding: var(--space-lg);
-    text-align: center;
-}
-
-.service-step__text {
-    color: var(--gray);
-}
-
-@media (max-width: 768px) {
-
-    .package-card__actions {
-        flex-wrap: wrap;
-    }
-
-    .advantage-card__header {
-        flex-wrap: wrap;
-    }
-}
 
 }

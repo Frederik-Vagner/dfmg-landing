@@ -24,6 +24,14 @@
     font-weight: var(--font-weight-light);
 }
 
+/* The paragraph that introduces a page or section, under its title */
+.lead {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-light);
+    color: var(--gray);
+    margin-bottom: var(--space-2xl);
+}
+
 .disclaimer {
     font-size: var(--text-xs);
     color: var(--gray-light);

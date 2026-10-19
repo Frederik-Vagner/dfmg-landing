@@ -10,21 +10,13 @@
     font-size: var(--icon-display);
 }
 
-.tak__message {
-    color: var(--gray);
-    margin-top: var(--space-lg);
-    margin-bottom: var(--space-lg);
-}
-
 .tak__actions {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
 }
 
 .tak-next {
-    padding: var(--space-lg);
     margin-top: var(--space-xl);
-    background: var(--bg-gradient-white);
 }
 
 .tak-next__list {

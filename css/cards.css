@@ -8,6 +8,8 @@
    styles; its look comes from these tokens and the modifiers below. */
 .card {
     position: relative;
+    /* A card is a light surface: dark text even inside a dark section. */
+    color: var(--charcoal);
     background: var(--card-bg);
     padding: var(--card-padding);
     border-radius: var(--card-radius);
@@ -41,6 +43,20 @@
     --card-accent: var(--primary);
 }
 
+/* A softer card on a white section: the light gradient instead of white */
+.card--soft {
+    background: var(--bg-gradient-white);
+}
+
+/* A card's icon: green; at the top of a card it keeps a gap below. */
+.card__icon {
+    color: var(--success);
+}
+
+:where(.card) > .card__icon {
+    margin-bottom: var(--space-sm);
+}
+
 /* On a dark or coloured background: translucent, with a light edge */
 .card--glass {
     background: var(--overlay-light);
@@ -69,6 +85,13 @@
     margin-bottom: var(--space-2xs);
     line-height: 1.5;
     font-weight: var(--font-weight-normal);
+    color: var(--gray);
+}
+
+/* On a dark or coloured card the text keeps the card's own light colour. */
+.card--glass,
+.card--glass p {
+    color: inherit;
 }
 
 .card p:last-child {

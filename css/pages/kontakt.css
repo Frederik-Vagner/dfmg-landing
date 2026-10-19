@@ -25,45 +25,11 @@
 }
 
 /* "Kontakt os" and the other job buttons under the open positions. */
-.job-buttons {
-    gap: var(--space-sm);
-}
 
 /* generated:start */
 
-.kontakt-form__title {
-    text-align: center;
-}
-
-.kontakt-form__submit {
-    width: 100%;
-}
-
-.kontakt-faq__header {
-    text-align: center;
-}
-
-.kontakt-careers__header {
-    text-align: center;
-}
-
-.kontakt-careers__lead {
-    font-size: var(--text-lg);
-}
-
-.job-buttons--row {
-    display: flex;
-}
-
 .partner-info {
     text-align: right;
-}
-
-@media (max-width: 768px) {
-
-    .job-buttons--row {
-        flex-wrap: wrap;
-    }
 }
 /* generated:end */
 

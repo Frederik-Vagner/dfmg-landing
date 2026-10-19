@@ -27,7 +27,7 @@ pageCss:
                     </div>
 
                     <div class="contact-form">
-                        <h2 class="kontakt-form__title">Kontakt formular</h2>
+                        <h2 class="page-intro">Kontakt formular</h2>
                         <form action="https://formspree.io/f/xdkdrqkw" method="POST">
                         <!-- Hidden fields for Formspree -->
                         <input type="hidden" name="_subject" value="Ny henvendelse fra DFMG hjemmeside">
@@ -101,7 +101,7 @@ pageCss:
                                 <label class="sr-only" for="kontakt-message">Jeres behov</label>
                                 <textarea id="kontakt-message" name="message" placeholder="Beskriv jeres behov, så vi kan forberede os bedst muligt" class="form-textarea" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn--success btn--md kontakt-form__submit">SEND FORESPØRGSEL</button>
+                            <button type="submit" class="btn btn--success btn--md btn--full">SEND FORESPØRGSEL</button>
                         </form>
                     </div>
                 </div>
@@ -111,7 +111,7 @@ pageCss:
         <!-- FAQ Section -->
         <section class="section">
             <div class="container">
-                <div class="kontakt-faq__header">
+                <div class="page-intro">
                     <h3>Ofte stillede spørgsmål</h3>
                 </div>
 
@@ -268,9 +268,9 @@ pageCss:
         <!-- Career Section -->
         <section class="section">
             <div class="container">
-                <div class="kontakt-careers__header">
+                <div class="page-intro">
                     <h3>Karriere</h3>
-                    <p class="kontakt-careers__lead">Søger du job hos DFMG? Bliv en del af et professionelt facility service team</p>
+                    <p class="body">Søger du job hos DFMG? Bliv en del af et professionelt facility service team</p>
                 </div>
 
                 <div class="career-content">
@@ -286,7 +286,7 @@ pageCss:
                             <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fleksible arbejdstider</li>
                         </ul>
 
-                        <div class="job-buttons job-buttons--row">
+                        <div class="cluster">
                             <a href="mailto:{{ site.email }}?subject=Uopfordret ansøgning" class="btn btn--primary btn--md">
                                 Kontakt os
                             </a>
@@ -308,7 +308,7 @@ pageCss:
                             <li class="unavailable">Erhvervsrengøring</li>
                         </ul>
 
-                        <div class="job-buttons">
+                        <div>
                             <a href="mailto:{{ site.email }}?subject=Partnerskab og samarbejde" class="btn btn--primary btn--md">
                                 Kontakt os
                             </a>

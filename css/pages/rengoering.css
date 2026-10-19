@@ -7,10 +7,6 @@
 /* Base styles of the page (formerly css/components/rengoering.css). */
 @layer core {
 
-body {
-    padding-top: var(--space-3xl);
-}
-
 
 .service-image-container {
     position: relative;
@@ -143,33 +139,38 @@ body {
     text-align: center;
 }
 
-.schedule-note {
-    background: var(--bg-success-subtle);
-    border: 1px solid var(--border-success);
-    border-radius: var(--radius-sm);
-    padding: var(--space-sm) var(--space-md);
-    text-align: center;
+/* "Fordelen: …" callouts under the demos */
+.note {
     margin: var(--space-lg) 0;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--note-border);
+    border-radius: var(--radius-sm);
+    background: var(--note-bg);
+    text-align: center;
 }
 
-.schedule-note p {
-    color: var(--success);
-    font-size: var(--text-base);
+.note p {
     margin: 0;
+    color: var(--note-colour);
+    font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
 }
 
-.schedule-note iconify-icon {
-    color: var(--success);
+.note iconify-icon {
     margin-right: var(--space-2xs);
+    color: var(--note-colour);
 }
 
-/* Staff Cards */
-.staff-list {
-    display: flex;
-    gap: var(--space-xl);
-    justify-content: center;
-    margin: var(--space-sm) 0;
+.note--success {
+    --note-bg: var(--bg-success-subtle);
+    --note-border: var(--border-success);
+    --note-colour: var(--success);
+}
+
+.note--primary {
+    --note-bg: var(--bg-primary-subtle);
+    --note-border: var(--border-primary);
+    --note-colour: var(--primary);
 }
 
 /* Photo Documentation Options */
@@ -211,27 +212,6 @@ color: var(--charcoal);
 /* Transparency Section */
 .transparency-grid {
     margin-top: var(--space-lg);
-}
-
-.transparency-note {
-    background: var(--bg-primary-subtle);
-    border: 1px solid var(--border-primary);
-    border-radius: var(--radius-md);
-    padding: var(--space-md);
-    margin: var(--space-lg) 0;
-    text-align: center;
-}
-
-.transparency-note p {
-    color: var(--primary);
-    font-size: var(--text-base);
-    margin: 0;
-    font-weight: var(--font-weight-medium);
-}
-
-.transparency-note iconify-icon {
-    color: var(--primary);
-    margin-right: var(--space-2xs);
 }
 
 /* Flexibility Section */
@@ -325,10 +305,6 @@ color: var(--charcoal);
     }
 
     /* Staff cards do not fit side by side on a phone. */
-    .staff-list {
-        flex-wrap: wrap;
-        gap: var(--space-sm);
-    }
 
     /* Three photo-documentation options with non-breaking labels. */
     .photo-options {
@@ -510,16 +486,6 @@ color: var(--charcoal); }
 
 .rengoering-specialties > div:nth-child(5) {
     grid-column: 4 / 6;
-}
-
-.rengoering-specialty {
-    padding: var(--space-lg);
-    border-top: 4px solid var(--charcoal);
-}
-
-.rengoering-subheading {
-    color: var(--primary);
-    text-align: center;
 }
 
 @media (max-width: 768px) {

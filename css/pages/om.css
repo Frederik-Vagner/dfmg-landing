@@ -4,67 +4,16 @@
 
 @layer pages {
 
-.om-hero__text {
+.om-text {
     color: var(--gray);
 }
 
-.om-story {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.om-team {
+/* The two blue panels: the team and the closing call to action */
+.om-panel {
     padding: var(--space-xl);
     background: var(--bg-gradient-primary);
     border-radius: var(--radius-normal);
     color: var(--white);
-}
-
-.om-values {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.om-value {
-    padding: var(--space-sm);
-    border-top: 4px solid var(--success);
-    text-align: center;
-}
-
-.om-philosophy__text {
-    color: var(--gray);
-}
-
-.om-innovation {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.om-cta {
-    padding: var(--space-xl);
-    background: var(--bg-gradient-primary);
-    border-radius: var(--radius-normal);
-    text-align: center;
-    color: var(--white);
-}
-
-.om-cta__text {
-    margin-bottom: var(--space-lg);
-}
-
-@media (max-width: 768px) {
-
-    .om-story {
-        flex-wrap: wrap;
-    }
-
-    .om-values {
-        flex-wrap: wrap;
-    }
-
-    .om-innovation {
-        flex-wrap: wrap;
-    }
 }
 
 }

@@ -4,70 +4,15 @@
 
 @layer pages {
 
-.estate-hero__title {
-    font-size: var(--heading-1);
-    font-weight: var(--font-weight-light);
-    line-height: 1.1;
-    letter-spacing: -2px;
-}
-
-.estate-hero__lead {
-    margin-bottom: var(--space-2xl);
-    opacity: 0.9;
-    font-size: var(--text-xl);
-}
-
-.estate-hero__aside {
+.estate-hero__aside,
+.estate-case__aside {
     align-content: center;
 }
 
 .area-chip {
     padding: var(--space-sm);
     background: var(--bg-gradient-success);
-}
-
-.estate-service {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    border-top: 4px solid var(--success);
-    text-align: center;
-}
-
-.estate-service__header {
-    justify-content: center;
-}
-
-.estate-service__icon {
-    margin-bottom: var(--space-sm);
-    color: var(--success);
-}
-
-.estate-feature {
-    padding: var(--space-lg);
-    text-align: center;
-}
-
-.estate-feature__icon {
-    margin-bottom: var(--space-lg);
-    color: var(--success);
-}
-
-.estate-case {
-    padding: var(--space-xl);
-    background: var(--bg-gradient-white);
-    border-top: 4px solid var(--charcoal);
-}
-
-.estate-case__title {
-    font-size: var(--heading-2);
-}
-
-.estate-case__text {
-    font-size: var(--text-lg);
-}
-
-.estate-case__aside {
-    align-content: center;
+    color: var(--white);
 }
 
 .estate-case__pillars {
@@ -75,12 +20,6 @@
     align-content: end;
     padding: var(--space-lg);
     text-align: center;
-}
-
-.estate-case__pillar {
-    padding: var(--space-sm);
-    background: var(--overlay-light);
-    border: 1px solid var(--border-on-dark);
 }
 
 .estate-case__pillar:not(:last-child) {

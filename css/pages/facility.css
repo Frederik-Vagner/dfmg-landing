@@ -31,23 +31,6 @@
     grid-column: 4 / 6;
 }
 
-.package-item {
-    padding: var(--space-lg);
-}
-
-.package-item__text {
-    color: var(--gray);
-}
-
-.package-benefit {
-    padding: var(--space-lg);
-    border-left: 4px solid var(--success);
-}
-
-.package-benefit__icon {
-    color: var(--success);
-}
-
 @media (max-width: 768px) {
     .package-overview {
         grid-template-columns: minmax(0, 1fr);
