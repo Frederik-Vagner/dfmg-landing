@@ -18,7 +18,7 @@ excerpt: "Historien om hvordan en københavnsk virksomhed forenklede deres facil
             <div class="content-layout">
                 <!-- Main Content -->
                 <div class="main-content">
-                    <img src="{{ image }}" alt="{{ imageAlt }}" class="article-image">
+                    <img src="{{ image }}" alt="{{ imageAlt }}" class="article-image" data-photo-slot="artikel-{{ page.fileSlug }}"{% if imageIsFallback %} data-photo-status="stand-in" data-photo-brief="Uses the shared fallback photo. Give this article its own."{% endif %}>
 
                     <div class="article-excerpt">
                         Historien om hvordan en københavnsk virksomhed forenklede deres facility management og opnåede bedre service til lavere omkostninger.

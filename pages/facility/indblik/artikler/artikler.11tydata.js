@@ -22,14 +22,18 @@ const MONTHS = ["januar", "februar", "marts", "april", "maj", "juni", "juli",
 
 const folderOf = (data) => data.page.filePathStem.split("/").slice(-2, -1)[0];
 
+const FALLBACK_IMAGE = "/images/article/ipad.webp";
+
 module.exports = {
     tags: ["artikel"],
 
     // Articles without a photograph of their own yet.
-    image: "/images/article/ipad.webp",
+    image: FALLBACK_IMAGE,
     imageAlt: "Mand i skjorte læser på en tablet i et lyst kontor",
 
     eleventyComputed: {
+        // Listed as a stand-in on /internal/photos/ (tools/photo-inventory.js).
+        imageIsFallback: (data) => data.image === FALLBACK_IMAGE,
         categoryKey: (data) => CATEGORIES[folderOf(data)].key,
         category: (data) => CATEGORIES[folderOf(data)].label,
         // "15. december 2024" as a sortable date, for newest-first lists.

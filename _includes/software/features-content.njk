@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="feature-row__visual">
-                    <div class="screenshot-placeholder screenshot-placeholder--light">
+                    <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="features-{{ loop.index }}" data-photo-status="missing" data-photo-brief="{{ section.screenshotAlt | replace('Alt: ', '') | escape }}">
                         <div>
                             <iconify-icon icon="fluent:image-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                             {{ section.screenshot }}<br>

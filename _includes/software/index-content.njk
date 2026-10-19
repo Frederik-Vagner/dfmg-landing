@@ -10,7 +10,7 @@
             </div>
 
             <!-- TODO: Replace with actual dashboard screenshot or 60s product video -->
-            <div class="screenshot-placeholder platform-hero__media">
+            <div class="screenshot-placeholder platform-hero__media" data-photo-slot="home-hero" data-photo-status="missing" data-photo-brief="{{ t.hero.placeholder_text | escape }}. {{ t.hero.placeholder_hint | escape }}">
                 <div>
                     <iconify-icon icon="fluent:play-circle-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                     <span>{{ t.hero.placeholder_text }}</span><br>
@@ -113,7 +113,7 @@
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.walkthrough.cta }}</a>
                 </div>
                 <!-- TODO: Replace with embedded video (Loom/YouTube) or animated GIF walkthrough -->
-                <div class="screenshot-placeholder walkthrough__media">
+                <div class="screenshot-placeholder walkthrough__media" data-photo-slot="home-walkthrough" data-photo-status="missing" data-photo-brief="{{ t.walkthrough.placeholder_text | escape }}. {{ t.walkthrough.placeholder_hint | escape }}">
                     <div>
                         <iconify-icon icon="fluent:video-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                         <span>{{ t.walkthrough.placeholder_text }}</span><br>

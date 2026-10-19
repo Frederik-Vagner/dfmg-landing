@@ -78,6 +78,15 @@ module.exports = function (eleventyConfig) {
     return [...same, ...rest].slice(0, count);
   });
 
+  // A photo slot with no photo yet: {% photoSlot "klima-bilfri", "brief" %}.
+  // Renders an inert <template> that tools/photo-inventory.js lists on
+  // /internal/photos/ and then strips from the built page. When the photo
+  // arrives, replace the shortcode with the <img>; it is picked up as real.
+  const attr = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+  eleventyConfig.addShortcode("photoSlot", (id, brief = "") =>
+    `<template data-photo-slot="${attr(id)}" data-photo-status="missing"` +
+    (brief ? ` data-photo-brief="${attr(brief)}"` : "") + `></template>`);
+
   // Ignores are defined in .eleventyignore
 
   return {

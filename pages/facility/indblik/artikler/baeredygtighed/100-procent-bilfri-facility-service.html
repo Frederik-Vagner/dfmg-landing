@@ -18,7 +18,7 @@ excerpt: "Få indblik i hvordan DFMG har elimineret bil-transport og skabt en CO
             <div class="content-layout">
                 <!-- Main Content -->
                 <div class="main-content">
-                    <img src="{{ image }}" alt="{{ imageAlt }}" class="article-image">
+                    <img src="{{ image }}" alt="{{ imageAlt }}" class="article-image" data-photo-slot="artikel-{{ page.fileSlug }}"{% if imageIsFallback %} data-photo-status="stand-in" data-photo-brief="Uses the shared fallback photo. Give this article its own."{% endif %}>
 
                     <div class="article-excerpt">
                         Få indblik i hvordan DFMG har elimineret bil-transport og skabt en CO2-neutral facility service uden at gå på kompromis med kvaliteten.
