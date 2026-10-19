@@ -120,6 +120,12 @@
     color: var(--white);
 }
 
+/* The panel is a navy-to-blue gradient: the green eyebrow used on white
+   sections is unreadable here, so it is white like the rest of the panel. */
+.benefits-panel .section-intro__eyebrow {
+    color: var(--white);
+}
+
 .benefit-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

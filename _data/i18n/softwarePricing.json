@@ -159,13 +159,13 @@
   "da": {
     "hero": {
       "subtitle": "PRISER",
-      "title": "Enkel, gennemsigtig prissaetning",
-      "body": "Vaelg den plan, der passer til jeres virksomhed. Skaler moduler op, efterhanden som I vokser."
+      "title": "Enkel, gennemsigtig prissætning",
+      "body": "Vælg den plan, der passer til jeres virksomhed. Skaler moduler op, efterhånden som I vokser."
     },
     "tiers": [
       {
         "name": "Starter",
-        "desc": "Til mindre servicevirksomheder, der vil i gang med digitale vaerktojer.",
+        "desc": "Til mindre servicevirksomheder, der vil i gang med digitale værktøjer.",
         "price": "Kontakt os",
         "featured": false,
         "badge": "",
@@ -183,15 +183,15 @@
       },
       {
         "name": "Professional",
-        "desc": "Til virksomheder i vaekst, der har brug for det fulde driftsvaerktoej.",
+        "desc": "Til virksomheder i vækst, der har brug for det fulde driftsværktøj.",
         "price": "Kontakt os",
         "featured": true,
-        "badge": "Mest Populaer",
+        "badge": "Mest Populær",
         "features": [
           "Alt i Starter",
-          "Fuld bogforing & e-Faktura",
-          "Lon med eIndkomst",
-          "Lager & indkobsordrer",
+          "Fuld bogføring & e-Faktura",
+          "Løn med eIndkomst",
+          "Lager & indkøbsordrer",
           "Tilbudsbygger & CRM",
           "Dokumentskabeloner",
           "Analyser & KPI",
@@ -223,7 +223,7 @@
     ],
     "comparison": {
       "title": "Modulsammenligning",
-      "body": "Se praecis hvad der er inkluderet i hver plan.",
+      "body": "Se præcis hvad der er inkluderet i hver plan.",
       "colModule": "Modul",
       "colStarter": "Starter",
       "colProfessional": "Professional",
@@ -249,12 +249,12 @@
           ]
         },
         {
-          "name": "Okonomi & Lon",
+          "name": "Økonomi & Løn",
           "rows": [
             { "module": "Basal Fakturering", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Fuld Bogforing", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Fuld Bogføring", "starter": false, "professional": true, "enterprise": true },
             { "module": "e-Faktura", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Lon & eIndkomst", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Løn & eIndkomst", "starter": false, "professional": true, "enterprise": true },
             { "module": "BankConnect", "starter": false, "professional": false, "enterprise": true }
           ]
         },
@@ -270,45 +270,45 @@
       ]
     },
     "faq": {
-      "title": "Ofte stillede sporgsmal",
+      "title": "Ofte stillede spørgsmål",
       "items": [
         {
           "question": "Hvordan fungerer faktureringen?",
-          "answer": "Vi fakturerer manedligt eller arligt. Arlig betaling giver rabat. I kan skifte plan eller opsige nar som helst med 30 dages varsel."
+          "answer": "Vi fakturerer månedligt eller årligt. Årlig betaling giver rabat. I kan skifte plan eller opsige når som helst med 30 dages varsel."
         },
         {
           "question": "Hvor lang tid tager onboarding?",
-          "answer": "De fleste virksomheder er oppe at kore inden for en uge. Vi hjaelper med at importere eksisterende data (medarbejdere, kunder) og konfigurere de moduler, I har brug for. Storre opsaetninger med fuld regnskabsmigrering kan tage 2-3 uger."
+          "answer": "De fleste virksomheder er oppe at køre inden for en uge. Vi hjælper med at importere eksisterende data (medarbejdere, kunder) og konfigurere de moduler, I har brug for. Større opsætninger med fuld regnskabsmigrering kan tage 2-3 uger."
         },
         {
           "question": "Hvor opbevares mine data?",
-          "answer": "Alle data hostes i EU pa sikker, GDPR-kompatibel infrastruktur. Hver lejers data er fuldt isoleret i sit eget databaseskema."
+          "answer": "Alle data hostes i EU på sikker, GDPR-kompatibel infrastruktur. Hver lejers data er fuldt isoleret i sit eget databaseskema."
         },
         {
-          "question": "Kan jeg tilfoeje moduler senere?",
-          "answer": "Helt sikkert. Platformen er fuldt modulaer. Start med det I har brug for, og aktiver yderligere moduler efterhanden som jeres forretning vokser. Ingen datamigrering nodvendig — alt er allerede forbundet."
+          "question": "Kan jeg tilføje moduler senere?",
+          "answer": "Helt sikkert. Platformen er fuldt modulær. Start med det I har brug for, og aktiver yderligere moduler efterhånden som jeres forretning vokser. Ingen datamigrering nødvendig — alt er allerede forbundet."
         },
         {
-          "question": "Er dansk skatte-/loncompliance inkluderet?",
-          "answer": "Ja. eIndkomst-indberetning til SKAT, dansk ferielovsberegning, ATP/pension og e-Faktura-understottelse er indbygget. Vi holder platformen opdateret med lovgivningsaendringer."
+          "question": "Er dansk skatte-/løncompliance inkluderet?",
+          "answer": "Ja. eIndkomst-indberetning til SKAT, dansk ferielovsberegning, ATP/pension og e-Faktura-understøttelse er indbygget. Vi holder platformen opdateret med lovgivningsændringer."
         },
         {
-          "question": "Tilbyder I en gratis proveperiode?",
-          "answer": "Vi tilbyder en guidet demo efterfulgt af en proveperiode, sa I kan evaluere platformen med jeres egne data. Kontakt os for at komme i gang."
+          "question": "Tilbyder I en gratis prøveperiode?",
+          "answer": "Vi tilbyder en guidet demo efterfulgt af en prøveperiode, så I kan evaluere platformen med jeres egne data. Kontakt os for at komme i gang."
         }
       ]
     },
     "trust": {
-      "items": ["Ingen oprettelsesgebyr", "Opsig nar som helst", "Support pa dansk", "EU-datahosting"]
+      "items": ["Ingen oprettelsesgebyr", "Opsig når som helst", "Support på dansk", "EU-datahosting"]
     },
     "testimonial": {
-      "quote": "[Udtalelse om vaerdi — f.eks. 'Vi betalte for Planday + Billy + Salary.dk hver for sig. DFMG erstattede alle tre og sparede os X kr/md, samtidig med at vi fik funktioner, ingen af dem havde.']",
+      "quote": "[Udtalelse om værdi — f.eks. 'Vi betalte for Planday + Billy + Salary.dk hver for sig. DFMG erstattede alle tre og sparede os X kr/md, samtidig med at vi fik funktioner, ingen af dem havde.']",
       "name": "[Navn]",
       "company": "[Virksomhed], [X] medarbejdere"
     },
     "cta": {
-      "title": "Ikke sikker pa hvilken plan?",
-      "body": "Book et opkald, sa gennemgar vi den rette losning til jeres virksomhed — baseret pa hvad I faktisk har brug for, ikke hvad vi gerne vil saelge.",
+      "title": "Ikke sikker på hvilken plan?",
+      "body": "Book et opkald, så gennemgår vi den rette løsning til jeres virksomhed — baseret på hvad I faktisk har brug for, ikke hvad vi gerne vil sælge.",
       "cta_demo": "Book en Demo",
       "cta_sales": "Kontakt Salg"
     }

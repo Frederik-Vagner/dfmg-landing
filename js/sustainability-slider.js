@@ -72,6 +72,13 @@ class SustainabilitySlider {
 
     setupNavigation() {
         this.dots.forEach((dot, index) => {
+            // The dots are <div>s: make them keyboard buttons (Enter and Space
+            // are handled for every role="button" in components.js).
+            if (dot.tagName !== 'BUTTON') {
+                dot.setAttribute('role', 'button');
+                dot.setAttribute('tabindex', '0');
+            }
+            if (!dot.hasAttribute('aria-label')) dot.setAttribute('aria-label', `Slide ${index + 1}`);
             dot.addEventListener('click', () => this.goToSlide(index));
         });
     }

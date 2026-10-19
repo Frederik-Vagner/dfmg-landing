@@ -114,16 +114,26 @@
                 }
             }
 
-            return {
+            const lines = {
                 base: Math.round(baseAreaCost),
                 meetings: Math.round(meetingRoomCost),
                 toilets: Math.round(toiletCost),
                 kitchens: Math.round(kitchenCost),
                 photos: Math.round(photoCost),
-                discount: Math.round(discount * 100),
-                frequency: frequency,
-                total: Math.round(subtotal * (1 - discount))
+                tasks: Math.round(taskCostTotal)
             };
+            // Without a discount the total is the sum of the rounded lines; with
+            // one, the discount is shown in kroner as whatever closes the gap, so
+            // the column always adds up exactly.
+            const lineSum = Object.values(lines).reduce((a, b) => a + b, 0);
+            const total = discount > 0 ? Math.round(subtotal * (1 - discount)) : lineSum;
+
+            return Object.assign(lines, {
+                discount: Math.round(discount * 100),
+                discountAmount: lineSum - total,
+                frequency: frequency,
+                total: total
+            });
         }
 
         function getTaskSummary() {
@@ -145,7 +155,8 @@
             document.querySelector('[data-price="toilets"] [data-value]').textContent = `${prices.toilets.toLocaleString('da-DK')} kr`;
             document.querySelector('[data-price="kitchens"] [data-value]').textContent = `${prices.kitchens.toLocaleString('da-DK')} kr`;
             document.querySelector('[data-price="photos"] [data-value]').textContent = `${prices.photos.toLocaleString('da-DK')} kr`;
-            document.querySelector('[data-price="discount"] [data-value]').textContent = `-${prices.discount}%`;
+            document.querySelector('[data-price="tasks"] [data-value]').textContent = `${prices.tasks.toLocaleString('da-DK')} kr`;
+            document.querySelector('[data-price="discount"] [data-value]').textContent = `-${prices.discountAmount.toLocaleString('da-DK')} kr`;
             document.getElementById('monthly-price').textContent = `${prices.total.toLocaleString('da-DK')} kr`;
 
             // Update dynamic labels
@@ -154,10 +165,11 @@
             document.querySelector('[data-price="toilets"] [data-label]').textContent = `Toiletter (${state.toilets} stk)`;
             document.querySelector('[data-price="kitchens"] [data-label]').textContent = `Køkkener (${state.kitchens} stk)`;
             document.querySelector('[data-price="photos"] [data-label]').textContent = PHOTO_LABELS[state.photos];
+            document.querySelector('[data-price="tasks"] [data-label]').textContent = `Opgaver (${document.querySelectorAll('.task-checkbox:checked').length} valgt)`;
             const discountLine = document.querySelector('[data-price="discount"]');
             if (prices.discount > 0) {
                 discountLine.style.display = '';
-                discountLine.querySelector('[data-label]').textContent = `Rabat (${prices.frequency}x ugentligt)`;
+                discountLine.querySelector('[data-label]').textContent = `Rabat ${prices.discount}% (${prices.frequency}x/uge)`;
             } else {
                 discountLine.style.display = 'none';
             }
@@ -174,30 +186,37 @@
                 timeout = setTimeout(updatePriceDisplay, 150);
             }
 
-            // Input listeners
-            document.getElementById('office-area').addEventListener('input', e => {
-                state.area = parseInt(e.target.value) || 0;
-                debouncedUpdate();
-            });
+            // Number fields: a value that isn't a whole number at or above the
+            // field's minimum keeps the last good value and says why, instead of
+            // pricing "-50 m²" or "abc".
+            const NUMBER_FIELDS = {
+                'office-area': { key: 'area', message: 'Indtast et areal på mindst 1 m².' },
+                'employee-count': { key: 'employees', message: 'Indtast mindst 1 medarbejder.' },
+                'meeting-room-count': { key: 'meetingRooms', message: 'Antal mødelokaler skal være 0 eller flere.' },
+                'toilet-count': { key: 'toilets', message: 'Antal toiletter skal være 0 eller flere.' },
+                'kitchen-count': { key: 'kitchens', message: 'Antal køkkener skal være 0 eller flere.' }
+            };
+            const inputError = document.getElementById('calc-input-error');
 
-            document.getElementById('employee-count').addEventListener('input', e => {
-                state.employees = parseInt(e.target.value) || 0;
-                debouncedUpdate();
-            });
+            function showInputErrors() {
+                const invalid = Object.keys(NUMBER_FIELDS)
+                    .map(id => document.getElementById(id))
+                    .filter(input => input.getAttribute('aria-invalid') === 'true');
+                inputError.textContent = invalid.map(input => NUMBER_FIELDS[input.id].message).join(' ');
+                inputError.hidden = invalid.length === 0;
+            }
 
-            document.getElementById('meeting-room-count').addEventListener('input', e => {
-                state.meetingRooms = parseInt(e.target.value) || 0;
-                debouncedUpdate();
-            });
-
-            document.getElementById('toilet-count').addEventListener('input', e => {
-                state.toilets = parseInt(e.target.value) || 0;
-                debouncedUpdate();
-            });
-
-            document.getElementById('kitchen-count').addEventListener('input', e => {
-                state.kitchens = parseInt(e.target.value) || 0;
-                debouncedUpdate();
+            Object.entries(NUMBER_FIELDS).forEach(([id, field]) => {
+                const input = document.getElementById(id);
+                input.addEventListener('input', () => {
+                    const value = Number(input.value);
+                    const valid = input.value.trim() !== '' && Number.isInteger(value) && value >= Number(input.min);
+                    input.setAttribute('aria-invalid', valid ? 'false' : 'true');
+                    showInputErrors();
+                    if (!valid) return;
+                    state[field.key] = value;
+                    debouncedUpdate();
+                });
             });
 
             // Day buttons

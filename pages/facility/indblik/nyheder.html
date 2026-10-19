@@ -32,16 +32,17 @@ featured:
         <div class="container">
             <div class="filter-container">
                 <div class="filter-tabs">
-                    <a class="tab-button active" data-filter="all">Alle</a>
-                    <a class="tab-button" data-filter="insights">Indsigt</a>
-                    <a class="tab-button" data-filter="tips">Tips & Tricks</a>
-                    <a class="tab-button" data-filter="sustainability">Bæredygtighed</a>
-                    <a class="tab-button" data-filter="innovation">Innovation</a>
-                    <a class="tab-button" data-filter="cases">Case Study</a>
+                    <button type="button" class="tab-button active" data-filter="all" aria-pressed="true">Alle</button>
+                    <button type="button" class="tab-button" data-filter="insights" aria-pressed="false">Indsigt</button>
+                    <button type="button" class="tab-button" data-filter="tips" aria-pressed="false">Tips & Tricks</button>
+                    <button type="button" class="tab-button" data-filter="sustainability" aria-pressed="false">Bæredygtighed</button>
+                    <button type="button" class="tab-button" data-filter="innovation" aria-pressed="false">Innovation</button>
+                    <button type="button" class="tab-button" data-filter="cases" aria-pressed="false">Case Study</button>
                 </div>
                 <div class="search-bar">
                     <iconify-icon icon="fluent:search-20-filled" inline></iconify-icon>
-                    <input type="text" placeholder="Søg i artikler..." id="searchInput">
+                    <label class="sr-only" for="searchInput">Søg i artikler</label>
+                    <input type="search" placeholder="Søg i artikler..." id="searchInput">
                 </div>
             </div>
         </div>
@@ -67,6 +68,7 @@ featured:
                     {%- endfor %}
 
                 </div>
+                <p class="body" id="articlesEmpty" role="status" hidden>Ingen artikler matcher din søgning.</p>
             </div>
         </div>
     </section>

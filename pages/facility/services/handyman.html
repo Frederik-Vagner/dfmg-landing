@@ -132,12 +132,12 @@ pageCss:
             </div>
 
             <div class="carousel-controls">
-                <a class="btn--icon" data-carousel-prev>
+                <button type="button" class="btn--icon" data-carousel-prev aria-label="Forrige">
                     <iconify-icon icon="fluent:chevron-left-20-filled" inline></iconify-icon>
-                </a>
-                <a class="btn--icon" data-carousel-next>
+                </button>
+                <button type="button" class="btn--icon" data-carousel-next aria-label="Næste">
                     <iconify-icon icon="fluent:chevron-right-20-filled" inline></iconify-icon>
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -203,9 +203,9 @@ pageCss:
 
         <div>
             <div class="tab-bar">
-                <div class="tab-button active" data-tab="renovation">Renovering</div>
-                <div class="tab-button" data-tab="furniture">Møbelmontering</div>
-                <div class="tab-button" data-tab="painting">Maling</div>
+                <div class="tab-button active" data-tab="renovation" role="button" tabindex="0">Renovering</div>
+                <div class="tab-button" data-tab="furniture" role="button" tabindex="0">Møbelmontering</div>
+                <div class="tab-button" data-tab="painting" role="button" tabindex="0">Maling</div>
             </div>
 
             <div class="toggle-content active" id="renovation">

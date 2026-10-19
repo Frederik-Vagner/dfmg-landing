@@ -41,8 +41,10 @@
 
 /* ── Platform Hero ── */
 .platform-hero {
-    height: 100vh;
-    height: 100dvh;
+    /* A minimum, not a fixed height: content taller than the screen used to
+       be centred and clipped, which put the eyebrow under the header. */
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -110,8 +112,22 @@
     height: 100%;
     background: var(--bg-gradient-charcoal);
     transform: skewX(-15deg);
-    transform-origin: top right;
+    /* Skewing from the bottom keeps the slab right of the midline all the way
+       down, so it never reaches the text column on the left. */
+    transform-origin: bottom right;
     z-index: 1;
+}
+
+/* Centred hero content has no light side to sit on: no slab. Below 1024px
+   the text column is wider than the light half, so the slab goes too. */
+.hero-layout--plain::before {
+    content: none;
+}
+
+@media (max-width: 1024px) {
+    .hero-layout::before {
+        content: none;
+    }
 }
 
 .hero-content {
@@ -150,8 +166,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: 100%;
-    background-position: 0% center;
+    /* cover, not 100%: 100% is the image's width only, which leaves a band of
+       photo in a tall portrait hero. */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
 }
@@ -184,6 +202,15 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: var(--space-lg);
+}
+
+/* The empty right third is decoration; on a phone it squeezed the text into
+   a column a few words wide and the buttons onto three lines each. */
+@media (max-width: 768px) {
+    .cta-box {
+        grid-template-columns: minmax(0, 1fr);
+        padding: var(--space-lg);
+    }
 }
 
 .cta-center {
@@ -236,7 +263,7 @@
     font-weight: var(--font-weight-medium);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--primary);
+    color: var(--primary-text);
     margin-bottom: var(--space-2xs);
 }
 
@@ -370,15 +397,7 @@
     }
 
     .platform-hero {
-        height: auto;
-        min-height: 100vh;
-        min-height: 100dvh;
-        padding: var(--space-3xl) 0 var(--space-xl);
-    }
-
-    .hero-layout::before {
-        transform: skewX(-10deg);
-        width: 60%;
+        padding: calc(var(--header-clearance) + var(--space-lg)) 0 var(--space-xl);
     }
 
     .hero-grid-content {
@@ -392,8 +411,11 @@
         gap: var(--space-lg);
     }
 
+    /* Stacked, the columns take the full width; flex-start shrank the
+       contact form to its content, about 240px on a phone. */
     .demo-split {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .trust-row {
@@ -404,10 +426,12 @@
 
 /* ── Section Modifiers ── */
 .section--half {
-    height: 50dvh;
+    /* A minimum, not a fixed height: on the platform home page the content is
+       taller than half the screen, and centring it in a fixed box pushed the
+       "Why DFMG" eyebrow up under the hero, where it could not be seen. */
+    min-height: 50dvh;
     display: flex;
     align-items: center;
-    overflow: hidden;
 }
 
 .section--fullheight {
@@ -472,8 +496,8 @@
 
 /* ====================================
    MOBILE: sections with a fixed height
-   .hero and .section--half pin themselves to a fraction of the viewport and
-   hide the overflow. That holds on a desktop, where the content is a couple
+   .hero pins itself to a fraction of the viewport and hides the overflow
+   (.section--half used to as well; it is a minimum height everywhere now). That holds on a desktop, where the content is a couple
    of lines; on a phone the same text wraps to three times the height and the
    bottom of it is silently cut off. Let both grow and keep the fixed height
    as a minimum, so they still fill the screen when the content is short.
@@ -487,9 +511,6 @@
     }
 
     .section--half {
-        height: auto;
-        min-height: 50dvh;
-        overflow: visible;
         padding-top: var(--space-xl);
         padding-bottom: var(--space-xl);
     }

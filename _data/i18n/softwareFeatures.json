@@ -110,7 +110,7 @@
     "hero": {
       "subtitle": "FUNKTIONER",
       "title": "40+ moduler designet til servicevirksomheder",
-      "body": "Alt hvad I behover for at drive drift, administrere medarbejdere, styre okonomi og vokse jeres forretning — i en sammenhaengende platform."
+      "body": "Alt hvad I behøver for at drive drift, administrere medarbejdere, styre økonomi og vokse jeres forretning — i en sammenhængende platform."
     },
     "sections": [
       {
@@ -119,7 +119,7 @@
         "rowClass": "feature-row",
         "subtitle": "Kernedrift",
         "title": "Den daglige motor i jeres forretning",
-        "body": "Planlaeg opgaver, registrer tid, styr kvalitet og hold hele driften synlig i realtid. Jeres medarbejdere tjekker ind via telefonen, og I ser det hele pa dashboardet — hvem der er hvor, hvad der er gjort, og hvad der mangler.",
+        "body": "Planlæg opgaver, registrer tid, styr kvalitet og hold hele driften synlig i realtid. Jeres medarbejdere tjekker ind via telefonen, og I ser det hele på dashboardet — hvem der er hvor, hvad der er gjort, og hvad der mangler.",
         "badges": ["Kalender", "Opgavestyring", "Tidsregistrering", "Inspektioner", "Kvalitetstjek", "Gentagne Opgaver", "Opgaverapporter", "Fotodokumentation"],
         "screenshot": "Screenshot: Kalenderugevisning med opgaver + medarbejdertildelinger",
         "screenshotAlt": "Alt: Opgavedetalje med check-in-tid, fotos, tjekliste"
@@ -130,7 +130,7 @@
         "rowClass": "feature-row feature-row--reverse",
         "subtitle": "Kundestyring",
         "title": "Hver kunde, hver lokation, hver detalje",
-        "body": "Administrer kundeinformation, adresser, kontaktpersoner og lokationsspecifikke guides, der fortaeller jeres team praecis, hvordan hver lokation skal serviceres. Kunder far deres egen portal med kommende opgaver, fakturaer, fotos og plantegninger.",
+        "body": "Administrer kundeinformation, adresser, kontaktpersoner og lokationsspecifikke guides, der fortæller jeres team præcis, hvordan hver lokation skal serviceres. Kunder får deres egen portal med kommende opgaver, fakturaer, fotos og plantegninger.",
         "badges": ["Kundeportal", "Lokationsguider", "Feedbacksystem", "Facilitetsstatus", "Bookingsystem", "Kontaktpersoner", "Plantegninger"],
         "screenshot": "Screenshot: Kundedetalje med lokationsguide-sektioner",
         "screenshotAlt": "Alt: Kundeportalvisning (hvad jeres kunder ser)"
@@ -140,9 +140,9 @@
         "sectionClass": "section",
         "rowClass": "feature-row",
         "subtitle": "Medarbejderstyring",
-        "title": "Fra ansaettelse til daglig performance",
-        "body": "Medarbejderne far deres egen portal med opgaver, vagtplaner, lonsedler og ferieanmodninger. Ledere folger performance via et forbedringssystem med tests, scoring og haendelsesregistrering. Organisationsdiagrammet viser hele jeres struktur med et overblik.",
-        "badges": ["Medarbejderportal", "Feriestyring", "Handbog", "Forbedringssystem", "Tests & Sporgsmal", "Organisationsdiagram", "Teamoverblik", "Notifikationer"],
+        "title": "Fra ansættelse til daglig performance",
+        "body": "Medarbejderne får deres egen portal med opgaver, vagtplaner, lønsedler og ferieanmodninger. Ledere følger performance via et forbedringssystem med tests, scoring og hændelsesregistrering. Organisationsdiagrammet viser hele jeres struktur med et overblik.",
+        "badges": ["Medarbejderportal", "Feriestyring", "Håndbog", "Forbedringssystem", "Tests & Spørgsmål", "Organisationsdiagram", "Teamoverblik", "Notifikationer"],
         "screenshot": "Screenshot: Medarbejder-dashboard (mobilvisning) med opgaver",
         "screenshotAlt": "Alt: Feriekalender eller forbedrings-/testsystem"
       },
@@ -150,10 +150,10 @@
         "id": "finance",
         "sectionClass": "section section--light",
         "rowClass": "feature-row feature-row--reverse",
-        "subtitle": "Okonomisuite",
-        "title": "Komplet bogforing bygget til danske virksomheder",
-        "body": "Fuld dobbelt bogforing med dansk kontoplan, automatiseret fakturering med e-Faktura-understottelse, bankafstemning, BankConnect-integration til direkte bankbetalinger og momsindberetning klar til SKAT. Generer resultatopgorelse og balance med et klik.",
-        "badges": ["Kontoplan", "Fakturering", "e-Faktura", "Kreditnotaer", "Bankafstemning", "BankConnect", "Leverandorfakturaer", "Momsrapporter", "Resultatopgorelse", "Balance", "Bogforingsposter"],
+        "subtitle": "Økonomisuite",
+        "title": "Komplet bogføring bygget til danske virksomheder",
+        "body": "Fuld dobbelt bogføring med dansk kontoplan, automatiseret fakturering med e-Faktura-understøttelse, bankafstemning, BankConnect-integration til direkte bankbetalinger og momsindberetning klar til SKAT. Generer resultatopgørelse og balance med et klik.",
+        "badges": ["Kontoplan", "Fakturering", "e-Faktura", "Kreditnotaer", "Bankafstemning", "BankConnect", "Leverandørfakturaer", "Momsrapporter", "Resultatopgørelse", "Balance", "Bogføringsposter"],
         "screenshot": "Screenshot: Fakturaoversigt med fakturaliste + e-Faktura-badge",
         "screenshotAlt": "Alt: Kontoplan eller bankafstemningsvisning"
       },
@@ -161,23 +161,23 @@
         "id": "payroll",
         "sectionClass": "section",
         "rowClass": "feature-row",
-        "subtitle": "Lon",
-        "title": "Dansk lon fra timer til lonseddel",
-        "body": "Opret lonkorsel fra registrerede timer, beregn skat og fradrag, generer lonsedler, indberetning til eIndkomst/SKAT og eksporter bankbetalingsfiler — alt uden at forlade platformen. Feriepenge og pensionsberegninger folger automatisk dansk lovgivning.",
-        "badges": ["Lonkorsler", "Lonprofiler", "Lonsedler", "eIndkomst / SKAT", "Feriepenge", "Pension & ATP", "Bankbetalingseksport", "Faste Udgifter"],
-        "screenshot": "Screenshot: Lonkorsel med medarbejderposter + eIndkomst-eksport",
-        "screenshotAlt": "Alt: Lonoversigt eller lonseddelforhandsvisning"
+        "subtitle": "Løn",
+        "title": "Dansk løn fra timer til lønseddel",
+        "body": "Opret lønkørsel fra registrerede timer, beregn skat og fradrag, generer lønsedler, indberetning til eIndkomst/SKAT og eksporter bankbetalingsfiler — alt uden at forlade platformen. Feriepenge og pensionsberegninger følger automatisk dansk lovgivning.",
+        "badges": ["Lønkørsler", "Lønprofiler", "Lønsedler", "eIndkomst / SKAT", "Feriepenge", "Pension & ATP", "Bankbetalingseksport", "Faste Udgifter"],
+        "screenshot": "Screenshot: Lønkørsel med medarbejderposter + eIndkomst-eksport",
+        "screenshotAlt": "Alt: Lønoversigt eller lønseddelforhåndsvisning"
       },
       {
         "id": "inventory",
         "sectionClass": "section section--light",
         "rowClass": "feature-row feature-row--reverse",
-        "subtitle": "Lager & Indkob",
+        "subtitle": "Lager & Indkøb",
         "title": "Spor hver vare, fra lager til kundelokation",
-        "body": "Administrer lagerbeholdning pa tvaers af flere lagerlokationer, opret indkobsordrer til leverandorer, folg lagerniveauer og byg pakkelister til hvad hvert team skal bruge pa ruten. Medarbejdere rapporterer forbrug direkte fra opgavevisningen.",
-        "badges": ["Lagervarer", "Lagerlokationer", "Indkobsordrer", "Leverandorer", "Pakkelister", "Lagerniveauer", "Vaskerikurve"],
+        "body": "Administrer lagerbeholdning på tværs af flere lagerlokationer, opret indkøbsordrer til leverandører, følg lagerniveauer og byg pakkelister til hvad hvert team skal bruge på ruten. Medarbejdere rapporterer forbrug direkte fra opgavevisningen.",
+        "badges": ["Lagervarer", "Lagerlokationer", "Indkøbsordrer", "Leverandører", "Pakkelister", "Lagerniveauer", "Vaskerikurve"],
         "screenshot": "Screenshot: Lagerliste med lagerniveauer + lagerlokationer",
-        "screenshotAlt": "Alt: Indkobsordredetalje eller pakkeskabelon"
+        "screenshotAlt": "Alt: Indkøbsordredetalje eller pakkeskabelon"
       },
       {
         "id": "crm",
@@ -185,9 +185,9 @@
         "rowClass": "feature-row",
         "subtitle": "Salg & CRM",
         "title": "Fra lead til underskrevet kontrakt",
-        "body": "Byg professionelle tilbud med udstyrslister, rengoeringsskemaer og autogenererede PDF'er. Kor emailsekvenser til at pleje leads med abnings-/kliksporing. Administrer jeres indbakke med fuld IMAP-integration. Opret et prisbibliotek med ydelser, tilvalg og opsigelsesbetingelser.",
+        "body": "Byg professionelle tilbud med udstyrslister, rengøringsskemaer og autogenererede PDF'er. Kør emailsekvenser til at pleje leads med åbnings-/kliksporing. Administrer jeres indbakke med fuld IMAP-integration. Opret et prisbibliotek med ydelser, tilvalg og opsigelsesbetingelser.",
         "badges": ["Tilbudsbygger", "PDF-generering", "Email-automatisering", "Leadstyring", "IMAP-indbakke", "Prisbibliotek", "Produktbibliotek", "Vinduespolering-konfiguration"],
-        "screenshot": "Screenshot: Tilbudsdetalje med rengoeringsskema + PDF-forhandsvisning",
+        "screenshot": "Screenshot: Tilbudsdetalje med rengøringsskema + PDF-forhåndsvisning",
         "screenshotAlt": "Alt: Emailsekvens-liste eller lead-pipeline"
       },
       {
@@ -196,7 +196,7 @@
         "rowClass": "feature-row feature-row--reverse",
         "subtitle": "Dokumenter & Analyser",
         "title": "Skabeloner, signaturer og datadrevne beslutninger",
-        "body": "Opret dokumentskabeloner med pladsholdere, der automatisk udfyldes fra jeres data, send til e-signering og generer kunderapporter. Folg opgave-KPI'er, medarbejderperformance, kunderentabilitet og feedbackanalyser fra et samlet dashboard.",
+        "body": "Opret dokumentskabeloner med pladsholdere, der automatisk udfyldes fra jeres data, send til e-signering og generer kunderapporter. Følg opgave-KPI'er, medarbejderperformance, kunderentabilitet og feedbackanalyser fra et samlet dashboard.",
         "badges": ["Dokumentskabeloner", "E-signaturer", "Plantegninger", "Fotogallerier", "Opgave-KPI-dashboard", "Medarbejderperformance", "Rentabilitetsanalyser", "Feedbackanalyser", "Eksportcenter"],
         "screenshot": "Screenshot: Opgave-KPI-dashboard eller rentabilitetsanalyser",
         "screenshotAlt": "Alt: Dokumentskabelon-builder eller e-signaturflow"
@@ -204,11 +204,11 @@
     ],
     "admin": {
       "title": "Platformsadministration",
-      "body": "For platformsoperatorer: opret lejere, tildel prisplaner, styr moduladgang per virksomhed, saet ressourcekvoter (brugere, lager, medarbejdere, kunder) og administrer abonnementsfakturering — alt fra en dedikeret administrationskonsol."
+      "body": "For platformsoperatører: opret lejere, tildel prisplaner, styr moduladgang per virksomhed, sæt ressourcekvoter (brugere, lager, medarbejdere, kunder) og administrer abonnementsfakturering — alt fra en dedikeret administrationskonsol."
     },
     "cta": {
       "title": "Se det i praksis",
-      "body": "Book en 30-minutters demo, sa viser vi jer de moduler, der betyder mest for jeres forretning.",
+      "body": "Book en 30-minutters demo, så viser vi jer de moduler, der betyder mest for jeres forretning.",
       "cta_demo": "Book en Demo",
       "cta_pricing": "Se Priser"
     }

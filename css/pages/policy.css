@@ -6,6 +6,20 @@
 
 @layer core {
 
+/* Policy text reads as a document: a comfortable line length (it ran the
+   full ~1200px container) and the site's heading and body colours instead of
+   the browser's black. */
+.policy {
+    max-width: 760px;
+    color: var(--gray);
+}
+
+.policy h1,
+.policy h2,
+.policy h3 {
+    color: var(--charcoal);
+}
+
 /* Running text: a heading starts a new part of the page, so it gets room
    above as well as below (the base spacing only puts --space-text below). */
 .policy h2 {

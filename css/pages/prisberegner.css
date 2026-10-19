@@ -6,7 +6,9 @@
 @layer core {
 
 /* Calculator-specific reset */
-#price h2, #price h3, #price h4, #price p, #price label, #price th, #price td {
+/* Not the task rows: they are labels now (so the text names the checkbox) and
+   keep their own padding. */
+#price h2, #price h3, #price h4, #price p, #price label:not(.task-item), #price th, #price td {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -61,6 +63,15 @@
     transition: border-color var(--transition-normal);
     width: 80px;
     text-align: center;
+}
+
+/* An amount never breaks between the number and "kr". */
+.price-line [data-value] {
+    white-space: nowrap;
+}
+
+#price .form-input[aria-invalid="true"] {
+    border-color: var(--red-700);
 }
 
 /* Service Tasks Grid */

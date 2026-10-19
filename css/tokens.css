@@ -39,7 +39,12 @@
     --amber: #f59e0b;
     --cyan: #06b6d4;
     --indigo: #6366f1;
-    --link: var(--primary);      /* links without a class of their own (base.css) */
+    /* Text versions of the brand colours. --success and --primary are too
+       light for text on white (2.3:1 and 3.6:1); these pass AA (5.0:1, 6.7:1).
+       Icons and fills keep the brand colours. */
+    --success-text: var(--green-700);
+    --primary-text: var(--blue-700);
+    --link: var(--primary-text);  /* links without a class of their own (base.css) */
 
     /* Social Brand Colors */
     --linkedin: #0077b5;
@@ -65,8 +70,10 @@
     --bg-callout-sky: linear-gradient(135deg, #eff6ff, #dbeafe);
 
     /* Glass Morphism */
-    --glass-bg: rgba(60, 50, 40, 0.55);
-    --glass-bg-heavy: rgba(60, 50, 40, 0.85);
+    /* Charcoal glass: on a white page the old brown glass came out #948e89,
+       2.8:1 behind the nav links. This one stays above 4.5:1 on any background. */
+    --glass-bg: rgba(52, 71, 103, 0.88);
+    --glass-bg-heavy: rgba(52, 71, 103, 0.94);
     --glass-blur: 20px;
 
     /* Text on dark backgrounds */
@@ -208,6 +215,8 @@
     --cyan-900: #164e63;
     --blue-50: #eff6ff;
     --blue-200: #bfdbfe;
+    --blue-300: #93c5fd;
+    --blue-700: #1d4ed8;
     --green-50: #f0fdf4;
     --green-700: #15803d;
     --green-800: #166534;
@@ -231,6 +240,7 @@
     --red-50: #fef2f2;
     --red-200: #fecaca;
     --red-300: #fca5a5;
+    --red-700: #b91c1c;
     --white-a03: rgba(255, 255, 255, 0.03);
     --white-a05: rgba(255, 255, 255, 0.05);
     --white-a08: rgba(255, 255, 255, 0.08);

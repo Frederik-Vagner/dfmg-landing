@@ -19,11 +19,16 @@
 }
 
 .section-intro__eyebrow {
-    color: var(--success);
+    color: var(--success-text);
 }
 
 .section-intro__eyebrow--primary {
-    color: var(--primary);
+    color: var(--primary-text);
+}
+
+/* On the dark sections the light brand colours are the readable ones. */
+.section--charcoal .section-intro__eyebrow {
+    color: var(--success);
 }
 
 .section-intro__title {
@@ -47,7 +52,7 @@
 }
 
 .page-intro__eyebrow {
-    color: var(--primary);
+    color: var(--primary-text);
 }
 
 .page-intro__title {
@@ -144,11 +149,6 @@
     border: 1px solid var(--border-subtle);
 }
 
-.logo {
-    display: flex;
-    gap: var(--space-xs);
-}
-
 .footer-links__row {
     display: flex;
     flex-direction: row;
@@ -176,12 +176,6 @@
     display: flex;
     flex-direction: row;
     gap: var(--space-md);
-}
-
-.footer-bottom {
-    display: flex;
-    gap: var(--space-md);
-    border-top: 1px solid var(--bg-light);
 }
 
 .article-header__category {
@@ -237,19 +231,8 @@
         flex: 0 1 auto;
     }
 
-    .footer-bottom {
-        flex-wrap: nowrap;
-        flex-direction: column;
-    }
-
     .hero__actions {
         flex-wrap: wrap;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 860px) {
-    .nav {
-        gap: var(--space-2xs);
     }
 }
 

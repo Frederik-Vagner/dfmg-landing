@@ -71,13 +71,18 @@
     color: var(--gray);
 }
 
+/* Four steps fit side by side from about 1100px; below that two by two, so
+   the fourth card no longer runs off the edge at tablet widths. */
 .service-steps {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--layout-gap);
 }
 
-.service-steps > * {
-    flex: 1;
+@media (max-width: 1100px) {
+    .service-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .service-step {
@@ -121,12 +126,7 @@
     }
 
     .service-steps {
-        flex-wrap: wrap;
-    }
-
-    .service-steps > * {
-        flex: 1 1 100%;
-        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 

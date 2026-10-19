@@ -21,6 +21,7 @@ pageCss:
                     <div class="calc-box">
                         <h4>Størrelse</h4>
                         <label>Hvor stort er jeres kontor?</label>
+                        <p class="field-error" id="calc-input-error" role="alert" hidden></p>
                         <table class="planning-table">
                             <tbody>
                                 <tr>
@@ -33,12 +34,12 @@ pageCss:
                                     <td>
                                         <div id="area-input">
                                             <div class="input-with-unit">
-                                                <input class="form-input" id="office-area" placeholder="500" value="500">
+                                                <input class="form-input" id="office-area" type="number" inputmode="numeric" min="1" step="1" value="500" aria-label="Kontorets areal i m²" aria-describedby="calc-input-error">
                                                 <span class="input-unit">m²</span>
                                             </div>
                                         </div>
                                         <div id="employees-input" class="employees-field">
-                                            <input class="form-input" id="employee-count" placeholder="15" value="15">
+                                            <input class="form-input" id="employee-count" type="number" inputmode="numeric" min="1" step="1" value="15" aria-label="Antal medarbejdere" aria-describedby="calc-input-error">
                                         </div>
                                     </td>
                                 </tr>
@@ -53,16 +54,16 @@ pageCss:
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Mødelokaler</td>
-                                    <td><input class="form-input" id="meeting-room-count" placeholder="4" value="4"></td>
+                                    <td><label for="meeting-room-count">Mødelokaler</label></td>
+                                    <td><input class="form-input" id="meeting-room-count" type="number" inputmode="numeric" min="0" step="1" value="4" aria-describedby="calc-input-error"></td>
                                 </tr>
                                 <tr>
-                                    <td>Toiletter</td>
-                                    <td><input class="form-input" id="toilet-count" placeholder="3" value="3"></td>
+                                    <td><label for="toilet-count">Toiletter</label></td>
+                                    <td><input class="form-input" id="toilet-count" type="number" inputmode="numeric" min="0" step="1" value="3" aria-describedby="calc-input-error"></td>
                                 </tr>
                                 <tr>
-                                    <td>Køkkener</td>
-                                    <td><input class="form-input" id="kitchen-count" placeholder="2" value="2"></td>
+                                    <td><label for="kitchen-count">Køkkener</label></td>
+                                    <td><input class="form-input" id="kitchen-count" type="number" inputmode="numeric" min="0" step="1" value="2" aria-describedby="calc-input-error"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -173,46 +174,46 @@ pageCss:
                     <div class="calc-box">
                         <h4>Kontor, Mødelokaler</h4>
                         <div class="service-tasks">
-                            <div class="task-item">
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="waste" data-section="office" checked>
                                 <span>Affaldsbeholder tømmes og poser udskiftes</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="light-meeting" data-section="office" checked>
                                 <span>Mødelokaler rengøres let</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="deep-meeting" data-section="office">
                                 <span>Mødelokaler rengøres grundigt</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="vacuum-floor" data-section="office">
                                 <span>Gulv støvsuges og vaskes/plejes</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="wipe-tables" data-section="office">
                                 <span>Borde/skriveborde tørres af</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="dust-surfaces" data-section="office">
                                 <span>Døre, stikkontakter, rammer og paneler afstøves</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="dust-shelves" data-section="office">
                                 <span>Frie hylder afstøves med candyfloss</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-glass" data-section="office">
                                 <span>Pletter/fedtfingre på internt glas fjernes</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-walls" data-section="office">
                                 <span>Synlige pletter på væggene fjernes</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="vacuum-furniture" data-section="office">
                                 <span>Polstrede møbler støvsuges</span>
-                            </div>
+                            </label>
                         </div>
                     </div>
 
@@ -222,46 +223,46 @@ pageCss:
                             <h4 class="service-title">Køkken</h4>
                         </div>
                         <div class="service-tasks">
-                            <div class="task-item">
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="waste" data-section="kitchen" checked>
                                 <span>Affaldsbeholder tømmes og poser udskiftes</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="vacuum-floor" data-section="kitchen" checked>
                                 <span>Gulv støvsuges og vaskes/plejes</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-sink" data-section="kitchen" checked>
                                 <span>Håndvask og sanitet rengøres</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="wipe-surfaces" data-section="kitchen" checked>
                                 <span>Bordplader og skabslåger aftørres</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="wipe-tables" data-section="kitchen" checked>
                                 <span>Spiseborde / loungeborde aftørres</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="dishwasher" data-section="kitchen" checked>
                                 <span>Tøm opvaskemaskine, fyld op og start om nødvendigt</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-filter" data-section="kitchen">
                                 <span>Rengør opvaskemaskine filter</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="wipe-chairs" data-section="kitchen">
                                 <span>Stole og lamper (&lt;1,80m) &amp; døkarme aftørres</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="check-supplies" data-section="kitchen">
                                 <span>Tjek maskine for salt og afspændingsmiddel</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-fridge" data-section="kitchen">
                                 <span>Køleskab rengøres udvendigt</span>
-                            </div>
+                            </label>
                         </div>
                     </div>
 
@@ -271,46 +272,46 @@ pageCss:
                             <h4 class="service-title">Toiletter</h4>
                         </div>
                         <div class="service-tasks">
-                            <div class="task-item">
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="waste" data-section="toilet" checked>
                                 <span>Affaldsbeholder tømmes og poser udskiftes</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="vacuum-floor" data-section="toilet" checked>
                                 <span>Gulv støvsuges og vaskes/plejes</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-sanitary" data-section="toilet" checked>
                                 <span>Al sanitet (håndvask, armatur, toilet) rengøres</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-mirror" data-section="toilet" checked>
                                 <span>Spejl rengøres</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="wipe-dispensers" data-section="toilet" checked>
                                 <span>Papir- og sæbeholder aftørres</span>
-                            </div>
-                            <div class="task-item">
+                            </label>
+                            <label class="task-item">
                                 <input type="checkbox" class="task-checkbox" data-task="refill-supplies" data-section="toilet" checked>
                                 <span>Papir og sæbe fyldes op (hvis nødvendigt)</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="wipe-doors" data-section="toilet">
                                 <span>Døre, rammer og lamper (&lt;1,80m) aftørres</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="dust-panels" data-section="toilet">
                                 <span>Gulvpaneler afstøves med candyfloss</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="check-ceiling" data-section="toilet">
                                 <span>Loft og hjørner kontrollers for spindelvæv</span>
-                            </div>
-                            <div class="task-item grundig-only">
+                            </label>
+                            <label class="task-item grundig-only">
                                 <input type="checkbox" class="task-checkbox" data-task="clean-glass" data-section="toilet">
                                 <span>Pletter/fedtfingre på internt glas fjernes</span>
-                            </div>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -338,6 +339,10 @@ pageCss:
                         <div class="price-line" data-price="photos">
                             <span data-label>Billeder (efter)</span>
                             <span data-value>650 kr</span>
+                        </div>
+                        <div class="price-line" data-price="tasks">
+                            <span data-label>Opgaver</span>
+                            <span data-value>0 kr</span>
                         </div>
                         <div class="price-line task-summary-line" id="task-summary-line">
                             <span id="task-summary-text">Standard opgaver inkluderet</span>

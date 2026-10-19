@@ -34,7 +34,7 @@ pageCss:
                         <input type="hidden" name="_next" value="https://dfmg.dk/pages/facility/tak.html">
                             <div class="form-group">
                                 <div class="custom-dropdown">
-                                    <div class="dropdown-selected" data-action="toggle-dropdown">
+                                    <div class="dropdown-selected" data-action="toggle-dropdown" role="button" tabindex="0" aria-expanded="false">
                                         <span id="selected-text">Hvilke services drejer det sig om?</span>
                                         <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                                     </div>
@@ -51,18 +51,21 @@ pageCss:
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" name="company" placeholder="Jeres virksomhed" class="form-input" required>
+                                    <label class="sr-only" for="kontakt-company">Virksomhed</label>
+                                    <input type="text" id="kontakt-company" name="company" placeholder="Jeres virksomhed" class="form-input" autocomplete="organization" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="name" placeholder="Dit navn" class="form-input" required>
+                                    <label class="sr-only" for="kontakt-name">Navn</label>
+                                    <input type="text" id="kontakt-name" name="name" placeholder="Dit navn" class="form-input" autocomplete="name" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="Din e-mail" class="form-input" required>
+                                <label class="sr-only" for="kontakt-email">E-mail</label>
+                                <input type="email" id="kontakt-email" name="email" placeholder="Din e-mail" class="form-input" autocomplete="email" required>
                             </div>
                             <div class="form-row phone-row">
                                 <div class="form-group phone-code">
-                                    <select name="country_code" class="form-input">
+                                    <select name="country_code" class="form-input" aria-label="Landekode">
                                         <option value="+45" selected>🇩🇰 +45</option>
                                         <option value="+46">🇸🇪 +46</option>
                                         <option value="+47">🇳🇴 +47</option>
@@ -90,11 +93,13 @@ pageCss:
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" name="phone" placeholder="12 34 56 78" class="form-input" pattern="[0-9\s]{7,15}" required>
+                                    <label class="sr-only" for="kontakt-phone">Telefonnummer</label>
+                                    <input type="tel" id="kontakt-phone" name="phone" placeholder="12 34 56 78" class="form-input" autocomplete="tel-national" pattern="[0-9 \(\)\+\-]{7,20}" title="Telefonnummer, fx 12 34 56 78" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea name="message" placeholder="Beskriv jeres behov, så vi kan forberede os bedst muligt" class="form-textarea" required></textarea>
+                                <label class="sr-only" for="kontakt-message">Jeres behov</label>
+                                <textarea id="kontakt-message" name="message" placeholder="Beskriv jeres behov, så vi kan forberede os bedst muligt" class="form-textarea" required></textarea>
                             </div>
                             <button type="submit" class="btn btn--success btn--md kontakt-form__submit">SEND FORESPØRGSEL</button>
                         </form>
@@ -114,7 +119,7 @@ pageCss:
                     <!-- Kolonne 1 -->
                     <div>
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Hvilke områder dækker I?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -124,7 +129,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Har I forsikring?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -134,7 +139,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Kan man starte samarbejde uden fysisk møde?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -144,7 +149,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Hvor hurtigt kan I starte?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -154,7 +159,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Hvilke typer virksomheder betjener I?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -164,7 +169,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Hvor store lokaler kan I håndtere?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -174,7 +179,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Kan I håndtere specialrengøring?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -187,7 +192,7 @@ pageCss:
                     <!-- Kolonne 2 -->
                     <div>
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Arbejder I i weekender og helligdage?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -197,7 +202,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Hvad er minimum kontraktperiode?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -207,7 +212,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Har medarbejderne politiattest?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -217,7 +222,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Hvem har adgang til vores lokaler?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -227,7 +232,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Skal vi stille rengøringsmidler til rådighed?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -237,7 +242,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Bruger I miljøvenlige produkter?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
@@ -247,7 +252,7 @@ pageCss:
                         </div>
 
                         <div class="faq-item">
-                            <div class="faq-question" data-action="toggle-faq">
+                            <div class="faq-question" data-action="toggle-faq" role="button" tabindex="0" aria-expanded="false">
                                 <h4>Hvem er vores faste kontaktperson?</h4>
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>

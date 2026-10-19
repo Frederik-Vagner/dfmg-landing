@@ -2,6 +2,26 @@
 
 @layer core {
 
+/* --- Skip link: the first Tab stop, visible only while focused --- */
+
+.skip-link {
+    position: fixed;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    z-index: 10001;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--charcoal);
+    color: var(--white);
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+    transform: none;
+}
+
 /* --- Header Wrapper --- */
 
 .header {
@@ -46,7 +66,8 @@
 /* --- Platform Header Variant --- */
 
 .header--platform .logo-suffix {
-    color: var(--primary);
+    /* Light blue: the brand blue is 2.5:1 on the navy logo pill. */
+    color: var(--blue-300);
     font-weight: var(--font-weight-medium);
 }
 
@@ -221,24 +242,60 @@
 
 /* --- Mobile Menu --- */
 
-.menu-checkbox {
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--white);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: var(--radius-normal);
+    cursor: pointer;
+}
+
+.menu-btn__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-btn__close,
+.menu-btn[aria-expanded="true"] .menu-btn__bars {
     display: none;
 }
 
+.menu-btn[aria-expanded="true"] .menu-btn__close {
+    display: inline;
+}
+
+/* The open menu is its own fixed panel under the header bar, as tall as the
+   screen allows and scrolling inside. It used to sit in the header's flex row,
+   which stretched the header to the menu's ~970px: the logo slid to the middle
+   of the screen and the last links (Kontakt, Prisberegner) were out of reach. */
 .mobile-nav {
     display: none;
+    position: fixed;
+    top: var(--header-clearance);
+    left: var(--space-md);
+    right: var(--space-md);
+    max-height: calc(100dvh - var(--header-clearance) - var(--space-md));
+    overflow-y: auto;
+    overscroll-behavior: contain;
     flex-direction: column;
-    width: 100%;
     background: var(--glass-bg-heavy);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: var(--radius-lg);
     padding: var(--space-sm);
-    margin-top: var(--space-2xs);
     gap: var(--space-3xs);
 }
 
 .mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     color: var(--text-on-dark);
     text-decoration: none;
     padding: var(--space-2xs) var(--space-xs);
@@ -281,7 +338,7 @@
     color: var(--white);
 }
 
-.menu-checkbox:checked ~ .mobile-nav {
+.header.is-menu-open .mobile-nav {
     display: flex;
 }
 
@@ -293,7 +350,8 @@
     }
 
     .menu-btn,
-    .mobile-nav {
+    .mobile-nav,
+    .header.is-menu-open .mobile-nav {
         display: none;
     }
 
@@ -326,6 +384,23 @@
 @media (max-width: 768px) {
     .logo {
         flex-wrap: nowrap;
+    }
+}
+
+}
+
+/* Header rules that sit in the components layer, moved here from shared.css
+   so the header lives in one file; same layer, so the cascade is unchanged. */
+@layer components {
+
+.logo {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+@media (min-width: 768px) and (max-width: 860px) {
+    .nav {
+        gap: var(--space-2xs);
     }
 }
 

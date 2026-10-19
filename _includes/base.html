@@ -134,6 +134,7 @@
     {% endif %}
 </head>
 <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}{% if bodyAttrs %} {{ bodyAttrs | safe }}{% endif %}>
+    <a class="skip-link" href="#main">{{ "Skip to content" if lang == "en" else "Gå til indhold" }}</a>
     {#- The header and footer used to be empty divs filled by a fetch in
         components.js. Rendering them here instead means every page ships
         complete: no second round trip, and the navigation is in the HTML
@@ -143,7 +144,7 @@
     {% elif shell == "platform-da" %}{% include "partials/header-platform-da.html" %}
     {% else %}{% include "partials/header.html" %}{% endif %}
 
-    <main>
+    <main id="main" tabindex="-1">
     {{ content | safe }}
     </main>
 

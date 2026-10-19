@@ -34,6 +34,14 @@
     padding: 0;
 }
 
+/* The governance slides are dark gradients: a highlight keeps the slide's own
+   light text colour and stands out by weight instead of a blue that
+   disappears. The light themes keep the blue highlight. */
+[data-slide-theme="governance"] .slide .highlight {
+    color: inherit;
+    font-weight: var(--font-weight-semibold);
+}
+
 /* Reset & Base (font-family, line-height inherited from body) */
 .sustainability-page {
     color: var(--charcoal);
@@ -391,9 +399,10 @@
         display: block;
         width: 100%;
         height: auto;
-        /* The slider writes transform as an inline style; if the viewport is
-           resized across the breakpoint it must not survive into this mode. */
-        transform: none !important;
+        /* The slider never sets its inline transform in this mode and clears
+           it when the viewport crosses the breakpoint (onChange in
+           sustainability-slider.js), so no !important is needed here. */
+        transform: none;
         transition: none;
     }
 

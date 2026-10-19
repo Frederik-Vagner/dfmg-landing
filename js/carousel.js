@@ -75,6 +75,26 @@
                 });
             }
 
+            // Touch: a horizontal swipe steps the carousel like the arrows do.
+            // The frame hides its overflow, so without this a phone user could
+            // only use the two small buttons.
+            var touchStartX = null, touchStartY = null;
+            container.addEventListener('touchstart', function(e) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            container.addEventListener('touchend', function(e) {
+                if (touchStartX === null) return;
+                var dx = e.changedTouches[0].clientX - touchStartX;
+                var dy = e.changedTouches[0].clientY - touchStartY;
+                touchStartX = null;
+                if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+                var m = getMetrics();
+                if (dx < 0 && currentIndex < m.max) currentIndex++;
+                else if (dx > 0 && currentIndex > 0) currentIndex--;
+                update();
+            });
+
             // Handle window resize
             var resizeTimer;
             window.addEventListener('resize', function() {

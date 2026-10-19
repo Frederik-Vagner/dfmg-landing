@@ -16,22 +16,23 @@
             <div class="callback-form-body">
                 <p>Indtast dit telefonnummer, så ringer vi tilbage samme dag. Telefontid: hverdage 8–16.</p>
                 <div class="callback-input-group">
-                    <input type="tel" id="callbackPhone" placeholder="Indtast dit telefonnummer" class="input">
-                    <button  class="btn btn--primary" data-action="submit-callback">
+                    <input type="tel" id="callbackPhone" placeholder="Indtast dit telefonnummer" class="input" aria-label="Dit telefonnummer" aria-describedby="callbackError">
+                    <button type="button" class="btn btn--primary" data-action="submit-callback">
                         <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                         Ring mig op
                     </button>
                 </div>
+                <p class="field-error" id="callbackError" role="alert" hidden></p>
                 <div class="callback-note">
                     <small>Vi respekterer din privathed og deler aldrig dine oplysninger.</small>
                 </div>
             </div>
         </div>
         <div class="chatbot-tabs">
-            <div class="chatbot-tab active" data-chatbot-tab="faq">
+            <div class="chatbot-tab active" data-chatbot-tab="faq" role="button" tabindex="0">
                 <iconify-icon icon="fluent:question-circle-20-filled" inline></iconify-icon> FAQ
             </div>
-            <div class="chatbot-tab" data-chatbot-tab="contact">
+            <div class="chatbot-tab" data-chatbot-tab="contact" role="button" tabindex="0">
                 <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> Kontakt
             </div>
         </div>
@@ -41,7 +42,7 @@
             <div class="tab-content active" id="faq-tab">
                 <div class="chatbot-content">
                     <div class="faq-item">
-                        <div class="faq-question" data-action="toggle-chatbot-faq">
+                        <div class="faq-question" data-action="toggle-chatbot-faq" role="button" tabindex="0" aria-expanded="false">
                             Hvilke services tilbyder DFMG?
                             <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
@@ -51,7 +52,7 @@
                     </div>
                     
                     <div class="faq-item">
-                        <div class="faq-question" data-action="toggle-chatbot-faq">
+                        <div class="faq-question" data-action="toggle-chatbot-faq" role="button" tabindex="0" aria-expanded="false">
                             Hvor hurtigt kan I komme i gang?
                             <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
@@ -61,7 +62,7 @@
                     </div>
                     
                     <div class="faq-item">
-                        <div class="faq-question" data-action="toggle-chatbot-faq">
+                        <div class="faq-question" data-action="toggle-chatbot-faq" role="button" tabindex="0" aria-expanded="false">
                             Arbejder I med både små og store virksomheder?
                             <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
@@ -71,7 +72,7 @@
                     </div>
                     
                     <div class="faq-item">
-                        <div class="faq-question" data-action="toggle-chatbot-faq">
+                        <div class="faq-question" data-action="toggle-chatbot-faq" role="button" tabindex="0" aria-expanded="false">
                             Hvad koster jeres services?
                             <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
@@ -83,7 +84,7 @@
                 
                 <!-- Fixed bottom CTA -->
                 <div class="fixed-cta">
-                    <button  class="btn btn--primary btn--sm" data-action="toggle-callback-form">
+                    <button type="button" class="btn btn--primary btn--sm" data-action="toggle-callback-form">
                         <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                         Bliv ringet op
                     </button>
@@ -100,15 +101,15 @@
                         Stil dit spørgsmål og få svar fra vores facility eksperter. Vi svarer samme dag på hverdage.
                     </div>
                     <div class="chat-input-section">
-                        <input type="text" class="input input-flex" placeholder="Skriv dit spørgsmål her..." id="chatInput">
-                        <button  class="btn btn-icon" data-action="send-message">
+                        <input type="text" class="input input-flex" placeholder="Skriv dit spørgsmål her..." id="chatInput" aria-label="Dit spørgsmål">
+                        <button type="button" class="btn btn-icon" data-action="send-message" aria-label="Send spørgsmål">
                             <iconify-icon icon="fluent:send-20-filled" inline></iconify-icon>
                         </button>
                     </div>
                     
                     <div class="chat-contact">
                         <div class="cta-title">Eller kontakt os direkte</div>
-                        <button  class="btn btn--primary btn--sm" data-action="call-direct">
+                        <button type="button" class="btn btn--primary btn--sm" data-action="call-direct">
                             <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                             Ring: {{ site.phoneDisplay }}
                         </button>
@@ -118,7 +119,7 @@
         </div>
     </div>
     
-    <button  class="chatbot-button" id="chatbotButton">
+    <button type="button" class="chatbot-button" id="chatbotButton" aria-label="Åbn chat" aria-expanded="false" aria-controls="chatbotPopup">
         <iconify-icon icon="fluent:comment-20-filled" inline></iconify-icon>
     </button>
 </div>

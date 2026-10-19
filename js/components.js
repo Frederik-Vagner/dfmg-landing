@@ -6,6 +6,9 @@
 // every page at build time (see _includes/base.html), so this file only wires
 // up behaviour against markup that is already in the document.
 function initComponents() {
+    initMobileMenu();
+    initClickableKeyboard();
+
     // The chatbot markup is only present on facility pages.
     if (document.getElementById('chatbotButton')) {
         initializeChatbotFunctions();
@@ -17,6 +20,72 @@ function initComponents() {
     }
 }
 
+// Mobile menu: the button opens a fixed panel under the header. Escape, a
+// click outside it or following one of its links closes it again.
+function initMobileMenu() {
+    const button = document.querySelector('.menu-btn');
+    const header = document.querySelector('.header');
+    const menu = document.getElementById('mobile-nav');
+    if (!button || !header || !menu) return;
+
+    function setOpen(open) {
+        header.classList.toggle('is-menu-open', open);
+        button.setAttribute('aria-expanded', String(open));
+        button.setAttribute('aria-label', open ? button.dataset.labelClose : button.dataset.labelOpen);
+    }
+
+    button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            button.focus();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (button.getAttribute('aria-expanded') !== 'true') return;
+        if (!menu.contains(e.target) && !button.contains(e.target)) setOpen(false);
+    });
+
+    menu.addEventListener('click', (e) => {
+        if (e.target.closest && e.target.closest('a')) setOpen(false);
+    });
+}
+
+// Some controls are <div>s with click handlers (FAQ rows, tabs, the kontakt
+// service picker). They carry role="button" and tabindex="0" in the markup;
+// this makes Enter and Space press them like a real button, and keeps
+// aria-expanded in step with the open/active class the click handler sets.
+function initClickableKeyboard() {
+    // The platform FAQ markup lives in a shared include; give it the same
+    // treatment here rather than in the template.
+    document.querySelectorAll('[data-action="toggle-platform-faq"]:not([role])').forEach(el => {
+        el.setAttribute('role', 'button');
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('aria-expanded', 'false');
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const el = e.target;
+        if (!el || el.getAttribute('role') !== 'button' || el.tagName === 'BUTTON') return;
+        e.preventDefault();
+        el.click();
+    });
+
+    document.addEventListener('click', (e) => {
+        const el = e.target && e.target.closest ? e.target.closest('[role="button"][aria-expanded]') : null;
+        if (!el) return;
+        // After the page's own handler has toggled its class.
+        setTimeout(() => {
+            document.querySelectorAll('[role="button"][aria-expanded][data-action]').forEach(t => {
+                t.setAttribute('aria-expanded', String(t.classList.contains('active') || t.classList.contains('open')));
+            });
+        }, 0);
+    });
+}
+
 // Initialize all chatbot functions globally
 function initializeChatbotFunctions() {
     // Define all window functions first
@@ -26,8 +95,14 @@ function initializeChatbotFunctions() {
                 
         if (popup) {
             popup.classList.toggle('active');
-            
-            if (popup.classList.contains('active') && chatPreview) {
+            const open = popup.classList.contains('active');
+            const button = document.getElementById('chatbotButton');
+            if (button) {
+                button.setAttribute('aria-expanded', String(open));
+                button.setAttribute('aria-label', open ? 'Luk chat' : 'Åbn chat');
+            }
+
+            if (open && chatPreview) {
                 chatPreview.classList.remove('show');
             }
         }
@@ -88,10 +163,10 @@ function initializeChatbotFunctions() {
         const message = input.value.trim();
         
         if (message) {
-            window.showNotification('Tak for din besked! Vi svarer samme dag på hverdage.');
-            setTimeout(() => {
-                window.open(`mailto:${window.DFMG.email}?subject=Spørgsmål fra chatbot&body=Hej DFMG,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AVenlig hilsen`, '_blank');
-            }, 1500);
+            // The box has no e-mail field, so the question goes out as an e-mail
+            // from the visitor's own mail program; say so rather than "sent".
+            window.showNotification('Åbner dit mailprogram med dit spørgsmål. Send mailen, så svarer vi samme dag på hverdage.');
+            window.open(`mailto:${window.DFMG.email}?subject=Spørgsmål fra chatbot&body=Hej DFMG,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AVenlig hilsen`, '_blank');
             input.value = '';
         }
     };
@@ -108,16 +183,24 @@ function initializeChatbotFunctions() {
         const phoneInput = document.getElementById('callbackPhone');
         const phoneNumber = phoneInput.value.trim();
         
+        const phoneError = document.getElementById('callbackError');
+        function showPhoneError(message) {
+            phoneError.textContent = message;
+            phoneError.hidden = !message;
+            phoneInput.setAttribute('aria-invalid', message ? 'true' : 'false');
+        }
+
         if (!phoneNumber) {
-            alert('Indtast venligst dit telefonnummer');
+            showPhoneError('Indtast dit telefonnummer.');
             return;
         }
-        
+
         const phoneRegex = /^(\+45\s?)?(\d{2}\s?\d{2}\s?\d{2}\s?\d{2}|\d{8})$/;
         if (!phoneRegex.test(phoneNumber)) {
-            alert('Indtast venligst et gyldigt dansk telefonnummer');
+            showPhoneError('Indtast et dansk nummer med 8 cifre.');
             return;
         }
+        showPhoneError('');
         
         fetch('https://formspree.io/f/xdkdrqkw', {
             method: 'POST',
@@ -144,6 +227,14 @@ function initializeChatbotFunctions() {
             }, 4000);
         }
     };
+
+    document.addEventListener('keydown', function(e) {
+        const popup = document.getElementById('chatbotPopup');
+        if (e.key === 'Escape' && popup && popup.classList.contains('active')) {
+            window.toggleChatbot();
+            document.getElementById('chatbotButton').focus();
+        }
+    });
 
     // Attach event listener to chatbot button via ID
     setTimeout(() => {

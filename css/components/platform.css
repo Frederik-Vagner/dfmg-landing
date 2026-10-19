@@ -11,8 +11,12 @@
 }
 
 /* Subpages: less space below the hero than the home page. */
+/* Subpages carry a heading and a line or two, so their hero is only as tall
+   as that instead of a full screen of colour. */
 .platform-hero--page {
-    padding-bottom: var(--space-xl);
+    min-height: 0;
+    padding-top: calc(var(--header-clearance) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
 }
 
 /* Thank-you page: a shorter, vertically centred hero. */
@@ -76,7 +80,7 @@
 }
 
 .feature-visual__step-number {
-    color: var(--primary);
+    color: var(--primary-text);
     font-weight: 600;
 }
 
@@ -141,9 +145,15 @@
     padding-bottom: 0;
 }
 
-/* Pricing: the trust row sits right under the plans. */
+/* Pricing: the trust row sits right under the section above. With no top
+   padding, the row's own top margin escaped the section and left a strip of
+   the dark page background between the two. */
 .trust-section {
     padding-top: 0;
+}
+
+.trust-section .trust-row {
+    margin-top: 0;
 }
 
 .trust-row--centered {
@@ -196,7 +206,7 @@
 }
 
 .contact-info__link {
-    color: var(--primary);
+    color: var(--primary-text);
 }
 
 /* ── Contact: phone field (country code beside the number) ── */
@@ -250,7 +260,7 @@
 }
 
 .about-split__eyebrow {
-    color: var(--primary);
+    color: var(--primary-text);
 }
 
 .about-split__title {

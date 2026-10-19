@@ -78,7 +78,7 @@
     border-radius: var(--radius-sm);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--gray-light);
+    color: var(--slate-600);
     cursor: pointer;
     transition: all 0.2s;
     text-decoration: none;

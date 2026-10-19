@@ -5,6 +5,12 @@
 
 @layer core {
 
+/* A field's validation message, shown next to the field it describes. */
+.field-error {
+    color: var(--red-700);
+    font-size: var(--text-sm);
+}
+
 .form-group {
     margin-bottom: var(--space-md);
 }
@@ -204,7 +210,17 @@
 }
 
 .dropdown-options input[type="checkbox"] {
-    display: none;
+    /* Hidden from view but not from the keyboard: Tab still reaches each
+       option and Space ticks it (display: none took them out of the tab order). */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.dropdown-options label:has(input:focus-visible) {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
 }
 
 .dropdown-options label {
@@ -220,7 +236,7 @@
 }
 
 .dropdown-options label.selected {
-    color: var(--success);
+    color: var(--success-text);
     font-weight: var(--font-weight-semibold);
 }
 

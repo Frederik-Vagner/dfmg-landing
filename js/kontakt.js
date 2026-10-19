@@ -8,6 +8,9 @@
                 dropdownOptions.style.display = isOpen ? 'none' : 'block';
                 dropdownOptions.classList.toggle('open', !isOpen);
                 dropdownSelected.classList.toggle('open', !isOpen);
+                // Set here: the dropdown stops clicks from bubbling, so the shared
+                // aria-expanded sync in components.js never sees this one.
+                dropdownSelected.setAttribute('aria-expanded', String(!isOpen));
             });
 
             // Close dropdown when clicking outside
@@ -17,6 +20,7 @@
                     dropdownOptions.style.display = 'none';
                     dropdownOptions.classList.remove('open');
                     dropdownSelected.classList.remove('open');
+                    dropdownSelected.setAttribute('aria-expanded', 'false');
                 }
             });
 

@@ -32,7 +32,7 @@
 }
 
 .highlight {
-    color: var(--primary);
+    color: var(--primary-text);
     font-weight: var(--font-weight-medium);
 }
 
@@ -110,6 +110,10 @@ h1.title {
     h1, h2, h3, h4, .title, .subtitle {
         hyphens: auto;
         -webkit-hyphens: auto;
+        /* Only long compounds may be split, and only with six letters on
+           each side: without a limit the browser also broke short words to
+           even out lines ("vej-en", "Professio-nel"). */
+        hyphenate-limit-chars: 14 6 6;
         overflow-wrap: break-word;
     }
 }

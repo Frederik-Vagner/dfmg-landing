@@ -10,7 +10,12 @@
     font-size: var(--icon-display);
 }
 
+.tak__title {
+    color: var(--charcoal);
+}
+
 .tak__message {
+    color: var(--gray);
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
 }

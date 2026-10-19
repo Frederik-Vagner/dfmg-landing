@@ -1,7 +1,10 @@
 // Navigation Enhancer — A-grade MPA navigation
 // 1. Prefetches pages on link hover
-// 2. Navigates on mousedown (saves ~100ms)
-// 3. Smooth crossfade via View Transitions API
+// 2. Smooth crossfade via View Transitions API
+//
+// It also used to navigate on mousedown to save ~100ms. That made a click
+// impossible to cancel by dragging off the link and broke selecting link
+// text; hover prefetch already makes the page arrive almost instantly.
 //
 // This used to also wrap window.fetch to cache the header, footer, chatbot and
 // article sidebar in sessionStorage, because every page fetched them at
@@ -40,23 +43,6 @@
         return target && typeof target.closest === 'function' ? target.closest(sel) : null;
     }
 
-    // --- Mousedown Navigation ---
-    function navigateOnMousedown(e) {
-        // Only left-click, no modifier keys
-        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-
-        const a = closestFrom(e.target, 'a');
-        if (!a || !isInternalLink(a)) return;
-
-        // Skip links with onclick handlers or javascript: hrefs
-        if (a.hasAttribute('onclick') || a.href.startsWith('javascript:')) return;
-
-        e.preventDefault();
-
-        // Navigate immediately — View Transitions handled by CSS @view-transition rule
-        window.location.href = a.href;
-    }
-
     // --- Init ---
     function init() {
         let hoverTimer = null;
@@ -93,9 +79,6 @@
                 });
             }, { timeout: 3000 });
         }
-
-        // Mousedown navigation
-        document.addEventListener('mousedown', navigateOnMousedown, true);
 
         // Touch devices: prefetch on touchstart
         document.addEventListener('touchstart', function(e) {
