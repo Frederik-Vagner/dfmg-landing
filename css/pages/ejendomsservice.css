@@ -4,15 +4,6 @@
 
 @layer pages {
 
-.estate-hero {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.estate-hero > * {
-    flex: 1;
-}
-
 .estate-hero__title {
     font-size: var(--heading-1);
     font-weight: var(--font-weight-light);
@@ -30,30 +21,14 @@
     align-content: center;
 }
 
-.estate-hero__areas {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: var(--space-sm);
-}
-
 .area-chip {
     padding: var(--space-sm);
     background: var(--bg-gradient-success);
 }
 
-.estate-services {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
 .estate-service {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border-top: 4px solid var(--success);
     text-align: center;
 }
@@ -65,20 +40,6 @@
 .estate-service__icon {
     margin-bottom: var(--space-sm);
     color: var(--success);
-}
-
-.estate-process {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
-.estate-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
 }
 
 .estate-feature {
@@ -94,17 +55,7 @@
 .estate-case {
     padding: var(--space-xl);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border-top: 4px solid var(--charcoal);
-}
-
-.estate-case__layout {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.estate-case__layout > * {
-    flex: 1;
 }
 
 .estate-case__title {
@@ -134,47 +85,6 @@
 
 .estate-case__pillar:not(:last-child) {
     margin-bottom: var(--space-lg);
-}
-
-@media (max-width: 768px) {
-    .estate-hero {
-        flex-wrap: wrap;
-    }
-
-    .estate-hero > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    .estate-hero__areas {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .estate-services {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .estate-process {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .estate-features {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .estate-case__layout {
-        flex-wrap: wrap;
-    }
-
-    .estate-case__layout > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
 }
 
 }

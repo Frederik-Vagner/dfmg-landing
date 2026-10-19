@@ -66,8 +66,8 @@
 
 /* ── Feature visuals (the summary panel beside each feature row) ── */
 .feature-visual__title {
-    color: var(--charcoal);
     font-size: var(--text-lg);
+    color: var(--charcoal);
 }
 
 .feature-visual__list {
@@ -98,9 +98,6 @@
 .title--small { font-size: var(--text-2xl); }
 
 /* ── Product walkthrough (home) ── */
-.walkthrough {
-    align-items: center;
-}
 
 .walkthrough__body {
     color: var(--text-on-dark);
@@ -108,9 +105,6 @@
 }
 
 /* ── With / without comparison (home) ── */
-.comparison {
-    gap: var(--space-xl);
-}
 
 .comparison__title {
     margin-bottom: var(--space-sm);
@@ -121,10 +115,6 @@
 
 /* ── Integrations (home) ── */
 .integrations {
-    justify-content: center;
-    align-items: center;
-    gap: var(--space-xl);
-    flex-wrap: wrap;
     opacity: 0.5;
 }
 
@@ -183,7 +173,6 @@
 .contact-form__heading {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);
-    color: var(--charcoal);
 }
 
 .contact-info__heading { margin-bottom: var(--space-xs); }
@@ -201,10 +190,6 @@
     margin: 0 0 var(--space-md);
 }
 
-.contact-info__cards {
-    gap: var(--space-xs);
-}
-
 .contact-info__link {
     color: var(--primary-text);
 }
@@ -216,33 +201,13 @@
 /* ── Layout and spacing of the parts above (kept in sync with the markup;
    formerly utility classes) ── */
 /* generated:start */
-.walkthrough {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.walkthrough > * {
-    flex: 1;
-}
 
 .walkthrough__title {
-    color: var(--white);
-}
-
-.comparison {
-    display: flex;
-}
-
-.comparison > * {
-    flex: 1;
+color: var(--white);
 }
 
 .comparison__title {
     font-weight: var(--font-weight-bold);
-}
-
-.integrations {
-    display: flex;
 }
 
 .integrations__item {
@@ -250,21 +215,8 @@
     text-align: center;
 }
 
-.about-split {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.about-split > * {
-    flex: 1;
-}
-
 .about-split__eyebrow {
     color: var(--primary-text);
-}
-
-.about-split__title {
-    color: var(--charcoal);
 }
 
 .about-split__text {
@@ -283,7 +235,6 @@
 .about-value {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border-left: 4px solid var(--primary);
 }
 
@@ -291,21 +242,8 @@
     color: inherit;
 }
 
-.contact-info__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.contact-info__card {
-    color: var(--charcoal);
-}
-
 .contact-info__card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
     color: inherit;
-}
-
-.demo-split__title {
-    color: var(--charcoal);
 }
 
 .demo-split__intro {
@@ -314,46 +252,32 @@
 }
 
 @media (max-width: 768px) {
-    .walkthrough {
-        flex-wrap: wrap;
-    }
-
-    .walkthrough > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    .comparison {
-        flex-wrap: wrap;
-    }
-
-    .comparison > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    .integrations {
-        flex-wrap: wrap;
-    }
-
-    .about-split {
-        flex-wrap: wrap;
-    }
-
-    .about-split > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
 
     .about-values {
         flex-wrap: wrap;
     }
-
-    .contact-info__cards {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
 }
 /* generated:end */
+
+
+/* ── Pricing plans ── */
+.pricing-tiers {
+    align-items: start;
+}
+
+/* Three plans stay side by side on tablets: two plus a lone third card
+   looked lopsided. */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .pricing-tiers {
+        --grid-cols: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-tiers {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
 
 }

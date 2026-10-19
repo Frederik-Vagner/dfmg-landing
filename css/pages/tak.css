@@ -10,10 +10,6 @@
     font-size: var(--icon-display);
 }
 
-.tak__title {
-    color: var(--charcoal);
-}
-
 .tak__message {
     color: var(--gray);
     margin-top: var(--space-lg);
@@ -29,11 +25,6 @@
     padding: var(--space-lg);
     margin-top: var(--space-xl);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
-}
-
-.tak-next__title {
-    color: var(--charcoal);
 }
 
 .tak-next__list {

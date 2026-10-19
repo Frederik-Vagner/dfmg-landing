@@ -34,8 +34,8 @@
 /* Color Variants */
 .badge-inline--dark {
     background: var(--charcoal);
-    color: var(--white);
     text-transform: uppercase;
+    color: var(--white);
 }
 
 .badge-inline--light {
@@ -70,8 +70,8 @@
 
 .badge-overlay--light {
     background: var(--overlay-white);
-    color: var(--charcoal);
     font-weight: var(--font-weight-bold);
+    color: var(--charcoal);
 }
 
 /* Step Number (numbered process circles) */
@@ -79,7 +79,6 @@
     width: 60px;
     height: 60px;
     background: var(--charcoal);
-    color: var(--white);
     border-radius: var(--radius-round);
     display: flex;
     align-items: center;
@@ -87,13 +86,13 @@
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
     margin: 0 auto var(--space-sm);
+    color: var(--white);
 }
 
 .step-number--small {
     width: 25px;
     height: 25px;
     background: var(--cyan);
-    color: var(--white);
     border-radius: var(--radius-round);
     display: flex;
     align-items: center;
@@ -101,6 +100,7 @@
     font-weight: var(--font-weight-bold);
     font-size: var(--text-sm);
     margin: 0 auto var(--space-sm);
+    color: var(--white);
 }
 
 }

@@ -137,11 +137,11 @@
 .card--overlay p {
     position: relative;
     z-index: var(--z-content);
-    color: var(--white);
     margin-bottom: var(--space-2xs);
     padding: 0 var(--space-md);
     top: 2rem;
     text-align: left;
+    color: var(--white);
 }
 
 .card--overlay h3 {
@@ -272,7 +272,6 @@
 
 .card--split__title {
     font-size: var(--text-2xl);
-    color: var(--charcoal);
     font-weight: var(--font-weight-medium);
     line-height: 1.2;
     margin-bottom: var(--space-xs);
@@ -297,7 +296,6 @@
 .card--sidebar h3 {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--charcoal);
     margin-bottom: var(--space-sm);
     display: flex;
     align-items: center;
@@ -305,7 +303,6 @@
 }
 
 .card--sidebar h3 iconify-icon {
-    color: var(--charcoal);
     font-size: var(--text-lg);
 }
 
@@ -320,9 +317,9 @@
 }
 
 .card__content h4 {
-    color: var(--charcoal);
     margin-bottom: var(--space-2xs);
     font-weight: var(--font-weight-semibold);
+    color: var(--charcoal);
 }
 
 .card__content p {
@@ -362,12 +359,12 @@
     height: 48px;
     border-radius: var(--radius-sm);
     background: var(--bg-gradient-primary);
-    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: var(--text-xl);
     margin-bottom: var(--space-sm);
+    color: var(--white);
 }
 
 .card--feature--center .card--feature__icon {
@@ -381,7 +378,6 @@
 .card--feature__title {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
     margin-bottom: var(--space-2xs);
 }
 
@@ -392,13 +388,6 @@
 }
 
 /* ── Pricing tier card ── */
-.pricing-tiers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    align-items: start;
-}
-
 .card--tier {
     background: var(--white);
     border-radius: var(--radius-md);
@@ -430,7 +419,6 @@
 .card--tier__name {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--charcoal);
     margin-bottom: var(--space-2xs);
 }
 
@@ -444,7 +432,6 @@
 .card--tier__price {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
-    color: var(--charcoal);
     line-height: 1;
 }
 
@@ -470,26 +457,9 @@
 }
 
 /* ── Feature card grids ── */
-.module-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-}
-
-.value-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-}
 
 .steps-row {
-    display: flex;
-    gap: var(--space-lg);
     margin-top: var(--space-xl);
-}
-
-.steps-row > * {
-    flex: 1;
 }
 
 /* ── Service card (carousel item) ── */
@@ -556,7 +526,6 @@
 }
 
 .card--panel h3 {
-    color: var(--charcoal);
     font-size: var(--text-xl);
     font-weight: var(--font-weight-semibold);
     margin: 0 0 var(--space-sm) 0;
@@ -726,30 +695,12 @@
         overflow-wrap: break-word;
     }
 
-    .module-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .value-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .steps-row {
-        flex-direction: column;
-    }
-
     .price-tag {
         padding: var(--space-sm);
     }
 
     .price-tag__amount {
         font-size: var(--text-xl);
-    }
-
-    .pricing-tiers {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
     }
 
     .shop-preview {

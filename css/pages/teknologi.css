@@ -12,23 +12,11 @@
 .tech-reason {
     padding: var(--space-sm);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border-left: 4px solid var(--charcoal);
-}
-
-.tech-steps {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--layout-gap);
 }
 
 /* Four steps with checklists need ~260px each; two by two below 1100px so
    the list text stays inside the cards. */
-@media (max-width: 1100px) {
-    .tech-steps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
 
 .tech-step {
     padding: var(--space-sm);
@@ -36,26 +24,8 @@
     color: var(--charcoal);
 }
 
-.tech-platform {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.tech-platform > * {
-    flex: 1;
-}
-
 .tech-platform__text {
     padding: var(--space-lg);
-}
-
-.tech-benefits {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.tech-benefits > * {
-    flex: 1;
 }
 
 .tech-benefits__column {
@@ -71,7 +41,6 @@
 .tech-benefit {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
 }
 
 .tech-results {
@@ -86,28 +55,6 @@
 @media (max-width: 768px) {
     .tech-reasons {
         flex-wrap: wrap;
-    }
-
-    .tech-steps {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .tech-platform {
-        flex-wrap: wrap;
-    }
-
-    .tech-platform > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    .tech-benefits {
-        flex-wrap: wrap;
-    }
-
-    .tech-benefits > * {
-        flex: 1 1 100%;
-        min-width: 0;
     }
 
     .tech-benefits__column > * {

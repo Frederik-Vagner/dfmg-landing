@@ -5,7 +5,6 @@
 @layer pages {
 
 .product-hero__title {
-    color: var(--charcoal);
     font-size: var(--heading-1);
     font-weight: var(--font-weight-bold);
     line-height: 1.1;
@@ -18,40 +17,18 @@
 }
 
 .product-hero__perks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
     margin-bottom: var(--space-2xl);
 }
 
-.product-hero__range {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
 .product-categories__title {
-    color: var(--charcoal);
     font-size: var(--heading-2);
     font-weight: var(--font-weight-light);
     letter-spacing: -1px;
 }
 
-.product-categories {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.product-categories > * {
-    flex: 1;
-}
-
 .category-tab {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border-left: 4px solid var(--success);
 }
 
@@ -87,17 +64,6 @@
     font-size: var(--text-lg);
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
-.product-card {
-    color: var(--charcoal);
-}
-
 .product-card__category {
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -105,13 +71,6 @@
 
 .request-card__title {
     font-size: var(--text-xl);
-}
-
-.process-steps {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
 }
 
 .benefits-panel {
@@ -123,14 +82,7 @@
 /* The panel is a navy-to-blue gradient: the green eyebrow used on white
    sections is unreadable here, so it is white like the rest of the panel. */
 .benefits-panel .section-intro__eyebrow {
-    color: var(--white);
-}
-
-.benefit-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
+color: var(--white);
 }
 
 .benefit-card__title {
@@ -143,42 +95,8 @@
 
 @media (max-width: 768px) {
 
-    .product-hero__perks {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .product-hero__range {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .product-categories {
-        flex-wrap: wrap;
-    }
-
-    .product-categories > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
     .category-tab__header {
         flex-wrap: wrap;
-    }
-
-    .product-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .process-steps {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .benefit-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
     }
 }
 

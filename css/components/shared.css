@@ -32,11 +32,11 @@
 }
 
 .section-intro__title {
-    color: var(--charcoal);
+color: var(--charcoal);
 }
 
 .section-intro__title--on-dark {
-    color: var(--white);
+color: var(--white);
 }
 
 .section-intro__text {
@@ -44,7 +44,7 @@
 }
 
 .section-intro__text--on-dark {
-    color: var(--white);
+color: var(--white);
 }
 
 .page-intro {
@@ -53,10 +53,6 @@
 
 .page-intro__eyebrow {
     color: var(--primary-text);
-}
-
-.page-intro__title {
-    color: var(--charcoal);
 }
 
 .page-intro__text {
@@ -84,7 +80,6 @@
 .icon-tile {
     padding: var(--space-sm);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     text-align: center;
 }
 
@@ -102,19 +97,8 @@
     font-size: var(--text-sm);
 }
 
-.button-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-sm);
-}
-
 .tab-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin-bottom: var(--space-2xl);
-    gap: var(--space-lg);
 }
 
 .cta-actions {
@@ -129,7 +113,6 @@
 .process-step {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     text-align: center;
 }
 
@@ -142,7 +125,6 @@
 }
 
 .badge--light {
-    color: var(--charcoal);
     background: var(--bg-light);
     box-shadow: none;
     backdrop-filter: none;
@@ -200,7 +182,7 @@
 }
 
 .hero__title {
-    color: var(--white);
+color: var(--white);
 }
 
 .hero__text {

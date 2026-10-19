@@ -22,7 +22,7 @@
                         <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet4 }}</li>
                     </ul>
 
-                    <div class="contact-info__cards">
+                    <div class="grid grid--2 grid--tight">
                         <div class="card contact-info__card">
                             <h4><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> {{ t.info.card_email }}</h4>
                             <p><a href="mailto:{{ site.platformEmail }}" class="contact-info__link">{{ site.platformEmail }}</a></p>
@@ -56,7 +56,7 @@
                                 <option value="other">{{ t.form.option_other }}</option>
                             </select>
                         </div>
-                        <div class="form-row-2">
+                        <div class="grid grid--2 grid--tight">
                             <div class="form-group">
                                 <label for="contact-company">{{ t.form.label_company }}</label>
                                 <input type="text" id="contact-company" name="company" placeholder="{{ t.form.placeholder_company }}" required>
@@ -70,7 +70,7 @@
                             <label for="contact-email">{{ t.form.label_email }}</label>
                             <input type="email" id="contact-email" name="email" placeholder="{{ t.form.placeholder_email }}" required>
                         </div>
-                        <div class="form-row-2">
+                        <div class="grid grid--2 grid--tight">
                             <div class="form-group form-group--code">
                                 <label for="contact-code">{{ t.form.label_code }}</label>
                                 <select id="contact-code" name="country_code">

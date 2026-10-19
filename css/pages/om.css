@@ -4,19 +4,6 @@
 
 @layer pages {
 
-.om-hero {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.om-hero > * {
-    flex: 1;
-}
-
-.om-hero__title {
-    color: var(--charcoal);
-}
-
 .om-hero__text {
     color: var(--gray);
 }
@@ -27,16 +14,10 @@
 }
 
 .om-team {
-    display: flex;
-    gap: var(--layout-gap);
     padding: var(--space-xl);
     background: var(--bg-gradient-primary);
-    color: var(--white);
     border-radius: var(--radius-normal);
-}
-
-.om-team > * {
-    flex: 1;
+    color: var(--white);
 }
 
 .om-values {
@@ -48,19 +29,6 @@
     padding: var(--space-sm);
     border-top: 4px solid var(--success);
     text-align: center;
-}
-
-.om-philosophy {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.om-philosophy > * {
-    flex: 1;
-}
-
-.om-philosophy__title {
-    color: var(--charcoal);
 }
 
 .om-philosophy__text {
@@ -75,9 +43,9 @@
 .om-cta {
     padding: var(--space-xl);
     background: var(--bg-gradient-primary);
-    color: var(--white);
     border-radius: var(--radius-normal);
     text-align: center;
+    color: var(--white);
 }
 
 .om-cta__text {
@@ -85,39 +53,13 @@
 }
 
 @media (max-width: 768px) {
-    .om-hero {
-        flex-wrap: wrap;
-    }
-
-    .om-hero > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
 
     .om-story {
         flex-wrap: wrap;
     }
 
-    .om-team {
-        flex-wrap: wrap;
-    }
-
-    .om-team > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
     .om-values {
         flex-wrap: wrap;
-    }
-
-    .om-philosophy {
-        flex-wrap: wrap;
-    }
-
-    .om-philosophy > * {
-        flex: 1 1 100%;
-        min-width: 0;
     }
 
     .om-innovation {

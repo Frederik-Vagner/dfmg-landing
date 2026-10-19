@@ -13,48 +13,18 @@
 .indblik-topic {
     padding: var(--space-sm);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     text-align: center;
-}
-
-.indblik-featured {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.indblik-featured > * {
-    flex: 1;
 }
 
 .indblik-feature {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border-left: 4px solid var(--primary);
-}
-
-.indblik-articles {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--layout-gap);
 }
 
 @media (max-width: 768px) {
     .indblik-topics {
         flex-wrap: wrap;
-    }
-
-    .indblik-featured {
-        flex-wrap: wrap;
-    }
-
-    .indblik-featured > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    .indblik-articles {
-        grid-template-columns: minmax(0, 1fr);
     }
 }
 

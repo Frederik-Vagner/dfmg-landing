@@ -11,11 +11,11 @@
     z-index: var(--z-skip-link);
     padding: var(--space-xs) var(--space-md);
     background: var(--charcoal);
-    color: var(--white);
     border-radius: var(--radius-sm);
     font-weight: var(--font-weight-medium);
     text-decoration: none;
     transform: translateY(-200%);
+    color: var(--white);
 }
 
 .skip-link:focus-visible {
@@ -53,7 +53,6 @@
 .logo {
     align-items: center;
     text-decoration: none;
-    color: var(--white);
     font-weight: var(--font-weight-medium);
     font-size: var(--text-xl);
     background: var(--glass-bg);
@@ -61,6 +60,7 @@
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: var(--radius-normal);
     padding: var(--space-xs) var(--space-md);
+    color: var(--white);
 }
 
 /* --- Platform Header Variant --- */
@@ -109,10 +109,10 @@
    Their text weight comes from ".nav a", as it always has. */
 .nav .nav-cta {
     background: var(--white);
-    color: var(--charcoal);
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-circle);
     transition: var(--transition-normal);
+    color: var(--charcoal);
 }
 
 .nav .nav-cta:hover {
@@ -248,12 +248,12 @@
     justify-content: center;
     width: 48px;
     height: 48px;
-    color: var(--white);
     background: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: var(--radius-normal);
     cursor: pointer;
+    color: var(--white);
 }
 
 .menu-btn__icon {
@@ -335,7 +335,6 @@
 
 .mobile-nav__highlight {
     font-weight: var(--font-weight-semibold);
-    color: var(--white);
 }
 
 .header.is-menu-open .mobile-nav {

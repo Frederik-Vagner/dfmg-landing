@@ -9,15 +9,15 @@
 }
 
 .case-hero__eyebrow {
-    color: var(--white);
+color: var(--white);
 }
 
 .case-hero__title {
-    color: var(--white);
+color: var(--white);
 }
 
 .case-hero__text {
-    color: var(--white);
+color: var(--white);
 }
 
 .case-section {
@@ -52,11 +52,7 @@
 }
 
 .case-solutions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     margin-top: var(--space-lg);
-    gap: var(--space-lg);
 }
 
 .case-solution {
@@ -91,10 +87,6 @@
     color: var(--governance);
 }
 
-.case-solution__icon--charcoal {
-    color: var(--charcoal);
-}
-
 .case-stat {
     padding: var(--space-lg);
     text-align: center;
@@ -109,13 +101,6 @@
 
 .case-quote__role {
     opacity: 0.8;
-}
-
-.cta-center__actions {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-sm);
-    flex-wrap: wrap;
 }
 
 .cta-center__actions iconify-icon {
@@ -142,11 +127,6 @@
 @media (max-width: 768px) {
     .case-company {
         flex-wrap: wrap;
-    }
-
-    .case-solutions {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
     }
 
     .case-quote__author {

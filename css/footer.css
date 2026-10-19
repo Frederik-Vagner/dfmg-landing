@@ -17,12 +17,12 @@
 }
 
 .link-footer {
-    color: var(--white);
     text-decoration: none;
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: var(--transition-fast);
+    color: var(--white);
 }
 
 .link-footer:hover { color: var(--gray-light); }
@@ -56,20 +56,20 @@
 }
 
 .footer-description {
-    color: var(--white);
     line-height: 1.6;
     font-size: var(--text-sm);
+    color: var(--white);
 }
 
 .footer-contact a,
 .footer-contact .footer-address {
-    color: var(--white);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: var(--space-xs);
     transition: var(--transition-fast);
     font-weight: var(--font-weight-light);
+    color: var(--white);
 }
 
 .footer-contact .footer-address {
@@ -83,8 +83,8 @@
 .footer-contact iconify-icon {
     width: 16px;
     text-align: center;
-    color: var(--white);
     font-size: var(--text-sm);
+    color: var(--white);
 }
 
 .social-icon {
@@ -94,19 +94,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
     text-decoration: none;
     font-size: var(--text-base);
     transition: var(--transition-fast);
     margin-top: var(--space-xs);
     background: var(--overlay-light);
+    color: var(--white);
 }
 
 .footer-bottom a {
-    color: var(--white);
     text-decoration: none;
     font-size: var(--text-sm);
     margin-right: var(--space-md);
+    color: var(--white);
 }
 
 .footer-bottom a:hover {
@@ -114,8 +114,8 @@
 }
 
 .copyright {
-    color: var(--white);
     font-size: var(--text-sm);
+    color: var(--white);
 }
 
 .footer-logo {

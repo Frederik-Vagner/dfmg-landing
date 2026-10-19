@@ -9,15 +9,6 @@
     text-align: center;
 }
 
-.home-about {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.home-about > * {
-    flex: 1;
-}
-
 .home-about__text {
     text-align: center;
 }
@@ -28,17 +19,6 @@
 
 .home-services__controls {
     margin-bottom: var(--space-2xl);
-}
-
-@media (max-width: 768px) {
-    .home-about {
-        flex-wrap: wrap;
-    }
-
-    .home-about > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
 }
 
 }

@@ -12,13 +12,13 @@
         <div class="container">
             <div class="demo-split">
                 <div class="demo-split__form">
-                    <h2 class="title title--small demo-split__title">{{ t.form.heading }}</h2>
+                    <h2 class="title title--small">{{ t.form.heading }}</h2>
                     <p class="body demo-split__intro">{{ t.form.intro }}</p>
 
                     <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
                         <input type="hidden" name="_subject" value="{{ t.form.email_subject }}">
                         <input type="hidden" name="_next" value="https://dfmg.dk{{ t.formAction }}">
-                        <div class="form-row-2">
+                        <div class="grid grid--2 grid--tight">
                             <div class="form-group">
                                 <label for="demo-name">{{ t.form.label_name }}</label>
                                 <input type="text" id="demo-name" name="name" placeholder="{{ t.form.placeholder_name }}" required>
@@ -28,7 +28,7 @@
                                 <input type="text" id="demo-company" name="company" placeholder="{{ t.form.placeholder_company }}">
                             </div>
                         </div>
-                        <div class="form-row-2">
+                        <div class="grid grid--2 grid--tight">
                             <div class="form-group">
                                 <label for="demo-email">{{ t.form.label_email }}</label>
                                 <input type="email" id="demo-email" name="email" placeholder="{{ t.form.placeholder_email }}" required>
@@ -85,10 +85,10 @@
         <div class="container">
             <div class="page-intro">
                 <div class="subtitle page-intro__eyebrow">{{ t.steps.subtitle }}</div>
-                <div class="title page-intro__title">{{ t.steps.title }}</div>
+                <div class="title">{{ t.steps.title }}</div>
             </div>
 
-            <div class="steps-row">
+            <div class="row steps-row">
                 <div class="card--feature card--feature--center card--feature--filled">
                     <div class="card--feature__icon">1</div>
                     <div class="card--feature__title">{{ t.steps.step1_title }}</div>

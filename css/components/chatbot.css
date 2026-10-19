@@ -44,9 +44,9 @@
     align-items: center;
     justify-content: center;
     font-size: var(--text-2xl);
-    color: var(--white);
     transition: all var(--transition-normal);
     box-shadow: 0 4px 12px var(--black-a15);
+    color: var(--white);
 }
 
 .chatbot-button:hover {
@@ -114,7 +114,6 @@
     cursor: pointer;
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
     border-bottom: 3px solid transparent;
     transition: all var(--transition-normal);
     background: white;
@@ -168,7 +167,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--charcoal);
     transition: background var(--transition-normal), color var(--transition-normal);
 }
 
@@ -252,7 +250,6 @@
 }
 
 .cta-title {
-    color: var(--charcoal);
     font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
     text-align: center;
@@ -307,7 +304,6 @@
 .preview-message {
     background: var(--white);
     border: var(--border-lighter);
-    color: var(--charcoal);
     border-radius: var(--radius-normal);
     padding: var(--space-sm) var(--space-sm);
     box-shadow: var(--shadow-lg);
@@ -334,13 +330,13 @@
     top: 20px;
     right: 20px;
     background: var(--bg-gradient-success);
-    color: var(--white);
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-normal);
     box-shadow: 0 8px 25px var(--success-a30);
     z-index: var(--z-toast);
     transform: translateX(400px);
     transition: transform var(--transition-normal);
+    color: var(--white);
 }
 
 .notification.show {

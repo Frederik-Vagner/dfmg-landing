@@ -16,7 +16,6 @@
 
 /* Calculator page body (font-family, line-height inherited from body) */
 .calculator-page {
-    color: var(--charcoal);
     background: var(--white);
     font-weight: var(--font-weight-medium);
     overflow: hidden;
@@ -150,7 +149,6 @@
 }
 
 #monthly-price {
-    color: var(--charcoal);
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);
 }

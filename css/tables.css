@@ -21,11 +21,11 @@
 
 .bc-table thead th {
     background: var(--bg-gradient-primary);
-    color: var(--white);
     padding: var(--space-sm) var(--space-md);
     text-align: left;
     font-weight: var(--font-weight-semibold);
     font-size: var(--text-base);
+    color: var(--white);
 }
 
 .bc-table tbody tr {
@@ -44,13 +44,13 @@
 /* ".bc-table .x td" so it outranks ".bc-table tbody td" on specificity. */
 .bc-table .bc-table__category td {
     background: var(--bg-surface);
-    color: var(--charcoal);
     font-weight: var(--font-weight-semibold);
     padding-top: var(--space-sm);
     padding-bottom: var(--space-xs);
     font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    color: var(--charcoal);
 }
 
 .bc-table__category iconify-icon {
@@ -80,10 +80,10 @@
 
 .comparison-table th {
     background: var(--charcoal);
-    color: var(--white);
     font-weight: var(--font-weight-semibold);
     position: sticky;
     top: 0;
+    color: var(--white);
 }
 
 .comparison-table th:first-child,
@@ -96,7 +96,6 @@
 .comparison-table .category-row td {
     background: var(--bg-surface);
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
     font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -121,9 +120,9 @@
 
 .pricing-header {
     background: var(--bg-gradient-charcoal);
-    color: var(--white);
     padding: var(--space-md) var(--space-lg);
     text-align: center;
+    color: var(--white);
 }
 
 .pricing-body {
@@ -144,7 +143,6 @@
 
 .pricing-name {
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
     flex: 1;
 }
 

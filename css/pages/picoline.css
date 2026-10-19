@@ -18,20 +18,11 @@
     margin-bottom: var(--space-2xl);
 }
 
-.picoline-definition {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.picoline-definition > * {
-    flex: 1;
-}
-
 .day-schedule {
     padding: var(--space-lg);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     text-align: center;
+    color: var(--charcoal);
 }
 
 .day-schedule__item {
@@ -50,17 +41,6 @@
     font-weight: var(--font-weight-semibold);
 }
 
-.task-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
-.task-card {
-    color: var(--charcoal);
-}
-
 .task-card__icon {
     margin-bottom: var(--space-sm);
 }
@@ -73,7 +53,6 @@
     padding: var(--space-2xl);
     margin-bottom: var(--space-2xl);
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border-top: 4px solid var(--success);
     text-align: center;
 }
@@ -86,17 +65,6 @@
     margin: auto;
     max-width: 700px;
     font-size: var(--text-lg);
-}
-
-.adhoc-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
-.adhoc-card {
-    color: var(--charcoal);
 }
 
 .adhoc-card__icon {
@@ -112,13 +80,7 @@
 }
 
 .comparison-pair {
-    display: flex;
     margin-top: var(--space-2xl);
-    gap: var(--space-2xl);
-}
-
-.comparison-pair > * {
-    flex: 1;
 }
 
 .comparison-pair__header {
@@ -135,32 +97,19 @@
 }
 
 .comparison-pair__card span {
-    color: var(--white);
+color: var(--white);
 }
 
 .icon-circle--negative {
     background: var(--bg-gradient-red);
-    color: var(--white);
     border: none;
+    color: var(--white);
 }
 
 .icon-circle--positive {
     background: var(--bg-gradient-success);
-    color: var(--white);
     border: none;
-}
-
-.testimonial-row {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.testimonial-row > * {
-    flex: 1;
-}
-
-.testimonial-card {
-    color: var(--charcoal);
+    color: var(--white);
 }
 
 .testimonial-card__quote {
@@ -176,45 +125,8 @@
         flex-wrap: wrap;
     }
 
-    .picoline-definition {
-        flex-wrap: wrap;
-    }
-
-    .picoline-definition > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
     .day-schedule__item {
         flex-wrap: wrap;
-    }
-
-    .task-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .adhoc-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .comparison-pair {
-        flex-wrap: wrap;
-    }
-
-    .comparison-pair > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    .testimonial-row {
-        flex-wrap: wrap;
-    }
-
-    .testimonial-row > * {
-        flex: 1 1 100%;
-        min-width: 0;
     }
 }
 

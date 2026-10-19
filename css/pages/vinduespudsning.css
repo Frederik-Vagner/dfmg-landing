@@ -49,17 +49,7 @@
 
 @layer pages {
 
-.window-hero {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.window-hero > * {
-    flex: 1;
-}
-
 .window-hero__title {
-    color: var(--charcoal);
     font-size: var(--heading-1);
     font-weight: var(--font-weight-light);
     line-height: 1;
@@ -69,19 +59,6 @@
 .window-hero__lead {
     margin-bottom: var(--space-2xl);
     color: var(--gray);
-}
-
-.window-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-}
-
-.window-panels {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
 }
 
 .window-service {
@@ -100,19 +77,6 @@
 }
 
 @media (max-width: 768px) {
-    .window-hero {
-        flex-wrap: wrap;
-    }
-
-    .window-hero > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
-    .window-panels {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
 
     .window-service__layout {
         flex-wrap: wrap;

@@ -4,43 +4,21 @@
 
 @layer pages {
 
-.job-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-auto-rows: 1fr;
-    gap: var(--layout-gap);
-}
-
 /* Job titles are long Danish compounds ("Rengøringsmedarbejder") that need
    about 320px a card, so three columns only fit from 1200px. */
-@media (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
     .job-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        --grid-cols: 2;
     }
-}
-
-.job-card__title {
-    color: var(--charcoal);
 }
 
 .job-card__summary {
     min-height: 120px;
 }
 
-.job-card__subheading {
-    color: var(--charcoal);
-}
-
 .job-card__apply {
     margin-top: var(--space-lg);
     text-align: center;
-}
-
-.job-perks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
 }
 
 .job-perk {
@@ -53,24 +31,11 @@
     font-size: var(--icon-display);
 }
 
-.job-perk__title {
-    color: var(--charcoal);
-}
-
 .job-perk__text {
     color: var(--gray);
 }
 
 @media (max-width: 768px) {
-    .job-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-auto-rows: auto;
-    }
-
-    .job-perks {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
 
     .job-perk__emoji {
         font-size: var(--text-3xl);

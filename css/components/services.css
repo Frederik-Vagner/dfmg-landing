@@ -14,11 +14,11 @@
     position: relative;
     cursor: pointer;
     transition: flex 0.4s ease;
-    color: var(--white);
     display: flex;
     align-items: stretch;
     padding: 0 var(--space-lg) var(--space-lg) var(--space-lg);
     overflow: hidden;
+    color: var(--white);
 }
 
 .service-column:hover:not(.expanded):not(.collapsed) {
@@ -74,7 +74,6 @@
 .service-title {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
-    color: var(--white);
     white-space: nowrap;
     transition: transform 0.4s ease;
     text-align: center;
@@ -86,6 +85,7 @@
     justify-content: center;
     width: 200px;
     max-width: 100%;
+    color: var(--white);
 }
 
 .expanded-content {
@@ -155,7 +155,6 @@
 
 .specialomrade-item {
     font-size: var(--text-sm);
-    color: var(--charcoal);
     margin-bottom: var(--space-3xs);
     padding-left: var(--space-sm);
     position: relative;
@@ -164,7 +163,6 @@
 
 .specialomrade-item:before {
     content: "•";
-    color: var(--charcoal);
     position: absolute;
     left: 0;
     font-size: var(--text-3xl);
@@ -179,20 +177,15 @@
 
 .benefits-title {
     margin-bottom: var(--space-sm);
-    color: var(--charcoal);
     font-size: var(--text-xl);
     font-weight: var(--font-weight-semibold);
 }
 
 .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-xs);
     margin-bottom: var(--space-lg);
 }
 
 .benefits-icon {
-    color: var(--charcoal);
     font-size: var(--text-base);
     background: var(--bg-success-light);
     padding: var(--space-2xs);
@@ -207,7 +200,6 @@
 
 .benefits-text {
     font-size: var(--text-sm);
-    color: var(--charcoal);
     font-weight: var(--font-weight-medium);
     line-height: 1.4;
 }
@@ -258,7 +250,7 @@
 }
 
 .service-features iconify-icon {
-    color: var(--charcoal);
+color: var(--charcoal);
 }
 
 .service-actions {
@@ -307,9 +299,9 @@
     }
 
     .service-title {
-        color: var(--white);
         white-space: normal;
         width: auto;
+        color: var(--white);
     }
 
     /* The content block is offset 70vh down the column, which lands inside a
@@ -410,10 +402,6 @@
         padding-right: 0;
     }
 
-    .benefits-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
     .expanded-content-left {
         padding-right: 0;
     }
@@ -458,17 +446,6 @@
     color: var(--charcoal);
 }
 
-.specialomrader-title {
-    color: var(--charcoal);
-}
-
-.specialomrader-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
 .specialomrade {
     padding: var(--space-2xs);
 }
@@ -478,13 +455,6 @@
     height: 100%;
     border-radius: var(--radius-lg);
     object-fit: cover;
-}
-
-@media (max-width: 768px) {
-    .specialomrader-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
 }
 /* generated:end */
 

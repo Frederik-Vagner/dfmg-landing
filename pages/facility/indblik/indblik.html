@@ -12,7 +12,7 @@ pageCss:
     <section class="section first">
         <div class="container-wide">
             <div class="page-intro">
-                <h1 class="title page-intro__title">Hvordan Vi Arbejder</h1>
+                <h1 class="title">Hvordan Vi Arbejder</h1>
                 <div class="body page-intro__text page-intro__text--spaced">Vores succesformel bygger på systematisk tilgang, høje standarder og konstant fokus på forbedring</div>
             </div>
 
@@ -44,7 +44,7 @@ pageCss:
         </div>
         <div class="container">
 
-            <div class="indblik-featured">
+            <div class="row">
                 <div class="card indblik-feature">
                     <h3>
                         <iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon>
@@ -82,10 +82,10 @@ pageCss:
     <section class="section" id="articles">
         <div class="container">
             <div class="page-intro">
-                <h2 class="title page-intro__title">Seneste Artikler</h2>
+                <h2 class="title">Seneste Artikler</h2>
             </div>
 
-            <div class="indblik-articles">
+            <div class="grid grid--3">
                 {%- from "partials/article-cards.njk" import gridCard %}
                 {%- for article in collections.artikel | newestFirst | head(3) %}
                 {{ gridCard(article, "h4") }}

@@ -26,9 +26,9 @@
 
 .checklist > li {
     padding: var(--space-2xs) 0;
-    color: var(--charcoal);
     font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
 }
 
 /* Items that start with an icon: icon column + text column. (A checklist of

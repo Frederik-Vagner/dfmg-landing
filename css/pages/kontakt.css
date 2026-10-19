@@ -17,7 +17,6 @@
     background: var(--bg-surface);
     font-weight: var(--font-weight-semibold);
     font-size: var(--text-sm);
-    color: var(--charcoal);
     transition: background var(--transition-normal);
 }
 
@@ -31,12 +30,8 @@
 }
 
 /* generated:start */
-.kontakt__title {
-    color: var(--charcoal);
-}
 
 .kontakt-form__title {
-    color: var(--charcoal);
     text-align: center;
 }
 
@@ -48,30 +43,12 @@
     text-align: center;
 }
 
-.kontakt-faq__title {
-    color: var(--charcoal);
-}
-
-.kontakt-faq__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-}
-
 .kontakt-careers__header {
     text-align: center;
 }
 
-.kontakt-careers__title {
-    color: var(--charcoal);
-}
-
 .kontakt-careers__lead {
     font-size: var(--text-lg);
-}
-
-.kontakt-careers__subtitle {
-    color: var(--charcoal);
 }
 
 .job-buttons--row {
@@ -82,15 +59,7 @@
     text-align: right;
 }
 
-.partner-info__title {
-    color: var(--charcoal);
-}
-
 @media (max-width: 768px) {
-    .kontakt-faq__list {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
 
     .job-buttons--row {
         flex-wrap: wrap;

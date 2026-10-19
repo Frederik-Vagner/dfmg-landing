@@ -185,7 +185,7 @@ function showExpandedContent(column, serviceType) {
 
                 <div class="specialomrader-section">
                     <h4 class="specialomrader-title">Specialområder</h4>
-                    <div class="specialomrader-grid">
+                    <div class="grid grid--2">
                         ${service.categories.map(category => `
                             <div class="specialomrade">
                                 <h5 class="specialomrade-title">${category.name}</h5>
@@ -206,7 +206,7 @@ function showExpandedContent(column, serviceType) {
                 </div>
                 <div class="benefits-section">
                     <h4 class="benefits-title">Hvorfor DFMG</h4>
-                    <div class="benefits-grid">
+                    <div class="grid grid--2 grid--tight benefits-grid">
                         ${service.features.map(feature => `
                             <div class="card--benefits">
                                 <iconify-icon icon="fluent:checkmark-20-filled" inline class="benefits-icon"></iconify-icon>

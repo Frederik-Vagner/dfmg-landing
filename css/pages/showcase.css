@@ -96,7 +96,8 @@
     letter-spacing: 4px;
 }
 
-.logo-banner--navy .logo-banner__wordmark { color: var(--white); }
+.logo-banner--navy .logo-banner__wordmark {
+color: var(--white); }
 .logo-banner--light .logo-banner__wordmark { color: var(--swatch-navy); }
 
 /* ── Demo backdrops ── */
@@ -144,11 +145,7 @@
 }
 
 .showcase-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     margin-bottom: var(--space-lg);
-    gap: var(--space-sm);
 }
 
 .showcase-row--wide {
@@ -172,12 +169,6 @@
 .showcase-narrow {
     margin-bottom: var(--space-lg);
     max-width: 400px;
-}
-
-.logo-swatches {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
 }
 
 .logo-swatches--spaced {

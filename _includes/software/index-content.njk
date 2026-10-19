@@ -29,11 +29,11 @@
         <div class="container">
             <div class="page-intro">
                 <div class="subtitle page-intro__eyebrow">{{ t.why.subtitle }}</div>
-                <div class="title page-intro__title">{{ t.why.title }}</div>
+                <div class="title">{{ t.why.title }}</div>
                 <div class="body page-intro__text page-intro__text--spaced">{{ t.why.body }}</div>
             </div>
 
-            <div class="value-grid">
+            <div class="grid grid--3 grid--loose">
                 <div class="card--feature card--feature--center">
                     <div class="card--feature__icon">
                         <iconify-icon icon="fluent:flag-20-filled" inline></iconify-icon>
@@ -68,7 +68,7 @@
                 <div class="body section-intro__text">{{ t.modules.body }}</div>
             </div>
 
-            <div class="module-grid">
+            <div class="grid grid--3">
                 <a href="{{ prefix }}/features.html#operations" class="card--feature card--feature--filled card--feature--hover">
                     <div class="card--feature__icon"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon></div>
                     <div class="card--feature__title">{{ t.modules.operations_title }}</div>
@@ -106,7 +106,7 @@
     <!-- Product walkthrough — visual proof -->
     <section class="section section--primary">
         <div class="container">
-            <div class="walkthrough">
+            <div class="row row--center">
                 <div>
                     <div class="title title--compact walkthrough__title">{{ t.walkthrough.title }}</div>
                     <p class="walkthrough__body">{{ t.walkthrough.body }}</p>
@@ -136,7 +136,7 @@
                 <div class="body section-intro__text">{{ t.comparison.body }}</div>
             </div>
 
-            <div class="comparison">
+            <div class="row row--loose">
                 <div class="card">
                     <div class="comparison__title comparison__title--without"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.comparison.without_title }}</div>
                     <ul class="checklist checklist--red">
@@ -166,7 +166,7 @@
             </div>
 
             <!-- TODO: Replace with actual integration logos -->
-            <div class="integrations">
+            <div class="cluster cluster--center cluster--loose integrations">
                 <div class="integrations__item">
                     <iconify-icon icon="fa6-brands:google" inline class="integrations__icon"></iconify-icon>
                     {{ t.integrations.google }}

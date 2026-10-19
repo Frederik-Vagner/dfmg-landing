@@ -10,10 +10,10 @@
     <!-- Origin story -->
     <section class="section">
         <div class="container">
-            <div class="about-split">
+            <div class="row">
                 <div>
                     <div class="subtitle about-split__eyebrow">{{ t.story.subtitle }}</div>
-                    <h2 class="title title--compact about-split__title">{{ t.story.title }}</h2>
+                    <h2 class="title title--compact">{{ t.story.title }}</h2>
                     <p class="body about-split__text about-split__text--spaced">{{ t.story.body1 }}</p>
                     <p class="body about-split__text about-split__text--spaced">{{ t.story.body2 }}</p>
                     <p class="body about-split__text">{{ t.story.body3 }}</p>
@@ -60,7 +60,7 @@
     <!-- Tech approach -->
     <section class="section">
         <div class="container">
-            <div class="about-split">
+            <div class="row">
                 <div>
                     <!-- TODO: Replace with simple architecture visual or tech stack diagram -->
                     <div class="screenshot-placeholder screenshot-placeholder--light about-tech__media" data-photo-slot="about-tech" data-photo-status="missing" data-photo-brief="{{ t.tech.placeholder_text | escape }}. {{ t.tech.placeholder_hint | escape }}">
@@ -73,7 +73,7 @@
                 </div>
                 <div>
                     <div class="subtitle about-split__eyebrow">{{ t.tech.subtitle }}</div>
-                    <h2 class="title title--compact about-split__title">{{ t.tech.title }}</h2>
+                    <h2 class="title title--compact">{{ t.tech.title }}</h2>
                     <ul class="checklist checklist--success about-tech__list">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span><strong>{{ t.tech.item1_strong }}</strong> — {{ t.tech.item1_text }}</span></li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span><strong>{{ t.tech.item2_strong }}</strong> — {{ t.tech.item2_text }}</span></li>

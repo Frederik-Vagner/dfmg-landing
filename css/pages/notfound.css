@@ -8,32 +8,8 @@
     margin-bottom: var(--space-2xl);
 }
 
-.notfound-links {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.notfound-links > * {
-    flex: 1;
-}
-
-.notfound-links__title {
-    color: var(--charcoal);
-}
-
 .notfound__text {
     color: var(--gray);
-}
-
-@media (max-width: 768px) {
-    .notfound-links {
-        flex-wrap: wrap;
-    }
-
-    .notfound-links > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
 }
 
 }

@@ -4,31 +4,13 @@
 
 @layer pages {
 
-.service-builder {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xl);
-}
-
-.service-builder > * {
-    flex: 1;
-}
-
 .service-builder__intro {
     padding: var(--space-lg);
-}
-
-.service-builder__title {
-    color: var(--charcoal);
 }
 
 .service-builder__text {
     margin-bottom: var(--space-lg);
     color: var(--gray);
-}
-
-.package-card__title {
-    color: var(--charcoal);
 }
 
 .package-card__text {
@@ -44,15 +26,6 @@
     text-align: center;
 }
 
-.advantage-grid {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.advantage-grid > * {
-    flex: 1;
-}
-
 .advantage-grid--spaced {
     margin-bottom: var(--space-2xl);
 }
@@ -63,35 +36,16 @@
     justify-content: center;
 }
 
-.advantage-card__title {
-    color: var(--charcoal);
-}
-
 .advantage-card__text {
     color: var(--gray);
 }
 
 /* Four steps fit side by side from about 1100px; below that two by two, so
    the fourth card no longer runs off the edge at tablet widths. */
-.service-steps {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--layout-gap);
-}
-
-@media (max-width: 1100px) {
-    .service-steps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
 
 .service-step {
     padding: var(--space-lg);
     text-align: center;
-}
-
-.service-step__title {
-    color: var(--charcoal);
 }
 
 .service-step__text {
@@ -99,34 +53,13 @@
 }
 
 @media (max-width: 768px) {
-    .service-builder {
-        flex-wrap: wrap;
-    }
-
-    .service-builder > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
 
     .package-card__actions {
         flex-wrap: wrap;
     }
 
-    .advantage-grid {
-        flex-wrap: wrap;
-    }
-
-    .advantage-grid > * {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
-
     .advantage-card__header {
         flex-wrap: wrap;
-    }
-
-    .service-steps {
-        grid-template-columns: minmax(0, 1fr);
     }
 }
 

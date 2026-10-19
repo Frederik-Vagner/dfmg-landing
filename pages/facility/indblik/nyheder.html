@@ -21,7 +21,7 @@ featured:
     <section class="section first">
         <div class="container">
             <div class="page-intro">
-                <h1 class="title page-intro__title">Indblik & Artikler</h1>
+                <h1 class="title">Indblik & Artikler</h1>
                 <div class="body page-intro__text">Få værdifulde insights om facility management, systematiske processer og de trends der former branchen</div>
             </div>
         </div>
@@ -61,7 +61,7 @@ featured:
             <!-- Articles Grid -->
             <div>
                 <h2>Alle Artikler</h2>
-                <div class="articles-grid" id="articlesGrid">
+                <div class="grid grid--3 grid--loose articles-grid" id="articlesGrid">
 
                     {%- for article in collections.artikel | newestFirst %}
                     {{ gridCard(article) }}

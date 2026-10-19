@@ -1,0 +1,84 @@
+/* ====================================
+   LAYOUT — three layout components
+   Most sections only need one of these, so they no longer get a class of
+   their own just to say "flex, gap, stack on phones". The section class keeps
+   whatever is really its own (background, spacing, borders).
+
+   .row      children side by side at equal width; stacked on phones
+   .grid     equal columns: .grid--2 / --3 / --4; fewer columns on
+             tablets, one column on phones
+   .cluster  a wrapping row of buttons, tags or steps
+
+   Gap modifiers: --tight (space-sm), --loose (space-lg, rows: space-xl),
+   --wide (rows: space-2xl). No other spacing lives here.
+   ==================================== */
+
+@layer components {
+
+/* --- Row --- */
+.row {
+    display: flex;
+    gap: var(--layout-gap);
+}
+
+.row > * {
+    flex: 1;
+}
+
+.row--center { align-items: center; }
+.row--loose { gap: var(--space-xl); }
+.row--wide { gap: var(--space-2xl); }
+
+/* --- Grid --- */
+.grid {
+    --grid-cols: 1;
+    display: grid;
+    /* 1fr, not minmax(0, 1fr): a column may grow a little to fit one long
+       word ("Konkurrencedygtige", an e-mail address) instead of letting it
+       spill out of its card. */
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    gap: var(--layout-gap);
+}
+
+.grid--2 { --grid-cols: 2; }
+.grid--3 { --grid-cols: 3; }
+.grid--4 { --grid-cols: 4; }
+.grid--tight { gap: var(--space-sm); }
+.grid--loose { gap: var(--space-lg); }
+
+/* --- Cluster --- */
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.cluster--center { justify-content: center; }
+.cluster--loose { gap: var(--space-lg); }
+
+/* --- Smaller screens --- */
+@media (max-width: 1100px) {
+    .grid--4 { --grid-cols: 2; }
+}
+
+@media (max-width: 1024px) {
+    .grid--3 { --grid-cols: 2; }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .row > * {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .grid {
+        --grid-cols: 1;
+    }
+}
+
+}

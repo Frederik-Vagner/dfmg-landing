@@ -17,8 +17,8 @@
 }
 
 .breadcrumb a {
-    color: var(--charcoal);
     text-decoration: none;
+    color: var(--charcoal);
 }
 
 .breadcrumb a:hover {
@@ -28,11 +28,11 @@
 
 /* Article listing title (card context) */
 .article-title {
-    color: var(--charcoal);
     font-size: var(--text-xl);
     font-weight: var(--font-weight-semibold);
     line-height: 1.4;
     margin: unset;
+    color: var(--charcoal);
 }
 
 .article-meta {
@@ -74,9 +74,6 @@
 
 /* Articles Grid */
 .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
 }
 
@@ -96,16 +93,16 @@
    The band sits on the charcoal page background, so charcoal text here is
    invisible — title, breadcrumb and date all rendered but unreadable. */
 .article-header {
-    color: var(--white);
     padding: var(--space-2xl) 0 var(--space-lg);
     position: relative;
     overflow: hidden;
+    color: var(--white);
 }
 
 .article-header .breadcrumb a,
 .article-header .article-title,
 .article-header .article-meta {
-    color: var(--white);
+color: var(--white);
 }
 
 .article-header::before {
@@ -212,17 +209,17 @@
 
 .article-body h1, .article-body h2 {
     font-size: var(--text-2xl);
-    color: var(--charcoal);
     margin: var(--space-lg) 0 var(--space-sm);
     font-weight: var(--font-weight-bold);
     position: relative;
+    color: var(--charcoal);
 }
 
 .article-body h3 {
     font-size: var(--text-xl);
-    color: var(--charcoal);
     margin: var(--space-lg) 0 var(--space-sm);
     font-weight: var(--font-weight-semibold);
+    color: var(--charcoal);
 }
 
 .article-body strong {
@@ -364,15 +361,15 @@
 .related-content h4 {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
     line-height: 1.3;
     margin-bottom: var(--space-3xs);
     margin-top: unset;
+    color: var(--charcoal);
 }
 
 .related-content a {
-    color: var(--charcoal);
     text-decoration: none;
+    color: var(--charcoal);
 }
 
 .related-content a:hover {
@@ -393,10 +390,6 @@
 
     /* One column: the article stays first and the sidebar (contents,
        related articles, newsletter) follows it, as in the source order. */
-
-    .articles-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
 @media (max-width: 768px) {
@@ -422,10 +415,6 @@
 
     /* Three article cards per row leaves about one character per line at
        390px. The grid had no mobile rule at all. */
-    .articles-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: var(--space-md);
-    }
 }
 
 }

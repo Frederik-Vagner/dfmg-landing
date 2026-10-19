@@ -10,7 +10,7 @@
     <!-- Tier cards -->
     <section class="section">
         <div class="container">
-            <div class="pricing-tiers">
+            <div class="grid grid--3 grid--loose pricing-tiers">
                 {% for tier in t.tiers %}
                 <div class="card--tier{% if tier.featured %} card--tier--featured{% endif %}">
                     {% if tier.badge %}

@@ -32,20 +32,20 @@
 
 .btn--success {
     background: var(--bg-gradient-success);
-    color: var(--white);
     border: none;
+    color: var(--white);
 }
 
 .btn--secondary {
     background: var(--bg-gradient-white);
-    color: var(--charcoal);
     border: 2px solid var(--charcoal);
+    color: var(--charcoal);
 }
 
 .btn--ghost {
     background: var(--white);
-    color: var(--charcoal);
     border: 2px solid var(--white);
+    color: var(--charcoal);
 }
 
 
@@ -148,8 +148,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
     text-decoration: none;
+    color: var(--white);
 }
 
 .share-linkedin { background: var(--linkedin); }
@@ -163,11 +163,11 @@
     gap: var(--space-2xs);
     background: var(--white);
     border: 2px solid var(--charcoal);
-    color: var(--charcoal);
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-circle);
     text-decoration: none;
     font-weight: var(--font-weight-semibold);
+    color: var(--charcoal);
 }
 
 .back-btn:hover {
@@ -188,9 +188,9 @@
     justify-content: center;
     cursor: pointer;
     font-size: var(--text-xl);
-    color: var(--charcoal);
     transition: all var(--transition-normal);
     box-shadow: none;
+    color: var(--charcoal);
 }
 
 .btn--icon:hover {

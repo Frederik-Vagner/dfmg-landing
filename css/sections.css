@@ -50,16 +50,16 @@
     overflow: hidden;
     padding: var(--space-4xl) 0 var(--space-2xl);
     background: var(--bg-gradient-primary);
-    color: var(--white);
     text-align: center;
+    color: var(--white);
 }
 
 .platform-hero .title {
-    color: var(--white);
     font-size: var(--heading-1);
     font-weight: var(--font-weight-bold);
     line-height: 1.25;
     margin-bottom: var(--space-sm);
+    color: var(--white);
 }
 
 .platform-hero .body {
@@ -86,9 +86,9 @@
 }
 
 .platform-cta .title {
-    color: var(--white);
     font-size: var(--heading-2);
     margin-bottom: var(--space-xs);
+    color: var(--white);
 }
 
 .platform-cta .body {
@@ -195,13 +195,13 @@
     background: var(--bg-gradient-charcoal);
     border-radius: var(--radius-normal);
     padding: var(--space-xl);
-    color: var(--white);
     position: relative;
     overflow: hidden;
     min-height: 300px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: var(--space-lg);
+    color: var(--white);
 }
 
 /* The empty right third is decoration; on a phone it squeezed the text into
@@ -216,10 +216,10 @@
 .cta-center {
     background: var(--bg-gradient-success);
     padding: var(--space-2xl) var(--space-xl);
-    color: var(--white);
     position: relative;
     overflow: hidden;
     text-align: center;
+    color: var(--white);
 }
 
 .cta-center h2 {
@@ -270,7 +270,6 @@
 .feature-row__title {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
-    color: var(--charcoal);
     margin-bottom: var(--space-sm);
 }
 
@@ -318,7 +317,6 @@
 
 .callout-box__title {
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
     margin-bottom: var(--space-2xs);
 }
 

@@ -117,7 +117,6 @@ body {
 .schedule-row:first-child {
     background: var(--bg-muted);
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
 }
 
 .schedule-row:last-child {
@@ -135,7 +134,6 @@ body {
 
 /* ".schedule-row > .x" so it outranks ".schedule-row > div" on specificity. */
 .schedule-row > .task-col {
-    color: var(--charcoal);
     font-size: var(--text-xs);
     padding-left: var(--space-sm);
 }
@@ -189,7 +187,7 @@ body {
 }
 
 .photo-option--active {
-    color: var(--charcoal);
+color: var(--charcoal);
 }
 
 .photo-option__label {
@@ -212,10 +210,6 @@ body {
 
 /* Transparency Section */
 .transparency-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: var(--space-lg);
     margin-top: var(--space-lg);
 }
 
@@ -242,9 +236,6 @@ body {
 
 /* Flexibility Section */
 .flexibility-examples {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--space-sm);
     padding: var(--space-sm);
     border-radius: var(--radius-md);
 }
@@ -259,11 +250,11 @@ body {
 
 .chat-header {
     background: var(--charcoal);
-    color: var(--white);
     padding: var(--space-xs);
     font-weight: var(--font-weight-semibold);
     font-size: var(--text-sm);
     text-align: center;
+    color: var(--white);
 }
 
 .message {
@@ -288,7 +279,6 @@ body {
 
 .message.customer span {
     background: var(--color-border);
-    color: var(--charcoal);
 }
 
 .message.dfmg {
@@ -322,16 +312,12 @@ body {
    stack instead. minmax(0, …): a bare 1fr track still grows to its content's
    min-content width. */
 @media (max-width: 1024px) {
-    .stability-content,
-    .transparency-grid {
+    .stability-content {
         grid-template-columns: minmax(0, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .flexibility-examples {
-        grid-template-columns: minmax(0, 1fr);
-    }
 
     /* The four room tabs do not fit on one line at 390px. */
     .tab-navigation {
@@ -381,6 +367,15 @@ body {
 
 @layer pages {
 
+/* The schedule and report mock-ups side by side need about 1000px; below
+   that they stack. */
+@media (max-width: 1024px) {
+    .transparency-grid {
+        --grid-cols: 1;
+    }
+}
+
+
 /* ── Schedule mockup ── */
 .schedule-mock {
     border-radius: var(--radius-sm);
@@ -392,7 +387,6 @@ body {
     font-weight: var(--font-weight-semibold);
     font-size: var(--text-lg);
     margin-bottom: var(--space-sm);
-    color: var(--charcoal);
 }
 
 /* Seven columns; the wide ones are the days with a booked visit. */
@@ -414,10 +408,10 @@ body {
 }
 
 .schedule-mock__visit {
-    color: var(--white);
     border-radius: var(--radius-sm);
     padding: 3px 0;
     line-height: 1.2;
+    color: var(--white);
 }
 
 .schedule-mock__visit--completed { background: var(--success); }
@@ -446,7 +440,6 @@ body {
 
 .report-mock__sent {
     font-weight: var(--font-weight-semibold);
-    color: var(--charcoal);
 }
 
 .report-mock__details {
@@ -469,7 +462,8 @@ body {
 }
 
 .report-mock__line--done { color: var(--success); }
-.report-mock__line--worker { color: var(--charcoal); }
+.report-mock__line--worker {
+color: var(--charcoal); }
 
 .report-mock__attachments {
     background: var(--mockup-success-bg);
