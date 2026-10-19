@@ -98,6 +98,33 @@ function unlayeredRules(css) {
     return problems;
 }
 
+// The breakpoints documented in css/tokens.css.
+const BREAKPOINTS = [768, 769, 860, 1024, 1100, 1200, 1440];
+
+// Declarations of a property (outside tokens.css) whose value fails `isLiteral`.
+function countLiterals(sourceCss, prop, isLiteral) {
+    const re = new RegExp(`(?:^|[;{\\s])${prop}\\s*:\\s*([^;}]+)`, "g");
+    return sourceCss
+        .filter(({ f }) => !f.endsWith(path.join("css", "tokens.css")))
+        .reduce((n, { css }) => n + [...css.matchAll(re)].filter((m) => isLiteral(m[1].trim())).length, 0);
+}
+
+// Class-only selectors (".a", ".a:hover", not ".b .a") defined in two or more files.
+function selectorsInSeveralFiles(sourceCss) {
+    const where = new Map();
+    for (const { f, css } of sourceCss) {
+        const flat = css.replace(/@(?:media|layer|supports)[^{]*\{/g, "");
+        for (const m of flat.matchAll(/([^{}]+)\{/g)) {
+            for (const sel of m[1].split(",").map((x) => x.trim())) {
+                if (!/^\.[\w-]+(?::[\w-]+)*$/.test(sel)) continue;
+                if (!where.has(sel)) where.set(sel, new Set());
+                where.get(sel).add(f);
+            }
+        }
+    }
+    return [...where.values()].filter((files) => files.size > 1).length;
+}
+
 function check() {
     if (!fs.existsSync(SITE)) {
         console.error("check-css: _site does not exist; run the Eleventy build first.");
@@ -180,6 +207,22 @@ function check() {
             .reduce((n, { css }) => n + [...css.matchAll(/(?:^|[;{\s])(?:padding|margin|gap|row-gap|column-gap)(?:-[a-z-]+)?\s*:\s*([^;}]+)/g)]
                 .flatMap((m) => m[1].match(/-?[\d.]+(?:px|rem)\b/g) || [])
                 .filter((len) => Math.abs(parseFloat(len)) * (len.endsWith("rem") ? 16 : 1) > 3).length, 0),
+        // Values that have tokens: a literal is a value that bypasses the scale.
+        zIndexLiterals: countLiterals(sourceCss, "z-index", (v) => !/^var\(--z-/.test(v) && !/^(auto|0)$/.test(v)),
+        fontWeightLiterals: countLiterals(sourceCss.filter(({ f }) => !f.endsWith("fonts.css")), "font-weight",
+            (v) => !/^var\(--font-weight-/.test(v) && !/^(inherit|normal|bold)$/.test(v)),
+        radiusLiterals: countLiterals(sourceCss, "border(?:-[a-z]+)*-radius", (v) => (v.replace(/var\([^)]*\)/g, "").match(/[\d.]+(px|rem|em|%)/g) || []).length > 0),
+        // Not tokens yet; counted so they cannot grow while that is pending.
+        lineHeightLiterals: countLiterals(sourceCss, "line-height", (v) => /^[\d.]+(px|rem|em|%)?$/.test(v)),
+        letterSpacingLiterals: countLiterals(sourceCss, "letter-spacing", (v) => /^-?[\d.]+(px|rem|em)$/.test(v) && parseFloat(v) !== 0),
+        transitionAll: sourceCss.reduce((n, { css }) => n + (css.match(/transition(?:-property)?\s*:\s*all\b/g) || []).length, 0),
+        // Media queries may only use the documented breakpoints (tokens.css).
+        undocumentedBreakpoints: sourceCss.reduce((n, { css }) => n + [...css.matchAll(/@media[^{]*/g)]
+            .flatMap((m) => [...m[0].matchAll(/(?:min|max)-width\s*:\s*([\d.]+)px/g)].map((x) => +x[1]))
+            .filter((px) => !BREAKPOINTS.includes(px)).length, 0),
+        // The same class selector defined in more than one stylesheet: which
+        // rule wins then depends on load order, the cause of earlier bugs.
+        selectorsInTwoFiles: selectorsInSeveralFiles(sourceCss.filter(({ f }) => f.startsWith(path.join(ROOT, "css")))),
     };
 
     return { undefinedClasses, unusedClasses, unlayered, counts, used };

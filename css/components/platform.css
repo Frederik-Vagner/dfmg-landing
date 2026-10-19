@@ -81,7 +81,7 @@
 
 .feature-visual__step-number {
     color: var(--primary-text);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
 }
 
 .feature-visual__tags {
@@ -182,7 +182,7 @@
 .contact-info__heading,
 .contact-form__heading {
     font-size: var(--text-2xl);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--charcoal);
 }
 

@@ -30,6 +30,14 @@
     "important": 0,
     "hardcodedColours": 0,
     "fontSizeLiterals": 0,
-    "spacingLiterals": 0
+    "spacingLiterals": 0,
+    "zIndexLiterals": 0,
+    "fontWeightLiterals": 0,
+    "radiusLiterals": 1,
+    "lineHeightLiterals": 38,
+    "letterSpacingLiterals": 18,
+    "transitionAll": 20,
+    "undocumentedBreakpoints": 0,
+    "selectorsInTwoFiles": 0
   }
 }

@@ -47,7 +47,7 @@
 }
 
 .day-schedule__task {
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 .task-grid {

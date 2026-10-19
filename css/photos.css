@@ -76,7 +76,7 @@
     justify-content: center;
     color: var(--white-a80);
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     text-shadow: 0 2px 4px var(--black-a30);
     text-align: center;
     position: relative;
@@ -101,7 +101,7 @@
 }
 
 /* ── Avatar ── */
-.avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+.avatar { width: 60px; height: 60px; border-radius: var(--radius-round); object-fit: cover; }
 
 }
 

@@ -23,6 +23,7 @@
 .logo-swatch__tile--app {
     width: 160px;
     height: 160px;
+    /* Deliberately not a token: the iOS app-icon corner, 22.5% of 160px. */
     border-radius: 36px;
 }
 
@@ -30,7 +31,7 @@
 .logo-swatch__tile--profile {
     width: 130px;
     height: 130px;
-    border-radius: 50%;
+    border-radius: var(--radius-round);
 }
 
 .logo-swatch__tile--white {
@@ -66,7 +67,7 @@
     width: 100%;
     max-width: 600px;
     aspect-ratio: 4/1;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +92,7 @@
 
 .logo-banner__wordmark {
     font-size: var(--text-2xl);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     letter-spacing: 4px;
 }
 

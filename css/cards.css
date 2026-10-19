@@ -62,7 +62,7 @@
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
     margin-top: 0;
     margin-bottom: var(--space-xs);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 .card p {
@@ -87,7 +87,7 @@
 
 .card .subtitle {
     margin-bottom: var(--space-2xs);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 .card .body {
@@ -119,7 +119,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    z-index: var(--z-bg);
 }
 
 .card--overlay::after {
@@ -130,13 +130,13 @@
     width: 100%;
     height: 100%;
     background: var(--overlay-dark);
-    z-index: 2;
+    z-index: var(--z-overlay);
 }
 
 .card--overlay h3,
 .card--overlay p {
     position: relative;
-    z-index: 3;
+    z-index: var(--z-content);
     color: var(--white);
     margin-bottom: var(--space-2xs);
     padding: 0 var(--space-md);
@@ -147,7 +147,7 @@
 .card--overlay h3 {
     margin-bottom: var(--space-xs);
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     min-height: 1.8rem;
 }
 
@@ -273,7 +273,7 @@
 .card--split__title {
     font-size: var(--text-2xl);
     color: var(--charcoal);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     line-height: 1.2;
     margin-bottom: var(--space-xs);
 }
@@ -322,7 +322,7 @@
 .card__content h4 {
     color: var(--charcoal);
     margin-bottom: var(--space-2xs);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 .card__content p {
@@ -372,7 +372,7 @@
 
 .card--feature--center .card--feature__icon {
     margin: 0 auto var(--space-md);
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     width: 56px;
     height: 56px;
     font-size: var(--text-xl);
@@ -380,7 +380,7 @@
 
 .card--feature__title {
     font-size: var(--text-lg);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
     margin-bottom: var(--space-2xs);
 }
@@ -459,7 +459,7 @@
     height: 3px;
     background: var(--primary);
     margin: var(--space-md) auto;
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
 }
 
 .card--tier__features {
@@ -521,14 +521,14 @@
 .staff-member__avatar {
     width: 60px;
     height: 60px;
-    border-radius: 20%;
+    border-radius: var(--radius-md);
     flex-shrink: 0;
     object-fit: cover;
 }
 
 .staff-member__name {
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     margin-bottom: 2px;
 }
 
@@ -558,7 +558,7 @@
 .card--panel h3 {
     color: var(--charcoal);
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     margin: 0 0 var(--space-sm) 0;
 }
 
@@ -593,7 +593,7 @@
 
 .stat__value {
     font-size: var(--heading-2);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     line-height: 1;
     margin-bottom: var(--space-2xs);
     display: block;
@@ -601,7 +601,7 @@
 
 .stat__label {
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: var(--space-3xs);
@@ -723,6 +723,7 @@
 
     .card--sidebar {
         margin: 0 var(--space-xs);
+        overflow-wrap: break-word;
     }
 
     .module-grid {

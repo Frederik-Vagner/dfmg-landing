@@ -39,7 +39,7 @@
    disappears. The light themes keep the blue highlight. */
 [data-slide-theme="governance"] .slide .highlight {
     color: inherit;
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 /* Reset & Base (font-family, line-height inherited from body) */
@@ -53,7 +53,7 @@
 .sustainability-page .vertical-container,
 .sustainability-page .horizontal-container {
     position: relative;
-    z-index: 1;
+    z-index: var(--z-bg);
 }
 
 /* Horizontal Scrolling Container */
@@ -175,7 +175,7 @@
     display: flex;
     flex-direction: row;
     gap: var(--radius-md);
-    z-index: 1000;
+    z-index: var(--z-sticky);
     background: var(--overlay-white);
     padding: var(--radius-md) var(--space-md);
     border-radius: var(--radius-circle);
@@ -193,7 +193,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--radius-md);
-    z-index: 1000;
+    z-index: var(--z-sticky);
     background: var(--overlay-white);
     padding: var(--space-sm) var(--space-xs);
     border-radius: var(--radius-circle);
@@ -204,7 +204,7 @@
 .slide-dot {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     background: var(--charcoal-a30);
     cursor: pointer;
     transition: all var(--transition-normal);

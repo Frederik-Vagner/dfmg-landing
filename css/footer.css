@@ -19,7 +19,7 @@
 .link-footer {
     color: var(--white);
     text-decoration: none;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: var(--transition-fast);
@@ -139,7 +139,7 @@
 }
 
 /* Desktop enhancements */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .footer-main {
         flex-direction: row;
         align-items: flex-start;

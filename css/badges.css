@@ -12,7 +12,7 @@
     padding: var(--space-2xs) var(--space-sm);
     border-radius: var(--radius-circle);
     font-size: var(--text-xs);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: var(--space-sm);
@@ -27,7 +27,7 @@
     padding: var(--space-2xs) var(--space-sm);
     border-radius: var(--radius-circle);
     font-size: var(--text-xs);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     text-align: center;
 }
 
@@ -80,7 +80,7 @@
     height: 60px;
     background: var(--charcoal);
     color: var(--white);
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,7 +94,7 @@
     height: 25px;
     background: var(--cyan);
     color: var(--white);
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -8,8 +8,8 @@
  *       </div>
  *   </div>
  *   <div class="carousel-controls">
- *       <a class="btn--icon" data-carousel-prev>←</a>
- *       <a class="btn--icon" data-carousel-next>→</a>
+ *       <button type="button" class="btn--icon" data-carousel-prev aria-label="Forrige">←</button>
+ *       <button type="button" class="btn--icon" data-carousel-next aria-label="Næste">→</button>
  *   </div>
  *
  * The carousel auto-detects card width and gap from the rendered DOM.

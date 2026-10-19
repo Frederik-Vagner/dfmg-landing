@@ -24,7 +24,7 @@
     color: var(--white);
     padding: var(--space-sm) var(--space-md);
     text-align: left;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     font-size: var(--text-base);
 }
 
@@ -45,7 +45,7 @@
 .bc-table .bc-table__category td {
     background: var(--bg-surface);
     color: var(--charcoal);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     padding-top: var(--space-sm);
     padding-bottom: var(--space-xs);
     font-size: var(--text-sm);
@@ -81,7 +81,7 @@
 .comparison-table th {
     background: var(--charcoal);
     color: var(--white);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     position: sticky;
     top: 0;
 }
@@ -89,13 +89,13 @@
 .comparison-table th:first-child,
 .comparison-table td:first-child {
     text-align: left;
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     color: var(--charcoal);
 }
 
 .comparison-table .category-row td {
     background: var(--bg-surface);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
     font-size: var(--text-sm);
     text-transform: uppercase;
@@ -143,7 +143,7 @@
 }
 
 .pricing-name {
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
     flex: 1;
 }

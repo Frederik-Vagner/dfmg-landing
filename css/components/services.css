@@ -46,7 +46,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: 1;
+    z-index: var(--z-bg);
 }
 
 .service-overlay {
@@ -56,12 +56,12 @@
     width: 100%;
     height: 100%;
     background: var(--overlay-dark);
-    z-index: 2;
+    z-index: var(--z-overlay);
 }
 
 .service-content {
     position: relative;
-    z-index: 3;
+    z-index: var(--z-content);
     width: 100%;
     height: 100%;
     display: flex;
@@ -73,7 +73,7 @@
 
 .service-title {
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     color: var(--white);
     white-space: nowrap;
     transition: transform 0.4s ease;
@@ -97,7 +97,7 @@
     background: var(--white);
     color: var(--charcoal);
     padding: var(--space-4xl) var(--space-lg) var(--space-sm) var(--space-lg);
-    z-index: 4;
+    z-index: var(--z-expanded);
     overflow-y: auto;
     height: 100vh;
 }
@@ -174,14 +174,14 @@
 }
 
 .specialomrade-title {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 .benefits-title {
     margin-bottom: var(--space-sm);
     color: var(--charcoal);
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 .benefits-grid {
@@ -196,7 +196,7 @@
     font-size: var(--text-base);
     background: var(--bg-success-light);
     padding: var(--space-2xs);
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     width: 28px;
     height: 28px;
     display: flex;
@@ -208,7 +208,7 @@
 .benefits-text {
     font-size: var(--text-sm);
     color: var(--charcoal);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     line-height: 1.4;
 }
 
@@ -423,7 +423,7 @@
     .expanded-close-btn {
         position: sticky;
         top: 88px;
-        z-index: 5;
+        z-index: var(--z-expanded-close);
     }
 
     .expanded-image {

@@ -59,7 +59,7 @@ body {
 .photo-dot {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     background: var(--text-on-dark-subtle);
     cursor: pointer;
     /* rendered as <button> once wired up, so strip the default chrome */
@@ -73,7 +73,7 @@ body {
     background: var(--text-on-dark);
 }
 
-.service-content {
+.service-card__body {
     padding: var(--space-lg);
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@ body {
 
 .schedule-row:first-child {
     background: var(--bg-muted);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
 }
 
@@ -158,7 +158,7 @@ body {
     color: var(--success);
     font-size: var(--text-base);
     margin: 0;
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 .schedule-note iconify-icon {
@@ -193,13 +193,13 @@ body {
 }
 
 .photo-option__label {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     margin-bottom: var(--space-3xs);
     white-space: nowrap;
 }
 
 .photo-option--active .photo-option__label {
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 .photo-option__status {
@@ -232,7 +232,7 @@ body {
     color: var(--primary);
     font-size: var(--text-base);
     margin: 0;
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 .transparency-note iconify-icon {
@@ -261,7 +261,7 @@ body {
     background: var(--charcoal);
     color: var(--white);
     padding: var(--space-xs);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     font-size: var(--text-sm);
     text-align: center;
 }
@@ -276,7 +276,7 @@ body {
 .message span {
     display: inline-block;
     padding: var(--space-xs) var(--space-sm);
-    border-radius: 18px;
+    border-radius: var(--radius-lg);
     font-size: var(--text-sm);
     line-height: 1.4;
 }
@@ -383,13 +383,13 @@ body {
 
 /* ── Schedule mockup ── */
 .schedule-mock {
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     font-size: var(--text-xs);
 }
 
 .schedule-mock__month {
     text-align: center;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     font-size: var(--text-lg);
     margin-bottom: var(--space-sm);
     color: var(--charcoal);
@@ -401,11 +401,11 @@ body {
     grid-template-columns: 0.5fr 1.5fr 0.5fr 1.5fr 0.5fr 0.5fr 1.5fr;
     gap: 3px 0;
     text-align: center;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 .schedule-mock__weekday {
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     padding: var(--space-2xs);
 }
 
@@ -415,7 +415,7 @@ body {
 
 .schedule-mock__visit {
     color: var(--white);
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     padding: 3px 0;
     line-height: 1.2;
 }
@@ -434,7 +434,7 @@ body {
     flex: 0 0 70%;
     background: var(--mockup-surface);
     padding: var(--space-sm);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     border-left: 4px solid var(--charcoal);
 }
 
@@ -445,7 +445,7 @@ body {
 }
 
 .report-mock__sent {
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
 }
 
@@ -459,7 +459,7 @@ body {
     margin: var(--space-xs) 0;
     padding: var(--space-2xs);
     background: var(--white);
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
 }
 
 .report-mock__line {
@@ -474,7 +474,7 @@ body {
 .report-mock__attachments {
     background: var(--mockup-success-bg);
     padding: var(--space-2xs);
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
     margin-top: var(--space-xs);
     text-align: center;
 }
@@ -482,7 +482,7 @@ body {
 .report-mock__attachments-label {
     color: var(--success);
     font-size: var(--text-xs);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 /* ── Page layout (formerly utility classes) ── */

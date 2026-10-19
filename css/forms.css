@@ -49,7 +49,7 @@
 .platform-form label {
     display: block;
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     color: var(--charcoal);
     margin-bottom: var(--space-3xs);
 }
@@ -198,7 +198,7 @@
     border: var(--border-light);
     border-radius: var(--radius-normal);
     display: none;
-    z-index: 100;
+    z-index: var(--z-dropdown);
     box-sizing: border-box;
 }
 
@@ -237,7 +237,7 @@
 
 .dropdown-options label.selected {
     color: var(--success-text);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 .dropdown-options label.selected::after {
@@ -257,7 +257,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: var(--z-sticky);
     border-top: var(--border-light);
 }
 
@@ -349,7 +349,7 @@
 
 .newsletter-success {
     color: var(--success);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     padding: var(--space-xs) 0;
 }
 

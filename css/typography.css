@@ -8,13 +8,13 @@
 /* A section title is h2-sized; as the page's h1 it takes the h1 size. */
 .title {
     font-size: var(--heading-2);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     margin-bottom: var(--space-sm);
 }
 
 .subtitle {
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     letter-spacing: 1px;
     margin-bottom: var(--space-sm);
 }
@@ -33,7 +33,7 @@
 
 .highlight {
     color: var(--primary-text);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 /* Headings using a text style take its spacing, not the heading's */
@@ -58,28 +58,28 @@ h1.subtitle, h2.subtitle, h3.subtitle {
 /* Heading defaults */
 h1 {
     font-size: var(--heading-1);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 h2 {
     font-size: var(--heading-2);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 h3 {
     font-size: var(--text-2xl);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 h4 {
     font-size: var(--text-base);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 h5,
 h6 {
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 h1.title {
@@ -90,7 +90,7 @@ h1.title {
 .governance-number {
     color: var(--governance);
     font-size: var(--text-xs);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     margin-bottom: var(--space-2xs);
     text-transform: uppercase;
     letter-spacing: 1px;

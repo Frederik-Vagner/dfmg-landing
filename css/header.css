@@ -8,12 +8,12 @@
     position: fixed;
     top: var(--space-sm);
     left: var(--space-sm);
-    z-index: 10001;
+    z-index: var(--z-skip-link);
     padding: var(--space-xs) var(--space-md);
     background: var(--charcoal);
     color: var(--white);
     border-radius: var(--radius-sm);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     text-decoration: none;
     transform: translateY(-200%);
 }
@@ -32,7 +32,7 @@
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    z-index: 10000;
+    z-index: var(--z-header);
     padding: 0 var(--space-lg);
     background: transparent;
 }
@@ -54,7 +54,7 @@
     align-items: center;
     text-decoration: none;
     color: var(--white);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     font-size: var(--text-xl);
     background: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
@@ -68,7 +68,7 @@
 .header--platform .logo-suffix {
     /* Light blue: the brand blue is 2.5:1 on the navy logo pill. */
     color: var(--blue-300);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 /* --- Desktop Navigation --- */
@@ -149,7 +149,7 @@
     gap: 0;
     opacity: 0;
     visibility: hidden;
-    z-index: 99;
+    z-index: var(--z-dropdown);
     background: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
@@ -327,14 +327,14 @@
 .mobile-nav__label {
     color: var(--text-on-dark-subtle);
     font-size: var(--text-xs);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: var(--space-3xs) var(--space-xs);
 }
 
 .mobile-nav__highlight {
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     color: var(--white);
 }
 
@@ -344,7 +344,7 @@
 
 /* --- Responsive --- */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .nav {
         display: flex;
     }
@@ -363,7 +363,7 @@
 /* Between the point the desktop nav appears and roughly 860px the nav, the
    language switcher and the brand do not all fit on one line and the last
    item is pushed off the right edge. Tighten the spacing over that range. */
-@media (min-width: 768px) and (max-width: 860px) {
+@media (min-width: 769px) and (max-width: 860px) {
     .nav {
         padding-left: var(--space-xs);
     }
@@ -398,7 +398,7 @@
     gap: var(--space-xs);
 }
 
-@media (min-width: 768px) and (max-width: 860px) {
+@media (min-width: 769px) and (max-width: 860px) {
     .nav {
         gap: var(--space-2xs);
     }

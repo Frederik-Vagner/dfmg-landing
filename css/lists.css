@@ -28,7 +28,7 @@
     padding: var(--space-2xs) 0;
     color: var(--charcoal);
     font-size: var(--text-base);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 /* Items that start with an icon: icon column + text column. (A checklist of

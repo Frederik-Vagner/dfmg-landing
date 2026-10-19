@@ -40,7 +40,7 @@
     margin: var(--space-sm) 0;
     background: white;
     box-shadow: 0 2px 10px var(--black-a10);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     overflow: hidden;
 }
 .cookie-table th {

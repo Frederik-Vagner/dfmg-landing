@@ -18,7 +18,7 @@
 .calculator-page {
     color: var(--charcoal);
     background: var(--white);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     overflow: hidden;
     height: 100vh;
 }
@@ -248,7 +248,7 @@
 }
 
 .price-line__emphasis {
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 .calc-summary__cta {

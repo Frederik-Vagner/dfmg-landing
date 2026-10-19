@@ -85,14 +85,11 @@
     --icon-on-dark: rgba(255, 255, 255, 0.5);
     --border-on-dark: rgba(255, 255, 255, 0.2);
     --border-subtle: rgba(0, 0, 0, 0.08);
-    --placeholder-tint: rgb(16 15 15 / 10%);
 
     /* App mockups (the schedule and report drawn on the cleaning page) */
     --mockup-surface: #f8f9fa;
     --mockup-text: #666666;
     --mockup-success-bg: #e8f5e8;
-    --mockup-photo: #dddddd;
-    --mockup-photo-border: #cccccc;
 
     /* Logo swatches (internal showcase page) */
     --swatch-navy: #2c3e50;
@@ -134,8 +131,8 @@
     --heading-1: clamp(2rem, 1.4rem + 2.5vw, 2.5rem);   /* 32-40px  h1, page and hero titles */
     --font-weight-light: 200;
     --font-weight-normal: 400;
-    --font-weight-semibold: 500;
-    --font-weight-medium: 600;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
     /* Layout & Spacing */
@@ -166,12 +163,14 @@
     --chat-clearance: 60px;                        /* room above the fixed chat bubble */
 
     /* Border Radius */
+    --radius-xs: 4px;
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-normal: 20px;
     --radius-xl: 24px;
-    --radius-circle: 50px;
+    --radius-circle: 50px;   /* pill ends */
+    --radius-round: 50%;     /* circles */
 
     /* Shadows */
     --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -242,7 +241,6 @@
     --red-300: #fca5a5;
     --red-700: #b91c1c;
     --white-a03: rgba(255, 255, 255, 0.03);
-    --white-a05: rgba(255, 255, 255, 0.05);
     --white-a08: rgba(255, 255, 255, 0.08);
     --white-a12: rgba(255, 255, 255, 0.12);
     --white-a15: rgba(255, 255, 255, 0.15);
@@ -261,6 +259,36 @@
     --blue-500-a10: rgba(59, 130, 246, 0.1);
     --cyan-500-a10: rgba(6, 182, 212, 0.1);
     --governance-a10: rgba(139, 92, 246, 0.1);
+
+    /* Breakpoints. Media queries cannot read custom properties, so these are
+       the values to type, and tools/check-css.js refuses any other:
+         768px   phone: (max-width: 768px); the next layout starts at 769px
+                 (min-width: 769px), so no width gets both. Also in
+                 js/sustainability-slider.js.
+         860px   narrow desktop header (769px-860px)
+         1024px  tablet
+         1100px  four-up step and card rows become two by two
+         1200px  three-up job and slide rows become two-up
+         1440px  widest slide content steps down */
+
+    /* Stacking order. One list, lowest first, so a new layer is placed by
+       name instead of by guessing a number.
+       Inside a component (they only compete within it): */
+    --z-bg: 1;              /* background photo or slab */
+    --z-overlay: 2;         /* tint or gradient over it */
+    --z-content: 3;         /* text and buttons above both */
+    --z-expanded: 4;        /* opened panel in the services photo strip */
+    --z-expanded-close: 5;  /* its close button */
+    /* Across the page: */
+    --z-dropdown: 100;      /* nav dropdowns, the kontakt service picker */
+    --z-chat-preview: 900;  /* the chat teaser bubble, under the chat itself */
+    --z-sticky: 1000;       /* sticky filter bar, slide navigation */
+    --z-chat: 1000;         /* support widget (ties with sticky; it comes later in the page) */
+    --z-floater: 9000;      /* floating "Pris Beregner" button */
+    --z-header: 10000;      /* the fixed header and its mobile menu */
+    --z-toast: 10050;       /* notifications: they appear top right, where the
+                               header is, so they must sit above it */
+    --z-skip-link: 10100;   /* above everything while focused */
 
     /* Transitions */
     --transition-fast: 0.2s ease;
