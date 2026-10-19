@@ -25,6 +25,18 @@
   to = "/pages/facility/indblik/indblik.html"
   status = 301
 
+# The Adnami case page was removed (unstyled, stock photos, unbacked claims);
+# send old links to the Indblik overview until a real case replaces it.
+[[redirects]]
+  from = "/pages/facility/indblik/cases/adnami"
+  to = "/pages/facility/indblik/indblik.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/facility/indblik/cases/adnami.html"
+  to = "/pages/facility/indblik/indblik.html"
+  status = 301
+
 # Erhvervsrengøring moved off the non-ASCII filename; keep the old URLs working.
 [[redirects]]
   from = "/pages/facility/services/rengøring.html"

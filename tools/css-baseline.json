@@ -5,24 +5,10 @@
     "slide-2-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
     "slide-3-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
     "slide-4-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
-    "slide-5-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
-    "client-link__meta": "Used only by pages/facility/indblik/cases/_case-template.html, which is not built (leading underscore).",
-    "client-logo": "Used only by pages/facility/indblik/cases/_case-template.html, which is not built (leading underscore)."
+    "slide-5-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it."
   },
   "known": {
-    "undefined": [
-      "case-hero",
-      "case-sidebar",
-      "gallery-item",
-      "photo-gallery",
-      "quote-section",
-      "stats-grid",
-      "timeline",
-      "timeline-date",
-      "timeline-item",
-      "typing-dots",
-      "typing-indicator"
-    ],
+    "undefined": [],
     "unused": []
   },
   "counts": {
@@ -33,9 +19,9 @@
     "spacingLiterals": 0,
     "zIndexLiterals": 0,
     "fontWeightLiterals": 0,
-    "radiusLiterals": 1,
+    "radiusLiterals": 0,
     "lineHeightLiterals": 38,
-    "letterSpacingLiterals": 18,
+    "letterSpacingLiterals": 16,
     "transitionAll": 20,
     "undocumentedBreakpoints": 0,
     "selectorsInTwoFiles": 0

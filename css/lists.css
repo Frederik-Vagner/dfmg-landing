@@ -54,7 +54,6 @@
 
 .checklist--success > li > iconify-icon:first-child { color: var(--success); }
 .checklist--red > li > iconify-icon:first-child { color: var(--red); }
-.checklist--primary > li > iconify-icon:first-child { color: var(--primary); }
 
 /* ── Checkmark List (job benefits / partner comparison) ── */
 .job-benefits {

@@ -91,12 +91,6 @@
     --mockup-text: #666666;
     --mockup-success-bg: #e8f5e8;
 
-    /* Logo swatches (internal showcase page) */
-    --swatch-navy: #2c3e50;
-    --swatch-taupe: #7a6a58;
-    --swatch-light: #f0f4f8;
-    --swatch-border: #e0e0e0;
-
     /* Background Gradients */
     --bg-gradient-primary: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
     --bg-gradient-success: linear-gradient(135deg, var(--success), #16a34a, #15803d);

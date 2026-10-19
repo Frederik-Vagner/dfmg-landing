@@ -77,10 +77,6 @@
     margin-bottom: var(--space-2xl);
 }
 
-.case-content {
-    padding: var(--space-md);
-}
-
 
 
 
@@ -320,8 +316,6 @@ color: var(--white);
     flex-direction: column;
     gap: var(--space-lg);
 }
-
-.sidebar-section { margin-bottom: var(--space-md); }
 
 /* Related Articles */
 .related-article {

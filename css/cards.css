@@ -568,20 +568,6 @@
     display: block;
 }
 
-.stat__label {
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight-medium);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: var(--space-3xs);
-}
-
-.stat__description {
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight-light);
-    opacity: 0.8;
-}
-
 /* ── Price Display ── */
 .price-tag {
     text-align: center;

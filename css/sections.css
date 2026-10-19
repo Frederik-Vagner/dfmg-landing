@@ -362,21 +362,6 @@
 }
 
 /* ── Logos ── */
-.client-logo {
-    height: 40px;
-    max-width: 120px;
-    object-fit: contain;
-    opacity: 0.7;
-    transition: opacity var(--transition-normal);
-    filter: grayscale(100%);
-}
-
-.company-logo {
-    height: 50px;
-    max-width: 150px;
-    object-fit: contain;
-    color: unset;
-}
 
 /* ── Career Content ── */
 .career-content {
