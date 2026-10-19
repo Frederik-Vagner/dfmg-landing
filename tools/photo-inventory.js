@@ -20,6 +20,9 @@
 // The markers are for this tool only, so it removes them from the public
 // pages once it has read them.
 //
+// Briefs and stock-photo candidates can be added per slot id in
+// tools/photo-candidates.json; candidates can be tried in the live preview.
+//
 // Writes:
 //   _site/internal/photos/index.html    the overview, grouped by side and page
 //   _site/internal/photos/shotlist.csv  missing and stand-in slots, for a
@@ -184,6 +187,18 @@ function csvCell(s) {
     return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
 }
 
+// Pexels serves any width on request; ask for what each use needs.
+const sized = (u, w) => /^https:\/\/images\.pexels\.com\//.test(u) ? u + (u.includes("?") ? "&" : "?") + "auto=compress&cs=tinysrgb&w=" + w : u;
+
+function candidates(s) {
+    if (!s.candidates || !s.candidates.length) return "";
+    const items = s.candidates.map((c, i) => {
+        const letter = String.fromCharCode(65 + i);
+        return `<li><button type="button" class="cand" data-try="${esc(sized(c.image, 1600))}" data-try-label="${esc("Option " + letter + ": " + c.title)}" aria-label="Try option ${letter} on the page: ${esc(c.title)}"><img src="${esc(sized(c.image, 320))}" alt="" loading="lazy"><span>${letter}</span></button><a href="${esc(c.page)}" target="_blank" rel="noopener">Source</a></li>`;
+    }).join("");
+    return `<div class="cands"><p class="cands__label">Candidates · click one to try it on the page</p><ul>${items}</ul></div>`;
+}
+
 const STATUS = {
     missing: { label: "Missing", order: 0 },
     "stand-in": { label: "Stand-in", order: 1 },
@@ -209,7 +224,7 @@ function card(s) {
 </div>
 <div class="card__body">
 <div class="card__head"><h3>${esc(title)}</h3><span class="pill pill--${st}">${STATUS[st].label}</span></div>
-${sub ? `<p class="card__sub">${esc(sub)}</p>` : ""}${s.snippet ? `<p class="card__snippet">${esc(s.snippet)}</p>` : ""}${brief}
+${sub ? `<p class="card__sub">${esc(sub)}</p>` : ""}${s.snippet ? `<p class="card__snippet">${esc(s.snippet)}</p>` : ""}${brief}${candidates(s)}
 <div class="card__foot"><code>${esc(s.id)}</code>${s.langs.length > 1 ? `<span class="tag tag--lang">${s.langs.join(" + ")}</span>` : ""}<a href="${esc(link)}" target="_blank" rel="noopener">Open on page</a></div>
 </div>
 </article>`;
@@ -315,6 +330,16 @@ button:focus-visible,a:focus-visible,.search:focus-visible{outline:3px solid #42
 .viewer__bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);background:#fff}
 .viewer__bar h2{margin:0;font-size:16px;flex:1;min-width:200px}
 .viewer__link{font-weight:600;font-size:14px}
+.viewer__try{font-size:13px;font-weight:600;color:var(--stand);background:var(--stand-bg);padding:6px 10px;border-radius:8px}
+.cands{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.cands__label{font-size:12px;font-weight:600;color:var(--faint)}
+.cands ul{list-style:none;margin:0;padding:0;display:flex;gap:10px;flex-wrap:wrap}
+.cands li{display:flex;flex-direction:column;gap:2px;align-items:center;font-size:12px}
+.cands a{padding:2px 4px}
+.cand{position:relative;width:88px;height:66px;padding:0;border:2px solid var(--line);border-radius:8px;overflow:hidden;cursor:pointer;background:#f1f5f9}
+.cand:hover{border-color:var(--blue)}
+.cand img{width:100%;height:100%;object-fit:cover;display:block}
+.cand span{position:absolute;left:4px;top:4px;background:rgba(27,36,51,.85);color:#fff;font-size:11px;font-weight:700;border-radius:4px;padding:1px 5px}
 .viewer__close{width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
 .viewer__stage{flex:1;background:#e9edf3;display:flex;justify-content:center;min-height:0}
 .viewer__stage iframe{border:0;width:100%;height:100%;background:#fff}
@@ -365,6 +390,7 @@ ${sections}
 <dialog class="viewer" aria-label="Page preview">
 <div class="viewer__bar">
 <h2 class="viewer__title"></h2>
+<span class="viewer__try" hidden></span>
 <div class="seg" role="group" aria-label="Device">
 <button type="button" data-device="desktop" aria-pressed="true">Desktop</button>
 <button type="button" data-device="phone" aria-pressed="false">Phone</button>
@@ -443,6 +469,27 @@ ${sections}
                     target.innerHTML = "Photo goes here<small></small>";
                     target.querySelector("small").textContent = slot;
                     el.parentNode.insertBefore(target, el);
+                }
+            }
+            // Trying a candidate: put it where the slot's photo goes.
+            var tryUrl = frame.dataset.try;
+            if (tryUrl) {
+                if (el.tagName === "IMG") {
+                    el.removeAttribute("srcset");
+                    if (el.src !== tryUrl) el.src = tryUrl;
+                } else if (el.tagName === "TEMPLATE") {
+                    if (!target.querySelector("img")) {
+                        target.textContent = "";
+                        target.style.border = "0";
+                        target.style.background = "none";
+                        var img = doc.createElement("img");
+                        img.src = tryUrl;
+                        img.style.cssText = "width:100%;height:100%;object-fit:cover;display:block;border-radius:12px";
+                        target.appendChild(img);
+                    }
+                } else {
+                    el.style.setProperty("background", 'center / cover no-repeat url("' + tryUrl + '")', "important");
+                    [].forEach.call(el.children, function (c) { c.style.visibility = "hidden"; });
                 }
             }
             // A carousel photo that isn't showing: switch to it with its dot.
@@ -564,18 +611,25 @@ ${sections}
         whenLoaded(big, current.dataset.slot, current.dataset.status, function () {});
         big.src = current.dataset.view;
     }
-    function openViewer(preview) {
+    function openViewer(preview, tryUrl, tryLabel) {
         current = preview;
+        big.dataset.try = tryUrl || "";
+        var tag = viewer.querySelector(".viewer__try");
+        tag.hidden = !tryUrl;
+        tag.textContent = tryUrl ? "Trying " + tryLabel : "";
         viewer.querySelector(".viewer__title").textContent = current.dataset.title;
         viewer.querySelector(".viewer__link").href = current.dataset.live;
         if (!viewer.open) viewer.showModal();
         load();
-        // A link to this exact slot, to send to someone: #slot=<id>
-        history.replaceState(null, "", "#slot=" + encodeURIComponent(current.dataset.slot));
+        // A link to this exact slot (and candidate), to send to someone:
+        // #slot=<id> or #slot=<id>&try=B
+        history.replaceState(null, "", "#slot=" + encodeURIComponent(current.dataset.slot) + (tryUrl ? "&try=" + tryLabel.charAt(7) : ""));
     }
     document.addEventListener("click", function (e) {
         var open = e.target.closest(".preview__open");
         if (open) openViewer(open.closest(".preview"));
+        var candidate = e.target.closest(".cand");
+        if (candidate) openViewer(candidate.closest(".card").querySelector(".preview"), candidate.dataset.try, candidate.dataset.tryLabel);
         var device = e.target.closest("[data-device]");
         if (device && current) {
             stage.classList.toggle("is-phone", device.dataset.device === "phone");
@@ -588,10 +642,12 @@ ${sections}
         big.src = "about:blank";
         history.replaceState(null, "", location.pathname + location.search);
     });
-    var linked = /^#slot=(.+)$/.exec(location.hash);
+    var linked = /^#slot=([^&]+)(?:&try=([A-Z]))?$/.exec(location.hash);
     if (linked) {
         var target = document.querySelector('.preview[data-slot="' + CSS.escape(decodeURIComponent(linked[1])) + '"]');
-        if (target) openViewer(target);
+        var option = target && linked[2] && target.closest(".card").querySelectorAll(".cand")[linked[2].charCodeAt(0) - 65];
+        if (option) openViewer(target, option.dataset.try, option.dataset.tryLabel);
+        else if (target) openViewer(target);
     }
 })();
 </script>
@@ -621,13 +677,27 @@ function main() {
     for (const file of pages) strip(file);
 
     const list = [...slots.values()];
+
+    // Briefs and stock candidates kept by hand in tools/photo-candidates.json.
+    const candFile = path.join(__dirname, "photo-candidates.json");
+    const extra = fs.existsSync(candFile) ? JSON.parse(read(candFile)) : {};
+    for (const [id, c] of Object.entries(extra)) {
+        if (id.startsWith("_")) continue;
+        const s = list.find((s) => s.id === id);
+        if (!s) {
+            console.warn(`photo-inventory: photo-candidates.json names "${id}", which is no slot on the site`);
+            continue;
+        }
+        if (c.brief) s.brief = c.brief;
+        s.candidates = c.candidates || [];
+    }
     const built = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
     fs.mkdirSync(OUT, { recursive: true });
     fs.writeFileSync(path.join(OUT, "index.html"), page(list, built));
 
-    const rows = [["id", "status", "side", "page", "section", "brief", "languages", "current image"]];
+    const rows = [["id", "status", "side", "page", "section", "brief", "languages", "current image", "candidates"]];
     for (const s of list.filter((s) => s.status !== "real")) {
-        rows.push([s.id, s.status, s.side, s.pageUrl, s.articleTitle || s.section, s.brief, s.langs.join("+"), s.src]);
+        rows.push([s.id, s.status, s.side, s.pageUrl, s.articleTitle || s.section, s.brief, s.langs.join("+"), s.src, (s.candidates || []).map((c) => c.page).join(" ")]);
     }
     fs.writeFileSync(path.join(OUT, "shotlist.csv"), rows.map((r) => r.map(csvCell).join(",")).join("\n") + "\n");
 

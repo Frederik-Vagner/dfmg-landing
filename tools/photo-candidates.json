@@ -1,0 +1,26 @@
+{
+    "_about": "Briefs and stock-photo candidates per photo slot, shown on /internal/photos/ by tools/photo-inventory.js. Keys are slot ids from that page. Pexels license: free for commercial use, no attribution needed, no implied endorsement by people shown (https://www.pexels.com/license/).",
+    "artikel-fra-vip-til-glemt-kunde": {
+        "brief": "An office where the service has quietly slipped: a bin nobody emptied, crumpled paper on the floor, mugs left standing. No recognisable faces (the Pexels license rules out showing people in a bad light).",
+        "candidates": [
+            { "title": "Crumpled papers around an office bin", "page": "https://www.pexels.com/photo/crumpled-papers-inside-the-trash-bin-at-the-office-6913195/", "image": "https://images.pexels.com/photos/6913195/pexels-photo-6913195.jpeg" },
+            { "title": "Mugs left on a windowsill", "page": "https://www.pexels.com/photo/mugs-on-a-countertop-10658579/", "image": "https://images.pexels.com/photos/10658579/pexels-photo-10658579.jpeg" },
+            { "title": "Office bin full of crumpled paper, from above", "page": "https://www.pexels.com/photo/close-up-shot-of-paper-trashes-on-a-trash-can-6913203/", "image": "https://images.pexels.com/photos/6913203/pexels-photo-6913203.jpeg" }
+        ]
+    },
+    "artikel-fra-kaos-til-kontrol-dfmg-erp-system-historie": {
+        "brief": "The 'before' picture: a desk buried in paper notes, sticky notes and crumpled drafts. No faces and no software screens, so it isn't mistaken for the DFMG system.",
+        "candidates": [
+            { "title": "Messy desk with crumpled paper, from above", "page": "https://www.pexels.com/photo/top-view-of-a-messy-desk-with-scrunched-pieces-of-paper-8386521/", "image": "https://images.pexels.com/photos/8386521/pexels-photo-8386521.jpeg" },
+            { "title": "Laptop surrounded by sticky notes and crumpled paper", "page": "https://www.pexels.com/photo/laptop-and-crumpled-papers-on-a-table-8386518/", "image": "https://images.pexels.com/photos/8386518/pexels-photo-8386518.jpeg" }
+        ]
+    },
+    "artikel-saadan-laeser-i-facility-tidsrapport": {
+        "brief": "Someone working through a printed time report: hands, a calculator, figures on paper. Not another person-with-a-tablet shot; the fallback photo already is one.",
+        "candidates": [
+            { "title": "Hands with a calculator and a printed report", "page": "https://www.pexels.com/photo/calculator-near-documents-6801682/", "image": "https://images.pexels.com/photos/6801682/pexels-photo-6801682.jpeg" },
+            { "title": "Calculator over a stack of time sheets and receipts", "page": "https://www.pexels.com/photo/a-close-up-shot-of-a-person-using-a-calculator-7680748/", "image": "https://images.pexels.com/photos/7680748/pexels-photo-7680748.jpeg" },
+            { "title": "Writing figures down next to a calculator", "page": "https://www.pexels.com/photo/bookkeeper-writing-down-on-paper-while-using-calculator-4476375/", "image": "https://images.pexels.com/photos/4476375/pexels-photo-4476375.jpeg" }
+        ]
+    }
+}
