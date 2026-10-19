@@ -1,5 +1,5 @@
 /* ====================================
-   LAYOUT — three layout components
+   LAYOUT — five layout components
    Most sections only need one of these, so they no longer get a class of
    their own just to say "flex, gap, stack on phones". The section class keeps
    whatever is really its own (background, spacing, borders).
@@ -8,9 +8,12 @@
    .grid     equal columns: .grid--2 / --3 / --4; fewer columns on
              tablets, one column on phones
    .cluster  a wrapping row of buttons, tags or steps
+   .stack    blocks one under the other with a fixed space between them
+   .media    a fixed item (icon, time, price) beside text that takes the rest
 
    Gap modifiers: --tight (space-sm), --loose (space-lg, rows: space-xl),
-   --wide (rows: space-2xl). No other spacing lives here.
+   --wide (space-2xl). No other spacing lives here: a block that needs space
+   from the next one goes in a .stack instead of getting a margin class.
    ==================================== */
 
 @layer components {
@@ -57,6 +60,39 @@
 .cluster--center { justify-content: center; }
 .cluster--loose { gap: var(--space-lg); }
 
+/* Five cells: three on top, two centred under them */
+.grid--3-over-2 {
+    --grid-cols: 6;
+    grid-auto-rows: 1fr;
+}
+
+.grid--3-over-2 > * {
+    grid-column: span 2;
+}
+
+.grid--3-over-2 > :nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+/* --- Stack ---
+   Space goes on the top of every child but the first. It is a margin, so it
+   merges with a child's own bottom margin (a .lead, a .section-intro) instead
+   of adding to it. */
+.stack > * + * {
+    margin-top: var(--stack-gap, var(--layout-gap));
+}
+
+.stack--loose { --stack-gap: var(--space-lg); }
+.stack--wide { --stack-gap: var(--space-2xl); }
+
+/* --- Media --- */
+.media {
+    display: flex;
+    gap: var(--layout-gap);
+}
+
+.media--center { align-items: center; }
+
 /* --- Smaller screens --- */
 @media (max-width: 1100px) {
     .grid--4 { --grid-cols: 2; }
@@ -64,6 +100,12 @@
 
 @media (max-width: 1024px) {
     .grid--3 { --grid-cols: 2; }
+}
+
+/* Cells that need about 320px (a long Danish job title): three columns only
+   fit from 1200px. After the --3 rule above, so it wins between 1025 and 1200. */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid--roomy { --grid-cols: 2; }
 }
 
 @media (max-width: 768px) {
@@ -78,6 +120,20 @@
 
     .grid {
         --grid-cols: 1;
+    }
+
+    .grid--3-over-2 {
+        grid-auto-rows: auto;
+    }
+
+    .grid--3-over-2 > *,
+    .grid--3-over-2 > :nth-child(4) {
+        grid-column: auto;
+    }
+
+    /* Too narrow for the fixed item beside the text: the text wraps under it. */
+    .media--wrap {
+        flex-wrap: wrap;
     }
 }
 

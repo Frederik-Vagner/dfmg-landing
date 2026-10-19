@@ -135,6 +135,11 @@
     z-index: var(--z-overlay);
 }
 
+/* Keeps the text on the light side of a diagonal background. */
+.hero-content--narrow {
+    max-width: 640px;
+}
+
 /* ── Hero Grid Layout ── */
 .hero-grid {
     background: linear-gradient(135deg, var(--bg-surface) 0%, var(--white) 100%);
@@ -352,6 +357,21 @@
     transition: transform 0.4s ease;
     width: max-content;
     gap: var(--space-md);
+}
+
+/* Cards in a carousel need a width of their own: the track is max-content,
+   so without one each card grew to its paragraph on one line (~1,200px on a
+   desktop) and the text ran out of the frame. Same sizing as the overlay
+   cards, capped to the screen on a phone. */
+.carousel-track > .card--hover-line {
+    width: 360px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-track > .card--hover-line {
+        width: min(360px, calc(100vw - 40px));
+    }
 }
 
 .carousel-controls {

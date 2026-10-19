@@ -4,19 +4,17 @@ title: "DFMG - Piccoline Service"
 description: "Jeres kontor's usynlige hjælper. Piccoline service til erhverv."
 scripts:
   - /js/tab-switcher.js
-pageCss:
-  - picoline
 ---
 
 <!-- Hero Section -->
 <section class="first hero-layout hero-layout--plain">
-    <div class="container">
+    <div class="container stack stack--wide">
         <div class="page-intro">
             <div class="badge">Piccoline Service</div>
             <h1 class="title">Jeres Kontor's Usynlige Hjælper</h1>
             <p class="lead">En piccoline er kontorets øjne, ører og arme - den person der sørger for at alt fungerer perfekt, så jeres medarbejdere kan fokusere på det de er bedst til.</p>
         </div>
-        <div class="grid grid--4 picoline-hero__tiles">
+        <div class="grid grid--4">
             <div class="card icon-tile icon-tile--large">
                 <iconify-icon icon="fluent:clock-20-filled" inline class="icon-tile__icon"></iconify-icon>
                 <h3>Møder først</h3>
@@ -77,27 +75,27 @@ pageCss:
                 <div class="card card--soft card--center">
                     <h3>En Typisk Piccoline Dag</h3>
                     <div>
-                        <div class="card card--soft card--compact day-item">
+                        <div class="card card--soft card--compact media media--center">
                             <div class="badge-inline badge-inline--success">07:30</div>
                             <strong>Ankommer og tænder lys & kaffe</strong>
                         </div>
-                        <div class="card card--soft card--compact day-item">
+                        <div class="card card--soft card--compact media media--center">
                             <div class="badge-inline badge-inline--success">08:00</div>
                             <strong>Tjekker temperatur og faciliteter</strong>
                         </div>
-                        <div class="card card--soft card--compact day-item">
+                        <div class="card card--soft card--compact media media--center">
                             <div class="badge-inline badge-inline--success">09:00</div>
                             <strong>Rengøring af køkken og toilet</strong>
                         </div>
-                        <div class="card card--soft card--compact day-item">
+                        <div class="card card--soft card--compact media media--center">
                             <div class="badge-inline badge-inline--success">12:00</div>
                             <strong>Klargør frokost og fællesområder</strong>
                         </div>
-                        <div class="card card--soft card--compact day-item">
+                        <div class="card card--soft card--compact media media--center">
                             <div class="badge-inline badge-inline--success">13:00</div>
                             <strong>Oprydning efter frokost</strong>
                         </div>
-                        <div class="card card--soft card--compact day-item">
+                        <div class="card card--soft card--compact media media--center">
                             <div class="badge-inline badge-inline--success">14:00</div>
                             <strong>Ad hoc opgaver og vedligeholdelse</strong>
                         </div>
@@ -295,8 +293,8 @@ pageCss:
 
 <!-- Ad Hoc Explanation Section -->
 <section class="section" id="adhoc-explanation">
-    <div class="container">
-        <div class="card card--soft card--center card--accent-top card--accent-success adhoc-intro">
+    <div class="container stack stack--wide">
+        <div class="card card--soft card--center card--accent-top card--accent-success">
             <div class="badge">AD HOC OPGAVER</div>
             <h3 class="title">Hvad Er Ad Hoc Opgager?</h3>
             <p class="lead">Ad hoc opgaver er de opgaver som du snubler over, når du egentlig står og laver noget helt andet. Det er den type opgaver, som ikke kan blive skemalagt på samme måde som de øvrige faste opgaver, da det ikke vil være nødvendigt at udføre dem hver dag, men som oftest bliver gjort efter behov.</p>
@@ -345,17 +343,17 @@ pageCss:
 <!-- Why Choose Piccoline Section -->
 <section class="section section--charcoal" id="benefits">
     <div class="container">
-        <div>
+        <div class="stack stack--wide">
             <div class="section-intro">
                 <div class="subtitle section-intro__eyebrow">HVORFOR VÆLGE PICCOLINE?</div>
                 <h2 class="title section-intro__title section-intro__title--on-dark">Forskellen En Piccoline Gør</h2>
                 <div class="body section-intro__text section-intro__text--on-dark">Se hvordan en dedikeret piccoline transformerer jeres kontor fra en arbejdsplads til et velfungerende miljø</div>
             </div>
 
-            <div class="row row--wide comparison-pair">
-                <div class="card card--glass comparison-pair__card">
-                    <div class="comparison-pair__header">
-                        <div class="icon-circle icon-circle--negative">
+            <div class="row row--wide">
+                <div class="card card--glass">
+                    <div class="card__header">
+                        <div class="icon-circle icon-circle--danger">
                             <iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon>
                         </div>
                         <h3>Uden Piccoline</h3>
@@ -388,9 +386,9 @@ pageCss:
                     </ul>
                 </div>
 
-                <div class="card card--glass comparison-pair__card">
-                    <div class="comparison-pair__header comparison-pair__header--spaced">
-                        <div class="icon-circle icon-circle--positive">
+                <div class="card card--glass">
+                    <div class="card__header">
+                        <div class="icon-circle icon-circle--success">
                             <iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>
                         </div>
                         <h3>Med DFMG Piccoline</h3>
@@ -438,7 +436,7 @@ pageCss:
 
         <div class="row">
             <div class="card">
-                <div class="testimonial-card__quote">
+                <div class="quote">
                     "Vores DFMG piccoline har virkelig ændret hverdagen på kontoret. Nu kan vi fokusere på vores kerneopgaver, mens hun sørger for at alt det praktiske bare fungerer. Kaffen er klar når vi kommer, frokosten kører gnidningsløst, og vi behøver aldrig bekymre os om de små ting der ellers kan forstyrre arbejdsdagen."
                 </div>
                 {# Arkivfoto fjernet: det forestillede ikke den citerede person.
@@ -447,7 +445,7 @@ pageCss:
                 <div class="card card--horizontal">
                     <div>
                         <h5>Kontorchef</h5>
-                        <span class="testimonial-card__role">Facility Officer, SOHO</span>
+                        <span class="caption">Facility Officer, SOHO</span>
                     </div>
                 </div>
             </div>

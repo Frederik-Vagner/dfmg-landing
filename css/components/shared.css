@@ -18,6 +18,11 @@
     margin-bottom: var(--space-lg);
 }
 
+/* Left-aligned, for the intro of a panel inside a card */
+.section-intro--start {
+    text-align: left;
+}
+
 .section-intro__eyebrow {
     color: var(--success-text);
 }
@@ -29,6 +34,11 @@
 /* On the dark sections the light brand colours are the readable ones. */
 .section--charcoal .section-intro__eyebrow {
     color: var(--success);
+}
+
+/* On a blue card the green eyebrow is unreadable. */
+.card--primary .section-intro__eyebrow {
+    color: var(--white);
 }
 
 .section-intro__title {
@@ -65,6 +75,33 @@ color: var(--white);
 
 .page-intro__text--tight {
     margin-bottom: var(--space-lg);
+}
+
+/* Running text read as a document (the policy pages): a comfortable line
+   length and the site's heading and body colours. A heading starts a new part,
+   so it gets room above as well as below (the base spacing only puts
+   --space-text below). */
+.prose {
+    max-width: 760px;
+    color: var(--gray);
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+    color: var(--charcoal);
+}
+
+.prose h2 {
+    margin-top: var(--space-lg);
+}
+
+.prose h3 {
+    margin-top: var(--space-md);
+}
+
+.prose > div {
+    margin-bottom: var(--space-text);
 }
 
 .cover-image {
@@ -197,6 +234,16 @@ color: var(--white);
 
 .icon-circle--primary {
     background: var(--bg-gradient-primary);
+    color: var(--white);
+}
+
+.icon-circle--success {
+    background: var(--bg-gradient-success);
+    color: var(--white);
+}
+
+.icon-circle--danger {
+    background: var(--bg-gradient-red);
     color: var(--white);
 }
 

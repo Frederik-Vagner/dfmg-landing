@@ -59,6 +59,12 @@
     font-size: var(--text-xs);
 }
 
+/* A category label: capitals, spaced out */
+.badge-inline--caps {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* Overlay badge — positioned over images */
 .badge-overlay {
     position: absolute;

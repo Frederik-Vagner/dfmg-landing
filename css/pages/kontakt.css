@@ -4,27 +4,8 @@
 
 @layer pages {
 
-/* The kontakt FAQ's look. These values used to reach it by accident, from the
-   support widget's unscoped .faq-item/.faq-question rules (chatbot.css loads
-   last on every facility page); now they are stated here. */
-.kontakt-faq__list .faq-item {
-    margin-bottom: var(--space-xs);
-    border: var(--border-lighter);
-    background: var(--white);
-}
-
-.kontakt-faq__list .faq-question {
-    background: var(--bg-surface);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--text-sm);
-    transition: background var(--transition-normal);
-}
-
-.kontakt-faq__list .faq-question.active {
-    background: var(--white);
-}
-
-/* "Kontakt os" and the other job buttons under the open positions. */
+/* The partnership column mirrors the career column beside it: text and the
+   list's ticks on the right. */
 
 /* generated:start */
 

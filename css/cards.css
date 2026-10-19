@@ -63,6 +63,41 @@
     border: 1px solid var(--border-on-dark);
 }
 
+/* Coloured cards: the brand gradient with white text */
+.card--primary {
+    background: var(--bg-gradient-primary);
+    color: var(--white);
+}
+
+.card--success {
+    background: var(--bg-gradient-success);
+    color: var(--white);
+}
+
+/* A centred header (icon and title) above the card's content */
+.card__header {
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+/* The card's last part, at its bottom: buttons in cards side by side line up
+   however much text is above them. The card becomes a column for this, and a
+   badge keeps its own width instead of stretching across. */
+.card:has(> .card__footer) {
+    display: flex;
+    flex-direction: column;
+}
+
+.card:has(> .card__footer) > .badge {
+    align-self: flex-start;
+}
+
+.card__footer {
+    margin-top: auto;
+    padding-top: var(--space-lg);
+    text-align: center;
+}
+
 /* Card layout modifiers */
 /* Icon beside text in a row: a layout, not a boxed card, so no padding or
    background of its own. */
@@ -90,7 +125,10 @@
 
 /* On a dark or coloured card the text keeps the card's own light colour. */
 .card--glass,
-.card--glass p {
+.card--glass p,
+.card--glass .checklist > li,
+.card--primary p,
+.card--success p {
     color: inherit;
 }
 

@@ -52,6 +52,12 @@
     font-size: var(--text-sm);
 }
 
+/* A short list in a centred block: narrow, its lines still left-aligned */
+.checklist--narrow {
+    max-width: 400px;
+    text-align: left;
+}
+
 .checklist--success > li > iconify-icon:first-child { color: var(--success); }
 .checklist--red > li > iconify-icon:first-child { color: var(--red); }
 

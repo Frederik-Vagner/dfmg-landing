@@ -47,19 +47,3 @@
 
 }
 
-@layer pages {
-
-
-/* Icon, text and price in one line; the icon keeps its size. */
-.window-service__layout {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-@media (max-width: 768px) {
-    .window-service__layout {
-        flex-wrap: wrap;
-    }
-}
-
-}

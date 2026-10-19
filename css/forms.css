@@ -403,6 +403,26 @@
     color: var(--gray);
 }
 
+/* In an accordion each question is a bordered white box with a grey header.
+   These used to reach the kontakt FAQ by accident, from the support widget's
+   unscoped rules; now they are stated here. */
+.faq-accordion .faq-item {
+    margin-bottom: var(--space-xs);
+    border: var(--border-lighter);
+    background: var(--white);
+}
+
+.faq-accordion .faq-question {
+    background: var(--bg-surface);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--text-sm);
+    transition: background var(--transition-normal);
+}
+
+.faq-accordion .faq-question.active {
+    background: var(--white);
+}
+
 /* FAQ List (narrow container variant) */
 .faq-list {
     max-width: var(--container-width-narrow);

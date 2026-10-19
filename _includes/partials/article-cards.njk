@@ -6,7 +6,7 @@
 {%- set a = article.data -%}
 <div class="card card--split" data-featured-category="{{ slot }}">
     <div class="card--split__image {{ a.categoryKey }}">
-        <div class="badge-inline badge-overlay badge-overlay--light news-card__category">{{ a.category }}</div>
+        <div class="badge-inline badge-inline--caps badge-overlay badge-overlay--light">{{ a.category }}</div>
         <img data-photo-skip src="{{ a.image }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
     </div>
     <div class="card--split__content">

@@ -66,6 +66,11 @@
     border-radius: var(--radius-normal);
 }
 
+/* Cropped from the bottom up, for a photo whose subject sits low */
+.photo--bottom img {
+    object-position: bottom;
+}
+
 /* ── Visual Blocks (image/content placeholders) ── */
 .slide-visual {
     width: 100%;
