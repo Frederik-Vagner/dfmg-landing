@@ -9,7 +9,7 @@
       {
         "id": "operations",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Core Operations",
         "title": "The daily engine of your business",
         "body": "Schedule tasks, track time, manage quality, and keep your entire operation visible in real time. Your employees check in via their phones, and you see it all on the dashboard — who's where, what's done, what's pending.",
@@ -20,7 +20,7 @@
       {
         "id": "clients",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Client Management",
         "title": "Every client, every location, every detail",
         "body": "Manage client information, addresses, contact persons, and location-specific guides that tell your team exactly how to service each site. Clients get their own portal to see upcoming tasks, invoices, photos, and floor plans.",
@@ -31,7 +31,7 @@
       {
         "id": "employees",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Employee Management",
         "title": "From hiring to daily performance",
         "body": "Employees get their own portal with tasks, schedules, salary slips, and holiday requests. Managers track performance through an improvement system with tests, scoring, and incident tracking. The org diagram shows your entire structure at a glance.",
@@ -42,7 +42,7 @@
       {
         "id": "finance",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Financial Suite",
         "title": "Complete accounting built for Danish companies",
         "body": "Full double-entry accounting with Danish chart of accounts, automated invoicing with e-Faktura support, bank reconciliation, BankConnect integration for direct bank payments, and VAT reporting ready for SKAT. Generate income statements and balance sheets with one click.",
@@ -53,7 +53,7 @@
       {
         "id": "payroll",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Payroll",
         "title": "Danish payroll from hours to payslip",
         "body": "Create payroll runs from tracked hours, calculate taxes and deductions, generate payslips, report to eIndkomst/SKAT, and export bank payment files — all without leaving the platform. Holiday pay and pension calculations follow Danish law automatically.",
@@ -64,7 +64,7 @@
       {
         "id": "inventory",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Inventory & Procurement",
         "title": "Track every item, from warehouse to client site",
         "body": "Manage inventory across multiple storage locations, create purchase orders to suppliers, track stock levels, and build loadout templates for what each team needs on the road. Employees report usage directly from the task view.",
@@ -75,7 +75,7 @@
       {
         "id": "crm",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Sales & CRM",
         "title": "From lead to signed contract",
         "body": "Build professional offers with equipment lists, cleaning schemes, and auto-generated PDFs. Run email sequences to nurture leads with open/click tracking. Manage your inbox with full IMAP integration. Set up a pricing library with services, add-ons, and notice fees.",
@@ -86,7 +86,7 @@
       {
         "id": "documents",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Documents & Analytics",
         "title": "Templates, signatures, and data-driven decisions",
         "body": "Create document templates with placeholders that auto-fill from your data, send for e-signature, and generate client reports. Track task KPIs, employee performance, client profitability, and feedback analytics from a unified dashboard.",
@@ -116,7 +116,7 @@
       {
         "id": "operations",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Kernedrift",
         "title": "Den daglige motor i jeres forretning",
         "body": "Planlæg opgaver, registrer tid, styr kvalitet og hold hele driften synlig i realtid. Jeres medarbejdere tjekker ind via telefonen, og I ser det hele på dashboardet — hvem der er hvor, hvad der er gjort, og hvad der mangler.",
@@ -127,7 +127,7 @@
       {
         "id": "clients",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Kundestyring",
         "title": "Hver kunde, hver lokation, hver detalje",
         "body": "Administrer kundeinformation, adresser, kontaktpersoner og lokationsspecifikke guides, der fortæller jeres team præcis, hvordan hver lokation skal serviceres. Kunder får deres egen portal med kommende opgaver, fakturaer, fotos og plantegninger.",
@@ -138,7 +138,7 @@
       {
         "id": "employees",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Medarbejderstyring",
         "title": "Fra ansættelse til daglig performance",
         "body": "Medarbejderne får deres egen portal med opgaver, vagtplaner, lønsedler og ferieanmodninger. Ledere følger performance via et forbedringssystem med tests, scoring og hændelsesregistrering. Organisationsdiagrammet viser hele jeres struktur med et overblik.",
@@ -149,7 +149,7 @@
       {
         "id": "finance",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Økonomisuite",
         "title": "Komplet bogføring bygget til danske virksomheder",
         "body": "Fuld dobbelt bogføring med dansk kontoplan, automatiseret fakturering med e-Faktura-understøttelse, bankafstemning, BankConnect-integration til direkte bankbetalinger og momsindberetning klar til SKAT. Generer resultatopgørelse og balance med et klik.",
@@ -160,7 +160,7 @@
       {
         "id": "payroll",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Løn",
         "title": "Dansk løn fra timer til lønseddel",
         "body": "Opret lønkørsel fra registrerede timer, beregn skat og fradrag, generer lønsedler, indberetning til eIndkomst/SKAT og eksporter bankbetalingsfiler — alt uden at forlade platformen. Feriepenge og pensionsberegninger følger automatisk dansk lovgivning.",
@@ -171,7 +171,7 @@
       {
         "id": "inventory",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Lager & Indkøb",
         "title": "Spor hver vare, fra lager til kundelokation",
         "body": "Administrer lagerbeholdning på tværs af flere lagerlokationer, opret indkøbsordrer til leverandører, følg lagerniveauer og byg pakkelister til hvad hvert team skal bruge på ruten. Medarbejdere rapporterer forbrug direkte fra opgavevisningen.",
@@ -182,7 +182,7 @@
       {
         "id": "crm",
         "sectionClass": "section",
-        "rowClass": "feature-row",
+        "reverse": false,
         "subtitle": "Salg & CRM",
         "title": "Fra lead til underskrevet kontrakt",
         "body": "Byg professionelle tilbud med udstyrslister, rengøringsskemaer og autogenererede PDF'er. Kør emailsekvenser til at pleje leads med åbnings-/kliksporing. Administrer jeres indbakke med fuld IMAP-integration. Opret et prisbibliotek med ydelser, tilvalg og opsigelsesbetingelser.",
@@ -193,7 +193,7 @@
       {
         "id": "documents",
         "sectionClass": "section section--light",
-        "rowClass": "feature-row feature-row--reverse",
+        "reverse": true,
         "subtitle": "Dokumenter & Analyser",
         "title": "Skabeloner, signaturer og datadrevne beslutninger",
         "body": "Opret dokumentskabeloner med pladsholdere, der automatisk udfyldes fra jeres data, send til e-signering og generer kunderapporter. Følg opgave-KPI'er, medarbejderperformance, kunderentabilitet og feedbackanalyser fra et samlet dashboard.",

@@ -1,5 +1,5 @@
     <!-- Hero -->
-    <section class="platform-hero platform-hero--page">
+    <section class="hero hero--primary hero--compact">
         <div class="container">
             <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
@@ -35,9 +35,9 @@
     <!-- Philosophy -->
     <section class="section section--light">
         <div class="container">
-            <div class="section-intro">
-                <div class="subtitle section-intro__eyebrow section-intro__eyebrow--primary">{{ t.philosophy.subtitle }}</div>
-                <div class="title section-intro__title">{{ t.philosophy.title }}</div>
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.philosophy.subtitle }}</div>
+                <div class="title intro__title">{{ t.philosophy.title }}</div>
             </div>
 
             <div class="about-values">
@@ -90,10 +90,10 @@
     <!-- Link to service company -->
     <section class="section">
         <div class="container">
-            <div class="platform-cta">
-                <div class="title">{{ t.cta.title }}</div>
-                <div class="body">{{ t.cta.body }}</div>
-                <div class="hero-actions">
+            <div class="cta cta--center cta--primary">
+                <div class="cta__title">{{ t.cta.title }}</div>
+                <div class="cta__text">{{ t.cta.body }}</div>
+                <div class="cluster cluster--center">
                     <a href="/pages/facility/indblik/om.html" class="btn btn--ghost btn--md">{{ t.cta.btn_team }}</a>
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.btn_demo }}</a>
                 </div>

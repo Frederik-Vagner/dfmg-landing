@@ -1,5 +1,5 @@
     <!-- Hero -->
-    <section class="platform-hero platform-hero--page">
+    <section class="hero hero--primary hero--compact">
         <div class="container">
             <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
@@ -10,8 +10,8 @@
     <!-- Demo form + visual -->
     <section class="section">
         <div class="container">
-            <div class="demo-split">
-                <div class="demo-split__form">
+            <div class="row row--wide row--top">
+                <div>
                     <h2 class="title title--small">{{ t.form.heading }}</h2>
                     <p class="body demo-split__intro">{{ t.form.intro }}</p>
 
@@ -57,7 +57,7 @@
                         </button>
                     </form>
                 </div>
-                <div class="demo-split__visual">
+                <div>
                     <!-- TODO: Replace with embedded product video or interactive tour -->
                     <div class="screenshot-placeholder screenshot-placeholder--light demo-split__media" data-photo-slot="demo-visual" data-photo-status="missing" data-photo-brief="{{ t.visual.placeholder_text | escape }}. {{ t.visual.placeholder_hint | escape }}">
                         <div>
@@ -83,8 +83,8 @@
     <!-- What to expect -->
     <section class="section section--light">
         <div class="container">
-            <div class="page-intro">
-                <div class="subtitle page-intro__eyebrow">{{ t.steps.subtitle }}</div>
+            <div class="intro">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.steps.subtitle }}</div>
                 <div class="title">{{ t.steps.title }}</div>
             </div>
 

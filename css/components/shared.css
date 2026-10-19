@@ -5,75 +5,69 @@
 
 @layer components {
 
-.section-intro {
-    margin-bottom: var(--space-2xl);
+/* An intro above a section's content: eyebrow, title and text, centred.
+   --spaced/--tight/--spacious set the space below it (2xl / lg / 3xl); without
+   one it has none, for an intro whose text or a .stack does the spacing. */
+.intro {
     text-align: center;
 }
 
-.section-intro--spacious {
+.intro--spaced {
+    margin-bottom: var(--space-2xl);
+}
+
+.intro--spacious {
     margin-bottom: var(--space-3xl);
 }
 
-.section-intro--tight {
+.intro--tight {
     margin-bottom: var(--space-lg);
 }
 
 /* Left-aligned, for the intro of a panel inside a card */
-.section-intro--start {
+.intro--start {
     text-align: left;
 }
 
-.section-intro__eyebrow {
+.intro__eyebrow {
     color: var(--success-text);
 }
 
-.section-intro__eyebrow--primary {
+.intro__eyebrow--primary {
     color: var(--primary-text);
 }
 
 /* On the dark sections the light brand colours are the readable ones. */
-.section--charcoal .section-intro__eyebrow {
+.section--charcoal .intro__eyebrow {
     color: var(--success);
 }
 
 /* On a blue card the green eyebrow is unreadable. */
-.card--primary .section-intro__eyebrow {
+.card--primary .intro__eyebrow {
     color: var(--white);
 }
 
-.section-intro__title {
-color: var(--charcoal);
+.intro__title {
+    color: var(--charcoal);
 }
 
-.section-intro__title--on-dark {
-color: var(--white);
+.intro__title--on-dark {
+    color: var(--white);
 }
 
-.section-intro__text {
+.intro__text {
     color: var(--gray);
 }
 
-.section-intro__text--on-dark {
-color: var(--white);
+.intro__text--on-dark {
+    color: var(--white);
 }
 
-.page-intro {
-    text-align: center;
-}
-
-.page-intro__eyebrow {
-    color: var(--primary-text);
-}
-
-.page-intro__text {
-    color: var(--gray);
-}
-
-.page-intro__text--spaced {
+.intro__text--spaced {
     margin-bottom: var(--space-2xl);
 }
 
-.page-intro__text--tight {
+.intro__text--tight {
     margin-bottom: var(--space-lg);
 }
 
@@ -104,14 +98,62 @@ color: var(--white);
     margin-bottom: var(--space-text);
 }
 
+/* ── Callout: a boxed note in running text ──
+   The blue box (articles), --success green with a tick, --note a grey panel
+   with a blue bar on the left and a title (the platform pages). */
+.callout {
+    position: relative;
+    margin: var(--space-sm) 0;
+    padding: var(--space-sm);
+    border: 1px solid var(--charcoal);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-callout-blue);
+}
+
+.callout p {
+    margin-left: var(--space-lg);
+    margin-bottom: 0;
+}
+
+.callout--success {
+    border-color: var(--success);
+    background-color: var(--bg-callout-green);
+}
+
+.callout--success::before {
+    content: "✓";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--success);
+    font-size: 1.2em;
+    font-weight: var(--font-weight-bold);
+}
+
+.callout--note {
+    margin: var(--space-lg) 0 0;
+    padding: var(--space-md) var(--space-lg);
+    border: 0;
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: var(--bg-surface);
+}
+
+.callout__title {
+    margin-bottom: var(--space-2xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.callout__text {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--gray);
+}
+
 .cover-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.cta-center--rounded {
-    border-radius: var(--radius-normal);
 }
 
 .icon-tile {
@@ -136,11 +178,6 @@ color: var(--white);
 
 .tab-bar {
     margin-bottom: var(--space-2xl);
-}
-
-.cta-actions {
-    display: flex;
-    gap: var(--layout-gap);
 }
 
 .btn__icon {
@@ -226,12 +263,6 @@ color: var(--white);
     color: var(--text-on-dark-strong);
 }
 
-.hero__actions {
-    display: flex;
-    gap: var(--layout-gap);
-    justify-content: center;
-}
-
 .icon-circle--primary {
     background: var(--bg-gradient-primary);
     color: var(--white);
@@ -248,20 +279,12 @@ color: var(--white);
 }
 
 @media (max-width: 768px) {
-    .cta-actions {
-        flex-wrap: wrap;
-    }
-
     .footer-contact {
         flex-wrap: nowrap;
     }
 
     .footer-contact > * {
         flex: 0 1 auto;
-    }
-
-    .hero__actions {
-        flex-wrap: wrap;
     }
 }
 

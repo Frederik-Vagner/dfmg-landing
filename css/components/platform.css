@@ -6,21 +6,21 @@
 @layer components {
 
 /* ── Hero ── */
-.platform-hero .subtitle {
+.hero--primary .subtitle {
     color: var(--text-on-dark-muted);
 }
 
 /* Subpages: less space below the hero than the home page. */
 /* Subpages carry a heading and a line or two, so their hero is only as tall
    as that instead of a full screen of colour. */
-.platform-hero--page {
+.hero--compact {
     min-height: 0;
     padding-top: calc(var(--header-clearance) + var(--space-2xl));
     padding-bottom: var(--space-2xl);
 }
 
 /* Thank-you page: a shorter, vertically centred hero. */
-.platform-hero--confirmation {
+.hero--short {
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
 }
 
 /* Screenshot slot under the home hero. */
-.platform-hero__media {
+.hero__media {
     min-height: 400px;
     margin-top: var(--space-xl);
 }
@@ -44,7 +44,7 @@
     margin-bottom: var(--space-2xs);
 }
 
-.platform-hero__media .screenshot-placeholder__icon {
+.hero__media .screenshot-placeholder__icon {
     font-size: var(--icon-display);
     margin-bottom: var(--space-sm);
     opacity: 0.5;

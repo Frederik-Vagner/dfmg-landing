@@ -1,16 +1,16 @@
     <!-- Hero — outcome-driven, not feature-driven -->
-    <section class="platform-hero">
+    <section class="hero hero--primary">
         <div class="container">
             <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
-            <div class="hero-actions">
+            <div class="cluster cluster--center">
                 <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.hero.cta_demo }}</a>
                 <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ t.hero.cta_features }}</a>
             </div>
 
             <!-- TODO: Replace with actual dashboard screenshot or 60s product video -->
-            <div class="screenshot-placeholder platform-hero__media" data-photo-slot="home-hero" data-photo-status="missing" data-photo-brief="{{ t.hero.placeholder_text | escape }}. {{ t.hero.placeholder_hint | escape }}">
+            <div class="screenshot-placeholder hero__media" data-photo-slot="home-hero" data-photo-status="missing" data-photo-brief="{{ t.hero.placeholder_text | escape }}. {{ t.hero.placeholder_hint | escape }}">
                 <div>
                     <iconify-icon icon="fluent:play-circle-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                     <span>{{ t.hero.placeholder_text }}</span><br>
@@ -27,10 +27,10 @@
     <!-- Built by practitioners — your differentiator -->
     <section class="section section--light section--half">
         <div class="container">
-            <div class="page-intro">
-                <div class="subtitle page-intro__eyebrow">{{ t.why.subtitle }}</div>
+            <div class="intro">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.why.subtitle }}</div>
                 <div class="title">{{ t.why.title }}</div>
-                <div class="body page-intro__text page-intro__text--spaced">{{ t.why.body }}</div>
+                <div class="body intro__text intro__text--spaced">{{ t.why.body }}</div>
             </div>
 
             <div class="grid grid--3 grid--loose">
@@ -62,10 +62,10 @@
     <!-- Module overview -->
     <section class="section">
         <div class="container">
-            <div class="section-intro">
-                <div class="subtitle section-intro__eyebrow section-intro__eyebrow--primary">{{ t.modules.subtitle }}</div>
-                <div class="title section-intro__title">{{ t.modules.title }}</div>
-                <div class="body section-intro__text">{{ t.modules.body }}</div>
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.modules.subtitle }}</div>
+                <div class="title intro__title">{{ t.modules.title }}</div>
+                <div class="body intro__text">{{ t.modules.body }}</div>
             </div>
 
             <div class="grid grid--3">
@@ -131,9 +131,9 @@
     <!-- Comparison — what you're replacing -->
     <section class="section section--light">
         <div class="container">
-            <div class="section-intro">
-                <div class="title section-intro__title">{{ t.comparison.title }}</div>
-                <div class="body section-intro__text">{{ t.comparison.body }}</div>
+            <div class="intro intro--spaced">
+                <div class="title intro__title">{{ t.comparison.title }}</div>
+                <div class="body intro__text">{{ t.comparison.body }}</div>
             </div>
 
             <div class="row row--loose">
@@ -160,9 +160,9 @@
     <!-- Integration / ecosystem -->
     <section class="section">
         <div class="container">
-            <div class="section-intro">
-                <div class="subtitle section-intro__eyebrow section-intro__eyebrow--primary">{{ t.integrations.subtitle }}</div>
-                <div class="title section-intro__title">{{ t.integrations.title }}</div>
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.integrations.subtitle }}</div>
+                <div class="title intro__title">{{ t.integrations.title }}</div>
             </div>
 
             <!-- TODO: Replace with actual integration logos -->
@@ -194,10 +194,10 @@
     <!-- Final CTA -->
     <section class="section">
         <div class="container">
-            <div class="platform-cta">
-                <div class="title">{{ t.cta.title }}</div>
-                <div class="body">{{ t.cta.body }}</div>
-                <div class="hero-actions">
+            <div class="cta cta--center cta--primary">
+                <div class="cta__title">{{ t.cta.title }}</div>
+                <div class="cta__text">{{ t.cta.body }}</div>
+                <div class="cluster cluster--center">
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="btn__icon"></iconify-icon> {{ t.cta.cta_demo }}</a>
                     <a href="{{ prefix }}/pricing.html" class="btn btn--ghost btn--md">{{ t.cta.cta_pricing }}</a>
                 </div>

@@ -1,5 +1,5 @@
     <!-- Hero -->
-    <section class="platform-hero platform-hero--page">
+    <section class="hero hero--primary hero--compact">
         <div class="container">
             <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
@@ -10,8 +10,8 @@
     <!-- Contact form + info -->
     <section class="section">
         <div class="container">
-            <div class="demo-split">
-                <div class="demo-split__visual">
+            <div class="row row--wide row--top">
+                <div>
                     <h2 class="contact-info__heading">{{ t.info.heading }}</h2>
                     <p class="contact-info__intro">{{ t.info.body }}</p>
 
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="demo-split__form">
+                <div>
                     <h2 class="contact-form__heading">{{ t.form.heading }}</h2>
                     <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
                         <input type="hidden" name="_subject" value="{{ t.form.email_subject }}">

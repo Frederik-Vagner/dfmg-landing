@@ -35,26 +35,28 @@
 .section--primary  { background: var(--bg-gradient-primary); color: var(--white); }
 .section--charcoal { background: var(--bg-gradient-charcoal); color: var(--white); }
 
+/* ── Hero: a page's first section, at least a screen high, content centred ──
+   A minimum, not a fixed height: content taller than the screen used to be
+   centred and clipped, which put the eyebrow under the header. */
 .hero {
-    height: 100vh;
-}
-
-/* ── Platform Hero ── */
-.platform-hero {
-    /* A minimum, not a fixed height: content taller than the screen used to
-       be centred and clipped, which put the eyebrow under the header. */
-    min-height: 100vh;
-    min-height: 100dvh;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
+    text-align: center;
+}
+
+/* On the brand blue (the platform pages) */
+.hero--primary {
     padding: var(--space-4xl) 0 var(--space-2xl);
     background: var(--bg-gradient-primary);
-    text-align: center;
     color: var(--white);
 }
 
-.platform-hero .title {
+.hero--primary .title {
     font-size: var(--heading-1);
     font-weight: var(--font-weight-bold);
     line-height: 1.25;
@@ -62,48 +64,21 @@
     color: var(--white);
 }
 
-.platform-hero .body {
+.hero--primary .body {
     color: var(--text-on-dark);
     font-size: var(--text-xl);
     max-width: 640px;
     margin: 0 auto var(--space-lg);
 }
 
-.platform-hero .hero-actions {
-    display: flex;
-    gap: var(--space-sm);
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-/* ── CTA Banner ── */
-.platform-cta {
-    background: var(--bg-gradient-primary);
-    border-radius: var(--radius-md);
-    padding: var(--space-xl);
-    text-align: center;
-    color: var(--white);
-}
-
-.platform-cta .title {
-    font-size: var(--heading-2);
-    margin-bottom: var(--space-xs);
-    color: var(--white);
-}
-
-.platform-cta .body {
-    color: var(--text-on-dark);
-    margin-bottom: var(--space-md);
-}
-
-/* ── Hero with Skewed Overlay ── */
-.hero-layout {
+/* ── Section with a diagonal charcoal slab on its right half ── */
+.section--slab {
     position: relative;
     overflow: hidden;
-    background: var(--white);
 }
 
-.hero-layout::before {
+.section--slab::before {
     content: '';
     position: absolute;
     top: 0;
@@ -118,54 +93,30 @@
     z-index: var(--z-bg);
 }
 
-/* Centred hero content has no light side to sit on: no slab. Below 1024px
-   the text column is wider than the light half, so the slab goes too. */
-.hero-layout--plain::before {
-    content: none;
-}
-
+/* Below 1024px the text column is wider than the light half: no slab. */
 @media (max-width: 1024px) {
-    .hero-layout::before {
+    .section--slab::before {
         content: none;
     }
 }
 
-.hero-content {
+.section--slab > .container {
     position: relative;
     z-index: var(--z-overlay);
 }
 
-/* Keeps the text on the light side of a diagonal background. */
-.hero-content--narrow {
+/* A readable line length: on a slab section it keeps the text on the light side */
+.measure {
     max-width: 640px;
 }
 
-/* ── Hero Grid Layout ── */
-.hero-grid {
+/* ── Section fading from the light surface to white ── */
+.section--fade {
     background: linear-gradient(135deg, var(--bg-surface) 0%, var(--white) 100%);
-    position: relative;
-    overflow: hidden;
 }
 
-.hero-grid-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
-    align-items: center;
-}
-
-/* ── Hero (image background) ── */
-.hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-image {
+/* ── Hero on a photo: the image, a tint over it, the text above both ── */
+.hero__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -179,7 +130,7 @@
     z-index: var(--z-bg);
 }
 
-.hero-overlay {
+.hero__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -189,80 +140,66 @@
     z-index: var(--z-overlay);
 }
 
-.hero .container {
+.hero--image .container {
     position: relative;
     z-index: var(--z-content);
     top: -2.5rem;
 }
 
-/* ── CTA Sections ── */
-.cta-box {
-    background: var(--bg-gradient-charcoal);
-    border-radius: var(--radius-normal);
-    padding: var(--space-xl);
+/* ── Call to action: a coloured panel with a title, text and buttons ──
+   Charcoal by default, its text in the left two thirds (the empty right third
+   is decoration). --center centres everything on the brand blue or green. */
+.cta {
     position: relative;
-    overflow: hidden;
-    min-height: 300px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: var(--space-lg);
-    color: var(--white);
-}
-
-/* The empty right third is decoration; on a phone it squeezed the text into
-   a column a few words wide and the buttons onto three lines each. */
-@media (max-width: 768px) {
-    .cta-box {
-        grid-template-columns: minmax(0, 1fr);
-        padding: var(--space-lg);
-    }
-}
-
-.cta-center {
-    background: var(--bg-gradient-success);
-    padding: var(--space-2xl) var(--space-xl);
-    position: relative;
+    min-height: 300px;
+    padding: var(--space-xl);
     overflow: hidden;
-    text-align: center;
+    border-radius: var(--radius-normal);
+    background: var(--bg-gradient-charcoal);
     color: var(--white);
 }
 
-.cta-center h2 {
+.cta--center {
+    display: block;
+    min-height: 0;
+    text-align: center;
+}
+
+.cta--primary { background: var(--bg-gradient-primary); }
+.cta--success { background: var(--bg-gradient-success); }
+
+.cta__title {
+    margin-bottom: var(--space-sm);
     font-size: var(--heading-2);
     font-weight: var(--font-weight-medium);
-    margin-bottom: var(--space-sm);
 }
 
-.cta-center p {
+.cta__text {
+    margin-bottom: var(--space-lg);
     font-size: var(--text-lg);
     font-weight: var(--font-weight-light);
-    opacity: 0.9;
-    margin-bottom: var(--space-lg);
+    color: var(--text-on-dark);
+}
+
+.cta--center .cta__text {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* ── Feature Row (alternating content/visual layout) ── */
-.feature-row {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2xl);
-    padding: var(--space-xl) 0;
+/* On a phone the right third squeezed the text into a column a few words
+   wide and the buttons onto three lines each. */
+@media (max-width: 768px) {
+    .cta {
+        grid-template-columns: minmax(0, 1fr);
+        padding: var(--space-lg);
+    }
 }
 
-.feature-row--reverse {
-    flex-direction: row-reverse;
-}
-
-.feature-row__content {
-    flex: 1;
-}
-
-.feature-row__visual {
-    flex: 1;
-}
-
+/* ── Feature text (a feature's eyebrow, title, text and module tags) ── */
 .feature-row__subtitle {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
@@ -311,41 +248,6 @@
     color: var(--success);
 }
 
-/* ── Callout Box ── */
-.callout-box {
-    background: var(--bg-surface);
-    border-left: 4px solid var(--primary);
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    padding: var(--space-md) var(--space-lg);
-    margin-top: var(--space-lg);
-}
-
-.callout-box__title {
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-2xs);
-}
-
-.callout-box__body {
-    color: var(--gray);
-    font-size: var(--text-base);
-    line-height: 1.6;
-}
-
-/* ── Demo Split (2-column form layout) ── */
-.demo-split {
-    display: flex;
-    gap: var(--space-2xl);
-    align-items: flex-start;
-}
-
-.demo-split__form {
-    flex: 1;
-}
-
-.demo-split__visual {
-    flex: 1;
-}
-
 /* ── Carousel ── */
 .carousel {
     overflow: hidden;
@@ -381,44 +283,10 @@
     margin-top: var(--space-lg);
 }
 
-/* ── Logos ── */
-
-/* ── Career Content ── */
-.career-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
-    align-items: start;
-}
-
 /* ── Responsive Sections ── */
 @media (max-width: 768px) {
-    /* Contact page: info column above the form instead of beside it. */
-    .career-content {
-        grid-template-columns: minmax(0, 1fr);
-        gap: var(--space-xl);
-    }
-
-    .platform-hero {
+    .hero--primary {
         padding: calc(var(--header-clearance) + var(--space-lg)) 0 var(--space-xl);
-    }
-
-    .hero-grid-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
-
-    .feature-row,
-    .feature-row--reverse {
-        flex-direction: column;
-        gap: var(--space-lg);
-    }
-
-    /* Stacked, the columns take the full width; flex-start shrank the
-       contact form to its content, about 240px on a phone. */
-    .demo-split {
-        flex-direction: column;
-        align-items: stretch;
     }
 
     .trust-row {
@@ -498,18 +366,14 @@
 }
 
 /* ====================================
-   MOBILE: sections with a fixed height
-   .hero pins itself to a fraction of the viewport and hides the overflow
-   (.section--half used to as well; it is a minimum height everywhere now). That holds on a desktop, where the content is a couple
-   of lines; on a phone the same text wraps to three times the height and the
-   bottom of it is silently cut off. Let both grow and keep the fixed height
-   as a minimum, so they still fill the screen when the content is short.
-   At the end of the file so it wins over the base rules above.
+   MOBILE: sections that fill the screen
+   On a desktop a .hero's content is a couple of lines and it hides any
+   overflow; on a phone the same text wraps to three times the height, so it
+   grows instead of being cut off (.section--half is a minimum height
+   everywhere). At the end of the file so it wins over the base rules above.
    ==================================== */
 @media (max-width: 768px) {
     .hero {
-        height: auto;
-        min-height: 100vh;
         overflow: visible;
     }
 
@@ -524,7 +388,7 @@
 /* Migrated rules (see the layer order in tokens.css). */
 @layer components {
 
-.hero-image--home {
+.hero__image--home {
     background-image: url('/images/service/hero1.jpg');
 }
 

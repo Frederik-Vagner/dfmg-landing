@@ -1,5 +1,5 @@
     <!-- Hero -->
-    <section class="platform-hero platform-hero--page">
+    <section class="hero hero--primary hero--compact">
         <div class="container">
             <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
@@ -11,8 +11,8 @@
     {% for section in t.sections %}
     <section class="{{ section.sectionClass }}" id="{{ section.id }}">
         <div class="container">
-            <div class="{{ section.rowClass }}">
-                <div class="feature-row__content">
+            <div class="row row--center row--wide{% if section.reverse %} row--reverse{% endif %}">
+                <div>
                     <div class="feature-row__subtitle">{{ section.subtitle }}</div>
                     <h2 class="feature-row__title">{{ section.title }}</h2>
                     <p class="feature-row__body">{{ section.body }}</p>
@@ -22,7 +22,7 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="feature-row__visual">
+                <div>
                     <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="features-{{ loop.index }}" data-photo-status="missing" data-photo-brief="{{ section.screenshotAlt | replace('Alt: ', '') | escape }}">
                         <div>
                             <iconify-icon icon="fluent:image-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
@@ -39,9 +39,9 @@
     <!-- Platform Admin callout -->
     <section class="section">
         <div class="container">
-            <div class="callout-box">
-                <div class="callout-box__title"><iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon> {{ t.admin.title }}</div>
-                <div class="callout-box__body">{{ t.admin.body }}</div>
+            <div class="callout callout--note">
+                <div class="callout__title"><iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon> {{ t.admin.title }}</div>
+                <div class="callout__text">{{ t.admin.body }}</div>
             </div>
         </div>
     </section>
@@ -49,10 +49,10 @@
     <!-- CTA -->
     <section class="section">
         <div class="container">
-            <div class="platform-cta">
-                <div class="title">{{ t.cta.title }}</div>
-                <div class="body">{{ t.cta.body }}</div>
-                <div class="hero-actions">
+            <div class="cta cta--center cta--primary">
+                <div class="cta__title">{{ t.cta.title }}</div>
+                <div class="cta__text">{{ t.cta.body }}</div>
+                <div class="cluster cluster--center">
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.cta_demo }}</a>
                     <a href="{{ prefix }}/pricing.html" class="btn btn--ghost btn--md">{{ t.cta.cta_pricing }}</a>
                 </div>

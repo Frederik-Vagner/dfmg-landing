@@ -29,6 +29,9 @@
 }
 
 .row--center { align-items: center; }
+.row--top { align-items: flex-start; }
+/* Second child first; on phones the stacked order stays the source order. */
+.row--reverse { flex-direction: row-reverse; }
 .row--loose { gap: var(--space-xl); }
 .row--wide { gap: var(--space-2xl); }
 
@@ -76,7 +79,7 @@
 
 /* --- Stack ---
    Space goes on the top of every child but the first. It is a margin, so it
-   merges with a child's own bottom margin (a .lead, a .section-intro) instead
+   merges with a child's own bottom margin (a .lead, an .intro--spaced) instead
    of adding to it. */
 .stack > * + * {
     margin-top: var(--stack-gap, var(--layout-gap));

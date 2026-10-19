@@ -1,10 +1,10 @@
     <!-- Hero -->
-    <section class="platform-hero platform-hero--page">
+    <section class="hero hero--primary hero--compact">
         <div class="container">
             <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
-            <div class="hero-actions">
+            <div class="cluster cluster--center">
                 <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.hero.cta_demo }}</a>
                 <a href="#supported-functions" class="btn btn--ghost btn--md">{{ t.hero.cta_functions }}</a>
             </div>
@@ -25,14 +25,14 @@
     <!-- What this means for you -->
     <section class="section" id="overview">
         <div class="container">
-            <div class="feature-row">
-                <div class="feature-row__content">
+            <div class="row row--center row--wide">
+                <div>
                     <div class="feature-row__subtitle">{{ t.overview.subtitle }}</div>
                     <h2 class="feature-row__title">{{ t.overview.title }}</h2>
                     <p class="feature-row__body">{{ t.overview.body1 }}</p>
                     <p class="feature-row__body">{{ t.overview.body2 }}</p>
                 </div>
-                <div class="feature-row__visual">
+                <div>
                     <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="bankconnect-overview" data-photo-status="missing">
                         <div>
                             <iconify-icon icon="fluent:building-bank-20-filled" inline class="placeholder-icon"></iconify-icon>
@@ -69,8 +69,8 @@
     <!-- Supported functions table -->
     <section class="section" id="supported-functions">
         <div class="container">
-            <div class="feature-row">
-                <div class="feature-row__content">
+            <div class="row row--center row--wide">
+                <div>
                     <div class="feature-row__subtitle">{{ t.functions.subtitle }}</div>
                     <h2 class="feature-row__title">{{ t.functions.title }}</h2>
                     <p class="feature-row__body">{{ t.functions.body1 }}</p>
@@ -81,7 +81,7 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="feature-row__visual">
+                <div>
                     <div class="bc-table-wrapper">
                         <table class="bc-table">
                             <thead>
@@ -109,9 +109,9 @@
     <!-- What is Bank Connect -->
     <section class="section section--light">
         <div class="container">
-            <div class="callout-box">
-                <div class="callout-box__title"><iconify-icon icon="fluent:info-20-filled" inline></iconify-icon> {{ t.callout.title }}</div>
-                <div class="callout-box__body">{{ t.callout.body }}</div>
+            <div class="callout callout--note">
+                <div class="callout__title"><iconify-icon icon="fluent:info-20-filled" inline></iconify-icon> {{ t.callout.title }}</div>
+                <div class="callout__text">{{ t.callout.body }}</div>
             </div>
         </div>
     </section>
@@ -119,10 +119,10 @@
     <!-- CTA -->
     <section class="section">
         <div class="container">
-            <div class="platform-cta">
-                <div class="title">{{ t.cta.title }}</div>
-                <div class="body">{{ t.cta.body }}</div>
-                <div class="hero-actions">
+            <div class="cta cta--center cta--primary">
+                <div class="cta__title">{{ t.cta.title }}</div>
+                <div class="cta__text">{{ t.cta.body }}</div>
+                <div class="cluster cluster--center">
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.cta_demo }}</a>
                     <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ t.cta.cta_features }}</a>
                 </div>
