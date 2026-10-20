@@ -519,22 +519,28 @@ a.card {
 }
 
 /* ── Service card (carousel item) ── */
-.card--service {
+/* A wide card in a carousel: a photo frame on top, the text below */
+.card--wide {
     width: 570px;
     flex-shrink: 0;
-    background: var(--card-bg);
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 600px;
+    padding: 0;
+    overflow: hidden;
     transition: all var(--transition-normal);
 }
 
-.card--service:hover {
+.card--wide:hover {
     box-shadow: var(--shadow-xl);
+}
+
+/* A card's text part, under a photo or beside it */
+.card__body {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 /* ── Staff card ── */
@@ -569,23 +575,6 @@ a.card {
     color: var(--gray);
 }
 
-/* ── Panel card (white box with border) ── */
-.card--panel {
-    background: var(--card-bg);
-    padding: var(--card-padding-compact);
-    border-radius: var(--card-radius);
-    box-shadow: var(--card-shadow);
-}
-
-.card--panel.double-height {
-    grid-row: span 2;
-}
-
-.card--panel h3 {
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-semibold);
-    margin: 0 0 var(--space-sm) 0;
-}
 
 /* ── Gallery card (image + content) ── */
 
@@ -731,7 +720,7 @@ a.card {
         width: min(386px, calc(100vw - 40px));
     }
 
-    .card--service {
+    .card--wide {
         width: min(570px, calc(100vw - 40px));
         min-height: 0;
     }

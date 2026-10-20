@@ -81,7 +81,7 @@
             const data = tableData[currentTab];
 
             // Update header section name
-            tbody.querySelector('.task-col').textContent = sectionNames[currentTab];
+            tbody.querySelector('.schedule-row__task').textContent = sectionNames[currentTab];
 
             // Clear existing rows except header
             while (tbody.children.length > 1) {
@@ -94,9 +94,9 @@
                 rowElement.className = 'schedule-row';
                 row.forEach(cell => {
                     const cellElement = document.createElement('div');
-                    if (row.indexOf(cell) === 0) cellElement.className = 'task-col';
-                    else if (row.indexOf(cell) === 1) cellElement.className = 'freq-col';
-                    else cellElement.className = 'day-col';
+                    if (row.indexOf(cell) === 0) cellElement.className = 'schedule-row__task';
+                    else if (row.indexOf(cell) === 1) cellElement.className = 'schedule-row__count';
+                    else cellElement.className = 'schedule-row__day';
                     cellElement.textContent = cell;
                     rowElement.appendChild(cellElement);
                 });
@@ -179,7 +179,7 @@
     }
 
     function init() {
-        document.querySelectorAll('.service-image-container').forEach(initPhotoCarousel);
+        document.querySelectorAll('.card__photo').forEach(initPhotoCarousel);
     }
 
     if (document.readyState === 'loading') {
