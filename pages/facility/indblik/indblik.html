@@ -17,25 +17,25 @@ scripts:
             <div class="row">
                 <div class="card card--soft card--compact card--center">
                     <div class="stat">1</div>
-                    <h3>Analyse & Forståelse</h3>
+                    <h2 class="heading heading--md">Analyse & Forståelse</h2>
                     <p>Vi starter altid med en grundig analyse af kundens behov, udfordringer og målsætninger for at skabe den perfekte løsning.</p>
                 </div>
 
                 <div class="card card--soft card--compact card--center">
                     <div class="stat">2</div>
-                    <h3>Skræddersyet Plan</h3>
+                    <h2 class="heading heading--md">Skræddersyet Plan</h2>
                     <p>Baseret på analysen udvikler vi en detaljeret serviceplan der er tilpasset specifikke krav og forventninger.</p>
                 </div>
 
                 <div class="card card--soft card--compact card--center">
                     <div class="stat">3</div>
-                    <h3>Professionel Udførelse</h3>
+                    <h2 class="heading heading--md">Professionel Udførelse</h2>
                     <p>Vores erfarne teams udfører alle opgaver med højeste kvalitet, sikkerhed og opmærksomhed på detaljer.</p>
                 </div>
 
                 <div class="card card--soft card--compact card--center">
                     <div class="stat">4</div>
-                    <h3>Kontinuerlig Optimering</h3>
+                    <h2 class="heading heading--md">Kontinuerlig Optimering</h2>
                     <p>Vi monitorerer løbende performance, indsamler feedback og optimerer vores services for bedst mulige resultater.</p>
                 </div>
             </div>
@@ -44,10 +44,10 @@ scripts:
 
             <div class="row">
                 <div class="card card--soft card--accent-left card--accent-primary">
-                    <h3>
+                    <h2 class="heading heading--md">
                         <iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon>
                         Kvalitetssikring
-                    </h3>
+                    </h2>
                     <ul class="checklist checklist--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>Systematiske kvalitetskontroller ved hver service</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>Faste medarbejdere med løbende træning</li>
@@ -59,10 +59,10 @@ scripts:
                 </div>
 
                 <div class="card card--soft card--accent-left card--accent-primary">
-                    <h3>
+                    <h2 class="heading heading--md">
                         <iconify-icon icon="fluent:handshake-20-filled" inline></iconify-icon>
                         Kundeforhold
-                    </h3>
+                    </h2>
                     <ul class="checklist checklist--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>Dedikeret account manager for hver kunde</li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>Telefon hverdage 8–16 og akut hjælp efter aftale</li>
@@ -86,7 +86,7 @@ scripts:
             <div class="grid grid--3">
                 {%- from "partials/article-cards.njk" import gridCard %}
                 {%- for article in collections.artikel | newestFirst | head(3) %}
-                {{ gridCard(article, "h4") }}
+                {{ gridCard(article) }}
                 {%- endfor %}
             </div>
         </div>

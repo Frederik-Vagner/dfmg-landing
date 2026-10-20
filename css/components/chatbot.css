@@ -14,6 +14,12 @@
     transition: border-color var(--transition-normal);
 }
 
+/* Focus: the site's ring and a blue edge instead of the browser outline */
+.input:focus {
+    border-color: var(--primary);
+    box-shadow: var(--focus-ring);
+}
+
 .input--flex {
     flex: 1;
     border-radius: var(--radius-circle);

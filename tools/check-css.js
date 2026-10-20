@@ -25,6 +25,9 @@
 //               its block, and a modifier (thing--variant) needs its base class
 //               on the same element: card--glass without card, or intro__text
 //               with no intro around it, hides where the styles come from.
+//   headings    in the built pages, a heading may not skip a level (h2 then
+//               h4) and each page has one h1; a heading's size comes from a
+//               class (.heading--sm …), so the level can follow the outline.
 //   page names  classes named after a page instead of the UI element they
 //               are (.job-perk__emoji instead of .display-icon): a class
 //               with a word that is a page's file name under pages/ counts.
@@ -163,6 +166,19 @@ function bemProblems(html) {
     return problems;
 }
 
+// Heading outline of one built page: skipped levels and a missing or extra
+// h1. A redirect stub (meta refresh, no body) has no outline to check.
+function headingProblems(html) {
+    if (/http-equiv=["']refresh/i.test(html)) return [];
+    html = html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<!--[\s\S]*?-->/g, "");
+    const levels = [...html.matchAll(/<h([1-6])\b/gi)].map((m) => +m[1]);
+    const problems = [];
+    const h1 = levels.filter((l) => l === 1).length;
+    if (h1 !== 1) problems.push(`${h1} h1`);
+    levels.forEach((l, i) => { if (i && l > levels[i - 1] + 1) problems.push(`h${levels[i - 1]} then h${l}`); });
+    return problems;
+}
+
 // The breakpoints documented in css/tokens.css.
 const BREAKPOINTS = [768, 769, 860, 1024, 1100, 1200, 1440];
 
@@ -241,6 +257,10 @@ function check() {
         bem.get(b).add(rel(p.file).replace(/^_site\//, ""));
     }
 
+    // --- Heading outline of the built pages.
+    const headings = [];
+    for (const p of pages) for (const h of headingProblems(p.html)) headings.push(`${rel(p.file).replace(/^_site\//, "")}: ${h}`);
+
     const undefinedClasses = [...used.keys()].filter((c) => !defined.has(c) && !jsWords.has(c)).sort();
     const unusedClasses = [...defined].filter((c) => !used.has(c) && !jsWords.has(c)).sort();
 
@@ -270,6 +290,8 @@ function check() {
         pageNamedClasses: pageNamed.length,
         // Elements outside their block or modifiers without their base.
         bemStructure: bem.size,
+        // Skipped heading levels and pages without exactly one h1.
+        headingOutline: headings.length,
         inlineStyles: templateTexts.reduce((n, { t }) => n + (t.match(/\sstyle\s*=\s*["']/g) || []).length, 0),
         important: sourceCss.reduce((n, { css }) => n + (css.match(/!important/g) || []).length, 0),
         hardcodedColours: sourceCss
@@ -302,7 +324,7 @@ function check() {
         selectorsInTwoFiles: selectorsInSeveralFiles(sourceCss.filter(({ f }) => f.startsWith(path.join(ROOT, "css")))),
     };
 
-    return { undefinedClasses, unusedClasses, unlayered, counts, used, pageNamed, bem };
+    return { undefinedClasses, unusedClasses, unlayered, counts, used, pageNamed, bem, headings };
 }
 
 function main() {
@@ -349,6 +371,7 @@ function main() {
         const was = (baseline.counts || {})[k];
         if (was !== undefined && v > was) {
             errors.push(`${k} went up from ${was} to ${v}` + (k === "pageNamedClasses" ? ` (${result.pageNamed.join(", ")}); name the class after the element, e.g. .card, .row, .display-icon` : "")
+                + (k === "headingOutline" ? `: ${result.headings.join("; ")}` : "")
                 + (k === "bemStructure" ? `: ${[...result.bem].map(([b, f]) => `${b} (${[...f][0]})`).join("; ")}` : ""));
         }
         if (was !== undefined && v < was) stale.push(`${k} went down from ${was} to ${v}`);

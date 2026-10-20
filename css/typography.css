@@ -94,6 +94,17 @@ h1.subtitle, h2.subtitle, h3.subtitle {
     }
 }
 
+/* A heading whose level follows the page outline but whose size is set
+   here: --lg is the h3 size, --md a card title, --sm the h4 size, --xs h5/h6. */
+.heading {
+    font-weight: var(--font-weight-medium);
+}
+
+.heading--lg { font-size: var(--text-2xl); }
+.heading--md { font-size: var(--text-xl); }
+.heading--sm { font-size: var(--text-base); }
+.heading--xs { font-size: var(--text-sm); }
+
 /* Heading defaults */
 h1 {
     font-size: var(--heading-1);

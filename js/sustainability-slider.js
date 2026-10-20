@@ -62,7 +62,36 @@ class SustainabilitySlider {
             : slide.scrollTop > 0;
     }
 
+    // A slide whose content is taller than it scrolls inside itself; keyboard
+    // and screen-reader users need to be able to reach that scroll area too,
+    // so such a slide becomes a focusable, named region (and stops being one
+    // when the window grows tall enough).
+    markScrollableSlides() {
+        this.slides.forEach((slide) => {
+            const scrolls = slide.scrollHeight > slide.clientHeight + 1;
+            if (scrolls && !slide.hasAttribute('tabindex')) {
+                slide.setAttribute('tabindex', '0');
+                slide.setAttribute('role', 'region');
+                const heading = slide.querySelector('h1, h2, h3');
+                if (heading) slide.setAttribute('aria-label', heading.textContent.trim());
+            } else if (!scrolls && slide.getAttribute('tabindex') === '0') {
+                slide.removeAttribute('tabindex');
+                slide.removeAttribute('role');
+                slide.removeAttribute('aria-label');
+            }
+        });
+    }
+
     init() {
+        // Again whenever a slide's size or content changes (images load late).
+        this.markScrollableSlides();
+        window.addEventListener('load', () => this.markScrollableSlides());
+        if ('ResizeObserver' in window) {
+            const ro = new ResizeObserver(() => this.markScrollableSlides());
+            this.slides.forEach((slide) => { ro.observe(slide); if (slide.firstElementChild) ro.observe(slide.firstElementChild); });
+        } else {
+            window.addEventListener('resize', () => this.markScrollableSlides());
+        }
         this.setupNavigation();
         this.setupKeyboard();
         this.setupWheel();

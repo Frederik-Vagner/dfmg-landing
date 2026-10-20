@@ -400,7 +400,7 @@
     padding: var(--space-md);
 }
 
-.card__content h4 {
+.card__content :is(h2, h3, h4) {
     margin-bottom: var(--space-2xs);
     font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
@@ -613,7 +613,7 @@ a.card {
     flex-direction: column;
 }
 
-.calc-box h4 {
+.calc-box :is(h2, h3, h4) {
     font-size: var(--text-sm);
     margin: 0 0 0.15rem 0;
 }

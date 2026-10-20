@@ -237,7 +237,7 @@
 
 /* Slide headings: only the first slide carries the page's <h1>; the rest are
    <h2> for a valid document outline but keep the same visual weight. */
-.slide h2 {
+.slide h2:not(.heading) {
     font-size: var(--heading-1);
     margin-block: 0.67em; /* samme afstand som den <h1> de erstattede */
 }

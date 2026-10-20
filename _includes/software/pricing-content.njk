@@ -40,7 +40,7 @@
                 <div class="body intro__text">{{ t.comparison.body }}</div>
             </div>
 
-            <div class="table-scroll">
+            <div class="table-scroll" tabindex="0" role="region" aria-label="{{ t.comparison.title }}">
             <table class="matrix">
                 <thead>
                     <tr>
@@ -79,7 +79,7 @@
                 {% for item in t.faq.items %}
                 <div class="faq-item">
                     <div class="faq-question" data-action="toggle-platform-faq">
-                        <h4>{{ item.question }}</h4>
+                        <h2 class="heading heading--sm">{{ item.question }}</h2>
                         <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                     </div>
                     <div class="faq-answer">
