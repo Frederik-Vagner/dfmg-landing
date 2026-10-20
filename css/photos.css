@@ -87,6 +87,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-xl);
+    object-fit: cover;
 }
 
 /* Visual Gradient Backgrounds */
@@ -96,6 +97,11 @@
 
 .slide-visual--primary {
     background: var(--gradient-social);
+}
+
+/* A photo under the slide text, sized to stay inside the slide */
+.slide-visual--short {
+    height: 300px;
 }
 
 @media (max-width: 768px) {
