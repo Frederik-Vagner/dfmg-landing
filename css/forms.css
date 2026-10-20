@@ -41,21 +41,21 @@
     resize: vertical;
 }
 
-/* ── Platform Form (compact variant) ── */
-.platform-form .form-group {
+/* ── Stacked form: labels above full-width fields (the platform forms) ── */
+.stacked-form .form-group {
     margin-bottom: var(--space-md);
 }
 
-.platform-form label {
+.stacked-form label {
     display: block;
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
     margin-bottom: var(--space-3xs);
 }
 
-.platform-form input,
-.platform-form select,
-.platform-form textarea {
+.stacked-form input,
+.stacked-form select,
+.stacked-form textarea {
     width: 100%;
     padding: var(--space-xs) var(--space-sm);
     border: var(--border-light);
@@ -66,15 +66,15 @@
     box-sizing: border-box;
 }
 
-.platform-form input:focus,
-.platform-form select:focus,
-.platform-form textarea:focus {
+.stacked-form input:focus,
+.stacked-form select:focus,
+.stacked-form textarea:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: var(--focus-ring);
 }
 
-.platform-form textarea {
+.stacked-form textarea {
     min-height: 120px;
     resize: vertical;
 }

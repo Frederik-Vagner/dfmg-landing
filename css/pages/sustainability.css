@@ -28,7 +28,7 @@
 /* Zero specificity, so it only removes the browser's bullets and indent.
    As a plain class selector it outranked .slide-feature-list li by source
    order and stripped the cards' padding and spacing. */
-:where(.sustainability-page) :where(ul, li) {
+:where(.slide-deck) :where(ul, li) {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -43,14 +43,14 @@
 }
 
 /* Reset & Base (font-family, line-height inherited from body) */
-.sustainability-page {
+.slide-deck {
     background: var(--white);
     height: 100vh;
     overflow: hidden;
 }
 
-.sustainability-page .vertical-container,
-.sustainability-page .horizontal-container {
+.slide-deck .vertical-container,
+.slide-deck .horizontal-container {
     position: relative;
     z-index: var(--z-bg);
 }
@@ -380,7 +380,7 @@
    Placed at the end of the file so it wins over the base rules above.
    ======================================== */
 @media (max-width: 768px) {
-    .sustainability-page {
+    .slide-deck {
         height: auto;
         overflow: visible;
     }

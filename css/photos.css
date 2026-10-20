@@ -90,11 +90,11 @@
 }
 
 /* Visual Gradient Backgrounds */
-.environment-visual {
+.slide-visual--success {
     background: var(--bg-gradient-success);
 }
 
-.social-visual {
+.slide-visual--primary {
     background: var(--gradient-social);
 }
 
