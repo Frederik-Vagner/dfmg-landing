@@ -58,7 +58,7 @@
     margin: 0 auto;
     color: var(--gray);
     font-size: var(--text-sm);
-    line-height: 2;
+    line-height: var(--leading-loose);
 }
 
 .screenshot-placeholder__step {

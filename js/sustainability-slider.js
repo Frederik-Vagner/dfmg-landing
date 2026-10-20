@@ -39,7 +39,7 @@ class SustainabilitySlider {
         // Keep the two modes in sync when the viewport crosses the breakpoint
         // (rotation, or a desktop window dragged narrow).
         const onChange = () => {
-            if (this.isMobile()) this.container.style.transform = '';
+            if (this.isMobile()) this.container.style.removeProperty('--slide-index');
             else this.applyTransform();
         };
         if (this.mq.addEventListener) this.mq.addEventListener('change', onChange);
@@ -180,11 +180,9 @@ class SustainabilitySlider {
         });
     }
 
+    // The CSS turns --slide-index into the deck's translate (sustainability.css).
     applyTransform() {
-        const value = -this.currentSlide * 100;
-        this.container.style.transform = this.direction === 'horizontal'
-            ? `translateX(${value}vw)`
-            : `translateY(${value}vh)`;
+        this.container.style.setProperty('--slide-index', this.currentSlide);
     }
 
     goToSlide(index) {

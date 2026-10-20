@@ -44,7 +44,7 @@
                 var m = getMetrics();
                 if (currentIndex > m.max) currentIndex = m.max;
                 var moveDistance = currentIndex * (m.cardWidth + m.gap);
-                track.style.transform = 'translateX(-' + moveDistance + 'px)';
+                track.style.setProperty('--carousel-offset', -moveDistance + 'px');
             }
 
             // Find associated controls (sibling or parent scope)

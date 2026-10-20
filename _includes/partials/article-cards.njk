@@ -4,7 +4,7 @@
 {#- Large card at the top of Nyheder; `slot` is the filter it shows for. -#}
 {% macro featuredCard(article, slot) %}
 {%- set a = article.data -%}
-<div class="card card--split" data-featured-category="{{ slot }}">
+<div class="card card--split" data-featured-category="{{ slot }}"{% if slot != "all" %} hidden{% endif %}>
     <div class="card__image">
         <div class="badge-inline badge-inline--caps badge-overlay badge-overlay--light">{{ a.category }}</div>
         <img data-photo-skip src="{{ a.image }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">

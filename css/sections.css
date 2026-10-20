@@ -63,7 +63,7 @@
 .hero--primary .title {
     font-size: var(--heading-1);
     font-weight: var(--font-weight-bold);
-    line-height: 1.25;
+    line-height: var(--leading-tight);
     margin-bottom: var(--space-sm);
     color: var(--white);
 }
@@ -213,7 +213,7 @@
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: var(--tracking-wider);
     color: var(--primary-text);
     margin-bottom: var(--space-2xs);
 }
@@ -227,7 +227,7 @@
 .feature__text {
     font-size: var(--text-base);
     color: var(--gray);
-    line-height: 1.7;
+    line-height: var(--leading-relaxed);
     margin-bottom: var(--space-md);
 }
 
@@ -271,8 +271,10 @@
     position: relative;
 }
 
+/* --carousel-offset is set by js/carousel.js as the arrows move the track */
 .carousel-track {
     display: flex;
+    transform: translateX(var(--carousel-offset, 0));
     transition: transform 0.4s ease;
     width: max-content;
     gap: var(--space-md);

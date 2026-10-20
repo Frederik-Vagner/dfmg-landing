@@ -123,7 +123,7 @@
 .nav .nav__lang {
     color: var(--text-on-dark-muted);
     font-size: var(--text-xs);
-    letter-spacing: 0.05em;
+    letter-spacing: var(--tracking-wide);
     padding: var(--space-2xs) var(--space-xs);
     border: 1px solid var(--white-a25);
     border-radius: var(--radius-circle);
@@ -195,7 +195,7 @@
     color: var(--text-on-dark-muted);
     font-size: 0.8em;
     display: block;
-    line-height: 1.4;
+    line-height: var(--leading-snug);
     white-space: normal;
     overflow-wrap: break-word;
 }
@@ -222,7 +222,7 @@
     transform: translateY(22px);
     font-weight: var(--font-weight-normal);
     color: var(--gray);
-    line-height: 1;
+    line-height: var(--leading-none);
 }
 
 .header__contact span:first-child {
@@ -329,7 +329,7 @@
     font-size: var(--text-xs);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: var(--tracking-wide);
     padding: var(--space-3xs) var(--space-xs);
 }
 

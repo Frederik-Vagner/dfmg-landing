@@ -93,7 +93,7 @@
     display: flex;
     gap: var(--space-2xs);
     padding: var(--space-3xs) var(--space-2xs);
-    transition: all var(--transition-fast);
+    transition: background-color var(--transition-fast);
     align-items: center;
     font-size: var(--text-sm);
 }
@@ -213,11 +213,6 @@
 
 @layer pages {
 
-/* Employee-count field: hidden until "per medarbejder" pricing is picked
-   (js/prisberegner.js shows it by setting display on the element). */
-.employees-field {
-    display: none;
-}
 
 /* generated:start */
 .calc-column__title {

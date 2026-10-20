@@ -66,7 +66,7 @@ body {
        and every component re-declared charcoal for its own elements. */
     color: var(--charcoal);
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.6;
+    line-height: var(--leading-relaxed);
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -162,4 +162,13 @@ body {
     outline-offset: 2px;
 }
 
+}
+
+/* The hidden attribute always hides, whatever display a component sets.
+   Scripts show and hide parts with it (el.hidden) instead of writing
+   style.display; the last layer wins over every component's own display. */
+@layer state {
+    [hidden] {
+        display: none;
+    }
 }

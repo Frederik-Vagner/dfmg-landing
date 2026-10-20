@@ -14,7 +14,7 @@
     font-size: var(--text-xs);
     font-weight: var(--font-weight-medium);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: var(--tracking-wider);
     margin-bottom: var(--space-sm);
     box-shadow: var(--shadow-lg);
     backdrop-filter: blur(10px);
@@ -68,7 +68,7 @@
 /* A category label: capitals, spaced out */
 .badge-inline--caps {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: var(--tracking-wider);
 }
 
 /* Overlay badge — positioned over images */

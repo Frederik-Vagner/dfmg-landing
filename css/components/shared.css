@@ -151,7 +151,7 @@
 
 .callout__text {
     font-size: var(--text-base);
-    line-height: 1.6;
+    line-height: var(--leading-relaxed);
     color: var(--gray);
 }
 
@@ -196,7 +196,7 @@
 }
 
 .footer__logo-link {
-    line-height: 1;
+    line-height: var(--leading-none);
 }
 
 .footer__social {

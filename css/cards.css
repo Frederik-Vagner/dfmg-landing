@@ -68,7 +68,7 @@
 /* A card you can pick: outlined in blue and lifted a little on hover */
 .card--selectable {
     border: 2px solid transparent;
-    transition: all var(--transition-normal);
+    transition: border-color var(--transition-normal), transform var(--transition-normal);
 }
 
 .card--selectable:hover {
@@ -141,7 +141,7 @@
 
 .card p {
     margin-bottom: var(--space-2xs);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
     font-weight: var(--font-weight-normal);
     color: var(--gray);
 }
@@ -238,7 +238,7 @@
 .card--overlay p {
     margin: 0 0 var(--space-md) 0;
     font-size: var(--text-base);
-    line-height: 1.4;
+    line-height: var(--leading-snug);
     min-height: 2.66rem;
 }
 
@@ -246,7 +246,6 @@
 .card--media {
     padding: 0;
     overflow: hidden;
-    transition: all var(--transition-normal);
 }
 
 .card--media .article-image {
@@ -270,7 +269,7 @@
 .card--media .article-excerpt {
     color: var(--gray-light);
     font-size: var(--text-base);
-    line-height: 1.6;
+    line-height: var(--leading-relaxed);
     margin-bottom: var(--space-md);
     padding: 0;
     background: none;
@@ -290,7 +289,6 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: all var(--transition-normal);
 }
 
 .card--hover-line::before {
@@ -309,17 +307,14 @@
 }
 
 /* Split card variant */
+/* The featured article: one per filter; js/nyheder.js shows the one for the
+   active filter with the hidden attribute (only "all" shows before that). */
 .card--split {
     padding: 0;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 200px;
-    display: none;
-}
-
-.card--split[data-featured-category="all"] {
-    display: grid;
 }
 
 .card--split .card__image {
@@ -357,14 +352,14 @@
 .card--split .card__title {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-medium);
-    line-height: 1.2;
+    line-height: var(--leading-tight);
     margin-bottom: var(--space-xs);
 }
 
 .card--split .card__text {
     color: var(--gray-light);
     font-size: var(--text-base);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
     margin-bottom: var(--space-md);
 }
 
@@ -392,7 +387,7 @@
 
 .card--sidebar ul li {
     margin-bottom: var(--space-2xs);
-    line-height: 1.4;
+    line-height: var(--leading-snug);
 }
 
 /* Card content (used inside card--gallery etc.) */
@@ -445,7 +440,7 @@ a.card {
 .card__text {
     font-size: var(--text-base);
     color: var(--gray);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
 }
 
 /* An icon on the brand blue: a rounded square, or --round and centred */
@@ -512,13 +507,13 @@ a.card {
     font-size: var(--text-sm);
     color: var(--gray);
     margin-bottom: var(--space-md);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
 }
 
 .plan__price {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
-    line-height: 1;
+    line-height: var(--leading-none);
 }
 
 .plan__price small {
@@ -552,7 +547,7 @@ a.card {
     min-height: 600px;
     padding: 0;
     overflow: hidden;
-    transition: all var(--transition-normal);
+    transition: box-shadow var(--transition-normal);
 }
 
 .card--wide:hover {
@@ -624,7 +619,7 @@ a.card {
 .stat {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-medium);
-    line-height: 1;
+    line-height: var(--leading-none);
     margin-bottom: var(--space-2xs);
     display: block;
 }
@@ -643,7 +638,7 @@ a.card {
     color: var(--gray);
     font-size: var(--text-xs);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--tracking-wide);
     margin-bottom: var(--space-2xs);
 }
 
@@ -677,7 +672,7 @@ a.card {
     margin-top: var(--space-lg);
     border: 2px dashed var(--color-border-muted);
     text-align: center;
-    transition: all var(--transition-normal);
+    transition: background var(--transition-normal), border-color var(--transition-normal);
 }
 
 .card--dashed:hover {

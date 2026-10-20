@@ -22,7 +22,7 @@
             // The featured slot belongs to the category view; a search hides it.
             featuredArticles.forEach(featured => {
                 const show = !searchTerm && featured.getAttribute('data-featured-category') === activeFilter;
-                featured.style.display = show ? 'grid' : 'none';
+                featured.hidden = !show;
             });
 
             let shown = 0;
@@ -30,7 +30,7 @@
                 const inCategory = activeFilter === 'all' || card.getAttribute('data-category') === activeFilter;
                 const matches = !searchTerm || cardText(card).includes(searchTerm);
                 const show = inCategory && matches;
-                card.style.display = show ? 'block' : 'none';
+                card.hidden = !show;
                 if (show) shown++;
             });
 

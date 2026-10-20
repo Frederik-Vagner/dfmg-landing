@@ -4,8 +4,8 @@
 
         if (dropdownSelected && dropdownOptions) {
             dropdownSelected.addEventListener('click', function() {
-                const isOpen = dropdownOptions.style.display === 'block';
-                dropdownOptions.style.display = isOpen ? 'none' : 'block';
+                const isOpen = !dropdownOptions.hidden;
+                dropdownOptions.hidden = isOpen;
                 dropdownOptions.classList.toggle('open', !isOpen);
                 dropdownSelected.classList.toggle('open', !isOpen);
                 // Set here: the dropdown stops clicks from bubbling, so the shared
@@ -17,7 +17,7 @@
             document.addEventListener('click', function(event) {
                 const dropdown = dropdownSelected.closest('.custom-dropdown');
                 if (!dropdown.contains(event.target)) {
-                    dropdownOptions.style.display = 'none';
+                    dropdownOptions.hidden = true;
                     dropdownOptions.classList.remove('open');
                     dropdownSelected.classList.remove('open');
                     dropdownSelected.setAttribute('aria-expanded', 'false');

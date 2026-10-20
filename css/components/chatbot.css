@@ -50,7 +50,7 @@
     align-items: center;
     justify-content: center;
     font-size: var(--text-2xl);
-    transition: all var(--transition-normal);
+    transition: box-shadow var(--transition-normal);
     box-shadow: 0 4px 12px var(--black-a15);
     color: var(--white);
 }
@@ -121,7 +121,7 @@
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     border-bottom: 3px solid transparent;
-    transition: all var(--transition-normal);
+    transition: background-color var(--transition-normal), border-bottom-color var(--transition-normal), color var(--transition-normal);
     background: white;
 }
 
@@ -212,7 +212,7 @@
 
 .chatbot .faq-answer p {
     font-size: var(--text-sm);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
     color: var(--gray-light);
     margin: 0;
     /* forms.css pads .faq-answer p; the 16px above is the only inset wanted
@@ -237,7 +237,7 @@
 .chatbot__description {
     color: var(--gray-light);
     font-size: var(--text-sm);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
     margin-bottom: var(--space-md);
     text-align: center;
 }
@@ -315,7 +315,7 @@
     box-shadow: var(--shadow-lg);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
-    line-height: 1.3;
+    line-height: var(--leading-snug);
     max-width: 180px;
     display: none;
 }
@@ -383,7 +383,7 @@
 .chatbot__callback-note small {
     color: var(--gray-light);
     font-size: var(--text-xs);
-    line-height: 1.4;
+    line-height: var(--leading-snug);
 }
 
 }

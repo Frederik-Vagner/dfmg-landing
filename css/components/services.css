@@ -79,7 +79,7 @@
     transition: transform 0.4s ease;
     text-align: center;
     margin: 0 auto;
-    line-height: 1.2;
+    line-height: var(--leading-tight);
     min-height: 1.44rem;
     display: flex;
     align-items: center;
@@ -101,6 +101,12 @@
     z-index: var(--z-expanded);
     overflow-y: auto;
     height: 100vh;
+}
+
+/* Hidden at once while a column closes, before the script removes it */
+.panels__detail--closing {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Expanded overlay content — dynamically created by services.js */
@@ -167,7 +173,7 @@
     position: absolute;
     left: 0;
     font-size: var(--text-3xl);
-    line-height: 1;
+    line-height: var(--leading-none);
     top: 50%;
     transform: translateY(-55%);
 }
@@ -211,7 +217,7 @@
 .panels__benefit-text {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
-    line-height: 1.4;
+    line-height: var(--leading-snug);
 }
 
 .panels__detail-actions {
@@ -229,7 +235,7 @@
 .panels__text {
     opacity: 0;
     transform: translateY(20px);
-    transition: all var(--transition-normal) 0.2s;
+    transition: opacity var(--transition-normal) 0.2s, transform var(--transition-normal) 0.2s;
     font-size: var(--text-lg);
     margin-bottom: var(--space-lg);
     text-align: center;
@@ -243,7 +249,7 @@
 .panels__features {
     opacity: 0;
     transform: translateY(20px);
-    transition: all var(--transition-normal) 0.3s;
+    transition: opacity var(--transition-normal) 0.3s, transform var(--transition-normal) 0.3s;
     list-style: none;
     padding: 0;
     margin-bottom: var(--space-lg);
@@ -266,7 +272,7 @@ color: var(--charcoal);
 .panels__actions {
     opacity: 0;
     transform: translateY(20px);
-    transition: all var(--transition-normal) 0.4s;
+    transition: opacity var(--transition-normal) 0.4s, transform var(--transition-normal) 0.4s;
     display: flex;
     gap: var(--space-sm);
 }
@@ -339,7 +345,7 @@ color: var(--charcoal);
 .panels__item--closed .panels__content {
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-normal);
+    transition: padding var(--transition-normal), min-height var(--transition-normal);
 }
 
 /* ========================================

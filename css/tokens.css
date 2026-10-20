@@ -19,7 +19,7 @@
 
    Inline style="" attributes sit above all of these. CSS outside any layer
    would too, so every stylesheet and <style> block declares its layer. */
-@layer tokens, base, core, components, pages;
+@layer tokens, base, core, components, pages, state;
 
 @layer tokens {
 
@@ -123,6 +123,20 @@
     /* Headings shrink with the screen, so phones need no override. */
     --heading-2: clamp(1.75rem, 1.5rem + 1vw, 2rem);    /* 28-32px  h2, section titles */
     --heading-1: clamp(2rem, 1.4rem + 2.5vw, 2.5rem);   /* 32-40px  h1, page and hero titles */
+
+    /* Line height: none for one-line numbers and icons, tight for headings,
+       snug for small print and card text, normal/relaxed for running text */
+    --leading-none: 1;
+    --leading-tight: 1.2;
+    --leading-snug: 1.4;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.6;
+    --leading-loose: 2;
+
+    /* Letter spacing: tight for big titles, wide/wider for small capitals */
+    --tracking-tight: -0.5px;
+    --tracking-wide: 0.5px;
+    --tracking-wider: 1px;
     --font-weight-light: 200;
     --font-weight-normal: 400;
     --font-weight-medium: 500;

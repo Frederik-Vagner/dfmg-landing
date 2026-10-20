@@ -265,7 +265,7 @@ function initTableOfContents() {
 
     const headings = articleBody.querySelectorAll('h2, h3');
     if (headings.length === 0) {
-        tocList.closest('.card--sidebar').style.display = 'none';
+        tocList.closest('.card--sidebar').hidden = true;
         return;
     }
 
@@ -276,7 +276,7 @@ function initTableOfContents() {
         const link = document.createElement('a');
         link.href = '#' + heading.id;
         link.textContent = heading.textContent;
-        if (heading.tagName === 'H3') link.style.paddingLeft = '1rem';
+        if (heading.tagName === 'H3') link.classList.add('toc-list__link--sub');
 
         li.appendChild(link);
         tocList.appendChild(li);
@@ -307,8 +307,8 @@ function initNewsletterForm() {
             body: JSON.stringify({ _subject: 'Nyhedsbrev tilmelding', email: email })
         }).then((res) => {
             if (!res.ok) throw new Error('send failed');
-            form.style.display = 'none';
-            document.getElementById('newsletter-success').style.display = 'block';
+            form.hidden = true;
+            document.getElementById('newsletter-success').hidden = false;
         }).catch(() => {
             window.location.href = 'mailto:' + window.DFMG.email + '?subject=Nyhedsbrev tilmelding&body=Tilmeld venligst denne email til jeres nyhedsbrev: ' + encodeURIComponent(email);
         });

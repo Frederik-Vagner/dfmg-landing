@@ -28,9 +28,10 @@
     "zIndexLiterals": 0,
     "fontWeightLiterals": 0,
     "radiusLiterals": 0,
-    "lineHeightLiterals": 34,
-    "letterSpacingLiterals": 11,
-    "transitionAll": 20,
+    "jsStyleWrites": 0,
+    "lineHeightLiterals": 0,
+    "letterSpacingLiterals": 0,
+    "transitionAll": 0,
     "undocumentedBreakpoints": 0,
     "selectorsInTwoFiles": 0
   }

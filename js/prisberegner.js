@@ -168,10 +168,10 @@
             document.querySelector('[data-price="tasks"] [data-label]').textContent = `Opgaver (${document.querySelectorAll('.task-checkbox:checked').length} valgt)`;
             const discountLine = document.querySelector('[data-price="discount"]');
             if (prices.discount > 0) {
-                discountLine.style.display = '';
+                discountLine.hidden = false;
                 discountLine.querySelector('[data-label]').textContent = `Rabat ${prices.discount}% (${prices.frequency}x/uge)`;
             } else {
-                discountLine.style.display = 'none';
+                discountLine.hidden = true;
             }
 
             // Update task summary
@@ -249,8 +249,8 @@
                     state.sizeMethod = method;
                     document.querySelectorAll('[data-size-method]').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    document.getElementById('area-input').style.display = method === 'area' ? 'block' : 'none';
-                    document.getElementById('employees-input').style.display = method === 'employees' ? 'block' : 'none';
+                    document.getElementById('area-input').hidden = method !== 'area';
+                    document.getElementById('employees-input').hidden = method !== 'employees';
                     debouncedUpdate();
                 });
             });

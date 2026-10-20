@@ -217,7 +217,7 @@ color: var(--charcoal);
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-lg);
     font-size: var(--text-sm);
-    line-height: 1.4;
+    line-height: var(--leading-snug);
 }
 
 .message--in {
@@ -328,7 +328,7 @@ color: var(--charcoal);
 .schedule-mock__visit {
     border-radius: var(--radius-sm);
     padding: 3px 0;
-    line-height: 1.2;
+    line-height: var(--leading-tight);
     color: var(--white);
 }
 

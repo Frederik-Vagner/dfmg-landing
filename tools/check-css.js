@@ -311,7 +311,12 @@ function check() {
         fontWeightLiterals: countLiterals(sourceCss.filter(({ f }) => !f.endsWith("fonts.css")), "font-weight",
             (v) => !/^var\(--font-weight-/.test(v) && !/^(inherit|normal|bold)$/.test(v)),
         radiusLiterals: countLiterals(sourceCss, "border(?:-[a-z]+)*-radius", (v) => (v.replace(/var\([^)]*\)/g, "").match(/[\d.]+(px|rem|em|%)/g) || []).length > 0),
-        // Not tokens yet; counted so they cannot grow while that is pending.
+        // Scripts writing a style property directly (el.style.display = …)
+        // instead of toggling a class or the hidden attribute; a CSS custom
+        // property (style.setProperty('--x', …)) is how a script hands CSS a
+        // number, so that does not count.
+        jsStyleWrites: walk(path.join(ROOT, "js"), ".js").reduce((n, f) => n + (read(f).match(/\.style\.(?!setProperty\(\s*['"]--|removeProperty\(\s*['"]--)[\w$]+|\.style\[|\.cssText\b/g) || []).length, 0),
+        // Must be a token from tokens.css (--leading-*, --tracking-*).
         lineHeightLiterals: countLiterals(sourceCss, "line-height", (v) => /^[\d.]+(px|rem|em|%)?$/.test(v)),
         letterSpacingLiterals: countLiterals(sourceCss, "letter-spacing", (v) => /^-?[\d.]+(px|rem|em)$/.test(v) && parseFloat(v) !== 0),
         transitionAll: sourceCss.reduce((n, { css }) => n + (css.match(/transition(?:-property)?\s*:\s*all\b/g) || []).length, 0),

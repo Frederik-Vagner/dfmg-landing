@@ -120,6 +120,11 @@
     margin-bottom: var(--space-2xs);
 }
 
+/* A sub-section (h3) of the article: indented under its section */
+.toc-list .toc-list__link--sub {
+    padding-left: var(--space-sm);
+}
+
 .toc-list a {
     color: var(--gray-light);
     text-decoration: none;
@@ -143,7 +148,7 @@
     background: var(--white-a80);
     border-radius: var(--radius-md);
     border: 1px solid var(--white-a30);
-    transition: all var(--transition-normal);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .slide-feature-list li iconify-icon {

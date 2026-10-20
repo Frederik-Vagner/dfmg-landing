@@ -243,8 +243,7 @@ function closeExpandedContent(event) {
         // Hide panels__item--open content immediately before removing
         const expandedContent = col.querySelector('.panels__detail');
         if (expandedContent) {
-            expandedContent.style.opacity = '0';
-            expandedContent.style.visibility = 'hidden';
+            expandedContent.classList.add('panels__detail--closing');
             // Remove after a brief moment to allow for smooth visual transition
             setTimeout(() => {
                 if (expandedContent.parentNode) {

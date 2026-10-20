@@ -190,7 +190,6 @@
     background: var(--white);
     border: var(--border-light);
     border-radius: var(--radius-normal);
-    display: none;
     z-index: var(--z-dropdown);
     box-sizing: border-box;
 }
@@ -221,7 +220,7 @@
     padding: var(--space-xs) var(--space-sm);
     cursor: pointer;
     position: relative;
-    transition: all var(--transition-fast);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .dropdown-options label:hover {
@@ -278,7 +277,7 @@
     border-radius: var(--radius-circle);
     padding: 0 var(--space-xs);
     min-width: 300px;
-    transition: all var(--transition-normal);
+    transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .search-bar:focus-within {
@@ -453,12 +452,3 @@
 
 }
 
-/* Migrated rules (see the layer order in tokens.css). */
-@layer components {
-
-/* Hidden until the form is sent; js/components.js shows it. */
-.newsletter-success {
-    display: none;
-}
-
-}
