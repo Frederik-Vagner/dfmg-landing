@@ -3,7 +3,7 @@
    ==================================== */
 
 
-@layer core {
+@layer components {
 
 /* A field's validation message, shown next to the field it describes. */
 .field-error {

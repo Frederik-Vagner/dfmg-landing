@@ -5,7 +5,7 @@
    ======================================== */
 
 /* Base styles of the page (formerly css/components/rengoering.css). */
-@layer core {
+@layer components {
 
 
 .card__photo {

@@ -2,7 +2,7 @@
    CARDS
    ==================================== */
 
-@layer core {
+@layer components {
 
 /* Base card: one look everywhere. A component adds layout and content
    styles; its look comes from these tokens and the modifiers below. */

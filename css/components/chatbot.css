@@ -3,7 +3,7 @@
    Loaded last on every page that shows the widget, which is where its
    <style> block used to sit, so the cascade order is unchanged.
    ======================================== */
-@layer core {
+@layer components {
 
 .input {
     padding: var(--space-xs) var(--space-sm);

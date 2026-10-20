@@ -4,7 +4,7 @@
    price list and the calculator's form table
    ==================================== */
 
-@layer core {
+@layer components {
 
 /* A plain data table: dark header row, white body, rows ruled off */
 .table {

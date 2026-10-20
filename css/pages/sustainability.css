@@ -4,7 +4,7 @@
    ======================================== */
 
 /* The slide deck: containers, themes and slide layouts (formerly css/components/slides.css). */
-@layer core {
+@layer components {
 
 /* Loaded before the slide styles, as it was in layout.css: where both set
    the same property on a slide, the slide styles win. */

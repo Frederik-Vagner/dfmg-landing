@@ -12,14 +12,16 @@
 
      tokens      design values (this file)
      base        reset and element defaults (base.css)
-     core        the base styles of the building blocks: containers,
-                 sections, text, buttons, cards, forms, header, footer
-     components  named components built on them (shared.css, platform.css)
+     components  every building block and component: layout, sections,
+                 text, buttons, cards, forms, header, footer, widgets.
+                 Within this layer the more specific selector wins, then
+                 the file that loads later (see the order in base.html).
      pages       styles that belong to a single page
+     state       [hidden] and nothing else (base.css)
 
    Inline style="" attributes sit above all of these. CSS outside any layer
    would too, so every stylesheet and <style> block declares its layer. */
-@layer tokens, base, core, components, pages, state;
+@layer tokens, base, components, pages, state;
 
 @layer tokens {
 

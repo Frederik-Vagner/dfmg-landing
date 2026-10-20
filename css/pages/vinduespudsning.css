@@ -3,7 +3,7 @@
    ======================================== */
 
 /* Base styles of the page (formerly css/components/vinduespudsning.css). */
-@layer core {
+@layer components {
 
 .window-panel {
     height: 200px;

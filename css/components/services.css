@@ -1,7 +1,7 @@
 /* Service panels: full-height columns that open on click to show a
    service in detail (services and facility pages; built by js/services.js) */
 
-@layer core {
+@layer components {
 
 .panels {
     height: 100vh;

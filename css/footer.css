@@ -3,7 +3,7 @@
    ==================================== */
 
 
-@layer core {
+@layer components {
 
 .footer {
     background: var(--bg-gradient-charcoal);

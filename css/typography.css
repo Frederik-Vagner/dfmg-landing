@@ -2,7 +2,7 @@
    TYPOGRAPHY
    ==================================== */
 
-@layer core {
+@layer components {
 
 /* Semantic text classes */
 /* A section title is h2-sized; as the page's h1 it takes the h1 size. */

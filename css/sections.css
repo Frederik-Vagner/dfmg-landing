@@ -2,7 +2,7 @@
    SECTIONS & CONTAINERS
    ==================================== */
 
-@layer core {
+@layer components {
 
 /* Containers */
 .container {
@@ -411,9 +411,8 @@
     background-image: url('/images/service/hero1.jpg');
 }
 
-/* The first section on a page starts below the fixed header. In this layer
-   it outranks every section's own padding in the core layer, which is what
-   "!important" used to achieve. */
+/* The first section on a page starts below the fixed header. Last in this
+   file, so it wins over a section's own padding of the same specificity. */
 .first {
     padding-top: calc(var(--header-clearance) + var(--space-xl));
 }

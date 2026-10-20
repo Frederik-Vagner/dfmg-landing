@@ -5,7 +5,7 @@
    ==================================== */
 
 
-@layer core {
+@layer components {
 
 /* ── Checklist: an icon followed by a line of text ──
    The icon sits in its own column, so text that wraps lines up with the
@@ -96,12 +96,12 @@
 }
 
 /* ── Article Body Lists ── */
-.article-body ul, .article-body ol {
+.article-body :where(ul), .article-body :where(ol) {
     margin: var(--space-md) 0;
     padding-left: var(--space-lg);
 }
 
-.article-body li {
+.article-body :where(li) {
     margin-bottom: var(--space-xs);
     position: relative;
 }

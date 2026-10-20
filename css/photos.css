@@ -4,7 +4,7 @@
    placeholders, and placeholder icons
    ==================================== */
 
-@layer core {
+@layer components {
 
 /* ── Screenshot Placeholder ── */
 .screenshot-placeholder {

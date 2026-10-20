@@ -3,7 +3,7 @@
    ======================================== */
 
 /* The calculator layout (formerly css/components/calculator.css). */
-@layer core {
+@layer components {
 
 /* Calculator-specific reset */
 /* Not the task rows: they are labels now (so the text names the checkbox) and

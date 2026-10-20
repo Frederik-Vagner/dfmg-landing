@@ -3,7 +3,7 @@
    Global badge system — hero, inline, overlay
    ======================================== */
 
-@layer core {
+@layer components {
 
 /* Hero/decorative badge — glassmorphism style for dark backgrounds */
 .badge {

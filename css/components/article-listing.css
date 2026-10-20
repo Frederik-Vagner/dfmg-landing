@@ -4,7 +4,7 @@
    ======================================== */
 
 
-@layer core {
+@layer components {
 
 /* ── Breadcrumb ── */
 .breadcrumb {
@@ -199,11 +199,11 @@ color: var(--white);
     color: var(--charcoal-light);
 }
 
-.article-body p {
+.article-body :where(p) {
     margin-bottom: var(--space-md);
 }
 
-.article-body h1, .article-body h2 {
+.article-body :where(h1), .article-body :where(h2) {
     font-size: var(--text-2xl);
     margin: var(--space-lg) 0 var(--space-sm);
     font-weight: var(--font-weight-bold);
@@ -211,14 +211,14 @@ color: var(--white);
     color: var(--charcoal);
 }
 
-.article-body h3 {
+.article-body :where(h3) {
     font-size: var(--text-xl);
     margin: var(--space-lg) 0 var(--space-sm);
     font-weight: var(--font-weight-semibold);
     color: var(--charcoal);
 }
 
-.article-body strong {
+.article-body :where(strong) {
     font-weight: var(--font-weight-bold);
     color: var(--charcoal);
 }
@@ -244,13 +244,13 @@ color: var(--white);
     max-height: 420px;
 }
 
-.article-body img {
+.article-body :where(img) {
     max-width: 100%;
     height: auto;
     border-radius: var(--radius-sm);
     margin: var(--space-sm) 0;
 }
-.article-body blockquote {
+.article-body :where(blockquote) {
     border-left: 4px solid var(--charcoal);
     padding-left: var(--space-md);
     font-style: italic;
@@ -261,7 +261,7 @@ color: var(--white);
     position: relative;
 }
 
-.article-body blockquote::before {
+.article-body :where(blockquote)::before {
     content: "\201C";
     position: absolute;
     top: 0.5rem;
