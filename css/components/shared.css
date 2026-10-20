@@ -165,10 +165,6 @@
     margin-bottom: var(--space-2xl);
 }
 
-.btn__icon {
-    margin-right: var(--space-2xs);
-}
-
 .badge--light {
     background: var(--bg-light);
     box-shadow: none;

@@ -9,7 +9,8 @@
     "preview": "npm run build && eleventy-dev-server --dir=_site --port=8080",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:css": "node tools/check-css.js",
-    "css:baseline": "node tools/check-css.js --update"
+    "css:baseline": "node tools/check-css.js --update",
+    "check:layout": "node tools/check-layout.js"
   },
   "repository": {
     "type": "git",

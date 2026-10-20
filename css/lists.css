@@ -24,7 +24,10 @@
     margin: 0;
 }
 
+/* Always left-aligned, also in a centred card: the tick and its text read
+   as one line, not text centred away from its tick. */
 .checklist > li {
+    text-align: start;
     padding: var(--space-2xs) 0;
     font-size: var(--text-base);
     font-weight: var(--font-weight-medium);

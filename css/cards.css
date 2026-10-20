@@ -80,6 +80,16 @@
     margin-bottom: var(--space-sm);
 }
 
+/* A badge above a card's heading, and a row of buttons after its text, keep
+   their distance (a card's .body paragraph has no bottom margin). */
+:where(.card:not(.media)) > .badge-inline {
+    margin-bottom: var(--space-sm);
+}
+
+:where(.card) > .cluster:not(:first-child) {
+    margin-top: var(--space-md);
+}
+
 /* On a dark or coloured background: translucent, with a light edge */
 .card--glass {
     background: var(--overlay-light);

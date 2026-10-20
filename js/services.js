@@ -185,13 +185,13 @@ function showExpandedContent(column, serviceType) {
 
                 <div class="panels__specialties">
                     <h4 class="panels__specialties-title">Specialområder</h4>
-                    <div class="grid grid--2">
+                    <div class="grid grid--fit">
                         ${service.categories.map(category => `
                             <div class="panels__specialty-group">
                                 <h5 class="panels__specialty-title">${category.name}</h5>
-                                <ul class="panels__specialty-list">
+                                <ul class="checklist checklist--success checklist--compact">
                                     ${category.items.map(item => `
-                                        <li class="panels__specialty">${item}</li>
+                                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> ${item}</li>
                                     `).join('')}
                                 </ul>
                             </div>
@@ -200,20 +200,17 @@ function showExpandedContent(column, serviceType) {
                 </div>
             </div>
 
-            <div class="panels__detail-aside">
+            <div class="panels__detail-aside stack stack--loose">
                 <div class="panels__detail-image">
                     <img src="/images/service/${getImageName(serviceType)}.webp" alt="${service.title}" class="panels__detail-photo" loading="lazy" decoding="async">
                 </div>
                 <div class="panels__benefits">
                     <h4 class="panels__benefits-title">Hvorfor DFMG</h4>
-                    <div class="grid grid--2 grid--tight panels__benefits-grid">
+                    <ul class="checklist checklist--success grid grid--fit grid--tight">
                         ${service.features.map(feature => `
-                            <div class="panels__benefit">
-                                <iconify-icon icon="fluent:checkmark-20-filled" inline class="panels__benefit-icon"></iconify-icon>
-                                <span class="panels__benefit-text">${feature}</span>
-                            </div>
+                            <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> ${feature}</li>
                         `).join('')}
-                    </div>
+                    </ul>
                 </div>
 
                 <div class="panels__detail-actions">

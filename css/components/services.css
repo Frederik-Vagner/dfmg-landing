@@ -119,8 +119,11 @@
     margin: 0 auto;
 }
 
+/* The two columns split the panel evenly whatever their content wants
+   (min-width 0: a two-column list would otherwise widen its column). */
 .panels__detail-main {
     flex: 1;
+    min-width: 0;
     padding-right: var(--space-lg);
 }
 
@@ -134,6 +137,7 @@
 
 .panels__detail-aside {
     flex: 1;
+    min-width: 0;
     top: 2rem;
 }
 
@@ -154,30 +158,6 @@
     margin: unset;
 }
 
-.panels__specialty-list {
-    list-style: none;
-    padding: var(--space-2xs);
-    margin: 0;
-}
-
-.panels__specialty {
-    font-size: var(--text-sm);
-    margin-bottom: var(--space-3xs);
-    padding-left: var(--space-sm);
-    position: relative;
-    align-items: center;
-}
-
-.panels__specialty:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    font-size: var(--text-3xl);
-    line-height: var(--leading-none);
-    top: 50%;
-    transform: translateY(-55%);
-}
-
 .panels__specialty-title {
     font-weight: var(--font-weight-medium);
 }
@@ -188,43 +168,11 @@
     font-weight: var(--font-weight-semibold);
 }
 
-.panels__benefits-grid {
-    margin-bottom: var(--space-lg);
-}
-
-/* One benefit: a tick beside its text */
-.panels__benefit {
-    padding: var(--space-sm);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-}
-
-.panels__benefit-icon {
-    font-size: var(--text-base);
-    background: var(--bg-success-light);
-    padding: var(--space-2xs);
-    border-radius: var(--radius-round);
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.panels__benefit-text {
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--leading-snug);
-}
-
 .panels__detail-actions {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: var(--space-sm);
-    margin-top: var(--space-lg);
 }
 
 .panels__item--open .panels__title {
