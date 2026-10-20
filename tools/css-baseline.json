@@ -18,6 +18,7 @@
   },
   "counts": {
     "pageNamedClasses": 5,
+    "bemStructure": 0,
     "inlineStyles": 0,
     "important": 0,
     "hardcodedColours": 0,

@@ -21,6 +21,10 @@
 //               sizes an icon to the text around it, is allowed), and padding,
 //               margin and gap lengths that are not from the spacing scale (a
 //               nudge of 3px or less is allowed). These may only go down.
+//   BEM         in the built pages, an element (block__part) must sit inside
+//               its block, and a modifier (thing--variant) needs its base class
+//               on the same element: card--glass without card, or intro__text
+//               with no intro around it, hides where the styles come from.
 //   page names  classes named after a page instead of the UI element they
 //               are (.job-perk__emoji instead of .display-icon): a class
 //               with a word that is a page's file name under pages/ counts.
@@ -127,6 +131,38 @@ function pageNamedClasses(sourceCss) {
     return [...classes].filter((c) => c.split(/[-_]+/).some((w) => words.has(w))).sort();
 }
 
+// BEM structure in one built page: elements outside their block and
+// modifiers without their base class. Returns "kind: class" strings.
+const VOID = new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"]);
+function bemProblems(html) {
+    const problems = [];
+    const stack = [];
+    html = html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<style[\s\S]*?<\/style>/g, "").replace(/<!--[\s\S]*?-->/g, "");
+    for (const m of html.matchAll(/<(\/?)([a-zA-Z][\w-]*)([^>]*)>/g)) {
+        const [, closing, tag, attrs] = m;
+        const name = tag.toLowerCase();
+        if (closing) {
+            const i = stack.map((e) => e.tag).lastIndexOf(name);
+            if (i !== -1) stack.length = i;
+            continue;
+        }
+        const cm = attrs.match(/\sclass\s*=\s*(?:"([^"]*)"|'([^']*)')/);
+        const classes = cm ? (cm[1] ?? cm[2]).split(/\s+/).filter(Boolean) : [];
+        const around = new Set(stack.flatMap((e) => e.classes));
+        for (const c of classes) {
+            const base = c.split("--")[0];
+            if (c.includes("--") && !classes.includes(base)) problems.push(`modifier without its base: ${c}`);
+            if (base.includes("__")) {
+                const block = base.split("__")[0];
+                const inBlock = (x) => x === block || x.startsWith(block + "--");
+                if (!classes.some(inBlock) && ![...around].some(inBlock)) problems.push(`element outside its block: ${c}`);
+            }
+        }
+        if (!VOID.has(name) && !attrs.trim().endsWith("/")) stack.push({ tag: name, classes });
+    }
+    return problems;
+}
+
 // The breakpoints documented in css/tokens.css.
 const BREAKPOINTS = [768, 769, 860, 1024, 1100, 1200, 1440];
 
@@ -198,6 +234,13 @@ function check() {
         }
     }
 
+    // --- BEM structure of the built pages.
+    const bem = new Map();
+    for (const p of pages) for (const b of bemProblems(p.html)) {
+        if (!bem.has(b)) bem.set(b, new Set());
+        bem.get(b).add(rel(p.file).replace(/^_site\//, ""));
+    }
+
     const undefinedClasses = [...used.keys()].filter((c) => !defined.has(c) && !jsWords.has(c)).sort();
     const unusedClasses = [...defined].filter((c) => !used.has(c) && !jsWords.has(c)).sort();
 
@@ -225,6 +268,8 @@ function check() {
     const counts = {
         // Named after a page, not after what the element is.
         pageNamedClasses: pageNamed.length,
+        // Elements outside their block or modifiers without their base.
+        bemStructure: bem.size,
         inlineStyles: templateTexts.reduce((n, { t }) => n + (t.match(/\sstyle\s*=\s*["']/g) || []).length, 0),
         important: sourceCss.reduce((n, { css }) => n + (css.match(/!important/g) || []).length, 0),
         hardcodedColours: sourceCss
@@ -257,7 +302,7 @@ function check() {
         selectorsInTwoFiles: selectorsInSeveralFiles(sourceCss.filter(({ f }) => f.startsWith(path.join(ROOT, "css")))),
     };
 
-    return { undefinedClasses, unusedClasses, unlayered, counts, used, pageNamed };
+    return { undefinedClasses, unusedClasses, unlayered, counts, used, pageNamed, bem };
 }
 
 function main() {
@@ -303,7 +348,8 @@ function main() {
     for (const [k, v] of Object.entries(current.counts)) {
         const was = (baseline.counts || {})[k];
         if (was !== undefined && v > was) {
-            errors.push(`${k} went up from ${was} to ${v}` + (k === "pageNamedClasses" ? ` (${result.pageNamed.join(", ")}); name the class after the element, e.g. .card, .row, .display-icon` : ""));
+            errors.push(`${k} went up from ${was} to ${v}` + (k === "pageNamedClasses" ? ` (${result.pageNamed.join(", ")}); name the class after the element, e.g. .card, .row, .display-icon` : "")
+                + (k === "bemStructure" ? `: ${[...result.bem].map(([b, f]) => `${b} (${[...f][0]})`).join("; ")}` : ""));
         }
         if (was !== undefined && v < was) stale.push(`${k} went down from ${was} to ${v}`);
     }
