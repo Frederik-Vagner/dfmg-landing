@@ -42,7 +42,7 @@
 }
 
 /* Column styling */
-.column {
+.calc-column {
     display: flex;
     flex-direction: column;
     gap: var(--space-3xs);
@@ -74,18 +74,18 @@
 }
 
 /* Service Tasks Grid */
-.service-tasks {
+.task-grid {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     gap: 0.1rem var(--space-2xs);
 }
 
-/* Grundig-only task visibility */
-.grundig-only {
+/* Tasks that only belong to a deep clean ("grundig") */
+.task-item--deep {
     display: none;
 }
 
-.service-tasks.grundig-mode .grundig-only {
+.task-grid--deep .task-item--deep {
     display: flex;
 }
 
@@ -110,7 +110,7 @@
 }
 
 /* Price Column — sticky within its grid cell */
-.calculator-content > .column:last-child {
+.calculator-content > .calc-column:last-child {
     position: sticky;
     top: 0;
     align-self: start;
@@ -170,11 +170,11 @@
         grid-template-columns: 1fr 1.5fr;
     }
 
-    .calculator-content > .column:last-child {
+    .calculator-content > .calc-column:last-child {
         grid-column: 1 / -1;
     }
 
-    .service-tasks {
+    .task-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -195,7 +195,7 @@
         overflow: visible;
     }
 
-    .column {
+    .calc-column {
         overflow: visible;
     }
 

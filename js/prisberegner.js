@@ -273,14 +273,14 @@
                     document.querySelectorAll('[data-service-mode]').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
 
-                    const serviceSections = document.querySelectorAll('.service-tasks');
+                    const serviceSections = document.querySelectorAll('.task-grid');
                     if (type === 'grundig') {
-                        serviceSections.forEach(section => section.classList.add('grundig-mode'));
+                        serviceSections.forEach(section => section.classList.add('task-grid--deep'));
                         document.querySelectorAll('.task-checkbox').forEach(cb => { cb.checked = true; });
                     } else {
-                        serviceSections.forEach(section => section.classList.remove('grundig-mode'));
-                        document.querySelectorAll('.task-item:not(.grundig-only) .task-checkbox').forEach(cb => { cb.checked = true; });
-                        document.querySelectorAll('.grundig-only .task-checkbox').forEach(cb => { cb.checked = false; });
+                        serviceSections.forEach(section => section.classList.remove('task-grid--deep'));
+                        document.querySelectorAll('.task-item:not(.task-item--deep) .task-checkbox').forEach(cb => { cb.checked = true; });
+                        document.querySelectorAll('.task-item--deep .task-checkbox').forEach(cb => { cb.checked = false; });
                     }
                     debouncedUpdate();
                 });
