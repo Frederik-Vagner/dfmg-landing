@@ -54,10 +54,14 @@
 }
 
 /* ── Base Element Styles ── */
+/* The window scrolls (not the body), so the browser's own scroll behaviour
+   works: scroll restoration, anchor jumps, the mobile address bar. No bounce
+   past the ends; the charcoal shows if a browser bounces anyway. Anchors stop
+   below the fixed header. */
 html {
-    overflow: hidden;
-    height: 100%;
     background-color: var(--charcoal);
+    overscroll-behavior: none;
+    scroll-padding-top: var(--header-clearance);
 }
 
 body {
@@ -67,10 +71,8 @@ body {
     color: var(--charcoal);
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: var(--leading-relaxed);
-    height: 100%;
-    overflow-y: auto;
+    /* Passed on to the window: nothing scrolls sideways. */
     overflow-x: hidden;
-    overscroll-behavior: none;
     animation: page-enter 200ms ease-out;
 }
 
