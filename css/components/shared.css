@@ -204,15 +204,6 @@
     margin-bottom: var(--space-md);
 }
 
-.sidebar-cta {
-    text-align: center;
-}
-
-.sidebar-cta__text {
-    margin-bottom: var(--space-sm);
-    color: var(--gray);
-}
-
 .chat-contact {
     text-align: center;
 }

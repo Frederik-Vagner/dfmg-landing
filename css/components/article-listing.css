@@ -308,11 +308,11 @@ color: var(--white);
     flex-shrink: 0;
 }
 
-.related-image.sustainability { background: var(--gradient-sustainability); }
-.related-image.innovation { background: var(--gradient-innovation); }
-.related-image.insights { background: var(--gradient-insights); }
-.related-image.cases { background: var(--gradient-tips); }
-.related-image.tips { background: var(--gradient-cyan); }
+.related-image--sustainability { background: var(--gradient-sustainability); }
+.related-image--innovation { background: var(--gradient-innovation); }
+.related-image--insights { background: var(--gradient-insights); }
+.related-image--cases { background: var(--gradient-tips); }
+.related-image--tips { background: var(--gradient-cyan); }
 
 .related-content h4 {
     font-size: var(--text-sm);

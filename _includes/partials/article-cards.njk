@@ -5,15 +5,15 @@
 {% macro featuredCard(article, slot) %}
 {%- set a = article.data -%}
 <div class="card card--split" data-featured-category="{{ slot }}">
-    <div class="card--split__image {{ a.categoryKey }}">
+    <div class="card__image">
         <div class="badge-inline badge-inline--caps badge-overlay badge-overlay--light">{{ a.category }}</div>
         <img data-photo-skip src="{{ a.image }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
     </div>
-    <div class="card--split__content">
-        <h2 class="card--split__title">{{ a.articleTitle }}</h2>
-        <p class="card--split__excerpt">{{ a.excerpt }}</p>
-        <div class="card--split__meta">
-            <div class="card--split__time">
+    <div class="card__body">
+        <h2 class="card__title">{{ a.articleTitle }}</h2>
+        <p class="card__text">{{ a.excerpt }}</p>
+        <div class="card__meta">
+            <div class="card__time">
                 <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
                 {{ a.readTime }} min læsning
             </div>
@@ -53,7 +53,7 @@
 {% macro relatedItem(article) %}
 {%- set a = article.data -%}
 <div class="related-article">
-    <div class="related-image {{ a.categoryKey }}">
+    <div class="related-image related-image--{{ a.categoryKey }}">
         <img data-photo-skip src="{{ a.image }}" alt="" class="cover-image" loading="lazy" decoding="async">
     </div>
     <div class="related-content">

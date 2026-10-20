@@ -5,7 +5,12 @@
     "slide-2-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
     "slide-3-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
     "slide-4-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
-    "slide-5-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it."
+    "slide-5-active": "Built in js/sustainability-slider.js as `slide-${n}-active`, so no literal string names it.",
+    "related-image--sustainability": "Built in _includes/partials/article-cards.njk as `related-image--{{ a.categoryKey }}`; which categories appear depends on the related articles picked.",
+    "related-image--innovation": "Built in _includes/partials/article-cards.njk as `related-image--{{ a.categoryKey }}`; which categories appear depends on the related articles picked.",
+    "related-image--insights": "Built in _includes/partials/article-cards.njk as `related-image--{{ a.categoryKey }}`; which categories appear depends on the related articles picked.",
+    "related-image--cases": "Built in _includes/partials/article-cards.njk as `related-image--{{ a.categoryKey }}`; which categories appear depends on the related articles picked.",
+    "related-image--tips": "Built in _includes/partials/article-cards.njk as `related-image--{{ a.categoryKey }}`; which categories appear depends on the related articles picked."
   },
   "known": {
     "undefined": [],
