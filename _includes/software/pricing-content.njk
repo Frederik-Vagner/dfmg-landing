@@ -41,7 +41,7 @@
             </div>
 
             <div class="table-scroll">
-            <table class="comparison-table">
+            <table class="matrix">
                 <thead>
                     <tr>
                         <th>{{ t.comparison.colModule }}</th>
@@ -52,13 +52,13 @@
                 </thead>
                 <tbody>
                     {% for category in t.comparison.categories %}
-                    <tr class="category-row"><td colspan="4">{{ category.name }}</td></tr>
+                    <tr class="matrix__category"><td colspan="4">{{ category.name }}</td></tr>
                     {% for row in category.rows %}
                     <tr>
                         <td>{{ row.module }}</td>
-                        <td class="{% if row.starter %}check{% else %}dash{% endif %}">{% if row.starter %}<iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>{% else %}&#8212;{% endif %}</td>
-                        <td class="{% if row.professional %}check{% else %}dash{% endif %}">{% if row.professional %}<iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>{% else %}&#8212;{% endif %}</td>
-                        <td class="{% if row.enterprise %}check{% else %}dash{% endif %}">{% if row.enterprise %}<iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>{% else %}&#8212;{% endif %}</td>
+                        <td class="{% if row.starter %}matrix__check{% else %}matrix__dash{% endif %}">{% if row.starter %}<iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>{% else %}&#8212;{% endif %}</td>
+                        <td class="{% if row.professional %}matrix__check{% else %}matrix__dash{% endif %}">{% if row.professional %}<iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>{% else %}&#8212;{% endif %}</td>
+                        <td class="{% if row.enterprise %}matrix__check{% else %}matrix__dash{% endif %}">{% if row.enterprise %}<iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon>{% else %}&#8212;{% endif %}</td>
                     </tr>
                     {% endfor %}
                     {% endfor %}

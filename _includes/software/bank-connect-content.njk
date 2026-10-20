@@ -82,25 +82,23 @@
                     </div>
                 </div>
                 <div>
-                    <div class="bc-table-wrapper">
-                        <table class="bc-table">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">{{ t.functions.table_title }}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for category in t.functions.categories %}
-                                <tr class="bc-table__category">
-                                    <td colspan="2"><iconify-icon icon="{{ category.icon }}" inline></iconify-icon> {{ category.name }}</td>
-                                </tr>
-                                {% for item in category.items %}
-                                <tr><td><iconify-icon icon="fluent:checkmark-20-filled" inline class="bc-table__check"></iconify-icon></td><td>{{ item }}</td></tr>
-                                {% endfor %}
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="matrix matrix--list">
+                        <thead>
+                            <tr>
+                                <th colspan="2">{{ t.functions.table_title }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for category in t.functions.categories %}
+                            <tr class="matrix__category">
+                                <td colspan="2"><iconify-icon icon="{{ category.icon }}" inline></iconify-icon> {{ category.name }}</td>
+                            </tr>
+                            {% for item in category.items %}
+                            <tr><td><iconify-icon icon="fluent:checkmark-20-filled" inline class="matrix__check"></iconify-icon></td><td>{{ item }}</td></tr>
+                            {% endfor %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

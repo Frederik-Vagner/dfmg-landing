@@ -1,7 +1,7 @@
 /* ====================================
    TABLES
-   Shared table styles: data tables,
-   pricing tables, comparison tables
+   A data table, the feature matrix, the
+   price list and the calculator's form table
    ==================================== */
 
 @layer core {
@@ -33,79 +33,24 @@
     border-bottom: none;
 }
 
-.bc-table-wrapper {
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-}
-
-.bc-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: var(--text-sm);
-    background: var(--white);
-}
-
-.bc-table thead th {
-    background: var(--bg-gradient-primary);
-    padding: var(--space-sm) var(--space-md);
-    text-align: left;
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--text-base);
-    color: var(--white);
-}
-
-.bc-table tbody tr {
-    border-bottom: 1px solid var(--bg-light);
-}
-
-.bc-table tbody td {
-    padding: var(--space-2xs) var(--space-md);
-    color: var(--gray);
-}
-
-.bc-table tbody td:first-child {
-    width: 1.5rem;
-}
-
-/* ".bc-table .x td" so it outranks ".bc-table tbody td" on specificity. */
-.bc-table .bc-table__category td {
-    background: var(--bg-surface);
-    font-weight: var(--font-weight-semibold);
-    padding-top: var(--space-sm);
-    padding-bottom: var(--space-xs);
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--charcoal);
-}
-
-.bc-table__category iconify-icon {
-    margin-right: var(--space-2xs);
-    color: var(--primary);
-}
-
-.bc-table__check {
-    color: var(--success);
-    font-size: var(--text-xs);
-}
-
-/* ── Comparison Table ── */
-.comparison-table {
+/* ── Matrix: rows of features against columns of plans, ticks and dashes ──
+   Category rows split it into groups. --list is a single list of ticked
+   items on a white card (the bank-connect functions). */
+.matrix {
     width: 100%;
     border-collapse: collapse;
     margin-top: var(--space-lg);
 }
 
-.comparison-table th,
-.comparison-table td {
+.matrix th,
+.matrix td {
     padding: var(--space-xs) var(--space-sm);
     text-align: center;
     border-bottom: var(--border-lighter);
     font-size: var(--text-sm);
 }
 
-.comparison-table th {
+.matrix th {
     background: var(--charcoal);
     font-weight: var(--font-weight-semibold);
     position: sticky;
@@ -113,14 +58,19 @@
     color: var(--white);
 }
 
-.comparison-table th:first-child,
-.comparison-table td:first-child {
+/* The first column names the row. Text colour only on body cells: on the
+   header it made the first column's title charcoal on charcoal. */
+.matrix th:first-child,
+.matrix td:first-child {
     text-align: left;
+}
+
+.matrix td:first-child {
     font-weight: var(--font-weight-medium);
     color: var(--charcoal);
 }
 
-.comparison-table .category-row td {
+.matrix .matrix__category td {
     background: var(--bg-surface);
     font-weight: var(--font-weight-semibold);
     font-size: var(--text-sm);
@@ -129,34 +79,63 @@
     padding-top: var(--space-md);
 }
 
-.comparison-table .check {
+.matrix__category iconify-icon {
+    margin-right: var(--space-2xs);
+    color: var(--primary);
+}
+
+.matrix__check {
     color: var(--success);
 }
 
-.comparison-table .dash {
+.matrix__dash {
     color: var(--color-border-muted);
 }
 
-/* ── Pricing Table ── */
-.pricing-table {
+.matrix--list {
+    margin-top: 0;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.matrix--list th,
+.matrix--list td {
+    text-align: left;
+}
+
+/* A long list of short items: dense rows */
+.matrix--list tbody tr:not(.matrix__category) td {
+    padding-top: var(--space-2xs);
+    padding-bottom: var(--space-2xs);
+}
+
+/* The tick column: as narrow as the tick */
+.matrix--list td:first-child {
+    width: 1.5rem;
+}
+
+/* ── Price list: a dark header over rows of name, size and price ── */
+.price-list {
     background: var(--bg-surface);
     border-radius: var(--radius-lg);
     overflow: hidden;
     margin-bottom: var(--space-lg);
 }
 
-.pricing-header {
+.price-list__header {
     background: var(--bg-gradient-charcoal);
     padding: var(--space-md) var(--space-lg);
     text-align: center;
     color: var(--white);
 }
 
-.pricing-body {
+.price-list__body {
     padding: var(--space-lg);
 }
 
-.pricing-item {
+.price-list__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,37 +143,37 @@
     border-bottom: var(--border-light);
 }
 
-.pricing-item:last-child {
+.price-list__item:last-child {
     border-bottom: none;
 }
 
-.pricing-name {
+.price-list__name {
     font-weight: var(--font-weight-semibold);
     flex: 1;
 }
 
-.pricing-specs {
+.price-list__specs {
     color: var(--gray-light);
     font-size: var(--text-sm);
     margin-right: var(--space-sm);
 }
 
-.pricing-price {
+.price-list__price {
     font-weight: var(--font-weight-bold);
     color: var(--primary);
     font-size: var(--text-lg);
 }
 
-/* ── Planning Table (calculator) ── */
-.planning-table td {
+/* ── Form table: labels and fields lined up in rows (the calculator) ── */
+.form-table td {
     padding: 0.1rem var(--space-2xs);
 }
 
-.planning-table td:last-child {
+.form-table td:last-child {
     text-align: right;
 }
 
-.th-count {
+.form-table__number {
     padding-left: var(--space-md);
 }
 
@@ -207,13 +186,13 @@
     margin-top: var(--space-lg);
 }
 
-.table-scroll > .comparison-table {
+.table-scroll > .matrix {
     margin-top: 0;
 }
 
 /* ── Responsive Tables ── */
 @media (max-width: 768px) {
-    .comparison-table {
+    .matrix {
         font-size: var(--text-xs);
     }
 
@@ -225,30 +204,30 @@
         -webkit-overflow-scrolling: touch;
     }
 
-    .table-scroll > .comparison-table {
+    .table-scroll > .matrix {
         min-width: 460px;
     }
 
-    .comparison-table th,
-    .comparison-table td {
+    .matrix th,
+    .matrix td {
         padding: var(--space-2xs);
     }
 
-    .pricing-header {
+    .price-list__header {
         padding: var(--space-sm);
     }
 
-    .pricing-body {
+    .price-list__body {
         padding: var(--space-sm);
     }
 
-    .pricing-item {
+    .price-list__item {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--space-2xs);
     }
 
-    .pricing-specs {
+    .price-list__specs {
         margin-right: 0;
     }
 }

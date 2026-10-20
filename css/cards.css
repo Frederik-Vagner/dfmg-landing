@@ -519,10 +519,6 @@
 
 /* ── Feature card grids ── */
 
-.steps-row {
-    margin-top: var(--space-xl);
-}
-
 /* ── Service card (carousel item) ── */
 .card--service {
     width: 570px;
@@ -627,6 +623,10 @@
     line-height: 1;
     margin-bottom: var(--space-2xs);
     display: block;
+}
+
+.stat__value--success {
+    color: var(--success);
 }
 
 /* ── Price Display ── */
