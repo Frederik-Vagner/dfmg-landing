@@ -10,13 +10,13 @@
     color: var(--white);
 }
 
-.footer-container {
+.footer__inner {
     max-width: var(--container-width-normal);
     margin: 0 auto;
     padding: var(--space-md);
 }
 
-.link-footer {
+.footer__link {
     text-decoration: none;
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
@@ -25,44 +25,44 @@
     color: var(--white);
 }
 
-.link-footer:hover { color: var(--gray-light); }
+.footer__link:hover { color: var(--gray-light); }
 
-.footer-bottom {
+.footer__bottom {
     padding-top: var(--space-xs);
     padding-bottom: var(--space-md);
     text-align: center;
     font-weight: var(--font-weight-light);
 }
 
-.footer-main {
+.footer__main {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
 }
 
-.footer-section {
+.footer__section {
     flex: 1;
 }
 
-.footer-links {
+.footer__links {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
 
 /* The opening hours stay on one line instead of breaking at "8–". */
-.footer-contact__hours {
+.footer__hours {
     white-space: nowrap;
 }
 
-.footer-description {
+.footer__description {
     line-height: 1.6;
     font-size: var(--text-sm);
     color: var(--white);
 }
 
-.footer-contact a,
-.footer-contact .footer-address {
+.footer__contact a,
+.footer__contact .footer__address {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -72,22 +72,22 @@
     color: var(--white);
 }
 
-.footer-contact .footer-address {
+.footer__contact .footer__address {
     font-style: normal;
 }
 
-.footer-contact a:hover {
+.footer__contact a:hover {
     color: var(--white);
 }
 
-.footer-contact iconify-icon {
+.footer__contact iconify-icon {
     width: 16px;
     text-align: center;
     font-size: var(--text-sm);
     color: var(--white);
 }
 
-.social-icon {
+.footer__social-icon {
     width: 40px;
     height: 40px;
     border-radius: var(--radius-md);
@@ -102,23 +102,23 @@
     color: var(--white);
 }
 
-.footer-bottom a {
+.footer__bottom a {
     text-decoration: none;
     font-size: var(--text-sm);
     margin-right: var(--space-md);
     color: var(--white);
 }
 
-.footer-bottom a:hover {
+.footer__bottom a:hover {
     color: var(--white);
 }
 
-.copyright {
+.footer__copyright {
     font-size: var(--text-sm);
     color: var(--white);
 }
 
-.footer-logo {
+.footer__logo {
     width: 60px;
     height: 60px;
     background: var(--white);
@@ -131,7 +131,7 @@
     margin-top: var(--space-sm);
 }
 
-.footer-logo img {
+.footer__logo img {
     width: 40px;
     height: 40px;
     object-fit: contain;
@@ -140,13 +140,13 @@
 
 /* Desktop enhancements */
 @media (min-width: 769px) {
-    .footer-main {
+    .footer__main {
         flex-direction: row;
         align-items: flex-start;
         padding-bottom: var(--space-xs);
     }
 
-    .footer-bottom {
+    .footer__bottom {
         flex-direction: row;
         align-items: center;
         text-align: left;
@@ -154,18 +154,18 @@
 
     /* Left-aligned like the rest of the site's running text; right-aligned
        it read as a mistake next to the centred links. */
-    .footer-section:nth-child(1) {
+    .footer__section:nth-child(1) {
         text-align: start;
         align-self: center;
     }
 
-    .footer-section:nth-child(2) {
+    .footer__section:nth-child(2) {
         flex: 1.5;
         text-align: center;
         align-self: center;
     }
 
-    .footer-section:nth-child(3) {
+    .footer__section:nth-child(3) {
         text-align: start;
         align-self: center;
     }
@@ -174,7 +174,7 @@
 /* The chat bubble is fixed to the bottom-right corner, which on a phone lands
    on the last line of the footer. Give that line room to clear it. */
 @media (max-width: 768px) {
-    .footer-bottom {
+    .footer__bottom {
         padding-bottom: calc(var(--space-md) + var(--chat-clearance));
     }
 }
@@ -185,20 +185,20 @@
 @layer components {
 
 /* The middle row of footer links, spaced from the rows above and below. */
-.footer-links__row--spaced {
+.footer__links-row--spaced {
     padding: var(--space-md) 0;
 }
 
 /* Moved here from shared.css so the footer's rules live in one file; same
    layer, so the cascade is unchanged. */
-.footer-bottom {
+.footer__bottom {
     display: flex;
     gap: var(--space-md);
     border-top: 1px solid var(--bg-light);
 }
 
 @media (max-width: 768px) {
-    .footer-bottom {
+    .footer__bottom {
         flex-wrap: nowrap;
         flex-direction: column;
     }

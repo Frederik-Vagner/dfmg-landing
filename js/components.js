@@ -129,7 +129,7 @@ function initializeChatbotFunctions() {
         if (tabEl) {
             document.querySelectorAll('[data-chatbot-tab]').forEach(function(t) { t.classList.remove('active'); });
             tabEl.classList.add('active');
-            document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+            document.querySelectorAll('.chatbot__panel').forEach(function(c) { c.classList.remove('active'); });
             document.getElementById(tabEl.getAttribute('data-chatbot-tab') + '-tab').classList.add('active');
             return;
         }

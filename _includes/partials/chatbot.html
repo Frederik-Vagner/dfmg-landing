@@ -1,21 +1,21 @@
-<div class="chatbot-container">
-    <div class="chatbot-popup" id="chatbotPopup">
-        <div class="chatbot-header">
-            <div class="chatbot-title">DFMG Support</div>
-            <div class="live-indicator">
+<div class="chatbot">
+    <div class="chatbot__popup" id="chatbotPopup">
+        <div class="chatbot__header">
+            <div class="chatbot__title">DFMG Support</div>
+            <div class="chatbot__live">
                 <iconify-icon icon="fluent:headset-20-filled" inline></iconify-icon>
                 <span>Skriv til os</span>
             </div>
         </div>
 
         <!-- Callback Form (Hidden by default) -->
-        <div class="callback-form" id="callbackForm">
-            <div class="chatbot-header">
+        <div class="chatbot__callback" id="callbackForm">
+            <div class="chatbot__header">
                 <h4>Ring mig op</h4>
             </div>
-            <div class="callback-form-body">
+            <div class="chatbot__callback-body">
                 <p>Indtast dit telefonnummer, så ringer vi tilbage samme dag. Telefontid: hverdage 8–16.</p>
-                <div class="callback-input-group">
+                <div class="chatbot__callback-row">
                     <input type="tel" id="callbackPhone" placeholder="Indtast dit telefonnummer" class="input" aria-label="Dit telefonnummer" aria-describedby="callbackError">
                     <button type="button" class="btn btn--primary" data-action="submit-callback">
                         <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
@@ -23,24 +23,24 @@
                     </button>
                 </div>
                 <p class="field-error" id="callbackError" role="alert" hidden></p>
-                <div class="callback-note">
+                <div class="chatbot__callback-note">
                     <small>Vi respekterer din privathed og deler aldrig dine oplysninger.</small>
                 </div>
             </div>
         </div>
-        <div class="chatbot-tabs">
-            <div class="chatbot-tab active" data-chatbot-tab="faq" role="button" tabindex="0">
+        <div class="chatbot__tabs">
+            <div class="chatbot__tab active" data-chatbot-tab="faq" role="button" tabindex="0">
                 <iconify-icon icon="fluent:question-circle-20-filled" inline></iconify-icon> FAQ
             </div>
-            <div class="chatbot-tab" data-chatbot-tab="contact" role="button" tabindex="0">
+            <div class="chatbot__tab" data-chatbot-tab="contact" role="button" tabindex="0">
                 <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> Kontakt
             </div>
         </div>
 
-        <div class="chatbot-body">
+        <div class="chatbot__body">
             <!-- FAQ Tab -->
-            <div class="tab-content active" id="faq-tab">
-                <div class="chatbot-content">
+            <div class="chatbot__panel active" id="faq-tab">
+                <div class="chatbot__content">
                     <div class="faq-item">
                         <div class="faq-question" data-action="toggle-chatbot-faq" role="button" tabindex="0" aria-expanded="false">
                             Hvilke services tilbyder DFMG?
@@ -83,7 +83,7 @@
                 </div>
                 
                 <!-- Fixed bottom CTA -->
-                <div class="fixed-cta">
+                <div class="chatbot__cta">
                     <button type="button" class="btn btn--primary btn--sm" data-action="toggle-callback-form">
                         <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                         Bliv ringet op
@@ -92,23 +92,23 @@
             </div>
 
             <!-- Contact Tab -->
-            <div class="tab-content" id="contact-tab">
-                <div class="chat-section">
-                    <div class="chat-status">
+            <div class="chatbot__panel" id="contact-tab">
+                <div class="chatbot__chat">
+                    <div class="chatbot__status">
                         <span>Skriv til os</span>
                     </div>
-                    <div class="chat-description">
+                    <div class="chatbot__description">
                         Stil dit spørgsmål og få svar fra vores facility eksperter. Vi svarer samme dag på hverdage.
                     </div>
-                    <div class="chat-input-section">
-                        <input type="text" class="input input-flex" placeholder="Skriv dit spørgsmål her..." id="chatInput" aria-label="Dit spørgsmål">
-                        <button type="button" class="btn chat-send-btn" data-action="send-message" aria-label="Send spørgsmål">
+                    <div class="chatbot__input-row">
+                        <input type="text" class="input input--flex" placeholder="Skriv dit spørgsmål her..." id="chatInput" aria-label="Dit spørgsmål">
+                        <button type="button" class="btn chatbot__send" data-action="send-message" aria-label="Send spørgsmål">
                             <iconify-icon icon="fluent:send-20-filled" inline></iconify-icon>
                         </button>
                     </div>
                     
-                    <div class="chat-contact">
-                        <div class="cta-title">Eller kontakt os direkte</div>
+                    <div class="chatbot__contact">
+                        <div class="chatbot__contact-title">Eller kontakt os direkte</div>
                         <button type="button" class="btn btn--primary btn--sm" data-action="call-direct">
                             <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
                             Ring: {{ site.phoneDisplay }}
@@ -119,12 +119,12 @@
         </div>
     </div>
     
-    <button type="button" class="chatbot-button" id="chatbotButton" aria-label="Åbn chat" aria-expanded="false" aria-controls="chatbotPopup">
+    <button type="button" class="chatbot__button" id="chatbotButton" aria-label="Åbn chat" aria-expanded="false" aria-controls="chatbotPopup">
         <iconify-icon icon="fluent:comment-20-filled" inline></iconify-icon>
     </button>
 </div>
 <div class="chat-preview" id="chatPreview">
-    <div class="preview-message" id="previewMessage">
+    <div class="chat-preview__message" id="previewMessage">
         Velkommen til DFMG<br>
         <small>Har du spørgsmål?</small>
     </div>

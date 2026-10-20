@@ -41,7 +41,7 @@
     margin: 0;
 }
 
-.header-container {
+.header__inner {
     width: 100%;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@
 
 /* --- Platform Header Variant --- */
 
-.logo-suffix {
+.logo__suffix {
     /* Light blue: the brand blue is 2.5:1 on the navy logo pill. */
     color: var(--blue-300);
     font-weight: var(--font-weight-semibold);
@@ -95,11 +95,11 @@
 }
 
 .nav a:hover,
-.nav-item:hover > a {
+.nav__item:hover > a {
     color: var(--white);
 }
 
-.nav-item {
+.nav__item {
     position: static;
     padding: var(--space-xs) 0;
     margin: calc(-1 * var(--space-xs)) 0;
@@ -107,7 +107,7 @@
 
 /* ".nav .x" so these outrank ".nav a" (a class plus an element) on specificity.
    Their text weight comes from ".nav a", as it always has. */
-.nav .nav-cta {
+.nav .nav__cta {
     background: var(--white);
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-circle);
@@ -115,12 +115,12 @@
     color: var(--charcoal);
 }
 
-.nav .nav-cta:hover {
+.nav .nav__cta:hover {
     background: var(--bg-light);
     color: var(--charcoal);
 }
 
-.nav .nav-lang {
+.nav .nav__lang {
     color: var(--text-on-dark-muted);
     font-size: var(--text-xs);
     letter-spacing: 0.05em;
@@ -130,7 +130,7 @@
     transition: var(--transition-normal);
 }
 
-.nav .nav-lang:hover {
+.nav .nav__lang:hover {
     color: var(--white);
     border-color: var(--icon-on-dark);
 }
@@ -157,13 +157,13 @@
     transition: opacity 0.15s ease 0.2s, visibility 0.15s ease 0.2s;
 }
 
-.nav-item:hover > .dropdown {
+.nav__item:hover > .dropdown {
     opacity: 1;
     visibility: visible;
     transition: opacity var(--transition-fast) 0.1s, visibility var(--transition-fast) 0.1s;
 }
 
-.header:has(.nav-item:hover) .nav {
+.header:has(.nav__item:hover) .nav {
     border-radius: var(--radius-normal) var(--radius-normal) 0 0;
 }
 
@@ -202,7 +202,7 @@
 
 /* --- Contact Carousel --- */
 
-.header-contact {
+.header__contact {
     overflow: hidden;
     height: 22px;
     position: relative;
@@ -213,7 +213,7 @@
     min-width: 150px;
 }
 
-.header-contact span {
+.header__contact span {
     display: block;
     position: absolute;
     width: 100%;
@@ -225,11 +225,11 @@
     line-height: 1;
 }
 
-.header-contact span:first-child {
+.header__contact span:first-child {
     animation-delay: 0s;
 }
 
-.header-contact span:nth-child(2) {
+.header__contact span:nth-child(2) {
     animation-delay: 4s;
 }
 
@@ -354,7 +354,7 @@
         display: none;
     }
 
-    .header-contact {
+    .header__contact {
         display: none;
     }
 }
@@ -367,13 +367,13 @@
         padding-left: var(--space-xs);
     }
 
-    .nav-item > a,
-    .nav .nav-cta,
-    .nav .nav-lang {
+    .nav__item > a,
+    .nav .nav__cta,
+    .nav .nav__lang {
         font-size: var(--text-sm);
     }
 
-    .header-container {
+    .header__inner {
         gap: var(--space-2xs);
     }
 }
