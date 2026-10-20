@@ -29,6 +29,11 @@
     text-align: left;
 }
 
+/* Right-aligned, mirroring a column beside it */
+.intro--end {
+    text-align: right;
+}
+
 .intro__eyebrow {
     color: var(--success-text);
 }

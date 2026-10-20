@@ -1,7 +1,7 @@
 /* ====================================
    LISTS
-   Checklists (an icon followed by text), the job-benefits
-   lists, and article/TOC lists
+   Checklists (an icon followed by text), the tick list
+   and the article/TOC lists
    ==================================== */
 
 
@@ -11,8 +11,8 @@
    The icon sits in its own column, so text that wraps lines up with the
    text above it rather than running under the icon, and it is centred on
    the first line (height: 1lh) rather than the middle of the whole item.
-   Text is charcoal; a list on a dark background sets its own colour (see
-   .panels__features). Icon colour comes from the modifiers. */
+   Text is charcoal (--muted: grey); a list on a dark background sets its own
+   colour (see .panels__features). Icon colour comes from the modifiers. */
 .checklist {
     list-style: none;
     padding: 0;
@@ -61,45 +61,38 @@
 .checklist--success > li > iconify-icon:first-child { color: var(--success); }
 .checklist--red > li > iconify-icon:first-child { color: var(--red); }
 
-/* ── Checkmark List (job benefits / partner comparison) ── */
-.job-benefits {
+/* Checklist text in grey, with room above and below */
+.checklist--muted > li {
+    color: var(--gray);
+}
+
+.checklist--spaced {
+    margin: var(--space-lg) 0;
+}
+
+/* ── Tick list: each item ends in a drawn tick, or a cross for --no ── */
+.tick-list {
     list-style: none;
     padding: 0;
     margin: var(--space-lg) 0;
 }
 
-.job-benefits li {
+.tick-list > li {
     padding: var(--space-2xs) 0;
     color: var(--gray);
 }
 
-/* The partnership list still draws its tick as text, on the right; the
-   others are checklists with an icon. */
-.job-benefits:not(.checklist) li::before {
+.tick-list > li::before {
     content: '\2713';
-    color: var(--success);
-    font-weight: var(--font-weight-bold);
-    margin-right: var(--space-sm);
-}
-
-.partner-info /* The partnership list still draws its tick as text, on the right; the
-   others are checklists with an icon. */
-.job-benefits:not(.checklist) li::before {
-    content: '\2713';
-    color: var(--success);
-    font-weight: var(--font-weight-bold);
-    margin-left: var(--space-sm);
-    margin-right: 0;
     float: right;
+    margin-left: var(--space-sm);
+    color: var(--success);
+    font-weight: var(--font-weight-bold);
 }
 
-.partner-info .job-benefits li.unavailable::before {
+.tick-list > .tick-list__item--no::before {
     content: '\2717';
     color: var(--red);
-    font-weight: var(--font-weight-bold);
-    margin-left: var(--space-sm);
-    margin-right: 0;
-    float: right;
 }
 
 /* ── Article Body Lists ── */
