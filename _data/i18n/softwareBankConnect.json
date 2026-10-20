@@ -96,7 +96,7 @@
           ]
         },
         {
-          "icon": "fluent:document-code-20-filled",
+          "icon": "fluent:code-text-20-filled",
           "name": "Formats",
           "items": [
             "XML ISO-20022",
@@ -214,7 +214,7 @@
           ]
         },
         {
-          "icon": "fluent:document-code-20-filled",
+          "icon": "fluent:code-text-20-filled",
           "name": "Formater",
           "items": [
             "XML ISO-20022",

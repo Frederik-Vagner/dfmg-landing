@@ -98,6 +98,27 @@ body {
     padding-left: var(--space-md);
 }
 
+/* ── Icons ──
+   <iconify-icon> holds an inline SVG filled in at build time (tools/icons.js);
+   it is a plain 1em box like the icon component it replaced: it never
+   shrinks in a flex row, and the "inline" ones sit on the text baseline. */
+:where(iconify-icon) {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+}
+
+:where(iconify-icon[inline]) {
+    vertical-align: -0.125em;
+}
+
+:where(iconify-icon) > svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+}
+
 /* ── Inline text ──
    The browser's "bolder" depends on the parent's weight; ours is a token. */
 :where(b, strong) {

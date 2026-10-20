@@ -3,6 +3,7 @@ const CleanCSS = require("clean-css");
 const { minify: terserMinify } = require("terser");
 const fs = require("fs");
 const path = require("path");
+const { fillIcons } = require("./tools/icons");
 
 module.exports = function (eleventyConfig) {
   // Pass through static assets unchanged
@@ -13,6 +14,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
+
+  // Inline every icon's SVG (tools/icons.js); before minifying.
+  eleventyConfig.addTransform("icons", function (content) {
+    if ((this.page.outputPath || "").endsWith(".html")) return fillIcons(content);
+    return content;
+  });
 
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", async function (content) {
@@ -50,7 +57,8 @@ module.exports = function (eleventyConfig) {
     const jsDir = path.join(outDir, "js");
     if (fs.existsSync(jsDir)) {
       for (const file of getAllFiles(jsDir, ".js")) {
-        const src = fs.readFileSync(file, "utf8");
+        // Icons in markup that scripts build (js/services.js) are inlined too.
+        const src = fillIcons(fs.readFileSync(file, "utf8"));
         const result = await terserMinify(src);
         if (result.code) fs.writeFileSync(file, result.code);
       }
