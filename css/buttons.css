@@ -176,8 +176,8 @@
 }
 
 
-/* ── Icon Button (round, for carousel arrows, close buttons, etc.) ── */
-.btn--icon {
+/* ── Icon button: a round button holding only an icon (carousel arrows, close) ── */
+.icon-button {
     background: var(--bg-light);
     border: var(--border-light);
     border-radius: var(--radius-round);
@@ -193,7 +193,7 @@
     color: var(--charcoal);
 }
 
-.btn--icon:hover {
+.icon-button:hover {
     background: var(--charcoal);
     color: var(--white);
     box-shadow: none;

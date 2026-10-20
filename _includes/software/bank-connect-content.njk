@@ -26,7 +26,7 @@
     <section class="section" id="overview">
         <div class="container">
             <div class="row row--center row--wide">
-                <div>
+                <div class="feature">
                     <div class="feature__eyebrow">{{ t.overview.subtitle }}</div>
                     <h2 class="feature__title">{{ t.overview.title }}</h2>
                     <p class="feature__text">{{ t.overview.body1 }}</p>
@@ -36,10 +36,10 @@
                     <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="bankconnect-overview" data-photo-status="missing">
                         <div>
                             <iconify-icon icon="fluent:building-bank-20-filled" inline class="placeholder-icon"></iconify-icon>
-                            <strong class="feature-visual__title">{{ t.overview.visual_title }}</strong><br><br>
-                            <div class="feature-visual__list">
+                            <strong class="screenshot-placeholder__title">{{ t.overview.visual_title }}</strong><br><br>
+                            <div class="screenshot-placeholder__list">
                                 {% for step in t.overview.steps %}
-                                <span class="feature-visual__step-number">{{ loop.index }}.</span> {{ step }}<br>
+                                <span class="screenshot-placeholder__step">{{ loop.index }}.</span> {{ step }}<br>
                                 {% endfor %}
                             </div>
                         </div>
@@ -70,7 +70,7 @@
     <section class="section" id="supported-functions">
         <div class="container">
             <div class="row row--center row--wide">
-                <div>
+                <div class="feature">
                     <div class="feature__eyebrow">{{ t.functions.subtitle }}</div>
                     <h2 class="feature__title">{{ t.functions.title }}</h2>
                     <p class="feature__text">{{ t.functions.body1 }}</p>

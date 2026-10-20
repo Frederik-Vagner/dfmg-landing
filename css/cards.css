@@ -439,6 +439,7 @@ a.card {
 }
 
 .card__title--danger { color: var(--red); }
+.card__title-icon { margin-right: var(--space-2xs); }
 .card__title--success { color: var(--success); }
 
 .card__text {
@@ -619,7 +620,8 @@ a.card {
 
 /* ── Stat Card ── */
 
-.stat__value {
+/* A big number: a step, a count */
+.stat {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-medium);
     line-height: 1;
@@ -627,7 +629,7 @@ a.card {
     display: block;
 }
 
-.stat__value--success {
+.stat--success {
     color: var(--success);
 }
 

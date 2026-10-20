@@ -238,7 +238,7 @@
     gap: var(--space-2xs);
 }
 
-.calc-schedule__header {
+.calc-column__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -249,11 +249,11 @@
     font-weight: var(--font-weight-semibold);
 }
 
-.calc-summary__cta {
+.calc-column__cta {
     margin-top: var(--space-2xs);
 }
 
-.calc-summary__note {
+.calc-column__note {
     text-align: center;
 }
 
@@ -266,7 +266,7 @@
         flex-wrap: wrap;
     }
 
-    .calc-schedule__header {
+    .calc-column__header {
         flex-wrap: wrap;
     }
 }

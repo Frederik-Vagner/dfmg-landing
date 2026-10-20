@@ -449,7 +449,8 @@
 
 @layer pages {
 
-.slide-accent--success {
+/* A word, icon or heading in a slide's accent colour: green, --primary blue */
+.slide-accent {
     color: var(--success);
 }
 

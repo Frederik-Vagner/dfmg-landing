@@ -203,7 +203,12 @@
     }
 }
 
-/* ── Feature: the text beside a feature's picture (eyebrow, title, text, tags) ── */
+/* ── Feature: the text beside a feature's picture (eyebrow, title, text, tags) ──
+   min-width 0 lets a long word wrap instead of widening the column. */
+.feature {
+    min-width: 0;
+}
+
 .feature__eyebrow {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);

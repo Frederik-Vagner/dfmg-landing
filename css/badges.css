@@ -101,18 +101,12 @@
     color: var(--white);
 }
 
+/* Small and cyan */
 .step-number--small {
     width: 25px;
     height: 25px;
     background: var(--cyan);
-    border-radius: var(--radius-round);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: var(--font-weight-bold);
     font-size: var(--text-sm);
-    margin: 0 auto var(--space-sm);
-    color: var(--white);
 }
 
 }

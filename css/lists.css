@@ -77,12 +77,12 @@
     margin: var(--space-lg) 0;
 }
 
-.tick-list > li {
+.tick-list__item {
     padding: var(--space-2xs) 0;
     color: var(--gray);
 }
 
-.tick-list > li::before {
+.tick-list__item::before {
     content: '\2713';
     float: right;
     margin-left: var(--space-sm);
@@ -90,7 +90,7 @@
     font-weight: var(--font-weight-bold);
 }
 
-.tick-list > .tick-list__item--no::before {
+.tick-list__item--no::before {
     content: '\2717';
     color: var(--red);
 }

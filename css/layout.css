@@ -85,7 +85,7 @@
 }
 
 /* A cell that spans two rows of the grid */
-.grid__cell--tall {
+.grid__tall-cell {
     grid-row: span 2;
 }
 
@@ -107,6 +107,7 @@
 }
 
 .media--center { align-items: center; }
+.media--tight { gap: var(--space-sm); }
 
 /* --- Smaller screens --- */
 @media (max-width: 1100px) {

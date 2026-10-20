@@ -138,7 +138,7 @@
 
             <div class="row row--loose">
                 <div class="card">
-                    <div class="card__title card__title--danger"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.comparison.without_title }}</div>
+                    <div class="card__title card__title--danger"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="card__title-icon"></iconify-icon> {{ t.comparison.without_title }}</div>
                     <ul class="checklist checklist--red">
                         {% for item in t.comparison.without_items %}
                         <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon> {{ item }}</li>
@@ -146,7 +146,7 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <div class="card__title card__title--success"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.comparison.with_title }}</div>
+                    <div class="card__title card__title--success"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="card__title-icon"></iconify-icon> {{ t.comparison.with_title }}</div>
                     <ul class="checklist checklist--success">
                         {% for item in t.comparison.with_items %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ item }}</li>
