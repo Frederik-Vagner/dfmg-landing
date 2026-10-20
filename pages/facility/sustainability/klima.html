@@ -15,24 +15,24 @@ pageCss:
 
         <!-- Slide 1: Empty -->
         <section class="slide">
-            <div class="slide-content slide-content4">
+            <div class="slide-content slide-content--medium">
                 <div>
                     <div class="badge">Miljø & Klima</div>
                     <h1 class="slide-accent--success">Grøn Drift Som Standard</h1>
-                    <div class="slide-lead">Siden dag ét har DFMG bygget miljøhensyn ind i alt vi gør. Ikke som en eftertanke, men som fundamentet for hvordan vi driver forretning.</div>
+                    <div class="intro__text--spaced">Siden dag ét har DFMG bygget miljøhensyn ind i alt vi gør. Ikke som en eftertanke, men som fundamentet for hvordan vi driver forretning.</div>
 
-                    <div class="slide-row">
-                        <div class="card slide-card card--accent-top card--accent-success">
+                    <div class="row">
+                        <div class="card card--accent-top card--accent-success">
                             <iconify-icon icon="fluent:vehicle-bicycle-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <h3>100% Bilfri Drift</h3>
                             <p>Fra leverandør til kunde - hele supply chain kører grønt</p>
                         </div>
-                        <div class="card slide-card card--accent-top card--accent-success">
+                        <div class="card card--accent-top card--accent-success">
                             <iconify-icon icon="fluent:arrow-sync-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <h3>Cirkulær Økonomi</h3>
                             <p>Genbrug, markedsplads og minimal spild i alle processer</p>
                         </div>
-                        <div class="card slide-card card--accent-top card--accent-success">
+                        <div class="card card--accent-top card--accent-success">
                             <iconify-icon icon="fluent:leaf-one-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <h3>Ansvarlig Kemi</h3>
                             <p>Svanemærkede produkter og smart kemikalievalg</p>
@@ -51,12 +51,12 @@ pageCss:
                     <div>Fra leverandør til kunde på cykel og offentlig transport</div>
                     <p>Vi har ikke bare bilfri medarbejdertransport - <span class="slide-accent--success">hele vores supply chain</span> kører grønt. Dansk leverandør sender til vores lager, og derfra distribuerer vi alt på cykel.</p>
                     {% photoSlot "klima-bilfri" %}
-                    <div class="card--quote">
+                    <div class="card card--glass card--compact card--quote">
                         "Jeg er vokset op på en cykel, så jeg er superkomfortabel med at køre rundt i København med store tasker og 4-5 transportposer på styret."
                     </div>
                 </div>
-                <div class="slide-stack">
-                    <div class="card slide-card card--accent-left">
+                <div class="stack">
+                    <div class="card card--accent-left">
                         <div class="card--horizontal">
                             <iconify-icon icon="fluent:vehicle-truck-profile-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div class="card__content">
@@ -65,7 +65,7 @@ pageCss:
                             </div>
                         </div>
                     </div>
-                    <div class="card slide-card card--accent-left">
+                    <div class="card card--accent-left">
                         <div class="card--horizontal">
                             <iconify-icon icon="fluent:vehicle-bicycle-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div class="card__content">
@@ -74,7 +74,7 @@ pageCss:
                             </div>
                         </div>
                     </div>
-                    <div class="card slide-card card--accent-left">
+                    <div class="card card--accent-left">
                         <div class="card--horizontal">
                             <iconify-icon icon="fluent:vehicle-subway-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div class="card__content">
@@ -83,7 +83,7 @@ pageCss:
                             </div>
                         </div>
                     </div>
-                    <div class="card slide-card card--accent-left">
+                    <div class="card card--accent-left">
                         <div class="card--horizontal">
                             <iconify-icon icon="fluent:location-20-filled" inline class="slide-accent--success"></iconify-icon>
                             <div class="card__content">
@@ -98,8 +98,8 @@ pageCss:
 
         <!-- Slide 3: Empty -->
         <section class="slide">
-            <div class="slide-content two-column1">
-                <div class="slide-stack">
+            <div class="slide-content slide-content--split">
+                <div class="stack">
                     {% photoSlot "klima-kbh-1" %}
                     {% photoSlot "klima-kbh-2" %}
                 </div>
@@ -109,42 +109,44 @@ pageCss:
                     <div>Markedsplads hvor ting får nyt liv</div>
                     <p>Vi har skabt en intern markedsplads hvor vores kunder kan aflevere ting de ikke længere har brug for. Vi <span class="slide-accent--primary">rengør og istandsætter</span> dem, så andre kan give dem nyt liv.</p>
 
-                    <div class="slide-row slide-row--spaced">
-                        <div class="card slide-card card--compact">
-                            <div class="step-number--small">1</div>
-                            <h3>Afhentning</h3>
-                            <p>Kunder stiller elektronik, kontorting og møbler til rådighed</p>
-                        </div>
+                    <div class="stack stack--wide">
+                        <div class="row">
+                            <div class="card card--compact">
+                                <div class="step-number--small">1</div>
+                                <h3>Afhentning</h3>
+                                <p>Kunder stiller elektronik, kontorting og møbler til rådighed</p>
+                            </div>
 
-                        <div class="card slide-card card--compact">
-                            <div class="step-number--small">2</div>
-                            <h3>Istandsættelse</h3>
-                            <p>Vi rengør, reparerer og fotograferer tingene professionelt</p>
-                        </div>
+                            <div class="card card--compact">
+                                <div class="step-number--small">2</div>
+                                <h3>Istandsættelse</h3>
+                                <p>Vi rengør, reparerer og fotograferer tingene professionelt</p>
+                            </div>
 
-                        <div class="card slide-card card--compact">
-                            <div class="step-number--small">3</div>
-                            <h3>Nyt Liv</h3>
-                            <p>Andre kunder kan få tingene og give dem ny værdi</p>
-                        </div>
-                    </div>
-
-                    <div class="slide-row">
-                        <div class="card slide-card card--accent-left">
-                            <div class="card--horizontal">
-                                <iconify-icon icon="fluent:laptop-20-filled" inline class="slide-accent--primary"></iconify-icon>
-                                <div class="card__content">
-                                    <h4>Mest Populært: Elektronik</h4>
-                                    <p>Computere, skærme og kontorelectronik får ofte nyt liv hos andre virksomheder</p>
-                                </div>
+                            <div class="card card--compact">
+                                <div class="step-number--small">3</div>
+                                <h3>Nyt Liv</h3>
+                                <p>Andre kunder kan få tingene og give dem ny værdi</p>
                             </div>
                         </div>
-                        <div class="card slide-card card--accent-left">
-                            <div class="card--horizontal">
-                                <iconify-icon icon="fluent:t-shirt-20-filled" inline class="slide-accent--primary"></iconify-icon>
-                                <div class="card__content">
-                                    <h4>Kogevask & Genbrug</h4>
-                                    <p>Alle klude og mopper kogevaskes og genbruges - minimal tekstilspild</p>
+
+                        <div class="row">
+                            <div class="card card--accent-left">
+                                <div class="card--horizontal">
+                                    <iconify-icon icon="fluent:laptop-20-filled" inline class="slide-accent--primary"></iconify-icon>
+                                    <div class="card__content">
+                                        <h4>Mest Populært: Elektronik</h4>
+                                        <p>Computere, skærme og kontorelectronik får ofte nyt liv hos andre virksomheder</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card--accent-left">
+                                <div class="card--horizontal">
+                                    <iconify-icon icon="fluent:t-shirt-20-filled" inline class="slide-accent--primary"></iconify-icon>
+                                    <div class="card__content">
+                                        <h4>Kogevask & Genbrug</h4>
+                                        <p>Alle klude og mopper kogevaskes og genbruges - minimal tekstilspild</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -160,10 +162,10 @@ pageCss:
                     <div class="badge">Smart Produktvalg</div>
                     <h5>Ansvarlig Kemikalievalg</h5>
                     <div>Svanemærkede produkter og korrekt anvendelse</div>
-                    <p class="slide-text--spaced">Vi bruger primært <span class="slide-accent--success">svanemærkede produkter</span> og har en ansvarlig tilgang til stærke kemikalier. Høje pH-niveauer kun når det er nødvendigt, og altid med korrekt instruktion.</p>
+                    <p class="intro__text--tight">Vi bruger primært <span class="slide-accent--success">svanemærkede produkter</span> og har en ansvarlig tilgang til stærke kemikalier. Høje pH-niveauer kun når det er nødvendigt, og altid med korrekt instruktion.</p>
 
                      <div class="grid grid--2">
-                        <div class="card slide-card card--accent-left">
+                        <div class="card card--accent-left">
                             <div class="card--horizontal">
                                 <iconify-icon icon="fluent:beaker-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 <div class="card__content">
@@ -172,7 +174,7 @@ pageCss:
                                 </div>
                             </div>
                         </div>
-                        <div class="card slide-card card--accent-left">
+                        <div class="card card--accent-left">
                             <div class="card--horizontal">
                                 <iconify-icon icon="fluent:arrow-sync-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 <div class="card__content">
@@ -181,7 +183,7 @@ pageCss:
                                 </div>
                             </div>
                         </div>
-                        <div class="card slide-card card--accent-left">
+                        <div class="card card--accent-left">
                             <div class="card--horizontal">
                                 <iconify-icon icon="fluent:certificate-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 <div class="card__content">
@@ -190,7 +192,7 @@ pageCss:
                                 </div>
                             </div>
                         </div>
-                        <div class="card slide-card card--accent-left">
+                        <div class="card card--accent-left">
                             <div class="card--horizontal">
                                 <iconify-icon icon="fluent:hat-graduation-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 <div class="card__content">
@@ -201,11 +203,11 @@ pageCss:
                         </div>
                     </div>
 
-                    <div class="card--quote">
+                    <div class="card card--glass card--compact card--quote">
                         "Vi vægter reuse og genbrug højt - både i vores produkter og i måden vi arbejder på."
                     </div>
                 </div>
-                <div class="slide-stack">
+                <div class="stack">
                     {% photoSlot "klima-instruktion-1" %}
                     {% photoSlot "klima-instruktion-2" %}
                 </div>
@@ -221,7 +223,7 @@ pageCss:
                     <div class="subtitle">Grøn facility service uden kompromis på kvalitet eller pris</div>
 
                     <div class="grid grid--2">
-                        <div class="card slide-card card--compact">
+                        <div class="card card--compact">
                             <h5>
                                 <iconify-icon icon="fluent:data-trending-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 Omkostningseffektiv Grøn Drift
@@ -229,7 +231,7 @@ pageCss:
                             <p>Vores grønne tilgang er ikke dyrere - den er ofte mere effektiv. Cykel-logistik sparer brændstof, genbrug reducerer indkøb, og korrekt kemikalievalg minimerer spild.</p>
                         </div>
 
-                        <div class="card slide-card card--compact">
+                        <div class="card card--compact">
                             <h5>
                                 <iconify-icon icon="fluent:handshake-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 Kunders Miljømål
@@ -237,7 +239,7 @@ pageCss:
                             <p>Vi hjælper kunder med at nå deres egne bæredygtighedsmål gennem vores markedsplads, affaldssortering og miljøvenlige processer.</p>
                         </div>
 
-                        <div class="card slide-card card--compact">
+                        <div class="card card--compact">
                             <h5>
                                 <iconify-icon icon="fluent:plant-grass-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 Kontinuerlig Forbedring
@@ -245,7 +247,7 @@ pageCss:
                             <p>Vi søger konstant nye måder at reducere miljøpåvirkning på - fra bedre sortering til optimeret cykel-ruter og mindre packaging.</p>
                         </div>
 
-                        <div class="card slide-card card--compact">
+                        <div class="card card--compact">
                             <h5>
                                 <iconify-icon icon="fluent:globe-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 Inspiration Til Branchen
@@ -254,12 +256,12 @@ pageCss:
                         </div>
                     </div>
 
-                    <div class="card--quote">
+                    <div class="card card--glass card--compact card--quote">
                         "Vi affaldsorterer hvor vi kan. Det er ikke hos alle vores kunder hvor der er opstillet nok forskellige containere til at udføre den bedst mulige sortering, men hvor vi kan, gør vi det."
                     </div>
 
-                    <div class="slide-stack">
-                        <div class="card slide-card card--accent-left">
+                    <div class="stack">
+                        <div class="card card--accent-left">
                             <div class="card--horizontal">
                                 <iconify-icon icon="fluent:ribbon-star-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 <div class="card__content">
@@ -268,7 +270,7 @@ pageCss:
                                 </div>
                             </div>
                         </div>
-                        <div class="card slide-card card--accent-left">
+                        <div class="card card--accent-left">
                             <div class="card--horizontal">
                                 <iconify-icon icon="fluent:scales-20-filled" inline class="slide-accent--success"></iconify-icon>
                                 <div class="card__content">

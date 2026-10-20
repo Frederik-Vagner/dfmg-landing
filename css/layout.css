@@ -79,6 +79,11 @@
     grid-column: 2 / span 2;
 }
 
+/* Every row as tall as the tallest */
+.grid--even {
+    grid-auto-rows: 1fr;
+}
+
 /* A cell that spans two rows of the grid */
 .grid__cell--tall {
     grid-row: span 2;

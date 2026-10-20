@@ -695,16 +695,13 @@ a.card {
 }
 
 /* ── Quote ── */
+/* A quotation on a glass card: italic, light, a soft blur behind it */
 .card--quote {
-    background: var(--overlay-light);
-    padding: var(--card-padding-compact);
-    border-radius: var(--card-radius);
     margin: var(--space-sm) 0;
     font-style: italic;
     font-weight: var(--font-weight-light);
     backdrop-filter: blur(10px);
-    border: 1px solid var(--white-a15);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--white-a15);
 }
 
 /* ── Responsive ── */

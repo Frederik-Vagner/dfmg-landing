@@ -8,8 +8,8 @@
 
 /* Loaded before the slide styles, as it was in layout.css: where both set
    the same property on a slide, the slide styles win. */
-/* ── Two-column layout, one narrow and one wide column (klima) ── */
-.two-column1 {
+/* ── A slide with a narrow and a wide column (klima) ── */
+.slide-content--split {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--space-lg);
@@ -17,7 +17,7 @@
 }
 
 @media (max-width: 768px) {
-    .two-column1 {
+    .slide-content--split {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
@@ -110,54 +110,46 @@
     gap: var(--space-xl);
 }
 
-.slide-content1 {
-    width: 100%;
+.slide-content--narrow {
     max-width: var(--container-width-narrow);
-    display: grid;
     align-items: center;
-    gap: var(--space-xl);
+    text-align: start;
 }
 
-.slide-content4 {
-    width: 100%;
+.slide-content--medium {
     max-width: 1000px;
-    display: grid;
     align-items: center;
-    text-align: center;
-    gap: var(--space-xl);
 }
 
-.slide-content-normal {
+/* A slide's content box without the grid: 1000px, --wide 1400px */
+.slide-frame {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 var(--space-lg);
 }
 
-.slide-content-wide {
-    width: 100%;
+.slide-frame--wide {
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 var(--space-lg);
 }
 
 @media (max-width: 1440px) {
-    .slide-content-wide {
+    .slide-frame--wide {
         max-width: var(--container-width-normal);
     }
 }
 
 @media (max-width: 1200px) {
-    .slide-content-normal,
-    .slide-content-wide {
+    .slide-frame,
+    .slide-frame--wide {
         max-width: 1000px;
         padding: 0 var(--space-md);
     }
 }
 
 @media (max-width: 768px) {
-    .slide-content-normal,
-    .slide-content-wide {
+    .slide-frame,
+    .slide-frame--wide {
         max-width: 100%;
         padding: 0 var(--space-sm);
     }
@@ -423,9 +415,7 @@
         padding-top: var(--space-lg);
     }
 
-    .slide-content,
-    .slide-content1,
-    .slide-content4 {
+    .slide-content {
         height: auto;
         gap: var(--space-lg);
     }
@@ -459,97 +449,12 @@
 
 @layer pages {
 
-.slide-card {
-color: var(--charcoal);
-}
-
-.slide-card--row {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.slide-card--spaced {
-    margin-bottom: var(--space-2xl);
-}
-
 .slide-accent--success {
     color: var(--success);
 }
 
 .slide-accent--primary {
     color: var(--primary);
-}
-
-.slide-quote--on-dark {
-color: var(--white);
-}
-
-.slide-row {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.slide-row--spaced {
-    margin-bottom: var(--space-2xl);
-}
-
-.slide-stack {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.slide-card-grid--three {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--layout-gap);
-}
-
-.slide-card-grid--spaced {
-    margin-bottom: var(--space-2xl);
-}
-
-.slide-aside {
-    align-content: center;
-}
-
-.slide-centered {
-    text-align: center;
-}
-
-.slide-lead {
-    margin-bottom: var(--space-2xl);
-}
-
-.slide-text--spaced {
-    margin-bottom: var(--space-lg);
-}
-
-.slide-text--loose {
-    margin-bottom: var(--space-2xl);
-}
-
-.slide-body {
-    color: var(--gray);
-}
-
-.slide-body--spaced {
-    margin-bottom: var(--space-2xl);
-}
-
-@media (max-width: 768px) {
-    .slide-card--row {
-        flex-wrap: wrap;
-    }
-
-    .slide-row {
-        flex-wrap: wrap;
-    }
-
-    .slide-card-grid--three {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto;
-    }
 }
 
 }
