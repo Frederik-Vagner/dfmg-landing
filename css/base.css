@@ -177,6 +177,12 @@ body {
     max-width: 100%;
 }
 
+/* Images carry width and height attributes so the browser keeps their space
+   while they load; height: auto keeps the proportion when one is narrowed. */
+:where(img) {
+    height: auto;
+}
+
 /* ── Keyboard focus ──
    One focus ring everywhere instead of the browser's, which differs between
    browsers and is hard to see on the dark panels. */

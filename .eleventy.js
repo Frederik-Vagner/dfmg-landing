@@ -4,6 +4,7 @@ const { minify: terserMinify } = require("terser");
 const fs = require("fs");
 const path = require("path");
 const { fillIcons } = require("./tools/icons");
+const { imgWidth, imgHeight } = require("./tools/image-size");
 
 module.exports = function (eleventyConfig) {
   // Pass through static assets unchanged
@@ -14,6 +15,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
+
+  // width="{{ src | imgWidth }}" height="{{ src | imgHeight }}": the size of
+  // a local image, read from the file (tools/image-size.js)
+  eleventyConfig.addFilter("imgWidth", imgWidth);
+  eleventyConfig.addFilter("imgHeight", imgHeight);
 
   // Inline every icon's SVG (tools/icons.js); before minifying.
   eleventyConfig.addTransform("icons", function (content) {

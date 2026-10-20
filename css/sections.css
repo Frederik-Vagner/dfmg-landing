@@ -408,7 +408,7 @@
 @layer components {
 
 .hero__image--home {
-    background-image: url('/images/service/hero1.jpg');
+    background-image: url('/images/service/hero1.webp');
 }
 
 /* The first section on a page starts below the fixed header. Last in this

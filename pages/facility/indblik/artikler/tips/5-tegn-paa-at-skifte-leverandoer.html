@@ -18,7 +18,7 @@ excerpt: "Kender I disse tegn? Så er det tid til at overveje om jeres nuværend
             <div class="content-layout">
                 <!-- Main Content -->
                 <div class="main-content">
-                    <img src="{{ image }}" alt="{{ imageAlt }}" class="article-image" data-photo-slot="artikel-{{ page.fileSlug }}"{% if imageIsFallback %} data-photo-status="stand-in" data-photo-brief="Uses the shared fallback photo. Give this article its own."{% endif %}>
+                    <img src="{{ image }}" width="{{ image | imgWidth }}" height="{{ image | imgHeight }}" alt="{{ imageAlt }}" class="article-image" fetchpriority="high" decoding="async" data-photo-slot="artikel-{{ page.fileSlug }}"{% if imageIsFallback %} data-photo-status="stand-in" data-photo-brief="Uses the shared fallback photo. Give this article its own."{% endif %}>
 
                     <div class="article-excerpt">
                         Kender I disse tegn? Så er det tid til at overveje om jeres nuværende facility partner virkelig leverer den værdi I fortjener.
