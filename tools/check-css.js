@@ -21,6 +21,10 @@
 //               sizes an icon to the text around it, is allowed), and padding,
 //               margin and gap lengths that are not from the spacing scale (a
 //               nudge of 3px or less is allowed). These may only go down.
+//   page names  classes named after a page instead of the UI element they
+//               are (.job-perk__emoji instead of .display-icon): a class
+//               with a word that is a page's file name under pages/ counts.
+//               Words that are also ordinary UI words are exempt (see below).
 //
 // The baseline holds today's known debt so the check can be strict about
 // anything new. Classes that are intentional (built by JavaScript, for
@@ -96,6 +100,31 @@ function unlayeredRules(css) {
         i = j;
     }
     return problems;
+}
+
+// Page names, from the file names under pages/ (articles excluded: their
+// names are titles, not sections). Words that are also ordinary UI words
+// (a contact form, a feature list, pricing plans) do not count.
+const UI_WORDS = new Set(["about", "bank", "connect", "contact", "demo", "features", "floor", "index", "plans", "pricing", "social"]);
+function pageWords() {
+    const words = new Set();
+    for (const f of walk(path.join(ROOT, "pages"), ".html")) {
+        if (f.includes(`${path.sep}artikler${path.sep}`)) continue;
+        for (const w of path.basename(f, ".html").split("-")) {
+            if (w.length < 2 || UI_WORDS.has(w)) continue;
+            words.add(w);
+            if (w.endsWith("s")) words.add(w.slice(0, -1)); // jobs -> job
+        }
+    }
+    return words;
+}
+
+// Classes defined in the source CSS with a page name as one of their words.
+function pageNamedClasses(sourceCss) {
+    const words = pageWords();
+    const classes = new Set();
+    for (const { css } of sourceCss) for (const c of selectorClasses(css)) classes.add(c);
+    return [...classes].filter((c) => c.split(/[-_]+/).some((w) => words.has(w))).sort();
 }
 
 // The breakpoints documented in css/tokens.css.
@@ -192,7 +221,10 @@ function check() {
     for (const { f, t } of templateTexts) {
         for (const m of t.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)) sourceCss.push({ f, css: stripComments(m[1]) });
     }
+    const pageNamed = pageNamedClasses(sourceCss.filter(({ f }) => f.startsWith(path.join(ROOT, "css"))));
     const counts = {
+        // Named after a page, not after what the element is.
+        pageNamedClasses: pageNamed.length,
         inlineStyles: templateTexts.reduce((n, { t }) => n + (t.match(/\sstyle\s*=\s*["']/g) || []).length, 0),
         important: sourceCss.reduce((n, { css }) => n + (css.match(/!important/g) || []).length, 0),
         hardcodedColours: sourceCss
@@ -225,7 +257,7 @@ function check() {
         selectorsInTwoFiles: selectorsInSeveralFiles(sourceCss.filter(({ f }) => f.startsWith(path.join(ROOT, "css")))),
     };
 
-    return { undefinedClasses, unusedClasses, unlayered, counts, used };
+    return { undefinedClasses, unusedClasses, unlayered, counts, used, pageNamed };
 }
 
 function main() {
@@ -270,7 +302,9 @@ function main() {
     for (const r of result.unlayered) errors.push(`CSS outside a layer: ${r}`);
     for (const [k, v] of Object.entries(current.counts)) {
         const was = (baseline.counts || {})[k];
-        if (was !== undefined && v > was) errors.push(`${k} went up from ${was} to ${v}`);
+        if (was !== undefined && v > was) {
+            errors.push(`${k} went up from ${was} to ${v}` + (k === "pageNamedClasses" ? ` (${result.pageNamed.join(", ")}); name the class after the element, e.g. .card, .row, .display-icon` : ""));
+        }
         if (was !== undefined && v < was) stale.push(`${k} went down from ${was} to ${v}`);
     }
     for (const c of known.undefined) if (!current.undefined.includes(c)) stale.push(`"${c}" is no longer undefined`);

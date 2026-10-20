@@ -17,6 +17,7 @@
     "unused": []
   },
   "counts": {
+    "pageNamedClasses": 5,
     "inlineStyles": 0,
     "important": 0,
     "hardcodedColours": 0,
