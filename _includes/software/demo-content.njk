@@ -13,7 +13,7 @@
             <div class="row row--wide row--top">
                 <div>
                     <h2 class="title title--small">{{ t.form.heading }}</h2>
-                    <p class="body demo-split__intro">{{ t.form.intro }}</p>
+                    <p class="body intro__text intro__text--tight">{{ t.form.intro }}</p>
 
                     <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
                         <input type="hidden" name="_subject" value="{{ t.form.email_subject }}">
@@ -57,9 +57,9 @@
                         </button>
                     </form>
                 </div>
-                <div>
+                <div class="stack">
                     <!-- TODO: Replace with embedded product video or interactive tour -->
-                    <div class="screenshot-placeholder screenshot-placeholder--light demo-split__media" data-photo-slot="demo-visual" data-photo-status="missing" data-photo-brief="{{ t.visual.placeholder_text | escape }}. {{ t.visual.placeholder_hint | escape }}">
+                    <div class="screenshot-placeholder screenshot-placeholder--light screenshot-placeholder--tall" data-photo-slot="demo-visual" data-photo-status="missing" data-photo-brief="{{ t.visual.placeholder_text | escape }}. {{ t.visual.placeholder_hint | escape }}">
                         <div>
                             <iconify-icon icon="fluent:play-circle-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                             <span>{{ t.visual.placeholder_text }}</span><br>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
 
-                    <div class="trust-row trust-row--after-actions">
+                    <div class="trust-row">
                         <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.no_commitment }}</div>
                         <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.session_length }}</div>
                     </div>
@@ -89,20 +89,20 @@
             </div>
 
             <div class="row">
-                <div class="card--feature card--feature--center card--feature--filled">
-                    <div class="card--feature__icon">1</div>
-                    <div class="card--feature__title">{{ t.steps.step1_title }}</div>
-                    <div class="card--feature__desc">{{ t.steps.step1_desc }}</div>
+                <div class="card card--center">
+                    <div class="icon-badge icon-badge--round">1</div>
+                    <div class="card__title">{{ t.steps.step1_title }}</div>
+                    <div class="card__text">{{ t.steps.step1_desc }}</div>
                 </div>
-                <div class="card--feature card--feature--center card--feature--filled">
-                    <div class="card--feature__icon">2</div>
-                    <div class="card--feature__title">{{ t.steps.step2_title }}</div>
-                    <div class="card--feature__desc">{{ t.steps.step2_desc }}</div>
+                <div class="card card--center">
+                    <div class="icon-badge icon-badge--round">2</div>
+                    <div class="card__title">{{ t.steps.step2_title }}</div>
+                    <div class="card__text">{{ t.steps.step2_desc }}</div>
                 </div>
-                <div class="card--feature card--feature--center card--feature--filled">
-                    <div class="card--feature__icon">3</div>
-                    <div class="card--feature__title">{{ t.steps.step3_title }}</div>
-                    <div class="card--feature__desc">{{ t.steps.step3_desc }}</div>
+                <div class="card card--center">
+                    <div class="icon-badge icon-badge--round">3</div>
+                    <div class="card__title">{{ t.steps.step3_title }}</div>
+                    <div class="card__text">{{ t.steps.step3_desc }}</div>
                 </div>
             </div>
         </div>

@@ -389,33 +389,43 @@
 }
 
 /* ── Feature card (icon + title + desc) ── */
-.card--feature {
-    padding: var(--space-lg) var(--space-md);
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    color: inherit;
+/* No box: the card's layout and text on the section's own background */
+.card--flat {
+    background: none;
+    box-shadow: none;
+}
+
+/* A card that is a link: rises a little under the pointer */
+a.card {
     display: block;
+    text-decoration: none;
 }
 
-.card--feature--filled {
-    border-radius: var(--card-radius);
-    background: var(--card-bg);
-    box-shadow: var(--card-shadow);
-}
-
-.card--feature--hover {
+.card--lift {
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.card--feature--hover:hover {
+.card--lift:hover {
     transform: translateY(-4px);
 }
 
-.card--feature--center {
-    text-align: center;
+.card__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-2xs);
 }
 
-.card--feature__icon {
+.card__title--danger { color: var(--red); }
+.card__title--success { color: var(--success); }
+
+.card__text {
+    font-size: var(--text-base);
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* An icon on the brand blue: a rounded square, or --round and centred */
+.icon-badge {
     width: 48px;
     height: 48px;
     border-radius: var(--radius-sm);
@@ -428,28 +438,20 @@
     color: var(--white);
 }
 
-.card--feature--center .card--feature__icon {
+/* After ".card iconify-icon", which would make the icon 2xl */
+.icon-badge iconify-icon {
+    font-size: 1em;
+}
+
+.icon-badge--round {
     margin: 0 auto var(--space-md);
     border-radius: var(--radius-round);
     width: 56px;
     height: 56px;
-    font-size: var(--text-xl);
 }
 
-.card--feature__title {
-    font-size: var(--text-lg);
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-2xs);
-}
-
-.card--feature__desc {
-    font-size: var(--text-base);
-    color: var(--gray);
-    line-height: 1.5;
-}
-
-/* ── Pricing tier card ── */
-.card--tier {
+/* ── Plan: a pricing plan, centred; --featured gets a blue edge and a badge ── */
+.plan {
     background: var(--white);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
@@ -459,50 +461,49 @@
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.card--tier:hover {
+.plan:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
-.card--tier--featured {
+.plan--featured {
     border-color: var(--primary);
     position: relative;
 }
 
-.card--tier__badge {
+.plan__badge {
     position: absolute;
     top: -14px;
     left: 50%;
     transform: translateX(-50%);
-    /* visual props in badges.css */
 }
 
-.card--tier__name {
+.plan__name {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--space-2xs);
 }
 
-.card--tier__desc {
+.plan__desc {
     font-size: var(--text-sm);
     color: var(--gray);
     margin-bottom: var(--space-md);
     line-height: 1.5;
 }
 
-.card--tier__price {
+.plan__price {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
     line-height: 1;
 }
 
-.card--tier__price small {
+.plan__price small {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-normal);
     color: var(--gray);
 }
 
-.card--tier__divider {
+.plan__divider {
     width: 40px;
     height: 3px;
     background: var(--primary);
@@ -510,14 +511,12 @@
     border-radius: var(--radius-sm);
 }
 
-.card--tier__features {
+.plan__features {
     list-style: none;
     padding: 0;
     margin: 0 0 var(--space-lg);
     text-align: left;
 }
-
-/* ── Feature card grids ── */
 
 /* ── Service card (carousel item) ── */
 .card--service {

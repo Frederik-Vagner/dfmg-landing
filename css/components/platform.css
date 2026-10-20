@@ -10,7 +10,6 @@
     color: var(--text-on-dark-muted);
 }
 
-/* Subpages: less space below the hero than the home page. */
 /* Subpages carry a heading and a line or two, so their hero is only as tall
    as that instead of a full screen of colour. */
 .hero--compact {
@@ -26,14 +25,8 @@
     align-items: center;
 }
 
-.confirmation__mark {
-    font-size: var(--icon-display);
-    margin-bottom: var(--space-sm);
-}
-
 /* Screenshot slot under the home hero. */
 .hero__media {
-    min-height: 400px;
     margin-top: var(--space-xl);
 }
 
@@ -44,25 +37,14 @@
     margin-bottom: var(--space-2xs);
 }
 
-.hero__media .screenshot-placeholder__icon {
-    font-size: var(--icon-display);
-    margin-bottom: var(--space-sm);
-    opacity: 0.5;
+.screenshot-placeholder--tall {
+    min-height: 400px;
 }
 
-.walkthrough__media .screenshot-placeholder__icon {
-    font-size: var(--text-3xl);
-}
-
-.demo-split__media .screenshot-placeholder__icon {
+.screenshot-placeholder--tall .screenshot-placeholder__icon {
     font-size: var(--icon-display);
     margin-bottom: var(--space-xs);
 }
-
-.walkthrough__media { min-height: 280px; }
-.about-story__media { min-height: 350px; }
-.about-tech__media { min-height: 300px; }
-.demo-split__media { min-height: 400px; }
 
 /* ── Feature visuals (the summary panel beside each feature row) ── */
 .feature-visual__title {
@@ -97,184 +79,42 @@
 .title--compact { font-size: var(--heading-2); }
 .title--small { font-size: var(--text-2xl); }
 
-/* ── Product walkthrough (home) ── */
-
-.walkthrough__body {
-    color: var(--text-on-dark);
-    margin-bottom: var(--space-md);
-}
-
-/* ── With / without comparison (home) ── */
-
-.comparison__title {
-    margin-bottom: var(--space-sm);
-}
-
-.comparison__title--without { color: var(--red); }
-.comparison__title--with { color: var(--success); }
-
-/* ── Integrations (home) ── */
-.integrations {
+/* ── Logos: a row of partner or integration marks, toned down ── */
+.logos {
     opacity: 0.5;
 }
 
-.integrations__item {
+.logos__item {
     padding: var(--space-md);
+    color: var(--gray);
+    text-align: center;
 }
 
-.integrations__icon {
+.logos__icon {
     font-size: var(--text-3xl);
     display: block;
     margin-bottom: var(--space-2xs);
 }
 
-/* ── Trust rows ── */
-/* The strip of trust badges directly under a subpage hero. */
-.trust-strip {
-    padding-top: var(--space-xl);
-    padding-bottom: 0;
-}
-
-/* Pricing: the trust row sits right under the section above. With no top
-   padding, the row's own top margin escaped the section and left a strip of
-   the dark page background between the two. */
-.trust-section {
-    padding-top: 0;
-}
-
-.trust-section .trust-row {
-    margin-top: 0;
-}
-
-.trust-row--centered {
-    justify-content: center;
-}
-
-/* Under a CTA's buttons. */
-.trust-row--after-actions {
-    margin-top: var(--space-md);
-}
-
-.trust-row--on-dark .trust-item {
-    color: var(--text-on-dark-soft);
-}
-
-.trust-row--on-dark .trust-item iconify-icon {
-    color: var(--icon-on-dark);
-}
-
-/* ── About: tech list ── */
-.about-tech__list {
-    margin-top: var(--space-sm);
-}
-
-/* ── Contact: info column ── */
-.contact-info__heading,
-.contact-form__heading {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-weight-bold);
-}
-
-.contact-info__heading { margin-bottom: var(--space-xs); }
-.contact-form__heading { margin-bottom: var(--space-md); }
-
-.contact-info__intro {
-    color: var(--gray);
-    margin-bottom: var(--space-md);
-    line-height: 1.6;
-}
-
-.contact-info__checklist {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 var(--space-md);
-}
-
-.contact-info__link {
-    color: var(--primary-text);
-}
-
-/* ── Contact: phone field (country code beside the number) ── */
+/* ── Phone field: the country code beside the number ── */
 .form-group--code { flex: 0 0 30%; }
 .form-group--phone { flex: 1; }
 
-/* ── Layout and spacing of the parts above (kept in sync with the markup;
-   formerly utility classes) ── */
-/* generated:start */
-
-.walkthrough__title {
-color: var(--white);
-}
-
-.comparison__title {
-    font-weight: var(--font-weight-bold);
-}
-
-.integrations__item {
-    color: var(--gray);
-    text-align: center;
-}
-
-.about-split__eyebrow {
-    color: var(--primary-text);
-}
-
-.about-split__text {
-    color: var(--gray);
-}
-
-.about-split__text--spaced {
-    margin-bottom: var(--space-lg);
-}
-
-.about-values {
-    display: flex;
-    gap: var(--layout-gap);
-}
-
-.about-value {
-    padding: var(--space-lg);
-    background: var(--bg-gradient-white);
-    border-left: 4px solid var(--primary);
-}
-
-.about-value :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
-.contact-info__card :is(h1, h2, h3, h4, h5, h6, p, li, span) {
-    color: inherit;
-}
-
-.demo-split__intro {
-    margin-bottom: var(--space-xl);
-    color: var(--gray);
-}
-
-@media (max-width: 768px) {
-
-    .about-values {
-        flex-wrap: wrap;
-    }
-}
-/* generated:end */
-
-
-/* ── Pricing plans ── */
-.pricing-tiers {
+/* ── Plans: the pricing plans side by side ──
+   Three plans stay side by side on tablets: two plus a lone third card
+   looked lopsided. */
+.plans {
     align-items: start;
 }
 
-/* Three plans stay side by side on tablets: two plus a lone third card
-   looked lopsided. */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .pricing-tiers {
+    .plans {
         --grid-cols: 3;
     }
 }
 
 @media (max-width: 768px) {
-    .pricing-tiers {
+    .plans {
         max-width: 400px;
         margin: 0 auto;
     }

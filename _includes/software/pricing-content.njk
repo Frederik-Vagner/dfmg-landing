@@ -10,17 +10,17 @@
     <!-- Tier cards -->
     <section class="section">
         <div class="container">
-            <div class="grid grid--3 grid--loose pricing-tiers">
+            <div class="grid grid--3 grid--loose plans">
                 {% for tier in t.tiers %}
-                <div class="card--tier{% if tier.featured %} card--tier--featured{% endif %}">
+                <div class="plan{% if tier.featured %} plan--featured{% endif %}">
                     {% if tier.badge %}
-                    <div class="badge-inline badge-inline--primary card--tier__badge">{{ tier.badge }}</div>
+                    <div class="badge-inline badge-inline--primary plan__badge">{{ tier.badge }}</div>
                     {% endif %}
-                    <div class="card--tier__name">{{ tier.name }}</div>
-                    <div class="card--tier__desc">{{ tier.desc }}</div>
-                    <div class="card--tier__price">{{ tier.price }}</div>
-                    <div class="card--tier__divider"></div>
-                    <ul class="checklist checklist--success checklist--compact card--tier__features">
+                    <div class="plan__name">{{ tier.name }}</div>
+                    <div class="plan__desc">{{ tier.desc }}</div>
+                    <div class="plan__price">{{ tier.price }}</div>
+                    <div class="plan__divider"></div>
+                    <ul class="checklist checklist--success checklist--compact plan__features">
                         {% for feature in tier.features %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ feature }}</li>
                         {% endfor %}
@@ -92,9 +92,9 @@
     </section>
 
     <!-- Trust signals -->
-    <section class="section trust-section">
+    <section class="section section--flush-top">
         <div class="container">
-            <div class="trust-row trust-row--centered">
+            <div class="trust-row">
                 {% for item in t.trust.items %}
                 <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ item }}</div>
                 {% endfor %}

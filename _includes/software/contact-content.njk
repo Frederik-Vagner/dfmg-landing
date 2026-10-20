@@ -12,37 +12,39 @@
         <div class="container">
             <div class="row row--wide row--top">
                 <div>
-                    <h2 class="contact-info__heading">{{ t.info.heading }}</h2>
-                    <p class="contact-info__intro">{{ t.info.body }}</p>
+                    <h2 class="title title--small">{{ t.info.heading }}</h2>
+                    <p class="body intro__text intro__text--tight">{{ t.info.body }}</p>
 
-                    <ul class="checklist checklist--success contact-info__checklist">
-                        <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet1 }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet2 }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet3 }}</li>
-                        <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet4 }}</li>
-                    </ul>
+                    <div class="stack">
+                        <ul class="checklist checklist--success">
+                            <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet1 }}</li>
+                            <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet2 }}</li>
+                            <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet3 }}</li>
+                            <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon>{{ t.info.bullet4 }}</li>
+                        </ul>
 
-                    <div class="grid grid--2 grid--tight">
-                        <div class="card contact-info__card">
-                            <h4><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> {{ t.info.card_email }}</h4>
-                            <p><a href="mailto:{{ site.platformEmail }}" class="contact-info__link">{{ site.platformEmail }}</a></p>
-                        </div>
-                        <div class="card contact-info__card">
-                            <h4><iconify-icon icon="fluent:call-20-filled" inline></iconify-icon> {{ t.info.card_phone }}</h4>
-                            <p><a href="tel:{{ site.phone }}" class="contact-info__link">{{ site.phoneDisplay }}</a></p>
-                        </div>
-                        <div class="card contact-info__card">
-                            <h4><iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon> {{ t.info.card_hours }}</h4>
-                            <p>{{ t.info.card_hours_value }}</p>
-                        </div>
-                        <div class="card contact-info__card">
-                            <h4><iconify-icon icon="fluent:building-20-filled" inline></iconify-icon> {{ t.info.card_company }}</h4>
-                            <p>{{ site.legalName }}<br>CVR: {{ site.cvr }}</p>
+                        <div class="grid grid--2 grid--tight">
+                            <div class="card">
+                                <h4><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> {{ t.info.card_email }}</h4>
+                                <p><a href="mailto:{{ site.platformEmail }}">{{ site.platformEmail }}</a></p>
+                            </div>
+                            <div class="card">
+                                <h4><iconify-icon icon="fluent:call-20-filled" inline></iconify-icon> {{ t.info.card_phone }}</h4>
+                                <p><a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a></p>
+                            </div>
+                            <div class="card">
+                                <h4><iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon> {{ t.info.card_hours }}</h4>
+                                <p>{{ t.info.card_hours_value }}</p>
+                            </div>
+                            <div class="card">
+                                <h4><iconify-icon icon="fluent:building-20-filled" inline></iconify-icon> {{ t.info.card_company }}</h4>
+                                <p>{{ site.legalName }}<br>CVR: {{ site.cvr }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h2 class="contact-form__heading">{{ t.form.heading }}</h2>
+                    <h2 class="title title--small">{{ t.form.heading }}</h2>
                     <form class="platform-form" action="https://formspree.io/f/xdkdrqkw" method="POST">
                         <input type="hidden" name="_subject" value="{{ t.form.email_subject }}">
                         <input type="hidden" name="_next" value="https://dfmg.dk{{ prefix }}/tak.html">

@@ -12,7 +12,7 @@
     </section>
 
     <!-- Trust badges -->
-    <section class="section trust-strip">
+    <section class="section section--flush-bottom">
         <div class="container">
             <div class="trust-row">
                 {% for item in t.trust %}
@@ -27,11 +27,11 @@
         <div class="container">
             <div class="row row--center row--wide">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.editor.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.editor.title }}</h2>
-                    <p class="feature-row__body">{{ t.editor.body1 }}</p>
-                    <p class="feature-row__body">{{ t.editor.body2 }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ t.editor.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.editor.title }}</h2>
+                    <p class="feature__text">{{ t.editor.body1 }}</p>
+                    <p class="feature__text">{{ t.editor.body2 }}</p>
+                    <div class="feature__tags">
                         {% for badge in t.editor.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}
@@ -59,11 +59,11 @@
         <div class="container">
             <div class="row row--center row--wide row--reverse">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.accuracy.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.accuracy.title }}</h2>
-                    <p class="feature-row__body">{{ t.accuracy.body1 }}</p>
-                    <p class="feature-row__body">{{ t.accuracy.body2 }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ t.accuracy.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.accuracy.title }}</h2>
+                    <p class="feature__text">{{ t.accuracy.body1 }}</p>
+                    <p class="feature__text">{{ t.accuracy.body2 }}</p>
+                    <div class="feature__tags">
                         {% for badge in t.accuracy.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}
@@ -91,11 +91,11 @@
         <div class="container">
             <div class="row row--center row--wide">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.taskMapping.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.taskMapping.title }}</h2>
-                    <p class="feature-row__body">{{ t.taskMapping.body1 }}</p>
-                    <p class="feature-row__body">{{ t.taskMapping.body2 }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ t.taskMapping.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.taskMapping.title }}</h2>
+                    <p class="feature__text">{{ t.taskMapping.body1 }}</p>
+                    <p class="feature__text">{{ t.taskMapping.body2 }}</p>
+                    <div class="feature__tags">
                         {% for badge in t.taskMapping.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}
@@ -123,11 +123,11 @@
         <div class="container">
             <div class="row row--center row--wide row--reverse">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.routes.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.routes.title }}</h2>
-                    <p class="feature-row__body">{{ t.routes.body1 }}</p>
-                    <p class="feature-row__body">{{ t.routes.body2 }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ t.routes.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.routes.title }}</h2>
+                    <p class="feature__text">{{ t.routes.body1 }}</p>
+                    <p class="feature__text">{{ t.routes.body2 }}</p>
+                    <div class="feature__tags">
                         {% for badge in t.routes.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}
@@ -155,11 +155,11 @@
         <div class="container">
             <div class="row row--center row--wide">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.multiFloor.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.multiFloor.title }}</h2>
-                    <p class="feature-row__body">{{ t.multiFloor.body1 }}</p>
-                    <p class="feature-row__body">{{ t.multiFloor.body2 }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ t.multiFloor.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.multiFloor.title }}</h2>
+                    <p class="feature__text">{{ t.multiFloor.body1 }}</p>
+                    <p class="feature__text">{{ t.multiFloor.body2 }}</p>
+                    <div class="feature__tags">
                         {% for badge in t.multiFloor.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}
@@ -187,11 +187,11 @@
         <div class="container">
             <div class="row row--center row--wide row--reverse">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.annotations.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.annotations.title }}</h2>
-                    <p class="feature-row__body">{{ t.annotations.body1 }}</p>
-                    <p class="feature-row__body">{{ t.annotations.body2 }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ t.annotations.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.annotations.title }}</h2>
+                    <p class="feature__text">{{ t.annotations.body1 }}</p>
+                    <p class="feature__text">{{ t.annotations.body2 }}</p>
+                    <div class="feature__tags">
                         {% for badge in t.annotations.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}
@@ -219,12 +219,12 @@
         <div class="container">
             <div class="grid grid--3 grid--loose">
                 {% for benefit in t.benefits %}
-                <div class="card--feature card--feature--center">
-                    <div class="card--feature__icon">
+                <div class="card card--flat card--center">
+                    <div class="icon-badge icon-badge--round">
                         <iconify-icon icon="{{ benefit.icon }}" inline></iconify-icon>
                     </div>
-                    <div class="card--feature__title">{{ benefit.title }}</div>
-                    <div class="card--feature__desc">{{ benefit.desc }}</div>
+                    <div class="card__title">{{ benefit.title }}</div>
+                    <div class="card__text">{{ benefit.desc }}</div>
                 </div>
                 {% endfor %}
             </div>

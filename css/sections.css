@@ -35,6 +35,10 @@
 .section--primary  { background: var(--bg-gradient-primary); color: var(--white); }
 .section--charcoal { background: var(--bg-gradient-charcoal); color: var(--white); }
 
+/* A section that runs straight on from the one above or below it */
+.section--flush-top { padding-top: 0; }
+.section--flush-bottom { padding-bottom: 0; }
+
 /* ── Hero: a page's first section, at least a screen high, content centred ──
    A minimum, not a fixed height: content taller than the screen used to be
    centred and clipped, which put the eyebrow under the header. */
@@ -199,8 +203,8 @@
     }
 }
 
-/* ── Feature text (a feature's eyebrow, title, text and module tags) ── */
-.feature-row__subtitle {
+/* ── Feature: the text beside a feature's picture (eyebrow, title, text, tags) ── */
+.feature__eyebrow {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
@@ -209,31 +213,31 @@
     margin-bottom: var(--space-2xs);
 }
 
-.feature-row__title {
+.feature__title {
     font-size: var(--heading-2);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--space-sm);
 }
 
-.feature-row__body {
+.feature__text {
     font-size: var(--text-base);
     color: var(--gray);
     line-height: 1.7;
     margin-bottom: var(--space-md);
 }
 
-.feature-row__modules {
+.feature__tags {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-2xs);
 }
 
-/* ── Trust Signals ── */
+/* ── Trust row: short facts with a tick, centred in a line ──
+   No margin of its own: a .stack or the section around it spaces it. */
 .trust-row {
     display: flex;
     gap: var(--space-lg);
     justify-content: center;
-    margin-top: var(--space-lg);
 }
 
 .trust-item {
@@ -246,6 +250,14 @@
 
 .trust-item iconify-icon {
     color: var(--success);
+}
+
+.trust-row--on-dark .trust-item {
+    color: var(--text-on-dark-soft);
+}
+
+.trust-row--on-dark .trust-item iconify-icon {
+    color: var(--icon-on-dark);
 }
 
 /* ── Carousel ── */

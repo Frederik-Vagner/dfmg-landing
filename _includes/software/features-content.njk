@@ -13,10 +13,10 @@
         <div class="container">
             <div class="row row--center row--wide{% if section.reverse %} row--reverse{% endif %}">
                 <div>
-                    <div class="feature-row__subtitle">{{ section.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ section.title }}</h2>
-                    <p class="feature-row__body">{{ section.body }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ section.subtitle }}</div>
+                    <h2 class="feature__title">{{ section.title }}</h2>
+                    <p class="feature__text">{{ section.body }}</p>
+                    <div class="feature__tags">
                         {% for badge in section.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}

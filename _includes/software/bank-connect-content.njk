@@ -12,7 +12,7 @@
     </section>
 
     <!-- Trust badge -->
-    <section class="section trust-strip">
+    <section class="section section--flush-bottom">
         <div class="container">
             <div class="trust-row">
                 {% for item in t.trust %}
@@ -27,10 +27,10 @@
         <div class="container">
             <div class="row row--center row--wide">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.overview.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.overview.title }}</h2>
-                    <p class="feature-row__body">{{ t.overview.body1 }}</p>
-                    <p class="feature-row__body">{{ t.overview.body2 }}</p>
+                    <div class="feature__eyebrow">{{ t.overview.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.overview.title }}</h2>
+                    <p class="feature__text">{{ t.overview.body1 }}</p>
+                    <p class="feature__text">{{ t.overview.body2 }}</p>
                 </div>
                 <div>
                     <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="bankconnect-overview" data-photo-status="missing">
@@ -54,12 +54,12 @@
         <div class="container">
             <div class="grid grid--3 grid--loose">
                 {% for benefit in t.benefits %}
-                <div class="card--feature card--feature--center">
-                    <div class="card--feature__icon">
+                <div class="card card--flat card--center">
+                    <div class="icon-badge icon-badge--round">
                         <iconify-icon icon="{{ benefit.icon }}" inline></iconify-icon>
                     </div>
-                    <div class="card--feature__title">{{ benefit.title }}</div>
-                    <div class="card--feature__desc">{{ benefit.desc }}</div>
+                    <div class="card__title">{{ benefit.title }}</div>
+                    <div class="card__text">{{ benefit.desc }}</div>
                 </div>
                 {% endfor %}
             </div>
@@ -71,11 +71,11 @@
         <div class="container">
             <div class="row row--center row--wide">
                 <div>
-                    <div class="feature-row__subtitle">{{ t.functions.subtitle }}</div>
-                    <h2 class="feature-row__title">{{ t.functions.title }}</h2>
-                    <p class="feature-row__body">{{ t.functions.body1 }}</p>
-                    <p class="feature-row__body">{{ t.functions.body2 }}</p>
-                    <div class="feature-row__modules">
+                    <div class="feature__eyebrow">{{ t.functions.subtitle }}</div>
+                    <h2 class="feature__title">{{ t.functions.title }}</h2>
+                    <p class="feature__text">{{ t.functions.body1 }}</p>
+                    <p class="feature__text">{{ t.functions.body2 }}</p>
+                    <div class="feature__tags">
                         {% for badge in t.functions.badges %}
                         <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
                         {% endfor %}

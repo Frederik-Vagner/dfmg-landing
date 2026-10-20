@@ -10,7 +10,7 @@
             </div>
 
             <!-- TODO: Replace with actual dashboard screenshot or 60s product video -->
-            <div class="screenshot-placeholder hero__media" data-photo-slot="home-hero" data-photo-status="missing" data-photo-brief="{{ t.hero.placeholder_text | escape }}. {{ t.hero.placeholder_hint | escape }}">
+            <div class="screenshot-placeholder screenshot-placeholder--tall hero__media" data-photo-slot="home-hero" data-photo-status="missing" data-photo-brief="{{ t.hero.placeholder_text | escape }}. {{ t.hero.placeholder_hint | escape }}">
                 <div>
                     <iconify-icon icon="fluent:play-circle-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                     <span>{{ t.hero.placeholder_text }}</span><br>
@@ -34,26 +34,26 @@
             </div>
 
             <div class="grid grid--3 grid--loose">
-                <div class="card--feature card--feature--center">
-                    <div class="card--feature__icon">
+                <div class="card card--flat card--center">
+                    <div class="icon-badge icon-badge--round">
                         <iconify-icon icon="fluent:flag-20-filled" inline></iconify-icon>
                     </div>
-                    <div class="card--feature__title">{{ t.why.card1_title }}</div>
-                    <div class="card--feature__desc">{{ t.why.card1_desc }}</div>
+                    <div class="card__title">{{ t.why.card1_title }}</div>
+                    <div class="card__text">{{ t.why.card1_desc }}</div>
                 </div>
-                <div class="card--feature card--feature--center">
-                    <div class="card--feature__icon">
+                <div class="card card--flat card--center">
+                    <div class="icon-badge icon-badge--round">
                         <iconify-icon icon="fluent:cube-multiple-20-filled" inline></iconify-icon>
                     </div>
-                    <div class="card--feature__title">{{ t.why.card2_title }}</div>
-                    <div class="card--feature__desc">{{ t.why.card2_desc }}</div>
+                    <div class="card__title">{{ t.why.card2_title }}</div>
+                    <div class="card__text">{{ t.why.card2_desc }}</div>
                 </div>
-                <div class="card--feature card--feature--center">
-                    <div class="card--feature__icon">
+                <div class="card card--flat card--center">
+                    <div class="icon-badge icon-badge--round">
                         <iconify-icon icon="fluent:link-20-filled" inline></iconify-icon>
                     </div>
-                    <div class="card--feature__title">{{ t.why.card3_title }}</div>
-                    <div class="card--feature__desc">{{ t.why.card3_desc }}</div>
+                    <div class="card__title">{{ t.why.card3_title }}</div>
+                    <div class="card__text">{{ t.why.card3_desc }}</div>
                 </div>
             </div>
         </div>
@@ -69,35 +69,35 @@
             </div>
 
             <div class="grid grid--3">
-                <a href="{{ prefix }}/features.html#operations" class="card--feature card--feature--filled card--feature--hover">
-                    <div class="card--feature__icon"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon></div>
-                    <div class="card--feature__title">{{ t.modules.operations_title }}</div>
-                    <div class="card--feature__desc">{{ t.modules.operations_desc }}</div>
+                <a href="{{ prefix }}/features.html#operations" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.operations_title }}</div>
+                    <div class="card__text">{{ t.modules.operations_desc }}</div>
                 </a>
-                <a href="{{ prefix }}/features.html#clients" class="card--feature card--feature--filled card--feature--hover">
-                    <div class="card--feature__icon"><iconify-icon icon="fluent:people-20-filled" inline></iconify-icon></div>
-                    <div class="card--feature__title">{{ t.modules.clients_title }}</div>
-                    <div class="card--feature__desc">{{ t.modules.clients_desc }}</div>
+                <a href="{{ prefix }}/features.html#clients" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:people-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.clients_title }}</div>
+                    <div class="card__text">{{ t.modules.clients_desc }}</div>
                 </a>
-                <a href="{{ prefix }}/features.html#employees" class="card--feature card--feature--filled card--feature--hover">
-                    <div class="card--feature__icon"><iconify-icon icon="fluent:person-20-filled" inline></iconify-icon></div>
-                    <div class="card--feature__title">{{ t.modules.employees_title }}</div>
-                    <div class="card--feature__desc">{{ t.modules.employees_desc }}</div>
+                <a href="{{ prefix }}/features.html#employees" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:person-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.employees_title }}</div>
+                    <div class="card__text">{{ t.modules.employees_desc }}</div>
                 </a>
-                <a href="{{ prefix }}/features.html#finance" class="card--feature card--feature--filled card--feature--hover">
-                    <div class="card--feature__icon"><iconify-icon icon="fluent:calculator-20-filled" inline></iconify-icon></div>
-                    <div class="card--feature__title">{{ t.modules.finance_title }}</div>
-                    <div class="card--feature__desc">{{ t.modules.finance_desc }}</div>
+                <a href="{{ prefix }}/features.html#finance" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:calculator-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.finance_title }}</div>
+                    <div class="card__text">{{ t.modules.finance_desc }}</div>
                 </a>
-                <a href="{{ prefix }}/features.html#crm" class="card--feature card--feature--filled card--feature--hover">
-                    <div class="card--feature__icon"><iconify-icon icon="fluent:mail-read-20-filled" inline></iconify-icon></div>
-                    <div class="card--feature__title">{{ t.modules.crm_title }}</div>
-                    <div class="card--feature__desc">{{ t.modules.crm_desc }}</div>
+                <a href="{{ prefix }}/features.html#crm" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:mail-read-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.crm_title }}</div>
+                    <div class="card__text">{{ t.modules.crm_desc }}</div>
                 </a>
-                <a href="{{ prefix }}/features.html#documents" class="card--feature card--feature--filled card--feature--hover">
-                    <div class="card--feature__icon"><iconify-icon icon="fluent:document-text-20-filled" inline></iconify-icon></div>
-                    <div class="card--feature__title">{{ t.modules.documents_title }}</div>
-                    <div class="card--feature__desc">{{ t.modules.documents_desc }}</div>
+                <a href="{{ prefix }}/features.html#documents" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:document-text-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.documents_title }}</div>
+                    <div class="card__text">{{ t.modules.documents_desc }}</div>
                 </a>
             </div>
         </div>
@@ -108,12 +108,12 @@
         <div class="container">
             <div class="row row--center">
                 <div>
-                    <div class="title title--compact walkthrough__title">{{ t.walkthrough.title }}</div>
-                    <p class="walkthrough__body">{{ t.walkthrough.body }}</p>
+                    <div class="title title--compact">{{ t.walkthrough.title }}</div>
+                    <p>{{ t.walkthrough.body }}</p>
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.walkthrough.cta }}</a>
                 </div>
                 <!-- TODO: Replace with embedded video (Loom/YouTube) or animated GIF walkthrough -->
-                <div class="screenshot-placeholder walkthrough__media" data-photo-slot="home-walkthrough" data-photo-status="missing" data-photo-brief="{{ t.walkthrough.placeholder_text | escape }}. {{ t.walkthrough.placeholder_hint | escape }}">
+                <div class="screenshot-placeholder" data-photo-slot="home-walkthrough" data-photo-status="missing" data-photo-brief="{{ t.walkthrough.placeholder_text | escape }}. {{ t.walkthrough.placeholder_hint | escape }}">
                     <div>
                         <iconify-icon icon="fluent:video-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                         <span>{{ t.walkthrough.placeholder_text }}</span><br>
@@ -138,7 +138,7 @@
 
             <div class="row row--loose">
                 <div class="card">
-                    <div class="comparison__title comparison__title--without"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.comparison.without_title }}</div>
+                    <div class="card__title card__title--danger"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.comparison.without_title }}</div>
                     <ul class="checklist checklist--red">
                         {% for item in t.comparison.without_items %}
                         <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon> {{ item }}</li>
@@ -146,7 +146,7 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <div class="comparison__title comparison__title--with"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.comparison.with_title }}</div>
+                    <div class="card__title card__title--success"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="btn__icon"></iconify-icon> {{ t.comparison.with_title }}</div>
                     <ul class="checklist checklist--success">
                         {% for item in t.comparison.with_items %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ item }}</li>
@@ -166,25 +166,25 @@
             </div>
 
             <!-- TODO: Replace with actual integration logos -->
-            <div class="cluster cluster--center cluster--loose integrations">
-                <div class="integrations__item">
-                    <iconify-icon icon="fa6-brands:google" inline class="integrations__icon"></iconify-icon>
+            <div class="cluster cluster--center cluster--loose logos">
+                <div class="logos__item">
+                    <iconify-icon icon="fa6-brands:google" inline class="logos__icon"></iconify-icon>
                     {{ t.integrations.google }}
                 </div>
-                <div class="integrations__item">
-                    <iconify-icon icon="fa6-brands:slack" inline class="integrations__icon"></iconify-icon>
+                <div class="logos__item">
+                    <iconify-icon icon="fa6-brands:slack" inline class="logos__icon"></iconify-icon>
                     {{ t.integrations.slack }}
                 </div>
-                <div class="integrations__item">
-                    <iconify-icon icon="fluent:building-bank-20-filled" inline class="integrations__icon"></iconify-icon>
+                <div class="logos__item">
+                    <iconify-icon icon="fluent:building-bank-20-filled" inline class="logos__icon"></iconify-icon>
                     {{ t.integrations.bank }}
                 </div>
-                <div class="integrations__item">
-                    <iconify-icon icon="fluent:receipt-20-filled" inline class="integrations__icon"></iconify-icon>
+                <div class="logos__item">
+                    <iconify-icon icon="fluent:receipt-20-filled" inline class="logos__icon"></iconify-icon>
                     {{ t.integrations.efaktura }}
                 </div>
-                <div class="integrations__item">
-                    <iconify-icon icon="fluent:mail-20-filled" inline class="integrations__icon"></iconify-icon>
+                <div class="logos__item">
+                    <iconify-icon icon="fluent:mail-20-filled" inline class="logos__icon"></iconify-icon>
                     {{ t.integrations.email }}
                 </div>
             </div>
@@ -197,14 +197,16 @@
             <div class="cta cta--center cta--primary">
                 <div class="cta__title">{{ t.cta.title }}</div>
                 <div class="cta__text">{{ t.cta.body }}</div>
-                <div class="cluster cluster--center">
-                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="btn__icon"></iconify-icon> {{ t.cta.cta_demo }}</a>
-                    <a href="{{ prefix }}/pricing.html" class="btn btn--ghost btn--md">{{ t.cta.cta_pricing }}</a>
-                </div>
-                <div class="trust-row trust-row--after-actions trust-row--on-dark">
-                    <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust1 }}</div>
-                    <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust2 }}</div>
-                    <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust3 }}</div>
+                <div class="stack">
+                    <div class="cluster cluster--center">
+                        <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline class="btn__icon"></iconify-icon> {{ t.cta.cta_demo }}</a>
+                        <a href="{{ prefix }}/pricing.html" class="btn btn--ghost btn--md">{{ t.cta.cta_pricing }}</a>
+                    </div>
+                    <div class="trust-row trust-row--on-dark">
+                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust1 }}</div>
+                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust2 }}</div>
+                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.cta.trust3 }}</div>
+                    </div>
                 </div>
             </div>
         </div>

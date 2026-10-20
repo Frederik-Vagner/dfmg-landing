@@ -12,15 +12,15 @@
         <div class="container">
             <div class="row">
                 <div>
-                    <div class="subtitle about-split__eyebrow">{{ t.story.subtitle }}</div>
+                    <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.story.subtitle }}</div>
                     <h2 class="title title--compact">{{ t.story.title }}</h2>
-                    <p class="body about-split__text about-split__text--spaced">{{ t.story.body1 }}</p>
-                    <p class="body about-split__text about-split__text--spaced">{{ t.story.body2 }}</p>
-                    <p class="body about-split__text">{{ t.story.body3 }}</p>
+                    <p class="body intro__text intro__text--tight">{{ t.story.body1 }}</p>
+                    <p class="body intro__text intro__text--tight">{{ t.story.body2 }}</p>
+                    <p class="body intro__text">{{ t.story.body3 }}</p>
                 </div>
                 <div>
                     <!-- TODO: Replace with team photo or photo of you working -->
-                    <div class="screenshot-placeholder screenshot-placeholder--light about-story__media" data-photo-slot="about-story" data-photo-status="missing" data-photo-brief="{{ t.story.placeholder_text | escape }}. {{ t.story.placeholder_hint | escape }}">
+                    <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="about-story" data-photo-status="missing" data-photo-brief="{{ t.story.placeholder_text | escape }}. {{ t.story.placeholder_hint | escape }}">
                         <div>
                             <iconify-icon icon="fluent:camera-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                             {{ t.story.placeholder_text }}<br>
@@ -40,16 +40,16 @@
                 <div class="title intro__title">{{ t.philosophy.title }}</div>
             </div>
 
-            <div class="about-values">
-                <div class="card about-value">
+            <div class="row">
+                <div class="card card--soft card--accent-left card--accent-primary">
                     <h4>{{ t.philosophy.card1_title }}</h4>
                     <p>{{ t.philosophy.card1_desc }}</p>
                 </div>
-                <div class="card about-value">
+                <div class="card card--soft card--accent-left card--accent-primary">
                     <h4>{{ t.philosophy.card2_title }}</h4>
                     <p>{{ t.philosophy.card2_desc }}</p>
                 </div>
-                <div class="card about-value">
+                <div class="card card--soft card--accent-left card--accent-primary">
                     <h4>{{ t.philosophy.card3_title }}</h4>
                     <p>{{ t.philosophy.card3_desc }}</p>
                 </div>
@@ -63,7 +63,7 @@
             <div class="row">
                 <div>
                     <!-- TODO: Replace with simple architecture visual or tech stack diagram -->
-                    <div class="screenshot-placeholder screenshot-placeholder--light about-tech__media" data-photo-slot="about-tech" data-photo-status="missing" data-photo-brief="{{ t.tech.placeholder_text | escape }}. {{ t.tech.placeholder_hint | escape }}">
+                    <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="about-tech" data-photo-status="missing" data-photo-brief="{{ t.tech.placeholder_text | escape }}. {{ t.tech.placeholder_hint | escape }}">
                         <div>
                             <iconify-icon icon="fluent:organization-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
                             {{ t.tech.placeholder_text }}<br>
@@ -72,9 +72,9 @@
                     </div>
                 </div>
                 <div>
-                    <div class="subtitle about-split__eyebrow">{{ t.tech.subtitle }}</div>
+                    <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.tech.subtitle }}</div>
                     <h2 class="title title--compact">{{ t.tech.title }}</h2>
-                    <ul class="checklist checklist--success about-tech__list">
+                    <ul class="checklist checklist--success">
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span><strong>{{ t.tech.item1_strong }}</strong> — {{ t.tech.item1_text }}</span></li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span><strong>{{ t.tech.item2_strong }}</strong> — {{ t.tech.item2_text }}</span></li>
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span><strong>{{ t.tech.item3_strong }}</strong> — {{ t.tech.item3_text }}</span></li>
