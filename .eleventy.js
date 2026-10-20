@@ -14,7 +14,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   // width="{{ src | imgWidth }}" height="{{ src | imgHeight }}": the size of
   // a local image, read from the file (tools/image-size.js)
@@ -91,6 +90,21 @@ module.exports = function (eleventyConfig) {
     const rest = others.filter((a) => a.data.categoryKey !== current.data.categoryKey);
     return [...same, ...rest].slice(0, count);
   });
+
+  // Pages for sitemap.njk: on the main layout, not noindex, at their
+  // canonical URL, dated by their last commit (none if git cannot tell).
+  const { execFileSync } = require("child_process");
+  const lastCommit = (file) => {
+    try { return execFileSync("git", ["log", "-1", "--format=%cs", "--", file], { encoding: "utf8" }).trim() || null; }
+    catch { return null; }
+  };
+  eleventyConfig.addFilter("sitemapPages", (pages) => pages
+    .filter((p) => p.data.layout && !/noindex/.test(p.data.robots || "") && p.outputPath && p.outputPath.endsWith(".html"))
+    .map((p) => ({
+      loc: p.data.canonical || p.data.site.url + (p.url === "/index.html" ? "/" : p.url),
+      lastmod: lastCommit(p.inputPath),
+    }))
+    .sort((a, b) => a.loc.localeCompare(b.loc)));
 
   // A photo slot with no photo yet: {% photoSlot "klima-bilfri", "brief" %}.
   // Renders an inert <template> that tools/photo-inventory.js lists on

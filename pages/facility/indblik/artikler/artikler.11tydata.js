@@ -24,6 +24,12 @@ const folderOf = (data) => data.page.filePathStem.split("/").slice(-2, -1)[0];
 
 const FALLBACK_IMAGE = "/images/article/ipad.webp";
 
+// "15. december 2024" -> a Date.
+const parseDate = (text) => {
+    const [day, month, year] = text.replace(".", "").split(" ");
+    return new Date(Number(year), MONTHS.indexOf(month.toLowerCase()), Number(day));
+};
+
 module.exports = {
     tags: ["artikel"],
 
@@ -37,9 +43,25 @@ module.exports = {
         categoryKey: (data) => CATEGORIES[folderOf(data)].key,
         category: (data) => CATEGORIES[folderOf(data)].label,
         // "15. december 2024" as a sortable date, for newest-first lists.
-        sortDate: (data) => {
-            const [day, month, year] = data.publishDate.replace(".", "").split(" ");
-            return new Date(Number(year), MONTHS.indexOf(month.toLowerCase()), Number(day));
+        sortDate: (data) => parseDate(data.publishDate),
+        // Structured data for search results (base.html prints it in place
+        // of the site-wide organisation block), from the same front matter.
+        jsonLd: (data) => {
+            const d = parseDate(data.publishDate);
+            const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+            const org = { "@id": data.site.url + "/#organization" };
+            return {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                headline: data.articleTitle,
+                description: data.description,
+                image: data.site.url + data.image,
+                datePublished: iso,
+                inLanguage: "da",
+                mainEntityOfPage: data.site.url + data.page.url,
+                author: { "@type": "Organization", name: data.site.name, url: data.site.url, ...org },
+                publisher: { "@type": "Organization", name: data.site.name, logo: data.site.url + "/images/logos/logo.png", ...org },
+            };
         },
     },
 };
