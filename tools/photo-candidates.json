@@ -3,24 +3,301 @@
     "artikel-fra-vip-til-glemt-kunde": {
         "brief": "An office where the service has quietly slipped: a bin nobody emptied, crumpled paper on the floor, mugs left standing. No recognisable faces (the Pexels license rules out showing people in a bad light).",
         "candidates": [
-            { "title": "Crumpled papers around an office bin", "page": "https://www.pexels.com/photo/crumpled-papers-inside-the-trash-bin-at-the-office-6913195/", "image": "https://images.pexels.com/photos/6913195/pexels-photo-6913195.jpeg" },
-            { "title": "Mugs left on a windowsill", "page": "https://www.pexels.com/photo/mugs-on-a-countertop-10658579/", "image": "https://images.pexels.com/photos/10658579/pexels-photo-10658579.jpeg" },
-            { "title": "Office bin full of crumpled paper, from above", "page": "https://www.pexels.com/photo/close-up-shot-of-paper-trashes-on-a-trash-can-6913203/", "image": "https://images.pexels.com/photos/6913203/pexels-photo-6913203.jpeg" }
+            {
+                "title": "Crumpled papers around an office bin",
+                "page": "https://www.pexels.com/photo/crumpled-papers-inside-the-trash-bin-at-the-office-6913195/",
+                "image": "https://images.pexels.com/photos/6913195/pexels-photo-6913195.jpeg"
+            },
+            {
+                "title": "Mugs left on a windowsill",
+                "page": "https://www.pexels.com/photo/mugs-on-a-countertop-10658579/",
+                "image": "https://images.pexels.com/photos/10658579/pexels-photo-10658579.jpeg"
+            },
+            {
+                "title": "Office bin full of crumpled paper, from above",
+                "page": "https://www.pexels.com/photo/close-up-shot-of-paper-trashes-on-a-trash-can-6913203/",
+                "image": "https://images.pexels.com/photos/6913203/pexels-photo-6913203.jpeg"
+            }
         ]
     },
     "artikel-fra-kaos-til-kontrol-dfmg-erp-system-historie": {
         "brief": "The 'before' picture: a desk buried in paper notes, sticky notes and crumpled drafts. No faces and no software screens, so it isn't mistaken for the DFMG system.",
         "candidates": [
-            { "title": "Messy desk with crumpled paper, from above", "page": "https://www.pexels.com/photo/top-view-of-a-messy-desk-with-scrunched-pieces-of-paper-8386521/", "image": "https://images.pexels.com/photos/8386521/pexels-photo-8386521.jpeg" },
-            { "title": "Laptop surrounded by sticky notes and crumpled paper", "page": "https://www.pexels.com/photo/laptop-and-crumpled-papers-on-a-table-8386518/", "image": "https://images.pexels.com/photos/8386518/pexels-photo-8386518.jpeg" }
+            {
+                "title": "Messy desk with crumpled paper, from above",
+                "page": "https://www.pexels.com/photo/top-view-of-a-messy-desk-with-scrunched-pieces-of-paper-8386521/",
+                "image": "https://images.pexels.com/photos/8386521/pexels-photo-8386521.jpeg"
+            },
+            {
+                "title": "Laptop surrounded by sticky notes and crumpled paper",
+                "page": "https://www.pexels.com/photo/laptop-and-crumpled-papers-on-a-table-8386518/",
+                "image": "https://images.pexels.com/photos/8386518/pexels-photo-8386518.jpeg"
+            }
         ]
     },
     "artikel-saadan-laeser-i-facility-tidsrapport": {
         "brief": "Someone working through a printed time report: hands, a calculator, figures on paper. Not another person-with-a-tablet shot; the fallback photo already is one.",
         "candidates": [
-            { "title": "Hands with a calculator and a printed report", "page": "https://www.pexels.com/photo/calculator-near-documents-6801682/", "image": "https://images.pexels.com/photos/6801682/pexels-photo-6801682.jpeg" },
-            { "title": "Calculator over a stack of time sheets and receipts", "page": "https://www.pexels.com/photo/a-close-up-shot-of-a-person-using-a-calculator-7680748/", "image": "https://images.pexels.com/photos/7680748/pexels-photo-7680748.jpeg" },
-            { "title": "Writing figures down next to a calculator", "page": "https://www.pexels.com/photo/bookkeeper-writing-down-on-paper-while-using-calculator-4476375/", "image": "https://images.pexels.com/photos/4476375/pexels-photo-4476375.jpeg" }
+            {
+                "title": "Hands with a calculator and a printed report",
+                "page": "https://www.pexels.com/photo/calculator-near-documents-6801682/",
+                "image": "https://images.pexels.com/photos/6801682/pexels-photo-6801682.jpeg"
+            },
+            {
+                "title": "Calculator over a stack of time sheets and receipts",
+                "page": "https://www.pexels.com/photo/a-close-up-shot-of-a-person-using-a-calculator-7680748/",
+                "image": "https://images.pexels.com/photos/7680748/pexels-photo-7680748.jpeg"
+            },
+            {
+                "title": "Writing figures down next to a calculator",
+                "page": "https://www.pexels.com/photo/bookkeeper-writing-down-on-paper-while-using-calculator-4476375/",
+                "image": "https://images.pexels.com/photos/4476375/pexels-photo-4476375.jpeg"
+            }
+        ]
+    },
+    "klima-bilfri": {
+        "brief": "Goods delivered by bike in the city: a rider with a delivery backpack or bags, urban street. Best of all: your own cargo bike loaded with DFMG supplies; stock is a stand-in until then.",
+        "candidates": [
+            {
+                "title": "Courier on a bike with a delivery backpack by an office building",
+                "page": "https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-and-blue-denim-jeans-riding-on-black-city-bike-during-4604599/",
+                "image": "https://images.pexels.com/photos/4604599/pexels-photo-4604599.jpeg"
+            },
+            {
+                "title": "Delivery rider with a full bike basket",
+                "page": "https://www.pexels.com/photo/a-woman-in-white-shirt-riding-a-bike-while-carrying-a-backpack-and-vegetables-6868933/",
+                "image": "https://images.pexels.com/photos/6868933/pexels-photo-6868933.jpeg"
+            },
+            {
+                "title": "Courier with a yellow bag walking a bike in the city",
+                "page": "https://www.pexels.com/photo/man-carrying-a-yellow-bag-7706590/",
+                "image": "https://images.pexels.com/photos/7706590/pexels-photo-7706590.jpeg"
+            }
+        ]
+    },
+    "klima-kbh-1": {
+        "brief": "Copenhagen as a bike city: recognisable streets or harbour, bikes in the picture. Pairs with klima-kbh-2, so pick two that differ (one wide, one close).",
+        "candidates": [
+            {
+                "title": "Nyhavn harbour, Copenhagen",
+                "page": "https://www.pexels.com/photo/nyhavn-denmark-416024/",
+                "image": "https://images.pexels.com/photos/416024/pexels-photo-416024.jpeg"
+            },
+            {
+                "title": "Cargo bike on a Copenhagen street (black and white)",
+                "page": "https://www.pexels.com/photo/man-and-children-on-cargo-bike-in-copenhagen-33548648/",
+                "image": "https://images.pexels.com/photos/33548648/pexels-photo-33548648.jpeg"
+            }
+        ]
+    },
+    "klima-kbh-2": {
+        "brief": "Second Copenhagen bike picture, closer in: parked bikes or cyclists at a crossing.",
+        "candidates": [
+            {
+                "title": "Row of parked city bikes",
+                "page": "https://www.pexels.com/photo/baskets-bicycles-bikes-outdoors-170379/",
+                "image": "https://images.pexels.com/photos/170379/pexels-photo-170379.jpeg"
+            },
+            {
+                "title": "Cyclists waiting at a city crossing",
+                "page": "https://www.pexels.com/photo/cyclists-in-city-23882589/",
+                "image": "https://images.pexels.com/photos/23882589/pexels-photo-23882589.jpeg"
+            }
+        ]
+    },
+    "klima-instruktion-1": {
+        "brief": "Staff being shown how to clean well with less waste: a team at work, correct use of cloths and products. Your own training photos would be best.",
+        "candidates": [
+            {
+                "title": "Cleaning team at work in a dining room",
+                "page": "https://www.pexels.com/photo/group-of-people-cleaning-a-dining-room-6197108/",
+                "image": "https://images.pexels.com/photos/6197108/pexels-photo-6197108.jpeg"
+            },
+            {
+                "title": "Microfiber cloth on a tiled wall, close-up",
+                "page": "https://www.pexels.com/photo/crop-person-cleaning-white-tile-wall-with-microfiber-cloth-4239039/",
+                "image": "https://images.pexels.com/photos/4239039/pexels-photo-4239039.jpeg"
+            }
+        ]
+    },
+    "klima-instruktion-2": {
+        "brief": "Reuse and the right amount of product: refill bottles, reusable cloths, eco-labelled cleaners.",
+        "candidates": [
+            {
+                "title": "Reusable cleaning bottles and sponges",
+                "page": "https://www.pexels.com/photo/reusable-containers-and-crumpled-bottle-with-kitchen-utensils-5217774/",
+                "image": "https://images.pexels.com/photos/5217774/pexels-photo-5217774.jpeg"
+            },
+            {
+                "title": "Spraying a window with glass cleaner",
+                "page": "https://www.pexels.com/photo/a-woman-spraying-a-window-with-glass-cleaner-9462101/",
+                "image": "https://images.pexels.com/photos/9462101/pexels-photo-9462101.jpeg"
+            }
+        ]
+    },
+    "social-hjerne-1": {
+        "brief": "'Smart not hard': planning the work together, a mentor and a younger colleague thinking it through.",
+        "candidates": [
+            {
+                "title": "Two colleagues planning on a whiteboard",
+                "page": "https://www.pexels.com/photo/people-making-a-plan-on-a-board-17724744/",
+                "image": "https://images.pexels.com/photos/17724744/pexels-photo-17724744.jpeg"
+            },
+            {
+                "title": "A man and a woman planning together",
+                "page": "https://www.pexels.com/photo/a-man-and-woman-planning-together-7706924/",
+                "image": "https://images.pexels.com/photos/7706924/pexels-photo-7706924.jpeg"
+            }
+        ]
+    },
+    "social-hjerne-2": {
+        "brief": "Second 'smart work' picture: talking through a plan, learning from each other.",
+        "candidates": [
+            {
+                "title": "Colleagues at a whiteboard with sticky notes",
+                "page": "https://www.pexels.com/photo/colleagues-standing-by-whiteboard-17724731/",
+                "image": "https://images.pexels.com/photos/17724731/pexels-photo-17724731.jpeg"
+            },
+            {
+                "title": "Coworkers with a laptop and a book",
+                "page": "https://www.pexels.com/photo/smiling-male-coworker-with-laptop-and-female-colleague-with-book-4148901/",
+                "image": "https://images.pexels.com/photos/4148901/pexels-photo-4148901.jpeg"
+            }
+        ]
+    },
+    "social-faellesskab": {
+        "brief": "Community and warmth: the cleaning team as people, smiling, together. Your own team photo would beat any stock photo here.",
+        "candidates": [
+            {
+                "title": "Cleaning team in uniform looking at the camera",
+                "page": "https://www.pexels.com/photo/people-looking-at-the-camera-6195121/",
+                "image": "https://images.pexels.com/photos/6195121/pexels-photo-6195121.jpeg"
+            },
+            {
+                "title": "Cleaners walking with their equipment",
+                "page": "https://www.pexels.com/photo/cleaners-walking-while-holding-cleaning-equipment-6196677/",
+                "image": "https://images.pexels.com/photos/6196677/pexels-photo-6196677.jpeg"
+            },
+            {
+                "title": "Colleagues smiling and having fun",
+                "page": "https://www.pexels.com/photo/colleagues-smiling-and-having-fun-7793667/",
+                "image": "https://images.pexels.com/photos/7793667/pexels-photo-7793667.jpeg"
+            }
+        ]
+    },
+    "social-leading-1": {
+        "brief": "Bodies that last a working life: lifting and carrying the right way.",
+        "candidates": [
+            {
+                "title": "Two workers carrying boxes together",
+                "page": "https://www.pexels.com/photo/warehouse-workers-carrying-boxes-4487361/",
+                "image": "https://images.pexels.com/photos/4487361/pexels-photo-4487361.jpeg"
+            },
+            {
+                "title": "Lifting a heavy box",
+                "page": "https://www.pexels.com/photo/woman-lifting-heavy-cardboard-box-while-standing-near-floor-lamp-4245978/",
+                "image": "https://images.pexels.com/photos/4245978/pexels-photo-4245978.jpeg"
+            }
+        ]
+    },
+    "social-leading-2": {
+        "brief": "Working safely at height and reach: a ladder, a shelf, the right tool for the job.",
+        "candidates": [
+            {
+                "title": "Cleaner on a ladder cleaning a wall",
+                "page": "https://www.pexels.com/photo/woman-cleaning-the-wall-with-a-mop-6195284/",
+                "image": "https://images.pexels.com/photos/6195284/pexels-photo-6195284.jpeg"
+            },
+            {
+                "title": "Taking a box from a shelf",
+                "page": "https://www.pexels.com/photo/person-pulling-box-from-a-shelf-7019313/",
+                "image": "https://images.pexels.com/photos/7019313/pexels-photo-7019313.jpeg"
+            }
+        ]
+    },
+    "gov-digital-kontrakter": {
+        "brief": "Contracts signed digitally: a stylus on a tablet, not a pen on paper.",
+        "candidates": [
+            {
+                "title": "Signing on a tablet with a stylus",
+                "page": "https://www.pexels.com/photo/man-using-a-tablet-9929279/",
+                "image": "https://images.pexels.com/photos/9929279/pexels-photo-9929279.jpeg"
+            },
+            {
+                "title": "Signing with a client at a table",
+                "page": "https://www.pexels.com/photo/a-woman-explaining-to-her-client-7734579/",
+                "image": "https://images.pexels.com/photos/7734579/pexels-photo-7734579.jpeg"
+            }
+        ]
+    },
+    "gov-transparens": {
+        "brief": "Open books: showing a customer how the price is worked out, figures on the table.",
+        "candidates": [
+            {
+                "title": "Working out figures with a calculator and a document",
+                "page": "https://www.pexels.com/photo/business-calculation-with-financial-document-on-desk-33175649/",
+                "image": "https://images.pexels.com/photos/33175649/pexels-photo-33175649.jpeg"
+            },
+            {
+                "title": "Explaining a document to clients",
+                "page": "https://www.pexels.com/photo/a-woman-explaining-the-document-7735626/",
+                "image": "https://images.pexels.com/photos/7735626/pexels-photo-7735626.jpeg"
+            }
+        ]
+    },
+    "gov-enabler": {
+        "brief": "Fair dealing and trust between businesses: an agreement made in the open.",
+        "candidates": [
+            {
+                "title": "Handshake over a contract at a table",
+                "page": "https://www.pexels.com/photo/unrecognizable-hands-handshaking-over-table-9870223/",
+                "image": "https://images.pexels.com/photos/9870223/pexels-photo-9870223.jpeg"
+            },
+            {
+                "title": "Handshake across a desk",
+                "page": "https://www.pexels.com/photo/close-up-shot-of-a-shake-hands-5313173/",
+                "image": "https://images.pexels.com/photos/5313173/pexels-photo-5313173.jpeg"
+            },
+            {
+                "title": "Business partners shaking hands",
+                "page": "https://www.pexels.com/photo/business-partners-shaking-hands-8069428/",
+                "image": "https://images.pexels.com/photos/8069428/pexels-photo-8069428.jpeg"
+            }
+        ]
+    },
+    "sust-miljoe": {
+        "brief": "Replaces the green gradient box: getting to work by bike in the city, the 100% car-free point in one picture.",
+        "candidates": [
+            {
+                "title": "Cyclist with a backpack in city traffic",
+                "page": "https://www.pexels.com/photo/woman-riding-on-bicycle-10709367/",
+                "image": "https://images.pexels.com/photos/10709367/pexels-photo-10709367.jpeg"
+            },
+            {
+                "title": "Cyclist crossing a city street",
+                "page": "https://www.pexels.com/photo/a-side-view-of-a-man-riding-a-bicycle-on-the-street-12673426/",
+                "image": "https://images.pexels.com/photos/12673426/pexels-photo-12673426.jpeg"
+            },
+            {
+                "title": "Courier on a bike by an office building",
+                "page": "https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-and-blue-denim-jeans-riding-on-black-city-bike-during-4604599/",
+                "image": "https://images.pexels.com/photos/4604599/pexels-photo-4604599.jpeg"
+            }
+        ]
+    },
+    "sust-social": {
+        "brief": "Replaces the blue gradient box: the people behind the service, as a team.",
+        "candidates": [
+            {
+                "title": "Cleaning team in uniform",
+                "page": "https://www.pexels.com/photo/people-looking-at-the-camera-6195121/",
+                "image": "https://images.pexels.com/photos/6195121/pexels-photo-6195121.jpeg"
+            },
+            {
+                "title": "Cleaners with vacuum and mop in a living room",
+                "page": "https://www.pexels.com/photo/cleaners-in-orange-uniform-6195125/",
+                "image": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg"
+            }
         ]
     }
 }
