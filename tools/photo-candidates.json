@@ -231,17 +231,27 @@
         ]
     },
     "gov-transparens": {
-        "brief": "Open books: showing a customer how the price is worked out, figures on the table.",
+        "brief": "Open books: showing a customer how the price is worked out. No readable text in the photo (a foreign-language document reads as wrong on a Danish site).",
         "candidates": [
             {
-                "title": "Working out figures with a calculator and a document",
-                "page": "https://www.pexels.com/photo/business-calculation-with-financial-document-on-desk-33175649/",
-                "image": "https://images.pexels.com/photos/33175649/pexels-photo-33175649.jpeg"
+                "title": "Working out figures on a calculator, blank paper",
+                "page": "https://www.pexels.com/photo/hands-of-a-woman-using-a-black-calculator-8296978/",
+                "image": "https://images.pexels.com/photos/8296978/pexels-photo-8296978.jpeg"
             },
             {
-                "title": "Explaining a document to clients",
-                "page": "https://www.pexels.com/photo/a-woman-explaining-the-document-7735626/",
-                "image": "https://images.pexels.com/photos/7735626/pexels-photo-7735626.jpeg"
+                "title": "Two colleagues going through it together on a tablet",
+                "page": "https://www.pexels.com/photo/a-man-and-woman-planning-while-looking-at-the-tablet-7550402/",
+                "image": "https://images.pexels.com/photos/7550402/pexels-photo-7550402.jpeg"
+            },
+            {
+                "title": "Explaining with an open hand to a colleague with a tablet",
+                "page": "https://www.pexels.com/photo/a-man-holding-a-tablet-while-communicating-with-a-woman-7109177/",
+                "image": "https://images.pexels.com/photos/7109177/pexels-photo-7109177.jpeg"
+            },
+            {
+                "title": "Figures and charts shared on a laptop and tablet",
+                "page": "https://www.pexels.com/photo/people-looking-at-graphs-on-a-laptop-and-a-digital-tablet-6930432/",
+                "image": "https://images.pexels.com/photos/6930432/pexels-photo-6930432.jpeg"
             }
         ]
     },
