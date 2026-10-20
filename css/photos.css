@@ -90,15 +90,6 @@
     object-fit: cover;
 }
 
-/* Visual Gradient Backgrounds */
-.slide-visual--success {
-    background: var(--bg-gradient-success);
-}
-
-.slide-visual--primary {
-    background: var(--gradient-social);
-}
-
 /* A photo under the slide text, sized to stay inside the slide */
 .slide-visual--short {
     height: 300px;

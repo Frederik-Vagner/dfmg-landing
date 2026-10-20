@@ -107,7 +107,6 @@
     --gradient-insights: linear-gradient(135deg, var(--governance), #7c3aed);
     --gradient-tips: linear-gradient(135deg, var(--amber), #d97706);
     --gradient-cases: linear-gradient(135deg, var(--red), #dc2626);
-    --gradient-social: linear-gradient(135deg, var(--primary), #1d4ed8, #1e40af);
     --gradient-cyan: linear-gradient(135deg, var(--cyan), #0891b2);
 
     /* Typography: one scale. Every font-size in the CSS is one of these
