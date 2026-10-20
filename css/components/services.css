@@ -1,15 +1,16 @@
-/* Hero Services Carousel - CRITICAL LAYOUT */
+/* Service panels: full-height columns that open on click to show a
+   service in detail (services and facility pages; built by js/services.js) */
 
 @layer core {
 
-.services-hero {
+.panels {
     height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
 }
 
-.service-column {
+.panels__item {
     flex: 1;
     position: relative;
     cursor: pointer;
@@ -21,24 +22,24 @@
     color: var(--white);
 }
 
-.service-column:hover:not(.expanded):not(.collapsed) {
+.panels__item:hover:not(.panels__item--open):not(.panels__item--closed) {
     flex: 1.2;
 }
 
-.service-column:hover:not(.expanded):not(.collapsed) .service-title {
+.panels__item:hover:not(.panels__item--open):not(.panels__item--closed) .panels__title {
     transform: scale(1.3);
     padding-bottom: var(--space-3xl);
 }
 
-.service-column.expanded {
+.panels__item--open {
     flex: 3;
 }
 
-.service-column.collapsed {
+.panels__item--closed {
     flex: 0.2;
 }
 
-.service-bg {
+.panels__bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -49,7 +50,7 @@
     z-index: var(--z-bg);
 }
 
-.service-overlay {
+.panels__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -59,7 +60,7 @@
     z-index: var(--z-overlay);
 }
 
-.service-content {
+.panels__content {
     position: relative;
     z-index: var(--z-content);
     width: 100%;
@@ -71,7 +72,7 @@
     top: 70vh;
 }
 
-.service-title {
+.panels__title {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
     white-space: nowrap;
@@ -88,7 +89,7 @@
     color: var(--white);
 }
 
-.expanded-content {
+.panels__detail {
     position: absolute;
     top: 0;
     left: 0;
@@ -103,7 +104,7 @@
 }
 
 /* Expanded overlay content — dynamically created by services.js */
-.expanded-layout {
+.panels__detail-layout {
     display: flex;
     gap: var(--space-xl);
     align-items: flex-start;
@@ -112,25 +113,25 @@
     margin: 0 auto;
 }
 
-.expanded-content-left {
+.panels__detail-main {
     flex: 1;
     padding-right: var(--space-lg);
 }
 
-.expanded-content-left > h3 {
+.panels__detail-main > h3 {
     margin-bottom: unset;
 }
 
-.expanded-content-left > p {
+.panels__detail-main > p {
     margin-top: unset;
 }
 
-.expanded-content-right {
+.panels__detail-aside {
     flex: 1;
     top: 2rem;
 }
 
-.expanded-image {
+.panels__detail-image {
     width: 100%;
     height: 400px;
     border-radius: var(--radius-normal);
@@ -138,22 +139,22 @@
     box-shadow: var(--shadow-xl);
 }
 
-.specialomrader-section {
+.panels__specialties {
     margin-bottom: var(--space-lg);
 }
 
-.specialomrader-section h4,
-.specialomrader-section h5 {
+.panels__specialties h4,
+.panels__specialties h5 {
     margin: unset;
 }
 
-.specialomrade-list {
+.panels__specialty-list {
     list-style: none;
     padding: var(--space-2xs);
     margin: 0;
 }
 
-.specialomrade-item {
+.panels__specialty {
     font-size: var(--text-sm);
     margin-bottom: var(--space-3xs);
     padding-left: var(--space-sm);
@@ -161,7 +162,7 @@
     align-items: center;
 }
 
-.specialomrade-item:before {
+.panels__specialty:before {
     content: "•";
     position: absolute;
     left: 0;
@@ -171,21 +172,30 @@
     transform: translateY(-55%);
 }
 
-.specialomrade-title {
+.panels__specialty-title {
     font-weight: var(--font-weight-medium);
 }
 
-.benefits-title {
+.panels__benefits-title {
     margin-bottom: var(--space-sm);
     font-size: var(--text-xl);
     font-weight: var(--font-weight-semibold);
 }
 
-.benefits-grid {
+.panels__benefits-grid {
     margin-bottom: var(--space-lg);
 }
 
-.benefits-icon {
+/* One benefit: a tick beside its text */
+.panels__benefit {
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.panels__benefit-icon {
     font-size: var(--text-base);
     background: var(--bg-success-light);
     padding: var(--space-2xs);
@@ -198,25 +208,25 @@
     flex-shrink: 0;
 }
 
-.benefits-text {
+.panels__benefit-text {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
     line-height: 1.4;
 }
 
-.expanded-actions {
+.panels__detail-actions {
     display: flex;
     justify-content: center;
     gap: var(--space-sm);
     margin-top: var(--space-lg);
 }
 
-.service-column.expanded .service-title {
+.panels__item--open .panels__title {
     font-size: var(--heading-1);
     margin-bottom: var(--space-sm);
 }
 
-.service-description {
+.panels__text {
     opacity: 0;
     transform: translateY(20px);
     transition: all var(--transition-normal) 0.2s;
@@ -225,12 +235,12 @@
     text-align: center;
 }
 
-.service-column.expanded .service-description {
+.panels__item--open .panels__text {
     opacity: 1;
     transform: translateY(0);
 }
 
-.service-features {
+.panels__features {
     opacity: 0;
     transform: translateY(20px);
     transition: all var(--transition-normal) 0.3s;
@@ -239,21 +249,21 @@
     margin-bottom: var(--space-lg);
 }
 
-.service-column.expanded .service-features {
+.panels__item--open .panels__features {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* On the photo columns the list takes the column's white text. */
-.service-features > li {
+.panels__features > li {
     color: inherit;
 }
 
-.service-features iconify-icon {
+.panels__features iconify-icon {
 color: var(--charcoal);
 }
 
-.service-actions {
+.panels__actions {
     opacity: 0;
     transform: translateY(20px);
     transition: all var(--transition-normal) 0.4s;
@@ -261,7 +271,7 @@ color: var(--charcoal);
     gap: var(--space-sm);
 }
 
-.service-column.expanded .service-actions {
+.panels__item--open .panels__actions {
     opacity: 1;
     transform: translateY(0);
 }
@@ -270,7 +280,7 @@ color: var(--charcoal);
    instead of running into the next column on one line. (On a phone the
    columns stack full width and keep the large title.) */
 @media (min-width: 769px) and (max-width: 1100px) {
-    .service-title {
+    .panels__title {
         white-space: normal;
         font-size: var(--text-base);
     }
@@ -278,12 +288,12 @@ color: var(--charcoal);
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .services-hero {
+    .panels {
         flex-direction: column;
         height: auto;
     }
 
-    .service-column {
+    .panels__item {
         /* flex: 1 from the base rule sets flex-basis: 0 on this now-vertical
            axis, which beats the height below and collapses the band to its
            title. Opt the column out of flexing so the height holds. */
@@ -294,11 +304,11 @@ color: var(--charcoal);
         text-align: center;
     }
 
-    .service-column.expanded {
+    .panels__item--open {
         height: 400px;
     }
 
-    .service-title {
+    .panels__title {
         white-space: normal;
         width: auto;
         color: var(--white);
@@ -307,7 +317,7 @@ color: var(--charcoal);
     /* The content block is offset 70vh down the column, which lands inside a
        100vh desktop column but far below a 200px band — that offset is why
        nothing but the photo shows here. Sit it in the band instead. */
-    .service-content {
+    .panels__content {
         top: 0;
         height: 100%;
         padding-bottom: 0;
@@ -316,46 +326,46 @@ color: var(--charcoal);
 
     /* Collapsed, these are transparent but still ~230px of layout, which is
        what pushed the title out of the band. Tapping a column opens the
-       .expanded-content overlay that services.js builds, so nothing here is
+       .panels__detail overlay that services.js builds, so nothing here is
        lost by taking them out of flow. */
-    .service-description,
-    .service-features,
-    .service-actions {
+    .panels__text,
+    .panels__features,
+    .panels__actions {
         display: none;
     }
 }
 
-/* Hide content of collapsed columns */
-.service-column.collapsed .service-content {
+/* Hide content of panels__item--closed columns */
+.panels__item--closed .panels__content {
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-normal);
 }
 
 /* ========================================
-   MOBILE: the expanded panel
+   MOBILE: the panels__item--open panel
    On desktop a tapped column grows to flex: 3, the others shrink to slivers
-   and .expanded-content covers the column as a full-height overlay. Stacked
+   and .panels__detail covers the column as a full-height overlay. Stacked
    on a phone there is no sideways room to trade, so the tapped band simply
    grows downwards and the other bands stay as they were.
    At the end of the file so it wins over the state rules above.
    ======================================== */
 @media (max-width: 768px) {
     /* Opening one band must not shrink the others to unreadable strips. */
-    .service-column.collapsed,
-    .service-column.collapsed:hover {
+    .panels__item--closed,
+    .panels__item--closed:hover {
         flex: 0 0 auto;
         height: 200px;
     }
 
-    .service-column.collapsed .service-content {
+    .panels__item--closed .panels__content {
         opacity: 1;
         visibility: visible;
     }
 
     /* The band grows to fit the panel instead of clipping it to 100vh, and
        stacks it under the photo rather than beside it. */
-    .service-column.expanded {
+    .panels__item--open {
         flex: 0 0 auto;
         height: auto;
         overflow: visible;
@@ -364,29 +374,29 @@ color: var(--charcoal);
         padding: 0;
     }
 
-    .service-column.expanded .service-content {
+    .panels__item--open .panels__content {
         flex: 0 0 auto;
         min-height: 200px;
         padding: var(--space-sm);
     }
 
-    .service-column.expanded .service-title {
+    .panels__item--open .panels__title {
         font-size: var(--text-xl);
     }
 
-    .expanded-content {
+    .panels__detail {
         position: relative;
         height: auto;
         padding: var(--space-md) var(--space-md) var(--space-lg);
     }
 
     /* The photo band above already shows the title and description. */
-    .expanded-title,
-    .expanded-description {
+    .panels__detail-title,
+    .panels__detail-text {
         display: none;
     }
 
-    .expanded-layout {
+    .panels__detail-layout {
         flex-direction: column;
         /* The base rule aligns to flex-start, which in this direction leaves
            both halves at their natural width and pushes them past the edge. */
@@ -395,30 +405,30 @@ color: var(--charcoal);
         height: auto;
     }
 
-    .expanded-content-left,
-    .expanded-content-right {
+    .panels__detail-main,
+    .panels__detail-aside {
         width: 100%;
         min-width: 0;
         padding-right: 0;
     }
 
-    .expanded-content-left {
+    .panels__detail-main {
         padding-right: 0;
     }
 
     /* The panel is long and the header is fixed, so the back arrow would sit
        under it for most of the scroll. Keep it reachable. */
-    .expanded-close-btn {
+    .panels__close {
         position: sticky;
         top: 88px;
-        z-index: var(--z-expanded-close);
+        z-index: var(--z-panels-close);
     }
 
-    .expanded-image {
+    .panels__detail-image {
         height: 200px;
     }
 
-    .expanded-actions {
+    .panels__detail-actions {
         flex-direction: column;
     }
 }
@@ -429,28 +439,28 @@ color: var(--charcoal);
 @layer components {
 
 /* Photo behind each service tile (services.html and facility.html). */
-.service-bg--cleaning { background-image: url('/images/service/cleaning.webp'); }
-.service-bg--janitor { background-image: url('/images/service/janitor.webp'); }
-.service-bg--handyman { background-image: url('/images/service/handyman.webp'); }
-.service-bg--delivery { background-image: url('/images/service/delivery.webp'); }
-.service-bg--picoline { background-image: url('/images/service/picoline.webp'); }
-.service-bg--windowcleaning { background-image: url('/images/service/windowcleaning.webp'); }
+.panels__bg--cleaning { background-image: url('/images/service/cleaning.webp'); }
+.panels__bg--janitor { background-image: url('/images/service/janitor.webp'); }
+.panels__bg--handyman { background-image: url('/images/service/handyman.webp'); }
+.panels__bg--delivery { background-image: url('/images/service/delivery.webp'); }
+.panels__bg--picoline { background-image: url('/images/service/picoline.webp'); }
+.panels__bg--windowcleaning { background-image: url('/images/service/windowcleaning.webp'); }
 
-/* The expanded service panel, built by js/services.js (formerly utility classes). */
+/* The panels__item--open service panel, built by js/services.js (formerly utility classes). */
 /* generated:start */
-.expanded-title {
+.panels__detail-title {
     color: var(--charcoal);
 }
 
-.expanded-description {
+.panels__detail-text {
     color: var(--charcoal);
 }
 
-.specialomrade {
+.panels__specialty-group {
     padding: var(--space-2xs);
 }
 
-.expanded-image__photo {
+.panels__detail-photo {
     width: 100%;
     height: 100%;
     border-radius: var(--radius-lg);

@@ -21,6 +21,12 @@
     border: 1px solid var(--border-on-dark);
 }
 
+/* In a .cluster the cluster's gap spaces the badges; their own bottom
+   margin doubled it once they wrapped onto a second line. */
+.cluster > .badge {
+    margin-bottom: 0;
+}
+
 /* Inline badge — base + color variants + size modifier */
 .badge-inline {
     display: inline-block;

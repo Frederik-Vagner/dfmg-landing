@@ -12,7 +12,7 @@
    text above it rather than running under the icon, and it is centred on
    the first line (height: 1lh) rather than the middle of the whole item.
    Text is charcoal; a list on a dark background sets its own colour (see
-   .service-features). Icon colour comes from the modifiers. */
+   .panels__features). Icon colour comes from the modifiers. */
 .checklist {
     list-style: none;
     padding: 0;

@@ -272,7 +272,7 @@
     --z-overlay: 2;         /* tint or gradient over it */
     --z-content: 3;         /* text and buttons above both */
     --z-expanded: 4;        /* opened panel in the services photo strip */
-    --z-expanded-close: 5;  /* its close button */
+    --z-panels-close: 5;     /* its close button */
     /* Across the page: */
     --z-dropdown: 100;      /* nav dropdowns, the kontakt service picker */
     --z-chat-preview: 900;  /* the chat teaser bubble, under the chat itself */

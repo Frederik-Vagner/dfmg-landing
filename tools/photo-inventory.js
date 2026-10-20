@@ -15,7 +15,7 @@
 //               marked data-photo-skip (thumbnails repeating a photo listed
 //               elsewhere, such as article cards).
 //   background  an element whose class sets a background-image photo in the
-//               CSS (.service-bg--cleaning, .hero__image--home) is listed as real.
+//               CSS (.panels__bg--cleaning, .hero__image--home) is listed as real.
 //
 // The markers are for this tool only, so it removes them from the public
 // pages once it has read them.

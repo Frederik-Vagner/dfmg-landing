@@ -134,8 +134,8 @@ const serviceDetails = {
 };
 
 function toggleService(column) {
-    const allColumns = document.querySelectorAll('.service-column');
-    const isExpanded = column.classList.contains('expanded');
+    const allColumns = document.querySelectorAll('.panels__item');
+    const isExpanded = column.classList.contains('panels__item--open');
     const serviceType = column.getAttribute('data-service');
 
     // Reset all columns
@@ -143,10 +143,10 @@ function toggleService(column) {
 
     if (!isExpanded) {
         // Expand clicked column and collapse others
-        column.classList.add('expanded');
+        column.classList.add('panels__item--open');
         allColumns.forEach(col => {
             if (col !== column) {
-                col.classList.add('collapsed');
+                col.classList.add('panels__item--closed');
             }
         });
 
@@ -172,26 +172,26 @@ function showExpandedContent(column, serviceType) {
     if (!service) return;
 
     const expandedContent = document.createElement('div');
-    expandedContent.className = 'expanded-content';
+    expandedContent.className = 'panels__detail';
     expandedContent.innerHTML = `
 
-        <div class="expanded-layout">
-            <div class="expanded-content-left">
-                <button class="btn--icon expanded-close-btn" data-action="close-expanded">
+        <div class="panels__detail-layout">
+            <div class="panels__detail-main">
+                <button class="btn--icon panels__close" data-action="close-expanded">
                     <iconify-icon icon="fluent:arrow-reply-20-filled" inline></iconify-icon>
                 </button>
-                <h3 class="expanded-title">${service.title}</h3>
-                <p class="expanded-description">${service.description}</p>
+                <h3 class="panels__detail-title">${service.title}</h3>
+                <p class="panels__detail-text">${service.description}</p>
 
-                <div class="specialomrader-section">
-                    <h4 class="specialomrader-title">Specialområder</h4>
+                <div class="panels__specialties">
+                    <h4 class="panels__specialties-title">Specialområder</h4>
                     <div class="grid grid--2">
                         ${service.categories.map(category => `
-                            <div class="specialomrade">
-                                <h5 class="specialomrade-title">${category.name}</h5>
-                                <ul class="specialomrade-list">
+                            <div class="panels__specialty-group">
+                                <h5 class="panels__specialty-title">${category.name}</h5>
+                                <ul class="panels__specialty-list">
                                     ${category.items.map(item => `
-                                        <li class="specialomrade-item">${item}</li>
+                                        <li class="panels__specialty">${item}</li>
                                     `).join('')}
                                 </ul>
                             </div>
@@ -200,23 +200,23 @@ function showExpandedContent(column, serviceType) {
                 </div>
             </div>
 
-            <div class="expanded-content-right">
-                <div class="expanded-image">
-                    <img src="/images/service/${getImageName(serviceType)}.webp" alt="${service.title}" class="expanded-image__photo" loading="lazy" decoding="async">
+            <div class="panels__detail-aside">
+                <div class="panels__detail-image">
+                    <img src="/images/service/${getImageName(serviceType)}.webp" alt="${service.title}" class="panels__detail-photo" loading="lazy" decoding="async">
                 </div>
-                <div class="benefits-section">
-                    <h4 class="benefits-title">Hvorfor DFMG</h4>
-                    <div class="grid grid--2 grid--tight benefits-grid">
+                <div class="panels__benefits">
+                    <h4 class="panels__benefits-title">Hvorfor DFMG</h4>
+                    <div class="grid grid--2 grid--tight panels__benefits-grid">
                         ${service.features.map(feature => `
-                            <div class="card--benefits">
-                                <iconify-icon icon="fluent:checkmark-20-filled" inline class="benefits-icon"></iconify-icon>
-                                <span class="benefits-text">${feature}</span>
+                            <div class="panels__benefit">
+                                <iconify-icon icon="fluent:checkmark-20-filled" inline class="panels__benefit-icon"></iconify-icon>
+                                <span class="panels__benefit-text">${feature}</span>
                             </div>
                         `).join('')}
                     </div>
                 </div>
 
-                <div class="expanded-actions">
+                <div class="panels__detail-actions">
                     <a href="${service.url}" class="btn btn--primary btn--md">
                         <iconify-icon icon="fluent:info-20-filled" inline></iconify-icon> Læs Mere
                     </a>
@@ -238,10 +238,10 @@ function closeExpandedContent(event) {
         event.preventDefault();
     }
 
-    const allColumns = document.querySelectorAll('.service-column');
+    const allColumns = document.querySelectorAll('.panels__item');
     allColumns.forEach(col => {
-        // Hide expanded content immediately before removing
-        const expandedContent = col.querySelector('.expanded-content');
+        // Hide panels__item--open content immediately before removing
+        const expandedContent = col.querySelector('.panels__detail');
         if (expandedContent) {
             expandedContent.style.opacity = '0';
             expandedContent.style.visibility = 'hidden';
@@ -252,15 +252,15 @@ function closeExpandedContent(event) {
                 }
             }, 50);
         }
-        col.classList.remove('expanded', 'collapsed');
+        col.classList.remove('panels__item--open', 'panels__item--closed');
     });
 }
 // Add click handlers to service columns
-document.querySelectorAll('.service-column').forEach(column => {
+document.querySelectorAll('.panels__item').forEach(column => {
     column.addEventListener('click', () => toggleService(column));
 });
 
-// Close expanded content via data-action
+// Close panels__item--open content via data-action
 document.addEventListener('click', (e) => {
     if (!e.target || typeof e.target.closest !== 'function') return;
     if (e.target.closest('[data-action="close-expanded"]')) {
@@ -269,11 +269,11 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Close expanded service when clicking outside
+// Close panels__item--open service when clicking outside
 document.addEventListener('click', (e) => {
-    if (!e.target.closest('.service-column')) {
-        document.querySelectorAll('.service-column').forEach(col => {
-            col.classList.remove('expanded', 'collapsed');
+    if (!e.target.closest('.panels__item')) {
+        document.querySelectorAll('.panels__item').forEach(col => {
+            col.classList.remove('panels__item--open', 'panels__item--closed');
         });
     }
 });

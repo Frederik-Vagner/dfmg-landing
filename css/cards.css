@@ -601,15 +601,6 @@ a.card {
 
 /* ── Gallery card (image + content) ── */
 
-/* ── Benefits card (inline icon + text) ── */
-.card--benefits {
-    padding: var(--space-sm);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-}
-
 /* ── Compact card (small padding, inline data) ── */
 .calc-box {
     background: var(--white);
