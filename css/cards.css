@@ -53,6 +53,29 @@
     color: var(--success);
 }
 
+.card__icon--primary {
+    color: var(--primary);
+}
+
+/* Bigger icons; the icon follows the wrapper's size instead of the card's 2xl */
+.card__icon--large { font-size: var(--text-3xl); }
+.card__icon--display { font-size: var(--icon-display); }
+
+:is(.card__icon--large, .card__icon--display) > iconify-icon {
+    font-size: 1em;
+}
+
+/* A card you can pick: outlined in blue and lifted a little on hover */
+.card--selectable {
+    border: 2px solid transparent;
+    transition: all var(--transition-normal);
+}
+
+.card--selectable:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
 :where(.card) > .card__icon {
     margin-bottom: var(--space-sm);
 }
@@ -645,28 +668,8 @@ a.card {
     margin-bottom: var(--space-lg);
 }
 
-.card--shop {
-    background: var(--card-bg);
-    border-radius: var(--card-radius);
-    padding: var(--card-padding-compact);
-    text-align: center;
-    box-shadow: var(--card-shadow);
-    border: 2px solid transparent;
-    transition: all var(--transition-normal);
-}
-
-.card--shop:hover {
-    border-color: var(--primary);
-    transform: translateY(-2px);
-}
-
-.card--shop-icon {
-    font-size: var(--text-3xl);
-    color: var(--primary);
-    margin-bottom: var(--space-sm);
-}
-
-.card--shop-price {
+/* A price on a card */
+.card__price {
     color: var(--primary);
     font-weight: var(--font-weight-bold);
     font-size: var(--text-lg);
@@ -674,6 +677,7 @@ a.card {
 
 /* ── Dashed card (CTA prompt) ── */
 .card--dashed {
+    box-shadow: none;
     background: linear-gradient(135deg, var(--bg-muted), var(--bg-light));
     border-radius: var(--card-radius);
     padding: var(--space-lg);
@@ -686,12 +690,6 @@ a.card {
 .card--dashed:hover {
     border-color: var(--primary);
     background: linear-gradient(135deg, var(--green-50), var(--emerald-50));
-}
-
-.card--dashed-icon {
-    font-size: var(--icon-display);
-    color: var(--primary);
-    margin-bottom: var(--space-sm);
 }
 
 /* ── Quote ── */
@@ -741,10 +739,6 @@ a.card {
 
     .card--dashed {
         padding: var(--space-md);
-    }
-
-    .card--dashed-icon {
-        font-size: var(--text-3xl);
     }
 
     .card--split {
