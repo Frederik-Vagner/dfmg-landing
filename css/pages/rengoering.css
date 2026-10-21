@@ -43,7 +43,6 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: var(--space-2xs);
 }
 
 /* display: flex above beats the hidden attribute's default display: none,
@@ -52,21 +51,25 @@
     display: none;
 }
 
+/* An 8px dot in a 24px button: the padding is the tap target (WCAG 2.5.8),
+   and the background is clipped to the dot. The padding also spaces the
+   dots, so .photo-dots has no gap. */
 .photo-dot {
-    width: 8px;
-    height: 8px;
+    width: 24px;
+    height: 24px;
     border-radius: var(--radius-round);
-    background: var(--text-on-dark-subtle);
+    background-color: var(--text-on-dark-subtle);
+    background-clip: content-box;
     cursor: pointer;
     /* rendered as <button> once wired up, so strip the default chrome */
-    padding: 0;
+    padding: var(--space-2xs);
     border: none;
     appearance: none;
     -webkit-appearance: none;
 }
 
 .photo-dot.active {
-    background: var(--text-on-dark);
+    background-color: var(--text-on-dark); /* not the shorthand: it would reset the clip */
 }
 
 .tab-navigation {
