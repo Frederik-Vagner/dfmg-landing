@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf _site && eleventy && node tools/check-css.js && node tools/photo-inventory.js",
+    "build": "rm -rf _site && eleventy && node tools/check-css.js && node tools/check-content.js && node tools/photo-inventory.js",
     "serve": "eleventy --serve",
     "preview": "npm run build && eleventy-dev-server --dir=_site --port=8080",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:css": "node tools/check-css.js",
     "css:baseline": "node tools/check-css.js --update",
+    "check:content": "node tools/check-content.js",
+    "content:baseline": "node tools/check-content.js --update",
+    "check:paths": "node tools/check-paths.js",
     "check:layout": "node tools/check-layout.js"
   },
   "repository": {
