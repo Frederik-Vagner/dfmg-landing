@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const { fillIcons } = require("./tools/icons");
 const { imgWidth, imgHeight } = require("./tools/image-size");
+const { srcset, writeVariants } = require("./tools/responsive");
 const { danishDate, isoDate } = require("./tools/dates");
 const { validateJobsFile, liveJobs } = require("./tools/schemas");
 
@@ -21,6 +22,10 @@ module.exports = function (eleventyConfig) {
   // a local image, read from the file (tools/image-size.js)
   eleventyConfig.addFilter("imgWidth", imgWidth);
   eleventyConfig.addFilter("imgHeight", imgHeight);
+
+  // srcset="{{ src | srcset }}": 480/800/1200 px copies of a photo under
+  // /img/, written after the build (tools/responsive.js).
+  eleventyConfig.addFilter("srcset", srcset);
 
   // Inline every icon's SVG (tools/icons.js); before minifying.
   eleventyConfig.addTransform("icons", function (content) {
@@ -49,6 +54,9 @@ module.exports = function (eleventyConfig) {
   // Minify CSS and JS after build
   eleventyConfig.on("eleventy.after", async ({ dir } = {}) => {
     const outDir = (dir && dir.output) || "_site";
+
+    // Smaller copies of the photos that srcset refers to.
+    await writeVariants(outDir);
 
     // Minify CSS files
     const cssDir = path.join(outDir, "css");

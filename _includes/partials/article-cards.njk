@@ -7,7 +7,7 @@
 <div class="card card--split" data-featured-category="{{ slot }}"{% if slot != "all" %} hidden{% endif %}>
     <div class="card__image">
         <div class="badge-inline badge-inline--caps badge-overlay badge-overlay--light">{{ a.category }}</div>
-        <img data-photo-skip src="{{ a.image }}" width="{{ a.image | imgWidth }}" height="{{ a.image | imgHeight }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
+        <img data-photo-skip src="{{ a.image }}" srcset="{{ a.image | srcset }}" sizes="(min-width: 769px) 500px, 92vw" width="{{ a.image | imgWidth }}" height="{{ a.image | imgHeight }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
     </div>
     <div class="card__body">
         <h2 class="card__title">{{ a.articleTitle }}</h2>
@@ -31,7 +31,7 @@
 <article class="card card--media" data-category="{{ a.categoryKey }}">
     <div class="article-image article-image--{{ a.categoryKey }}">
         <div class="badge-inline badge-inline--sm badge-overlay badge-overlay--light">{{ a.category }}</div>
-        <img data-photo-skip src="{{ a.image }}" width="{{ a.image | imgWidth }}" height="{{ a.image | imgHeight }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
+        <img data-photo-skip src="{{ a.image }}" srcset="{{ a.image | srcset }}" sizes="(min-width: 1201px) 380px, (min-width: 769px) 50vw, 92vw" width="{{ a.image | imgWidth }}" height="{{ a.image | imgHeight }}" alt="{{ a.imageAlt }}" class="cover-image" loading="lazy" decoding="async">
     </div>
     <div class="article-content">
         <{{ heading }} class="article-title">{{ a.articleTitle }}</{{ heading }}>
@@ -54,7 +54,7 @@
 {%- set a = article.data -%}
 <div class="related-article">
     <div class="related-image related-image--{{ a.categoryKey }}">
-        <img data-photo-skip src="{{ a.image }}" width="{{ a.image | imgWidth }}" height="{{ a.image | imgHeight }}" alt="" class="cover-image" loading="lazy" decoding="async">
+        <img data-photo-skip src="{{ a.image }}" srcset="{{ a.image | srcset }}" sizes="80px" width="{{ a.image | imgWidth }}" height="{{ a.image | imgHeight }}" alt="" class="cover-image" loading="lazy" decoding="async">
     </div>
     <div class="related-content">
         <h4><a href="{{ article.url }}" aria-label="Læs artikel: {{ a.articleTitle }}">{{ a.articleTitle }}</a></h4>

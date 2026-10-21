@@ -10,9 +10,9 @@
 //              meta description of 70–160, and no two indexable pages share
 //              either. Longer ones are cut off in search results, shorter
 //              descriptions get replaced by Google with text it picks itself.
-//   links      every internal link, image, script and stylesheet points at a
-//              file in the build (or a redirect in netlify.toml), and every
-//              #anchor at an id on the target page.
+//   links      every internal link, image (src and srcset), script and
+//              stylesheet points at a file in the build (or a redirect in
+//              netlify.toml), and every #anchor at an id on the target page.
 //   alt        every <img> has an alt attribute. alt="" is allowed: it marks
 //              a decorative image, such as a logo next to its name.
 //   placeholders  no "[X]", "[Your …]", "Lorem ipsum", TODO or FIXME in the
@@ -25,6 +25,8 @@
 //              list lengths, and no text is empty in one language only.
 //   images     files in images/ are webp, jpg or png, at most 250 KB and
 //              2000 px on the long edge, with a lowercase ASCII file name.
+//   photos     every photo recorded as "chosen" in tools/photo-candidates.json
+//              (npm run photo writes these) exists in images/.
 //   facts      _data/facts.json has every approved fact, as text.
 //
 // The baseline holds today's known problems so the check can be strict about
@@ -152,8 +154,13 @@ function checkPages() {
         }
 
         // Internal links and assets
-        for (const m of html.matchAll(/\s(?:href|src)="([^"]*)"/g)) {
-            const ref = decode(m[1]);
+        // (srcset: every URL in the list, before its width.)
+        const refs = [
+            ...[...html.matchAll(/\s(?:href|src)="([^"]*)"/g)].map((m) => m[1]),
+            ...[...html.matchAll(/\ssrcset="([^"]*)"/g)].flatMap((m) => m[1].split(",").map((c) => c.trim().split(/\s+/)[0])),
+        ];
+        for (const raw of refs) {
+            const ref = decode(raw);
             if (!ref || /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(ref)) continue; // https:, mailto:, tel:, data:, //cdn
             const [beforeHash, hash] = ref.split("#");
             const target = beforeHash.split("?")[0];
@@ -254,6 +261,22 @@ function checkImages() {
     return files.length;
 }
 
+// --------------------------------------------------------------- photo sources
+
+function checkPhotoSources() {
+    const file = path.join(__dirname, "photo-candidates.json");
+    let slots;
+    try { slots = JSON.parse(read(file)); }
+    catch (e) { report("photo-candidates-json", `tools/photo-candidates.json is not valid JSON (${e.message})`); return; }
+    for (const [slot, entry] of Object.entries(slots)) {
+        const chosen = entry && entry.chosen;
+        if (!chosen) continue;
+        if (!chosen.file || !fs.existsSync(path.join(ROOT, chosen.file))) {
+            report(`photo-chosen:${slot}`, `tools/photo-candidates.json: "${slot}" records ${chosen.file || "no file"}, which is not in images/`);
+        }
+    }
+}
+
 // ---------------------------------------------------------------------- facts
 
 function checkFacts() {
@@ -281,6 +304,7 @@ function main() {
         i18n: checkI18n(),
         images: checkImages(),
     };
+    checkPhotoSources();
     checkFacts();
 
     const current = [...new Set(problems.map((p) => p.id))].sort();

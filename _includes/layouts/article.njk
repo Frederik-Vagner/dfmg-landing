@@ -10,7 +10,7 @@ layout: base.html
         <div class="container">
             <div class="content-layout">
                 <div class="main-content">
-                    <img src="{{ image }}" width="{{ image | imgWidth }}" height="{{ image | imgHeight }}" alt="{{ imageAlt }}" class="article-image" fetchpriority="high" decoding="async" data-photo-slot="artikel-{{ page.fileSlug }}"{% if imageIsFallback %} data-photo-status="stand-in" data-photo-brief="Uses the shared fallback photo. Give this article its own."{% endif %}>
+                    <img src="{{ image }}" srcset="{{ image | srcset }}" sizes="(min-width: 1101px) 750px, 92vw" width="{{ image | imgWidth }}" height="{{ image | imgHeight }}" alt="{{ imageAlt }}" class="article-image" fetchpriority="high" decoding="async" data-photo-slot="artikel-{{ page.fileSlug }}"{% if imageIsFallback %} data-photo-status="stand-in" data-photo-brief="Uses the shared fallback photo. Give this article its own."{% endif %}>
 
                     <div class="article-excerpt">
                         {{ excerpt }}

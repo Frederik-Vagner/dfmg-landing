@@ -13,7 +13,8 @@
     "check:content": "node tools/check-content.js",
     "content:baseline": "node tools/check-content.js --update",
     "check:paths": "node tools/check-paths.js",
-    "check:layout": "node tools/check-layout.js"
+    "check:layout": "node tools/check-layout.js",
+    "photo": "node tools/photo.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "clean-css": "^5.3.3",
     "gray-matter": "4.0.3",
     "html-minifier-terser": "^7.2.0",
+    "sharp": "0.35.5",
     "terser": "^5.46.1",
     "zod": "4.6.7"
   }
