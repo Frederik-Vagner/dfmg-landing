@@ -20,7 +20,7 @@
           "Time tracking",
           "Up to 10 employees"
         ],
-        "ctaText": "Get Started",
+        "ctaText": "Get started",
         "ctaHref": "/pages/software/demo.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       },
@@ -40,7 +40,7 @@
           "Analytics & KPI",
           "Up to 50 employees"
         ],
-        "ctaText": "Book a Demo",
+        "ctaText": "Book a demo",
         "ctaHref": "/pages/software/demo.html",
         "ctaClass": "btn btn--success btn--md btn--full"
       },
@@ -59,7 +59,7 @@
           "Dedicated support",
           "Unlimited employees"
         ],
-        "ctaText": "Contact Sales",
+        "ctaText": "Contact sales",
         "ctaHref": "/pages/software/contact.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       }
@@ -73,7 +73,7 @@
       "colEnterprise": "Enterprise",
       "categories": [
         {
-          "name": "Core Operations",
+          "name": "Core operations",
           "rows": [
             { "module": "Calendar & Scheduling", "starter": true, "professional": true, "enterprise": true },
             { "module": "Task Management", "starter": true, "professional": true, "enterprise": true },
@@ -82,7 +82,7 @@
           ]
         },
         {
-          "name": "Client & Employee",
+          "name": "Client & employee",
           "rows": [
             { "module": "Client Management", "starter": true, "professional": true, "enterprise": true },
             { "module": "Client Portal", "starter": false, "professional": true, "enterprise": true },
@@ -92,7 +92,7 @@
           ]
         },
         {
-          "name": "Finance & Payroll",
+          "name": "Finance & payroll",
           "rows": [
             { "module": "Basic Invoicing", "starter": true, "professional": true, "enterprise": true },
             { "module": "Full Accounting", "starter": false, "professional": true, "enterprise": true },
@@ -102,7 +102,7 @@
           ]
         },
         {
-          "name": "Sales & Documents",
+          "name": "Sales & documents",
           "rows": [
             { "module": "Offer Builder", "starter": false, "professional": true, "enterprise": true },
             { "module": "Email Automation", "starter": false, "professional": false, "enterprise": true },
@@ -152,8 +152,8 @@
     "cta": {
       "title": "Not sure which plan?",
       "body": "Book a call and we'll walk you through the right fit for your company — based on what you actually need, not what we want to sell.",
-      "cta_demo": "Book a Demo",
-      "cta_sales": "Contact Sales"
+      "cta_demo": "Book a demo",
+      "cta_sales": "Contact sales"
     }
   },
   "da": {
@@ -239,7 +239,7 @@
           ]
         },
         {
-          "name": "Kunde & Medarbejder",
+          "name": "Kunde & medarbejder",
           "rows": [
             { "module": "Kundestyring", "starter": true, "professional": true, "enterprise": true },
             { "module": "Kundeportal", "starter": false, "professional": true, "enterprise": true },
@@ -249,7 +249,7 @@
           ]
         },
         {
-          "name": "Økonomi & Løn",
+          "name": "Økonomi & løn",
           "rows": [
             { "module": "Basal Fakturering", "starter": true, "professional": true, "enterprise": true },
             { "module": "Fuld Bogføring", "starter": false, "professional": true, "enterprise": true },
@@ -259,7 +259,7 @@
           ]
         },
         {
-          "name": "Salg & Dokumenter",
+          "name": "Salg & dokumenter",
           "rows": [
             { "module": "Tilbudsbygger", "starter": false, "professional": true, "enterprise": true },
             { "module": "Email-automatisering", "starter": false, "professional": false, "enterprise": true },

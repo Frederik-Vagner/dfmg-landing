@@ -51,8 +51,7 @@ Everything else, including any count of tasks, clients, employees or years, is n
 - Danish with æ/ø/å. "I/jer" to the reader; "du" in jobs, forms and policies.
 - Concrete and calm: what happens, when, and who does it. Short sentences.
 - Danish words where they exist: "ruteplanlægning", not "route optimization".
-- Buttons and links in normal Danish capitalisation: "Få tilbud", "Se alle services", "Book et møde".
-- Headings currently use Title Case in many places. Don't add more; normal capitalisation is fine in new headings.
+- Sentence case everywhere, never Title Case: headings, titles, buttons, nav and footer links ("Få tilbud", "Hvorfor vælge DFMG?", "Book et møde med mig"). Names keep their capital; so does the pronoun "I".
 
 ## Words and claims to avoid
 

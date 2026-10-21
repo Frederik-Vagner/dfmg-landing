@@ -10,7 +10,7 @@
 
     <!-- Related Articles -->
     <div class="card card--sidebar">
-        <h3><iconify-icon icon="fluent:news-20-filled" inline></iconify-icon> Relaterede Artikler</h3>
+        <h3><iconify-icon icon="fluent:news-20-filled" inline></iconify-icon> Relaterede artikler</h3>
         <div id="related-articles">
             {%- from "partials/article-cards.njk" import relatedItem -%}
             {%- set current = collections.artikel | articleBySlug(page.fileSlug) -%}
@@ -22,7 +22,7 @@
 
     <!-- Newsletter Signup -->
     <div class="card card--sidebar newsletter-signup">
-        <h3><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> Hold Dig Opdateret</h3>
+        <h3><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> Hold dig opdateret</h3>
         <div class="newsletter-subtitle">Få insights fra facility management</div>
         <form class="newsletter-form" id="newsletter-form">
             <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Din email adresse" required aria-label="Email adresse">
@@ -37,7 +37,7 @@
 
     <!-- Contact CTA -->
     <div class="card card--sidebar card--center">
-        <h3><iconify-icon icon="fluent:call-20-filled" inline></iconify-icon> Lad Os Snakkes Ved</h3>
+        <h3><iconify-icon icon="fluent:call-20-filled" inline></iconify-icon> Lad os snakkes ved</h3>
         <p>Interesseret i systematisk facility management?</p>
         <a href="/pages/facility/kontakt.html" class="btn btn--primary btn--md">Kontakt DFMG</a>
     </div>

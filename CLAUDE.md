@@ -55,8 +55,8 @@ Never delete or rename images, pages or articles. A removal is a request in the 
 
 - **Facility side:** Danish with æ/ø/å (never "oe/aa" in visible text). Address the reader as "I/jer"; "du" is fine in jobs, forms and policies. Concrete, calm and practical, with no superlatives you can't back up.
 - **Platform side:** outcome first, then the feature. Practitioner voice: built by people who run a cleaning company. Every EN change needs the matching DA change in the same PR, and the other way round.
-- **Danish buttons and links:** normal Danish capitalisation, not Title Case: "Se alle funktioner", "Få tilbud", "Book en demo". Names keep their capitals (DFMG, Bank Connect, Picoline).
-- **English:** British spelling (colour, organise, customise, centre, licence as a noun). The locale is `en_GB`.
+- **Capitalisation, everywhere and in both languages:** sentence case, never Title Case. That covers headings, page titles, buttons, nav and footer links: "Se alle funktioner", "Hvorfor vælge DFMG?", "Book a demo", "Core operations". Only the first word and names keep a capital (DFMG, DFMG Platform, Bank Connect, Piccoline, Location Guides, København). In Danish, the pronoun "I" stays capital; "i" (in) is lower case. All-caps labels (eyebrows) stay as they are.
+- **English:** British spelling (colour, organise, customise, centre, licence as a noun). The locale is `en_GB`. Exception: platform module names are written as the product's UI writes them ("Export Center").
 
 ## Images
 

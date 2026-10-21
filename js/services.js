@@ -2,7 +2,7 @@
 const serviceDetails = {
     cleaning: {
         title: "Erhvervsrengøring",
-        badge: "Mest Populære",
+        badge: "Mest populære",
         url: "/pages/facility/services/rengoering.html",
         description: "Erhvervsrengøring af kontorer, skoler, restauranter og eventlokaler med fokus på kvalitet og bæredygtighed.",
         detailedDescription: "Vores erfarne rengøringsteams leverer konsistent høj kvalitet gennem faste processer og miljøvenlige produkter.",
@@ -12,11 +12,11 @@ const serviceDetails = {
                 items: ["Daglig eller ugentlig service", "Gulvbehandling og støvsugning", "Sanitær og køkkenfaciliteter", "Papirkurve og affaldssortering"]
             },
             {
-                name: "Restauranter & Caféer",
+                name: "Restauranter & caféer",
                 items: ["Køkkenrengøring og fedtfjerning", "Ventilationsrensning via samarbejdspartner", "Fødevaresikkerhed", "Specialudstyr til foodservice"]
             },
             {
-                name: "Skoler & Institutioner",
+                name: "Skoler & institutioner",
                 items: ["Børnevenlige produkter", "Desinfektion og hygiejne", "Klasseværelser og fællesarealer", "Legepladser og udendørs områder"]
             }
         ],
@@ -33,11 +33,11 @@ const serviceDetails = {
         description: "Vedligeholdelse af trapper, opgange, elevatorer og udendørs områder.",
         categories: [
             {
-                name: "Fællesarealer & Opgange",
+                name: "Fællesarealer & opgange",
                 items: ["Daglig rengøring", "Gulvbehandling", "Belysning", "Mindre reparationer"]
             },
             {
-                name: "Udendørs Områder",
+                name: "Udendørs områder",
                 items: ["Græsslåning", "Ukrudtsbekæmpelse", "Snerydning", "Affaldshåndtering"]
             }
         ],
@@ -49,16 +49,16 @@ const serviceDetails = {
         ]
     },
     handyman: {
-        title: "Handyman Services",
+        title: "Handyman services",
         url: "/pages/facility/services/handyman.html",
         description: "Reparationer, vedligeholdelse og møbelmontering med hurtig responstid.",
         categories: [
             {
-                name: "VVS & El via samarbejdspartner",
+                name: "VVS & el via samarbejdspartner",
                 items: ["Vandhane reparationer", "Belysning", "Mindre lækager", "Udføres via samarbejdspartner"]
             },
             {
-                name: "Maling & Spartling",
+                name: "Maling & spartling",
                 items: ["Væg- og loftsmaling", "Spartling", "Træværk", "Professionelt finish"]
             }
         ],
@@ -70,7 +70,7 @@ const serviceDetails = {
         ]
     },
     supplies: {
-        title: "Supplies & Produkter",
+        title: "Supplies & produkter",
         url: "/pages/facility/services/produkter.html",
         description: "Hygiejneprodukter og office supplies med automatisk påfyldning.",
         categories: [
@@ -79,7 +79,7 @@ const serviceDetails = {
                 items: ["Sæbe og desinfektion", "Toiletpapir", "Affaldssække", "Dispensere"]
             },
             {
-                name: "Office Supplies",
+                name: "Office supplies",
                 items: ["Printerpapir", "Kaffe og te", "Rengøringsmidler", "Kontorprodukter"]
             }
         ],
@@ -91,16 +91,16 @@ const serviceDetails = {
         ]
     },
     piccoline: {
-        title: "Piccoline Ordning",
+        title: "Piccoline ordning",
         url: "/pages/facility/services/picoline.html",
         description: "Mindre administrative opgaver og specialopgaver der gør hverdagen nemmere.",
         categories: [
             {
-                name: "Administrative Opgaver",
+                name: "Administrative opgaver",
                 items: ["Dokumenthåndtering", "Datarengøring", "Mødetilberedelse", "Korrespondance"]
             },
             {
-                name: "Praktiske Opgaver",
+                name: "Praktiske opgaver",
                 items: ["Indkøb", "Levering", "Inventar", "Event-support"]
             }
         ],
@@ -117,11 +117,11 @@ const serviceDetails = {
         description: "Professionel vinduesrens indvendig og udvendig.",
         categories: [
             {
-                name: "Indvendig Vinduesrens",
+                name: "Indvendig vinduesrens",
                 items: ["Vinduesflader", "Karme og riller", "Glaspartitioner", "Specialbehandling"]
             },
             {
-                name: "Udvendig Polering",
+                name: "Udvendig polering",
                 items: ["Højdearbejde via samarbejdspartner", "Facade og rammer", "Solafskærmning", "Tagvinduer"]
             }
         ],

@@ -4,8 +4,8 @@
       "subtitle": "INTEGRATION",
       "title": "Bank Connect",
       "body": "DFMG Platform is an officially whitelisted Bank Connect ERP provider — giving your business direct, secure access to Danish bank infrastructure.",
-      "cta_demo": "Book a Demo",
-      "cta_functions": "See All Functions"
+      "cta_demo": "Book a demo",
+      "cta_functions": "See all functions"
     },
     "trust": [
       "Officially whitelisted ERP provider",
@@ -14,7 +14,7 @@
       "Declaration of intent signed"
     ],
     "overview": {
-      "subtitle": "Direct Bank Integration",
+      "subtitle": "Direct Bank integration",
       "title": "Pay, reconcile, and report — without leaving the platform",
       "body1": "Bank Connect is the Danish banking infrastructure that lets ERP systems communicate directly with banks. Because DFMG Platform is a whitelisted provider, your company gets seamless access to payments, account statements, and automated reconciliation — all from the same system you use to manage operations, invoicing, and payroll.",
       "body2": "No manual bank file exports. No switching between systems. Payments flow directly from your invoices and payroll runs to your bank, and statements flow back for automatic reconciliation.",
@@ -29,27 +29,27 @@
     "benefits": [
       {
         "icon": "fluent:flash-20-filled",
-        "title": "Instant Payments",
+        "title": "Instant payments",
         "desc": "Send domestic transfers (standard, same day, or express), cross-border payments, SEPA, and payroll — directly from the platform to your bank."
       },
       {
         "icon": "fluent:arrow-sync-20-filled",
-        "title": "Auto Reconciliation",
+        "title": "Auto reconciliation",
         "desc": "Account statements and entry details are fetched automatically. The platform matches transactions to invoices and bookkeeping entries for you."
       },
       {
         "icon": "fluent:shield-20-filled",
-        "title": "Validated & Secure",
+        "title": "Validated & secure",
         "desc": "Every payment is validated through PAIN.002 replies — technical delivery control, payment validation, and bookkeeping confirmation built into the flow."
       }
     ],
     "functions": {
-      "subtitle": "Full Coverage",
+      "subtitle": "Full coverage",
       "title": "Every Bank Connect function, supported",
       "body1": "DFMG Platform supports the complete Bank Connect function set. From domestic and international payments to automated bookkeeping from PAIN.002 and CAMT.054 messages — nothing is missing.",
       "body2": "We use the XML ISO-20022 standard as our primary format, and also support EDIFACT and proprietary bank-specific formats where needed.",
       "badges": ["Payments", "SEPA", "Payroll", "Statements", "PAIN.002", "CAMT.054", "ISO-20022", "EDIFACT", "Auto Reconciliation"],
-      "table_title": "DFMG Platform — Bank Connect Functions",
+      "table_title": "DFMG Platform — Bank Connect functions",
       "categories": [
         {
           "icon": "fluent:money-20-filled",
@@ -68,7 +68,7 @@
         },
         {
           "icon": "fluent:receipt-20-filled",
-          "name": "Statements & Notifications",
+          "name": "Statements & notifications",
           "items": [
             "Statements of account",
             "Entry details",
@@ -86,7 +86,7 @@
         },
         {
           "icon": "fluent:settings-20-filled",
-          "name": "Other Functions",
+          "name": "Other functions",
           "items": [
             "Automatic user approval of payments",
             "Batch execution",
@@ -113,8 +113,8 @@
     "cta": {
       "title": "See Bank Connect in action",
       "body": "Book a demo and we'll show you how payments, reconciliation, and bank statements work inside DFMG Platform.",
-      "cta_demo": "Book a Demo",
-      "cta_features": "See All Features"
+      "cta_demo": "Book a demo",
+      "cta_features": "See all features"
     }
   },
   "da": {

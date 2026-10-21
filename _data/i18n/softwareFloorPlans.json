@@ -4,8 +4,8 @@
       "subtitle": "FEATURE",
       "title": "Floor Plans",
       "body": "Draw your buildings, plan your routes, assign tasks by room — and give every team member an interactive map of the job.",
-      "cta_demo": "Book a Demo",
-      "cta_how": "See How It Works"
+      "cta_demo": "Book a demo",
+      "cta_how": "See how it works"
     },
     "trust": [
       "22 room types",
@@ -14,12 +14,12 @@
       "OpenStreetMap integration"
     ],
     "editor": {
-      "subtitle": "Built-In Editor",
+      "subtitle": "Built-in editor",
       "title": "Draw your buildings with precision",
       "body1": "Create floor plans directly in the platform — no external software needed. Draw rooms as rectangles or freeform polygons, place walls with configurable thickness, and furnish spaces from a library of 44+ object types across furniture, appliances, and architectural elements.",
       "body2": "Everything is rendered at industry-standard 1:100 scale with real-world measurements. Upload custom furniture, apply materials and textures, and use full undo/redo as you work.",
       "badges": ["Room Drawing", "Polygon Shapes", "Wall Tool", "Furniture Library", "Material Picker", "Custom Uploads", "Undo / Redo"],
-      "visual_title": "Editor Tools",
+      "visual_title": "Editor tools",
       "visual_items": [
         { "icon": "fluent:design-ideas-20-filled", "text": "Rectangular & polygon rooms" },
         { "icon": "fluent:line-horizontal-3-20-filled", "text": "Interior, exterior & partition walls" },
@@ -29,12 +29,12 @@
       ]
     },
     "accuracy": {
-      "subtitle": "Real-World Accuracy",
+      "subtitle": "Real-world accuracy",
       "title": "Trace over satellite imagery with OpenStreetMap",
       "body1": "Look up any building address and overlay the real-world footprint directly in the editor. Trace walls, calibrate scale, and anchor your floor plan to GPS coordinates — so every room, corridor, and entrance matches the physical building.",
       "body2": "The geo-anchoring system maps pixels to metres with configurable rotation and scale. Once verified, your floor plan is spatially accurate and ready for operational use.",
       "badges": ["Address Lookup", "OSM Overlay", "GPS Anchoring", "Scale Calibration", "Building Dimensions", "Verification Workflow"],
-      "visual_title": "Geographic Anchoring",
+      "visual_title": "Geographic anchoring",
       "steps": [
         "Search for the building address",
         "Overlay the OSM building footprint",
@@ -43,21 +43,21 @@
       ]
     },
     "taskMapping": {
-      "subtitle": "Task Mapping",
+      "subtitle": "Task mapping",
       "title": "Assign tasks to rooms, not just people",
       "body1": "Each of the 22 room types automatically maps to the right task template — offices get desk cleaning, kitchens get appliance sanitation, toilets get hygiene protocols. Override any mapping manually when you need to.",
       "body2": "The interactive task map shows completion status per room with overdue warnings, last-completed dates, and frequency badges. Managers see the full picture. Employees see exactly what needs doing and where.",
       "badges": ["22 Room Types", "Auto Template Mapping", "Per-Room Tasks", "Completion Tracking", "Overdue Warnings", "Frequency Badges"],
-      "visual_title": "Room Types",
+      "visual_title": "Room types",
       "roomTypes": ["Office", "Meeting Room", "Kitchen", "Toilet", "Corridor", "Entrance", "Canteen", "Storage", "Lounge", "Staircase", "Terrace", "+11 more"]
     },
     "routes": {
-      "subtitle": "Route Planning",
+      "subtitle": "Route planning",
       "title": "Plan cleaning routes and simulate them step by step",
       "body1": "Build named cleaning routes with ordered room stops, entry points, and estimated durations. The waypoint network auto-detects paths through doors and corridors so routes follow real walkable paths — not straight lines through walls.",
       "body2": "Run the animated route simulator to see a character walk the route room by room, completing tasks along the way. Use it for training new employees, verifying route efficiency, or presenting to clients.",
       "badges": ["Named Routes", "Waypoint Network", "Auto Pathfinding", "Route Simulation", "Duration Estimates", "Cross-Floor Navigation", "Task Assignment"],
-      "visual_title": "Route Simulator",
+      "visual_title": "Route simulator",
       "steps": [
         "Define entry point and room order",
         "Waypoints auto-detect walkable paths",
@@ -66,12 +66,12 @@
       ]
     },
     "multiFloor": {
-      "subtitle": "Multi-Floor & Multi-Building",
+      "subtitle": "Multi-floor & multi-building",
       "title": "Manage entire portfolios of buildings",
       "body1": "Add unlimited floors per building and unlimited buildings per client. Navigate between floors with a single click, and link doors across floors so routes can span staircases and lifts.",
       "body2": "Clients see all their locations in a grid view. Employees navigate to their assigned building and floor. Managers get the full picture across every site they operate.",
       "badges": ["Unlimited Floors", "Unlimited Buildings", "Floor Transitions", "Cross-Floor Door Linking", "Building Grid View"],
-      "visual_title": "Three Views, One Platform",
+      "visual_title": "Three views, one platform",
       "visual_items": [
         { "icon": "fluent:shield-person-20-filled", "text": "Admin — full editor & all sites" },
         { "icon": "fluent:person-20-filled", "text": "Employee — assigned routes & tasks" },
@@ -79,12 +79,12 @@
       ]
     },
     "annotations": {
-      "subtitle": "Annotations & Export",
+      "subtitle": "Annotations & export",
       "title": "Annotate, document, and share",
       "body1": "Add arrows, text labels, and directional markers directly on floor plans to highlight special instructions, hazard zones, or cleaning priorities. Annotations are drawn on a separate canvas layer so they never interfere with the underlying plan.",
       "body2": "Export annotated floor plans as PNG images or PDF-ready SVG for client reports, training manuals, or quality documentation.",
       "badges": ["Arrow Annotations", "Text Labels", "Directional Markers", "PNG Export", "PDF-Ready SVG", "Location Guides"],
-      "visual_title": "Annotation Tools",
+      "visual_title": "Annotation tools",
       "visual_items": [
         { "icon": "fluent:arrow-right-20-filled", "text": "Arrows with direction control" },
         { "icon": "fluent:text-font-20-filled", "text": "Text with bold, italic, outline" },
@@ -95,25 +95,25 @@
     "benefits": [
       {
         "icon": "fluent:compass-northwest-20-filled",
-        "title": "Professional Precision",
+        "title": "Professional precision",
         "desc": "Industry-standard 1:100 scale, real-world GPS anchoring, and OpenStreetMap tracing ensure your floor plans match the physical building."
       },
       {
         "icon": "fluent:play-circle-20-filled",
-        "title": "Visual Route Planning",
+        "title": "Visual route planning",
         "desc": "Build cleaning routes with auto-pathfinding through doors and corridors, then simulate them with animated playback for training and verification."
       },
       {
         "icon": "fluent:people-20-filled",
-        "title": "Role-Based Access",
+        "title": "Role-based access",
         "desc": "Admins edit, employees navigate their assigned routes and tasks, clients explore their buildings view-only. Everyone sees what they need."
       }
     ],
     "cta": {
       "title": "See Floor Plans in action",
       "body": "Book a demo and we'll walk you through the editor, route planner, and task mapping — using your own buildings if you'd like.",
-      "cta_demo": "Book a Demo",
-      "cta_features": "See All Features"
+      "cta_demo": "Book a demo",
+      "cta_features": "See all features"
     }
   },
   "da": {

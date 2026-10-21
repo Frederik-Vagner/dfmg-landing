@@ -4,8 +4,8 @@
       "subtitle": "DFMG PLATFORM",
       "title": "Replace five tools with one system built for your industry",
       "body": "Scheduling, invoicing, payroll, client portals, and CRM — purpose-built for Danish cleaning and service companies. Save hours every week and never lose track of a job again.",
-      "cta_demo": "Book a Demo",
-      "cta_features": "See All Features",
+      "cta_demo": "Book a demo",
+      "cta_features": "See all features",
       "placeholder_text": "Product video or dashboard screenshot",
       "placeholder_hint": "Recommended: 60s Loom walkthrough or animated dashboard GIF"
     },
@@ -18,7 +18,7 @@
       "ontime_value": "[X]%",
       "ontime_label": "On-time task completion",
       "compliance_value": "100%",
-      "compliance_label": "Danish Compliance",
+      "compliance_label": "Danish compliance",
       "wait_value": "0 min",
       "wait_label": "Wait for answers"
     },
@@ -37,23 +37,23 @@
       "subtitle": "MODULES",
       "title": "One platform, every part of your business",
       "body": "Six capability areas, 40+ modules — replacing spreadsheets, WhatsApp groups, and disconnected tools.",
-      "operations_title": "Core Operations",
+      "operations_title": "Core operations",
       "operations_desc": "Schedule jobs, track time, manage quality inspections, and see who's where — all in real time from your phone or desktop.",
-      "clients_title": "Client Management",
+      "clients_title": "Client management",
       "clients_desc": "Give clients their own portal with upcoming tasks, invoices, and photos. Build location guides so every cleaner knows the job.",
-      "employees_title": "Employee Management",
+      "employees_title": "Employee management",
       "employees_desc": "Employee app for tasks and schedules. Holiday requests, performance tracking, handbook, and tests — all self-service.",
-      "finance_title": "Financial Suite",
+      "finance_title": "Financial suite",
       "finance_desc": "Full Danish accounting with e-Faktura, bank reconciliation, BankConnect, VAT reports — no need for a separate accounting system.",
       "crm_title": "Sales & CRM",
       "crm_desc": "Build professional offers with PDF export, automate outreach emails, track leads, and manage your inbox — win more contracts.",
-      "documents_title": "Documents & Analytics",
+      "documents_title": "Documents & analytics",
       "documents_desc": "Auto-fill document templates, collect e-signatures, and track KPIs — see profitability per client and per employee."
     },
     "walkthrough": {
       "title": "See how it works in practice",
       "body": "From scheduling a job to sending the invoice — follow a real workflow through the platform. No slides, no mockups — this is the actual system we use every day.",
-      "cta": "Watch Demo",
+      "cta": "Watch demo",
       "placeholder_text": "Product walkthrough video",
       "placeholder_hint": "2-3 min: Schedule task → Employee checks in → Client sees report → Invoice sent"
     },
@@ -110,8 +110,8 @@
     "cta": {
       "title": "Ready to run your business from one place?",
       "body": "Book a 30-minute demo. We'll show you the modules that matter most to your business — using real data from our own operation.",
-      "cta_demo": "Book a Demo",
-      "cta_pricing": "See Pricing",
+      "cta_demo": "Book a demo",
+      "cta_pricing": "See pricing",
       "trust1": "No commitment",
       "trust2": "30 minutes",
       "trust3": "Danish-language support"
@@ -165,7 +165,7 @@
       "finance_desc": "Fuld dansk bogføring med e-Faktura, bankafstemning, BankConnect, momsrapporter — intet behov for et separat regnskabssystem.",
       "crm_title": "Salg & CRM",
       "crm_desc": "Byg professionelle tilbud med PDF-eksport, automatisér outreach-emails, følg leads og håndtér jeres indbakke — vind flere kontrakter.",
-      "documents_title": "Dokumenter & Analyser",
+      "documents_title": "Dokumenter & analyser",
       "documents_desc": "Auto-udfyld dokumentskabeloner, indsaml e-signaturer og følg KPI'er — se rentabilitet per kunde og per medarbejder."
     },
     "walkthrough": {

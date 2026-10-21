@@ -14,8 +14,9 @@ One system for the whole operation, built by a service company that runs on it e
 
 - Outcome first, then the feature: "Invoice the hours your team logged, without retyping them", not "Automated invoice module".
 - Plain and specific. The reader knows the work better than any marketer; talk to them as a peer.
-- **English is British:** colour, organise, customise, centre, licence (noun), programme (except software "program").
-- **Danish** has æ/ø/å, normal Danish capitalisation in buttons ("Book en demo", "Se alle funktioner") and the same meaning as the English, not a word-for-word translation.
+- **English is British:** colour, organise, customise, centre, licence (noun), programme (except software "program"). Module names follow the product's UI, even where it is American ("Export Center"; in Danish "Eksportcenter").
+- **Sentence case** in both languages, for headings, titles, buttons and links: "Book a demo", "Core operations", "Se alle funktioner". Names keep their capitals (DFMG Platform, Bank Connect, eIndkomst).
+- **Danish** has æ/ø/å and the same meaning as the English, not a word-for-word translation.
 - Every EN change has its DA change in the same PR, and the other way round. The build fails if the keys differ.
 
 ## What we may say
