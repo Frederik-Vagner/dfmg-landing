@@ -1,0 +1,19 @@
+{
+  "id": "__ID__",
+  "published": false,
+  "title": "TODO: Stillingsbetegnelse",
+  "employmentType": "FULL_TIME",
+  "location": {
+    "streetAddress": "Borups Allé 21",
+    "postalCode": "2200",
+    "locality": "København",
+    "country": "DK"
+  },
+  "summary": "TODO: To sætninger om stillingen, 70–160 tegn. Bruges også som beskrivelse i søgeresultater.",
+  "requirements": [
+    "TODO: Krav"
+  ],
+  "datePosted": "__DATE__",
+  "validThrough": null,
+  "applySubject": "Ansøgning: TODO"
+}

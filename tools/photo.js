@@ -18,6 +18,7 @@
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
+const { slugify } = require("./slug");
 
 const ROOT = path.resolve(__dirname, "..");
 const IMAGES = path.join(ROOT, "images");
@@ -39,14 +40,6 @@ function parseArgs(argv) {
         else args._.push(argv[i]);
     }
     return args;
-}
-
-// "Vådt gulv skilt" -> "vaadt-gulv-skilt"
-function slugify(text) {
-    return text.toLowerCase()
-        .replace(/æ/g, "ae").replace(/ø/g, "oe").replace(/å/g, "aa")
-        .normalize("NFKD").replace(/[̀-ͯ]/g, "")
-        .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
 // The source as a Buffer, and the Pexels page it came from (if any).

@@ -45,7 +45,8 @@ const caseFields = {
     // true only when the client has agreed in writing to be named.
     clientConsent: z.boolean().optional(),
     // Where each number in the case comes from.
-    sources: z.array(text(3, 300)).optional(),
+    // (Not shown on the page, so a TODO left here is caught here.)
+    sources: z.array(text(3, 300).refine((t) => !/\bTODO\b/.test(t), "replace the TODO with the real source")).optional(),
 };
 
 const article = z.object(articleFields);

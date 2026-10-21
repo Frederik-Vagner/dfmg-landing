@@ -14,7 +14,8 @@
     "content:baseline": "node tools/check-content.js --update",
     "check:paths": "node tools/check-paths.js",
     "check:layout": "node tools/check-layout.js",
-    "photo": "node tools/photo.js"
+    "photo": "node tools/photo.js",
+    "new": "node tools/new.js"
   },
   "repository": {
     "type": "git",
