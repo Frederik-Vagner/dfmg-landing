@@ -121,8 +121,8 @@
       "subtitle": "FUNKTION",
       "title": "Plantegninger",
       "body": "Tegn dine bygninger, planlæg dine ruter, tildel opgaver pr. rum — og giv hvert teammedlem et interaktivt kort over opgaven.",
-      "cta_demo": "Book en Demo",
-      "cta_how": "Se Hvordan Det Virker"
+      "cta_demo": "Book en demo",
+      "cta_how": "Se hvordan det virker"
     },
     "trust": [
       "22 rumtyper",
@@ -229,8 +229,8 @@
     "cta": {
       "title": "Se plantegninger i aktion",
       "body": "Book en demo, og vi guider dig gennem editoren, ruteplanlæggeren og opgavemapping — gerne med dine egne bygninger.",
-      "cta_demo": "Book en Demo",
-      "cta_features": "Se Alle Funktioner"
+      "cta_demo": "Book en demo",
+      "cta_features": "Se alle funktioner"
     }
   }
 }

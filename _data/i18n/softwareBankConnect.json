@@ -122,8 +122,8 @@
       "subtitle": "INTEGRATION",
       "title": "Bank Connect",
       "body": "DFMG Platform er en officielt hvidlistet Bank Connect ERP-udbyder — og giver din virksomhed direkte, sikker adgang til dansk bankinfrastruktur.",
-      "cta_demo": "Book en Demo",
-      "cta_functions": "Se Alle Funktioner"
+      "cta_demo": "Book en demo",
+      "cta_functions": "Se alle funktioner"
     },
     "trust": [
       "Officielt hvidlistet ERP-udbyder",
@@ -231,8 +231,8 @@
     "cta": {
       "title": "Se Bank Connect i aktion",
       "body": "Book en demo, og vi viser dig, hvordan betalinger, afstemning og kontoudtog fungerer i DFMG Platform.",
-      "cta_demo": "Book en Demo",
-      "cta_features": "Se Alle Funktioner"
+      "cta_demo": "Book en demo",
+      "cta_features": "Se alle funktioner"
     }
   }
 }

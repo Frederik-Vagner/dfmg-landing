@@ -46,7 +46,7 @@
       },
       {
         "name": "Enterprise",
-        "desc": "For established companies needing full customization and scale.",
+        "desc": "For established companies needing full customisation and scale.",
         "price": "Custom",
         "featured": false,
         "badge": "",
@@ -177,7 +177,7 @@
           "Tidsregistrering",
           "Op til 10 medarbejdere"
         ],
-        "ctaText": "Kom i Gang",
+        "ctaText": "Kom i gang",
         "ctaHref": "/pages/software/da/demo.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       },
@@ -197,7 +197,7 @@
           "Analyser & KPI",
           "Op til 50 medarbejdere"
         ],
-        "ctaText": "Book en Demo",
+        "ctaText": "Book en demo",
         "ctaHref": "/pages/software/da/demo.html",
         "ctaClass": "btn btn--success btn--md btn--full"
       },
@@ -216,7 +216,7 @@
           "Dedikeret support",
           "Ubegrænset antal medarbejdere"
         ],
-        "ctaText": "Kontakt Salg",
+        "ctaText": "Kontakt salg",
         "ctaHref": "/pages/software/da/contact.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       }
@@ -309,8 +309,8 @@
     "cta": {
       "title": "Ikke sikker på hvilken plan?",
       "body": "Book et opkald, så gennemgår vi den rette løsning til jeres virksomhed — baseret på hvad I faktisk har brug for, ikke hvad vi gerne vil sælge.",
-      "cta_demo": "Book en Demo",
-      "cta_sales": "Kontakt Salg"
+      "cta_demo": "Book en demo",
+      "cta_sales": "Kontakt salg"
     }
   }
 }
