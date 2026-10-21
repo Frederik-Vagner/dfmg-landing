@@ -302,7 +302,7 @@ function initTableOfContents() {
         if (e.target.tagName === 'A') {
             e.preventDefault();
             const target = document.querySelector(e.target.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
+            if (target) target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
         }
     });
 }

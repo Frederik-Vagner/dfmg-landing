@@ -124,7 +124,7 @@ class SustainabilitySlider {
             if (vertical && this.canScroll(step)) {
                 this.slides[this.currentSlide].scrollBy({
                     top: step * this.slides[this.currentSlide].clientHeight * 0.4,
-                    behavior: 'smooth'
+                    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
                 });
             } else if (step > 0) {
                 this.nextSlide();
@@ -195,7 +195,7 @@ class SustainabilitySlider {
         if (this.isMobile()) {
             this.currentSlide = target;
             const slide = this.slides[target];
-            if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (slide) slide.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
             this.updateDots();
             return;
         }

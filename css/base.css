@@ -198,4 +198,26 @@ body {
     [hidden] {
         display: none;
     }
+
+    /* Reduced motion (WCAG 2.3.3, and 2.2.2 for anything that moves on its
+       own): no animations, transitions or smooth scrolling, and no
+       cross-fade between pages. In the last layer, so it outranks every
+       component rule without !important. Durations are near zero rather
+       than none, so transitionend/animationend handlers still fire. */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms;
+            animation-iteration-count: 1;
+            transition-duration: 0.01ms;
+            scroll-behavior: auto;
+        }
+
+        ::view-transition-group(*),
+        ::view-transition-old(*),
+        ::view-transition-new(*) {
+            animation: none;
+        }
+    }
 }
