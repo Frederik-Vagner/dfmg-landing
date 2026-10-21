@@ -73,12 +73,10 @@ body {
     line-height: var(--leading-relaxed);
     /* Passed on to the window: nothing scrolls sideways. */
     overflow-x: hidden;
-    animation: page-enter 200ms ease-out;
-}
-
-@keyframes page-enter {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    /* No fade-in on load: a body that starts at opacity 0 paints nothing
+       until the animation runs, and Lighthouse mobile (and any browser that
+       throttles animations) then saw a blank page. Navigation between pages
+       still cross-fades through the view transition above. */
 }
 
 /* ── Text spacing ──
