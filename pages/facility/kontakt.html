@@ -13,13 +13,13 @@ scripts:
                 <div class="row row--wide row--top">
                     <div>
                         <h1>Få et tilbud</h1>
-                        <p>Udfyld formularen og beskriv jeres behov. Vi vender tilbage med et fast tilbud inden for 24 timer.</p>
+                        <p>Udfyld formularen og beskriv jeres behov. Vi vender tilbage med et fast tilbud {{ facts.quoteTime }}.</p>
 
                         <ul class="checklist checklist--success checklist--muted checklist--spaced">
                             <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Gratis og uforpligtende tilbud</li>
                             <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Personlig rådgivning og vejledning</li>
                             <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Skræddersyede løsninger til jeres behov</li>
-                            <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fast tilbud inden for 24 timer</li>
+                            <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fast tilbud {{ facts.quoteTime }}</li>
                             <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Mulighed for besigtigelse og konsultation</li>
                         </ul>
                     </div>
@@ -122,7 +122,7 @@ scripts:
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
                             <div class="faq-answer">
-                                <p>Vi dækker København og omegn.</p>
+                                <p>Vi dækker {{ facts.area }}.</p>
                             </div>
                         </div>
 
@@ -152,7 +152,7 @@ scripts:
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
                             <div class="faq-answer">
-                                <p>Typisk 1–2 uger, og akut hjælp efter aftale. Forberedelsestiden giver os mulighed for at planlægge logistikken optimalt og gennemgå jeres lokation grundigt med vores medarbejdere.</p>
+                                <p>Typisk {{ facts.startTime }}, og akut hjælp efter aftale. Forberedelsestiden giver os mulighed for at planlægge logistikken optimalt og gennemgå jeres lokation grundigt med vores medarbejdere.</p>
                             </div>
                         </div>
 
@@ -195,7 +195,7 @@ scripts:
                                 <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                             </div>
                             <div class="faq-answer">
-                                <p>Vi gør rent alle dage kl. 04–22. Vi forsøger at undgå decideret natarbejde, da det ikke er sundt på den lange bane, men ellers er vi fleksible med arbejdstider.</p>
+                                <p>Vi gør rent {{ facts.cleaningHours }}. Vi forsøger at undgå decideret natarbejde, da det ikke er sundt på den lange bane, men ellers er vi fleksible med arbejdstider.</p>
                             </div>
                         </div>
 

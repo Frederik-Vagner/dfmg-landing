@@ -113,7 +113,7 @@
       "telephone": site.phone,
       "vatID": "DK" + site.cvr,
       "taxID": site.cvr,
-      "foundingDate": "2024-02-19",
+      "foundingDate": facts.founded.date,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Borups Allé 21",
@@ -123,7 +123,7 @@
       },
       "areaServed": {
         "@type": "AdministrativeArea",
-        "name": "København og omegn"
+        "name": facts.area
       },
       "sameAs": [site.linkedin, site.cvrUrl]
     } | dump(2) | safe }}

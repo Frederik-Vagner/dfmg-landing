@@ -14,7 +14,7 @@
                 <h2 class="heading heading--sm">Ring mig op</h2>
             </div>
             <div class="chatbot__callback-body">
-                <p>Indtast dit telefonnummer, så ringer vi tilbage samme dag. Telefontid: hverdage 8–16.</p>
+                <p>Indtast dit telefonnummer, så ringer vi tilbage {{ facts.callback }}. Telefontid: {{ facts.phoneHours }}.</p>
                 <div class="chatbot__callback-row">
                     <input type="tel" id="callbackPhone" placeholder="Indtast dit telefonnummer" class="input" aria-label="Dit telefonnummer" aria-describedby="callbackError">
                     <button type="button" class="btn btn--primary" data-action="submit-callback">
@@ -47,7 +47,7 @@
                             <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
                         <div class="faq-answer">
-                            <p>Vi tilbyder Erhvervsrengøring, ejendomsservice, handyman-tjenester, supplies og piccoline ordning og vinduespolering til virksomheder i København og omegn.</p>
+                            <p>Vi tilbyder Erhvervsrengøring, ejendomsservice, handyman-tjenester, supplies og piccoline ordning og vinduespolering til virksomheder i {{ facts.area }}.</p>
                         </div>
                     </div>
                     
@@ -57,7 +57,7 @@
                             <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
                         <div class="faq-answer">
-                            <p>Typisk 1–2 uger efter kontraktindgåelse. Akut hjælp efter aftale.</p>
+                            <p>Typisk {{ facts.startTime }} efter kontraktindgåelse. Akut hjælp efter aftale.</p>
                         </div>
                     </div>
                     
@@ -77,7 +77,7 @@
                             <iconify-icon icon="fluent:chevron-down-20-filled" inline></iconify-icon>
                         </div>
                         <div class="faq-answer">
-                            <p>Prisen afhænger af jeres specifikke behov. Vi laver altid en gratis analyse og giver et fast tilbud inden for 24 timer – uden overraskelser.</p>
+                            <p>Prisen afhænger af jeres specifikke behov. Vi laver altid en gratis analyse og giver et fast tilbud {{ facts.quoteTime }} – uden overraskelser.</p>
                         </div>
                     </div>
                 </div>

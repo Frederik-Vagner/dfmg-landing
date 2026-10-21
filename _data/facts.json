@@ -1,0 +1,27 @@
+{
+  "//": "Approved business facts (the facility fact pass of 2026-10-18). Pages use them as {{ facts.<key> }}; the copy around them is free, the values are not. Change a value only in a PR of its own that says so in its title. Contact details (phone, email, CVR, address) are in site.json.",
+  "asOf": "2026-10-18",
+  "founded": {
+    "year": 2024,
+    "date": "2024-02-19",
+    "source": "CVR registration date"
+  },
+  "area": "København og omegn",
+  "cleaningHours": "alle dage kl. 04–22",
+  "phoneHours": "hverdage 8–16",
+  "callback": "samme dag",
+  "quoteTime": "inden for 24 timer",
+  "startTime": "1–2 uger",
+  "urgentHelp": "akut hjælp efter aftale",
+  "support247": false,
+  "viaPartner": [
+    "el",
+    "VVS",
+    "fliser",
+    "vagt",
+    "adgangskontrol",
+    "HACCP",
+    "ventilationsrens",
+    "facadearbejde i højden"
+  ]
+}

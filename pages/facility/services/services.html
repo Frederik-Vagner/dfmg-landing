@@ -23,7 +23,7 @@ scripts:
             <ul class="panels__features checklist">
                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Miljøvenlige produkter</li>
                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Faste teams</li>
-                <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Telefon hverdage 8–16</li>
+                <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Telefon {{ facts.phoneHours }}</li>
                 <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Digital rapportering</li>
             </ul>
             <div class="panels__actions">
@@ -234,7 +234,7 @@ scripts:
                             <h3>Akut Hjælp Efter Aftale</h3>
                             <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
                         </div>
-                        <p>Akut service efter aftale. Vi gør rent alle dage kl. 04–22</p>
+                        <p>Akut service efter aftale. Vi gør rent {{ facts.cleaningHours }}</p>
                     </div>
                 </div>
             </div>
@@ -261,7 +261,7 @@ scripts:
                             <h3>Erfaring</h3>
                             <iconify-icon icon="fluent:people-20-filled" inline></iconify-icon>
                         </div>
-                        <p>Faglært erfaring med facility management — og kunder i København og omegn</p>
+                        <p>Faglært erfaring med facility management — og kunder i {{ facts.area }}</p>
                     </div>
                 </div>
             </div>
@@ -313,7 +313,7 @@ scripts:
             <div>
                 <h2>Jeres behov – vores løsning</h2>
                 <p>Vælg de services I har brug for, eller lad os stå for den komplette løsning.</p>
-                <p>Vi hjælper alt fra <strong>kontorfællesskaber til skoler og kulturinstitutioner</strong> i København og omegn.</p>
+                <p>Vi hjælper alt fra <strong>kontorfællesskaber til skoler og kulturinstitutioner</strong> i {{ facts.area }}.</p>
                 <div class="cluster">
                     <a href="/pages/facility/kontakt.html" class="btn btn--success btn--md">
                         <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>Få et tilbud
