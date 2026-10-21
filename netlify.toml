@@ -3,6 +3,10 @@
   command = "npm run build"
   publish = "_site"
 
+# Same Node as .nvmrc (the Mac worker and GitHub Actions read that); change both together.
+[build.environment]
+  NODE_VERSION = "24"
+
 # The SOHO and Kgl. Haveselskab case pages were unpublished (they carried
 # Adnami's content). Send any old links or indexed URLs to the Indblik overview.
 [[redirects]]
