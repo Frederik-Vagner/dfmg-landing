@@ -7,6 +7,50 @@
 [build.environment]
   NODE_VERSION = "24"
 
+# Browser caching. Without these, Netlify sends max-age=0 for everything and
+# every page view revalidates 35-60 assets. HTML is not listed: it keeps
+# Netlify's default (always revalidated), so a deploy shows at once.
+#
+# Fonts: the files never change under the same name; a new font gets a new
+# file name. Cached for a year, immutable.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Photos (and the article srcset copies built from them): never edited in
+# place (a new photo is a new file, see CLAUDE.md), but the names carry no
+# content hash, so not immutable: 30 days, then revalidated.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# CSS and JS keep the same URL when they change (no fingerprinting), and the
+# HTML that uses them is always fresh, so a long cache could pair new markup
+# with old styles after a deploy. Five minutes covers a visit (no
+# revalidation from page to page) and limits a mismatch to that window.
+# Fingerprinted file names at build time would allow immutable here.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
 # The SOHO and Kgl. Haveselskab case pages were unpublished (they carried
 # Adnami's content). Send any old links or indexed URLs to the Indblik overview.
 [[redirects]]
