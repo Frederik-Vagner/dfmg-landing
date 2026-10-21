@@ -64,7 +64,7 @@ Everything else, including any count of tasks, clients, employees or years, is n
 ## What a good article looks like
 
 - One question a facility or office manager actually has, answered in 600–1,200 words.
-- Front matter complete (see the fields in `pages/facility/indblik/artikler/_article-template.html`); `npm run build` checks them.
+- Start from `npm run new` (`scaffolds/article.md`, or `scaffolds/case.md` for a case); `npm run build` checks every field. Markdown body only; a boxed note is `{% callout %}`.
 - Structure: a short intro that names the problem, three to five sections with `h2`, a practical list or checklist, and a closing line that points to Kontakt.
 - Examples are concrete but don't invent numbers. "En kunde ville have færre forstyrrelser i arbejdstiden, så vi flyttede rengøringen til morgentimerne" works without a figure.
 - The excerpt says what the reader will learn, in one or two sentences.
@@ -73,6 +73,6 @@ Everything else, including any count of tasks, clients, employees or years, is n
 
 Frederik decides these. Don't resolve them in copy, don't add to either side, and leave the current wording alone unless the task is about exactly this.
 
-- **Bilfri vs. jobs that need a car.** The sustainability pages and the bilfri article say the company runs 100% car-free. Several job ads on `indblik/jobs.html` ask for "kørekort og egen transport" or "bil til rådighed". The bilfri article also contains its own unsourced figures, which stay until this is decided.
+- **Bilfri vs. jobs that need a car.** The sustainability pages and the bilfri article say the company runs 100% car-free. The open jobs in `_data/jobs.json` ask for "kørekort og egen transport" (and a closed one for "bil til rådighed"). The bilfri article also contains its own unsourced figures, which stay until this is decided.
 - **The no-show wording.** The punctuality line on `services/rengoering.html` ("0 udeblivelser" with a period and a count) is waiting for approved wording.
-- **The handyman job.** The handyman job asks for experience with plumbing and electrical work, while the service pages say that work goes via a partner.
+- **The handyman job.** The handyman job (closed for now, `published: false` in `_data/jobs.json`) asks for experience with plumbing and electrical work, while the service pages say that work goes via a partner. Don't reopen it before this is decided.

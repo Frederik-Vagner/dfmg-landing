@@ -1,6 +1,6 @@
 # Content system plan
 
-Status: plan, waiting for go (2026-10-21). Builds on [agent-readiness.md](agent-readiness.md), sections 1, 3 and 4, which proposed these items. This document checks them against the code as it is on `main` (bcb8192) and against current documentation, and fixes the approach for each.
+Status: built on branch `content-system` (2026-10-21), one commit per item; not merged. See "As built" at the end for where the build differs from this plan. Builds on [agent-readiness.md](agent-readiness.md), sections 1, 3 and 4, which proposed these items. This document checks them against the code as it is on `main` (bcb8192) and against current documentation, and fixes the approach for each.
 
 Readers: Frederik, and whoever builds phase 3. The marketing agent reads CLAUDE.md and the briefs, not this file.
 
@@ -400,3 +400,17 @@ After merge: one dry run with the agent (an article PR from `npm run new`), and 
 - Versions checked with `npm view` on 2026-10-21: @11ty/eleventy 3.1.7, @11ty/eleventy-img 7.1.0, sharp 0.35.5, markdown-it 15.0.3 (Eleventy 3 bundles 14.1), markdown-it-attrs 5.0.1, markdown-it-container 4.0.0 (2023), ajv 8.20.0, zod 4.6.7
 
 Not verified: whether the Netlify Image CDN works on deploy previews and what it costs per transform; whether Netlify keeps `.cache` without a plugin; a typical AVIF saving figure; Danish-language support in Google job search; whether Formspree's domain restriction is on your plan.
+
+---
+
+## As built (2026-10-21)
+
+Where the build differs from the plan above:
+
+- **Jobs:** only the two Rengøringsassistent jobs are open; the other four are in `jobs.json` with `published: false`. `jobs.json` is validated when the build starts (`eleventy.before` in `.eleventy.js`), not in `check-content.js`: it fails before anything renders, and also when the list is empty. The job page's data and JobPosting live in `pages/facility/indblik/jobs/jobs.11tydata.js`, because Eleventy 3's JS front matter isn't CommonJS. The list uses two columns when there are fewer than three jobs, and the card buttons sit in a `.cluster` (check-layout found them touching).
+- **Markdown:** markdown-it writes `"` in text as `&quot;`. The browser shows the same text, so the conversion counts as identical; the diff script treats the two as equal.
+- **Photo inventory:** it already removed `srcset` when it tries a candidate, so it needed no change.
+- **Article schema:** strictness (unknown keys) is checked against the file's own front matter, values against the merged data, so directory defaults (`author`, the fallback photo) still count. A TODO left in a case's `sources` fails, because `sources` isn't rendered and the placeholder check can't see it.
+- **Open jobs' `datePosted`** is 2026-10-21; set it to the merge day.
+
+Verification after each commit: a clean `npm run build`, then a diff of the full `_site` against `main` (or the previous commit). The differences were the expected ones listed in section 3. Also run: check-layout (no touching blocks), browser checks of `srcset` choices, a preview build in which none of the five forms sent anything (all requests to the endpoint counted), and a production build (`CONTEXT=production`) whose forms match `main`.

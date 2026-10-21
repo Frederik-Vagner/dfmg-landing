@@ -14,6 +14,7 @@
 ## Checklist
 - [ ] `npm run build` passes locally (clean build)
 - [ ] EN and DA both changed (platform pages)
-- [ ] New images: webp, under 200 KB, alt text, source noted
-- [ ] Only content paths changed (see CLAUDE.md)
+- [ ] New images: added with `npm run photo` (source recorded), alt text in the page's language
+- [ ] Case: client named only with written consent (`clientConsent: true`, say where it comes from), or anonymised; `sources` for every number
+- [ ] Only content paths changed, within the size limits (`npm run check:paths`)
 - [ ] No forms submitted on the deploy preview

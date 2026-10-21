@@ -20,6 +20,8 @@
       "Edit(/.claude/**)",
       "Edit(/_data/site.json)",
       "Edit(/_data/facts.json)",
+      "Edit(/_data/authors.json)",
+      "Edit(/scaffolds/**)",
       "Edit(/pages/facility/components/*politik.html)",
       "Edit(/_assets-unused/**)",
       "Bash(git push --force*)",
