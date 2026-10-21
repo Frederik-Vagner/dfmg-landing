@@ -5,6 +5,21 @@
 // %SITE_*% placeholders in the browser. Eleventy now renders all four into
 // every page at build time (see _includes/base.html), so this file only wires
 // up behaviour against markup that is already in the document.
+// Deploy previews and local builds have no form endpoint (see isProduction
+// in .eleventy.js): every form is stopped here and says nothing was sent.
+function previewFormBlocked() {
+    var message = 'Formularer er slået fra på preview-sider. Intet blev sendt.';
+    if (window.showNotification) window.showNotification(message);
+    else window.alert(message);
+}
+if (window.DFMG && window.DFMG.preview) {
+    document.addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        previewFormBlocked();
+    }, true);
+}
+
 function initComponents() {
     initMobileMenu();
     initClickableKeyboard();
@@ -201,8 +216,9 @@ function initializeChatbotFunctions() {
             return;
         }
         showPhoneError('');
-        
-        fetch('https://formspree.io/f/xdkdrqkw', {
+        if (!window.DFMG.formEndpoint) { previewFormBlocked(); return; }
+
+        fetch(window.DFMG.formEndpoint, {
             method: 'POST',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
             body: JSON.stringify({ _subject: 'Ring-mig-op anmodning fra chatbot', telefon: phoneNumber })
@@ -301,7 +317,7 @@ function initNewsletterForm() {
         const email = document.getElementById('newsletter-email').value.trim();
         if (!email) return;
 
-        fetch('https://formspree.io/f/xdkdrqkw', {
+        fetch(window.DFMG.formEndpoint, {
             method: 'POST',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
             body: JSON.stringify({ _subject: 'Nyhedsbrev tilmelding', email: email })

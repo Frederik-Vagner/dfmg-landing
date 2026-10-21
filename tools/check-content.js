@@ -25,6 +25,10 @@
 //              list lengths, and no text is empty in one language only.
 //   images     files in images/ are webp, jpg or png, at most 250 KB and
 //              2000 px on the long edge, with a lowercase ASCII file name.
+//   forms      the form endpoint (site.formEndpoint) is only in production
+//              builds (CONTEXT=production on Netlify): anywhere else a test
+//              submission would reach the real inbox. In production every
+//              form posts to that endpoint or to a page of the site.
 //   photos     every photo recorded as "chosen" in tools/photo-candidates.json
 //              (npm run photo writes these) exists in images/.
 //   facts      _data/facts.json has every approved fact, as text.
@@ -261,6 +265,27 @@ function checkImages() {
     return files.length;
 }
 
+// ---------------------------------------------------------------------- forms
+
+function checkForms() {
+    const production = process.env.CONTEXT === "production";
+    const endpoint = JSON.parse(read(path.join(ROOT, "_data/site.json"))).formEndpoint;
+    if (!endpoint) { report("forms-endpoint", "_data/site.json has no formEndpoint"); return; }
+    const host = new URL(endpoint).host;
+    for (const file of walk(SITE).filter((f) => /\.(html|js)$/.test(f) && !rel(f, SITE).startsWith("internal/"))) {
+        const url = urlOf(file);
+        const text = read(file);
+        if (!production && text.includes(host)) {
+            report(`forms-preview:${url}`, `${url}: contains the form endpoint (${host}) in a non-production build; forms would post to the real inbox`);
+        }
+        for (const m of text.matchAll(/<form\b[^>]*\saction="([^"]*)"/g)) {
+            const action = decode(m[1]);
+            const ok = production ? action === endpoint || action.startsWith("/") : !/^(?:[a-z]+:)?\/\//i.test(action);
+            if (!ok) report(`forms-action:${url}:${action}`, `${url}: <form action="${action}"> ${production ? `should be site.formEndpoint or a page of the site` : `posts off the site in a non-production build`}`);
+        }
+    }
+}
+
 // --------------------------------------------------------------- photo sources
 
 function checkPhotoSources() {
@@ -304,6 +329,7 @@ function main() {
         i18n: checkI18n(),
         images: checkImages(),
     };
+    checkForms();
     checkPhotoSources();
     checkFacts();
 

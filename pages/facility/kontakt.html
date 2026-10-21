@@ -26,7 +26,7 @@ scripts:
 
                     <div class="contact-form">
                         <h2 class="intro">Kontakt formular</h2>
-                        <form action="https://formspree.io/f/xdkdrqkw" method="POST">
+                        <form action="{{ site.formEndpoint if isProduction else '#preview' }}" method="POST">
                         <!-- Hidden fields for Formspree -->
                         <input type="hidden" name="_subject" value="Ny henvendelse fra DFMG hjemmeside">
                         <input type="hidden" name="_next" value="https://dfmg.dk/pages/facility/tak.html">

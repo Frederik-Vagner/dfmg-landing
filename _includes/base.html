@@ -155,7 +155,7 @@
     {% if chatbot !== false %}
     {% include "partials/chatbot.html" %}
     {% endif %}
-    <script>window.DFMG={{ site | dump | safe }};</script>
+    <script>window.DFMG={{ site | clientSite | dump | safe }};</script>
     <script src="/js/components.js" defer></script>
     {% for script in scripts %}
     <script src="{{ script }}" defer></script>

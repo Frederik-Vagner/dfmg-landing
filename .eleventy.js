@@ -18,6 +18,21 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("favicon.ico");
 
+  // Forms post to the real inbox, so the endpoint (site.formEndpoint) is
+  // only written into production builds. Netlify sets CONTEXT to
+  // "production" for the live site and to "deploy-preview" or
+  // "branch-deploy" otherwise; a local build has none. Elsewhere forms
+  // point at #preview and js/components.js says nothing was sent.
+  // tools/check-content.js fails the build if the endpoint leaks.
+  const isProduction = process.env.CONTEXT === "production";
+  eleventyConfig.addGlobalData("isProduction", isProduction);
+  // The site data the browser gets (window.DFMG in base.html).
+  eleventyConfig.addFilter("clientSite", (site) => {
+    if (isProduction) return site;
+    const { formEndpoint, ...rest } = site;
+    return { ...rest, preview: true };
+  });
+
   // width="{{ src | imgWidth }}" height="{{ src | imgHeight }}": the size of
   // a local image, read from the file (tools/image-size.js)
   eleventyConfig.addFilter("imgWidth", imgWidth);
