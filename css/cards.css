@@ -443,9 +443,9 @@ a.card {
     margin-bottom: var(--space-2xs);
 }
 
-.card__title--danger { color: var(--red); }
+.card__title--danger { color: var(--danger-text); }
 .card__title-icon { margin-right: var(--space-2xs); }
-.card__title--success { color: var(--success); }
+.card__title--success { color: var(--success-text); }
 
 .card__text {
     font-size: var(--text-base);

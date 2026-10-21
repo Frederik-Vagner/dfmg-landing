@@ -49,21 +49,22 @@ scripts:
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label class="sr-only" for="kontakt-company">Virksomhed</label>
+                                    <label class="form-label" for="kontakt-company">Virksomhed</label>
                                     <input type="text" id="kontakt-company" name="company" placeholder="Jeres virksomhed" class="form-input" autocomplete="organization" required>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="kontakt-name">Navn</label>
+                                    <label class="form-label" for="kontakt-name">Navn</label>
                                     <input type="text" id="kontakt-name" name="name" placeholder="Dit navn" class="form-input" autocomplete="name" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="kontakt-email">E-mail</label>
+                                <label class="form-label" for="kontakt-email">E-mail</label>
                                 <input type="email" id="kontakt-email" name="email" placeholder="Din e-mail" class="form-input" autocomplete="email" required>
                             </div>
                             <div class="form-row phone-row">
                                 <div class="form-group phone-code">
-                                    <select name="country_code" class="form-input" aria-label="Landekode">
+                                    <label class="form-label" for="kontakt-country">Landekode</label>
+                                    <select id="kontakt-country" name="country_code" class="form-input">
                                         <option value="+45" selected>🇩🇰 +45</option>
                                         <option value="+46">🇸🇪 +46</option>
                                         <option value="+47">🇳🇴 +47</option>
@@ -91,12 +92,12 @@ scripts:
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="kontakt-phone">Telefonnummer</label>
+                                    <label class="form-label" for="kontakt-phone">Telefonnummer</label>
                                     <input type="tel" id="kontakt-phone" name="phone" placeholder="12 34 56 78" class="form-input" autocomplete="tel-national" pattern="[0-9 \(\)\+\-]{7,20}" title="Telefonnummer, fx 12 34 56 78" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="kontakt-message">Jeres behov</label>
+                                <label class="form-label" for="kontakt-message">Jeres behov</label>
                                 <textarea id="kontakt-message" name="message" placeholder="Beskriv jeres behov, så vi kan forberede os bedst muligt" class="form-textarea" required></textarea>
                             </div>
                             <button type="submit" class="btn btn--success btn--md btn--full">Send forespørgsel</button>

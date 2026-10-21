@@ -52,6 +52,11 @@
     <meta name="theme-color" content="#344767">
     <link rel="preload" href="/fonts/montserrat-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/montserrat-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    {%- if preloadImage %}
+    {#- The LCP image when CSS sets it as a background, so the browser would
+        otherwise find it only after the stylesheets. Front matter. #}
+    <link rel="preload" href="{{ preloadImage }}" as="image" fetchpriority="high">
+    {%- endif %}
 
     <!-- Font (selvhostet) -->
     <link rel="stylesheet" href="/css/fonts.css">
@@ -92,7 +97,7 @@
     <link rel="stylesheet" href="/css/components/chatbot.css">
     {% endif %}
 
-    <script src="/js/nav-enhancer.js"></script>
+    <script src="/js/nav-enhancer.js" defer></script>
 
     <!-- Structured Data -->
     {% if jsonLd %}

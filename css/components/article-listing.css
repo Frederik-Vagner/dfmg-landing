@@ -140,7 +140,7 @@ color: var(--white);
     align-items: center;
     gap: var(--space-lg);
     margin-bottom: var(--space-sm);
-    opacity: 0.9;
+    /* No opacity: at 0.9 the cards' read time (--gray-light) fell to 3.9:1. */
 }
 
 .meta-item {

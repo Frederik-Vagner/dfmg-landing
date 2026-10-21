@@ -42,14 +42,9 @@
             <div class="nav__item">
                 <a href="/pages/facility/kontakt.html">Kontakt</a>
             </div>
+            <a href="tel:{{ site.phone }}" class="nav__phone">{{ site.phoneDisplay }}</a>
             <a href="/pages/facility/prisberegner.html" class="nav__cta">Prisberegner</a>
         </nav>
-        
-        <!-- Contact Info -->
-        <div class="header__contact">
-            <span>{{ site.email }}</span>
-            <span>{{ site.phoneDisplay }}</span>
-        </div>
         
         <!-- Mobile menu: js/components.js toggles it and closes it on Escape -->
         <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Åbn menu" data-label-open="Åbn menu" data-label-close="Luk menu">
@@ -85,6 +80,7 @@
             <div class="mobile-nav__group">
                 <a href="/pages/facility/kontakt.html" class="mobile-nav__highlight">Kontakt</a>
                 <a href="/pages/facility/prisberegner.html" class="mobile-nav__highlight">Prisberegner</a>
+                <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>
             </div>
         </nav>
     </div>

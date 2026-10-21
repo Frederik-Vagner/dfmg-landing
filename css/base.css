@@ -69,16 +69,14 @@ body {
     /* The site's text colour. Without it all text started as browser black
        and every component re-declared charcoal for its own elements. */
     color: var(--charcoal);
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', 'Montserrat Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: var(--leading-relaxed);
     /* Passed on to the window: nothing scrolls sideways. */
     overflow-x: hidden;
-    animation: page-enter 200ms ease-out;
-}
-
-@keyframes page-enter {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    /* No fade-in on load: a body that starts at opacity 0 paints nothing
+       until the animation runs, and Lighthouse mobile (and any browser that
+       throttles animations) then saw a blank page. Navigation between pages
+       still cross-fades through the view transition above. */
 }
 
 /* ── Text spacing ──
@@ -199,5 +197,27 @@ body {
 @layer state {
     [hidden] {
         display: none;
+    }
+
+    /* Reduced motion (WCAG 2.3.3, and 2.2.2 for anything that moves on its
+       own): no animations, transitions or smooth scrolling, and no
+       cross-fade between pages. In the last layer, so it outranks every
+       component rule without !important. Durations are near zero rather
+       than none, so transitionend/animationend handlers still fire. */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms;
+            animation-iteration-count: 1;
+            transition-duration: 0.01ms;
+            scroll-behavior: auto;
+        }
+
+        ::view-transition-group(*),
+        ::view-transition-old(*),
+        ::view-transition-new(*) {
+            animation: none;
+        }
     }
 }

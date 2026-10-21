@@ -103,6 +103,9 @@
 }
 
 .footer__bottom a {
+    /* 4px above and below lift the 17px line to a 25px tap target. */
+    display: inline-block;
+    padding-block: var(--space-3xs);
     text-decoration: none;
     font-size: var(--text-sm);
     margin-right: var(--space-md);
