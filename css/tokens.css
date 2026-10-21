@@ -43,9 +43,11 @@
     --indigo: #6366f1;
     /* Text versions of the brand colours. --success and --primary are too
        light for text on white (2.3:1 and 3.6:1); these pass AA (5.0:1, 6.7:1).
-       Icons and fills keep the brand colours. */
+       --red is 3.8:1; --danger-text 6.5:1. Icons and fills keep the brand
+       colours. */
     --success-text: var(--green-700);
     --primary-text: var(--blue-700);
+    --danger-text: var(--red-700);
     --link: var(--primary-text);  /* links without a class of their own (base.css) */
 
     /* Social Brand Colors */
@@ -242,6 +244,7 @@
     --yellow-50: #fefce8;
     --amber-100: #fef3c7;
     --amber-200: #fde68a;
+    --amber-700: #b45309;
     --orange-50: #fff7ed;
     --orange-200: #fed7aa;
     --orange-300: #fdba74;

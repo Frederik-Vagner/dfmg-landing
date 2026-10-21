@@ -79,14 +79,15 @@
 .title--compact { font-size: var(--heading-2); }
 .title--small { font-size: var(--text-2xl); }
 
-/* ── Logos: a row of partner or integration marks, toned down ── */
+/* ── Logos: a row of partner or integration marks, toned down ──
+   The names are text, so they are toned down by colour (--gray-light, 4.8:1)
+   rather than opacity (--gray at 0.5 was 2.3:1); only the marks are faded. */
 .logos {
-    opacity: 0.5;
+    color: var(--gray-light);
 }
 
 .logos__item {
     padding: var(--space-md);
-    color: var(--gray);
     text-align: center;
 }
 
@@ -94,6 +95,7 @@
     font-size: var(--text-3xl);
     display: block;
     margin-bottom: var(--space-2xs);
+    opacity: 0.6;
 }
 
 /* ── Phone field: the country code beside the number ── */

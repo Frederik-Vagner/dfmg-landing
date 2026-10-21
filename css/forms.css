@@ -15,6 +15,15 @@
     margin-bottom: var(--space-md);
 }
 
+/* A visible label above a field. The placeholder is only a hint: it is gone
+   once someone types, so it can't be the label (WCAG 3.3.2). */
+.form-label {
+    display: block;
+    margin-bottom: var(--space-3xs);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+}
+
 .form-input,
 .form-textarea {
     width: 100%;
@@ -87,13 +96,9 @@
 
 .form-input::placeholder,
 .form-textarea::placeholder {
+    /* Full opacity: --gray-light is 4.8:1 on white, at 0.7 it was 2.9:1. */
     color: var(--gray-light);
-    opacity: 0.7;
-}
-
-.form-input:focus::placeholder,
-.form-textarea:focus::placeholder {
-    opacity: 0.5;
+    opacity: 1;
 }
 
 /* ── Form Row ── */
