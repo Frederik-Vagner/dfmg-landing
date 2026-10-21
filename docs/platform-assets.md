@@ -1,7 +1,8 @@
-# Platform Landing — Content Brief
+# Platform assets checklist
 
-Everything needed to make the platform pages production-ready.
-Each item has: what it is, where it goes, and how to create it.
+The screenshots, video and other assets the platform pages still need. Each item has: what it is, where it goes, and how to create it. The copy brief is [brief-platform.md](brief-platform.md).
+
+These are for Frederik to supply. Testimonials, metrics and quotes come from real people and real data only; the marketing agent never drafts them.
 
 ---
 
@@ -14,7 +15,7 @@ Export as WebP, keep under 200KB each. Save to `/images/platform/`.
 | # | Filename | What to capture | Where it goes | Tips |
 |---|----------|----------------|---------------|------|
 | 1 | `dashboard.webp` | Admin dashboard with calendar widget, recent tasks, KPIs | Homepage hero, Demo page sidebar | Show a week with real-looking tasks across multiple clients |
-| 2 | `calendar-week.webp` | Calendar week view with color-coded tasks + employee assignments | Features → Core Operations | Pick a busy week, multiple employees visible |
+| 2 | `calendar-week.webp` | Calendar week view with colour-coded tasks + employee assignments | Features → Core Operations | Pick a busy week, multiple employees visible |
 | 3 | `client-detail.webp` | Client detail page showing location guide sections | Features → Client Management | Expand at least one guide section so content is visible |
 | 4 | `employee-mobile.webp` | Employee portal on mobile — task list or today view | Features → Employee Management | Use browser DevTools mobile emulation (iPhone 14 Pro) |
 | 5 | `billing-overview.webp` | Billing overview with invoice list, statuses, e-Faktura badge | Features → Financial Suite | Show mix of draft/sent/paid invoices |
@@ -57,7 +58,7 @@ A 60-90 second Loom walkthrough showing one complete workflow:
 
 **Where it goes:** Homepage → "How DFMG runs on DFMG Platform" section
 
-**Write this yourself — it's your story. Template:**
+**Frederik writes this himself, from his own experience. Template:**
 
 > "Before I built the platform, I spent [X] hours every evening on admin — copying data between spreadsheets, chasing invoices, updating schedules. Now I manage [X] employees across [X] client locations and everything happens in one place. When a client calls with a question, I have the answer before they finish the sentence."
 
@@ -86,7 +87,7 @@ Examples of what to ask customers:
 - "How much time do you save per week?"
 - "What's the one thing you couldn't do before?"
 
-**If you don't have external customers yet**, write your own as the first customer. You ARE the case study. Your service company running on the platform is the proof.
+Only from real customers who have agreed to be quoted. Until there are any, the founder testimonial above and the "used by DFMG" line are the proof.
 
 ---
 
@@ -113,8 +114,8 @@ Also update the social proof bar:
 **Where they go:** Homepage → social proof bar, integrations section
 
 **Client/partner logos:**
-- If you have permission from Soho, Adnami, Kgl. Haveselskab (already on service site), reuse them
-- If not, skip the client logos for now — the "used by DFMG" line is enough
+- Only with the client's written permission
+- Until then, skip client logos; the "used by DFMG" line is enough
 
 **Integration logos (create or source):**
 - Google Calendar icon
@@ -131,13 +132,13 @@ These are already shown as Font Awesome icons which works fine as placeholder.
 
 **Where it goes:** All platform pages `<meta property="og:image">`
 
-**Current problem:** Points to the tiny logo.png (30x30). LinkedIn/Twitter will show a blank or broken preview.
+**Current state:** Every platform page uses the site-wide `/images/og-image.jpg` (1200x630). A platform version exists at `/images/platform/og-image.jpg` but no page uses it yet; decide whether it replaces the site-wide one on the platform pages.
 
 **What to create:**
 - 1200x630px image (standard OG size)
 - Content: "DFMG Platform" headline + dashboard screenshot + logo
 - Save as `/images/platform/og-image.jpg`
-- Update all 7 platform pages' `og:image` meta tag
+- Point the `og.image` front matter of all 9 platform pages, in both languages, at it
 
 **Quick version:** Just put the dashboard screenshot in a 1200x630 frame with the logo in a corner.
 
