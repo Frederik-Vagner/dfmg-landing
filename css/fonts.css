@@ -110,3 +110,60 @@
     src: url('/fonts/montserrat-latin-700.woff2') format('woff2');
     unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
+
+/* ── Fallback while Montserrat loads ──
+   Arial scaled to Montserrat's width and line metrics, so the swap to the web
+   font (font-display: swap) doesn't change line breaks and push the page down
+   (layout shift; the article header moved the whole article). Values from the
+   font files: average width over Danish text, and the ascent/descent divided
+   by that scale. Arial Bold stands in for 600 and 700. Where Arial isn't
+   installed the face is skipped and the next font in the stack is used. */
+@font-face {
+    font-family: 'Montserrat Fallback';
+    font-weight: 100 300;
+    src: local('Arial'), local('ArialMT');
+    size-adjust: 111.1%;
+    ascent-override: 87.13%;
+    descent-override: 22.59%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: 'Montserrat Fallback';
+    font-weight: 301 450;
+    src: local('Arial'), local('ArialMT');
+    size-adjust: 113.89%;
+    ascent-override: 85%;
+    descent-override: 22.04%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: 'Montserrat Fallback';
+    font-weight: 451 550;
+    src: local('Arial'), local('ArialMT');
+    size-adjust: 115.79%;
+    ascent-override: 83.6%;
+    descent-override: 21.68%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: 'Montserrat Fallback';
+    font-weight: 551 650;
+    src: local('Arial Bold'), local('Arial-BoldMT');
+    size-adjust: 108.75%;
+    ascent-override: 89.01%;
+    descent-override: 23.08%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: 'Montserrat Fallback';
+    font-weight: 651 900;
+    src: local('Arial Bold'), local('Arial-BoldMT');
+    size-adjust: 110.84%;
+    ascent-override: 87.33%;
+    descent-override: 22.64%;
+    line-gap-override: 0%;
+}

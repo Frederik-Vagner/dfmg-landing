@@ -69,7 +69,7 @@ body {
     /* The site's text colour. Without it all text started as browser black
        and every component re-declared charcoal for its own elements. */
     color: var(--charcoal);
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', 'Montserrat Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: var(--leading-relaxed);
     /* Passed on to the window: nothing scrolls sideways. */
     overflow-x: hidden;
