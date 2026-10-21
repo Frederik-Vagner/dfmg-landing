@@ -6,6 +6,7 @@ const path = require("path");
 const { fillIcons } = require("./tools/icons");
 const { imgWidth, imgHeight } = require("./tools/image-size");
 const { danishDate, isoDate } = require("./tools/dates");
+const { validateJobsFile, liveJobs } = require("./tools/schemas");
 
 module.exports = function (eleventyConfig) {
   // Pass through static assets unchanged
@@ -70,6 +71,15 @@ module.exports = function (eleventyConfig) {
       }
     }
   });
+
+  // Jobs: _data/jobs.json is checked before anything renders, and
+  // `liveJobs` holds the published ones that have not expired. The list on
+  // jobs.html and the job pages (indblik/jobs/job.njk) both use it, so a
+  // closed job disappears from both.
+  const readJobs = () => JSON.parse(fs.readFileSync(path.join(__dirname, "_data/jobs.json"), "utf8"));
+  eleventyConfig.on("eleventy.before", () => validateJobsFile(readJobs()));
+  eleventyConfig.addGlobalData("liveJobs", () => liveJobs(readJobs()));
+  eleventyConfig.addFilter("employmentLabel", (type) => ({ FULL_TIME: "Fuldtid", PART_TIME: "Deltid" })[type] || "Andet");
 
   // {{ page.date | danishDate }} -> "15. december 2024"; isoDate -> "2024-12-15".
   eleventyConfig.addFilter("danishDate", danishDate);

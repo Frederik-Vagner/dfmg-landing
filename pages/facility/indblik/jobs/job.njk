@@ -1,0 +1,52 @@
+---
+# One page per open job; data and JobPosting in jobs.11tydata.js.
+pagination:
+  data: liveJobs
+  size: 1
+  alias: job
+---
+    <section class="section first">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Forside</a>
+                <span>›</span>
+                <a href="/pages/facility/indblik/jobs.html">Ledige stillinger</a>
+                <span>›</span>
+                <span>{{ job.title }}</span>
+            </div>
+
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow">LEDIG STILLING</div>
+                <h1 class="intro__title">{{ job.title }}</h1>
+                <p class="body intro__text">{{ job.employmentType | employmentLabel }} · {{ job.location.label or facts.area }}</p>
+            </div>
+
+            <div class="cluster cluster--center">
+                <div class="card measure">
+                    <p>{{ job.summary }}</p>
+
+                    <h2 class="heading heading--sm">Vi forventer:</h2>
+                    <ul class="checklist checklist--success">
+                        {%- for requirement in job.requirements %}
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ requirement }}</li>
+                        {%- endfor %}
+                    </ul>
+
+                    <div class="card__footer">
+                        <a href="mailto:{{ site.email }}?subject={{ job.applySubject }}" class="btn btn--success btn--md">
+                            Ansøg nu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="back-to-news">
+        <div class="container">
+            <a href="/pages/facility/indblik/jobs.html" class="back-btn">
+                <iconify-icon icon="fluent:arrow-left-20-filled" inline></iconify-icon>
+                Alle ledige stillinger
+            </a>
+        </div>
+    </section>

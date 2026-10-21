@@ -13,145 +13,41 @@ description: "Aktuelle job hos DFMG. Vi søger engagerede medarbejdere til facil
                 <p class="body intro__text">Vi søger engagerede medarbejdere der vil være med til at løfte facility management til næste niveau</p>
             </div>
 
-            <div class="grid grid--3 grid--roomy">
-                <!-- Rengøringsassistent (deltid) -->
+            {#- One card per open job in _data/jobs.json (liveJobs: published and
+                not expired); each job also has its own page, jobs/<id>.html. -#}
+            {%- if liveJobs.length %}
+            <div class="grid {{ 'grid--3' if liveJobs.length > 2 else 'grid--2' }} grid--roomy">
+                {%- for job in liveJobs %}
                 <div class="card">
-                    <div class="badge">Deltid</div>
-                    <h2 class="heading heading--md">Rengøringsassistent</h2>
-                    <p>📍 {{ facts.area }}</p>
+                    <div class="badge">{{ job.employmentType | employmentLabel }}</div>
+                    <h2 class="heading heading--md">{{ job.title }}</h2>
+                    <p>📍 {{ job.location.label or facts.area }}</p>
 
-                    <p>Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.</p>
+                    <p>{{ job.summary }}</p>
 
                     <h3 class="heading heading--sm">Vi forventer:</h3>
                     <ul class="checklist checklist--success">
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Interesse for rengøringsarbejde</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Ansvarsfuldhed og pålidelighed</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fysisk robusthed</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og egen transport</li>
+                        {%- for requirement in job.requirements %}
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ requirement }}</li>
+                        {%- endfor %}
                     </ul>
 
                     <div class="card__footer">
-                        <a href="mailto:{{ site.email }}?subject=Ansøgning: Rengøringsassistent (deltid)" class="btn btn--success btn--md">
-                            Ansøg nu
-                        </a>
+                        <div class="cluster cluster--center">
+                            <a href="/pages/facility/indblik/jobs/{{ job.id }}.html" class="btn btn--secondary btn--md">
+                                Se stillingen
+                            </a>
+                            <a href="mailto:{{ site.email }}?subject={{ job.applySubject }}" class="btn btn--success btn--md">
+                                Ansøg nu
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Rengøringsassistent (fuldtid) -->
-                <div class="card">
-                    <div class="badge">Fuldtid</div>
-                    <h2 class="heading heading--md">Rengøringsassistent</h2>
-                    <p>📍 {{ facts.area }}</p>
-
-                    <p>Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.</p>
-
-                    <h3 class="heading heading--sm">Vi forventer:</h3>
-                    <ul class="checklist checklist--success">
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Interesse for rengøringsarbejde</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Ansvarsfuldhed og pålidelighed</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fysisk robusthed</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og egen transport</li>
-                    </ul>
-
-                    <div class="card__footer">
-                        <a href="mailto:{{ site.email }}?subject=Ansøgning: Rengøringsassistent (fuldtid)" class="btn btn--success btn--md">
-                            Ansøg nu
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Rengøringsmedarbejder -->
-                <div class="card">
-                    <div class="badge">Fuldtid</div>
-                    <h2 class="heading heading--md">Rengøringsmedarbejder</h2>
-                    <p>📍 {{ facts.area }}</p>
-
-                    <p>Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.</p>
-
-                    <h3 class="heading heading--sm">Vi forventer:</h3>
-                    <ul class="checklist checklist--success">
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med Erhvervsrengøring</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Selvstændighed og initiativ</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kvalitetsbevidsthed</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og egen transport</li>
-                    </ul>
-
-                    <div class="card__footer">
-                        <a href="mailto:{{ site.email }}?subject=Ansøgning: Rengøringsmedarbejder" class="btn btn--success btn--md">
-                            Ansøg nu
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Handyman -->
-                <div class="card">
-                    <div class="badge">Deltid</div>
-                    <h2 class="heading heading--md">Handyman</h2>
-                    <p>📍 {{ facts.area }}</p>
-
-                    <p>Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.</p>
-
-                    <h3 class="heading heading--sm">Vi forventer:</h3>
-                    <ul class="checklist checklist--success">
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Håndværkerfaglig baggrund</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med VVS og el-opgaver</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Selvstændig og struktureret</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og eget værktøj</li>
-                    </ul>
-
-                    <div class="card__footer">
-                        <a href="mailto:{{ site.email }}?subject=Ansøgning: Handyman (deltid)" class="btn btn--success btn--md">
-                            Ansøg nu
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Salgskonsulent -->
-                <div class="card">
-                    <div class="badge">Fuldtid</div>
-                    <h2 class="heading heading--md">Salgskonsulent</h2>
-                    <p>📍 København (hybrid)</p>
-
-                    <p>Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.</p>
-
-                    <h3 class="heading heading--sm">Vi forventer:</h3>
-                    <ul class="checklist checklist--success">
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med B2B salg</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Stærke kommunikationsevner</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Resultatorienteret</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kørekort og bil til rådighed</li>
-                    </ul>
-
-                    <div class="card__footer">
-                        <a href="mailto:{{ site.email }}?subject=Ansøgning: Salgskonsulent" class="btn btn--success btn--md">
-                            Ansøg nu
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Ejendomsservicetekniker -->
-                <div class="card">
-                    <div class="badge">Fuldtid</div>
-                    <h2 class="heading heading--md">Ejendomsservicetekniker</h2>
-                    <p>📍 København</p>
-
-                    <p>Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.</p>
-
-                    <h3 class="heading heading--sm">Vi forventer:</h3>
-                    <ul class="checklist checklist--success">
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Erfaring med ejendomsvedligeholdelse</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Teknisk forståelse</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Kundeservice orienteret</li>
-                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> Fleksibilitet og initiativ</li>
-                    </ul>
-
-                    <div class="card__footer">
-                        <a href="mailto:{{ site.email }}?subject=Ansøgning: Ejendomsservicetekniker" class="btn btn--success btn--md">
-                            Ansøg nu
-                        </a>
-                    </div>
-                </div>
+                {%- endfor %}
             </div>
+            {%- else %}
+            <p class="body">Vi har ingen ledige stillinger lige nu. Send gerne en uopfordret ansøgning.</p>
+            {%- endif %}
         </div>
     </section>
 

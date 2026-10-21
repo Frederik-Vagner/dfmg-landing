@@ -1,0 +1,141 @@
+{
+  "//": "Open positions for /pages/facility/indblik/jobs.html and one page per job with JobPosting data. Shape and rules: tools/schemas.js (jobsFile). published: false keeps a job out of the site; so does a validThrough in the past. location.label is what the card shows; leave it out to show facts.area. The address is used for Google's jobLocation.",
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-21T00:00:00Z",
+  "jobs": [
+    {
+      "id": "rengoeringsassistent-deltid",
+      "published": true,
+      "title": "Rengøringsassistent",
+      "employmentType": "PART_TIME",
+      "location": {
+        "streetAddress": "Borups Allé 21",
+        "postalCode": "2200",
+        "locality": "København",
+        "country": "DK"
+      },
+      "summary": "Vi søger en rengøringsassistent til deltidsarbejde. Perfekt mulighed for at starte din karriere inden for erhvervsrengøring med fleksible arbejdstider.",
+      "requirements": [
+        "Interesse for rengøringsarbejde",
+        "Ansvarsfuldhed og pålidelighed",
+        "Fysisk robusthed",
+        "Kørekort og egen transport"
+      ],
+      "datePosted": "2026-10-21",
+      "validThrough": null,
+      "applySubject": "Ansøgning: Rengøringsassistent (deltid)"
+    },
+    {
+      "id": "rengoeringsassistent-fuldtid",
+      "published": true,
+      "title": "Rengøringsassistent",
+      "employmentType": "FULL_TIME",
+      "location": {
+        "streetAddress": "Borups Allé 21",
+        "postalCode": "2200",
+        "locality": "København",
+        "country": "DK"
+      },
+      "summary": "Vi søger en rengøringsassistent til fuldtidsarbejde. Du kommer til at arbejde med erhvervsrengøring af kontorer, skoler og institutioner.",
+      "requirements": [
+        "Interesse for rengøringsarbejde",
+        "Ansvarsfuldhed og pålidelighed",
+        "Fysisk robusthed",
+        "Kørekort og egen transport"
+      ],
+      "datePosted": "2026-10-21",
+      "validThrough": null,
+      "applySubject": "Ansøgning: Rengøringsassistent (fuldtid)"
+    },
+    {
+      "id": "rengoeringsmedarbejder-fuldtid",
+      "published": false,
+      "title": "Rengøringsmedarbejder",
+      "employmentType": "FULL_TIME",
+      "location": {
+        "streetAddress": "Borups Allé 21",
+        "postalCode": "2200",
+        "locality": "København",
+        "country": "DK"
+      },
+      "summary": "Vi søger en erfaren rengøringsmedarbejder til vores team. Du kommer til at arbejde selvstændigt med større rengøringsopgaver og kvalitetssikring.",
+      "requirements": [
+        "Erfaring med Erhvervsrengøring",
+        "Selvstændighed og initiativ",
+        "Kvalitetsbevidsthed",
+        "Kørekort og egen transport"
+      ],
+      "datePosted": "2026-10-21",
+      "validThrough": null,
+      "applySubject": "Ansøgning: Rengøringsmedarbejder"
+    },
+    {
+      "id": "handyman-deltid",
+      "published": false,
+      "title": "Handyman",
+      "employmentType": "PART_TIME",
+      "location": {
+        "streetAddress": "Borups Allé 21",
+        "postalCode": "2200",
+        "locality": "København",
+        "country": "DK"
+      },
+      "summary": "Handyman søges til deltidsarbejde med reparationer, vedligeholdelse og mindre håndværksopgaver hos vores erhvervskunder.",
+      "requirements": [
+        "Håndværkerfaglig baggrund",
+        "Erfaring med VVS og el-opgaver",
+        "Selvstændig og struktureret",
+        "Kørekort og eget værktøj"
+      ],
+      "datePosted": "2026-10-21",
+      "validThrough": null,
+      "applySubject": "Ansøgning: Handyman (deltid)"
+    },
+    {
+      "id": "salgskonsulent-fuldtid",
+      "published": false,
+      "title": "Salgskonsulent",
+      "employmentType": "FULL_TIME",
+      "location": {
+        "label": "København (hybrid)",
+        "streetAddress": "Borups Allé 21",
+        "postalCode": "2200",
+        "locality": "København",
+        "country": "DK"
+      },
+      "summary": "Vi søger en dygtig salgskonsulent til at udvikle vores kundebase og sælge facility service løsninger til erhvervskunder.",
+      "requirements": [
+        "Erfaring med B2B salg",
+        "Stærke kommunikationsevner",
+        "Resultatorienteret",
+        "Kørekort og bil til rådighed"
+      ],
+      "datePosted": "2026-10-21",
+      "validThrough": null,
+      "applySubject": "Ansøgning: Salgskonsulent"
+    },
+    {
+      "id": "ejendomsservicetekniker-fuldtid",
+      "published": false,
+      "title": "Ejendomsservicetekniker",
+      "employmentType": "FULL_TIME",
+      "location": {
+        "label": "København",
+        "streetAddress": "Borups Allé 21",
+        "postalCode": "2200",
+        "locality": "København",
+        "country": "DK"
+      },
+      "summary": "Vi søger en dygtig ejendomsservicetekniker til teknisk vedligeholdelse af fællesarealer, trappeopgange og udendørs områder.",
+      "requirements": [
+        "Erfaring med ejendomsvedligeholdelse",
+        "Teknisk forståelse",
+        "Kundeservice orienteret",
+        "Fleksibilitet og initiativ"
+      ],
+      "datePosted": "2026-10-21",
+      "validThrough": null,
+      "applySubject": "Ansøgning: Ejendomsservicetekniker"
+    }
+  ]
+}

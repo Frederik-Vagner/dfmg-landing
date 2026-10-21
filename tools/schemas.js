@@ -1,7 +1,7 @@
 // Schemas for content the marketing agent writes, checked during the build.
 // Articles and cases: eleventyDataSchema in artikler.11tydata.js (the build
 // stops at the first bad article and names its file). _data/jobs.json:
-// tools/check-content.js.
+// checked when the build starts (.eleventy.js), before anything renders.
 //
 // A field the schema doesn't know fails too, so a typo such as "exerpt" is
 // caught instead of silently ignored.
@@ -78,4 +78,50 @@ function validateArticle(data) {
     if (problems.length) throw new Error(problems.join("\n"));
 }
 
-module.exports = { validateArticle };
+// ----------------------------------------------------------------- jobs.json
+// One file the ERP can write later: an envelope with a version and a time
+// stamp, and one object per job with a stable id. Field values follow what
+// Google's JobPosting needs (employmentType uses its names).
+
+const isoDay = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "a date like 2026-11-03")
+    .refine((d) => !Number.isNaN(Date.parse(d)), "not a real date");
+
+const job = z.strictObject({
+    id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "lowercase a-z, 0-9 and -, e.g. rengoeringsassistent-deltid"),
+    published: z.boolean(),
+    title: text(3, 60),
+    employmentType: z.enum(["FULL_TIME", "PART_TIME", "TEMPORARY", "CONTRACTOR", "INTERN", "OTHER"]),
+    location: z.strictObject({
+        // What the card shows; leave it out to show facts.area.
+        label: text(2, 60).optional(),
+        streetAddress: text(2, 100),
+        postalCode: z.string().regex(/^\d{4}$/, "a Danish postal code"),
+        locality: text(2, 60),
+        country: z.literal("DK"),
+    }),
+    // Also the page's meta description, hence 70-160.
+    summary: text(70, 160),
+    requirements: z.array(text(3, 120)).min(1).max(10),
+    datePosted: isoDay,
+    validThrough: isoDay.nullable(),
+    applySubject: text(5, 100),
+}).refine((j) => !j.validThrough || j.validThrough >= j.datePosted, { message: "validThrough is before datePosted", path: ["validThrough"] });
+
+const jobsFile = z.strictObject({
+    "//": z.string().optional(),
+    schemaVersion: z.literal(1),
+    generatedAt: z.iso.datetime(),
+    jobs: z.array(job),
+}).refine((f) => new Set(f.jobs.map((j) => j.id)).size === f.jobs.length, { message: "two jobs have the same id", path: ["jobs"] });
+
+// _data/jobs.json -> throws with a readable message.
+function validateJobsFile(json) {
+    const result = jobsFile.safeParse(json);
+    if (!result.success) throw new Error("_data/jobs.json:\n" + z.prettifyError(result.error));
+}
+
+// The jobs to show: published and not past validThrough (by the build day).
+const liveJobs = (json, today = new Date().toISOString().slice(0, 10)) =>
+    json.jobs.filter((j) => j.published && (!j.validThrough || j.validThrough >= today));
+
+module.exports = { validateArticle, validateJobsFile, liveJobs };
