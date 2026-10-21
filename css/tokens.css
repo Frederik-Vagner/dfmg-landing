@@ -293,7 +293,7 @@
     --z-chat-preview: 900;  /* the chat teaser bubble, under the chat itself */
     --z-sticky: 1000;       /* sticky filter bar, slide navigation */
     --z-chat: 1000;         /* support widget (ties with sticky; it comes later in the page) */
-    --z-floater: 9000;      /* floating "Pris Beregner" button */
+    --z-floater: 9000;      /* floating "Prisberegner" button */
     --z-header: 10000;      /* the fixed header and its mobile menu */
     --z-toast: 10050;       /* notifications: they appear top right, where the
                                header is, so they must sit above it */

@@ -3,7 +3,7 @@
         <div class="footer__main">
             <div class="footer__section">
                 <p class="footer__description">
-                    Siden 2024 har vi kombineret faglig omhu med teknologidrevet effektivisering.
+                    Siden {{ facts.founded.year }} har vi kombineret faglig omhu med teknologidrevet effektivisering.
                 </p>
                 <p class="footer__description">
                     Vi leverer omfattende facility services hvor én kontaktperson håndterer alle jeres facility behov gennem langsigtede partnerskaber.
@@ -34,7 +34,7 @@
                     <div class="footer__contact">
                         <a href="tel:{{ site.phone }}">
                             <iconify-icon icon="fluent:call-20-filled" inline></iconify-icon>
-                            <span>{{ site.phoneDisplay }} <span class="footer__hours">(hverdage 8–16)</span></span>
+                            <span>{{ site.phoneDisplay }} <span class="footer__hours">({{ facts.phoneHours }})</span></span>
                         </a>
                         <a href="mailto:{{ site.email }}">
                             <iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon>

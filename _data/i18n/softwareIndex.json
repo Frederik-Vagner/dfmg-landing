@@ -122,8 +122,8 @@
       "subtitle": "DFMG PLATFORM",
       "title": "Erstat fem værktøjer med ét system bygget til jeres branche",
       "body": "Planlægning, fakturering, løn, kundeportaler og CRM — specialbygget til danske rengørings- og servicevirksomheder. Spar timer hver uge og mist aldrig overblikket over en opgave.",
-      "cta_demo": "Book en Demo",
-      "cta_features": "Se Alle Funktioner",
+      "cta_demo": "Book en demo",
+      "cta_features": "Se alle funktioner",
       "placeholder_text": "Produktvideo eller dashboard-screenshot",
       "placeholder_hint": "Anbefalet: 60s Loom-gennemgang eller animeret dashboard-GIF"
     },
@@ -171,7 +171,7 @@
     "walkthrough": {
       "title": "Se hvordan det fungerer i praksis",
       "body": "Fra planlægning af en opgave til afsendelse af fakturaen — følg et reelt workflow gennem platformen. Ingen slides, ingen mockups — dette er det faktiske system vi bruger hver dag.",
-      "cta": "Se Demo",
+      "cta": "Se demo",
       "placeholder_text": "Produkt-gennemgangsvideo",
       "placeholder_hint": "2-3 min: Planlæg opgave → Medarbejder tjekker ind → Kunden ser rapport → Faktura sendt"
     },
@@ -228,8 +228,8 @@
     "cta": {
       "title": "Klar til at drive jeres forretning fra ét sted?",
       "body": "Book en 30-minutters demo. Vi viser jer de moduler, der betyder mest for jeres forretning — med rigtige data fra vores egen drift.",
-      "cta_demo": "Book en Demo",
-      "cta_pricing": "Se Priser",
+      "cta_demo": "Book en demo",
+      "cta_pricing": "Se priser",
       "trust1": "Ingen binding",
       "trust2": "30 minutter",
       "trust3": "Support på dansk"

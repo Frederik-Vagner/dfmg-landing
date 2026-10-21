@@ -90,7 +90,7 @@
         "subtitle": "Documents & Analytics",
         "title": "Templates, signatures, and data-driven decisions",
         "body": "Create document templates with placeholders that auto-fill from your data, send for e-signature, and generate client reports. Track task KPIs, employee performance, client profitability, and feedback analytics from a unified dashboard.",
-        "badges": ["Document Templates", "E-Signatures", "Floor Plans", "Photo Galleries", "Task KPI Dashboard", "Employee Performance", "Profitability Analytics", "Feedback Analytics", "Export Center"],
+        "badges": ["Document Templates", "E-Signatures", "Floor Plans", "Photo Galleries", "Task KPI Dashboard", "Employee Performance", "Profitability Analytics", "Feedback Analytics", "Export Centre"],
         "screenshot": "Screenshot: Task KPI dashboard or profitability analytics",
         "screenshotAlt": "Alt: Document template builder or e-signature flow"
       }
@@ -209,8 +209,8 @@
     "cta": {
       "title": "Se det i praksis",
       "body": "Book en 30-minutters demo, så viser vi jer de moduler, der betyder mest for jeres forretning.",
-      "cta_demo": "Book en Demo",
-      "cta_pricing": "Se Priser"
+      "cta_demo": "Book en demo",
+      "cta_pricing": "Se priser"
     }
   }
 }

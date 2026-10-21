@@ -215,10 +215,10 @@ function showExpandedContent(column, serviceType) {
 
                 <div class="panels__detail-actions">
                     <a href="${service.url}" class="btn btn--primary btn--md">
-                        <iconify-icon icon="fluent:info-20-filled" inline></iconify-icon> Læs Mere
+                        <iconify-icon icon="fluent:info-20-filled" inline></iconify-icon> Læs mere
                     </a>
                     <a href="/pages/facility/kontakt.html" class="btn btn--secondary btn--md">
-                        <iconify-icon icon="fluent:calculator-20-filled" inline></iconify-icon> Få Tilbud
+                        <iconify-icon icon="fluent:calculator-20-filled" inline></iconify-icon> Få tilbud
                     </a>
                 </div>
             </div>

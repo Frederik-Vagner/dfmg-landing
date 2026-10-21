@@ -1,0 +1,32 @@
+# Fails an agent PR (author dfmg-bot) that touches anything outside the
+# content paths; see tools/check-paths.js and CLAUDE.md. PRs by anyone else
+# pass with a note. Make "path-guard" a required check on main.
+name: path-guard
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  path-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      # The rules come from the base branch, so a PR cannot edit its own guard.
+      # (Only the PR that first adds the guard falls back to its own copy.)
+      - name: Check changed paths
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git show "$BASE_SHA:tools/check-paths.js" > "$RUNNER_TEMP/check-paths.js" 2>/dev/null \
+            || cp tools/check-paths.js "$RUNNER_TEMP/check-paths.js"
+          node "$RUNNER_TEMP/check-paths.js" "$BASE_SHA"

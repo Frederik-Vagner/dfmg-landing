@@ -1,0 +1,18 @@
+{
+  "//": "Written by tools/check-content.js --update. Today's known content problems, which may only shrink: fix one, then run npm run content:baseline.",
+  "known": [
+    "description-duplicate:/,/pages/facility/services/services.html",
+    "description-length:/pages/facility/components/cookiepolitik.html",
+    "description-length:/pages/facility/components/privatlivspolitik.html",
+    "description-length:/pages/facility/services/picoline.html",
+    "description-length:/pages/facility/tak.html",
+    "description-length:/pages/software/da/demo.html",
+    "description-length:/pages/software/da/floor-plans.html",
+    "description-length:/pages/software/da/tak.html",
+    "description-length:/pages/software/demo.html",
+    "description-length:/pages/software/floor-plans.html",
+    "description-length:/pages/software/tak.html",
+    "image-name:images/logos/internal/logoV3trans.webp",
+    "image-name:images/people/Anjal.webp"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(/_includes/**)",
+      "Edit(/css/**)",
+      "Edit(/js/**)",
+      "Edit(/.eleventy.js)",
+      "Edit(/tools/*.js)",
+      "Edit(/tools/*-baseline.json)",
+      "Edit(/netlify.toml)",
+      "Edit(/netlify/**)",
+      "Edit(/.github/**)",
+      "Edit(/package.json)",
+      "Edit(/package-lock.json)",
+      "Edit(/.nvmrc)",
+      "Edit(/sitemap.njk)",
+      "Edit(/robots.txt)",
+      "Edit(/CLAUDE.md)",
+      "Edit(/docs/**)",
+      "Edit(/.claude/**)",
+      "Edit(/_data/site.json)",
+      "Edit(/_data/facts.json)",
+      "Edit(/pages/facility/components/*politik.html)",
+      "Edit(/_assets-unused/**)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f*)",
+      "Bash(git push * main*)",
+      "Bash(git push *:main*)",
+      "Bash(git push *refs/heads/main*)",
+      "Bash(git * push * --force*)",
+      "Bash(git * push * -f*)",
+      "Bash(git * push * main*)",
+      "Bash(git push)",
+      "Bash(gh pr merge*)",
+      "Bash(gh api * --method DELETE*)",
+      "Bash(gh repo *)"
+    ]
+  }
+}

@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 // Photo inventory. Runs after the Eleventy build (npm run build) and lists
-// every photo slot on the site at /internal/photos/, a page only the team can
-// open (netlify/edge-functions/internal-auth.js puts a login in front of it).
+// every photo slot on the site at /internal/photos/, for the team.
+//
+// The inventory is built locally only. On Netlify (NETLIFY=true, so
+// production and every deploy preview) it still strips the markers from the
+// public pages, but writes nothing under /internal/: the overview, the CSV and
+// the page copies are never deployed, so there is nothing online to protect.
+// See it with npm run preview.
 //
 //   node tools/photo-inventory.js
 //
@@ -35,6 +40,8 @@ const ROOT = path.resolve(__dirname, "..");
 const SITE = path.join(ROOT, "_site");
 const OUT = path.join(SITE, "internal", "photos");
 const VIEW_URL = "/internal/photos/view";
+// Netlify sets NETLIFY=true in every build it runs.
+const LOCAL = process.env.NETLIFY !== "true";
 
 function walk(dir, ext, out = []) {
     if (!fs.existsSync(dir)) return out;
@@ -159,9 +166,9 @@ function collect(file, bgMap, slots) {
         });
     }
 
-    // A copy of the page with its markers kept, behind the same login, for the
-    // live previews. The public page loses its markers in strip().
-    if (listed) {
+    // A copy of the page with its markers kept, for the live previews (local
+    // builds only). The public page loses its markers in strip().
+    if (listed && LOCAL) {
         let copy = html;
         for (const ins of inserts.reverse()) copy = copy.slice(0, ins.at) + ins.text + copy.slice(ins.at);
         const dest = path.join(OUT, "view", ...pageUrl.split("/").filter(Boolean));
@@ -677,6 +684,11 @@ function main() {
     for (const file of pages) strip(file);
 
     const list = [...slots.values()];
+    const n = (st) => list.filter((s) => s.status === st).length;
+    if (!LOCAL) {
+        console.log(`photos: ${n("real")} real · ${n("stand-in")} stand-in · ${n("missing")} missing  (Netlify build: /internal/ not published)`);
+        return;
+    }
 
     // Briefs and stock candidates kept by hand in tools/photo-candidates.json.
     const candFile = path.join(__dirname, "photo-candidates.json");
@@ -701,7 +713,6 @@ function main() {
     }
     fs.writeFileSync(path.join(OUT, "shotlist.csv"), rows.map((r) => r.map(csvCell).join(",")).join("\n") + "\n");
 
-    const n = (st) => list.filter((s) => s.status === st).length;
     console.log(`photos: ${n("real")} real · ${n("stand-in")} stand-in · ${n("missing")} missing  → /internal/photos/`);
 }
 
