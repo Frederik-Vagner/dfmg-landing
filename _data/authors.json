@@ -1,0 +1,12 @@
+{
+  "dfmg": {
+    "type": "Organization",
+    "name": "DFMG",
+    "url": "https://dfmg.dk"
+  },
+  "frederik": {
+    "type": "Person",
+    "name": "Frederik Vagner Pedersen",
+    "url": "https://dfmg.dk/pages/facility/indblik/om.html"
+  }
+}

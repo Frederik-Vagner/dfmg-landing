@@ -2,7 +2,7 @@
 title: "Fra kaos til kontrol: DFMGs ERP-system historie | DFMG"
 description: "Læs om DFMGs rejse fra kaotiske processer til et strømlinet ERP-system, der skaber kontrol og effektivitet."
 articleTitle: "Fra kaos til kontrol: DFMG's ERP-system historie"
-publishDate: "3. december 2024"
+date: 2024-12-03
 readTime: 6
 image: /images/article/rodet-skrivebord.webp
 imageAlt: "Skrivebord begravet i post-its og krøllede papirer"

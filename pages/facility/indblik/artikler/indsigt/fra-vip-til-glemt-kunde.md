@@ -2,7 +2,7 @@
 title: "Fra VIP til glemt kunde: en alt-for-almindelig historie | DFMG"
 description: "Opdag hvorfor mange virksomheder oplever faldende serviceniveau efter kontraktunderskrift, og hvordan det kan undgås."
 articleTitle: "Fra VIP til glemt kunde: en alt-for-almindelig historie"
-publishDate: "10. december 2024"
+date: 2024-12-10
 readTime: 4
 image: /images/article/skraldespand-papir.webp
 imageAlt: "Krøllede papirer på gulvet omkring en kontorskraldespand"

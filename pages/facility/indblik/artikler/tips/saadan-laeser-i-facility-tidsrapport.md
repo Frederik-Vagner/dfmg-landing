@@ -2,7 +2,7 @@
 title: "Sådan læser I en facility tidsrapport | DFMG"
 description: "Få tips til at forstå og bruge jeres facility tidsrapporter effektivt for bedre overblik og styring."
 articleTitle: "Sådan læser I en facility tidsrapport"
-publishDate: "25. november 2024"
+date: 2024-11-25
 readTime: 3
 image: /images/article/lommeregner-kvitteringer.webp
 imageAlt: "Hænder med en lommeregner over kvitteringer og opgørelser"

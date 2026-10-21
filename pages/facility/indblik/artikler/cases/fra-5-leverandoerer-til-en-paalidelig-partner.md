@@ -2,7 +2,7 @@
 title: "Fra 5 leverandører til én pålidelig partner | DFMG"
 description: "Læs om hvordan en virksomhed konsoliderede fem facility leverandører til én pålidelig partner med bedre resultater."
 articleTitle: "Fra 5 leverandører til én pålidelig partner"
-publishDate: "18. november 2024"
+date: 2024-11-18
 readTime: 5
 image: /images/article/rengoering-vogn-hotel.webp
 imageAlt: "Servicemedarbejder skifter affaldspose på en rengøringsvogn i en hotelgang"

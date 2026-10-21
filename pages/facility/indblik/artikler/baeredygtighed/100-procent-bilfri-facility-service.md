@@ -2,7 +2,7 @@
 title: "100% bilfri facility service: sådan gør vi det | DFMG"
 description: "Se hvordan DFMG leverer facility service uden biler og reducerer CO2-udledning med en grønnere tilgang."
 articleTitle: "100% bilfri facility service: sådan gør vi det"
-publishDate: "1. december 2024"
+date: 2024-12-01
 readTime: 3
 image: /images/article/ladcykler-koebenhavn.webp
 imageAlt: "Ladcykler og cyklister på en gade i København en sommerdag"

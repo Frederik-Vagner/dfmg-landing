@@ -18,8 +18,8 @@
 //   placeholders  no "[X]", "[Your …]", "Lorem ipsum", TODO or FIXME in the
 //              visible text of a built page.
 //   articles   the front matter of every article (see artikler.11tydata.js):
-//              the fields the cards, headers and structured data read, a
-//              publishDate in the "18. november 2024" form, a photo that
+//              the fields the cards, headers and structured data read, an
+//              ISO date (date: 2024-11-18), a photo that
 //              exists, non-empty alt text and an excerpt of 80–220 characters.
 //   i18n       in _data/i18n/*.json, "en" and "da" have the same keys and
 //              list lengths, and no text is empty in one language only.
@@ -48,8 +48,6 @@ const EXCERPT = [80, 220];
 const IMAGE_MAX_BYTES = 250 * 1024;
 const IMAGE_MAX_EDGE = 2000;
 const IMAGE_TYPES = [".webp", ".jpg", ".jpeg", ".png"];
-const MONTHS = ["januar", "februar", "marts", "april", "maj", "juni", "juli",
-    "august", "september", "oktober", "november", "december"];
 const FACTS = ["area", "cleaningHours", "phoneHours", "callback", "quoteTime", "startTime", "urgentHelp"];
 const PLACEHOLDER = /\[(?:X|Your[^\]]*|Name|Company|Client[^\]]*)\]|\bLorem ipsum\b|\bTODO\b|\bFIXME\b/i;
 
@@ -195,12 +193,12 @@ function checkArticles() {
         try { data = matter(read(file)).data; }
         catch (e) { report(`article-yaml:${name}`, `${name}: front matter is not valid YAML (${e.message})`); continue; }
 
-        for (const field of ["title", "description", "articleTitle", "publishDate", "readTime", "excerpt"]) {
+        for (const field of ["title", "description", "articleTitle", "date", "readTime", "excerpt"]) {
             if (data[field] === undefined || data[field] === "") report(`article-field:${name}:${field}`, `${name}: front matter has no "${field}"`);
         }
-        const date = String(data.publishDate || "").match(/^(\d{1,2})\. ([a-zæøå]+) (\d{4})$/);
-        if (data.publishDate && (!date || !MONTHS.includes(date[2]) || Number(date[1]) < 1 || Number(date[1]) > 31)) {
-            report(`article-date:${name}`, `${name}: publishDate "${data.publishDate}" should look like "18. november 2024"`);
+        // gray-matter reads an unquoted YAML date as a Date, as Eleventy does.
+        if (data.date !== undefined && !(data.date instanceof Date && !Number.isNaN(data.date.getTime()))) {
+            report(`article-date:${name}`, `${name}: date "${data.date}" should be an ISO date without quotes, like 2024-11-18`);
         }
         if (data.readTime !== undefined && !(Number.isInteger(data.readTime) && data.readTime > 0)) {
             report(`article-readtime:${name}`, `${name}: readTime should be a whole number of minutes, not "${data.readTime}"`);

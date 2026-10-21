@@ -2,7 +2,7 @@
 title: "Øjeblikkelige svar vs. jeg vender tilbage | DFMG"
 description: "Læs om forskellen mellem proaktiv og reaktiv kundeservice i facility management, og hvorfor hurtige svar skaber tillid."
 articleTitle: 'Øjeblikkelige svar vs. "Jeg vender tilbage"'
-publishDate: "8. december 2024"
+date: 2024-12-08
 readTime: 5
 image: /images/article/stoevsugning-event.webp
 imageAlt: "Støvsugerhoved på et tæppe dækket af konfetti efter et arrangement"

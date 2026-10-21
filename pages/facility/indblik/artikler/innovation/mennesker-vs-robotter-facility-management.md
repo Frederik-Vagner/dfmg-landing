@@ -2,7 +2,7 @@
 title: "Mennesker vs. robotter i facility management | DFMG"
 description: "Udforsk balancen mellem menneskelig ekspertise og teknologisk innovation inden for facility management."
 articleTitle: "Mennesker vs. robotter i facility management"
-publishDate: "28. november 2024"
+date: 2024-11-28
 readTime: 5
 image: /images/article/rengoering-korridor.webp
 imageAlt: "Rengøringsvogn med udstyr parkeret i en lang korridor"

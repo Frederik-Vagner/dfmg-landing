@@ -22,8 +22,9 @@
     <meta property="og:type" content="{{ ogData.type | default('website') }}">
     <meta property="og:url" content="{{ ogData.url | default(canonicalUrl) }}">
     <meta property="og:image" content="{{ ogData.image | default(site.url + '/images/og-image.jpg') }}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    {#- The default image is 1200×630; a page with its own image passes its size. -#}
+    <meta property="og:image:width" content="{{ ogData.imageWidth | default(1200) }}">
+    <meta property="og:image:height" content="{{ ogData.imageHeight | default(630) }}">
     <meta property="og:locale" content="{{ ogData.locale | default('da_DK') }}">
 
     <!-- Twitter / X -->

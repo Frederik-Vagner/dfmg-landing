@@ -2,7 +2,7 @@
 title: "5 tegn på at I skal skifte facility leverandør | DFMG"
 description: "Kender du tegnene? Læs om de fem vigtigste advarselsignaler på, at det er tid til at skifte facility leverandør."
 articleTitle: "5 tegn på at I skal skifte facility leverandør"
-publishDate: "12. december 2024"
+date: 2024-12-12
 readTime: 4
 image: /images/article/rengoeringsvogn-gang.webp
 imageAlt: "Rengøringsvogn med rent linned i en stille beboelsesgang"

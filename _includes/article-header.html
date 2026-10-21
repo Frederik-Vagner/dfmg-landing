@@ -15,8 +15,14 @@
             <div class="article-meta">
                 <div class="meta-item">
                     <iconify-icon icon="fluent:calendar-20-filled" inline></iconify-icon>
-                    {{ publishDate }}
+                    <time datetime="{{ page.date | isoDate }}">{{ page.date | danishDate }}</time>
                 </div>
+                {%- if authorIsPerson %}
+                <div class="meta-item">
+                    <iconify-icon icon="fluent:person-20-filled" inline></iconify-icon>
+                    {{ authorName }}
+                </div>
+                {%- endif %}
                 <div class="meta-item">
                     <iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon>
                     {{ readTime }} min læsning

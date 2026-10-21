@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const { fillIcons } = require("./tools/icons");
 const { imgWidth, imgHeight } = require("./tools/image-size");
+const { danishDate, isoDate } = require("./tools/dates");
 
 module.exports = function (eleventyConfig) {
   // Pass through static assets unchanged
@@ -70,8 +71,13 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // {{ page.date | danishDate }} -> "15. december 2024"; isoDate -> "2024-12-15".
+  eleventyConfig.addFilter("danishDate", danishDate);
+  eleventyConfig.addFilter("isoDate", isoDate);
+
   // Articles (collections.artikel, see pages/facility/indblik/artikler/artikler.11tydata.js)
-  const newestFirst = (articles) => [...articles].sort((a, b) => b.data.sortDate - a.data.sortDate);
+  // Newest first by front matter date; the same date sorts by file path.
+  const newestFirst = (articles) => [...articles].sort((a, b) => b.date - a.date || a.inputPath.localeCompare(b.inputPath));
   eleventyConfig.addFilter("newestFirst", newestFirst);
   eleventyConfig.addFilter("head", (items, n) => items.slice(0, n));
 
@@ -92,7 +98,8 @@ module.exports = function (eleventyConfig) {
   });
 
   // Pages for sitemap.njk: on the main layout, not noindex, at their
-  // canonical URL, dated by their last commit (none if git cannot tell).
+  // canonical URL, dated by their own `lastmod` (articles: updated or date)
+  // or else by their last commit (none if git cannot tell).
   const { execFileSync } = require("child_process");
   const lastCommit = (file) => {
     try { return execFileSync("git", ["log", "-1", "--format=%cs", "--", file], { encoding: "utf8" }).trim() || null; }
@@ -102,7 +109,7 @@ module.exports = function (eleventyConfig) {
     .filter((p) => p.data.layout && !/noindex/.test(p.data.robots || "") && p.outputPath && p.outputPath.endsWith(".html"))
     .map((p) => ({
       loc: p.data.canonical || p.data.site.url + (p.url === "/index.html" ? "/" : p.url),
-      lastmod: lastCommit(p.inputPath),
+      lastmod: p.data.lastmod || lastCommit(p.inputPath),
     }))
     .sort((a, b) => a.loc.localeCompare(b.loc)));
 

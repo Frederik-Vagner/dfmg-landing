@@ -2,7 +2,7 @@
 title: "Location Guides: hemmeligheden bag konsistent kvalitet | DFMG"
 description: "Opdag hvordan location guides sikrer ensartet og høj kvalitet i facility service på tværs af lokationer."
 articleTitle: "Location Guides: et værktøj til konsistent kvalitet"
-publishDate: "5. december 2024"
+date: 2024-12-05
 readTime: 4
 image: /images/article/vaadt-gulv-skilt.webp
 imageAlt: "Gul moppespand og advarselsskilt om vådt gulv foran et indgangsparti i glas"

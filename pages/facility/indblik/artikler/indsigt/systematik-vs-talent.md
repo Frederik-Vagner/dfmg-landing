@@ -2,7 +2,7 @@
 title: "Hvorfor systematik slår talent i facility management | DFMG"
 description: "Opdag hvordan systematiske processer og dokumentation skaber mere pålidelig facility service end afhængighed af individuelle medarbejdere."
 articleTitle: "Hvorfor systematik slår talent i facility management"
-publishDate: "15. december 2024"
+date: 2024-12-15
 readTime: 6
 image: /images/article/vinduespolering-stang.webp
 imageAlt: "Vinduespolerer rengør en glasfacade med teleskopstang på en byplads"

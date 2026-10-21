@@ -2,7 +2,7 @@
 title: "Case: 20% omkostningsreduktion for tech-virksomhed | DFMG"
 description: "Se hvordan en tech-virksomhed opnåede 20% omkostningsreduktion på facility management med DFMG som partner."
 articleTitle: "Case: 20% omkostningsreduktion for tech-virksomhed"
-publishDate: "22. november 2024"
+date: 2024-11-22
 readTime: 4
 image: /images/article/facadepolering.webp
 imageAlt: "Servicemedarbejder polerer glasfacaden på en kontorbygning med skraber"
