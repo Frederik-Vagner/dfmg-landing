@@ -188,7 +188,7 @@ function checkPages() {
 const matter = require("gray-matter");
 
 function checkArticles() {
-    const files = walk(ARTICLES).filter((f) => f.endsWith(".html") && !path.basename(f).startsWith("_"));
+    const files = walk(ARTICLES).filter((f) => /\.(md|html)$/.test(f) && !path.basename(f).startsWith("_"));
     for (const file of files) {
         const name = rel(file);
         let data;

@@ -32,12 +32,17 @@ const parseDate = (text) => {
 
 module.exports = {
     tags: ["artikel"],
+    // The header, photo, excerpt box, sidebar and footer around the body.
+    layout: "layouts/article.njk",
 
     // Articles without a photograph of their own yet.
     image: FALLBACK_IMAGE,
     imageAlt: "Mand i skjorte læser på en tablet i et lyst kontor",
 
     eleventyComputed: {
+        // The .html URL for Markdown articles too (_data/eleventyComputed.js
+        // only covers .html files): artikler/tips/x.md -> artikler/tips/x.html.
+        permalink: (data) => data.page.filePathStem + ".html",
         // Listed as a stand-in on /internal/photos/ (tools/photo-inventory.js).
         imageIsFallback: (data) => data.image === FALLBACK_IMAGE,
         categoryKey: (data) => CATEGORIES[folderOf(data)].key,

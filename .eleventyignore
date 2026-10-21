@@ -1,5 +1,8 @@
-*.md
-**/*.md
+CLAUDE.md
+docs/
+.github/
+_assets-unused/
+scaffolds/
 base-template.html
 images/**/*.html
 pages/**/artikler/_*.html

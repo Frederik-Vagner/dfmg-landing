@@ -1,0 +1,31 @@
+---
+layout: base.html
+---
+{#- An article: everything around its body. The article file itself is front
+    matter plus body (Markdown or HTML); see artikler.11tydata.js for the
+    fields and scaffolds/article.md for a new one. -#}
+    {% include "article-header.html" %}
+
+    <section class="article-content">
+        <div class="container">
+            <div class="content-layout">
+                <div class="main-content">
+                    <img src="{{ image }}" width="{{ image | imgWidth }}" height="{{ image | imgHeight }}" alt="{{ imageAlt }}" class="article-image" fetchpriority="high" decoding="async" data-photo-slot="artikel-{{ page.fileSlug }}"{% if imageIsFallback %} data-photo-status="stand-in" data-photo-brief="Uses the shared fallback photo. Give this article its own."{% endif %}>
+
+                    <div class="article-excerpt">
+                        {{ excerpt }}
+                    </div>
+
+                    <div class="article-body">
+                        {{ content | safe }}
+                    </div>
+
+                    {% include "article-share.html" %}
+                </div>
+
+                {% include "partials/article-sidebar.html" %}
+            </div>
+        </div>
+    </section>
+
+    {% include "article-footer.html" %}

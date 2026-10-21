@@ -115,7 +115,17 @@ module.exports = function (eleventyConfig) {
     `<template data-photo-slot="${attr(id)}" data-photo-status="missing"` +
     (brief ? ` data-photo-brief="${attr(brief)}"` : "") + `></template>`);
 
-  // Ignores are defined in .eleventyignore
+  // A callout box in an article: {% callout %}…{% endcallout %}, or
+  // {% callout "success" %} for the green one. The blank lines let Markdown
+  // render the content inside the box, as <p>…</p>.
+  const CALLOUTS = { "": "callout", success: "callout callout--success" };
+  eleventyConfig.addPairedShortcode("callout", (content, variant = "") => {
+    if (!(variant in CALLOUTS)) throw new Error(`callout: unknown variant "${variant}" (use "success" or none)`);
+    return `<div class="${CALLOUTS[variant]}">\n\n${content.trim()}\n\n</div>`;
+  });
+
+  // Ignores are defined in .eleventyignore. Markdown files are ignored by
+  // name there (CLAUDE.md, docs/ …), because articles are Markdown.
 
   return {
     dir: {

@@ -18,6 +18,7 @@ const AGENT = "dfmg-bot";
 const EDITABLE = [
     /^index\.html$/,
     /^pages\/facility\/(?!components\/[^/]*politik\.html$).+\.html$/,
+    /^pages\/facility\/indblik\/artikler\/.+\.md$/,
     /^pages\/software\/.+\.html$/,
     /^_data\/i18n\/[^/]+\.json$/,
     /^_data\/(jobs|faq)\.json$/,
