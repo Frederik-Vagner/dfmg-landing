@@ -7,6 +7,21 @@
 [build.environment]
   NODE_VERSION = "24"
 
+# Security headers for every response (Netlify applies every matching
+# [[headers]] block, so these combine with the cache rules below). The site
+# uses no third parties, no iframes and no camera, microphone, location or
+# payment APIs. frame-ancestors: no other site may frame these pages. A full
+# Content-Security-Policy is left for later: it needs the inline scripts
+# (window.DFMG, JSON-LD) and Formspree tested on a preview first.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Content-Security-Policy = "frame-ancestors 'self'"
+    X-Frame-Options = "SAMEORIGIN"
+
 # Browser caching. Without these, Netlify sends max-age=0 for everything and
 # every page view revalidates 35-60 assets. HTML is not listed: it keeps
 # Netlify's default (always revalidated), so a deploy shows at once.
