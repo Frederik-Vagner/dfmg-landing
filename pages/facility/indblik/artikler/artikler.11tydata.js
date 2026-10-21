@@ -20,10 +20,13 @@ const CATEGORIES = {
 
 const { isoDate } = require("../../../../tools/dates");
 const { imgWidth, imgHeight } = require("../../../../tools/image-size");
+const { validateArticle } = require("../../../../tools/schemas");
 
 const folderOf = (data) => data.page.filePathStem.split("/").slice(-2, -1)[0];
 
 const FALLBACK_IMAGE = "/images/article/ipad.webp";
+
+const sizeOr = (read, src) => { try { return read(src); } catch { return undefined; } };
 
 // schema.org author from a key in _data/authors.json.
 const authorLd = (data) => {
@@ -46,6 +49,10 @@ module.exports = {
     // A key in _data/authors.json. The header names a person, not the company.
     author: "dfmg",
 
+    // Fails the build on a missing, misspelled or out-of-range field, and on
+    // a case that names a client without consent (tools/schemas.js).
+    eleventyDataSchema: validateArticle,
+
     eleventyComputed: {
         // The .html URL for Markdown articles too (_data/eleventyComputed.js
         // only covers .html files): artikler/tips/x.md -> artikler/tips/x.html.
@@ -63,8 +70,9 @@ module.exports = {
         og: (data) => ({
             type: "article",
             image: data.site.url + data.image,
-            imageWidth: imgWidth(data.image),
-            imageHeight: imgHeight(data.image),
+            // A missing file is reported by the schema below, by name.
+            imageWidth: sizeOr(imgWidth, data.image),
+            imageHeight: sizeOr(imgHeight, data.image),
         }),
         // Structured data for search results (base.html prints it in place
         // of the site-wide organisation block), from the same front matter:

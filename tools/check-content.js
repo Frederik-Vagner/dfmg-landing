@@ -17,10 +17,10 @@
 //              a decorative image, such as a logo next to its name.
 //   placeholders  no "[X]", "[Your …]", "Lorem ipsum", TODO or FIXME in the
 //              visible text of a built page.
-//   articles   the front matter of every article (see artikler.11tydata.js):
-//              the fields the cards, headers and structured data read, an
-//              ISO date (date: 2024-11-18), a photo that
-//              exists, non-empty alt text and an excerpt of 80–220 characters.
+//   articles   every file in artikler/ is a .md or .html article in a
+//              category folder. Its front matter is checked during the
+//              Eleventy build (tools/schemas.js), which stops at the first
+//              bad article.
 //   i18n       in _data/i18n/*.json, "en" and "da" have the same keys and
 //              list lengths, and no text is empty in one language only.
 //   images     files in images/ are webp, jpg or png, at most 250 KB and
@@ -44,7 +44,6 @@ const IMAGES = path.join(ROOT, "images");
 
 const TITLE_MAX = 65;
 const DESCRIPTION = [70, 160];
-const EXCERPT = [80, 220];
 const IMAGE_MAX_BYTES = 250 * 1024;
 const IMAGE_MAX_EDGE = 2000;
 const IMAGE_TYPES = [".webp", ".jpg", ".jpeg", ".png"];
@@ -181,38 +180,17 @@ function checkPages() {
 
 // ------------------------------------------------------------------- articles
 
-// Front matter of a source file; Eleventy's own YAML reader, so the check
-// reads exactly what the build reads.
-const matter = require("gray-matter");
+// The categories are the folders in artikler.11tydata.js; an article
+// outside them would not get a label or a filter.
+const ARTICLE_FOLDERS = ["indsigt", "tips", "baeredygtighed", "innovation", "cases"];
 
 function checkArticles() {
-    const files = walk(ARTICLES).filter((f) => /\.(md|html)$/.test(f) && !path.basename(f).startsWith("_"));
+    const files = walk(ARTICLES).filter((f) => !/\.11tydata\.js$/.test(f) && !path.basename(f).startsWith("_"));
     for (const file of files) {
         const name = rel(file);
-        let data;
-        try { data = matter(read(file)).data; }
-        catch (e) { report(`article-yaml:${name}`, `${name}: front matter is not valid YAML (${e.message})`); continue; }
-
-        for (const field of ["title", "description", "articleTitle", "date", "readTime", "excerpt"]) {
-            if (data[field] === undefined || data[field] === "") report(`article-field:${name}:${field}`, `${name}: front matter has no "${field}"`);
-        }
-        // gray-matter reads an unquoted YAML date as a Date, as Eleventy does.
-        if (data.date !== undefined && !(data.date instanceof Date && !Number.isNaN(data.date.getTime()))) {
-            report(`article-date:${name}`, `${name}: date "${data.date}" should be an ISO date without quotes, like 2024-11-18`);
-        }
-        if (data.readTime !== undefined && !(Number.isInteger(data.readTime) && data.readTime > 0)) {
-            report(`article-readtime:${name}`, `${name}: readTime should be a whole number of minutes, not "${data.readTime}"`);
-        }
-        if (data.image !== undefined) {
-            if (!String(data.image).startsWith("/images/") || !fs.existsSync(path.join(ROOT, data.image))) {
-                report(`article-image:${name}`, `${name}: image ${data.image} does not exist`);
-            }
-            if (!String(data.imageAlt || "").trim()) report(`article-alt:${name}`, `${name}: an article with its own image needs imageAlt`);
-        }
-        const excerpt = String(data.excerpt || "").trim();
-        if (excerpt && (excerpt.length < EXCERPT[0] || excerpt.length > EXCERPT[1])) {
-            report(`article-excerpt:${name}`, `${name}: excerpt is ${excerpt.length} characters, should be ${EXCERPT[0]}–${EXCERPT[1]}`);
-        }
+        const folder = path.basename(path.dirname(file));
+        if (!/\.(md|html)$/.test(file)) report(`article-type:${name}`, `${name}: articles are .md (or .html) files`);
+        else if (!ARTICLE_FOLDERS.includes(folder)) report(`article-folder:${name}`, `${name}: put the article in one of ${ARTICLE_FOLDERS.join(", ")}`);
     }
     return files.length;
 }
