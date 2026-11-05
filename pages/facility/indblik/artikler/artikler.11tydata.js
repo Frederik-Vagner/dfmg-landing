@@ -93,7 +93,7 @@ module.exports = {
                         inLanguage: "da",
                         mainEntityOfPage: url,
                         author: authorLd(data),
-                        publisher: { "@type": "Organization", name: data.site.name, logo: data.site.url + "/images/logos/logo.png", ...org },
+                        publisher: { "@type": "Organization", name: data.site.name, logo: data.site.url + "/images/logos/logo-512.png", ...org },
                     },
                     {
                         "@type": "BreadcrumbList",

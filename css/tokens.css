@@ -36,6 +36,8 @@
     --gray-light: #64748b;
     --gray-muted: #9ca3af;
     --white: #ffffff;
+    /* The logo on a light ground; the platform's --brand-logo. */
+    --brand-logo: #595959;
     --governance: #8b5cf6;
     --red: #ef4444;
     --amber: #f59e0b;

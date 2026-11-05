@@ -17,6 +17,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("favicon.svg");
+  eleventyConfig.addPassthroughCopy("logo.svg");
 
   // Forms post to the real inbox, so the endpoint (site.formEndpoint) is
   // only written into production builds. Netlify sets CONTEXT to

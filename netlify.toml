@@ -66,6 +66,22 @@
   [headers.values]
     Cache-Control = "public, max-age=86400"
 
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/logo.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# The old logo's URL is in JSON-LD that search engines have already read.
+[[redirects]]
+  from = "/images/logos/logo.png"
+  to = "/images/logos/logo-512.png"
+  status = 301
+
 # The SOHO and Kgl. Haveselskab case pages were unpublished (they carried
 # Adnami's content). Send any old links or indexed URLs to the Indblik overview.
 [[redirects]]

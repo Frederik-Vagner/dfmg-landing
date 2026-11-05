@@ -17,7 +17,7 @@ const jobPosting = (job, data) => {
         datePosted: job.datePosted,
         ...(job.validThrough ? { validThrough: job.validThrough } : {}),
         employmentType: job.employmentType,
-        hiringOrganization: { "@type": "Organization", "@id": site.url + "/#organization", name: site.legalName, sameAs: site.url, logo: site.url + "/images/logos/logo.png" },
+        hiringOrganization: { "@type": "Organization", "@id": site.url + "/#organization", name: site.legalName, sameAs: site.url, logo: site.url + "/images/logos/logo-512.png" },
         jobLocation: {
           "@type": "Place",
           address: {

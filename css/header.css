@@ -63,6 +63,27 @@
     color: var(--white);
 }
 
+/* The logo, painted through logo.svg's own shape so it takes the text colour
+   around it (an <img> of the SVG cannot). Here and in the footer. */
+.logo-mark {
+    display: block;
+    flex: none;
+    height: var(--logo-mark-height, 30px);
+    aspect-ratio: 341.88 / 388.08;
+    background-color: currentColor;
+    -webkit-mask: url("/logo.svg") center / contain no-repeat;
+    mask: url("/logo.svg") center / contain no-repeat;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+/* High-contrast modes drop backgrounds, which would leave nothing to see. */
+@media (forced-colors: active) {
+    .logo-mark {
+        background-color: CanvasText;
+    }
+}
+
 /* --- Platform Header Variant --- */
 
 .logo__suffix {

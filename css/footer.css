@@ -132,13 +132,7 @@
     margin-bottom: var(--space-md);
     margin-left: auto;
     margin-top: var(--space-sm);
-}
-
-.footer__logo img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    margin: auto;
+    --logo-mark-height: 40px;
 }
 
 /* Desktop enhancements */

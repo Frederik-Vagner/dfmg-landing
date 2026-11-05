@@ -193,6 +193,7 @@
 
 .footer__logo-link {
     line-height: var(--leading-none);
+    color: var(--brand-logo);
 }
 
 .footer__social {

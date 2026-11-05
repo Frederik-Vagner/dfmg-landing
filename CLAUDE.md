@@ -90,6 +90,8 @@ Never delete or rename images, pages or articles. A removal is a request in the 
 5. Alt text is in the page's language and says what is in the photo, not the marketing message.
 6. Keep the slot's `data-photo-slot` and update its status, so the inventory stays right.
 
+The DFMG logo is `logo.svg` in the repo root, a copy of `static/logos/logo.svg` in the platform repo. Pages paint it with `.logo-mark`. After a change to it, run `node tools/build-brand-assets.js --og` for the favicons, touch icon, JSON-LD logo and OG images. `images/` is cached for 30 days, so a changed icon there needs a new file name.
+
 ## Branches and pull requests
 
 - You work and push as the GitHub user **dfmg-bot**, never with Frederik's credentials.
