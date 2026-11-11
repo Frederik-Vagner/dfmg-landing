@@ -115,7 +115,6 @@ Also update the social proof bar:
 **Integration logos (create or source):**
 - Google Calendar icon
 - Slack icon
-- BankConnect logo (or generic bank icon)
 - e-Faktura / NemHandel logo
 - IMAP/Email icon
 

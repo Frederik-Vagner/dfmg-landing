@@ -34,8 +34,7 @@
 }
 
 /* ── Matrix: rows of features against columns of plans, ticks and dashes ──
-   Category rows split it into groups. --list is a single list of ticked
-   items on a white card (the bank-connect functions). */
+   Category rows split it into groups. */
 .matrix {
     width: 100%;
     border-collapse: collapse;
@@ -90,30 +89,6 @@
 
 .matrix__dash {
     color: var(--color-border-muted);
-}
-
-.matrix--list {
-    margin-top: 0;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
-}
-
-.matrix--list th,
-.matrix--list td {
-    text-align: left;
-}
-
-/* A long list of short items: dense rows */
-.matrix--list tbody tr:not(.matrix__category) td {
-    padding-top: var(--space-2xs);
-    padding-bottom: var(--space-2xs);
-}
-
-/* The tick column: as narrow as the tick */
-.matrix--list td:first-child {
-    width: 1.5rem;
 }
 
 /* ── Price list: a dark header over rows of name, size and price ── */

@@ -93,4 +93,4 @@ Payroll-only and sales tools fall outside the duty to notify (guide § 2.1), but
 | Invoicing, e-invoicing, credit notes, payment reminders | BUILT (paused), HOLD |
 | VAT, annual reporting, vendor bills, budget, fixed assets, cost centres | BUILT, HOLD |
 | Payroll, payslips, eIndkomst, holiday pay | BUILT (salaries are run elsewhere), HOLD |
-| Bank Connect payments and statements | HOLD (the Bank Connect page is left as a question for Frederik) |
+| Bank Connect payments and statements | HOLD (its page was removed; the URLs redirect to the features page) |

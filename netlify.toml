@@ -131,3 +131,26 @@
   from = "/pages/facility/services/rengøring"
   to = "/pages/facility/services/rengoering.html"
   status = 301
+
+# The Bank Connect page was removed (Nov 2026): it marketed bookkeeping
+# features before the system is notified to Erhvervsstyrelsen (Bogføringsloven
+# § 19). Old links and indexed URLs go to the features page.
+[[redirects]]
+  from = "/pages/software/bank-connect"
+  to = "/pages/software/features.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/bank-connect.html"
+  to = "/pages/software/features.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/da/bank-connect"
+  to = "/pages/software/da/features.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/da/bank-connect.html"
+  to = "/pages/software/da/features.html"
+  status = 301
