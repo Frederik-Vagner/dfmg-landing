@@ -9,14 +9,8 @@
                 <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ t.hero.cta_features }}</a>
             </div>
 
-            <!-- TODO: Replace with actual dashboard screenshot or 60s product video -->
-            <div class="screenshot-placeholder screenshot-placeholder--tall hero__media" data-photo-slot="home-hero" data-photo-status="missing" data-photo-brief="{{ t.hero.placeholder_text | escape }}. {{ t.hero.placeholder_hint | escape }}">
-                <div>
-                    <iconify-icon icon="fluent:play-circle-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
-                    <span>{{ t.hero.placeholder_text }}</span><br>
-                    {# note to self (not rendered): {{ t.hero.placeholder_hint }} #}
-                </div>
-            </div>
+            {% set heroShot = "/images/platform/schedule-month.webp" %}
+            <img src="{{ heroShot }}" width="{{ heroShot | imgWidth }}" height="{{ heroShot | imgHeight }}" alt="{{ t.hero.image_alt }}" class="screenshot hero__media" fetchpriority="high" decoding="async" data-photo-slot="home-hero">
         </div>
     </section>
 
@@ -71,33 +65,33 @@
             <div class="grid grid--3">
                 <a href="{{ prefix }}/features.html#operations" class="card card--lift">
                     <div class="icon-badge"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.operations_title }}</div>
-                    <div class="card__text">{{ t.modules.operations_desc }}</div>
-                </a>
-                <a href="{{ prefix }}/features.html#clients" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:people-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.clients_title }}</div>
-                    <div class="card__text">{{ t.modules.clients_desc }}</div>
+                    <div class="card__title">{{ t.modules.plan_title }}</div>
+                    <div class="card__text">{{ t.modules.plan_desc }}</div>
                 </a>
                 <a href="{{ prefix }}/features.html#employees" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:person-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.employees_title }}</div>
-                    <div class="card__text">{{ t.modules.employees_desc }}</div>
+                    <div class="icon-badge"><iconify-icon icon="fluent:phone-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.visit_title }}</div>
+                    <div class="card__text">{{ t.modules.visit_desc }}</div>
                 </a>
-                <a href="{{ prefix }}/features.html#finance" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:calculator-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.finance_title }}</div>
-                    <div class="card__text">{{ t.modules.finance_desc }}</div>
+                <a href="{{ prefix }}/features.html#quality" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:camera-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.proof_title }}</div>
+                    <div class="card__text">{{ t.modules.proof_desc }}</div>
+                </a>
+                <a href="{{ prefix }}/features.html#team" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:people-team-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.team_title }}</div>
+                    <div class="card__text">{{ t.modules.team_desc }}</div>
+                </a>
+                <a href="{{ prefix }}/features.html#inventory" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="fluent:box-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.stock_title }}</div>
+                    <div class="card__text">{{ t.modules.stock_desc }}</div>
                 </a>
                 <a href="{{ prefix }}/features.html#crm" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:mail-read-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.crm_title }}</div>
-                    <div class="card__text">{{ t.modules.crm_desc }}</div>
-                </a>
-                <a href="{{ prefix }}/features.html#documents" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:document-text-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.documents_title }}</div>
-                    <div class="card__text">{{ t.modules.documents_desc }}</div>
+                    <div class="icon-badge"><iconify-icon icon="fluent:handshake-20-filled" inline></iconify-icon></div>
+                    <div class="card__title">{{ t.modules.sell_title }}</div>
+                    <div class="card__text">{{ t.modules.sell_desc }}</div>
                 </a>
             </div>
         </div>
@@ -112,14 +106,8 @@
                     <p>{{ t.walkthrough.body }}</p>
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline></iconify-icon> {{ t.walkthrough.cta }}</a>
                 </div>
-                <!-- TODO: Replace with embedded video (Loom/YouTube) or animated GIF walkthrough -->
-                <div class="screenshot-placeholder" data-photo-slot="home-walkthrough" data-photo-status="missing" data-photo-brief="{{ t.walkthrough.placeholder_text | escape }}. {{ t.walkthrough.placeholder_hint | escape }}">
-                    <div>
-                        <iconify-icon icon="fluent:video-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
-                        <span>{{ t.walkthrough.placeholder_text }}</span><br>
-                        {# note to self (not rendered): {{ t.walkthrough.placeholder_hint }} #}
-                    </div>
-                </div>
+                {% set walkShot = "/images/platform/app-home-phone.webp" %}
+                <img src="{{ walkShot }}" width="{{ walkShot | imgWidth }}" height="{{ walkShot | imgHeight }}" alt="{{ t.walkthrough.image_alt }}" class="screenshot screenshot--phone" loading="lazy" decoding="async" data-photo-slot="home-walkthrough">
             </div>
         </div>
     </section>
@@ -157,39 +145,9 @@
         </div>
     </section>
 
-    <!-- Integration / ecosystem -->
-    <section class="section">
-        <div class="container">
-            <div class="intro intro--spaced">
-                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.integrations.subtitle }}</div>
-                <div class="title intro__title">{{ t.integrations.title }}</div>
-            </div>
-
-            <!-- TODO: Replace with actual integration logos -->
-            <div class="cluster cluster--center cluster--loose logos">
-                <div class="logos__item">
-                    <iconify-icon icon="fa6-brands:google" inline class="logos__icon"></iconify-icon>
-                    {{ t.integrations.google }}
-                </div>
-                <div class="logos__item">
-                    <iconify-icon icon="fa6-brands:slack" inline class="logos__icon"></iconify-icon>
-                    {{ t.integrations.slack }}
-                </div>
-                <div class="logos__item">
-                    <iconify-icon icon="fluent:building-bank-20-filled" inline class="logos__icon"></iconify-icon>
-                    {{ t.integrations.bank }}
-                </div>
-                <div class="logos__item">
-                    <iconify-icon icon="fluent:receipt-20-filled" inline class="logos__icon"></iconify-icon>
-                    {{ t.integrations.efaktura }}
-                </div>
-                <div class="logos__item">
-                    <iconify-icon icon="fluent:mail-20-filled" inline class="logos__icon"></iconify-icon>
-                    {{ t.integrations.email }}
-                </div>
-            </div>
-        </div>
-    </section>
+    {# Integrations section removed (Nov 2026): none of the named integrations is
+       proven in use yet, and two were finance (docs/platform-capabilities.md).
+       Re-add one once it is LIVE there. #}
 
     <!-- Final CTA -->
     <section class="section">

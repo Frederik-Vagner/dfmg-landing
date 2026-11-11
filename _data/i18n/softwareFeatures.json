@@ -2,106 +2,118 @@
   "en": {
     "hero": {
       "subtitle": "FEATURES",
-      "title": "40+ modules designed for service companies",
-      "body": "Everything you need to run operations, manage people, handle finances, and grow your business — in one connected platform."
+      "title": "What DFMG Platform does for a service company",
+      "body": "Plan the week, run every visit, prove the work and win new clients, from the office and from the phone in your team's pocket."
     },
     "sections": [
       {
         "id": "operations",
         "sectionClass": "section",
         "reverse": false,
-        "subtitle": "Core operations",
-        "title": "The daily engine of your business",
-        "body": "Schedule tasks, track time, manage quality, and keep your entire operation visible in real time. Your employees check in via their phones, and you see it all on the dashboard — who's where, what's done, what's pending.",
-        "badges": ["Calendar", "Task Management", "Time Tracking", "Inspections", "Quality Checks", "Recurring Tasks", "Task Reports", "Photo Documentation"],
-        "screenshot": "Screenshot: Calendar week view with tasks + employee assignments",
-        "screenshotAlt": "Alt: Task detail showing check-in time, photos, checklist"
-      },
-      {
-        "id": "clients",
-        "sectionClass": "section section--light",
-        "reverse": true,
-        "subtitle": "Client management",
-        "title": "Every client, every location, every detail",
-        "body": "Manage client information, addresses, contact persons, and location-specific guides that tell your team exactly how to service each site. Clients get their own portal to see upcoming tasks, invoices, photos, and floor plans.",
-        "badges": ["Client Portal", "Location Guides", "Feedback System", "Facility Status", "Booking System", "Contact Persons", "Floor Plans"],
-        "screenshot": "Screenshot: Client detail page with location guide sections",
-        "screenshotAlt": "Alt: Client portal view (what your clients see)"
+        "subtitle": "Plan the week",
+        "title": "Every visit on one calendar",
+        "body": "See the month by client, employee and time, with the hours per week beside it. Recurring visits are planned weeks ahead from each client's rules, so next week is never empty. Employees ask for time off in the app, and the office answers there.",
+        "badges": [
+          "Schedule",
+          "Recurring visits",
+          "Crews",
+          "Time off",
+          "Hours per week"
+        ],
+        "image": "/images/platform/schedule-month.webp",
+        "imageAlt": "The schedule for a month: every visit by client and time, with the hours per week beside it"
       },
       {
         "id": "employees",
-        "sectionClass": "section",
-        "reverse": false,
-        "subtitle": "Employee management",
-        "title": "From hiring to daily performance",
-        "body": "Employees get their own portal with tasks, schedules, salary slips, and holiday requests. Managers track performance through an improvement system with tests, scoring, and incident tracking. The org diagram shows your entire structure at a glance.",
-        "badges": ["Employee Portal", "Holiday Management", "Handbook", "Improvement System", "Tests & Questions", "Org Diagram", "Team Overview", "Notifications"],
-        "screenshot": "Screenshot: Employee dashboard (mobile view) with tasks",
-        "screenshotAlt": "Alt: Holiday calendar or improvement/test system"
-      },
-      {
-        "id": "finance",
         "sectionClass": "section section--light",
         "reverse": true,
-        "subtitle": "Financial suite",
-        "title": "Complete accounting built for Danish companies",
-        "body": "Full double-entry accounting with Danish chart of accounts, automated invoicing with e-Faktura support, bank reconciliation, BankConnect integration for direct bank payments, and VAT reporting ready for SKAT. Generate income statements and balance sheets with one click.",
-        "badges": ["Chart of Accounts", "Invoicing", "e-Faktura", "Credit Notes", "Bank Reconciliation", "BankConnect", "Vendor Bills", "VAT Reports", "Income Statement", "Balance Sheet", "Journal Entries"],
-        "screenshot": "Screenshot: Billing overview with invoice list + e-Faktura badge",
-        "screenshotAlt": "Alt: Chart of accounts or bank reconciliation view"
+        "subtitle": "Run the visit",
+        "title": "Today's work on every phone",
+        "body": "The employee app shows each person their own visits and the whole team's schedule. They check in when they arrive, check out when they leave, and message the office from the same app. It runs in the browser and on iPhone.",
+        "badges": [
+          "Employee app",
+          "Check-in and check-out",
+          "Team schedule",
+          "Chat",
+          "iPhone app"
+        ],
+        "image": "/images/platform/app-schedule-phone.webp",
+        "imageAlt": "The employee app on a phone: this week's visits, each marked done",
+        "phone": true
       },
       {
-        "id": "payroll",
+        "id": "quality",
         "sectionClass": "section",
         "reverse": false,
-        "subtitle": "Payroll",
-        "title": "Danish payroll from hours to payslip",
-        "body": "Create payroll runs from tracked hours, calculate taxes and deductions, generate payslips, report to eIndkomst/SKAT, and export bank payment files — all without leaving the platform. Holiday pay and pension calculations follow Danish law automatically.",
-        "badges": ["Payroll Runs", "Salary Profiles", "Payslips", "eIndkomst / SKAT", "Holiday Pay", "Pension & ATP", "Bank Payment Export", "Fixed Expenses"],
-        "screenshot": "Screenshot: Payroll run with employee entries + eIndkomst export",
-        "screenshotAlt": "Alt: Salary overview or payslip preview"
+        "subtitle": "Prove the work",
+        "title": "Know what was done, by whom and when",
+        "body": "Every visit keeps its before and after photos and each person's real time on site, set against the planned time. When a client asks whether a visit happened, the answer is on the visit.",
+        "badges": [
+          "Before and after photos",
+          "Time on site per person",
+          "Planned and actual time",
+          "Visit history"
+        ],
+        "image": "/images/platform/task-visit-proof.webp",
+        "imageAlt": "A completed visit: the crew with their check-in and check-out times, a time report against the estimate, and the checklist"
       },
       {
         "id": "inventory",
         "sectionClass": "section section--light",
         "reverse": true,
-        "subtitle": "Inventory & procurement",
-        "title": "Track every item, from warehouse to client site",
-        "body": "Manage inventory across multiple storage locations, create purchase orders to suppliers, track stock levels, and build loadout templates for what each team needs on the road. Employees report usage directly from the task view.",
-        "badges": ["Inventory Items", "Storage Locations", "Purchase Orders", "Suppliers", "Loadout Templates", "Stock Levels", "Laundry Baskets"],
-        "screenshot": "Screenshot: Inventory list with stock levels + storage locations",
-        "screenshotAlt": "Alt: Purchase order detail or loadout template"
+        "subtitle": "Know your stock",
+        "title": "Every product and machine, by storage",
+        "body": "Keep track of cleaning products, equipment, textiles and workwear, in the company storage and at your clients. See what each storage holds and what it is worth, record what moves, and spot what is running low.",
+        "badges": [
+          "Items",
+          "Storages",
+          "Stock movements",
+          "Low-stock levels"
+        ],
+        "image": "/images/platform/inventory-stock.webp",
+        "imageAlt": "The inventory list: items by type and storage, with quantity, price and value"
+      },
+      {
+        "id": "team",
+        "sectionClass": "section",
+        "reverse": false,
+        "subtitle": "Keep your team on board",
+        "title": "Instructions that reach the people doing the work",
+        "body": "Notifications tell each employee what changed. Chat keeps questions in one thread instead of on private phones. Short tests in the app check that training has landed.",
+        "badges": [
+          "Notifications",
+          "Chat",
+          "Tests"
+        ],
+        "image": "/images/platform/app-home-phone.webp",
+        "imageAlt": "The employee app's home screen: the next visits and a guide to read",
+        "phone": true
       },
       {
         "id": "crm",
-        "sectionClass": "section",
-        "reverse": false,
-        "subtitle": "Sales & CRM",
-        "title": "From lead to signed contract",
-        "body": "Build professional offers with equipment lists, cleaning schemes, and auto-generated PDFs. Run email sequences to nurture leads with open/click tracking. Manage your inbox with full IMAP integration. Set up a pricing library with services, add-ons, and notice fees.",
-        "badges": ["Offer Builder", "PDF Generation", "Email Automation", "Lead Management", "IMAP Inbox", "Pricing Library", "Product Library", "Window Cleaning Config"],
-        "screenshot": "Screenshot: Offer detail with cleaning scheme + PDF preview",
-        "screenshotAlt": "Alt: Email sequence list or lead pipeline"
-      },
-      {
-        "id": "documents",
         "sectionClass": "section section--light",
         "reverse": true,
-        "subtitle": "Documents & analytics",
-        "title": "Templates, signatures, and data-driven decisions",
-        "body": "Create document templates with placeholders that auto-fill from your data, send for e-signature, and generate client reports. Track task KPIs, employee performance, client profitability, and feedback analytics from a unified dashboard.",
-        "badges": ["Document Templates", "E-Signatures", "Floor Plans", "Photo Galleries", "Task KPI Dashboard", "Employee Performance", "Profitability Analytics", "Feedback Analytics", "Export Center"],
-        "screenshot": "Screenshot: Task KPI dashboard or profitability analytics",
-        "screenshotAlt": "Alt: Document template builder or e-signature flow"
+        "subtitle": "Win new work",
+        "title": "From the first call to a signed document",
+        "body": "Keep your lead lists in one place and every call on record. Record a meeting and get the summary and notes written for you. Send a proposal as a link, see when the client opens it, and have documents signed electronically.",
+        "badges": [
+          "Leads",
+          "Call log",
+          "Meeting notes",
+          "Proposals",
+          "E-signatures"
+        ],
+        "screenshot": "Screenshot: a proposal sent as a link",
+        "screenshotAlt": "A proposal as the client sees it"
       }
     ],
     "admin": {
-      "title": "Platform administration",
-      "body": "For platform operators: provision tenants, assign pricing plans, control module access per company, set resource quotas (users, storage, employees, clients), and manage subscription billing — all from a dedicated admin console."
+      "title": "Shown with made-up data",
+      "body": "Every screenshot on these pages comes from a test company with invented clients and employees, marked (FAKE). Your company sees its own data, and only its own."
     },
     "cta": {
       "title": "See it in action",
-      "body": "Book a 30-minute demo and we'll walk you through the modules that matter most to your business.",
+      "body": "Book a 30-minute demo and we'll walk you through the parts that matter most to your company.",
       "cta_demo": "Book a demo",
       "cta_pricing": "See pricing"
     }
@@ -109,106 +121,118 @@
   "da": {
     "hero": {
       "subtitle": "FUNKTIONER",
-      "title": "40+ moduler designet til servicevirksomheder",
-      "body": "Alt hvad I behøver for at drive drift, administrere medarbejdere, styre økonomi og vokse jeres forretning — i en sammenhængende platform."
+      "title": "Det gør DFMG Platform for en servicevirksomhed",
+      "body": "Planlæg ugen, kør hvert besøg, dokumentér arbejdet og vind nye kunder, fra kontoret og fra telefonen i holdets lomme."
     },
     "sections": [
       {
         "id": "operations",
         "sectionClass": "section",
         "reverse": false,
-        "subtitle": "Kernedrift",
-        "title": "Den daglige motor i jeres forretning",
-        "body": "Planlæg opgaver, registrer tid, styr kvalitet og hold hele driften synlig i realtid. Jeres medarbejdere tjekker ind via telefonen, og I ser det hele på dashboardet — hvem der er hvor, hvad der er gjort, og hvad der mangler.",
-        "badges": ["Kalender", "Opgavestyring", "Tidsregistrering", "Inspektioner", "Kvalitetstjek", "Gentagne Opgaver", "Opgaverapporter", "Fotodokumentation"],
-        "screenshot": "Screenshot: Kalenderugevisning med opgaver + medarbejdertildelinger",
-        "screenshotAlt": "Alt: Opgavedetalje med check-in-tid, fotos, tjekliste"
-      },
-      {
-        "id": "clients",
-        "sectionClass": "section section--light",
-        "reverse": true,
-        "subtitle": "Kundestyring",
-        "title": "Hver kunde, hver lokation, hver detalje",
-        "body": "Administrer kundeinformation, adresser, kontaktpersoner og lokationsspecifikke guides, der fortæller jeres team præcis, hvordan hver lokation skal serviceres. Kunder får deres egen portal med kommende opgaver, fakturaer, fotos og plantegninger.",
-        "badges": ["Kundeportal", "Lokationsguider", "Feedbacksystem", "Facilitetsstatus", "Bookingsystem", "Kontaktpersoner", "Plantegninger"],
-        "screenshot": "Screenshot: Kundedetalje med lokationsguide-sektioner",
-        "screenshotAlt": "Alt: Kundeportalvisning (hvad jeres kunder ser)"
+        "subtitle": "Planlæg ugen",
+        "title": "Alle besøg i én kalender",
+        "body": "Se måneden efter kunde, medarbejder og tidspunkt, med timerne pr. uge ved siden af. Faste besøg planlægges uger frem ud fra hver kundes aftale, så næste uge aldrig står tom. Medarbejderne søger fravær i appen, og kontoret svarer samme sted.",
+        "badges": [
+          "Vagtplan",
+          "Faste besøg",
+          "Hold",
+          "Fravær",
+          "Timer pr. uge"
+        ],
+        "image": "/images/platform/schedule-month.webp",
+        "imageAlt": "Vagtplanen for en måned: hvert besøg efter kunde og tidspunkt, med timerne pr. uge ved siden af"
       },
       {
         "id": "employees",
-        "sectionClass": "section",
-        "reverse": false,
-        "subtitle": "Medarbejderstyring",
-        "title": "Fra ansættelse til daglig performance",
-        "body": "Medarbejderne får deres egen portal med opgaver, vagtplaner, lønsedler og ferieanmodninger. Ledere følger performance via et forbedringssystem med tests, scoring og hændelsesregistrering. Organisationsdiagrammet viser hele jeres struktur med et overblik.",
-        "badges": ["Medarbejderportal", "Feriestyring", "Håndbog", "Forbedringssystem", "Tests & Spørgsmål", "Organisationsdiagram", "Teamoverblik", "Notifikationer"],
-        "screenshot": "Screenshot: Medarbejder-dashboard (mobilvisning) med opgaver",
-        "screenshotAlt": "Alt: Feriekalender eller forbedrings-/testsystem"
-      },
-      {
-        "id": "finance",
         "sectionClass": "section section--light",
         "reverse": true,
-        "subtitle": "Økonomisuite",
-        "title": "Komplet bogføring bygget til danske virksomheder",
-        "body": "Fuld dobbelt bogføring med dansk kontoplan, automatiseret fakturering med e-Faktura-understøttelse, bankafstemning, BankConnect-integration til direkte bankbetalinger og momsindberetning klar til SKAT. Generer resultatopgørelse og balance med et klik.",
-        "badges": ["Kontoplan", "Fakturering", "e-Faktura", "Kreditnotaer", "Bankafstemning", "BankConnect", "Leverandørfakturaer", "Momsrapporter", "Resultatopgørelse", "Balance", "Bogføringsposter"],
-        "screenshot": "Screenshot: Fakturaoversigt med fakturaliste + e-Faktura-badge",
-        "screenshotAlt": "Alt: Kontoplan eller bankafstemningsvisning"
+        "subtitle": "Kør besøget",
+        "title": "Dagens arbejde på hver telefon",
+        "body": "Medarbejder-appen viser hver person deres egne besøg og hele holdets vagtplan. De checker ind, når de kommer, checker ud, når de går, og skriver til kontoret fra samme app. Den kører i browseren og på iPhone.",
+        "badges": [
+          "Medarbejder-app",
+          "Check-in og check-ud",
+          "Holdets vagtplan",
+          "Chat",
+          "iPhone-app"
+        ],
+        "image": "/images/platform/app-schedule-phone.webp",
+        "imageAlt": "Medarbejder-appen på en telefon: ugens besøg, hver markeret som udført",
+        "phone": true
       },
       {
-        "id": "payroll",
+        "id": "quality",
         "sectionClass": "section",
         "reverse": false,
-        "subtitle": "Løn",
-        "title": "Dansk løn fra timer til lønseddel",
-        "body": "Opret lønkørsel fra registrerede timer, beregn skat og fradrag, generer lønsedler, indberetning til eIndkomst/SKAT og eksporter bankbetalingsfiler — alt uden at forlade platformen. Feriepenge og pensionsberegninger følger automatisk dansk lovgivning.",
-        "badges": ["Lønkørsler", "Lønprofiler", "Lønsedler", "eIndkomst / SKAT", "Feriepenge", "Pension & ATP", "Bankbetalingseksport", "Faste Udgifter"],
-        "screenshot": "Screenshot: Lønkørsel med medarbejderposter + eIndkomst-eksport",
-        "screenshotAlt": "Alt: Lønoversigt eller lønseddelforhåndsvisning"
+        "subtitle": "Dokumentér arbejdet",
+        "title": "Vid, hvad der blev gjort, af hvem og hvornår",
+        "body": "Hvert besøg gemmer sine før- og efterbilleder og hver persons faktiske tid hos kunden, holdt op mod den planlagte tid. Når en kunde spørger, om et besøg blev udført, står svaret på besøget.",
+        "badges": [
+          "Før- og efterbilleder",
+          "Tid hos kunden pr. person",
+          "Planlagt og faktisk tid",
+          "Besøgshistorik"
+        ],
+        "image": "/images/platform/task-visit-proof.webp",
+        "imageAlt": "Et udført besøg: holdet med tider for check-in og check-ud, en tidsrapport mod estimatet og tjeklisten"
       },
       {
         "id": "inventory",
         "sectionClass": "section section--light",
         "reverse": true,
-        "subtitle": "Lager & indkøb",
-        "title": "Spor hver vare, fra lager til kundelokation",
-        "body": "Administrer lagerbeholdning på tværs af flere lagerlokationer, opret indkøbsordrer til leverandører, følg lagerniveauer og byg pakkelister til hvad hvert team skal bruge på ruten. Medarbejdere rapporterer forbrug direkte fra opgavevisningen.",
-        "badges": ["Lagervarer", "Lagerlokationer", "Indkøbsordrer", "Leverandører", "Pakkelister", "Lagerniveauer", "Vaskerikurve"],
-        "screenshot": "Screenshot: Lagerliste med lagerniveauer + lagerlokationer",
-        "screenshotAlt": "Alt: Indkøbsordredetalje eller pakkeskabelon"
+        "subtitle": "Hold styr på lageret",
+        "title": "Hvert produkt og hver maskine, pr. lager",
+        "body": "Hold styr på rengøringsmidler, udstyr, tekstiler og arbejdstøj, på firmaets lager og ude hos kunderne. Se hvad hvert lager rummer, og hvad det er værd, registrér hvad der flyttes, og se hvad der er ved at slippe op.",
+        "badges": [
+          "Varer",
+          "Lagre",
+          "Lagerbevægelser",
+          "Minimumsbeholdning"
+        ],
+        "image": "/images/platform/inventory-stock.webp",
+        "imageAlt": "Lagerlisten: varer efter type og lager, med antal, pris og værdi"
+      },
+      {
+        "id": "team",
+        "sectionClass": "section",
+        "reverse": false,
+        "subtitle": "Hold holdet opdateret",
+        "title": "Instruktioner, der når frem til dem, der gør arbejdet",
+        "body": "Notifikationer fortæller hver medarbejder, hvad der er ændret. Chatten samler spørgsmålene ét sted i stedet for på private telefoner. Korte tests i appen viser, om oplæringen har sat sig.",
+        "badges": [
+          "Notifikationer",
+          "Chat",
+          "Tests"
+        ],
+        "image": "/images/platform/app-home-phone.webp",
+        "imageAlt": "Medarbejder-appens forside: de næste besøg og en vejledning, der skal læses",
+        "phone": true
       },
       {
         "id": "crm",
-        "sectionClass": "section",
-        "reverse": false,
-        "subtitle": "Salg & CRM",
-        "title": "Fra lead til underskrevet kontrakt",
-        "body": "Byg professionelle tilbud med udstyrslister, rengøringsskemaer og autogenererede PDF'er. Kør emailsekvenser til at pleje leads med åbnings-/kliksporing. Administrer jeres indbakke med fuld IMAP-integration. Opret et prisbibliotek med ydelser, tilvalg og opsigelsesbetingelser.",
-        "badges": ["Tilbudsbygger", "PDF-generering", "Email-automatisering", "Leadstyring", "IMAP-indbakke", "Prisbibliotek", "Produktbibliotek", "Vinduespolering-konfiguration"],
-        "screenshot": "Screenshot: Tilbudsdetalje med rengøringsskema + PDF-forhåndsvisning",
-        "screenshotAlt": "Alt: Emailsekvens-liste eller lead-pipeline"
-      },
-      {
-        "id": "documents",
         "sectionClass": "section section--light",
         "reverse": true,
-        "subtitle": "Dokumenter & analyser",
-        "title": "Skabeloner, signaturer og datadrevne beslutninger",
-        "body": "Opret dokumentskabeloner med pladsholdere, der automatisk udfyldes fra jeres data, send til e-signering og generer kunderapporter. Følg opgave-KPI'er, medarbejderperformance, kunderentabilitet og feedbackanalyser fra et samlet dashboard.",
-        "badges": ["Dokumentskabeloner", "E-signaturer", "Plantegninger", "Fotogallerier", "Opgave-KPI-dashboard", "Medarbejderperformance", "Rentabilitetsanalyser", "Feedbackanalyser", "Eksportcenter"],
-        "screenshot": "Screenshot: Opgave-KPI-dashboard eller rentabilitetsanalyser",
-        "screenshotAlt": "Alt: Dokumentskabelon-builder eller e-signaturflow"
+        "subtitle": "Vind nye opgaver",
+        "title": "Fra det første opkald til et underskrevet dokument",
+        "body": "Hav jeres leadlister ét sted og alle opkald registreret. Optag et møde, og få resumé og noter skrevet for jer. Send et tilbud som et link, se hvornår kunden åbner det, og få dokumenter underskrevet digitalt.",
+        "badges": [
+          "Leads",
+          "Opkaldslog",
+          "Mødenoter",
+          "Tilbud",
+          "Digital underskrift"
+        ],
+        "screenshot": "Skærmbillede: et tilbud sendt som et link",
+        "screenshotAlt": "Et tilbud, som kunden ser det"
       }
     ],
     "admin": {
-      "title": "Platformsadministration",
-      "body": "For platformsoperatører: opret lejere, tildel prisplaner, styr moduladgang per virksomhed, sæt ressourcekvoter (brugere, lager, medarbejdere, kunder) og administrer abonnementsfakturering — alt fra en dedikeret administrationskonsol."
+      "title": "Vist med opdigtede data",
+      "body": "Alle skærmbilleder på disse sider kommer fra en testvirksomhed med opdigtede kunder og medarbejdere, markeret (FAKE). Jeres virksomhed ser sine egne data, og kun dem."
     },
     "cta": {
       "title": "Se det i praksis",
-      "body": "Book en 30-minutters demo, så viser vi jer de moduler, der betyder mest for jeres forretning.",
+      "body": "Book en demo på 30 minutter, så viser vi jer de dele, der betyder mest for jeres virksomhed.",
       "cta_demo": "Book en demo",
       "cta_pricing": "Se priser"
     }

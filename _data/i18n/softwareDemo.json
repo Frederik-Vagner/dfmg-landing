@@ -24,13 +24,13 @@
       "option_16_50": "16-50 employees",
       "option_50plus": "50+ employees",
       "label_message": "What are you most interested in?",
-      "placeholder_message": "E.g. scheduling & invoicing, payroll, full accounting...",
+      "placeholder_message": "E.g. the schedule, the employee app, photos from every visit...",
       "submit": "Request Demo",
       "email_subject": "Demo request - DFMG Platform"
     },
     "visual": {
       "placeholder_text": "Product preview video or dashboard screenshot",
-      "placeholder_hint": "Recommended: 90s Loom showing calendar → task → invoice flow"
+      "placeholder_hint": "Recommended: 90s Loom showing calendar → task → check-in → photos"
     },
     "trust": {
       "no_commitment": "No commitment required",
@@ -74,13 +74,13 @@
       "option_16_50": "16-50 medarbejdere",
       "option_50plus": "50+ medarbejdere",
       "label_message": "Hvad er du mest interesseret i?",
-      "placeholder_message": "F.eks. planlægning og fakturering, løn, fuld bogføring...",
+      "placeholder_message": "F.eks. vagtplanen, medarbejder-appen, billeder fra hvert besøg...",
       "submit": "Bestil demo",
       "email_subject": "Demoforespørgsel - DFMG Platform"
     },
     "visual": {
       "placeholder_text": "Produktvideo eller skærmbillede af dashboardet",
-      "placeholder_hint": "Anbefalet: 90s Loom der viser kalender → opgave → faktura-flow"
+      "placeholder_hint": "Anbefalet: 90s Loom der viser kalender → opgave → check-in → billeder"
     },
     "trust": {
       "no_commitment": "Ingen forpligtelse",

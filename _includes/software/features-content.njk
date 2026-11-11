@@ -23,6 +23,9 @@
                     </div>
                 </div>
                 <div>
+                    {% if section.image %}
+                    <img src="{{ section.image }}" width="{{ section.image | imgWidth }}" height="{{ section.image | imgHeight }}" alt="{{ section.imageAlt }}" class="screenshot{% if section.phone %} screenshot--phone{% endif %}" loading="lazy" decoding="async" data-photo-slot="features-{{ loop.index }}">
+                    {% else %}
                     <div class="screenshot-placeholder screenshot-placeholder--light" data-photo-slot="features-{{ loop.index }}" data-photo-status="missing" data-photo-brief="{{ section.screenshotAlt | replace('Alt: ', '') | escape }}">
                         <div>
                             <iconify-icon icon="fluent:image-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
@@ -30,6 +33,7 @@
                             {# intern note til alt-tekst, ikke til visning: {{ section.screenshotAlt }} #}
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@
       "subtitle": "OUR STORY",
       "title": "From spreadsheets to 40+ modules",
       "body1": "DFMG started as a facility service company in Denmark. Like every small service business, we managed schedules in spreadsheets, tracked invoices in one system, payroll in another, and client communication through a mix of email and phone calls.",
-      "body2": "We started building tools to solve our own problems. A task scheduler. An invoice generator. A time tracker. One tool led to another, and before we knew it, we had built a complete platform that runs every aspect of our operation.",
+      "body2": "We started building tools to solve our own problems. A task scheduler. A time tracker. One tool led to another, and before we knew it, we had built a complete platform that runs every aspect of our operation.",
       "body3": "Today, we use DFMG Platform to run our own cleaning business — and we're making it available to other Danish service companies who face the same challenges we did.",
       "placeholder_text": "Team photo or founder at work",
       "placeholder_hint": "Best: candid shot, not staged corporate portrait"
@@ -20,9 +20,9 @@
       "card1_title": "Practitioner-built",
       "card1_desc": "Every feature exists because we needed it in our own business. We don't build based on market research — we build based on daily operational reality.",
       "card2_title": "Danish-first",
-      "card2_desc": "We're not a US product with Danish compliance bolted on. eIndkomst, SKAT, Danish holiday law, e-Faktura, NemKonto — it's all native, not an afterthought.",
+      "card2_desc": "We're not a foreign product with Danish added later. It is built in Denmark, in Danish and English, around how Danish service companies work.",
       "card3_title": "One connected system",
-      "card3_desc": "When an employee logs hours, it flows into invoicing, payroll, profitability analytics, and client reports. No manual re-entry, no data silos, no sync issues."
+      "card3_desc": "When an employee checks in or takes a photo, the office sees it on the visit straight away. No manual re-entry, no data silos, no sync issues."
     },
     "tech": {
       "subtitle": "TECHNOLOGY",
@@ -59,7 +59,7 @@
       "subtitle": "VORES HISTORIE",
       "title": "Fra regneark til 40+ moduler",
       "body1": "DFMG startede som en facility service-virksomhed i Danmark. Som enhver lille servicevirksomhed styrede vi vagtplaner i regneark, holdt styr på fakturaer i ét system, løn i et andet, og kundekommunikation via en blanding af e-mail og telefonopkald.",
-      "body2": "Vi begyndte at bygge værktøjer til at løse vores egne udfordringer. En opgaveplanlægger. En fakturagenerator. Et tidsregistreringssystem. Ét værktøj førte til det næste, og inden vi vidste af det, havde vi bygget en komplet platform, der styrer alle dele af vores drift.",
+      "body2": "Vi begyndte at bygge værktøjer til at løse vores egne udfordringer. En opgaveplanlægger. Et tidsregistreringssystem. Ét værktøj førte til det næste, og inden vi vidste af det, havde vi bygget en komplet platform, der styrer alle dele af vores drift.",
       "body3": "I dag bruger vi DFMG Platform til at drive vores egen rengøringsvirksomhed — og nu gør vi den tilgængelig for andre danske servicevirksomheder, der står med de samme udfordringer, som vi selv gjorde.",
       "placeholder_text": "Teamfoto eller grundlægger på arbejde",
       "placeholder_hint": "Bedst: naturligt billede, ikke et opstillet firmaportræt"
@@ -70,9 +70,9 @@
       "card1_title": "Bygget af praktikere",
       "card1_desc": "Hver eneste funktion eksisterer, fordi vi selv havde brug for den i vores virksomhed. Vi bygger ikke ud fra markedsanalyser — vi bygger ud fra daglig operationel virkelighed.",
       "card2_title": "Dansk først",
-      "card2_desc": "Vi er ikke et amerikansk produkt med dansk lovgivning påklistret bagefter. eIndkomst, SKAT, ferielov, e-Faktura, NemKonto — det hele er indbygget fra dag ét.",
+      "card2_desc": "Vi er ikke et udenlandsk produkt, der har fået dansk sat på bagefter. Det er bygget i Danmark, på dansk og engelsk, efter hvordan danske servicevirksomheder arbejder.",
       "card3_title": "Ét sammenhængende system",
-      "card3_desc": "Når en medarbejder registrerer timer, flyder det automatisk videre til fakturering, løn, rentabilitetsanalyser og kunderapporter. Ingen manuel genindtastning, ingen datasiloer, ingen synkroniseringsproblemer."
+      "card3_desc": "Når en medarbejder checker ind eller tager et billede, ser kontoret det på besøget med det samme. Ingen manuel genindtastning, ingen datasiloer, ingen synkroniseringsproblemer."
     },
     "tech": {
       "subtitle": "TEKNOLOGI",

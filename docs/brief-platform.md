@@ -21,16 +21,20 @@ One system for the whole operation, built by a service company that runs on it e
 
 ## What we may say
 
-The modules and areas on the features page, as they are described there today:
+Only what [platform-capabilities.md](platform-capabilities.md) marks LIVE. Today that is:
 
-- Daily operations: calendar, tasks, time tracking, inspections, quality checks, recurring tasks, task reports, photo documentation
-- Clients: client portal, location guides, feedback, facility status, booking, contact persons, floor plans
-- Employees: employee portal, holidays, handbook, improvement system, tests, org diagram, team overview, notifications
-- Finance: Danish chart of accounts, invoicing, e-Faktura, credit notes, bank reconciliation, BankConnect, vendor bills, VAT reports, income statement, balance sheet, journal entries
-- Payroll: payroll runs, salary profiles, payslips, eIndkomst/SKAT, holiday pay, pension and ATP, bank payment export
-- Inventory: items, storage locations, purchase orders, suppliers, loadout templates, stock levels
-- Sales: offer builder, PDF generation, email automation, lead management, IMAP inbox, pricing and product libraries
-- Documents and analytics: document templates, e-signatures, photo galleries, KPI dashboards, profitability and feedback analytics, export
+- Plan the week: the schedule (every visit by client, employee and time), recurring visits planned ahead, time off asked for and answered in the app
+- Run the visit: the employee app (browser and iPhone), check-in and check-out per person, chat, notifications
+- Prove the work: before and after photos on every visit, time on site per person against the planned time
+- Keep the team on board: notifications, chat, tests
+- Stock: items by storage, stock movements, low-stock levels
+- Sell: lead lists, the call log, meeting notes from recorded meetings, proposals sent as a link and seen when opened, electronic signatures
+
+A feature marked BUILT or NOT MEASURED there waits until it is LIVE. When one changes status, update that file first, then the copy.
+
+**Finance is on hold.** No bookkeeping, invoicing, e-invoicing, VAT, payroll, bank reconciliation or accounting claims, in any form, until Frederik decides otherwise. Bogføringsloven § 19 requires a digital bookkeeping system to be notified to Erhvervsstyrelsen before it is marketed; the reasons and sources are in [platform-capabilities.md](platform-capabilities.md#finance-hold-legal). The Bank Connect page is the one exception still standing, reduced to payments and statements, pending his decision.
+
+**Screenshots** come from the platform's local test company (invented clients and people, marked "(FAKE)"), never from real company data. The features page says so.
 
 The technology claims on the about page (multi-tenant with isolated schemas, EU-hosted, GDPR, real-time, mobile-ready, modular) are approved as worded there. Don't add new ones.
 
@@ -40,7 +44,7 @@ The technology claims on the about page (multi-tenant with isolated schemas, EU-
 - **Metrics and testimonials.** There are none yet. The metrics bar and testimonial section were removed from the homepage because they held placeholders, and they stay removed until Frederik supplies real, sourced content. Never write a testimonial or quote, not even as a draft, and never put `[X]`-style placeholders in copy; the build fails on them.
 - **Customer names or logos**, unless the task says the customer agreed.
 - **Competitors or other products by name.** Describe the problem ("several separate tools"), not the brands.
-- **Integrations** beyond the ones the features page names today.
+- **Integrations.** None is named on the home or features page today; add one only once it is LIVE.
 
 ## Open questions
 

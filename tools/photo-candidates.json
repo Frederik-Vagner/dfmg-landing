@@ -309,5 +309,50 @@
                 "image": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg"
             }
         ]
+    },
+    "home-hero": {
+        "brief": "",
+        "candidates": [],
+        "chosen": {
+            "file": "/images/platform/schedule-month.webp",
+            "license": "own photo",
+            "date": "2026-11-11"
+        }
+    },
+    "features-3": {
+        "brief": "",
+        "candidates": [],
+        "chosen": {
+            "file": "/images/platform/task-visit-proof.webp",
+            "license": "own photo",
+            "date": "2026-11-11"
+        }
+    },
+    "features-2": {
+        "brief": "",
+        "candidates": [],
+        "chosen": {
+            "file": "/images/platform/app-schedule-phone.webp",
+            "license": "own photo",
+            "date": "2026-11-11"
+        }
+    },
+    "home-walkthrough": {
+        "brief": "",
+        "candidates": [],
+        "chosen": {
+            "file": "/images/platform/app-home-phone.webp",
+            "license": "own photo",
+            "date": "2026-11-11"
+        }
+    },
+    "features-4": {
+        "brief": "",
+        "candidates": [],
+        "chosen": {
+            "file": "/images/platform/inventory-stock.webp",
+            "license": "own photo",
+            "date": "2026-11-11"
+        }
     }
 }

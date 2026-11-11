@@ -29,6 +29,24 @@
     color: var(--gray-muted);
 }
 
+/* ── Screenshot: a real shot of the platform, where its placeholder stood ── */
+.screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin: var(--space-lg) auto 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xl);
+    background: var(--white);
+}
+
+/* A phone shot: the width of a phone, not of the column. */
+.screenshot--phone {
+    max-width: 300px;
+}
+
 /* ── Placeholder Icons ── */
 .placeholder-icon {
     font-size: var(--text-4xl);
