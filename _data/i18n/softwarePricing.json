@@ -49,7 +49,6 @@
         "badge": "",
         "features": [
           "Everything in Professional",
-          "Email automation & sequences",
           "Custom branding",
           "API access",
           "Dedicated support",
@@ -103,7 +102,7 @@
       "items": [
         {
           "question": "How does billing work?",
-          "answer": "We bill monthly or annually. Annual billing comes with a discount. You can switch plans or cancel at any time with 30 days notice."
+          "answer": "We bill monthly or annually. You can switch plans or cancel at any time with 30 days notice."
         },
         {
           "question": "How long does onboarding take?",
@@ -188,7 +187,6 @@
         "badge": "",
         "features": [
           "Alt i Professional",
-          "Email-automatisering & sekvenser",
           "Eget branding",
           "API-adgang",
           "Dedikeret support",
@@ -242,7 +240,7 @@
       "items": [
         {
           "question": "Hvordan fungerer faktureringen?",
-          "answer": "Vi fakturerer månedligt eller årligt. Årlig betaling giver rabat. I kan skifte plan eller opsige når som helst med 30 dages varsel."
+          "answer": "Vi fakturerer månedligt eller årligt. I kan skifte plan eller opsige når som helst med 30 dages varsel."
         },
         {
           "question": "Hvor lang tid tager onboarding?",
