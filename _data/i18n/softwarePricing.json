@@ -90,7 +90,6 @@
           "name": "Sales & documents",
           "rows": [
             { "module": "Offer Builder", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Email Automation", "starter": false, "professional": false, "enterprise": true },
             { "module": "Document Templates", "starter": false, "professional": true, "enterprise": true },
             { "module": "Analytics & KPI", "starter": false, "professional": true, "enterprise": true }
           ]
@@ -228,7 +227,6 @@
           "name": "Salg & dokumenter",
           "rows": [
             { "module": "Tilbudsbygger", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Email-automatisering", "starter": false, "professional": false, "enterprise": true },
             { "module": "Dokumentskabeloner", "starter": false, "professional": true, "enterprise": true },
             { "module": "Analyser & KPI", "starter": false, "professional": true, "enterprise": true }
           ]
