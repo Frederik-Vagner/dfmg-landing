@@ -6,30 +6,25 @@ These are for Frederik to supply. Testimonials, metrics and quotes come from rea
 
 ---
 
-## Screenshots (8 needed)
+## Screenshots
 
-Take these from your actual platform. Use a clean tenant with realistic data.
-Recommended: 1440x900 browser window, crop to content area (no browser chrome).
-Export as WebP, keep under 200KB each. Save to `/images/platform/`.
+Taken 11 Nov 2026 from the platform's local test company (seeded, invented clients and people marked "(FAKE)"), never from real data. Desktop at 1440 px and phone at 390 px, both at 2x, the office shots cropped to the page area (no sidebar), the UI in English. Added with `npm run photo` into `/images/platform/`.
 
-| # | Filename | What to capture | Where it goes | Tips |
-|---|----------|----------------|---------------|------|
-| 1 | `dashboard.webp` | Admin dashboard with calendar widget, recent tasks, KPIs | Homepage hero, Demo page sidebar | Show a week with real-looking tasks across multiple clients |
-| 2 | `calendar-week.webp` | Calendar week view with colour-coded tasks + employee assignments | Features → Core Operations | Pick a busy week, multiple employees visible |
-| 3 | `client-detail.webp` | Client detail page showing location guide sections | Features → Client Management | Expand at least one guide section so content is visible |
-| 4 | `employee-mobile.webp` | Employee portal on mobile — task list or today view | Features → Employee Management | Use browser DevTools mobile emulation (iPhone 14 Pro) |
-| 5 | `billing-overview.webp` | Billing overview with invoice list, statuses, e-Faktura badge | Features → Financial Suite | Show mix of draft/sent/paid invoices |
-| 6 | `payroll-run.webp` | Payroll run detail with employee entries | Features → Payroll | Show calculated amounts, not empty state |
-| 7 | `inventory-list.webp` | Inventory list with stock levels + storage location badges | Features → Inventory | Include a few low-stock warnings for visual interest |
-| 8 | `offer-detail.webp` | Offer detail page with cleaning scheme or PDF preview | Features → CRM & Sales | Show the professional PDF output if possible |
-| 9 | `analytics-kpi.webp` | Task KPI dashboard or profitability analytics charts | Features → Documents & Analytics | Show graphs with data, not empty charts |
+| Slot | File | Shows |
+|---|---|---|
+| home-hero, features-1 | `schedule-month.webp` | The schedule, a month of visits, hours per week |
+| features-2 | `app-schedule-phone.webp` | Employee app, the week's visits (phone) |
+| features-3 | `task-visit-proof.webp` | A completed visit: crew, check-in and check-out times, time report, checklist |
+| features-4 | `inventory-stock.webp` | Inventory by type and storage, with value |
+| home-walkthrough, features-5 | `app-home-phone.webp` | Employee app home: next visits (phone) |
 
-**Bonus screenshots (nice to have):**
-- Client portal view (what your clients see)
-- Org diagram
-- Document template builder
-- Floor plan view
-- Inspection checklist on mobile
+Still to take:
+
+- **features-6 (Win new work)**: a proposal as the client sees it. The test company has no deal with a proposal yet.
+- **A visit with real before and after photos.** The test company's photo files do not exist locally, so the visit shot shows "No photos from this visit yet".
+- **Finance shots (billing, payroll)**: dropped while finance is on hold (see [platform-capabilities.md](platform-capabilities.md)).
+
+To retake: run the platform's smoke-settings server on its own port against the `fake` schema, log in as the test company's administrator with the language set to English, and capture `main.app-main` only.
 
 ---
 
@@ -175,15 +170,9 @@ Can be a simple SVG or even a clean screenshot from a diagramming tool (Excalidr
 
 ## Content Checklist
 
-- [ ] Screenshot 1: Dashboard
-- [ ] Screenshot 2: Calendar week view
-- [ ] Screenshot 3: Client detail + location guide
-- [ ] Screenshot 4: Employee mobile view
-- [ ] Screenshot 5: Billing overview
-- [ ] Screenshot 6: Payroll run
-- [ ] Screenshot 7: Inventory list
-- [ ] Screenshot 8: Offer detail
-- [ ] Screenshot 9: Analytics KPI
+- [x] Screenshots: schedule, visit, employee app (two), inventory
+- [ ] Screenshot: proposal as the client sees it
+- [ ] Screenshot: a visit with before and after photos
 - [ ] Product video (60-90s Loom)
 - [ ] Founder testimonial text
 - [ ] Founder photo (or reuse frederik.webp)

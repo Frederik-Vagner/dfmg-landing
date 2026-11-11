@@ -15,40 +15,40 @@
     ],
     "overview": {
       "subtitle": "Direct Bank integration",
-      "title": "Pay, reconcile, and report — without leaving the platform",
-      "body1": "Bank Connect is the Danish banking infrastructure that lets ERP systems communicate directly with banks. Because DFMG Platform is a whitelisted provider, your company gets seamless access to payments, account statements, and automated reconciliation — all from the same system you use to manage operations, invoicing, and payroll.",
-      "body2": "No manual bank file exports. No switching between systems. Payments flow directly from your invoices and payroll runs to your bank, and statements flow back for automatic reconciliation.",
+      "title": "Pay and fetch statements — without leaving the platform",
+      "body1": "Bank Connect is the Danish banking infrastructure that lets ERP systems communicate directly with banks. Because DFMG Platform is a whitelisted provider, your company can send payments and fetch account statements from the same system you use to run your operations.",
+      "body2": "No manual bank file exports. No switching between systems.",
       "visual_title": "How it works",
       "steps": [
-        "Create invoices or payroll in DFMG Platform",
+        "Prepare a payment in DFMG Platform",
         "Payments are sent directly to your bank",
         "Bank statements flow back automatically",
-        "Reconciliation happens in real time"
+        "Each payment's reply from the bank is shown"
       ]
     },
     "benefits": [
       {
         "icon": "fluent:flash-20-filled",
         "title": "Instant payments",
-        "desc": "Send domestic transfers (standard, same day, or express), cross-border payments, SEPA, and payroll — directly from the platform to your bank."
+        "desc": "Send domestic transfers (standard, same day, or express), cross-border payments and SEPA — directly from the platform to your bank."
       },
       {
         "icon": "fluent:arrow-sync-20-filled",
-        "title": "Auto reconciliation",
-        "desc": "Account statements and entry details are fetched automatically. The platform matches transactions to invoices and bookkeeping entries for you."
+        "title": "Statements fetched for you",
+        "desc": "Account statements and entry details are fetched automatically, so you see what came in and went out without logging in to the bank."
       },
       {
         "icon": "fluent:shield-20-filled",
         "title": "Validated & secure",
-        "desc": "Every payment is validated through PAIN.002 replies — technical delivery control, payment validation, and bookkeeping confirmation built into the flow."
+        "desc": "Every payment is validated through PAIN.002 replies — technical delivery control and payment validation built into the flow."
       }
     ],
     "functions": {
       "subtitle": "Full coverage",
       "title": "Every Bank Connect function, supported",
-      "body1": "DFMG Platform supports the complete Bank Connect function set. From domestic and international payments to automated bookkeeping from PAIN.002 and CAMT.054 messages — nothing is missing.",
+      "body1": "DFMG Platform supports the Bank Connect payment and statement functions, from domestic and international payments to PAIN.002 replies and CAMT.054 notifications.",
       "body2": "We use the XML ISO-20022 standard as our primary format, and also support EDIFACT and proprietary bank-specific formats where needed.",
-      "badges": ["Payments", "SEPA", "Payroll", "Statements", "PAIN.002", "CAMT.054", "ISO-20022", "EDIFACT", "Auto Reconciliation"],
+      "badges": ["Payments", "SEPA", "Statements", "PAIN.002", "CAMT.054", "ISO-20022", "EDIFACT"],
       "table_title": "DFMG Platform — Bank Connect functions",
       "categories": [
         {
@@ -62,8 +62,7 @@
             "Cross-border transfers — Standard",
             "Cross-border transfers — Express",
             "SEPA (EURO payments)",
-            "ICM — payments from foreign accounts",
-            "Payroll"
+            "ICM — payments from foreign accounts"
           ]
         },
         {
@@ -80,8 +79,7 @@
           "name": "Replies (PAIN.002)",
           "items": [
             "Technical control of the delivery",
-            "Validation of payments (only negative)",
-            "Validation of bookkeeping"
+            "Validation of payments (only negative)"
           ]
         },
         {
@@ -89,10 +87,7 @@
           "name": "Other functions",
           "items": [
             "Automatic user approval of payments",
-            "Batch execution",
-            "Automatic reconciliation of accounts",
-            "Automatic bookkeeping via PAIN.002",
-            "Automatic bookkeeping via CAMT.054"
+            "Batch execution"
           ]
         },
         {
@@ -112,7 +107,7 @@
     },
     "cta": {
       "title": "See Bank Connect in action",
-      "body": "Book a demo and we'll show you how payments, reconciliation, and bank statements work inside DFMG Platform.",
+      "body": "Book a demo and we'll show you how payments and bank statements work inside DFMG Platform.",
       "cta_demo": "Book a demo",
       "cta_features": "See all features"
     }
@@ -133,40 +128,40 @@
     ],
     "overview": {
       "subtitle": "Direkte bankintegration",
-      "title": "Betal, afstem og rapportér — uden at forlade platformen",
-      "body1": "Bank Connect er den danske bankinfrastruktur, der lader ERP-systemer kommunikere direkte med banker. Fordi DFMG Platform er en hvidlistet udbyder, får din virksomhed problemfri adgang til betalinger, kontoudtog og automatisk afstemning — alt sammen fra det samme system, du bruger til drift, fakturering og løn.",
-      "body2": "Ingen manuelle bankfileksporter. Ingen skift mellem systemer. Betalinger flyder direkte fra dine fakturaer og lønkørsler til din bank, og kontoudtog kommer automatisk retur til afstemning.",
+      "title": "Betal og hent kontoudtog — uden at forlade platformen",
+      "body1": "Bank Connect er den danske bankinfrastruktur, der lader ERP-systemer kommunikere direkte med banker. Fordi DFMG Platform er en hvidlistet udbyder, kan din virksomhed sende betalinger og hente kontoudtog fra det samme system, du bruger til at drive din virksomhed.",
+      "body2": "Ingen manuelle bankfileksporter. Ingen skift mellem systemer.",
       "visual_title": "Sådan fungerer det",
       "steps": [
-        "Opret fakturaer eller lønkørsler i DFMG Platform",
+        "Klargør en betaling i DFMG Platform",
         "Betalinger sendes direkte til din bank",
         "Kontoudtog hentes automatisk tilbage",
-        "Afstemning sker i realtid"
+        "Bankens svar på hver betaling vises"
       ]
     },
     "benefits": [
       {
         "icon": "fluent:flash-20-filled",
         "title": "Øjeblikkelige betalinger",
-        "desc": "Send indenlandske overførsler (standard, same day eller ekspres), udenlandske betalinger, SEPA og løn — direkte fra platformen til din bank."
+        "desc": "Send indenlandske overførsler (standard, same day eller ekspres), udenlandske betalinger og SEPA — direkte fra platformen til din bank."
       },
       {
         "icon": "fluent:arrow-sync-20-filled",
-        "title": "Automatisk afstemning",
-        "desc": "Kontoudtog og posteringsdetaljer hentes automatisk. Platformen matcher transaktioner med fakturaer og bogføringsposter for dig."
+        "title": "Kontoudtog hentes for dig",
+        "desc": "Kontoudtog og posteringsdetaljer hentes automatisk, så du ser, hvad der er gået ind og ud, uden at logge på banken."
       },
       {
         "icon": "fluent:shield-20-filled",
         "title": "Valideret og sikker",
-        "desc": "Hver betaling valideres via PAIN.002-svar — teknisk leveringskontrol, betalingsvalidering og bogføringsbekræftelse er en integreret del af flowet."
+        "desc": "Hver betaling valideres via PAIN.002-svar — teknisk leveringskontrol og betalingsvalidering er en integreret del af flowet."
       }
     ],
     "functions": {
       "subtitle": "Fuld dækning",
       "title": "Alle Bank Connect-funktioner, understøttet",
-      "body1": "DFMG Platform understøtter det komplette Bank Connect-funktionssæt. Fra indenlandske og internationale betalinger til automatisk bogføring fra PAIN.002- og CAMT.054-meddelelser — intet mangler.",
+      "body1": "DFMG Platform understøtter Bank Connects funktioner til betalinger og kontoudtog, fra indenlandske og internationale betalinger til PAIN.002-svar og CAMT.054-notifikationer.",
       "body2": "Vi bruger XML ISO-20022-standarden som primært format og understøtter også EDIFACT og proprietære bankspecifikke formater efter behov.",
-      "badges": ["Betalinger", "SEPA", "Løn", "Kontoudtog", "PAIN.002", "CAMT.054", "ISO-20022", "EDIFACT", "Automatisk afstemning"],
+      "badges": ["Betalinger", "SEPA", "Kontoudtog", "PAIN.002", "CAMT.054", "ISO-20022", "EDIFACT"],
       "table_title": "DFMG Platform — Bank Connect-funktioner",
       "categories": [
         {
@@ -180,8 +175,7 @@
             "Udenlandske overførsler — Standard",
             "Udenlandske overførsler — Ekspres",
             "SEPA (EURO-betalinger)",
-            "ICM — betalinger fra udenlandske konti",
-            "Løn"
+            "ICM — betalinger fra udenlandske konti"
           ]
         },
         {
@@ -198,8 +192,7 @@
           "name": "Svar (PAIN.002)",
           "items": [
             "Teknisk kontrol af leveringen",
-            "Validering af betalinger (kun negative)",
-            "Validering af bogføring"
+            "Validering af betalinger (kun negative)"
           ]
         },
         {
@@ -207,10 +200,7 @@
           "name": "Øvrige funktioner",
           "items": [
             "Automatisk brugergodkendelse af betalinger",
-            "Batchudførelse",
-            "Automatisk afstemning af konti",
-            "Automatisk bogføring via PAIN.002",
-            "Automatisk bogføring via CAMT.054"
+            "Batchudførelse"
           ]
         },
         {
@@ -230,7 +220,7 @@
     },
     "cta": {
       "title": "Se Bank Connect i aktion",
-      "body": "Book en demo, og vi viser dig, hvordan betalinger, afstemning og kontoudtog fungerer i DFMG Platform.",
+      "body": "Book en demo, og vi viser dig, hvordan betalinger og kontoudtog fungerer i DFMG Platform.",
       "cta_demo": "Book en demo",
       "cta_features": "Se alle funktioner"
     }

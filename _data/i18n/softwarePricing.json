@@ -16,7 +16,6 @@
           "Calendar & task scheduling",
           "Client management",
           "Employee portal",
-          "Basic invoicing",
           "Time tracking",
           "Up to 10 employees"
         ],
@@ -32,8 +31,6 @@
         "badge": "Most Popular",
         "features": [
           "Everything in Starter",
-          "Full accounting & e-Faktura",
-          "Payroll with eIndkomst",
           "Inventory & purchase orders",
           "Offer builder & CRM",
           "Document templates",
@@ -52,7 +49,6 @@
         "badge": "",
         "features": [
           "Everything in Professional",
-          "BankConnect integration",
           "Email automation & sequences",
           "Custom branding",
           "API access",
@@ -92,16 +88,6 @@
           ]
         },
         {
-          "name": "Finance & payroll",
-          "rows": [
-            { "module": "Basic Invoicing", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Full Accounting", "starter": false, "professional": true, "enterprise": true },
-            { "module": "e-Faktura", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Payroll & eIndkomst", "starter": false, "professional": true, "enterprise": true },
-            { "module": "BankConnect", "starter": false, "professional": false, "enterprise": true }
-          ]
-        },
-        {
           "name": "Sales & documents",
           "rows": [
             { "module": "Offer Builder", "starter": false, "professional": true, "enterprise": true },
@@ -121,7 +107,7 @@
         },
         {
           "question": "How long does onboarding take?",
-          "answer": "Most companies are up and running within a week. We help you import existing data (employees, clients) and configure the modules you need. Larger setups with full accounting migration may take 2-3 weeks."
+          "answer": "Most companies are up and running within a week. We help you import existing data (employees, clients) and configure the modules you need."
         },
         {
           "question": "Where is my data stored?",
@@ -130,10 +116,6 @@
         {
           "question": "Can I add modules later?",
           "answer": "Absolutely. The platform is fully modular. Start with what you need and enable additional modules as your business grows. No data migration needed — everything is already connected."
-        },
-        {
-          "question": "Is Danish tax/payroll compliance included?",
-          "answer": "Yes. eIndkomst reporting to SKAT, Danish holiday law calculations, ATP/pension, and e-Faktura support are built in. We keep the platform updated with regulatory changes."
         },
         {
           "question": "Do you offer a free trial?",
@@ -173,7 +155,6 @@
           "Kalender & opgaveplanlægning",
           "Kundestyring",
           "Medarbejderportal",
-          "Basal fakturering",
           "Tidsregistrering",
           "Op til 10 medarbejdere"
         ],
@@ -189,8 +170,6 @@
         "badge": "Mest Populær",
         "features": [
           "Alt i Starter",
-          "Fuld bogføring & e-Faktura",
-          "Løn med eIndkomst",
           "Lager & indkøbsordrer",
           "Tilbudsbygger & CRM",
           "Dokumentskabeloner",
@@ -209,7 +188,6 @@
         "badge": "",
         "features": [
           "Alt i Professional",
-          "BankConnect-integration",
           "Email-automatisering & sekvenser",
           "Eget branding",
           "API-adgang",
@@ -249,16 +227,6 @@
           ]
         },
         {
-          "name": "Økonomi & løn",
-          "rows": [
-            { "module": "Basal Fakturering", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Fuld Bogføring", "starter": false, "professional": true, "enterprise": true },
-            { "module": "e-Faktura", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Løn & eIndkomst", "starter": false, "professional": true, "enterprise": true },
-            { "module": "BankConnect", "starter": false, "professional": false, "enterprise": true }
-          ]
-        },
-        {
           "name": "Salg & dokumenter",
           "rows": [
             { "module": "Tilbudsbygger", "starter": false, "professional": true, "enterprise": true },
@@ -278,7 +246,7 @@
         },
         {
           "question": "Hvor lang tid tager onboarding?",
-          "answer": "De fleste virksomheder er oppe at køre inden for en uge. Vi hjælper med at importere eksisterende data (medarbejdere, kunder) og konfigurere de moduler, I har brug for. Større opsætninger med fuld regnskabsmigrering kan tage 2-3 uger."
+          "answer": "De fleste virksomheder er oppe at køre inden for en uge. Vi hjælper med at importere eksisterende data (medarbejdere, kunder) og konfigurere de moduler, I har brug for."
         },
         {
           "question": "Hvor opbevares mine data?",
@@ -287,10 +255,6 @@
         {
           "question": "Kan jeg tilføje moduler senere?",
           "answer": "Helt sikkert. Platformen er fuldt modulær. Start med det I har brug for, og aktiver yderligere moduler efterhånden som jeres forretning vokser. Ingen datamigrering nødvendig — alt er allerede forbundet."
-        },
-        {
-          "question": "Er dansk skatte-/løncompliance inkluderet?",
-          "answer": "Ja. eIndkomst-indberetning til SKAT, dansk ferielovsberegning, ATP/pension og e-Faktura-understøttelse er indbygget. Vi holder platformen opdateret med lovgivningsændringer."
         },
         {
           "question": "Tilbyder I en gratis prøveperiode?",
