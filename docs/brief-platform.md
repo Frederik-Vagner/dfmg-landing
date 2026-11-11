@@ -32,7 +32,7 @@ Only what [platform-capabilities.md](platform-capabilities.md) marks LIVE. Today
 
 A feature marked BUILT or NOT MEASURED there waits until it is LIVE. When one changes status, update that file first, then the copy.
 
-**Finance is on hold.** No bookkeeping, invoicing, e-invoicing, VAT, payroll, bank reconciliation or accounting claims, in any form, until Frederik decides otherwise. Bogføringsloven § 19 requires a digital bookkeeping system to be notified to Erhvervsstyrelsen before it is marketed; the reasons and sources are in [platform-capabilities.md](platform-capabilities.md#finance-hold-legal). The Bank Connect page is the one exception still standing, reduced to payments and statements, pending his decision.
+**Finance is on hold.** No bookkeeping, invoicing, e-invoicing, VAT, payroll, bank reconciliation or accounting claims, in any form, until Frederik decides otherwise. Bogføringsloven § 19 requires a digital bookkeeping system to be notified to Erhvervsstyrelsen before it is marketed; the reasons and sources are in [platform-capabilities.md](platform-capabilities.md#finance-hold-legal). The Bank Connect page was removed for the same reason; its URLs redirect to the features page.
 
 **Screenshots** come from the platform's local test company (invented clients and people, marked "(FAKE)"), never from real company data. The features page says so.
 
