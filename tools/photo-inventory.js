@@ -668,6 +668,14 @@ function main() {
         console.error("photo-inventory: no _site; run the Eleventy build first");
         process.exit(1);
     }
+    // The markers are stripped after a run, so a second run on the same build
+    // would report every slot as real. A stamp file marks a processed build;
+    // npm run build starts from an empty _site, so it never sees an old one.
+    const stamp = path.join(SITE, ".photo-inventory-done");
+    if (fs.existsSync(stamp)) {
+        console.error("photo-inventory: _site was already processed. Rebuild with npm run build.");
+        process.exit(1);
+    }
     fs.rmSync(path.join(SITE, "internal"), { recursive: true, force: true });
 
     const bgMap = backgroundPhotos();
@@ -675,13 +683,8 @@ function main() {
     // English first, so a shared platform slot takes its headings from the EN page.
     const pages = walk(SITE, ".html").sort((a, b) => a.includes("/software/da/") - b.includes("/software/da/"));
     for (const file of pages) collect(file, bgMap, slots);
-    // The markers are stripped after a run, so a second run on the same build
-    // would report every slot as real.
-    if (![...slots.values()].some((s) => s.status !== "real")) {
-        console.error("photo-inventory: no slot markers in _site; it was already processed. Rebuild with npm run build.");
-        process.exit(1);
-    }
     for (const file of pages) strip(file);
+    fs.writeFileSync(stamp, "");
 
     const list = [...slots.values()];
     const n = (st) => list.filter((s) => s.status === st).length;
