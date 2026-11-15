@@ -38,7 +38,7 @@ A feature marked BUILT or NOT MEASURED there waits until it is LIVE. When one ch
 
 The technology claims on the about page (multi-tenant with isolated schemas, hosted in the EU, two-step login, real-time, mobile-ready, modular) are approved as worded there. Don't add new ones. In particular, until the product changes:
 
-- **"All data stays in the EU"** is not true: database backups are stored in the US, and some services that process data (AI summaries, maps) are outside the EU. Write "the application, the database and photos run in EU data centres".
+- **"All data stays in the EU"** is not true today: not every copy of the data, and not every service that processes it, is in the EU. Write "the application, the database and photos run in EU data centres".
 - **GDPR and data processing agreements**: no DPA exists yet. Don't say "GDPR compliant" or "DPA included".
 - **Languages**: the system is in English, and the Danish translation is under way. Don't call it "Danish-first" or "Danish and English side by side".
 - **The employee app** runs in the phone's browser. It is not in the App Store, so don't say "iPhone app".
