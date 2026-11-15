@@ -8,7 +8,7 @@ These are for Frederik to supply. Testimonials, metrics and quotes come from rea
 
 ## Illustrations (decided 15 Nov 2026)
 
-No screenshots of the platform on the site: no screenshots, screen recordings or copies of its layout, field names, menus or data. The five screenshots taken on 11 Nov 2026 (`/images/platform/*.webp`) are no longer used on the pages; removing the files is a separate request.
+No screenshots of the platform on the site: no screenshots, screen recordings or copies of its layout, field names, menus or data. The five screenshots taken on 11 Nov 2026 (`/images/platform/*.webp`) are deleted in the PR that removes their last use (the platform overview, which also switches the home page's two shots to illustrations).
 
 Each picture is a simple illustration in the site's own style that shows the idea, not the screen: inline SVG in `_includes/illustrations/`, drawn with the site's colour tokens (see `css/components/platform.css`), with no words, numbers or logos in it, so one drawing serves both languages. The alt text, in the page's language, says what the drawing shows. Where a picture adds nothing, the section shows an outcome line with an icon instead.
 

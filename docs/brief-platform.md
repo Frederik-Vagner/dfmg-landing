@@ -47,7 +47,8 @@ An area with fewer than three LIVE blocks starts as a section on the platform ov
 
 The main offer, like a bootcamp: a session where we put the customer's own week into the platform (their clients, their rhythms, their team), so they see their own week run in it. It leads into the paid pilot.
 
-- It is the call to action on Home and on every area page. Name: "Bring your week" ("Tag jeres uge med"); the button can stay "Book a demo" ("Book en demo").
+- It follows the demo. The path is three steps, shown wherever the call to action is: **Book a demo → Bring your week → paid pilot** ("Book en demo → Kom med jeres uge → betalt pilot").
+- It is the call to action on Home and on every area page. Name: "Bring your week" ("Kom med jeres uge"); the button stays "Book a demo" ("Book en demo").
 - Don't write its length, its price or whether it is free until Frederik decides. It is not a free trial.
 
 ## Voice
@@ -109,7 +110,7 @@ The security page (`pages/software/security.html`, copy in `_data/i18n/softwareS
 - **Contact hours**: weekdays 8–16 ("Hverdage 8–16"), on both sides of the site.
 - **Reply time**: "We reply within one working day" ("Vi svarer inden for 1 arbejdsdag").
 - **Pricing**: no prices. Every plan is priced per company and agreed after a demo. Starter covers plan, run and prove; Professional adds stock, tests, the sales tools and the AI assistants; Enterprise has everything in Professional and terms agreed with the customer. The client portal is in every plan. Don't mention that assistants cost per run.
-- **After the demo**: the "Bring your week" session, which leads into a paid pilot. There is no free trial.
+- **After the demo**: the "Bring your week" session ("Kom med jeres uge"), which leads into a paid pilot: Book a demo → Bring your week → paid pilot. There is no free trial.
 - **"40+ modules"**: removed. Don't count modules.
 - **Floor plans**: the page was removed (its URLs redirect to features) until the feature is LIVE. Floor plans are LIVE since the 15 Nov audit: they appear on the operations page; the old page and its redirect stay as they are unless Frederik decides otherwise.
 - **Contact**: the demo page is also the contact page (one form for a demo or a question, with phone, email and hours). `contact.html` redirects there.
@@ -121,5 +122,5 @@ The security page (`pages/software/security.html`, copy in `_data/i18n/softwareS
 - **AI assistants are shown**: a menu entry and a section on the platform overview, never in the hero.
 - **Structure by area**, matching the app's sidebar (see "Areas"), not by job. Plan, run, prove stays the home hero and the story of the operations page.
 - **Size**: no upper limit on the site; words aimed at roughly 5–150 people in the field.
-- **No screenshots** of the platform anywhere on the site, including the five taken on 11 Nov: illustrations or outcome lines instead (see "No screenshots of the platform").
+- **No screenshots** of the platform anywhere on the site, including the five taken on 11 Nov, whose files are deleted once no page uses them: illustrations or outcome lines instead (see "No screenshots of the platform").
 - **"Bring your week"** is the main offer and the call to action on Home and every area page.
