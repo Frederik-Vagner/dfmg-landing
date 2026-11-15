@@ -1,0 +1,156 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "SALES & CRM",
+      "title": "Win the next contract in the system you run the work in",
+      "body": "Find leads in the company register, keep every call on record, get notes from your meetings, send proposals you see opened, and have documents signed online.",
+      "jump_label": "Jump to"
+    },
+    "sections": [
+      {
+        "id": "find-leads",
+        "jump": "Leads",
+        "eyebrow": "FIND LEADS",
+        "title": "Find the companies you want to work for",
+        "body": "Search the company register and turn the results into leads, kept in lists with a priority and a status.",
+        "shot": { "id": "S36", "what": "Finding leads in the company register" }
+      },
+      {
+        "id": "lead-lists",
+        "eyebrow": "LEAD LISTS",
+        "title": "Who to call next, at a glance",
+        "body": "Lead lists with a priority for each, so the next call is always clear.",
+        "shot": { "id": "S16", "what": "A lead list with priorities" }
+      },
+      {
+        "id": "calls",
+        "jump": "Calls",
+        "eyebrow": "CALL LOG",
+        "title": "Every call on record",
+        "body": "Every call is in the call log, beside the lead it belongs to. Before you call, an assistant can prepare a brief.",
+        "shot": { "id": "S17", "what": "Today's calls in the call log" }
+      },
+      {
+        "id": "notes",
+        "eyebrow": "NOTES FROM CALLS AND MEETINGS",
+        "title": "Listen, and get the notes afterwards",
+        "body": "Record a call or a meeting, with the other party's consent, and get a summary with the to-dos.",
+        "shot": { "id": "S18", "what": "Notes from a recorded meeting, with three to-dos" }
+      },
+      {
+        "id": "proposals",
+        "jump": "Proposals",
+        "eyebrow": "PROPOSALS",
+        "title": "Know when your proposal has been read",
+        "body": "Send the proposal as a link. The platform shows when the client opens it, so you call at the right moment.",
+        "shot": { "id": "S19", "what": "A proposal as the client sees it" }
+      },
+      {
+        "id": "signatures",
+        "eyebrow": "E-SIGNATURES",
+        "title": "Documents signed online",
+        "body": "Send a document to be signed and follow its status in the platform.",
+        "shot": { "id": "S21", "what": "The signing status of a document" }
+      },
+      {
+        "id": "tenders",
+        "jump": "Tenders",
+        "eyebrow": "PUBLIC TENDERS",
+        "title": "Tenders you would otherwise miss",
+        "body": "Public tenders that fit your work are found for you, and an assistant analyses each one, so you can decide quickly whether to bid.",
+        "shot": { "id": "S29", "what": "A public tender with the assistant's analysis" }
+      }
+    ],
+    "faq": {
+      "title": "Questions about sales",
+      "items": [
+        { "q": "Can we record calls?", "a": "Yes, with the other party's consent. The recording becomes notes on the lead." },
+        { "q": "Can the client sign online?", "a": "Yes. Documents are signed online, and you see their status in the platform." },
+        { "q": "Which plans include the sales tools?", "a": "Professional and Enterprise." }
+      ]
+    },
+    "cta": {
+      "title": "See a proposal from both sides",
+      "body": "In the demo we show you the office view and the client's view. We reply within one working day.",
+      "cta_demo": "Book a demo",
+      "cta_overview": "See the whole platform"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "SALG OG CRM",
+      "title": "Vind den næste aftale i det system, I driver arbejdet i",
+      "body": "Find leads i CVR-registret, hav hvert opkald registreret, få noter fra jeres møder, send tilbud, som I kan se er åbnet, og få dokumenter underskrevet online.",
+      "jump_label": "Gå til"
+    },
+    "sections": [
+      {
+        "id": "find-leads",
+        "jump": "Leads",
+        "eyebrow": "FIND LEADS",
+        "title": "Find de virksomheder, I vil arbejde for",
+        "body": "Søg i CVR-registret, og gør resultaterne til leads i lister med prioritet og status.",
+        "shot": { "id": "S36", "what": "Søgning efter leads i CVR-registret" }
+      },
+      {
+        "id": "lead-lists",
+        "eyebrow": "LEADLISTER",
+        "title": "Hvem I skal ringe til næste gang, med det samme",
+        "body": "Leadlister med en prioritet for hvert lead, så det næste opkald altid er klart.",
+        "shot": { "id": "S16", "what": "En leadliste med prioriteter" }
+      },
+      {
+        "id": "calls",
+        "jump": "Opkald",
+        "eyebrow": "OPKALDSLOG",
+        "title": "Hvert opkald registreret",
+        "body": "Hvert opkald står i opkaldsloggen ved det lead, det hører til. Før I ringer, kan en assistent forberede et kort overblik.",
+        "shot": { "id": "S17", "what": "Dagens opkald i opkaldsloggen" }
+      },
+      {
+        "id": "notes",
+        "eyebrow": "NOTER FRA OPKALD OG MØDER",
+        "title": "Lyt, og få noterne bagefter",
+        "body": "Optag et opkald eller et møde med den andens samtykke, og få et resumé med opgaverne.",
+        "shot": { "id": "S18", "what": "Noter fra et optaget møde med tre opgaver" }
+      },
+      {
+        "id": "proposals",
+        "jump": "Tilbud",
+        "eyebrow": "TILBUD",
+        "title": "Se, når jeres tilbud er læst",
+        "body": "Send tilbuddet som et link. Platformen viser, når kunden åbner det, så I ringer på det rigtige tidspunkt.",
+        "shot": { "id": "S19", "what": "Et tilbud, som kunden ser det" }
+      },
+      {
+        "id": "signatures",
+        "eyebrow": "DIGITAL UNDERSKRIFT",
+        "title": "Dokumenter underskrevet online",
+        "body": "Send et dokument til underskrift, og følg dets status i platformen.",
+        "shot": { "id": "S21", "what": "Status for et dokument til underskrift" }
+      },
+      {
+        "id": "tenders",
+        "jump": "Udbud",
+        "eyebrow": "OFFENTLIGE UDBUD",
+        "title": "Udbud, I ellers ville gå glip af",
+        "body": "Offentlige udbud, der passer til jeres arbejde, bliver fundet for jer, og en assistent analyserer hvert enkelt, så I hurtigt kan beslutte, om I vil byde.",
+        "shot": { "id": "S29", "what": "Et offentligt udbud med assistentens analyse" }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål om salg",
+      "items": [
+        { "q": "Kan vi optage opkald?", "a": "Ja, med den andens samtykke. Optagelsen bliver til noter på leadet." },
+        { "q": "Kan kunden skrive under online?", "a": "Ja. Dokumenter underskrives online, og I ser deres status i platformen." },
+        { "q": "Hvilke planer har salgsværktøjerne?", "a": "Professional og Enterprise." }
+      ]
+    },
+    "cta": {
+      "title": "Se et tilbud fra begge sider",
+      "body": "I demoen viser vi både kontorets og kundens side. Vi svarer inden for 1 arbejdsdag.",
+      "cta_demo": "Book en demo",
+      "cta_overview": "Se hele platformen"
+    }
+  }
+}
