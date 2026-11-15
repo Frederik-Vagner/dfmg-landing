@@ -1,0 +1,28 @@
+# Fails a PR while a page still has a screenshot placeholder
+# (data-shot-placeholder, see _includes/partials/shot.njk). Netlify's deploy
+# preview builds the same page with the placeholders so it can be reviewed;
+# this check keeps it from merging until they are replaced or removed.
+# Make "no-placeholders" a required check on main.
+name: no-placeholders
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  no-placeholders:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Build with the strict placeholder check
+        env:
+          STRICT_PLACEHOLDERS: "1"
+        run: npm run build

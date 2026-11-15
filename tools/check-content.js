@@ -17,6 +17,11 @@
 //              a decorative image, such as a logo next to its name.
 //   placeholders  no "[X]", "[Your …]", "Lorem ipsum", TODO or FIXME in the
 //              visible text of a built page.
+//   shots      screenshot placeholders (data-shot-placeholder, made by
+//              _includes/partials/shot.njk) are listed but allowed on deploy
+//              previews and local builds. A production build (CONTEXT=production)
+//              or a strict check (STRICT_PLACEHOLDERS=1, the PR check) fails
+//              while one is left, whatever the baseline says.
 //   articles   every file in artikler/ is a .md or .html article in a
 //              category folder. Its front matter is checked during the
 //              Eleventy build (tools/schemas.js), which stops at the first
@@ -316,6 +321,18 @@ function checkFacts() {
     if (!Array.isArray(facts.viaPartner)) report("facts-field:viaPartner", `_data/facts.json: "viaPartner" should be a list`);
 }
 
+// --------------------------------------------------------- screenshot placeholders
+
+// Every data-shot-placeholder on a built page. Kept apart from the problems
+// list, so the baseline can never hide one.
+function shotPlaceholders() {
+    const found = [];
+    for (const file of walk(SITE).filter((f) => f.endsWith(".html") && !rel(f, SITE).startsWith("internal/"))) {
+        for (const m of read(file).matchAll(/\sdata-shot-placeholder="([^"]+)"/g)) found.push({ url: urlOf(file), id: m[1] });
+    }
+    return found;
+}
+
 // ----------------------------------------------------------------------- main
 
 function main() {
@@ -359,6 +376,18 @@ function main() {
         for (const p of fresh) console.error("  - " + p.message);
         console.error("Fix them. The baseline (tools/content-baseline.json) is for problems that existed before this check, not new ones.");
         process.exit(1);
+    }
+
+    const shots = shotPlaceholders();
+    if (shots.length) {
+        const strict = process.env.CONTEXT === "production" || process.env.STRICT_PLACEHOLDERS === "1";
+        const list = shots.map((s) => `  - ${s.url}: ${s.id}`).join("\n");
+        if (strict) {
+            console.error(`check-content: ${shots.length} screenshot placeholder(s) left:\n${list}`);
+            console.error("Replace each with the real shot, or remove it, before the page goes live.");
+            process.exit(1);
+        }
+        console.log(`check-content: ${shots.length} screenshot placeholder(s), allowed on a deploy preview; a production build and the PR check fail on them:\n${list}`);
     }
     console.log(`check-content: OK (${counts.pages} pages, ${counts.articles} articles, ${counts.i18n} i18n files, ${counts.images} images; known debt: ${known.size - fixed.length}).`);
 }
