@@ -3,7 +3,7 @@
     "hero": {
       "subtitle": "DFMG PLATFORM",
       "title": "Plan the week, run every visit and prove the work, in one system",
-      "body": "For cleaning and facility service companies with a team in the field and an office that plans the work. Built by DFMG, a cleaning company that runs its own week on it. The schedule, the employee app and the photos from every visit sit in one place.",
+      "body": "For service companies whose people work at their clients' sites, with a team in the field and an office that plans the work. Built inside DFMG, a facility service company that runs its own week on it. The office, the employee app and the client portal, on the same data.",
       "cta_demo": "Book a demo",
       "cta_features": "See what it does",
       "image_alt": "An illustration of a calendar with three visits in different colours, and the hours per week beside it"
@@ -14,7 +14,7 @@
       "items": [
         {
           "title": "Recurring visits",
-          "text": "Offices, stairwells, shops and institutions cleaned on a fixed rhythm, plus the extra jobs in between."
+          "text": "Offices, stairwells, shops and properties visited on a fixed rhythm, plus the extra jobs in between."
         },
         {
           "title": "A team on the move",
@@ -37,12 +37,43 @@
       "proof_title": "Prove the work",
       "proof_desc": "Before and after photos and the real time on site, per person, on every visit. Answer a client's question with facts.",
       "team_title": "Keep your team on board",
-      "team_desc": "Chat, notifications and short tests in the app, so instructions reach the people doing the work.",
+      "team_desc": "Staff records, availability, time off and short tests in the app, so instructions reach the people doing the work.",
       "stock_title": "Know your stock",
-      "stock_desc": "Cleaning products, equipment and workwear by storage, with what each holds and what is running low.",
+      "stock_desc": "Products, equipment and workwear by storage, with what each holds and what is running low.",
       "sell_title": "Win new work",
       "sell_desc": "Lead lists, every call on record, meeting notes written for you, proposals your client opens online and documents signed electronically.",
+      "comm_title": "Talk to your team",
+      "comm_desc": "The email inbox, WhatsApp with your employees and chat in the app, in one place.",
+      "ai_title": "AI assistants",
+      "ai_desc": "Call briefs and public tenders found and analysed. A person approves every step.",
+      "portal_title": "The client portal",
+      "portal_desc": "Your clients see their visits and the photos from each one.",
       "more_title": "Also in the platform"
+    },
+    "industries": {
+      "subtitle": "INDUSTRIES",
+      "title": "For service companies that work at their clients' sites",
+      "body": "Whatever the visit is, the week works the same way: plan it, do it, show it was done. Also for window cleaning, gardening, pest control, security and other work at clients' sites.",
+      "items": [
+        {
+          "icon": "fluent:building-multiple-20-filled",
+          "title": "Facility service",
+          "text": "Several services at the same client, each with its own rhythm.",
+          "link": "industries/facility-service.html"
+        },
+        {
+          "icon": "fluent:sparkle-20-filled",
+          "title": "Cleaning",
+          "text": "Offices, stairwells, shops and institutions on a fixed rhythm.",
+          "link": "industries/cleaning.html"
+        },
+        {
+          "icon": "fluent:building-home-20-filled",
+          "title": "Property service",
+          "text": "Every property a site of its own, every visit on record.",
+          "link": "industries/property-service.html"
+        }
+      ]
     },
     "walkthrough": {
       "subtitle": "ONE VISIT, START TO FINISH",
@@ -70,8 +101,8 @@
     },
     "why": {
       "subtitle": "WHY DFMG",
-      "title": "Built by a cleaning company, not a software company",
-      "body": "We run our own cleaning business on this platform every day. Each feature exists because we needed it on a real Monday morning, not because someone imagined it. When you call with a question, you talk to people who use the same screens.",
+      "title": "Built inside a facility service company, not a software company",
+      "body": "We run our own facility service company on this platform every day. Each feature exists because we needed it on a real Monday morning, not because someone imagined it. When you call with a question, you talk to people who use the same screens.",
       "cta": "Meet the company behind it"
     },
     "security": {
@@ -106,8 +137,13 @@
       ]
     },
     "cta": {
-      "title": "Ready to run your week from one place?",
-      "body": "Book a 30-minute demo. We show you the parts that matter to your company, in the system we use every day.",
+      "title": "Bring your week",
+      "body": "Book a 30-minute demo. Then bring your clients, your rhythms and your team, and we put your own week into the platform with you. It leads into the paid pilot.",
+      "steps": [
+        "Book a demo",
+        "Bring your week",
+        "Paid pilot"
+      ],
       "cta_demo": "Book a demo",
       "cta_pricing": "See pricing",
       "trust1": "No commitment",
@@ -119,7 +155,7 @@
     "hero": {
       "subtitle": "DFMG PLATFORM",
       "title": "Planlæg ugen, kør hvert besøg og dokumentér arbejdet, i ét system",
-      "body": "Til rengørings- og facility-virksomheder med et hold ude hos kunderne og et kontor, der planlægger arbejdet. Bygget af DFMG, en rengøringsvirksomhed, der selv driver sin uge på det. Vagtplanen, medarbejder-appen og billederne fra hvert besøg samlet ét sted.",
+      "body": "Til servicevirksomheder, hvis folk arbejder hos deres kunder, med et hold ude og et kontor, der planlægger arbejdet. Bygget i DFMG, en facility service-virksomhed, der selv driver sin uge på det. Kontoret, medarbejder-appen og kundeportalen på de samme data.",
       "cta_demo": "Book en demo",
       "cta_features": "Se hvad den kan",
       "image_alt": "En illustration af en kalender med tre besøg i forskellige farver og timerne pr. uge ved siden af"
@@ -130,7 +166,7 @@
       "items": [
         {
           "title": "Faste besøg",
-          "text": "Kontorer, opgange, butikker og institutioner, der rengøres i en fast rytme, plus de ekstra opgaver ind imellem."
+          "text": "Kontorer, opgange, butikker og ejendomme, der besøges i en fast rytme, plus de ekstra opgaver ind imellem."
         },
         {
           "title": "Et hold på farten",
@@ -153,12 +189,43 @@
       "proof_title": "Dokumentér arbejdet",
       "proof_desc": "Før- og efterbilleder og den faktiske tid hos kunden, pr. person, på hvert besøg. Svar kunden med fakta.",
       "team_title": "Hold holdet opdateret",
-      "team_desc": "Chat, notifikationer og korte tests i appen, så instruktionerne når frem til dem, der gør arbejdet.",
+      "team_desc": "Medarbejderoplysninger, rådighed, fravær og korte test i appen, så instruktionerne når frem til dem, der gør arbejdet.",
       "stock_title": "Hold styr på lageret",
-      "stock_desc": "Rengøringsmidler, udstyr og arbejdstøj pr. lager, med hvad hvert lager rummer, og hvad der er ved at slippe op.",
+      "stock_desc": "Produkter, udstyr og arbejdstøj pr. lager, med hvad hvert lager rummer, og hvad der er ved at slippe op.",
       "sell_title": "Vind nye opgaver",
       "sell_desc": "Leadlister, alle opkald registreret, mødenoter skrevet for jer, tilbud kunden åbner online og dokumenter underskrevet digitalt.",
+      "comm_title": "Tal med holdet",
+      "comm_desc": "Indbakken, WhatsApp med jeres medarbejdere og chat i appen samlet ét sted.",
+      "ai_title": "AI-assistenter",
+      "ai_desc": "Overblik før opkald og offentlige udbud fundet og analyseret. Et menneske godkender hvert trin.",
+      "portal_title": "Kundeportalen",
+      "portal_desc": "Jeres kunder ser deres besøg og billederne fra hvert af dem.",
       "more_title": "Også i platformen"
+    },
+    "industries": {
+      "subtitle": "BRANCHER",
+      "title": "Til servicevirksomheder, der arbejder hos deres kunder",
+      "body": "Uanset besøget fungerer ugen på samme måde: planlæg det, udfør det, vis at det er gjort. Også til vinduespudsning, havearbejde, skadedyrsbekæmpelse, sikkerhed og andet arbejde hos kunder.",
+      "items": [
+        {
+          "icon": "fluent:building-multiple-20-filled",
+          "title": "Facility service",
+          "text": "Flere ydelser hos samme kunde, hver med sin egen rytme.",
+          "link": "industries/facility-service.html"
+        },
+        {
+          "icon": "fluent:sparkle-20-filled",
+          "title": "Rengøring",
+          "text": "Kontorer, opgange, butikker og institutioner i en fast rytme.",
+          "link": "industries/cleaning.html"
+        },
+        {
+          "icon": "fluent:building-home-20-filled",
+          "title": "Ejendomsservice",
+          "text": "Hver ejendom sin egen adresse, hvert besøg registreret.",
+          "link": "industries/property-service.html"
+        }
+      ]
     },
     "walkthrough": {
       "subtitle": "ÉT BESØG, FRA START TIL SLUT",
@@ -186,8 +253,8 @@
     },
     "why": {
       "subtitle": "HVORFOR DFMG",
-      "title": "Bygget af en rengøringsvirksomhed, ikke et softwarefirma",
-      "body": "Vi driver vores egen rengøringsvirksomhed på denne platform hver dag. Hver funktion findes, fordi vi selv manglede den en helt almindelig mandag morgen, ikke fordi nogen forestillede sig den. Når I ringer med et spørgsmål, taler I med folk, der bruger de samme skærmbilleder.",
+      "title": "Bygget i en facility service-virksomhed, ikke et softwarefirma",
+      "body": "Vi driver vores egen facility service-virksomhed på denne platform hver dag. Hver funktion findes, fordi vi selv manglede den en helt almindelig mandag morgen, ikke fordi nogen forestillede sig den. Når I ringer med et spørgsmål, taler I med folk, der bruger de samme skærmbilleder.",
       "cta": "Mød virksomheden bag"
     },
     "security": {
@@ -222,8 +289,13 @@
       ]
     },
     "cta": {
-      "title": "Klar til at køre ugen fra ét sted?",
-      "body": "Book en demo på 30 minutter. Vi viser jer de dele, der betyder noget for jeres virksomhed, i det system vi selv bruger hver dag.",
+      "title": "Kom med jeres uge",
+      "body": "Book en demo på 30 minutter. Derefter kommer I med jeres kunder, jeres rytmer og jeres hold, så lægger vi jeres egen uge ind i platformen sammen med jer. Det fører videre til den betalte pilot.",
+      "steps": [
+        "Book en demo",
+        "Kom med jeres uge",
+        "Betalt pilot"
+      ],
       "cta_demo": "Book en demo",
       "cta_pricing": "Se priser",
       "trust1": "Ingen binding",

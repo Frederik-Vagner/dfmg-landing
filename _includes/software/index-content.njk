@@ -67,17 +67,29 @@
 
                 <h3 class="heading heading--sm">{{ t.modules.more_title }}</h3>
                 <div class="grid grid--3">
-                    <a href="{{ prefix }}/features.html#team" class="card card--flat">
+                    <a href="{{ prefix }}/people.html" class="card card--flat">
                         <h4 class="card__title">{{ t.modules.team_title }}</h4>
                         <p class="card__text">{{ t.modules.team_desc }}</p>
                     </a>
-                    <a href="{{ prefix }}/features.html#inventory" class="card card--flat">
+                    <a href="{{ prefix }}/logistics.html" class="card card--flat">
                         <h4 class="card__title">{{ t.modules.stock_title }}</h4>
                         <p class="card__text">{{ t.modules.stock_desc }}</p>
                     </a>
-                    <a href="{{ prefix }}/features.html#crm" class="card card--flat">
+                    <a href="{{ prefix }}/sales.html" class="card card--flat">
                         <h4 class="card__title">{{ t.modules.sell_title }}</h4>
                         <p class="card__text">{{ t.modules.sell_desc }}</p>
+                    </a>
+                    <a href="{{ prefix }}/communication.html" class="card card--flat">
+                        <h4 class="card__title">{{ t.modules.comm_title }}</h4>
+                        <p class="card__text">{{ t.modules.comm_desc }}</p>
+                    </a>
+                    <a href="{{ prefix }}/assistants.html" class="card card--flat">
+                        <h4 class="card__title">{{ t.modules.ai_title }}</h4>
+                        <p class="card__text">{{ t.modules.ai_desc }}</p>
+                    </a>
+                    <a href="{{ prefix }}/features.html#client-portal" class="card card--flat">
+                        <h4 class="card__title">{{ t.modules.portal_title }}</h4>
+                        <p class="card__text">{{ t.modules.portal_desc }}</p>
                     </a>
                 </div>
             </div>
@@ -166,12 +178,35 @@
        proven in use yet, and two were finance (docs/platform-capabilities.md).
        Re-add one once it is LIVE there. #}
 
+    <!-- Industries -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.industries.subtitle }}</div>
+                <h2 class="title intro__title">{{ t.industries.title }}</h2>
+                <p class="body intro__text">{{ t.industries.body }}</p>
+            </div>
+            <div class="grid grid--3">
+                {% for item in t.industries.items %}
+                <a href="{{ prefix }}/{{ item.link }}" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="{{ item.icon }}" inline></iconify-icon></div>
+                    <h3 class="card__title">{{ item.title }}</h3>
+                    <p class="card__text">{{ item.text }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="section">
         <div class="container">
             <div class="cta cta--center cta--primary">
                 <div class="cta__title">{{ t.cta.title }}</div>
                 <div class="cta__text">{{ t.cta.body }}</div>
+                <ol class="cta__steps">
+                    {% for step in t.cta.steps %}<li class="cta__step">{{ step }}</li>{% endfor %}
+                </ol>
                 <div class="stack">
                     <div class="cluster cluster--center">
                         <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon> {{ t.cta.cta_demo }}</a>
