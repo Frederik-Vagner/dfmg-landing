@@ -1,18 +1,20 @@
 /* ====================================
    PHOTOS & VISUAL PLACEHOLDERS
-   Shared image grids, screenshot
+   Shared image grids, illustration
    placeholders, and placeholder icons
    ==================================== */
 
 @layer components {
 
-/* ── Screenshot Placeholder ── */
-.screenshot-placeholder {
-    background: linear-gradient(135deg, var(--white-a08) 0%, var(--white-a03) 100%);
-    border: 1px solid var(--white-a12);
+/* ── Illustration placeholder (partials/shot.njk) ──
+   Styled by its data attribute, not a class: it only exists while a page is
+   reviewed on a deploy preview, and the build fails a page that keeps one. */
+[data-shot-placeholder] {
+    background: linear-gradient(135deg, var(--bg-muted) 0%, var(--bg-light) 100%);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: var(--space-xl) var(--space-lg);
-    color: var(--text-on-dark-subtle);
+    color: var(--gray-muted);
     font-size: var(--text-sm);
     text-align: center;
     max-width: 900px;
@@ -23,28 +25,10 @@
     justify-content: center;
 }
 
-.screenshot-placeholder--light {
-    background: linear-gradient(135deg, var(--bg-muted) 0%, var(--bg-light) 100%);
-    border-color: var(--color-border);
-    color: var(--gray-muted);
-}
-
-/* ── Screenshot: a real shot of the platform, where its placeholder stood ── */
-.screenshot {
+[data-shot-placeholder] iconify-icon {
     display: block;
-    width: 100%;
-    height: auto;
-    max-width: 900px;
-    margin: var(--space-lg) auto 0;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-xl);
-    background: var(--white);
-}
-
-/* A phone shot: the width of a phone, not of the column. */
-.screenshot--phone {
-    max-width: 300px;
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-2xs);
 }
 
 /* ── Photos Grid ── */

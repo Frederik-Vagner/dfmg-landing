@@ -13,8 +13,8 @@
         "eyebrow": "THE OFFICE",
         "title": "Plan the week and follow every visit",
         "body": "The schedule, the visits as they happen, stock, sales and the assistants, with your own calendar synced to Google and an audit log, in one place for the people who run the business.",
-        "image": "/images/platform/schedule-month.webp",
-        "imageAlt": "The schedule for a month: every visit by client and time, with the hours per week beside it"
+        "illustration": "i01-calendar",
+        "illustrationAlt": "An illustration of a calendar with three visits in different colours, and the hours per week beside it"
       },
       {
         "id": "employee-app",
@@ -23,9 +23,8 @@
         "title": "Today's work on every phone",
         "body": "Each person sees their own visits and the team's schedule, checks in and out, takes the photos and messages the office.",
         "appLine": true,
-        "image": "/images/platform/app-home-phone.webp",
-        "imageAlt": "The employee app's home screen: the next visits and a guide to read",
-        "phone": true
+        "illustration": "i06-phone-visits",
+        "illustrationAlt": "An illustration of a phone showing today's three visits"
       },
       {
         "id": "client-portal",
@@ -33,10 +32,8 @@
         "eyebrow": "THE CLIENT PORTAL",
         "title": "Your clients see the work for themselves",
         "body": "Give a client a login and they see their visits, and the photos from each one.",
-        "shot": {
-          "id": "S27",
-          "what": "One visit with its photos, as the client sees it in the client portal"
-        }
+        "illustration": "i27-portal-visit",
+        "illustrationAlt": "An illustration of the client portal: one visit with its before and after photos"
       },
       {
         "id": "operations",
@@ -44,68 +41,60 @@
         "eyebrow": "OPERATIONS",
         "title": "Plan, run and prove every visit",
         "body": "One calendar, several recurring tasks per client, each with its own rule, crews, the map, check-in and check-out per person, before and after photos and time on site.",
-        "image": "/images/platform/task-visit-proof.webp",
-        "imageAlt": "A completed visit: the crew with their check-in and check-out times, and a time report against the estimate",
         "link": "operations.html",
-        "linkText": "Operations"
+        "linkText": "Operations",
+        "illustration": "i11-time-bars",
+        "illustrationAlt": "An illustration of three people, each with their planned and actual time side by side"
       },
       {
         "id": "team",
         "eyebrow": "PEOPLE",
         "title": "Records, availability, time off and training",
         "body": "Staff records with access by position, availability and time off from the phone, and tests that check the training has landed.",
-        "shot": {
-          "id": "S33",
-          "what": "Staff records with positions and access"
-        },
         "link": "people.html",
-        "linkText": "People"
+        "linkText": "People",
+        "illustration": "i33-staff-access",
+        "illustrationAlt": "An illustration of three employees, each with their level of access"
       },
       {
         "id": "inventory",
         "eyebrow": "LOGISTICS",
         "title": "Know what is in every storage",
         "body": "Products and equipment by storage, every movement in and out, and a level that warns you before something runs out.",
-        "image": "/images/platform/inventory-stock.webp",
-        "imageAlt": "The inventory list: items by type and storage, with quantity, price and value",
         "link": "logistics.html",
-        "linkText": "Logistics"
+        "linkText": "Logistics",
+        "illustration": "i14-storages",
+        "illustrationAlt": "An illustration of three storages, a van, a cupboard and a room, each with its own boxes"
       },
       {
         "id": "crm",
         "eyebrow": "SALES & CRM",
         "title": "From the first call to a signed document",
         "body": "Leads from the company register, every call on record, notes from recorded calls and meetings, proposals you see opened, e-signatures and public tenders found for you.",
-        "shot": {
-          "id": "S19",
-          "what": "A proposal as the client sees it"
-        },
         "link": "sales.html",
-        "linkText": "Sales & CRM"
+        "linkText": "Sales & CRM",
+        "illustration": "i19-proposal-opened",
+        "illustrationAlt": "An illustration of a proposal with an eye mark: it has been opened"
       },
       {
         "id": "communication",
         "eyebrow": "COMMUNICATION",
         "title": "Email, WhatsApp and chat, in one place",
         "body": "The email inbox inside the platform, WhatsApp with your employees, chat in the app, also about a single visit, and notifications.",
-        "shot": {
-          "id": "S34",
-          "what": "The email inbox, with a mail linked to a client"
-        },
         "link": "communication.html",
-        "linkText": "Communication"
+        "linkText": "Communication",
+        "illustration": "i34-email-client",
+        "illustrationAlt": "An illustration of an email linked to a client card"
       },
       {
         "id": "assistants",
         "eyebrow": "AI ASSISTANTS",
         "title": "Assistants prepare the work; a person approves every step",
         "body": "Before a call, a brief is ready. Public tenders are found and analysed. Nothing reaches a client until someone in the office approves it.",
-        "shot": {
-          "id": "S23",
-          "what": "Three items waiting for approval"
-        },
         "link": "assistants.html",
-        "linkText": "AI assistants"
+        "linkText": "AI assistants",
+        "illustration": "i23-approvals",
+        "illustrationAlt": "An illustration of three proposals in a list, each with an approve and a reject mark"
       }
     ],
     "faq": {
@@ -120,14 +109,19 @@
           "a": "The system is in English today, and the Danish translation is under way. Support is in Danish."
         },
         {
-          "q": "Shown with made-up data",
-          "a": "Every screenshot on these pages comes from a test company with invented clients and employees, marked (FAKE). Your company sees its own data, and only its own."
+          "q": "Shown as illustrations",
+          "a": "The pictures on these pages are drawings of the idea, not screens from the platform. In the demo you see the real thing."
         }
       ]
     },
     "cta": {
       "title": "See it in action",
       "body": "Book a 30-minute demo and we'll walk you through the parts that matter most to your company.",
+      "steps": [
+        "Book a demo",
+        "Bring your week",
+        "Paid pilot"
+      ],
       "cta_demo": "Book a demo",
       "cta_overview": "See pricing",
       "overviewLink": "pricing.html"
@@ -147,8 +141,8 @@
         "eyebrow": "KONTORET",
         "title": "Planlæg ugen, og følg hvert besøg",
         "body": "Vagtplanen, besøgene mens de sker, lager, salg og assistenterne, med jeres egen kalender synkroniseret med Google og en revisionslog, samlet ét sted for dem, der driver virksomheden.",
-        "image": "/images/platform/schedule-month.webp",
-        "imageAlt": "Vagtplanen for en måned: hvert besøg efter kunde og tidspunkt, med timerne pr. uge ved siden af"
+        "illustration": "i01-calendar",
+        "illustrationAlt": "En illustration af en kalender med tre besøg i forskellige farver og timerne pr. uge ved siden af"
       },
       {
         "id": "employee-app",
@@ -157,9 +151,8 @@
         "title": "Dagens arbejde på hver telefon",
         "body": "Hver person ser sine egne besøg og holdets vagtplan, checker ind og ud, tager billederne og skriver til kontoret.",
         "appLine": true,
-        "image": "/images/platform/app-home-phone.webp",
-        "imageAlt": "Medarbejder-appens forside: de næste besøg og en vejledning, der skal læses",
-        "phone": true
+        "illustration": "i06-phone-visits",
+        "illustrationAlt": "En illustration af en telefon med dagens tre besøg"
       },
       {
         "id": "client-portal",
@@ -167,10 +160,8 @@
         "eyebrow": "KUNDEPORTALEN",
         "title": "Jeres kunder ser selv arbejdet",
         "body": "Giv en kunde et login, så ser de deres besøg og billederne fra hvert af dem.",
-        "shot": {
-          "id": "S27",
-          "what": "Ét besøg med billeder, som kunden ser det i kundeportalen"
-        }
+        "illustration": "i27-portal-visit",
+        "illustrationAlt": "En illustration af kundeportalen: ét besøg med før- og efterbilleder"
       },
       {
         "id": "operations",
@@ -178,68 +169,60 @@
         "eyebrow": "DRIFT",
         "title": "Planlæg, kør og dokumentér hvert besøg",
         "body": "Én kalender, flere faste opgaver pr. kunde, hver med sin egen regel, hold, kortet, check-ind og check-ud pr. person, før- og efterbilleder og tid på stedet.",
-        "image": "/images/platform/task-visit-proof.webp",
-        "imageAlt": "Et udført besøg: holdet med tider for check-ind og check-ud og en tidsrapport mod estimatet",
         "link": "operations.html",
-        "linkText": "Drift"
+        "linkText": "Drift",
+        "illustration": "i11-time-bars",
+        "illustrationAlt": "En illustration af tre personer, hver med planlagt og faktisk tid side om side"
       },
       {
         "id": "team",
         "eyebrow": "MEDARBEJDERE",
         "title": "Stamdata, rådighed, fravær og oplæring",
         "body": "Medarbejderoplysninger med adgang efter stilling, rådighed og fravær fra telefonen, og test, der viser, at oplæringen er gået ind.",
-        "shot": {
-          "id": "S33",
-          "what": "Medarbejderoplysninger med stillinger og adgang"
-        },
         "link": "people.html",
-        "linkText": "Medarbejdere"
+        "linkText": "Medarbejdere",
+        "illustration": "i33-staff-access",
+        "illustrationAlt": "En illustration af tre medarbejdere, hver med sit adgangsniveau"
       },
       {
         "id": "inventory",
         "eyebrow": "LOGISTIK",
         "title": "Vid, hvad der er på hvert lager",
         "body": "Produkter og udstyr efter lager, hver bevægelse ind og ud, og et niveau, der advarer jer, før noget slipper op.",
-        "image": "/images/platform/inventory-stock.webp",
-        "imageAlt": "Lagerlisten: varer efter type og lager, med antal, pris og værdi",
         "link": "logistics.html",
-        "linkText": "Logistik"
+        "linkText": "Logistik",
+        "illustration": "i14-storages",
+        "illustrationAlt": "En illustration af tre lagre, en varevogn, et skab og et rum, hver med sine egne kasser"
       },
       {
         "id": "crm",
         "eyebrow": "SALG OG CRM",
         "title": "Fra det første opkald til et underskrevet dokument",
         "body": "Leads fra CVR-registret, hvert opkald registreret, noter fra optagne opkald og møder, tilbud, I kan se er åbnet, digital underskrift og offentlige udbud fundet for jer.",
-        "shot": {
-          "id": "S19",
-          "what": "Et tilbud, som kunden ser det"
-        },
         "link": "sales.html",
-        "linkText": "Salg og CRM"
+        "linkText": "Salg og CRM",
+        "illustration": "i19-proposal-opened",
+        "illustrationAlt": "En illustration af et tilbud med et øje: det er åbnet"
       },
       {
         "id": "communication",
         "eyebrow": "KOMMUNIKATION",
         "title": "Mail, WhatsApp og chat samlet ét sted",
         "body": "Indbakken i platformen, WhatsApp med jeres medarbejdere, chat i appen, også om et enkelt besøg, og beskeder.",
-        "shot": {
-          "id": "S34",
-          "what": "Indbakken med en mail knyttet til en kunde"
-        },
         "link": "communication.html",
-        "linkText": "Kommunikation"
+        "linkText": "Kommunikation",
+        "illustration": "i34-email-client",
+        "illustrationAlt": "En illustration af en mail knyttet til et kundekort"
       },
       {
         "id": "assistants",
         "eyebrow": "AI-ASSISTENTER",
         "title": "Assistenterne forbereder arbejdet; et menneske godkender hvert trin",
         "body": "Før et opkald ligger et overblik klar. Offentlige udbud bliver fundet og analyseret. Intet når frem til en kunde, før nogen på kontoret har godkendt det.",
-        "shot": {
-          "id": "S23",
-          "what": "Tre forslag, der venter på godkendelse"
-        },
         "link": "assistants.html",
-        "linkText": "AI-assistenter"
+        "linkText": "AI-assistenter",
+        "illustration": "i23-approvals",
+        "illustrationAlt": "En illustration af tre forslag på en liste, hver med et mærke for godkend og afvis"
       }
     ],
     "faq": {
@@ -254,14 +237,19 @@
           "a": "Systemet er på engelsk i dag, og den danske oversættelse er i gang. Support foregår på dansk."
         },
         {
-          "q": "Vist med opdigtede data",
-          "a": "Alle skærmbilleder på disse sider kommer fra en testvirksomhed med opdigtede kunder og medarbejdere, markeret (FAKE). Jeres virksomhed ser sine egne data og kun dem."
+          "q": "Vist som illustrationer",
+          "a": "Billederne på disse sider er tegninger af idéen, ikke skærmbilleder fra platformen. I demoen ser I det rigtige."
         }
       ]
     },
     "cta": {
       "title": "Se det i praksis",
       "body": "Book en demo på 30 minutter, så viser vi jer de dele, der betyder mest for jeres virksomhed.",
+      "steps": [
+        "Book en demo",
+        "Kom med jeres uge",
+        "Betalt pilot"
+      ],
       "cta_demo": "Book en demo",
       "cta_overview": "Se priser",
       "overviewLink": "pricing.html"
