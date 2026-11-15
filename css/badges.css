@@ -54,11 +54,6 @@
     color: var(--white);
 }
 
-.badge-inline--primary {
-    background: var(--bg-gradient-primary);
-    color: var(--white);
-}
-
 /* Size Modifier */
 .badge-inline--sm {
     padding: var(--space-3xs) var(--space-xs);

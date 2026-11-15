@@ -36,7 +36,13 @@ A feature marked BUILT or NOT MEASURED there waits until it is LIVE. When one ch
 
 **Screenshots** come from the platform's local test company (invented clients and people, marked "(FAKE)"), never from real company data. The features page says so.
 
-The technology claims on the about page (multi-tenant with isolated schemas, EU-hosted, GDPR, real-time, mobile-ready, modular) are approved as worded there. Don't add new ones.
+The technology claims on the about page (multi-tenant with isolated schemas, hosted in the EU, two-step login, real-time, mobile-ready, modular) are approved as worded there. Don't add new ones. In particular, until the product changes:
+
+- **"All data stays in the EU"** is not true today: not every copy of the data, and not every service that processes it, is in the EU. Write "the application, the database and photos run in EU data centres".
+- **GDPR and data processing agreements**: no DPA exists yet. Don't say "GDPR compliant" or "DPA included".
+- **Languages**: the system is in English, and the Danish translation is under way. Don't call it "Danish-first" or "Danish and English side by side".
+- **The employee app** runs in the phone's browser. It is not in the App Store, so don't say "iPhone app".
+- **Plan limits** (employees, users) and contract terms (notice, billing period, setup fees) are not decided. Don't write them.
 
 ## What we never say
 
@@ -46,11 +52,11 @@ The technology claims on the about page (multi-tenant with isolated schemas, EU-
 - **Competitors or other products by name.** Describe the problem ("several separate tools"), not the brands.
 - **Integrations.** None is named on the home or features page today; add one only once it is LIVE.
 
-## Open questions
+## Decided (15 Nov 2026)
 
-Frederik decides these; keep the current wording until he does.
-
-- **Contact hours.** The platform contact page says "Mon–Fri, 08–17 CET"; the facility side says phone hours are weekdays 8–16.
-- **Reply time.** The platform contact, demo and thank-you pages promise a reply "within 24 hours". This is not in the approved facts.
-- **"Contact us" pricing.** What a prospect gets when they ask (a quote after a demo, a price list) isn't written down, so copy shouldn't describe it.
-- **"40+ modules".** The about page says "From spreadsheets to 40+ modules". Keep the number as it is; don't raise it or reuse it elsewhere until it's confirmed.
+- **Contact hours**: weekdays 8–16 ("Hverdage 8–16"), on both sides of the site.
+- **Reply time**: "We reply within one working day" ("Vi svarer inden for 1 arbejdsdag").
+- **Pricing**: no prices. Every plan is priced per company and agreed after a demo. Starter covers plan, run and prove; Professional adds stock, tests and the sales tools; Enterprise has terms agreed with the customer.
+- **After the demo**: a paid pilot. There is no free trial.
+- **"40+ modules"**: removed. Don't count modules.
+- **Floor plans**: the page was removed (its URLs redirect to features) until the feature is LIVE.

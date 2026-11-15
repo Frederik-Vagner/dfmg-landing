@@ -8,11 +8,11 @@
     },
     "form": {
       "heading": "Request a demo",
-      "intro": "Fill in your details and we'll get back to you within 24 hours to schedule a time.",
+      "intro": "Fill in your details and we'll reply within one working day to find a time.",
       "label_name": "Full name",
       "placeholder_name": "Anders Jensen",
       "label_company": "Company",
-      "placeholder_company": "Nordic Clean ApS",
+      "placeholder_company": "Your company ApS",
       "label_email": "Email",
       "placeholder_email": "anders@example.dk",
       "label_phone": "Phone",
@@ -25,7 +25,7 @@
       "option_50plus": "50+ employees",
       "label_message": "What are you most interested in?",
       "placeholder_message": "E.g. the schedule, the employee app, photos from every visit...",
-      "submit": "Request Demo",
+      "submit": "Request a demo",
       "email_subject": "Demo request - DFMG Platform"
     },
     "visual": {
@@ -36,17 +36,17 @@
       "no_commitment": "No commitment required",
       "session_length": "30-minute session",
       "danish_support": "Danish-language support",
-      "eu_hosting": "EU data hosting"
+      "eu_hosting": "Hosted in the EU"
     },
     "steps": {
       "subtitle": "HOW IT WORKS",
       "title": "What to expect",
       "step1_title": "Book",
-      "step1_desc": "Fill in the form above. We'll respond within 24 hours to find a time that works.",
+      "step1_desc": "Fill in the form above. We'll reply within one working day to find a time that works.",
       "step2_title": "Demo",
       "step2_desc": "30-minute walkthrough of the modules relevant to your business. Bring your questions.",
-      "step3_title": "Trial",
-      "step3_desc": "Get access to a trial environment with your own data. We help you set everything up."
+      "step3_title": "Paid pilot",
+      "step3_desc": "If it fits, you start with a paid pilot: we set up your company in the platform and import your employees and clients from a spreadsheet."
     }
   },
   "da": {
@@ -58,11 +58,11 @@
     },
     "form": {
       "heading": "Bestil en demo",
-      "intro": "Udfyld dine oplysninger, så kontakter vi dig inden for 24 timer for at aftale et tidspunkt.",
+      "intro": "Udfyld dine oplysninger, så svarer vi inden for 1 arbejdsdag og aftaler et tidspunkt.",
       "label_name": "Fulde navn",
       "placeholder_name": "Anders Jensen",
       "label_company": "Virksomhed",
-      "placeholder_company": "Nordic Clean ApS",
+      "placeholder_company": "Jeres firma ApS",
       "label_email": "E-mail",
       "placeholder_email": "anders@example.dk",
       "label_phone": "Telefon",
@@ -86,17 +86,17 @@
       "no_commitment": "Ingen forpligtelse",
       "session_length": "30 minutters session",
       "danish_support": "Support på dansk",
-      "eu_hosting": "EU-datahosting"
+      "eu_hosting": "Hostet i EU"
     },
     "steps": {
       "subtitle": "SÅDAN FUNGERER DET",
       "title": "Hvad du kan forvente",
       "step1_title": "Book",
-      "step1_desc": "Udfyld formularen ovenfor. Vi svarer inden for 24 timer og finder et tidspunkt, der passer dig.",
+      "step1_desc": "Udfyld formularen ovenfor. Vi svarer inden for 1 arbejdsdag og finder et tidspunkt, der passer dig.",
       "step2_title": "Demo",
       "step2_desc": "30 minutters gennemgang af de moduler, der er relevante for din virksomhed. Tag dine spørgsmål med.",
-      "step3_title": "Prøveperiode",
-      "step3_desc": "Få adgang til et prøvemiljø med dine egne data. Vi hjælper dig med at sætte det hele op."
+      "step3_title": "Betalt pilot",
+      "step3_desc": "Hvis det passer, starter I med en betalt pilot: vi opretter jeres virksomhed i platformen og importerer jeres medarbejdere og kunder fra et regneark."
     }
   }
 }

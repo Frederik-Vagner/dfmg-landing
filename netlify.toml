@@ -154,3 +154,26 @@
   from = "/pages/software/da/bank-connect.html"
   to = "/pages/software/da/features.html"
   status = 301
+
+# The floor plans page was removed (Nov 2026): nothing on it was in use in
+# production yet, and the site claims only what is (docs/platform-capabilities.md).
+# Old links and indexed URLs go to the features page.
+[[redirects]]
+  from = "/pages/software/floor-plans"
+  to = "/pages/software/features.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/floor-plans.html"
+  to = "/pages/software/features.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/da/floor-plans"
+  to = "/pages/software/da/features.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/da/floor-plans.html"
+  to = "/pages/software/da/features.html"
+  status = 301
