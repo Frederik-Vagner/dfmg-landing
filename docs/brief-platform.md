@@ -1,6 +1,6 @@
 # Brief: DFMG Platform pages
 
-For anyone writing copy for `pages/software/**` (EN and DA). The copy lives in `_data/i18n/software*.json`; page titles and descriptions are in the front matter of each EN and DA page file. The rules in [CLAUDE.md](../CLAUDE.md) apply on top of this. Screenshots, video and other assets still to make: [platform-assets.md](platform-assets.md).
+For anyone writing copy for `pages/software/**` (EN and DA). The copy lives in `_data/i18n/software*.json`; page titles and descriptions are in the front matter of each EN and DA page file. The rules in [CLAUDE.md](../CLAUDE.md) apply on top of this. Illustrations, video and other assets still to make: [platform-assets.md](platform-assets.md).
 
 ## Who we write for
 
@@ -43,6 +43,14 @@ The product is shown by area, in the same order as the platform's own sidebar. T
 
 An area with fewer than three LIVE blocks starts as a section on the platform overview, and the menu links to that section; it becomes a page when it has three. Never call an area "Outreach" on the site: it reads as mass mailing (Markedsføringsloven § 10). The area is "Sales & CRM" ("Salg og CRM").
 
+## The offer: Bring your week
+
+The main offer, like a bootcamp: a session where we put the customer's own week into the platform (their clients, their rhythms, their team), so they see their own week run in it. It leads into the paid pilot.
+
+- It follows the demo. The path is three steps, shown wherever the call to action is: **Book a demo → Bring your week → paid pilot** ("Book en demo → Kom med jeres uge → betalt pilot").
+- It is the call to action on Home and on every area page. Name: "Bring your week" ("Kom med jeres uge"); the button stays "Book a demo" ("Book en demo").
+- Don't write its length, its price or whether it is free until Frederik decides. It is not a free trial.
+
 ## Voice
 
 - Outcome first, then the feature: "Invoice the hours your team logged, without retyping them", not "Automated invoice module".
@@ -75,9 +83,9 @@ A feature marked BUILT or NOT MEASURED there waits until it is LIVE. When one ch
 
 **Finance is on hold.** No bookkeeping, invoicing, e-invoicing, VAT, payroll, bank reconciliation or accounting claims, in any form, until Frederik decides otherwise. Bogføringsloven § 19 requires a digital bookkeeping system to be notified to Erhvervsstyrelsen before it is marketed; the reasons and sources are in [platform-capabilities.md](platform-capabilities.md#finance-hold-legal). The Bank Connect page was removed for the same reason; its URLs redirect to the features page.
 
-**Screenshots** come from the platform's local test company (invented clients and people, marked "(FAKE)"), never from real company data. The features page says so.
+**No screenshots of the platform.** The site never shows the real platform: no screenshots, screen recordings or copies of its layout, field names, menus or data, so nobody can copy it from the site. Pictures are simple illustrations in the site's own style that show the idea, not the screen: a calendar with three visits, a phone with a check-in, a before and after photo pair, a portal card with a visit and its photos. They are inline SVG drawn with the site's colour tokens, with no words in them, so one drawing serves both languages; the alt text in the page's language says what the drawing shows. No third-party logos (Google, WhatsApp, Apple). Where a picture adds nothing, the section shows an outcome line with an icon instead. The list of illustrations and outcome lines, numbered I01 to I39, is in [platform-assets.md](platform-assets.md).
 
-**Screenshot placeholders** are allowed while a page is reviewed on its deploy preview: a clearly marked box with the shot's number and what it will show ("Screenshot S10: before and after photos of one visit"), numbered as in [platform-assets.md](platform-assets.md). Use one of the real shots in `/images/platform/` wherever it fits. A page merges to the live site only when every placeholder is replaced by a real shot or removed (text only is fine); the build's placeholder check is the guard. Make one with `{% from "partials/shot.njk" import shot %}` and `{{ shot("S10", t.section.shot_s10, lang) }}`, with the description in the page's i18n file. The deploy preview lists every placeholder in the build log; a production build and the `no-placeholders` PR check fail while one is left.
+**Illustration placeholders** are allowed while a page is reviewed on its deploy preview: a clearly marked box with the illustration's number and what it will show ("Illustration I10: before and after photos of one visit"). A page merges to the live site only when every placeholder is replaced by its illustration or an outcome line, or removed; the build's placeholder check is the guard. Make one with `{% from "partials/shot.njk" import shot %}` and `{{ shot("I10", t.section.what, lang) }}`, with the description in the page's i18n file. The deploy preview lists every placeholder in the build log; a production build and the `no-placeholders` PR check fail while one is left.
 
 The technology claims on the about page (multi-tenant with isolated schemas, hosted in the EU, two-step login, real-time, mobile-ready, modular) are approved as worded there. Don't add new ones. In particular, until the product changes:
 
@@ -102,7 +110,7 @@ The security page (`pages/software/security.html`, copy in `_data/i18n/softwareS
 - **Contact hours**: weekdays 8–16 ("Hverdage 8–16"), on both sides of the site.
 - **Reply time**: "We reply within one working day" ("Vi svarer inden for 1 arbejdsdag").
 - **Pricing**: no prices. Every plan is priced per company and agreed after a demo. Starter covers plan, run and prove; Professional adds stock, tests, the sales tools and the AI assistants; Enterprise has everything in Professional and terms agreed with the customer. The client portal is in every plan. Don't mention that assistants cost per run.
-- **After the demo**: a paid pilot. There is no free trial.
+- **After the demo**: the "Bring your week" session ("Kom med jeres uge"), which leads into a paid pilot: Book a demo → Bring your week → paid pilot. There is no free trial.
 - **"40+ modules"**: removed. Don't count modules.
 - **Floor plans**: the page was removed (its URLs redirect to features) until the feature is LIVE. Floor plans are LIVE since the 15 Nov audit: they appear on the operations page; the old page and its redirect stay as they are unless Frederik decides otherwise.
 - **Contact**: the demo page is also the contact page (one form for a demo or a question, with phone, email and hours). `contact.html` redirects there.
@@ -114,3 +122,5 @@ The security page (`pages/software/security.html`, copy in `_data/i18n/softwareS
 - **AI assistants are shown**: a menu entry and a section on the platform overview, never in the hero.
 - **Structure by area**, matching the app's sidebar (see "Areas"), not by job. Plan, run, prove stays the home hero and the story of the operations page.
 - **Size**: no upper limit on the site; words aimed at roughly 5–150 people in the field.
+- **No screenshots** of the platform anywhere on the site, including the five taken on 11 Nov, whose files are deleted once no page uses them: illustrations or outcome lines instead (see "No screenshots of the platform").
+- **"Bring your week"** is the main offer and the call to action on Home and every area page.
