@@ -1,0 +1,14 @@
+<svg class="illustration" viewBox="0 0 480 320" role="img" aria-label="{{ illustrationAlt }}">
+    <rect class="illustration__bg" x="0" y="0" width="480" height="320" rx="24"/>
+    <rect class="illustration__card" x="32" y="40" width="112" height="72" rx="14"/>
+    <circle class="illustration__primary" cx="70" cy="76" r="22"/>
+    <path class="illustration__mark" d="M60 72a11 11 0 0 1 19-5l3 3M80 80a11 11 0 0 1-19 5l-3-3M82 64v6h-6M58 88v-6h6"/>
+    <rect class="illustration__text" x="100" y="70" width="32" height="10" rx="5"/>
+    {% for row in [0, 1, 2] %}
+    <rect class="illustration__card" x="168" y="{{ 40 + row * 84 }}" width="280" height="64" rx="12"/>
+    {% for day in [0, 1, 2, 3, 4, 5, 6] %}
+    <rect class="{{ 'illustration__primary' if day == 1 or day == 3 else 'illustration__dull' }}" x="{{ 182 + day * 37 }}" y="{{ 54 + row * 84 }}" width="28" height="36" rx="6"/>
+    {% endfor %}
+    {% endfor %}
+    <path class="illustration__route" d="M144 76H160"/>
+</svg>
