@@ -12,9 +12,9 @@
   or an outcome line, or remove it (text only is fine), before the page merges.
 #}
 {% macro shot(id, what, lang = "en") %}
-<div class="screenshot-placeholder screenshot-placeholder--light" data-shot-placeholder="{{ id }}" data-photo-slot="shot-{{ id | lower }}" data-photo-status="missing" data-photo-brief="{{ id }}: {{ what | escape }}">
+<div data-shot-placeholder="{{ id }}" data-photo-slot="shot-{{ id | lower }}" data-photo-status="missing" data-photo-brief="{{ id }}: {{ what | escape }}">
     <div>
-        <iconify-icon icon="fluent:image-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
+        <iconify-icon icon="fluent:image-20-filled" inline></iconify-icon>
         <strong>{% if lang == "da" %}Illustration {{ id }} (pladsholder){% else %}Illustration {{ id }} (placeholder){% endif %}</strong><br>
         {{ what }}
     </div>

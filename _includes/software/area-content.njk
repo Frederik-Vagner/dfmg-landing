@@ -6,14 +6,16 @@
     hero      subtitle, title, body, jump_label
     sections  id, eyebrow, title, body, points[] (optional),
               appLine (adds where the employee app runs, see employee-app-line.njk),
+              link + linkText (a button to another page, relative to prefix),
               jump (a label: the section gets a link in the hero),
               then one visual: illustration + illustrationAlt (a drawing from
               _includes/illustrations/, e.g. "i01-calendar"), or outcome
               { icon, text } (an icon and one line, where a picture adds
               nothing), or shot { id, what } for a placeholder (partials/shot.njk)
     faq       title, items[] { q, a }
-    cta       title, body, steps[] (optional), cta_demo, cta_overview; without
-              it the page gets the shared "Bring your week" offer
+    cta       title, body, steps[] (optional), cta_demo, cta_overview
+              (+ overviewLink, default features.html); without it the page
+              gets the shared "Bring your week" offer
               (_data/i18n/softwareOffer.json): demo → Bring your week → pilot
 
   No screenshots of the platform: see docs/brief-platform.md.
@@ -50,6 +52,9 @@
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span>{{ point }}</span></li>
                         {% endfor %}
                     </ul>
+                    {% endif %}
+                    {% if section.link %}
+                    <a href="{{ prefix }}/{{ section.link }}" class="btn btn--secondary btn--sm">{{ section.linkText }}</a>
                     {% endif %}
                 </div>
                 <div>
@@ -103,7 +108,7 @@
                 {% endif %}
                 <div class="cluster cluster--center">
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ cta.cta_demo }}</a>
-                    <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ cta.cta_overview }}</a>
+                    <a href="{{ prefix }}/{{ cta.overviewLink or 'features.html' }}" class="btn btn--ghost btn--md">{{ cta.cta_overview }}</a>
                 </div>
             </div>
         </div>

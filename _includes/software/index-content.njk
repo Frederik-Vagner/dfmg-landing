@@ -9,8 +9,9 @@
                 <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ t.hero.cta_features }}</a>
             </div>
 
-            {% set heroShot = "/images/platform/schedule-month.webp" %}
-            <img src="{{ heroShot }}" width="{{ heroShot | imgWidth }}" height="{{ heroShot | imgHeight }}" alt="{{ t.hero.image_alt }}" class="screenshot hero__media" fetchpriority="high" decoding="async" data-photo-slot="home-hero">
+            {# No screenshots of the platform: an illustration of the idea (docs/brief-platform.md). #}
+            {% set illustrationAlt = t.hero.image_alt %}
+            {% include "illustrations/i01-calendar.svg.njk" %}
         </div>
     </section>
 
@@ -52,12 +53,12 @@
                         <h3 class="card__title">{{ t.modules.plan_title }}</h3>
                         <p class="card__text">{{ t.modules.plan_desc }}</p>
                     </a>
-                    <a href="{{ prefix }}/features.html#employees" class="card card--lift">
+                    <a href="{{ prefix }}/features.html#employee-app" class="card card--lift">
                         <div class="icon-badge"><iconify-icon icon="fluent:phone-20-filled" inline></iconify-icon></div>
                         <h3 class="card__title">{{ t.modules.visit_title }}</h3>
                         <p class="card__text">{{ t.modules.visit_desc }}</p>
                     </a>
-                    <a href="{{ prefix }}/features.html#quality" class="card card--lift">
+                    <a href="{{ prefix }}/operations.html#prove" class="card card--lift">
                         <div class="icon-badge"><iconify-icon icon="fluent:camera-20-filled" inline></iconify-icon></div>
                         <h3 class="card__title">{{ t.modules.proof_title }}</h3>
                         <p class="card__text">{{ t.modules.proof_desc }}</p>
@@ -87,8 +88,10 @@
     <section class="section">
         <div class="container">
             <div class="row row--center">
-                {% set walkShot = "/images/platform/app-home-phone.webp" %}
-                <img src="{{ walkShot }}" width="{{ walkShot | imgWidth }}" height="{{ walkShot | imgHeight }}" alt="{{ t.walkthrough.image_alt }}" class="screenshot screenshot--phone" loading="lazy" decoding="async" data-photo-slot="home-walkthrough">
+                <div>
+                    {% set illustrationAlt = t.walkthrough.image_alt %}
+                    {% include "illustrations/i06-phone-visits.svg.njk" %}
+                </div>
                 <div class="intro intro--start">
                     <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.walkthrough.subtitle }}</div>
                     <h2 class="title title--compact">{{ t.walkthrough.title }}</h2>
