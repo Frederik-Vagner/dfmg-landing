@@ -18,11 +18,53 @@ Taken 11 Nov 2026 from the platform's local test company (seeded, invented clien
 | features-4 | `inventory-stock.webp` | Inventory by type and storage, with value |
 | home-walkthrough, features-5 | `app-home-phone.webp` | Employee app home: next visits (phone) |
 
-Still to take:
+### Screenshot numbers (15 Nov 2026)
 
-- **features-6 (Win new work)**: a proposal as the client sees it. The test company has no deal with a proposal yet.
-- **A visit with real before and after photos.** The test company's photo files do not exist locally, so the visit shot shows "No photos from this visit yet".
-- **Finance shots (billing, payroll)**: dropped while finance is on hold (see [platform-capabilities.md](platform-capabilities.md)).
+Pages refer to shots by number. Until a shot exists, the page shows a marked placeholder with its number and what it will show, and uses one of the five shots above where it fits; a page merges only when its placeholders are gone (see [brief-platform.md](brief-platform.md)). Shots marked "seed" need data added to the test company first.
+
+| No. | Shows | App · area | State |
+|---|---|---|---|
+| S01 | The schedule, a month | Office · Operations | Have: `schedule-month.webp` |
+| S02 | The week by employee | Office · Operations | To take |
+| S03 | A recurring rule and the visits it made | Office · Operations | To take |
+| S04 | A visit with a crew of three, each with their own time | Office · Operations | To take |
+| S05 | Time-off requests | Office · People | To take |
+| S06 | Employee app home | Employee app · Operations | Have: `app-home-phone.webp` |
+| S06b | Employee app, the week | Employee app · Operations | Have: `app-schedule-phone.webp` |
+| S07 | A visit in progress on the phone, checked in | Employee app · Operations | To take |
+| S08 | Chat about a visit, with a photo | Employee app · Communication | To take |
+| S09 | Notifications | Employee app · Communication | To take |
+| S10 | Before and after photos of one visit | Office · Operations | Seed (photo files) |
+| S11 | A completed visit: crew, check-in and check-out, time report | Office · Operations | Have: `task-visit-proof.webp` |
+| S12 | Planned against actual time for a week | Office · Operations | To take |
+| S13 | A test result | Employee app · People | To take |
+| S14 | Stock by type and storage, with value | Office · Logistics | Have: `inventory-stock.webp` |
+| S15 | Two items under their low-stock level | Office · Logistics | To take |
+| S16 | Lead list with priorities | Office · Sales & CRM | To take |
+| S17 | Today's calls | Office · Sales & CRM | To take |
+| S18 | Notes from a recorded meeting or call | Office · Sales & CRM | To take |
+| S19 | A proposal as the client sees it | Public link · Sales & CRM | Seed (proposal) |
+| S20 | The proposal's "viewed" time in the office | Office · Sales & CRM | Seed (proposal) |
+| S21 | Signing status of a document | Office · Sales & CRM | To take |
+| S22 | An assistant task with its log | Office · AI assistants | To take |
+| S23 | Three items waiting for approval | Office · AI assistants | To take |
+| S24 | One client with several services, each with its own rule | Office · Operations | Seed |
+| S25 | Visits across one administrator's properties | Office · Operations | Seed |
+| S25b | The administrator's visits in the client portal | Client portal | Seed |
+| S26 | The client's visits in the client portal | Client portal | Seed (portal user) |
+| S27 | One visit with its photos, as the client sees it | Client portal | Seed (portal user) |
+| S28 | A call brief | Office · AI assistants | To take |
+| S29 | A public tender with the assistant's analysis | Office · AI assistants | To take |
+| S30 | The map with the day's visits | Office · Operations | To take |
+| S31 | Employee availability | Employee app · People | To take |
+| S32 | A site's floor plan and its checklist in route order | Employee app · Operations | To take |
+| S33 | Staff records with positions and access | Office · People | To take |
+| S34 | The email inbox, mail linked to a client | Office · Communication | To take |
+| S35 | WhatsApp with an employee | Office · Communication | To take |
+| S36 | Finding leads in the company register | Office · Sales & CRM | To take |
+| S37 | The advisory board's views on a decision | Office · AI assistants | To take |
+
+Never in a shot: real data, anything finance, BUILT or broken screens (deals board, inspections, courses, purchase orders), GPS, "coming soon" controls, and no ticked checklist used as proof.
 
 To retake: run the platform's smoke-settings server on its own port against the `fake` schema, log in as the test company's administrator with the language set to English, and capture `main.app-main` only.
 
@@ -34,16 +76,17 @@ To retake: run the platform's smoke-settings server on its own port against the 
 
 **What to record:**
 A 60-90 second Loom walkthrough showing one complete workflow:
-1. Open calendar → see today's tasks (5 sec)
-2. Click into a task → show assignment, checklist, location guide link (10 sec)
-3. Switch to employee view → show check-in, photo upload (10 sec)
-4. Back to admin → show the completed task with time + photos (10 sec)
-5. Generate invoice from tracked hours (10 sec)
-6. Show client portal — client sees the report (10 sec)
+1. Open the calendar → see today's visits (5 sec)
+2. Click into a visit → show the crew and the site's floor plan (10 sec)
+3. Switch to the employee app → check in, take before and after photos, check out (15 sec)
+4. Back to the office → the completed visit with times and photos (10 sec)
+5. The client portal → the client sees the visit and its photos (10 sec)
+
+No invoicing step (finance is on hold) and no ticked checklist as proof.
 
 **Tips:**
 - No narration needed initially (add later). Just screen recording with cursor.
-- Use real data, blur any sensitive info if needed.
+- Use the test company's data only (marked "(FAKE)"), never real data.
 - Host on YouTube (unlisted) and embed, or use Loom embed.
 - Thumbnail: use screenshot #1 (dashboard) with a play button overlay.
 

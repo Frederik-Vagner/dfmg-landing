@@ -1,79 +1,133 @@
 # Platform capabilities: what the site may claim
 
-What a customer can do with DFMG Platform today, grouped by the job they hire it for. The copy brief ([brief-platform.md](brief-platform.md)) takes its "What we may say" list from here.
+What a customer can do with DFMG Platform today, grouped by the areas the site uses (the same order as the platform's own sidebar). The copy brief ([brief-platform.md](brief-platform.md)) takes its "What we may say" list from here.
 
 - **LIVE**: the feature's purpose has happened in production, recently. Only LIVE goes on the site.
 - **BUILT**: the feature exists and works in the code, but its purpose has not happened in production yet (never used, paused, or used too little to count). It goes on the site once it is LIVE.
-- **NOT MEASURED**: nobody has checked production yet. Treat as BUILT until a check says otherwise.
+- **BROKEN**: the purpose cannot happen today. Never mention it.
+- **UNKNOWN**: production cannot show whether the purpose happens. Not claimed, unless the row says Frederik decided otherwise.
 - **HOLD (legal)**: bookkeeping features. They stay off the site whatever their status, until the system is notified to Erhvervsstyrelsen (see "Finance" below).
 
-Source: the platform's own production audit of 8 November 2026 (counts and dates per feature, read-only). The counts are internal and are not repeated here. Update this file when a feature changes status, with the date.
+Sources: the platform's production audits of 8 November 2026 and 15 November 2026 (dfmg-project-eu PR #385), both read-only, plus Frederik's decisions of 15 November 2026 where a row says so. The counts are internal and are not repeated here. Update this file when a feature changes status, with the date.
 
-## Plan the week
+**Proof of a visit is the photos and the times.** Crews rarely tick checklist items, so the site never says "every task ticked off" or uses the checklist as proof. Proof on the site is before and after photos, and check-in and check-out time per person.
+
+## Operations
 
 | Capability | Status |
 |---|---|
 | Schedule: every visit on one calendar, by client and by employee | LIVE |
-| Recurring visits: the coming weeks are planned automatically from a client's rules | LIVE |
-| Time off: employees ask in the app, the office decides | LIVE |
-| Shift offers: an employee hands a shift on, a colleague takes it | BUILT |
-| Bookings: a client books extra work | BUILT |
-
-## Run the visit
-
-| Capability | Status |
-|---|---|
-| Employee app (web and iPhone): today's visits, the team's schedule | LIVE |
+| Recurring visits: several recurring tasks per client, each with its own rule, planned ahead | LIVE |
+| Crews: several people on one visit, each with their own time | LIVE |
+| Employee app (in the phone's browser; an unlisted iPhone app waits for Apple's approval): today's visits, the team's schedule | LIVE |
 | Check-in and check-out per person, per visit | LIVE |
-| Chat between office and employees | LIVE |
-| Notifications to employees | LIVE |
-| Stock: items, storages and movements, low-stock levels | LIVE |
-| Issue reports from the site to the office | BUILT (used before, not recently) |
-| GPS position at check-in | BUILT (not working since June; fix in the platform's backlog) |
-| Location guides, checklists in route order, floor plans | NOT MEASURED |
-| Purchase orders to suppliers | BUILT (not used recently) |
-
-## Prove the quality
-
-| Capability | Status |
-|---|---|
 | Before and after photos on every visit | LIVE |
 | Time on site per person against the planned time | LIVE |
-| Tests: training checked in the app | LIVE |
-| Inspections and facility status | BUILT |
-| Premises status reports to clients | BUILT |
-| Guide acknowledgement (employee confirms they read a guide) | BUILT |
-| Courses | BUILT (not working end to end) |
+| Map of visits and sites | LIVE (15 Nov) |
+| Checklists in route order (the visit's tasks in the order you walk the site) | LIVE (15 Nov). Show the order, never ticks as proof |
+| Floor plans per site | LIVE (15 Nov) |
+| Location guides | UNKNOWN (15 Nov) |
+| Auto-plan (patterns suggested from past visits) | UNKNOWN (15 Nov) |
+| Needs-attention checks | UNKNOWN (15 Nov) |
+| Issue reports from the site to the office | BUILT (15 Nov) |
+| Voice to text on a visit | BUILT (15 Nov) |
+| GPS position at check-in | BUILT (not working since June; fix in the platform's backlog) |
+| Shift offers: an employee hands a shift on, a colleague takes it | BUILT |
+| Bookings: a client books extra work | BUILT |
+| Inspections, facility status, premises status reports | BUILT |
 
-## Keep clients informed
+## People
 
 | Capability | Status |
 |---|---|
-| Client portal: visits, photos, reports | BUILT (few clients invited yet) |
-| Client feedback, client reports, surveys | BUILT |
-| Email inbox inside the platform | NOT MEASURED |
+| Staff records and access by position | LIVE (15 Nov) |
+| Employee availability | LIVE (15 Nov) |
+| Time off: employees ask in the app, the office decides | LIVE |
+| Tests: training checked in the app | LIVE |
+| Guide acknowledgement (employee confirms they read a guide) | BUILT (15 Nov) |
+| Employee surveys | BUILT (15 Nov) |
+| Candidates (hiring) | BUILT (15 Nov) |
+| Confidential channel | BUILT (15 Nov) |
+| Org chart | BUILT (15 Nov) |
+| Office news | BUILT (15 Nov) |
+| Courses | BROKEN (15 Nov). Never mention |
 
-## Sell
+## Logistics
+
+| Capability | Status |
+|---|---|
+| Stock: items by storage, movements, low-stock levels | LIVE |
+| Purchase orders to suppliers | BUILT (15 Nov) |
+| Deliveries to client sites | BUILT (15 Nov) |
+| Laundry pickups | BUILT (15 Nov) |
+| Employee stock view in the app | BUILT (15 Nov) |
+| Loadout packs | UNKNOWN (15 Nov) |
+
+## Sales & CRM
+
+Never called "Outreach" on the site.
 
 | Capability | Status |
 |---|---|
 | Lead lists | LIVE |
+| Find leads in the company register | LIVE (15 Nov) |
 | Call log: every call on record | LIVE |
+| Call recording turned into notes | LIVE (15 Nov) |
 | Meeting recording turned into a summary and notes | LIVE |
 | Proposals sent as a link, and seen when the client opens them | LIVE |
-| Electronic signatures on documents | LIVE |
+| Electronic signatures on documents | LIVE (not linked to deals) |
+| Public tenders found for you, and analysed by an assistant | LIVE (15 Nov; none turned into a deal yet, so never claim that) |
+| Pricing setup (price lists, window times) | BUILT (15 Nov) |
+| Competitors board | BUILT (15 Nov) |
 | Deals pipeline (won and lost) | BUILT (stages do not yet close a deal) |
 | Lead to client conversion | BUILT |
 | Reminders and follow-ups | BUILT (made, not closed) |
-| Public tenders found for you | BUILT |
 | Yearly price adjustment letters | BUILT |
 | Email sequences | BUILT. Never market: unsolicited electronic marketing is forbidden (Markedsføringsloven § 10) |
 
-## Assistants
+## Communication
 
 | Capability | Status |
 |---|---|
-| AI assistants that propose work; a person decides every step | LIVE (internal; not on the site until Frederik decides how to present it) |
+| Chat between office and employees | LIVE |
+| Notifications to employees | LIVE |
+| Email inbox inside the platform | LIVE (15 Nov) |
+| WhatsApp with employees | LIVE (15 Nov) |
+| Email extras (scheduled send, rules, labels, quick replies) | BUILT (15 Nov) |
+| Client surveys | BUILT (15 Nov) |
+
+## Client portal
+
+| Capability | Status |
+|---|---|
+| Client portal: the client sees their visits and the photos from them | UNKNOWN (15 Nov: views are not recorded). Shown by Frederik's decision of 15 Nov 2026, with the test company's data; claim only what it does |
+| Client messages | BUILT (15 Nov) |
+| Client deliveries | BUILT (15 Nov) |
+| Client reports, client feedback | BUILT |
+
+## AI assistants
+
+Shown by Frederik's decision of 15 Nov 2026: a menu entry and a section on the platform overview, never the hero. A person approves every step.
+
+| Capability | Status |
+|---|---|
+| Assistants that propose work; a person approves before anything reaches a client | LIVE |
+| Call briefs prepared before a call | LIVE (15 Nov) |
+| Tenders found and analysed | LIVE (15 Nov) |
+| Advisory board | LIVE (15 Nov) |
+| Setup assistant | LIVE (15 Nov) |
+| Flows and templates | LIVE (15 Nov) |
+| Lessons (assistants learn from what a person rejected) | LIVE (15 Nov) |
+| Verified facts | LIVE (15 Nov) |
+| Assistant reports | LIVE (15 Nov) |
+
+## The office
+
+| Capability | Status |
+|---|---|
+| Personal calendar with Google sync | LIVE (15 Nov) |
+| Audit log | LIVE (15 Nov) |
+| Command palette | UNKNOWN (15 Nov) |
 
 ## Finance: HOLD (legal)
 
