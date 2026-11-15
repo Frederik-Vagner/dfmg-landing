@@ -3,7 +3,7 @@
     "hero": {
       "subtitle": "PRICING",
       "title": "One price per company, agreed after a demo",
-      "body": "Choose the plan that fits how you work today. We agree the price with you after a demo, from the size of your team and the parts you need."
+      "body": "Choose the plan that fits how you work today. We agree the price with you after a demo, from the size of your team and the parts you need. Then you bring your week, and it leads into a paid pilot."
     },
     "tiers": [
       {
@@ -15,7 +15,8 @@
           "Schedule and recurring visits",
           "Employee app with check-in and check-out",
           "Before and after photos, time on site",
-          "Time off, chat and notifications"
+          "Time off, chat and notifications",
+          "The client portal for your clients"
         ],
         "ctaText": "Book a demo",
         "ctaHref": "/pages/software/demo.html",
@@ -31,7 +32,8 @@
           "Stock by storage, with low-stock levels",
           "Tests for your team in the app",
           "Leads, call log and meeting notes",
-          "Proposals as a link, electronic signatures"
+          "Proposals as a link, electronic signatures",
+          "AI assistants: call briefs, tenders found and analysed"
         ],
         "ctaText": "Book a demo",
         "ctaHref": "/pages/software/demo.html",
@@ -51,39 +53,144 @@
         "ctaClass": "btn btn--secondary btn--md btn--full"
       }
     ],
+    "path": {
+      "title": "How you start",
+      "body": "Three steps, and you decide after each one.",
+      "steps": [
+        {
+          "title": "Book a demo",
+          "text": "We show you the platform and answer your questions. We reply within one working day."
+        },
+        {
+          "title": "Bring your week",
+          "text": "Bring your clients, your rhythms and your team, and we put your own week into the platform with you."
+        },
+        {
+          "title": "Paid pilot",
+          "text": "Your team runs its real weeks on the platform before you decide."
+        }
+      ]
+    },
     "comparison": {
       "title": "What each plan includes",
-      "body": "Grouped by job, as on the features page.",
+      "body": "Grouped by area, as on the platform pages.",
       "colModule": "Feature",
       "colStarter": "Starter",
       "colProfessional": "Professional",
       "colEnterprise": "Enterprise",
       "categories": [
         {
-          "name": "Plan the week",
+          "name": "Operations",
           "rows": [
-            { "module": "Schedule by client and employee", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Recurring visits planned ahead", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Time off in the app", "starter": true, "professional": true, "enterprise": true }
+            {
+              "module": "Schedule by client and employee",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Recurring tasks, each with its own rule",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Employee app, check-in and check-out",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Before and after photos",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Time on site against the plan",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            }
           ]
         },
         {
-          "name": "Run and prove the visit",
+          "name": "People",
           "rows": [
-            { "module": "Employee app, check-in and check-out", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Before and after photos", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Time on site against the plan", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Chat and notifications", "starter": true, "professional": true, "enterprise": true }
+            {
+              "module": "Time off in the app",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Tests in the app",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
           ]
         },
         {
-          "name": "Team, stock and sales",
+          "name": "Logistics",
           "rows": [
-            { "module": "Tests in the app", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Stock by storage", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Leads and call log", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Meeting notes from recordings", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Proposals and electronic signatures", "starter": false, "professional": true, "enterprise": true }
+            {
+              "module": "Stock by storage, low-stock levels",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
+          ]
+        },
+        {
+          "name": "Sales & CRM",
+          "rows": [
+            {
+              "module": "Leads and call log",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Notes from recorded meetings",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Proposals and electronic signatures",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
+          ]
+        },
+        {
+          "name": "Communication",
+          "rows": [
+            {
+              "module": "Chat and notifications",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            }
+          ]
+        },
+        {
+          "name": "Clients and assistants",
+          "rows": [
+            {
+              "module": "The client portal",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "AI assistants",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
           ]
         }
       ]
@@ -97,7 +204,7 @@
         },
         {
           "question": "How do we get started?",
-          "answer": "After the demo you start with a paid pilot. We set up your company in the platform and import your employees and clients from a spreadsheet."
+          "answer": "Book a demo. After it, you bring your week: we put your own clients, rhythms and team into the platform with you, and that leads into a paid pilot."
         },
         {
           "question": "Where is my data stored?",
@@ -109,12 +216,24 @@
         },
         {
           "question": "Is there a free trial?",
-          "answer": "No. After a demo you can start with a paid pilot, with your own data and your own team."
+          "answer": "No. After the demo you bring your week, and it leads into a paid pilot with your own data and your own team."
+        },
+        {
+          "question": "Is the client portal included?",
+          "answer": "Yes, in every plan."
+        },
+        {
+          "question": "Which plans include the AI assistants?",
+          "answer": "Professional and Enterprise."
         }
       ]
     },
     "trust": {
-      "items": ["Price agreed after a demo", "Danish-language support", "Hosted in the EU"]
+      "items": [
+        "Price agreed after a demo",
+        "Danish-language support",
+        "Hosted in the EU"
+      ]
     },
     "cta": {
       "title": "Not sure which plan?",
@@ -127,7 +246,7 @@
     "hero": {
       "subtitle": "PRISER",
       "title": "Én pris pr. virksomhed, aftalt efter en demo",
-      "body": "Vælg den plan, der passer til den måde, I arbejder på i dag. Vi aftaler prisen med jer efter en demo, ud fra holdets størrelse og de dele, I har brug for."
+      "body": "Vælg den plan, der passer til den måde, I arbejder på i dag. Vi aftaler prisen med jer efter en demo, ud fra holdets størrelse og de dele, I har brug for. Derefter kommer I med jeres uge, og det fører videre til en betalt pilot."
     },
     "tiers": [
       {
@@ -139,7 +258,8 @@
           "Vagtplan og faste besøg",
           "Medarbejder-app med check-ind og check-ud",
           "Før- og efterbilleder, tid på stedet",
-          "Fravær, chat og notifikationer"
+          "Fravær, chat og notifikationer",
+          "Kundeportalen til jeres kunder"
         ],
         "ctaText": "Book en demo",
         "ctaHref": "/pages/software/da/demo.html",
@@ -155,7 +275,8 @@
           "Lager pr. lagersted, med minimumsbeholdning",
           "Tests til holdet i appen",
           "Leads, opkaldslog og mødenoter",
-          "Tilbud som link, elektronisk underskrift"
+          "Tilbud som link, elektronisk underskrift",
+          "AI-assistenter: overblik før opkald, udbud fundet og analyseret"
         ],
         "ctaText": "Book en demo",
         "ctaHref": "/pages/software/da/demo.html",
@@ -175,39 +296,144 @@
         "ctaClass": "btn btn--secondary btn--md btn--full"
       }
     ],
+    "path": {
+      "title": "Sådan kommer I i gang",
+      "body": "Tre trin, og I bestemmer efter hvert af dem.",
+      "steps": [
+        {
+          "title": "Book en demo",
+          "text": "Vi viser jer platformen og svarer på jeres spørgsmål. Vi svarer inden for 1 arbejdsdag."
+        },
+        {
+          "title": "Kom med jeres uge",
+          "text": "Kom med jeres kunder, jeres rytmer og jeres hold, så lægger vi jeres egen uge ind i platformen sammen med jer."
+        },
+        {
+          "title": "Betalt pilot",
+          "text": "Jeres hold kører sine rigtige uger i platformen, før I beslutter jer."
+        }
+      ]
+    },
     "comparison": {
       "title": "Det indeholder hver plan",
-      "body": "Ordnet efter opgave, som på funktionssiden.",
+      "body": "Ordnet efter område, som på platformens sider.",
       "colModule": "Funktion",
       "colStarter": "Starter",
       "colProfessional": "Professional",
       "colEnterprise": "Enterprise",
       "categories": [
         {
-          "name": "Planlæg ugen",
+          "name": "Drift",
           "rows": [
-            { "module": "Vagtplan pr. kunde og medarbejder", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Faste besøg planlagt på forhånd", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Fravær i appen", "starter": true, "professional": true, "enterprise": true }
+            {
+              "module": "Vagtplan efter kunde og medarbejder",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Faste opgaver, hver med sin egen regel",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Medarbejder-app, check-ind og check-ud",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Før- og efterbilleder",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Tid på stedet mod planen",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            }
           ]
         },
         {
-          "name": "Kør og dokumentér besøget",
+          "name": "Medarbejdere",
           "rows": [
-            { "module": "Medarbejder-app, check-ind og check-ud", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Før- og efterbilleder", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Tid på stedet mod den planlagte tid", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Chat og notifikationer", "starter": true, "professional": true, "enterprise": true }
+            {
+              "module": "Fravær i appen",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Test i appen",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
           ]
         },
         {
-          "name": "Hold, lager og salg",
+          "name": "Logistik",
           "rows": [
-            { "module": "Tests i appen", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Lager pr. lagersted", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Leads og opkaldslog", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Mødenoter fra optagelser", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Tilbud og elektronisk underskrift", "starter": false, "professional": true, "enterprise": true }
+            {
+              "module": "Lager efter sted, minimumsniveauer",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
+          ]
+        },
+        {
+          "name": "Salg og CRM",
+          "rows": [
+            {
+              "module": "Leads og opkaldslog",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Noter fra optagne møder",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "Tilbud og elektronisk underskrift",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
+          ]
+        },
+        {
+          "name": "Kommunikation",
+          "rows": [
+            {
+              "module": "Chat og beskeder",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            }
+          ]
+        },
+        {
+          "name": "Kunder og assistenter",
+          "rows": [
+            {
+              "module": "Kundeportalen",
+              "starter": true,
+              "professional": true,
+              "enterprise": true
+            },
+            {
+              "module": "AI-assistenter",
+              "starter": false,
+              "professional": true,
+              "enterprise": true
+            }
           ]
         }
       ]
@@ -221,7 +447,7 @@
         },
         {
           "question": "Hvordan kommer vi i gang?",
-          "answer": "Efter demoen starter I med en betalt pilot. Vi opretter jeres virksomhed i platformen og importerer jeres medarbejdere og kunder fra et regneark."
+          "answer": "Book en demo. Derefter kommer I med jeres uge: vi lægger jeres egne kunder, rytmer og hold ind i platformen sammen med jer, og det fører videre til en betalt pilot."
         },
         {
           "question": "Hvor opbevares vores data?",
@@ -233,12 +459,24 @@
         },
         {
           "question": "Er der en gratis prøveperiode?",
-          "answer": "Nej. Efter en demo kan I starte med en betalt pilot, med jeres egne data og jeres eget hold."
+          "answer": "Nej. Efter demoen kommer I med jeres uge, og det fører videre til en betalt pilot med jeres egne data og jeres eget hold."
+        },
+        {
+          "question": "Er kundeportalen med?",
+          "answer": "Ja, i alle planer."
+        },
+        {
+          "question": "Hvilke planer har AI-assistenterne?",
+          "answer": "Professional og Enterprise."
         }
       ]
     },
     "trust": {
-      "items": ["Pris aftalt efter en demo", "Support på dansk", "Hostet i EU"]
+      "items": [
+        "Pris aftalt efter en demo",
+        "Support på dansk",
+        "Hostet i EU"
+      ]
     },
     "cta": {
       "title": "Ikke sikker på hvilken plan?",

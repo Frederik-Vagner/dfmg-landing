@@ -29,6 +29,25 @@
         </div>
     </section>
 
+    <!-- How you start: demo, Bring your week, paid pilot -->
+    <section class="section">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <h2 class="title intro__title">{{ t.path.title }}</h2>
+                <p class="body intro__text">{{ t.path.body }}</p>
+            </div>
+            <div class="grid grid--3 grid--loose">
+                {% for step in t.path.steps %}
+                <div class="card card--soft">
+                    <div class="step-number">{{ loop.index }}</div>
+                    <h3 class="card__title">{{ step.title }}</h3>
+                    <p class="card__text">{{ step.text }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
     <!-- Comparison table -->
     <section class="section section--light">
         <div class="container">
