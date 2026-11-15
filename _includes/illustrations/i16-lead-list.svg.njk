@@ -1,0 +1,10 @@
+<svg class="illustration" viewBox="0 0 480 320" role="img" aria-label="{{ illustrationAlt }}">
+    <rect class="illustration__bg" x="0" y="0" width="480" height="320" rx="24"/>
+    <rect class="illustration__card" x="56" y="32" width="368" height="256" rx="16"/>
+    {% for row in [['illustration__primary', 180], ['illustration__primary', 140], ['illustration__success', 200], ['illustration__amber', 120]] %}
+    <circle class="{{ row[0] }}" cx="96" cy="{{ 80 + loop.index0 * 54 }}" r="12"/>
+    <rect class="illustration__text" x="124" y="{{ 70 + loop.index0 * 54 }}" width="{{ row[1] }}" height="10" rx="5"/>
+    <rect class="illustration__dull" x="124" y="{{ 86 + loop.index0 * 54 }}" width="{{ row[1] - 60 }}" height="8" rx="4"/>
+    <rect class="illustration__primary-soft" x="352" y="{{ 70 + loop.index0 * 54 }}" width="48" height="20" rx="10"/>
+    {% endfor %}
+</svg>
