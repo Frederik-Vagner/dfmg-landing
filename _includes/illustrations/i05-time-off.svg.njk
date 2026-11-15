@@ -1,0 +1,14 @@
+<svg class="illustration" viewBox="0 0 480 320" role="img" aria-label="{{ illustrationAlt }}">
+    <rect class="illustration__bg" x="0" y="0" width="480" height="320" rx="24"/>
+    <rect class="illustration__card" x="40" y="40" width="240" height="240" rx="14"/>
+    <rect class="illustration__primary" x="40" y="40" width="240" height="40" rx="14"/>
+    {% for r in [0, 1, 2, 3] %}{% for c in [0, 1, 2, 3, 4] %}
+    <rect class="{{ 'illustration__amber' if (r == 2 and (c == 2 or c == 3)) else 'illustration__dull' }}" x="{{ 56 + c * 44 }}" y="{{ 96 + r * 44 }}" width="36" height="36" rx="6"/>
+    {% endfor %}{% endfor %}
+    <rect class="illustration__card" x="248" y="120" width="192" height="120" rx="14"/>
+    <rect class="illustration__text" x="272" y="144" width="104" height="10" rx="5"/>
+    <rect class="illustration__dull" x="272" y="162" width="80" height="8" rx="4"/>
+    <rect class="illustration__success" x="272" y="192" width="64" height="28" rx="14"/>
+    <path class="illustration__mark" d="M294 206L301 213L314 199"/>
+    <rect class="illustration__dull" x="348" y="192" width="64" height="28" rx="14"/>
+</svg>

@@ -1,0 +1,136 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "PEOPLE",
+      "title": "Your team's records, availability, time off and training, in one place",
+      "body": "Staff records with access by position, availability and time off from the phone, and tests that check the training has landed.",
+      "jump_label": "Jump to"
+    },
+    "sections": [
+      {
+        "id": "staff",
+        "jump": "Staff",
+        "eyebrow": "STAFF RECORDS",
+        "title": "Everyone on the team, with the access their job needs",
+        "body": "Keep each employee's record in the platform, and choose per position what they can see and change.",
+        "illustration": "i33-staff-access",
+        "illustrationAlt": "An illustration of three employees, each with their level of access"
+      },
+      {
+        "id": "availability",
+        "jump": "Availability",
+        "eyebrow": "AVAILABILITY",
+        "title": "Know who can work before you plan",
+        "body": "Employees mark when they can't work, from the phone, and the planner sees it before the week is set.",
+        "outcome": {
+          "icon": "fluent:calendar-person-20-filled",
+          "text": "Know who can work before you plan"
+        }
+      },
+      {
+        "id": "time-off",
+        "jump": "Time off",
+        "eyebrow": "TIME OFF",
+        "title": "Asked for and answered in one place",
+        "body": "Employees ask for time off from the phone, and the office answers in the platform, so the answer and the calendar always agree.",
+        "illustration": "i05-time-off",
+        "illustrationAlt": "An illustration of a calendar with two days off and a request being approved"
+      },
+      {
+        "id": "tests",
+        "jump": "Tests",
+        "eyebrow": "TESTS",
+        "title": "Check the training, not just hand it out",
+        "body": "Give employees a short test in the app and see who has passed before their first visit.",
+        "outcome": {
+          "icon": "fluent:ribbon-20-filled",
+          "text": "Who has passed the test, before the first visit"
+        }
+      }
+    ],
+    "faq": {
+      "title": "Questions about the team side",
+      "items": [
+        {
+          "q": "Do employees need a company phone?",
+          "a": "No. The employee app runs on the phone they already have."
+        },
+        {
+          "q": "Can a position see only some areas?",
+          "a": "Yes. For each position you choose, area by area, whether it sees nothing, can view or can edit."
+        },
+        {
+          "q": "Which plans include tests?",
+          "a": "Professional and Enterprise. Time off is in every plan."
+        }
+      ]
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "MEDARBEJDERE",
+      "title": "Holdets stamdata, rådighed, fravær og oplæring samlet ét sted",
+      "body": "Medarbejderoplysninger med adgang efter stilling, rådighed og fravær fra telefonen, og test, der viser, at oplæringen er gået ind.",
+      "jump_label": "Gå til"
+    },
+    "sections": [
+      {
+        "id": "staff",
+        "jump": "Medarbejdere",
+        "eyebrow": "MEDARBEJDEROPLYSNINGER",
+        "title": "Alle på holdet, med den adgang, deres job kræver",
+        "body": "Hold hver medarbejders oplysninger i platformen, og vælg for hver stilling, hvad de kan se og ændre.",
+        "illustration": "i33-staff-access",
+        "illustrationAlt": "En illustration af tre medarbejdere, hver med sit adgangsniveau"
+      },
+      {
+        "id": "availability",
+        "jump": "Rådighed",
+        "eyebrow": "RÅDIGHED",
+        "title": "Vid, hvem der kan arbejde, før I planlægger",
+        "body": "Medarbejderne markerer fra telefonen, hvornår de ikke kan arbejde, og den, der planlægger, ser det, før ugen ligger fast.",
+        "outcome": {
+          "icon": "fluent:calendar-person-20-filled",
+          "text": "Vid, hvem der kan arbejde, før I planlægger"
+        }
+      },
+      {
+        "id": "time-off",
+        "jump": "Fravær",
+        "eyebrow": "FRAVÆR",
+        "title": "Ansøgt og besvaret ét sted",
+        "body": "Medarbejderne beder om fri fra telefonen, og kontoret svarer i platformen, så svaret og kalenderen altid stemmer overens.",
+        "illustration": "i05-time-off",
+        "illustrationAlt": "En illustration af en kalender med to fridage og en anmodning, der bliver godkendt"
+      },
+      {
+        "id": "tests",
+        "jump": "Test",
+        "eyebrow": "TEST",
+        "title": "Tjek oplæringen, ikke bare udlever den",
+        "body": "Giv medarbejderne en kort test i appen, og se, hvem der har bestået, før deres første besøg.",
+        "outcome": {
+          "icon": "fluent:ribbon-20-filled",
+          "text": "Hvem der har bestået testen, før det første besøg"
+        }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål om holdet",
+      "items": [
+        {
+          "q": "Skal medarbejderne have en firmatelefon?",
+          "a": "Nej. Medarbejder-appen kører på den telefon, de allerede har."
+        },
+        {
+          "q": "Kan en stilling kun se nogle områder?",
+          "a": "Ja. For hver stilling vælger I, område for område, om den ser intet, kan se eller kan redigere."
+        },
+        {
+          "q": "Hvilke planer har test?",
+          "a": "Professional og Enterprise. Fravær er med i alle planer."
+        }
+      ]
+    }
+  }
+}
