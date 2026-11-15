@@ -1,0 +1,154 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "CLEANING",
+      "title": "Every recurring clean planned, done and proven",
+      "body": "Offices, stairwells, shops and institutions on a fixed rhythm, crews on the move, and clients who want to know the work was done.",
+      "jump_label": "Jump to"
+    },
+    "work": {
+      "title": "For the cleans that come back every week",
+      "items": [
+        { "icon": "fluent:building-20-filled", "title": "Offices", "text": "Fixed days and times, the same crew, a method per client." },
+        { "icon": "fluent:door-20-filled", "title": "Stairwells", "text": "Many addresses on one rhythm, each visit with its photos." },
+        { "icon": "fluent:building-shop-20-filled", "title": "Shops and institutions", "text": "Visits outside opening hours." },
+        { "icon": "fluent:window-20-filled", "title": "Window cleaning", "text": "Rounds every month or every quarter." }
+      ]
+    },
+    "sections": [
+      {
+        "id": "rhythms",
+        "jump": "Rhythms",
+        "eyebrow": "RECURRING VISITS",
+        "title": "Every client's rhythm, planned weeks ahead",
+        "body": "Weekly, every two weeks, chosen weekdays, monthly or \"the first Monday\": set it once per client, and the coming weeks are planned from it.",
+        "illustration": "i03-recurring",
+        "illustrationAlt": "An illustration of a repeating rule: the same task on Tuesday and Thursday, week after week"
+      },
+      {
+        "id": "crews",
+        "eyebrow": "CREWS",
+        "title": "Crews that move between sites",
+        "body": "Several people on one visit, each with their own check-in, check-out and time. Task templates carry the method, the products and the time for each client.",
+        "outcome": { "icon": "fluent:people-team-20-filled", "text": "Each person on a crew keeps their own time" }
+      },
+      {
+        "id": "proof",
+        "jump": "Proof",
+        "eyebrow": "PROOF FOR THE CLIENT",
+        "title": "When the client asks, show the photos",
+        "body": "Before and after photos and the time on site, on every clean. Give the client a login, and they see them in the client portal.",
+        "illustration": "i10-before-after",
+        "illustrationAlt": "An illustration of two photos of the same place, before and after"
+      },
+      {
+        "id": "products",
+        "eyebrow": "PRODUCTS",
+        "title": "Cleaning products in the right storage",
+        "body": "Know what is in which storage and what runs low, before a crew arrives without it.",
+        "illustration": "i15-low-stock",
+        "illustrationAlt": "An illustration of two stock levels, one under its line, with a warning",
+        "link": "logistics.html",
+        "linkText": "Logistics"
+      },
+      {
+        "id": "built-here",
+        "eyebrow": "BUILT INSIDE A FACILITY SERVICE COMPANY",
+        "title": "Every feature has been through a real cleaning week",
+        "body": "DFMG plans, runs and proves its own cleaning visits on the platform. What reaches your team has been used by ours first.",
+        "outcome": { "icon": "fluent:building-multiple-20-filled", "text": "Used every day for our own cleaning visits" }
+      }
+    ],
+    "faq": {
+      "title": "Questions cleaning companies ask",
+      "items": [
+        { "q": "Can a visit carry the method and the products for that client?", "a": "Yes. Task templates carry the method, the products and the time per client." },
+        { "q": "Can several people clean the same site together?", "a": "Yes. Each person on a crew has their own check-in and check-out." },
+        { "q": "Which rhythms can a clean have?", "a": "Daily, weekly, every two weeks, chosen weekdays, monthly, \"the first Monday\" and yearly." }
+      ]
+    },
+    "related": {
+      "title": "Also for",
+      "items": [
+        { "icon": "fluent:building-multiple-20-filled", "title": "Facility service", "text": "Several services at the same client, each with its own rhythm.", "link": "industries/facility-service.html" },
+        { "icon": "fluent:building-20-filled", "title": "Property service", "text": "Every property a site of its own, every visit on record.", "link": "industries/property-service.html" }
+      ]
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "RENGØRING",
+      "title": "Hver fast rengøring planlagt, udført og dokumenteret",
+      "body": "Kontorer, opgange, butikker og institutioner i en fast rytme, hold på farten og kunder, der vil vide, at arbejdet er gjort.",
+      "jump_label": "Gå til"
+    },
+    "work": {
+      "title": "Til de rengøringer, der kommer igen hver uge",
+      "items": [
+        { "icon": "fluent:building-20-filled", "title": "Kontorer", "text": "Faste dage og tider, det samme hold, en metode pr. kunde." },
+        { "icon": "fluent:door-20-filled", "title": "Opgange", "text": "Mange adresser i én rytme, hvert besøg med sine billeder." },
+        { "icon": "fluent:building-shop-20-filled", "title": "Butikker og institutioner", "text": "Besøg uden for åbningstiden." },
+        { "icon": "fluent:window-20-filled", "title": "Vinduespudsning", "text": "Runder hver måned eller hvert kvartal." }
+      ]
+    },
+    "sections": [
+      {
+        "id": "rhythms",
+        "jump": "Rytmer",
+        "eyebrow": "FASTE BESØG",
+        "title": "Hver kundes rytme, planlagt uger frem",
+        "body": "Ugentligt, hver anden uge, valgte ugedage, månedligt eller \"den første mandag\": sæt den én gang pr. kunde, så planlægges de kommende uger ud fra den.",
+        "illustration": "i03-recurring",
+        "illustrationAlt": "En illustration af en fast regel: den samme opgave tirsdag og torsdag, uge efter uge"
+      },
+      {
+        "id": "crews",
+        "eyebrow": "HOLD",
+        "title": "Hold, der flytter sig mellem adresser",
+        "body": "Flere personer på ét besøg, hver med sin egen check-ind, check-ud og tid. Opgaveskabeloner bærer metoden, produkterne og tiden for hver kunde.",
+        "outcome": { "icon": "fluent:people-team-20-filled", "text": "Hver person på et hold har sin egen tid" }
+      },
+      {
+        "id": "proof",
+        "jump": "Dokumentation",
+        "eyebrow": "DOKUMENTATION TIL KUNDEN",
+        "title": "Når kunden spørger, så vis billederne",
+        "body": "Før- og efterbilleder og tiden på stedet på hver rengøring. Giv kunden et login, så ser de dem i kundeportalen.",
+        "illustration": "i10-before-after",
+        "illustrationAlt": "En illustration af to billeder af det samme sted, før og efter"
+      },
+      {
+        "id": "products",
+        "eyebrow": "PRODUKTER",
+        "title": "Rengøringsprodukter på det rigtige lager",
+        "body": "Vid, hvad der er på hvilket lager, og hvad der er ved at slippe op, før et hold står uden.",
+        "illustration": "i15-low-stock",
+        "illustrationAlt": "En illustration af to lagerniveauer, det ene under sin linje, med en advarsel",
+        "link": "logistics.html",
+        "linkText": "Logistik"
+      },
+      {
+        "id": "built-here",
+        "eyebrow": "BYGGET I EN FACILITY SERVICE-VIRKSOMHED",
+        "title": "Hver funktion har været gennem en rigtig rengøringsuge",
+        "body": "DFMG planlægger, kører og dokumenterer sine egne rengøringsbesøg i platformen. Det, der når jeres hold, har vores brugt først.",
+        "outcome": { "icon": "fluent:building-multiple-20-filled", "text": "Brugt hver dag til vores egne rengøringsbesøg" }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål fra rengøringsvirksomheder",
+      "items": [
+        { "q": "Kan et besøg bære metoden og produkterne for kunden?", "a": "Ja. Opgaveskabeloner bærer metoden, produkterne og tiden pr. kunde." },
+        { "q": "Kan flere personer gøre rent det samme sted sammen?", "a": "Ja. Hver person på et hold har sin egen check-ind og check-ud." },
+        { "q": "Hvilke rytmer kan en rengøring have?", "a": "Dagligt, ugentligt, hver anden uge, valgte ugedage, månedligt, \"den første mandag\" og årligt." }
+      ]
+    },
+    "related": {
+      "title": "Også til",
+      "items": [
+        { "icon": "fluent:building-multiple-20-filled", "title": "Facility service", "text": "Flere ydelser hos samme kunde, hver med sin egen rytme.", "link": "industries/facility-service.html" },
+        { "icon": "fluent:building-20-filled", "title": "Ejendomsservice", "text": "Hver ejendom sin egen adresse, hvert besøg registreret.", "link": "industries/property-service.html" }
+      ]
+    }
+  }
+}

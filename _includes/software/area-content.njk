@@ -12,7 +12,11 @@
               _includes/illustrations/, e.g. "i01-calendar"), or outcome
               { icon, text } (an icon and one line, where a picture adds
               nothing), or shot { id, what } for a placeholder (partials/shot.njk)
+    work      (optional) title, items[] { icon, title, text }: a row of cards
+              after the hero, e.g. the kinds of work on an industry page
     faq       title, items[] { q, a }
+    related   (optional) title, items[] { icon, title, text, link }: link cards
+              before the call to action, e.g. the other industries
     cta       title, body, steps[] (optional), cta_demo, cta_overview
               (+ overviewLink, default features.html); without it the page
               gets the shared "Bring your week" offer
@@ -36,6 +40,26 @@
             </nav>
         </div>
     </section>
+
+    {% if t.work %}
+    <!-- Kinds of work -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <h2 class="title intro__title">{{ t.work.title }}</h2>
+            </div>
+            <div class="grid grid--{{ t.work.items | length if t.work.items | length < 4 else 4 }}">
+                {% for item in t.work.items %}
+                <div class="card card--soft">
+                    <div class="icon-badge"><iconify-icon icon="{{ item.icon }}" inline></iconify-icon></div>
+                    <h3 class="card__title">{{ item.title }}</h3>
+                    <p class="card__text">{{ item.text }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
 
     <!-- Sections -->
     {% for section in t.sections %}
@@ -88,6 +112,26 @@
                     <h3 class="heading heading--sm">{{ item.q }}</h3>
                     <p>{{ item.a }}</p>
                 </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if t.related %}
+    <!-- Related pages -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <h2 class="title intro__title">{{ t.related.title }}</h2>
+            </div>
+            <div class="grid grid--{{ t.related.items | length if t.related.items | length < 3 else 3 }}">
+                {% for item in t.related.items %}
+                <a href="{{ prefix }}/{{ item.link }}" class="card card--lift">
+                    <div class="icon-badge"><iconify-icon icon="{{ item.icon }}" inline></iconify-icon></div>
+                    <h3 class="card__title">{{ item.title }}</h3>
+                    <p class="card__text">{{ item.text }}</p>
+                </a>
                 {% endfor %}
             </div>
         </div>

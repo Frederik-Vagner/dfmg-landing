@@ -1,0 +1,166 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "PROPERTY SERVICE",
+      "title": "Every property a site of its own, every visit on record",
+      "body": "Stairwells, common areas and outdoor areas on a fixed rhythm: plan them on one calendar, run them from the phone, and keep photos and times from every visit.",
+      "jump_label": "Jump to"
+    },
+    "work": {
+      "title": "For the work that keeps a property running",
+      "items": [
+        { "icon": "fluent:door-20-filled", "title": "Stairwells and common areas", "text": "Many entrances on one rhythm." },
+        { "icon": "fluent:building-home-20-filled", "title": "Caretaker rounds", "text": "The same tasks at each property, week after week." },
+        { "icon": "fluent:leaf-two-20-filled", "title": "Outdoor areas", "text": "Paths, grounds and seasonal work." }
+      ]
+    },
+    "sections": [
+      {
+        "id": "sites",
+        "jump": "Properties",
+        "eyebrow": "PLAN THE WEEK",
+        "title": "The administrator is the client; each building is a site",
+        "body": "Each building has its own address under the administrator, with its own floor plans and photos. Give each its rhythm, and the coming weeks are planned from it.",
+        "illustration": "i25-properties",
+        "illustrationAlt": "An illustration of one property administrator above three buildings, each with its own visits"
+      },
+      {
+        "id": "route",
+        "eyebrow": "RUN THE VISIT",
+        "title": "Each building's floor plan and route, on the phone",
+        "body": "The visit's tasks come in the order you walk the building, with the floor plan beside them. The employee checks in on arrival and checks out on leaving.",
+        "illustration": "i32-floorplan",
+        "illustrationAlt": "An illustration of a floor plan with the route through the rooms, stop by stop"
+      },
+      {
+        "id": "proof",
+        "jump": "Proof",
+        "eyebrow": "PROVE THE WORK",
+        "title": "Photos of what was done, and when",
+        "body": "Before and after photos and the time on site, on every visit, so you can answer the administrator the same day.",
+        "illustration": "i10-before-after",
+        "illustrationAlt": "An illustration of two photos of the same place, before and after"
+      },
+      {
+        "id": "from-site",
+        "eyebrow": "FROM THE SITE",
+        "title": "Something wrong in the building? Tell the office from the visit",
+        "body": "The employee messages the office from the visit, with a photo, and the conversation stays with that building's visit.",
+        "illustration": "i08-phone-chat",
+        "illustrationAlt": "An illustration of a phone with chat messages and a photo in one of them"
+      },
+      {
+        "id": "portal",
+        "eyebrow": "THE CLIENT PORTAL",
+        "title": "The administrator sees every property's visits",
+        "body": "Give the property administrator a login, and they see the visits at each of their properties, with the photos.",
+        "illustration": "i26-portal-list",
+        "illustrationAlt": "An illustration of the client portal listing three visits, each with its photos"
+      },
+      {
+        "id": "built-here",
+        "eyebrow": "BUILT INSIDE A FACILITY SERVICE COMPANY",
+        "title": "Used for our own visits at clients' properties",
+        "body": "DFMG cleans stairwells for property administrators and plans, runs and proves those visits on the platform, every day.",
+        "outcome": { "icon": "fluent:building-multiple-20-filled", "text": "Used every day for our own stairwell cleaning" }
+      }
+    ],
+    "faq": {
+      "title": "Questions property service companies ask",
+      "items": [
+        { "q": "Can each building have its own floor plan?", "a": "Yes. Each site under the administrator has its own floor plan and photos." },
+        { "q": "Does the administrator see all their buildings?", "a": "Yes. In the client portal they see the visits at each of their properties." },
+        { "q": "Can we keep materials by van or storage room?", "a": "Yes. Stock is kept by storage, with low-stock levels." }
+      ]
+    },
+    "related": {
+      "title": "Also for",
+      "items": [
+        { "icon": "fluent:building-multiple-20-filled", "title": "Facility service", "text": "Several services at the same client, each with its own rhythm.", "link": "industries/facility-service.html" },
+        { "icon": "fluent:sparkle-20-filled", "title": "Cleaning", "text": "Recurring visits, crews and proof of every clean.", "link": "industries/cleaning.html" }
+      ]
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "EJENDOMSSERVICE",
+      "title": "Hver ejendom sin egen adresse, hvert besøg registreret",
+      "body": "Opgange, fællesarealer og udearealer i en fast rytme: planlæg dem i én kalender, kør dem fra telefonen, og gem billeder og tider fra hvert besøg.",
+      "jump_label": "Gå til"
+    },
+    "work": {
+      "title": "Til det arbejde, der holder en ejendom kørende",
+      "items": [
+        { "icon": "fluent:door-20-filled", "title": "Opgange og fællesarealer", "text": "Mange indgange i én rytme." },
+        { "icon": "fluent:building-home-20-filled", "title": "Viceværtrunder", "text": "De samme opgaver ved hver ejendom, uge efter uge." },
+        { "icon": "fluent:leaf-two-20-filled", "title": "Udearealer", "text": "Stier, grønne områder og sæsonarbejde." }
+      ]
+    },
+    "sections": [
+      {
+        "id": "sites",
+        "jump": "Ejendomme",
+        "eyebrow": "PLANLÆG UGEN",
+        "title": "Administratoren er kunden; hver bygning er en adresse",
+        "body": "Hver bygning har sin egen adresse under administratoren med sine egne plantegninger og billeder. Giv hver sin rytme, så planlægges de kommende uger ud fra den.",
+        "illustration": "i25-properties",
+        "illustrationAlt": "En illustration af én ejendomsadministrator over tre bygninger, hver med sine egne besøg"
+      },
+      {
+        "id": "route",
+        "eyebrow": "KØR BESØGET",
+        "title": "Hver bygnings plantegning og rute på telefonen",
+        "body": "Besøgets opgaver kommer i den rækkefølge, I går gennem bygningen, med plantegningen ved siden af. Medarbejderen checker ind ved ankomst og ud ved afgang.",
+        "illustration": "i32-floorplan",
+        "illustrationAlt": "En illustration af en plantegning med ruten gennem rummene, stop for stop"
+      },
+      {
+        "id": "proof",
+        "jump": "Dokumentation",
+        "eyebrow": "DOKUMENTÉR ARBEJDET",
+        "title": "Billeder af det, der blev gjort, og hvornår",
+        "body": "Før- og efterbilleder og tiden på stedet på hvert besøg, så I kan svare administratoren samme dag.",
+        "illustration": "i10-before-after",
+        "illustrationAlt": "En illustration af to billeder af det samme sted, før og efter"
+      },
+      {
+        "id": "from-site",
+        "eyebrow": "FRA STEDET",
+        "title": "Noget galt i bygningen? Sig det til kontoret fra besøget",
+        "body": "Medarbejderen skriver til kontoret fra besøget med et billede, og samtalen bliver ved den bygnings besøg.",
+        "illustration": "i08-phone-chat",
+        "illustrationAlt": "En illustration af en telefon med chatbeskeder og et billede i den ene"
+      },
+      {
+        "id": "portal",
+        "eyebrow": "KUNDEPORTALEN",
+        "title": "Administratoren ser besøgene ved hver ejendom",
+        "body": "Giv ejendomsadministratoren et login, så ser de besøgene ved hver af deres ejendomme med billederne.",
+        "illustration": "i26-portal-list",
+        "illustrationAlt": "En illustration af kundeportalen med tre besøg, hver med sine billeder"
+      },
+      {
+        "id": "built-here",
+        "eyebrow": "BYGGET I EN FACILITY SERVICE-VIRKSOMHED",
+        "title": "Brugt til vores egne besøg ved kunders ejendomme",
+        "body": "DFMG gør rent i opgange for ejendomsadministratorer og planlægger, kører og dokumenterer de besøg i platformen hver dag.",
+        "outcome": { "icon": "fluent:building-multiple-20-filled", "text": "Brugt hver dag til vores egen trappevask" }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål fra ejendomsservice-virksomheder",
+      "items": [
+        { "q": "Kan hver bygning have sin egen plantegning?", "a": "Ja. Hver adresse under administratoren har sin egen plantegning og sine egne billeder." },
+        { "q": "Ser administratoren alle sine bygninger?", "a": "Ja. I kundeportalen ser de besøgene ved hver af deres ejendomme." },
+        { "q": "Kan vi have materialer efter varevogn eller depotrum?", "a": "Ja. Lageret holdes efter sted, med minimumsniveauer." }
+      ]
+    },
+    "related": {
+      "title": "Også til",
+      "items": [
+        { "icon": "fluent:building-multiple-20-filled", "title": "Facility service", "text": "Flere ydelser hos samme kunde, hver med sin egen rytme.", "link": "industries/facility-service.html" },
+        { "icon": "fluent:sparkle-20-filled", "title": "Rengøring", "text": "Faste besøg, hold og dokumentation af hver rengøring.", "link": "industries/cleaning.html" }
+      ]
+    }
+  }
+}
