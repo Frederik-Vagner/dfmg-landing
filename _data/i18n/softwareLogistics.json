@@ -1,0 +1,100 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "LOGISTICS",
+      "title": "Know what is in every storage before you run out",
+      "body": "Products and equipment by storage, every movement in and out, and a level that warns you when something runs low.",
+      "jump_label": "Jump to"
+    },
+    "sections": [
+      {
+        "id": "storage",
+        "jump": "Storage",
+        "eyebrow": "BY STORAGE",
+        "title": "Every storage on its own, with its value",
+        "body": "Keep products and equipment by type and by the place they are kept, with quantity, price and value.",
+        "image": "/images/platform/inventory-stock.webp",
+        "imageAlt": "The inventory list: items by type and storage, with quantity, price and value"
+      },
+      {
+        "id": "movements",
+        "jump": "Movements",
+        "eyebrow": "MOVEMENTS",
+        "title": "Every item in and out, on record",
+        "body": "Each movement is logged, so the count you see is the count you have.",
+        "shot": { "id": "S38", "what": "A storage's movements, in and out" }
+      },
+      {
+        "id": "low-stock",
+        "jump": "Low stock",
+        "eyebrow": "LOW STOCK",
+        "title": "A warning before the shelf is empty",
+        "body": "Set a level for each item. When stock falls under it, you see it in the platform.",
+        "shot": { "id": "S15", "what": "Two items under their low-stock level" }
+      }
+    ],
+    "faq": {
+      "title": "Questions about stock",
+      "items": [
+        { "q": "Can each item have its own low-stock level?", "a": "Yes. You set the level item by item." },
+        { "q": "Can we keep stock in several places?", "a": "Yes. Every storage is kept on its own, with its own movements." },
+        { "q": "Which plans include stock?", "a": "Professional and Enterprise." }
+      ]
+    },
+    "cta": {
+      "title": "See your storages in it",
+      "body": "In the demo we show you stock the way you keep it. We reply within one working day.",
+      "cta_demo": "Book a demo",
+      "cta_overview": "See the whole platform"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "LOGISTIK",
+      "title": "Vid, hvad der er på hvert lager, før det slipper op",
+      "body": "Produkter og udstyr efter lager, hver bevægelse ind og ud, og et niveau, der advarer jer, når noget er ved at slippe op.",
+      "jump_label": "Gå til"
+    },
+    "sections": [
+      {
+        "id": "storage",
+        "jump": "Lager",
+        "eyebrow": "EFTER LAGER",
+        "title": "Hvert lager for sig, med sin værdi",
+        "body": "Hold produkter og udstyr efter type og efter det sted, de opbevares, med antal, pris og værdi.",
+        "image": "/images/platform/inventory-stock.webp",
+        "imageAlt": "Lagerlisten: varer efter type og lager, med antal, pris og værdi"
+      },
+      {
+        "id": "movements",
+        "jump": "Bevægelser",
+        "eyebrow": "BEVÆGELSER",
+        "title": "Hver vare ind og ud, registreret",
+        "body": "Hver bevægelse logges, så det antal, I ser, er det antal, I har.",
+        "shot": { "id": "S38", "what": "Et lagers bevægelser, ind og ud" }
+      },
+      {
+        "id": "low-stock",
+        "jump": "Lav beholdning",
+        "eyebrow": "LAV BEHOLDNING",
+        "title": "En advarsel, før hylden er tom",
+        "body": "Sæt et niveau for hver vare. Når beholdningen kommer under det, ser I det i platformen.",
+        "shot": { "id": "S15", "what": "To varer under deres minimumsniveau" }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål om lager",
+      "items": [
+        { "q": "Kan hver vare have sit eget minimumsniveau?", "a": "Ja. I sætter niveauet vare for vare." },
+        { "q": "Kan vi have lager flere steder?", "a": "Ja. Hvert lager holdes for sig, med sine egne bevægelser." },
+        { "q": "Hvilke planer har lager?", "a": "Professional og Enterprise." }
+      ]
+    },
+    "cta": {
+      "title": "Se jeres lagre i platformen",
+      "body": "I demoen viser vi lageret, som I holder det. Vi svarer inden for 1 arbejdsdag.",
+      "cta_demo": "Book en demo",
+      "cta_overview": "Se hele platformen"
+    }
+  }
+}
