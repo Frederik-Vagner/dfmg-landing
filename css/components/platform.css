@@ -58,6 +58,7 @@
 .illustration__amber { fill: var(--amber-200); }
 .illustration__dull { fill: var(--bg-muted); }
 .illustration__dust { fill: var(--gray-muted); }
+.illustration__ink { fill: none; stroke: var(--primary); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .illustration__mark { fill: none; stroke: var(--white); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ── Section titles a step below the default size ── */
