@@ -1,76 +1,63 @@
 # Platform assets checklist
 
-The screenshots, video and other assets the platform pages still need. Each item has: what it is, where it goes, and how to create it. The copy brief is [brief-platform.md](brief-platform.md).
+The illustrations, video and other assets the platform pages still need. Each item has: what it is, where it goes, and how to create it. The copy brief is [brief-platform.md](brief-platform.md).
 
 These are for Frederik to supply. Testimonials, metrics and quotes come from real people and real data only; the marketing agent never drafts them.
 
 ---
 
-## Screenshots
+## Illustrations (decided 15 Nov 2026)
 
-Taken 11 Nov 2026 from the platform's local test company (seeded, invented clients and people marked "(FAKE)"), never from real data. Desktop at 1440 px and phone at 390 px, both at 2x, the office shots cropped to the page area (no sidebar), the UI in English. Added with `npm run photo` into `/images/platform/`.
+No screenshots of the platform on the site: no screenshots, screen recordings or copies of its layout, field names, menus or data. The five screenshots taken on 11 Nov 2026 (`/images/platform/*.webp`) are no longer used on the pages; removing the files is a separate request.
 
-| Slot | File | Shows |
-|---|---|---|
-| home-hero, features-1 | `schedule-month.webp` | The schedule, a month of visits, hours per week |
-| features-2 | `app-schedule-phone.webp` | Employee app, the week's visits (phone) |
-| features-3 | `task-visit-proof.webp` | A completed visit: crew, check-in and check-out times, time report, checklist |
-| features-4 | `inventory-stock.webp` | Inventory by type and storage, with value |
-| home-walkthrough, features-5 | `app-home-phone.webp` | Employee app home: next visits (phone) |
+Each picture is a simple illustration in the site's own style that shows the idea, not the screen: inline SVG in `_includes/illustrations/`, drawn with the site's colour tokens (see `css/components/platform.css`), with no words, numbers or logos in it, so one drawing serves both languages. The alt text, in the page's language, says what the drawing shows. Where a picture adds nothing, the section shows an outcome line with an icon instead.
 
-### Screenshot numbers (15 Nov 2026)
+Numbers follow the old screenshot slots (S10 became I10), so pages and this list map one to one. Until a drawing exists, the page shows a marked placeholder with its number; a page merges only when its placeholders are gone (see [brief-platform.md](brief-platform.md)).
 
-Pages refer to shots by number. Until a shot exists, the page shows a marked placeholder with its number and what it will show, and uses one of the five shots above where it fits; a page merges only when its placeholders are gone (see [brief-platform.md](brief-platform.md)). Shots marked "seed" need data added to the test company first.
-
-| No. | Shows | App · area | State |
+| No. | Shows (the idea) | Visual | Used on |
 |---|---|---|---|
-| S01 | The schedule, a month | Office · Operations | Have: `schedule-month.webp` |
-| S02 | The week by employee | Office · Operations | To take |
-| S03 | A recurring rule and the visits it made | Office · Operations | To take |
-| S04 | A visit with a crew of three, each with their own time | Office · Operations | To take |
-| S05 | Time-off requests | Office · People | To take |
-| S06 | Employee app home | Employee app · Operations | Have: `app-home-phone.webp` |
-| S06b | Employee app, the week | Employee app · Operations | Have: `app-schedule-phone.webp` |
-| S07 | A visit in progress on the phone, checked in | Employee app · Operations | To take |
-| S08 | Chat about a visit, with a photo | Employee app · Communication | To take |
-| S09 | Notifications | Employee app · Communication | To take |
-| S10 | Before and after photos of one visit | Office · Operations | Seed (photo files) |
-| S11 | A completed visit: crew, check-in and check-out, time report | Office · Operations | Have: `task-visit-proof.webp` |
-| S12 | Planned against actual time for a week | Office · Operations | To take |
-| S13 | A test result | Employee app · People | To take |
-| S14 | Stock by type and storage, with value | Office · Logistics | Have: `inventory-stock.webp` |
-| S15 | Two items under their low-stock level | Office · Logistics | To take |
-| S16 | Lead list with priorities | Office · Sales & CRM | To take |
-| S17 | Today's calls | Office · Sales & CRM | To take |
-| S18 | Notes from a recorded meeting or call | Office · Sales & CRM | To take |
-| S19 | A proposal as the client sees it | Public link · Sales & CRM | Seed (proposal) |
-| S20 | The proposal's "viewed" time in the office | Office · Sales & CRM | Seed (proposal) |
-| S21 | Signing status of a document | Office · Sales & CRM | To take |
-| S22 | An assistant task with its log | Office · AI assistants | To take |
-| S23 | Three items waiting for approval | Office · AI assistants | To take |
-| S24 | One client with several services, each with its own rule | Office · Operations | Seed |
-| S25 | Visits across one administrator's properties | Office · Operations | Seed |
-| S25b | The administrator's visits in the client portal | Client portal | Seed |
-| S26 | The client's visits in the client portal | Client portal | Seed (portal user) |
-| S27 | One visit with its photos, as the client sees it | Client portal | Seed (portal user) |
-| S28 | A call brief | Office · AI assistants | To take |
-| S29 | A public tender with the assistant's analysis | Office · AI assistants | To take |
-| S30 | The map with the day's visits | Office · Operations | To take |
-| S31 | Employee availability | Employee app · People | To take |
-| S32 | A site's floor plan and its checklist in route order | Employee app · Operations | To take |
-| S33 | Staff records with positions and access | Office · People | To take |
-| S34 | The email inbox, mail linked to a client | Office · Communication | To take |
-| S35 | WhatsApp with an employee | Office · Communication | To take |
-| S36 | Finding leads in the company register | Office · Sales & CRM | To take |
-| S37 | The advisory board's views on a decision | Office · AI assistants | To take |
+| I01 | A calendar with three visits in different colours and an hours bar beside it | Illustration | Operations, overview (office), Home |
+| I03 | A rule chip with a repeat arrow, and the same visit on Tuesday and Thursday across three weeks | Illustration | Operations, Cleaning |
+| I04 | Each person on a crew keeps their own time | Outcome line (people icon) | Operations, Cleaning |
+| I05 | A request card on a calendar day with approve and decline marks | Illustration | People |
+| I06 | A phone with today's visits as three rows | Illustration | Operations, overview (employee app), Home |
+| I07 | A phone with a large check-in button and a clock | Illustration | Operations |
+| I08 | A phone with chat bubbles and a small photo in one of them | Illustration | Communication |
+| I09 | Tell the team once, in one place | Outcome line (megaphone icon) | Communication |
+| I10 | Two photo frames, before (dull) and after (bright), with an arrow between | Illustration | Operations, Home, Cleaning |
+| I11 | Bars per person: planned time and actual time side by side | Illustration | Operations, overview (operations) |
+| I12 | See which visits run over, week by week | Outcome line (chart icon) | Operations |
+| I13 | Who has passed the test, before the first visit | Outcome line (badge icon) | People |
+| I14 | Three storages (van, cupboard, room) with boxes on shelves | Illustration | Logistics, overview (logistics) |
+| I15 | A box with a level gauge under its line and a warning mark | Illustration | Logistics |
+| I16 | A list of rows with A, B and C priority dots | Illustration | Sales |
+| I17 | Every call on record, beside its lead | Outcome line (phone icon) | Sales |
+| I18 | A note with three to-do lines and a microphone | Illustration | Sales |
+| I19 | A proposal sheet with an open-eye mark | Illustration | Sales, overview (sales) |
+| I21 | A document with a signature line and a pen | Illustration | Sales |
+| I22 | Every step logged, and a person can undo it | Outcome line (history icon) | AI assistants |
+| I23 | Three cards in a column, each with an approve and a reject mark | Illustration | AI assistants, overview (assistants) |
+| I24 | One client card with three service chips in different colours, each on its own rhythm | Illustration | Facility service |
+| I25 | Three buildings with visit dots under one administrator | Illustration | Property service |
+| I25b | The administrator sees every property's visits | Outcome line (building icon) | Property service |
+| I26 | A portal card listing three visits | Illustration | Home, Facility service |
+| I27 | A portal card with one visit and two photos | Illustration | Overview (client portal) |
+| I28 | A short brief card beside a phone | Illustration | AI assistants |
+| I29 | A document with a magnifier and a fit bar | Illustration | AI assistants, Sales |
+| I30 | A map with three pins and a route between them | Illustration | Operations |
+| I31 | Know who can work before you plan | Outcome line (calendar icon) | People |
+| I32 | A floor plan with numbered route dots 1, 2, 3 | Illustration | Operations, Property service |
+| I33 | Three people cards, each with a three-step access mark (none, view, edit) | Illustration | People, overview (people) |
+| I34 | An envelope linked to a client card | Illustration | Communication, overview (communication) |
+| I35 | WhatsApp with your employees, from the office | Outcome line (chat icon, no WhatsApp logo) | Communication |
+| I36 | A magnifier over a row of company buildings | Illustration | Sales |
+| I37 | Three speech bubbles around one decision card | Illustration | AI assistants |
+| I38 | A box with one arrow in and one arrow out | Illustration | Logistics |
+| I39 | Two cards, before and after, with an arrow between | Illustration | AI assistants |
 
-Never in a shot: real data, anything finance, BUILT or broken screens (deals board, inspections, courses, purchase orders), GPS, "coming soon" controls, and no ticked checklist used as proof.
+## Product Video (on hold)
 
-To retake: run the platform's smoke-settings server on its own port against the `fake` schema, log in as the test company's administrator with the language set to English, and capture `main.app-main` only.
-
----
-
-## Product Video (1 needed, critical)
+**On hold (15 Nov 2026):** a screen recording shows the real platform, which the site no longer shows. Nothing below is made while that rule holds; an animated illustration of one visit could take its place.
 
 **Where it goes:** Homepage hero + "See how it works" section + Demo page sidebar
 
@@ -173,11 +160,11 @@ These are already shown as Font Awesome icons which works fine as placeholder.
 
 **What to create:**
 - 1200x630px image (standard OG size)
-- Content: "DFMG Platform" headline + dashboard screenshot + logo
+- Content: "DFMG Platform" headline + the calendar illustration (I01) + logo, no screenshot
 - Save as `/images/platform/og-image.jpg`
 - Point the `og.image` front matter of all 9 platform pages, in both languages, at it
 
-**Quick version:** Just put the dashboard screenshot in a 1200x630 frame with the logo in a corner.
+**Quick version:** The calendar illustration (I01) in a 1200x630 frame with the logo in a corner.
 
 ---
 
@@ -212,10 +199,8 @@ Can be a simple SVG or even a clean screenshot from a diagramming tool (Excalidr
 
 ## Content Checklist
 
-- [x] Screenshots: schedule, visit, employee app (two), inventory
-- [ ] Screenshot: proposal as the client sees it
-- [ ] Screenshot: a visit with before and after photos
-- [ ] Product video (60-90s Loom)
+- [ ] Illustrations I01–I39 (see the list above); screenshots are no longer used
+- [ ] Product video: on hold (it would show the real platform)
 - [ ] Founder testimonial text
 - [ ] Founder photo (or reuse frederik.webp)
 - [ ] Metrics: hours saved, completion %, employee count, client count
