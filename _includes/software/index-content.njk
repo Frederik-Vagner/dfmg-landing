@@ -18,96 +18,87 @@
        "[X]% on-time" and a "[X] employees / [X] clients" line — placeholders, not measurements.
        Re-add the section once the numbers come from the platform's own data. #}
 
-    <!-- Built by practitioners — your differentiator -->
-    <section class="section section--light section--half">
+    <!-- Who it is for -->
+    <section class="section section--half">
         <div class="container">
-            <div class="intro">
-                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.why.subtitle }}</div>
-                <div class="title">{{ t.why.title }}</div>
-                <div class="body intro__text intro__text--spaced">{{ t.why.body }}</div>
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.audience.subtitle }}</div>
+                <h2 class="title intro__title">{{ t.audience.title }}</h2>
             </div>
-
             <div class="grid grid--3 grid--loose">
-                <div class="card card--flat card--center">
-                    <div class="icon-badge icon-badge--round">
-                        <iconify-icon icon="fluent:flag-20-filled" inline></iconify-icon>
-                    </div>
-                    <div class="card__title">{{ t.why.card1_title }}</div>
-                    <div class="card__text">{{ t.why.card1_desc }}</div>
+                {% for item in t.audience.items %}
+                <div class="card card--flat">
+                    <h3 class="card__title">{{ item.title }}</h3>
+                    <p class="card__text">{{ item.text }}</p>
                 </div>
-                <div class="card card--flat card--center">
-                    <div class="icon-badge icon-badge--round">
-                        <iconify-icon icon="fluent:cube-multiple-20-filled" inline></iconify-icon>
-                    </div>
-                    <div class="card__title">{{ t.why.card2_title }}</div>
-                    <div class="card__text">{{ t.why.card2_desc }}</div>
-                </div>
-                <div class="card card--flat card--center">
-                    <div class="icon-badge icon-badge--round">
-                        <iconify-icon icon="fluent:link-20-filled" inline></iconify-icon>
-                    </div>
-                    <div class="card__title">{{ t.why.card3_title }}</div>
-                    <div class="card__text">{{ t.why.card3_desc }}</div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
 
-    <!-- Module overview -->
-    <section class="section">
+    <!-- What it does: plan, run and prove first, then the rest -->
+    <section class="section section--light">
         <div class="container">
             <div class="intro intro--spaced">
                 <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.modules.subtitle }}</div>
-                <div class="title intro__title">{{ t.modules.title }}</div>
-                <div class="body intro__text">{{ t.modules.body }}</div>
+                <h2 class="title intro__title">{{ t.modules.title }}</h2>
+                <p class="body intro__text">{{ t.modules.body }}</p>
             </div>
 
-            <div class="grid grid--3">
-                <a href="{{ prefix }}/features.html#operations" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.plan_title }}</div>
-                    <div class="card__text">{{ t.modules.plan_desc }}</div>
-                </a>
-                <a href="{{ prefix }}/features.html#employees" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:phone-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.visit_title }}</div>
-                    <div class="card__text">{{ t.modules.visit_desc }}</div>
-                </a>
-                <a href="{{ prefix }}/features.html#quality" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:camera-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.proof_title }}</div>
-                    <div class="card__text">{{ t.modules.proof_desc }}</div>
-                </a>
-                <a href="{{ prefix }}/features.html#team" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:people-team-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.team_title }}</div>
-                    <div class="card__text">{{ t.modules.team_desc }}</div>
-                </a>
-                <a href="{{ prefix }}/features.html#inventory" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:box-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.stock_title }}</div>
-                    <div class="card__text">{{ t.modules.stock_desc }}</div>
-                </a>
-                <a href="{{ prefix }}/features.html#crm" class="card card--lift">
-                    <div class="icon-badge"><iconify-icon icon="fluent:handshake-20-filled" inline></iconify-icon></div>
-                    <div class="card__title">{{ t.modules.sell_title }}</div>
-                    <div class="card__text">{{ t.modules.sell_desc }}</div>
-                </a>
+            <div class="stack stack--loose">
+                <div class="grid grid--3">
+                    <a href="{{ prefix }}/features.html#operations" class="card card--lift">
+                        <div class="icon-badge"><iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon></div>
+                        <h3 class="card__title">{{ t.modules.plan_title }}</h3>
+                        <p class="card__text">{{ t.modules.plan_desc }}</p>
+                    </a>
+                    <a href="{{ prefix }}/features.html#employees" class="card card--lift">
+                        <div class="icon-badge"><iconify-icon icon="fluent:phone-20-filled" inline></iconify-icon></div>
+                        <h3 class="card__title">{{ t.modules.visit_title }}</h3>
+                        <p class="card__text">{{ t.modules.visit_desc }}</p>
+                    </a>
+                    <a href="{{ prefix }}/features.html#quality" class="card card--lift">
+                        <div class="icon-badge"><iconify-icon icon="fluent:camera-20-filled" inline></iconify-icon></div>
+                        <h3 class="card__title">{{ t.modules.proof_title }}</h3>
+                        <p class="card__text">{{ t.modules.proof_desc }}</p>
+                    </a>
+                </div>
+
+                <h3 class="heading heading--sm">{{ t.modules.more_title }}</h3>
+                <div class="grid grid--3">
+                    <a href="{{ prefix }}/features.html#team" class="card card--flat">
+                        <h4 class="card__title">{{ t.modules.team_title }}</h4>
+                        <p class="card__text">{{ t.modules.team_desc }}</p>
+                    </a>
+                    <a href="{{ prefix }}/features.html#inventory" class="card card--flat">
+                        <h4 class="card__title">{{ t.modules.stock_title }}</h4>
+                        <p class="card__text">{{ t.modules.stock_desc }}</p>
+                    </a>
+                    <a href="{{ prefix }}/features.html#crm" class="card card--flat">
+                        <h4 class="card__title">{{ t.modules.sell_title }}</h4>
+                        <p class="card__text">{{ t.modules.sell_desc }}</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Product walkthrough — visual proof -->
-    <section class="section section--primary">
+    <!-- One visit, start to finish -->
+    <section class="section">
         <div class="container">
             <div class="row row--center">
-                <div>
-                    <div class="title title--compact">{{ t.walkthrough.title }}</div>
-                    <p>{{ t.walkthrough.body }}</p>
-                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline></iconify-icon> {{ t.walkthrough.cta }}</a>
-                </div>
                 {% set walkShot = "/images/platform/app-home-phone.webp" %}
                 <img src="{{ walkShot }}" width="{{ walkShot | imgWidth }}" height="{{ walkShot | imgHeight }}" alt="{{ t.walkthrough.image_alt }}" class="screenshot screenshot--phone" loading="lazy" decoding="async" data-photo-slot="home-walkthrough">
+                <div class="intro intro--start">
+                    <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.walkthrough.subtitle }}</div>
+                    <h2 class="title title--compact">{{ t.walkthrough.title }}</h2>
+                    <ul class="checklist checklist--success checklist--spaced">
+                        {% for step in t.walkthrough.steps %}
+                        <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> <span><strong>{{ step.title }}.</strong> {{ step.text }}</span></li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md"><iconify-icon icon="fluent:play-circle-20-filled" inline></iconify-icon> {{ t.walkthrough.cta }}</a>
+                </div>
             </div>
         </div>
     </section>
@@ -116,17 +107,40 @@
        "[Future customer testimonial]" blocks attributed to "[Name], [Company]".
        Re-add with a real, attributed quote — your own counts as one. #}
 
-    <!-- Comparison — what you're replacing -->
+    <!-- Built by practitioners, and how the data is kept -->
     <section class="section section--light">
         <div class="container">
+            <div class="row row--top">
+                <div class="intro intro--start">
+                    <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.why.subtitle }}</div>
+                    <h2 class="title title--compact">{{ t.why.title }}</h2>
+                    <p class="body intro__text">{{ t.why.body }}</p>
+                    <a href="{{ prefix }}/about.html" class="btn btn--ghost btn--md">{{ t.why.cta }}</a>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">{{ t.security.title }}</h3>
+                    <ul class="checklist checklist--success">
+                        {% for item in t.security.items %}
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span>{{ item }}</span></li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{{ prefix }}/security.html">{{ t.security.link }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison — what you're replacing -->
+    <section class="section">
+        <div class="container">
             <div class="intro intro--spaced">
-                <div class="title intro__title">{{ t.comparison.title }}</div>
-                <div class="body intro__text">{{ t.comparison.body }}</div>
+                <h2 class="title intro__title">{{ t.comparison.title }}</h2>
+                <p class="body intro__text">{{ t.comparison.body }}</p>
             </div>
 
             <div class="row row--loose">
                 <div class="card">
-                    <div class="card__title card__title--danger"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="card__title-icon"></iconify-icon> {{ t.comparison.without_title }}</div>
+                    <h3 class="card__title card__title--danger"><iconify-icon icon="fluent:dismiss-circle-20-filled" inline class="card__title-icon"></iconify-icon> {{ t.comparison.without_title }}</h3>
                     <ul class="checklist checklist--red">
                         {% for item in t.comparison.without_items %}
                         <li><iconify-icon icon="fluent:dismiss-20-filled" inline></iconify-icon> {{ item }}</li>
@@ -134,7 +148,7 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <div class="card__title card__title--success"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="card__title-icon"></iconify-icon> {{ t.comparison.with_title }}</div>
+                    <h3 class="card__title card__title--success"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline class="card__title-icon"></iconify-icon> {{ t.comparison.with_title }}</h3>
                     <ul class="checklist checklist--success">
                         {% for item in t.comparison.with_items %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> {{ item }}</li>

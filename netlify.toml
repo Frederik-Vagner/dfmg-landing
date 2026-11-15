@@ -177,3 +177,25 @@
   from = "/pages/software/da/floor-plans.html"
   to = "/pages/software/da/features.html"
   status = 301
+
+# The platform contact page was merged into the demo page (Nov 2026): one
+# form for a demo or a question, with the contact details beside it.
+[[redirects]]
+  from = "/pages/software/contact"
+  to = "/pages/software/demo.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/contact.html"
+  to = "/pages/software/demo.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/da/contact"
+  to = "/pages/software/da/demo.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/software/da/contact.html"
+  to = "/pages/software/da/demo.html"
+  status = 301

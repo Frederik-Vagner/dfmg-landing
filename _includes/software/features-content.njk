@@ -4,6 +4,11 @@
             <div class="subtitle">{{ t.hero.subtitle }}</div>
             <h1 class="title">{{ t.hero.title }}</h1>
             <p class="body">{{ t.hero.body }}</p>
+            <nav class="cluster cluster--center" aria-label="{{ t.hero.jump_label }}">
+                {% for section in t.sections %}
+                <a href="#{{ section.id }}" class="btn btn--ghost btn--sm">{{ section.subtitle }}</a>
+                {% endfor %}
+            </nav>
         </div>
     </section>
 
@@ -16,11 +21,11 @@
                     <div class="feature__eyebrow">{{ section.subtitle }}</div>
                     <h2 class="feature__title">{{ section.title }}</h2>
                     <p class="feature__text">{{ section.body }}</p>
-                    <div class="feature__tags">
-                        {% for badge in section.badges %}
-                        <span class="badge-inline badge-inline--sm badge-inline--light">{{ badge }}</span>
+                    <ul class="checklist checklist--success">
+                        {% for point in section.points %}
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span>{{ point }}</span></li>
                         {% endfor %}
-                    </div>
+                    </ul>
                 </div>
                 <div>
                     {% if section.image %}
@@ -40,12 +45,16 @@
     </section>
     {% endfor %}
 
-    <!-- Platform Admin callout -->
+    <!-- What it does not do, languages, and the made-up data in the screenshots -->
     <section class="section">
         <div class="container">
-            <div class="callout callout--note">
-                <div class="callout__title"><iconify-icon icon="fluent:shield-20-filled" inline></iconify-icon> {{ t.admin.title }}</div>
-                <div class="callout__text">{{ t.admin.body }}</div>
+            <div class="grid grid--3 grid--loose">
+                {% for note in t.notes %}
+                <div class="card card--soft card--accent-left card--accent-primary">
+                    <h2 class="heading heading--sm">{{ note.title }}</h2>
+                    <p>{{ note.text }}</p>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

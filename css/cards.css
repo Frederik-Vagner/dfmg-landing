@@ -472,14 +472,7 @@ a.card {
     font-size: 1em;
 }
 
-.icon-badge--round {
-    margin: 0 auto var(--space-md);
-    border-radius: var(--radius-round);
-    width: 56px;
-    height: 56px;
-}
-
-/* ── Plan: a pricing plan, centred; --featured gets a blue edge and a badge ── */
+/* ── Plan: a pricing plan, centred; --featured gets a blue edge ── */
 .plan {
     background: var(--white);
     border-radius: var(--radius-md);
