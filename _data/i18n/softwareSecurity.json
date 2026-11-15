@@ -1,0 +1,150 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "SECURITY AND DATA",
+      "title": "How we keep your company's data apart and safe",
+      "body": "You put your clients, your employees and their working hours into DFMG Platform. This page says where that data is, who processes it and what protects it, including what is not done yet."
+    },
+    "protect": {
+      "subtitle": "WHAT PROTECTS IT",
+      "title": "Kept apart from every other company",
+      "items": [
+        {
+          "title": "Your own database schema",
+          "text": "Each company's data sits in its own schema in the database, and its photos and files under its own key. A request from one company cannot read another company's files."
+        },
+        {
+          "title": "Two-step login and passkeys",
+          "text": "Each user can log in with a code from an authenticator app, with backup codes for a lost phone, or with a passkey."
+        },
+        {
+          "title": "Access by position",
+          "text": "Office, employees and clients have their own type of account. For each position you choose, area by area, whether it sees nothing, can view or can edit."
+        },
+        {
+          "title": "A record of security events",
+          "text": "Logins, failed logins and other security events are logged, and so are changes to visits."
+        },
+        {
+          "title": "Private photos and files",
+          "text": "Photos and documents are kept in a private store and opened through links that expire after a few hours."
+        },
+        {
+          "title": "Encrypted keys",
+          "text": "Passwords and keys for connected services, such as a mailbox or a calendar, are stored encrypted."
+        }
+      ]
+    },
+    "where": {
+      "subtitle": "WHERE IT IS",
+      "title": "Hosting, backups and the services we use",
+      "body1": "The application and the database run in our hosting provider's EU region. Photos and files are stored in Frankfurt, Germany.",
+      "body2": "Our hosting provider's database backups are stored in the US, even though the database itself runs in the EU. Some features also send data to services outside the EU, listed in the table. So we do not say that all data stays in the EU.",
+      "tableLabel": "Services that process your company's data",
+      "colService": "Service",
+      "colPurpose": "What for",
+      "colWhere": "Where",
+      "rows": [
+        { "service": "Heroku", "purpose": "The application and the database", "where": "EU region; backups in the US" },
+        { "service": "Amazon Web Services", "purpose": "Photos and files", "where": "Frankfurt, Germany" },
+        { "service": "Google", "purpose": "Maps, routes and travel times, calendar sync, push notifications to the app", "where": "Not limited to the EU" },
+        { "service": "OpenAI", "purpose": "Meeting summaries, voice memos, help writing emails", "where": "US" },
+        { "service": "Simply.com", "purpose": "Sending and receiving email", "where": "EU" },
+        { "service": "VirusTotal", "purpose": "Checking email attachments for viruses", "where": "Not limited to the EU" }
+      ],
+      "note": "The main services, read from the platform's own setup on 15 November 2026. The full list comes with the data processing agreement."
+    },
+    "coming": {
+      "subtitle": "NOT DONE YET",
+      "title": "What we are working on",
+      "body": "These are not in place today. We will say so here when each one is.",
+      "items": [
+        "A data processing agreement for every customer",
+        "Database backups stored in the EU",
+        "A list of services kept up to date, with notice before it changes",
+        "An administrator can require two-step login for the whole company",
+        "A full export of your company's data when you leave"
+      ]
+    },
+    "cta": {
+      "title": "Questions from your IT or your lawyer?",
+      "body": "Send them to us before the demo, and we'll answer them in writing.",
+      "cta_contact": "Contact us",
+      "cta_demo": "Book a demo"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "SIKKERHED OG DATA",
+      "title": "Sådan holder vi jeres virksomheds data adskilt og sikre",
+      "body": "I lægger jeres kunder, jeres medarbejdere og deres arbejdstimer ind i DFMG Platform. Her står, hvor de data ligger, hvem der behandler dem, og hvad der beskytter dem, også det, der ikke er på plads endnu."
+    },
+    "protect": {
+      "subtitle": "DET BESKYTTER DEM",
+      "title": "Adskilt fra alle andre virksomheder",
+      "items": [
+        {
+          "title": "Jeres eget databaseskema",
+          "text": "Hver virksomheds data ligger i sit eget skema i databasen, og dens billeder og filer under sin egen nøgle. En forespørgsel fra én virksomhed kan ikke læse en anden virksomheds filer."
+        },
+        {
+          "title": "Totrinslogin og adgangsnøgler",
+          "text": "Hver bruger kan logge ind med en kode fra en godkendelsesapp, med reservekoder til en mistet telefon, eller med en adgangsnøgle."
+        },
+        {
+          "title": "Adgang efter stilling",
+          "text": "Kontoret, medarbejdere og kunder har hver deres type konto. For hver stilling vælger I, område for område, om den ser intet, kan se eller kan redigere."
+        },
+        {
+          "title": "En log over sikkerhedshændelser",
+          "text": "Logins, fejlede logins og andre sikkerhedshændelser logges, og det gør ændringer i besøg også."
+        },
+        {
+          "title": "Private billeder og filer",
+          "text": "Billeder og dokumenter ligger i et privat lager og åbnes gennem links, der udløber efter nogle timer."
+        },
+        {
+          "title": "Krypterede nøgler",
+          "text": "Adgangskoder og nøgler til forbundne tjenester, fx en mailboks eller en kalender, gemmes krypteret."
+        }
+      ]
+    },
+    "where": {
+      "subtitle": "HVOR DE LIGGER",
+      "title": "Hosting, backup og de tjenester, vi bruger",
+      "body1": "Applikationen og databasen kører i vores hostingudbyders EU-region. Billeder og filer gemmes i Frankfurt i Tyskland.",
+      "body2": "Vores hostingudbyders backup af databasen gemmes i USA, selvom selve databasen kører i EU. Nogle funktioner sender også data til tjenester uden for EU, som står i tabellen. Derfor siger vi ikke, at alle data bliver i EU.",
+      "tableLabel": "Tjenester, der behandler jeres virksomheds data",
+      "colService": "Tjeneste",
+      "colPurpose": "Til hvad",
+      "colWhere": "Hvor",
+      "rows": [
+        { "service": "Heroku", "purpose": "Applikationen og databasen", "where": "EU-region; backup i USA" },
+        { "service": "Amazon Web Services", "purpose": "Billeder og filer", "where": "Frankfurt, Tyskland" },
+        { "service": "Google", "purpose": "Kort, ruter og køretider, kalendersynkronisering, notifikationer til appen", "where": "Ikke begrænset til EU" },
+        { "service": "OpenAI", "purpose": "Mødereferater, talememoer, hjælp til at skrive mails", "where": "USA" },
+        { "service": "Simply.com", "purpose": "Afsendelse og modtagelse af mail", "where": "EU" },
+        { "service": "VirusTotal", "purpose": "Virustjek af vedhæftede filer i mails", "where": "Ikke begrænset til EU" }
+      ],
+      "note": "De vigtigste tjenester, aflæst i platformens egen opsætning den 15. november 2026. Den fulde liste følger med databehandleraftalen."
+    },
+    "coming": {
+      "subtitle": "IKKE PÅ PLADS ENDNU",
+      "title": "Det arbejder vi på",
+      "body": "Det her er ikke på plads i dag. Vi skriver det her, når hvert punkt er.",
+      "items": [
+        "En databehandleraftale til hver kunde",
+        "Backup af databasen gemt i EU",
+        "En liste over tjenester, der holdes opdateret, med varsel før den ændres",
+        "En administrator kan kræve totrinslogin for hele virksomheden",
+        "En fuld eksport af jeres virksomheds data, når I stopper"
+      ]
+    },
+    "cta": {
+      "title": "Spørgsmål fra jeres IT eller jeres advokat?",
+      "body": "Send dem til os før demoen, så svarer vi skriftligt.",
+      "cta_contact": "Kontakt os",
+      "cta_demo": "Book en demo"
+    }
+  }
+}

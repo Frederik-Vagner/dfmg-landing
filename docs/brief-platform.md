@@ -44,6 +44,8 @@ The technology claims on the about page (multi-tenant with isolated schemas, hos
 - **The employee app** runs in the phone's browser. It is not in the App Store, so don't say "iPhone app".
 - **Plan limits** (employees, users) and contract terms (notice, billing period, setup fees) are not decided. Don't write them.
 
+The security page (`pages/software/security.html`, copy in `_data/i18n/softwareSecurity.json`) says only what the platform does today, and lists what is not done yet under "What we are working on". When one of those lands, or a service in its table changes, update both languages in the same PR, and check the claim in the platform's code first.
+
 ## What we never say
 
 - **Prices.** All tiers say "Contact us" (Starter, Professional) or "Custom" (Enterprise). Don't write a price, a "from" price or a discount.

@@ -1,0 +1,89 @@
+    <!-- Hero -->
+    <section class="hero hero--primary hero--compact">
+        <div class="container">
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+        </div>
+    </section>
+
+    <!-- What protects the data: only what the platform does today -->
+    <section class="section">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.protect.subtitle }}</div>
+                <h2 class="title intro__title">{{ t.protect.title }}</h2>
+            </div>
+            <div class="grid grid--3 grid--loose">
+                {% for item in t.protect.items %}
+                <div class="card card--soft card--accent-left card--accent-primary">
+                    <h3 class="heading heading--sm">{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Where the data is, backups as they are, and who processes it -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.where.subtitle }}</div>
+                <h2 class="title intro__title">{{ t.where.title }}</h2>
+                <p class="body intro__text intro__text--tight">{{ t.where.body1 }}</p>
+                <p class="body intro__text">{{ t.where.body2 }}</p>
+            </div>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="{{ t.where.tableLabel }}">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>{{ t.where.colService }}</th>
+                        <th>{{ t.where.colPurpose }}</th>
+                        <th>{{ t.where.colWhere }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in t.where.rows %}
+                    <tr>
+                        <td><strong>{{ row.service }}</strong></td>
+                        <td>{{ row.purpose }}</td>
+                        <td>{{ row.where }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+            <p class="body">{{ t.where.note }}</p>
+        </div>
+    </section>
+
+    <!-- Not done yet -->
+    <section class="section">
+        <div class="container">
+            <div class="intro intro--start">
+                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.coming.subtitle }}</div>
+                <h2 class="title title--compact">{{ t.coming.title }}</h2>
+                <p class="body intro__text">{{ t.coming.body }}</p>
+                <ul class="checklist">
+                    {% for item in t.coming.items %}
+                    <li><iconify-icon icon="fluent:clock-20-regular" inline></iconify-icon> <span>{{ item }}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="cta cta--center cta--primary">
+                <div class="cta__title">{{ t.cta.title }}</div>
+                <div class="cta__text">{{ t.cta.body }}</div>
+                <div class="cluster cluster--center">
+                    <a href="{{ prefix }}/contact.html" class="btn btn--ghost btn--md">{{ t.cta.cta_contact }}</a>
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.cta_demo }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
