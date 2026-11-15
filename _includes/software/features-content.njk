@@ -20,7 +20,7 @@
                 <div class="feature">
                     <div class="feature__eyebrow">{{ section.subtitle }}</div>
                     <h2 class="feature__title">{{ section.title }}</h2>
-                    <p class="feature__text">{{ section.body }}</p>
+                    <p class="feature__text">{{ section.body }}{% if section.appLine %} {% include "software/employee-app-line.njk" %}{% endif %}</p>
                     <ul class="checklist checklist--success">
                         {% for point in section.points %}
                         <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span>{{ point }}</span></li>

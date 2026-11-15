@@ -1,0 +1,14 @@
+{
+  "en": {
+    "employeeApp": {
+      "where": "It runs in the phone's browser.",
+      "whereStore": "It is an iPhone app, or runs in the phone's browser on any phone. Your employees get the link from you."
+    }
+  },
+  "da": {
+    "employeeApp": {
+      "where": "Den kører i telefonens browser.",
+      "whereStore": "Den er en iPhone-app, eller kører i telefonens browser på alle telefoner. Jeres medarbejdere får linket fra jer."
+    }
+  }
+}

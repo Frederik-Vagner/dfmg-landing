@@ -29,7 +29,8 @@
         "reverse": true,
         "subtitle": "Run the visit",
         "title": "Today's work on every phone",
-        "body": "The employee app shows each person their own visits and the whole team's schedule. They check in when they arrive, check out when they leave, and message the office from the same app. It runs in the phone's browser.",
+        "body": "The employee app shows each person their own visits and the whole team's schedule. They check in when they arrive, check out when they leave, and message the office from the same app.",
+        "appLine": true,
         "points": [
           "Mine, team and available views, as a list or a month",
           "Check-in and check-out per person, per visit",
@@ -155,7 +156,8 @@
         "reverse": true,
         "subtitle": "Kør besøget",
         "title": "Dagens arbejde på hver telefon",
-        "body": "Medarbejder-appen viser hver person deres egne besøg og hele holdets vagtplan. De checker ind, når de kommer, checker ud, når de går, og skriver til kontoret fra samme app. Den kører i telefonens browser.",
+        "body": "Medarbejder-appen viser hver person deres egne besøg og hele holdets vagtplan. De checker ind, når de kommer, checker ud, når de går, og skriver til kontoret fra samme app.",
+        "appLine": true,
         "points": [
           "Mine, holdets og ledige vagter, som liste eller måned",
           "Check-ind og check-ud pr. person, pr. besøg",

@@ -1,0 +1,14 @@
+{#
+  Where the employee app runs, in the page's language. One switch for the
+  whole site: site.employeeAppInStore in _data/site.json.
+
+    false  "It runs in the phone's browser." (until Apple has approved the app)
+    true   "It is an iPhone app, or runs in the phone's browser on any phone.
+            Your employees get the link from you."
+
+  The app is unlisted in the App Store: never "search for us in the App
+  Store" and no store badge. Android uses the browser. Wording in
+  _data/i18n/softwareApp.json.
+#}
+{%- set appLine = i18n.softwareApp[lang].employeeApp -%}
+{{- appLine.whereStore if site.employeeAppInStore else appLine.where -}}
