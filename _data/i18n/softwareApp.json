@@ -8,7 +8,7 @@
   "da": {
     "employeeApp": {
       "where": "Den kører i telefonens browser.",
-      "whereStore": "Den er en iPhone-app, eller kører i telefonens browser på alle telefoner. Jeres medarbejdere får linket fra jer."
+      "whereStore": "Den findes som iPhone-app og kører også i telefonens browser på alle telefoner. Jeres medarbejdere får linket fra jer."
     }
   }
 }

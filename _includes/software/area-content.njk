@@ -1,0 +1,110 @@
+{#
+  One area of the platform (Operations, Sales & CRM, Logistics, …): a page per
+  area, in the order of the platform's own sidebar. The page sets `t` to its
+  i18n file (en or da) and `prefix`; everything else comes from `t`:
+
+    hero      subtitle, title, body, jump_label
+    sections  id, eyebrow, title, body, points[] (optional),
+              appLine (adds where the employee app runs, see employee-app-line.njk),
+              jump (a label: the section gets a link in the hero),
+              then one visual: illustration + illustrationAlt (a drawing from
+              _includes/illustrations/, e.g. "i01-calendar"), or outcome
+              { icon, text } (an icon and one line, where a picture adds
+              nothing), or shot { id, what } for a placeholder (partials/shot.njk)
+    faq       title, items[] { q, a }
+    cta       title, body, steps[] (optional), cta_demo, cta_overview; without
+              it the page gets the shared "Bring your week" offer
+              (_data/i18n/softwareOffer.json): demo → Bring your week → pilot
+
+  No screenshots of the platform: see docs/brief-platform.md.
+
+  Sections alternate background and side by themselves.
+#}
+{% from "partials/shot.njk" import shot %}
+    <!-- Hero -->
+    <section class="hero hero--primary hero--compact">
+        <div class="container">
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+            <nav class="cluster cluster--center" aria-label="{{ t.hero.jump_label }}">
+                {% for section in t.sections %}{% if section.jump %}
+                <a href="#{{ section.id }}" class="btn btn--ghost btn--sm">{{ section.jump }}</a>
+                {% endif %}{% endfor %}
+            </nav>
+        </div>
+    </section>
+
+    <!-- Sections -->
+    {% for section in t.sections %}
+    <section class="section{% if loop.index is even %} section--light{% endif %}" id="{{ section.id }}">
+        <div class="container">
+            <div class="row row--center row--wide{% if loop.index is even %} row--reverse{% endif %}">
+                <div class="feature">
+                    <div class="feature__eyebrow">{{ section.eyebrow }}</div>
+                    <h2 class="feature__title">{{ section.title }}</h2>
+                    <p class="feature__text">{{ section.body }}{% if section.appLine %} {% include "software/employee-app-line.njk" %}{% endif %}</p>
+                    {% if section.points %}
+                    <ul class="checklist checklist--success">
+                        {% for point in section.points %}
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span>{{ point }}</span></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div>
+                    {% if section.illustration %}
+                    {% set illustrationAlt = section.illustrationAlt %}
+                    {% include "illustrations/" + section.illustration + ".svg.njk" %}
+                    {% elif section.outcome %}
+                    <div class="card card--soft card--accent-left card--accent-primary">
+                        <div class="icon-badge"><iconify-icon icon="{{ section.outcome.icon }}" inline></iconify-icon></div>
+                        <p class="heading heading--sm">{{ section.outcome.text }}</p>
+                    </div>
+                    {% elif section.shot %}
+                    {{ shot(section.shot.id, section.shot.what, lang) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+    <!-- Questions -->
+    {% if t.faq %}
+    <section class="section">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <h2 class="title intro__title">{{ t.faq.title }}</h2>
+            </div>
+            <div class="grid grid--3 grid--loose">
+                {% for item in t.faq.items %}
+                <div class="card card--soft card--accent-left card--accent-primary">
+                    <h3 class="heading heading--sm">{{ item.q }}</h3>
+                    <p>{{ item.a }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- CTA: the page's own, or the shared "Bring your week" offer -->
+    {% set cta = t.cta or i18n.softwareOffer[lang] %}
+    <section class="section">
+        <div class="container">
+            <div class="cta cta--center cta--primary">
+                <div class="cta__title">{{ cta.title }}</div>
+                <div class="cta__text">{{ cta.body }}</div>
+                {% if cta.steps %}
+                <ol class="cta__steps">
+                    {% for step in cta.steps %}<li class="cta__step">{{ step }}</li>{% endfor %}
+                </ol>
+                {% endif %}
+                <div class="cluster cluster--center">
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ cta.cta_demo }}</a>
+                    <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ cta.cta_overview }}</a>
+                </div>
+            </div>
+        </div>
+    </section>

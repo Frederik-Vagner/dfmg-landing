@@ -1,0 +1,242 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "OPERATIONS",
+      "title": "Plan the week, run every visit and prove the work",
+      "body": "The schedule in the office, the visit on the phone and the proof on the visit, connected: what you plan is what your team sees, and what they do is what you can show.",
+      "jump_label": "Jump to"
+    },
+    "sections": [
+      {
+        "id": "plan",
+        "jump": "Plan",
+        "eyebrow": "PLAN",
+        "title": "Every visit on one calendar",
+        "body": "See the month by client, employee and time, with the hours per week beside it, so an overloaded week shows before it happens.",
+        "illustration": "i01-calendar",
+        "illustrationAlt": "An illustration of a calendar with three visits in different colours, and the hours per week beside it"
+      },
+      {
+        "id": "recurring",
+        "eyebrow": "RECURRING TASKS",
+        "title": "Each task at a client with its own rhythm",
+        "body": "A client can have several recurring tasks, each with its own rule, and the coming weeks are planned from them.",
+        "points": [
+          "Daily, weekly or every two weeks",
+          "Chosen weekdays, monthly (or \"the first Monday\") and yearly",
+          "Planned six weeks ahead"
+        ],
+        "illustration": "i03-recurring",
+        "illustrationAlt": "An illustration of a repeating rule: the same task on Tuesday and Thursday, week after week"
+      },
+      {
+        "id": "crews",
+        "eyebrow": "CREWS AND TEMPLATES",
+        "title": "Several people on one visit, each with their own time",
+        "body": "Put a crew on a visit and each person checks in and out on their own. Task templates carry the method, the products and the time for each client.",
+        "outcome": {
+          "icon": "fluent:people-team-20-filled",
+          "text": "Each person on a crew keeps their own time"
+        }
+      },
+      {
+        "id": "map",
+        "eyebrow": "THE MAP",
+        "title": "The day's visits on a map",
+        "body": "See every visit and site on a map, beside the calendar.",
+        "illustration": "i30-map",
+        "illustrationAlt": "An illustration of a map with three visits and the route between them"
+      },
+      {
+        "id": "run",
+        "jump": "Run",
+        "eyebrow": "RUN",
+        "title": "Today's work on every phone",
+        "body": "Each person sees their own visits first, then the team's week.",
+        "appLine": true,
+        "illustration": "i06-phone-visits",
+        "illustrationAlt": "An illustration of a phone showing today's three visits"
+      },
+      {
+        "id": "check-in",
+        "eyebrow": "CHECK-IN AND CHECK-OUT",
+        "title": "Every person checks in and out, on every visit",
+        "body": "One tap on arrival, one on leaving. On a crew, each person keeps their own time, and the office sees it on the visit straight away.",
+        "illustration": "i07-phone-checkin",
+        "illustrationAlt": "An illustration of a phone with a clock and a check-in button"
+      },
+      {
+        "id": "on-site",
+        "eyebrow": "ON SITE",
+        "title": "The site's floor plan, and the work in the order you walk it",
+        "body": "Each site can have its floor plan in the app, and the visit's tasks come in route order.",
+        "illustration": "i32-floorplan",
+        "illustrationAlt": "An illustration of a floor plan with the route through the rooms, stop by stop"
+      },
+      {
+        "id": "prove",
+        "jump": "Prove",
+        "eyebrow": "PROVE",
+        "title": "Before and after photos from every visit",
+        "body": "Employees take the photos in the app during the visit. The office sees them on the visit, and your client sees them in the client portal.",
+        "illustration": "i10-before-after",
+        "illustrationAlt": "An illustration of two photos of the same place, before and after"
+      },
+      {
+        "id": "time-on-site",
+        "eyebrow": "TIME ON SITE",
+        "title": "Time on site, person by person, against the plan",
+        "body": "Every check-in and check-out is on the visit: who was there, for how long, and how that compares with the time planned.",
+        "illustration": "i11-time-bars",
+        "illustrationAlt": "An illustration of three people, each with their planned and actual time side by side"
+      },
+      {
+        "id": "over-under",
+        "eyebrow": "THE WEEK IN TIME",
+        "title": "See which visits run over",
+        "body": "Planned against actual time for the week, so you can fix a visit plan or a price before it becomes a problem.",
+        "outcome": {
+          "icon": "fluent:data-bar-vertical-20-filled",
+          "text": "See which visits run over, week by week"
+        }
+      }
+    ],
+    "faq": {
+      "title": "Questions about operations",
+      "items": [
+        {
+          "q": "Can one client have several recurring tasks?",
+          "a": "Yes, each with its own rule, planned six weeks ahead."
+        },
+        {
+          "q": "Can several people be on one visit?",
+          "a": "Yes. Each person on a crew has their own check-in and check-out."
+        },
+        {
+          "q": "Does the client see the photos?",
+          "a": "Yes, in the client portal, when you give them a login."
+        }
+      ]
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "DRIFT",
+      "title": "Planlæg ugen, kør hvert besøg og dokumentér arbejdet",
+      "body": "Vagtplanen på kontoret, besøget på telefonen og dokumentationen på besøget hænger sammen: det, I planlægger, er det, holdet ser, og det, de gør, er det, I kan vise.",
+      "jump_label": "Gå til"
+    },
+    "sections": [
+      {
+        "id": "plan",
+        "jump": "Planlæg",
+        "eyebrow": "PLANLÆG",
+        "title": "Hvert besøg i én kalender",
+        "body": "Se måneden efter kunde, medarbejder og tidspunkt med timerne pr. uge ved siden af, så en overbooket uge ses, før den sker.",
+        "illustration": "i01-calendar",
+        "illustrationAlt": "En illustration af en kalender med tre besøg i forskellige farver og timerne pr. uge ved siden af"
+      },
+      {
+        "id": "recurring",
+        "eyebrow": "FASTE OPGAVER",
+        "title": "Hver opgave hos en kunde med sin egen rytme",
+        "body": "En kunde kan have flere faste opgaver, hver med sin egen regel, og de kommende uger planlægges ud fra dem.",
+        "points": [
+          "Dagligt, ugentligt eller hver anden uge",
+          "Valgte ugedage, månedligt (eller \"den første mandag\") og årligt",
+          "Planlagt seks uger frem"
+        ],
+        "illustration": "i03-recurring",
+        "illustrationAlt": "En illustration af en fast regel: den samme opgave tirsdag og torsdag, uge efter uge"
+      },
+      {
+        "id": "crews",
+        "eyebrow": "HOLD OG SKABELONER",
+        "title": "Flere personer på ét besøg, hver med sin egen tid",
+        "body": "Sæt et hold på et besøg, og hver person checker ind og ud for sig selv. Opgaveskabeloner bærer metoden, produkterne og tiden for hver kunde.",
+        "outcome": {
+          "icon": "fluent:people-team-20-filled",
+          "text": "Hver person på et hold har sin egen tid"
+        }
+      },
+      {
+        "id": "map",
+        "eyebrow": "KORTET",
+        "title": "Dagens besøg på et kort",
+        "body": "Se hvert besøg og hver adresse på et kort ved siden af kalenderen.",
+        "illustration": "i30-map",
+        "illustrationAlt": "En illustration af et kort med tre besøg og ruten imellem dem"
+      },
+      {
+        "id": "run",
+        "jump": "Kør",
+        "eyebrow": "KØR",
+        "title": "Dagens arbejde på hver telefon",
+        "body": "Hver person ser først sine egne besøg, derefter holdets uge.",
+        "appLine": true,
+        "illustration": "i06-phone-visits",
+        "illustrationAlt": "En illustration af en telefon med dagens tre besøg"
+      },
+      {
+        "id": "check-in",
+        "eyebrow": "CHECK-IND OG CHECK-UD",
+        "title": "Hver person checker ind og ud på hvert besøg",
+        "body": "Ét tryk ved ankomst, ét ved afgang. På et hold har hver person sin egen tid, og kontoret ser det på besøget med det samme.",
+        "illustration": "i07-phone-checkin",
+        "illustrationAlt": "En illustration af en telefon med et ur og en knap til check-ind"
+      },
+      {
+        "id": "on-site",
+        "eyebrow": "PÅ STEDET",
+        "title": "Stedets plantegning og arbejdet i den rækkefølge, I går rundt",
+        "body": "Hver adresse kan have sin plantegning i appen, og besøgets opgaver kommer i rutens rækkefølge.",
+        "illustration": "i32-floorplan",
+        "illustrationAlt": "En illustration af en plantegning med ruten gennem rummene, stop for stop"
+      },
+      {
+        "id": "prove",
+        "jump": "Dokumentér",
+        "eyebrow": "DOKUMENTÉR",
+        "title": "Før- og efterbilleder fra hvert besøg",
+        "body": "Medarbejderne tager billederne i appen under besøget. Kontoret ser dem på besøget, og jeres kunde ser dem i kundeportalen.",
+        "illustration": "i10-before-after",
+        "illustrationAlt": "En illustration af to billeder af det samme sted, før og efter"
+      },
+      {
+        "id": "time-on-site",
+        "eyebrow": "TID PÅ STEDET",
+        "title": "Tid på stedet, person for person, mod planen",
+        "body": "Hver check-ind og check-ud står på besøget: hvem der var der, hvor længe, og hvordan det passer med den planlagte tid.",
+        "illustration": "i11-time-bars",
+        "illustrationAlt": "En illustration af tre personer, hver med planlagt og faktisk tid side om side"
+      },
+      {
+        "id": "over-under",
+        "eyebrow": "UGEN I TID",
+        "title": "Se, hvilke besøg der løber over",
+        "body": "Planlagt mod faktisk tid for ugen, så I kan rette en besøgsplan eller en pris, før det bliver et problem.",
+        "outcome": {
+          "icon": "fluent:data-bar-vertical-20-filled",
+          "text": "Se, hvilke besøg der løber over, uge for uge"
+        }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål om driften",
+      "items": [
+        {
+          "q": "Kan én kunde have flere faste opgaver?",
+          "a": "Ja, hver med sin egen regel, planlagt seks uger frem."
+        },
+        {
+          "q": "Kan flere personer være på ét besøg?",
+          "a": "Ja. Hver person på et hold har sin egen check-ind og check-ud."
+        },
+        {
+          "q": "Kan kunden se billederne?",
+          "a": "Ja, i kundeportalen, når I giver kunden et login."
+        }
+      ]
+    }
+  }
+}

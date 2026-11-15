@@ -1,20 +1,21 @@
 {#
-  A screenshot that does not exist yet, numbered as in docs/platform-assets.md.
+  An illustration that does not exist yet, numbered as in docs/platform-assets.md
+  (I01–I39). The site shows no screenshots of the platform.
 
     {% from "partials/shot.njk" import shot %}
-    {{ shot("S10", t.proof.shot_s10, lang) }}
+    {{ shot("I10", t.section.what, lang) }}
 
-  It shows the number and what the shot will show, so a reviewer on the deploy
+  It shows the number and what the drawing will show, so a reviewer on the deploy
   preview knows what goes there. data-shot-placeholder marks it for
   tools/check-content.js: allowed on deploy previews, but a production build
-  and the strict PR check fail while one is left. Replace it with the real
-  shot, or remove it (text only is fine), before the page merges.
+  and the strict PR check fail while one is left. Replace it with the drawing
+  or an outcome line, or remove it (text only is fine), before the page merges.
 #}
 {% macro shot(id, what, lang = "en") %}
 <div class="screenshot-placeholder screenshot-placeholder--light" data-shot-placeholder="{{ id }}" data-photo-slot="shot-{{ id | lower }}" data-photo-status="missing" data-photo-brief="{{ id }}: {{ what | escape }}">
     <div>
         <iconify-icon icon="fluent:image-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
-        <strong>{% if lang == "da" %}Skærmbillede {{ id }} (pladsholder){% else %}Screenshot {{ id }} (placeholder){% endif %}</strong><br>
+        <strong>{% if lang == "da" %}Illustration {{ id }} (pladsholder){% else %}Illustration {{ id }} (placeholder){% endif %}</strong><br>
         {{ what }}
     </div>
 </div>

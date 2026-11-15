@@ -37,6 +37,29 @@
     margin-bottom: var(--space-2xs);
 }
 
+/* ── Illustrations: the idea of a screen, never the real one ──
+   Inline SVG from _includes/illustrations/, 480×320, no words in it.
+   Every colour is a token, so the drawings follow the site's palette. */
+.illustration {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: var(--space-lg) auto 0;
+}
+.illustration__bg { fill: var(--bg-primary-subtle); }
+.illustration__card { fill: var(--white); stroke: var(--color-border-muted); stroke-width: 2; }
+.illustration__line { fill: none; stroke: var(--color-border-muted); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.illustration__route { fill: none; stroke: var(--primary); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 8; }
+.illustration__text { fill: var(--color-border); }
+.illustration__primary { fill: var(--primary); }
+.illustration__primary-soft { fill: var(--blue-200); }
+.illustration__success { fill: var(--success); }
+.illustration__amber { fill: var(--amber-200); }
+.illustration__dull { fill: var(--bg-muted); }
+.illustration__dust { fill: var(--gray-muted); }
+.illustration__mark { fill: none; stroke: var(--white); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+
 /* ── Section titles a step below the default size ── */
 .title--compact { font-size: var(--heading-2); }
 .title--small { font-size: var(--text-2xl); }
