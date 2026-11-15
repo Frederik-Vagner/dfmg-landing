@@ -37,7 +37,6 @@
 
 /* A section that runs straight on from the one above or below it */
 .section--flush-top { padding-top: 0; }
-.section--flush-bottom { padding-bottom: 0; }
 
 /* ── Hero: a page's first section, at least a screen high, content centred ──
    A minimum, not a fixed height: content taller than the screen used to be

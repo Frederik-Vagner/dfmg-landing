@@ -2,40 +2,36 @@
   "en": {
     "hero": {
       "subtitle": "PRICING",
-      "title": "Simple, transparent pricing",
-      "body": "Choose the plan that fits your company. Scale up modules as you grow."
+      "title": "One price per company, agreed after a demo",
+      "body": "Choose the plan that fits how you work today. We agree the price with you after a demo, from the size of your team and the parts you need."
     },
     "tiers": [
       {
         "name": "Starter",
-        "desc": "For small service companies getting started with digital tools.",
+        "desc": "For a small team moving the week off spreadsheets and text messages.",
         "price": "Contact us",
         "featured": false,
-        "badge": "",
         "features": [
-          "Calendar & task scheduling",
-          "Client management",
-          "Employee portal",
-          "Time tracking",
-          "Up to 10 employees"
+          "Schedule and recurring visits",
+          "Employee app with check-in and check-out",
+          "Before and after photos, time on site",
+          "Time off, chat and notifications"
         ],
-        "ctaText": "Get started",
+        "ctaText": "Book a demo",
         "ctaHref": "/pages/software/demo.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       },
       {
         "name": "Professional",
-        "desc": "For growing companies that need the full operational toolkit.",
+        "desc": "For a growing company that also keeps stock and sells new contracts.",
         "price": "Contact us",
         "featured": true,
-        "badge": "Most Popular",
         "features": [
           "Everything in Starter",
-          "Inventory & purchase orders",
-          "Offer builder & CRM",
-          "Document templates",
-          "Analytics & KPI",
-          "Up to 50 employees"
+          "Stock by storage, with low-stock levels",
+          "Tests for your team in the app",
+          "Leads, call log and meeting notes",
+          "Proposals as a link, electronic signatures"
         ],
         "ctaText": "Book a demo",
         "ctaHref": "/pages/software/demo.html",
@@ -43,16 +39,12 @@
       },
       {
         "name": "Enterprise",
-        "desc": "For established companies needing full customisation and scale.",
+        "desc": "For a larger company that wants the terms agreed with it.",
         "price": "Custom",
         "featured": false,
-        "badge": "",
         "features": [
           "Everything in Professional",
-          "Custom branding",
-          "API access",
-          "Dedicated support",
-          "Unlimited employees"
+          "Terms agreed with you"
         ],
         "ctaText": "Contact sales",
         "ctaHref": "/pages/software/contact.html",
@@ -60,38 +52,38 @@
       }
     ],
     "comparison": {
-      "title": "Module comparison",
-      "body": "See exactly what's included in each plan.",
-      "colModule": "Module",
+      "title": "What each plan includes",
+      "body": "Grouped by job, as on the features page.",
+      "colModule": "Feature",
       "colStarter": "Starter",
       "colProfessional": "Professional",
       "colEnterprise": "Enterprise",
       "categories": [
         {
-          "name": "Core operations",
+          "name": "Plan the week",
           "rows": [
-            { "module": "Calendar & Scheduling", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Task Management", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Time Tracking", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Inspections & Quality", "starter": false, "professional": true, "enterprise": true }
+            { "module": "Schedule by client and employee", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Recurring visits planned ahead", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Time off in the app", "starter": true, "professional": true, "enterprise": true }
           ]
         },
         {
-          "name": "Client & employee",
+          "name": "Run and prove the visit",
           "rows": [
-            { "module": "Client Management", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Client Portal", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Employee Portal", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Holiday Management", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Improvement & Tests", "starter": false, "professional": true, "enterprise": true }
+            { "module": "Employee app, check-in and check-out", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Before and after photos", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Time on site against the plan", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Chat and notifications", "starter": true, "professional": true, "enterprise": true }
           ]
         },
         {
-          "name": "Sales & documents",
+          "name": "Team, stock and sales",
           "rows": [
-            { "module": "Offer Builder", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Document Templates", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Analytics & KPI", "starter": false, "professional": true, "enterprise": true }
+            { "module": "Tests in the app", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Stock by storage", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Leads and call log", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Meeting notes from recordings", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Proposals and electronic signatures", "starter": false, "professional": true, "enterprise": true }
           ]
         }
       ]
@@ -100,34 +92,29 @@
       "title": "Frequently asked questions",
       "items": [
         {
-          "question": "How does billing work?",
-          "answer": "We bill monthly or annually. You can switch plans or cancel at any time with 30 days notice."
+          "question": "How is the price set?",
+          "answer": "Every plan is priced per company. We agree the price with you after a demo, from the size of your team and the parts you need."
         },
         {
-          "question": "How long does onboarding take?",
-          "answer": "Most companies are up and running within a week. We help you import existing data (employees, clients) and configure the modules you need."
+          "question": "How do we get started?",
+          "answer": "After the demo you start with a paid pilot. We set up your company in the platform and import your employees and clients from a spreadsheet."
         },
         {
           "question": "Where is my data stored?",
-          "answer": "All data is hosted in the EU on secure, GDPR-compliant infrastructure. Each tenant's data is fully isolated in its own database schema."
+          "answer": "The application, the database and photos run in EU data centres. Each company's data is kept apart in its own database schema."
         },
         {
           "question": "Can I add modules later?",
-          "answer": "Absolutely. The platform is fully modular. Start with what you need and enable additional modules as your business grows. No data migration needed — everything is already connected."
+          "answer": "Yes. Start with what you need and turn on more parts as your business grows. Your data is already in the platform, so nothing has to be moved."
         },
         {
-          "question": "Do you offer a free trial?",
-          "answer": "We offer a guided demo followed by a trial period so you can evaluate the platform with your own data. Contact us to get started."
+          "question": "Is there a free trial?",
+          "answer": "No. After a demo you can start with a paid pilot, with your own data and your own team."
         }
       ]
     },
     "trust": {
-      "items": ["No setup fees", "Cancel anytime", "Danish-language support", "EU data hosting"]
-    },
-    "testimonial": {
-      "quote": "[Testimonial about value — e.g. 'We were paying for Planday + Billy + Salary.dk separately. DFMG replaced all three and saved us X kr/month while giving us features none of them had.']",
-      "name": "[Name]",
-      "company": "[Company], [X] employees"
+      "items": ["Price agreed after a demo", "Danish-language support", "Hosted in the EU"]
     },
     "cta": {
       "title": "Not sure which plan?",
@@ -139,40 +126,36 @@
   "da": {
     "hero": {
       "subtitle": "PRISER",
-      "title": "Enkel, gennemsigtig prissætning",
-      "body": "Vælg den plan, der passer til jeres virksomhed. Skaler moduler op, efterhånden som I vokser."
+      "title": "Én pris pr. virksomhed, aftalt efter en demo",
+      "body": "Vælg den plan, der passer til den måde, I arbejder på i dag. Vi aftaler prisen med jer efter en demo, ud fra holdets størrelse og de dele, I har brug for."
     },
     "tiers": [
       {
         "name": "Starter",
-        "desc": "Til mindre servicevirksomheder, der vil i gang med digitale værktøjer.",
+        "desc": "Til et mindre hold, der vil have ugen ud af regneark og sms'er.",
         "price": "Kontakt os",
         "featured": false,
-        "badge": "",
         "features": [
-          "Kalender & opgaveplanlægning",
-          "Kundestyring",
-          "Medarbejderportal",
-          "Tidsregistrering",
-          "Op til 10 medarbejdere"
+          "Vagtplan og faste besøg",
+          "Medarbejder-app med check-ind og check-ud",
+          "Før- og efterbilleder, tid på stedet",
+          "Fravær, chat og notifikationer"
         ],
-        "ctaText": "Kom i gang",
+        "ctaText": "Book en demo",
         "ctaHref": "/pages/software/da/demo.html",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       },
       {
         "name": "Professional",
-        "desc": "Til virksomheder i vækst, der har brug for det fulde driftsværktøj.",
+        "desc": "Til en virksomhed i vækst, der også styrer lager og sælger nye aftaler.",
         "price": "Kontakt os",
         "featured": true,
-        "badge": "Mest Populær",
         "features": [
           "Alt i Starter",
-          "Lager & indkøbsordrer",
-          "Tilbudsbygger & CRM",
-          "Dokumentskabeloner",
-          "Analyser & KPI",
-          "Op til 50 medarbejdere"
+          "Lager pr. lagersted, med minimumsbeholdning",
+          "Tests til holdet i appen",
+          "Leads, opkaldslog og mødenoter",
+          "Tilbud som link, elektronisk underskrift"
         ],
         "ctaText": "Book en demo",
         "ctaHref": "/pages/software/da/demo.html",
@@ -180,16 +163,12 @@
       },
       {
         "name": "Enterprise",
-        "desc": "Til etablerede virksomheder med behov for fuld tilpasning og skalering.",
+        "desc": "Til en større virksomhed, der vil have vilkårene aftalt med sig.",
         "price": "Tilpasset",
         "featured": false,
-        "badge": "",
         "features": [
           "Alt i Professional",
-          "Eget branding",
-          "API-adgang",
-          "Dedikeret support",
-          "Ubegrænset antal medarbejdere"
+          "Vilkår aftalt med jer"
         ],
         "ctaText": "Kontakt salg",
         "ctaHref": "/pages/software/da/contact.html",
@@ -197,38 +176,38 @@
       }
     ],
     "comparison": {
-      "title": "Modulsammenligning",
-      "body": "Se præcis hvad der er inkluderet i hver plan.",
-      "colModule": "Modul",
+      "title": "Det indeholder hver plan",
+      "body": "Ordnet efter opgave, som på funktionssiden.",
+      "colModule": "Funktion",
       "colStarter": "Starter",
       "colProfessional": "Professional",
       "colEnterprise": "Enterprise",
       "categories": [
         {
-          "name": "Kernedrift",
+          "name": "Planlæg ugen",
           "rows": [
-            { "module": "Kalender & Planlægning", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Opgavestyring", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Tidsregistrering", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Inspektioner & Kvalitet", "starter": false, "professional": true, "enterprise": true }
+            { "module": "Vagtplan pr. kunde og medarbejder", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Faste besøg planlagt på forhånd", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Fravær i appen", "starter": true, "professional": true, "enterprise": true }
           ]
         },
         {
-          "name": "Kunde & medarbejder",
+          "name": "Kør og dokumentér besøget",
           "rows": [
-            { "module": "Kundestyring", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Kundeportal", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Medarbejderportal", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Feriestyring", "starter": true, "professional": true, "enterprise": true },
-            { "module": "Forbedring & Tests", "starter": false, "professional": true, "enterprise": true }
+            { "module": "Medarbejder-app, check-ind og check-ud", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Før- og efterbilleder", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Tid på stedet mod den planlagte tid", "starter": true, "professional": true, "enterprise": true },
+            { "module": "Chat og notifikationer", "starter": true, "professional": true, "enterprise": true }
           ]
         },
         {
-          "name": "Salg & dokumenter",
+          "name": "Hold, lager og salg",
           "rows": [
-            { "module": "Tilbudsbygger", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Dokumentskabeloner", "starter": false, "professional": true, "enterprise": true },
-            { "module": "Analyser & KPI", "starter": false, "professional": true, "enterprise": true }
+            { "module": "Tests i appen", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Lager pr. lagersted", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Leads og opkaldslog", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Mødenoter fra optagelser", "starter": false, "professional": true, "enterprise": true },
+            { "module": "Tilbud og elektronisk underskrift", "starter": false, "professional": true, "enterprise": true }
           ]
         }
       ]
@@ -237,34 +216,29 @@
       "title": "Ofte stillede spørgsmål",
       "items": [
         {
-          "question": "Hvordan fungerer faktureringen?",
-          "answer": "Vi fakturerer månedligt eller årligt. I kan skifte plan eller opsige når som helst med 30 dages varsel."
+          "question": "Hvordan fastsættes prisen?",
+          "answer": "Hver plan prissættes pr. virksomhed. Vi aftaler prisen med jer efter en demo, ud fra holdets størrelse og de dele, I har brug for."
         },
         {
-          "question": "Hvor lang tid tager onboarding?",
-          "answer": "De fleste virksomheder er oppe at køre inden for en uge. Vi hjælper med at importere eksisterende data (medarbejdere, kunder) og konfigurere de moduler, I har brug for."
+          "question": "Hvordan kommer vi i gang?",
+          "answer": "Efter demoen starter I med en betalt pilot. Vi opretter jeres virksomhed i platformen og importerer jeres medarbejdere og kunder fra et regneark."
         },
         {
-          "question": "Hvor opbevares mine data?",
-          "answer": "Alle data hostes i EU på sikker, GDPR-kompatibel infrastruktur. Hver lejers data er fuldt isoleret i sit eget databaseskema."
+          "question": "Hvor opbevares vores data?",
+          "answer": "Applikationen, databasen og billederne kører i datacentre i EU. Hver virksomheds data holdes adskilt i sit eget databaseskema."
         },
         {
-          "question": "Kan jeg tilføje moduler senere?",
-          "answer": "Helt sikkert. Platformen er fuldt modulær. Start med det I har brug for, og aktiver yderligere moduler efterhånden som jeres forretning vokser. Ingen datamigrering nødvendig — alt er allerede forbundet."
+          "question": "Kan vi tilføje moduler senere?",
+          "answer": "Ja. Start med det, I har brug for, og slå flere dele til, efterhånden som virksomheden vokser. Jeres data ligger allerede i platformen, så intet skal flyttes."
         },
         {
-          "question": "Tilbyder I en gratis prøveperiode?",
-          "answer": "Vi tilbyder en guidet demo efterfulgt af en prøveperiode, så I kan evaluere platformen med jeres egne data. Kontakt os for at komme i gang."
+          "question": "Er der en gratis prøveperiode?",
+          "answer": "Nej. Efter en demo kan I starte med en betalt pilot, med jeres egne data og jeres eget hold."
         }
       ]
     },
     "trust": {
-      "items": ["Ingen oprettelsesgebyr", "Opsig når som helst", "Support på dansk", "EU-datahosting"]
-    },
-    "testimonial": {
-      "quote": "[Udtalelse om værdi — f.eks. 'Vi betalte for Planday + Billy + Salary.dk hver for sig. DFMG erstattede alle tre og sparede os X kr/md, samtidig med at vi fik funktioner, ingen af dem havde.']",
-      "name": "[Navn]",
-      "company": "[Virksomhed], [X] medarbejdere"
+      "items": ["Pris aftalt efter en demo", "Support på dansk", "Hostet i EU"]
     },
     "cta": {
       "title": "Ikke sikker på hvilken plan?",

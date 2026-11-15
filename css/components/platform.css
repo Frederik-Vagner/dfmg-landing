@@ -46,35 +46,6 @@
     margin-bottom: var(--space-xs);
 }
 
-/* ── The summary shown in a feature's screenshot slot: title, list, tags ── */
-.screenshot-placeholder__title {
-    font-size: var(--text-lg);
-    color: var(--charcoal);
-}
-
-.screenshot-placeholder__list {
-    text-align: left;
-    max-width: 300px;
-    margin: 0 auto;
-    color: var(--gray);
-    font-size: var(--text-sm);
-    line-height: var(--leading-loose);
-}
-
-.screenshot-placeholder__step {
-    color: var(--primary-text);
-    font-weight: var(--font-weight-semibold);
-}
-
-.screenshot-placeholder__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2xs);
-    justify-content: center;
-    max-width: 320px;
-    margin: 0 auto;
-}
-
 /* ── Section titles a step below the default size ── */
 .title--compact { font-size: var(--heading-2); }
 .title--small { font-size: var(--text-2xl); }

@@ -13,9 +13,6 @@
             <div class="grid grid--3 grid--loose plans">
                 {% for tier in t.tiers %}
                 <div class="plan{% if tier.featured %} plan--featured{% endif %}">
-                    {% if tier.badge %}
-                    <div class="badge-inline badge-inline--primary plan__badge">{{ tier.badge }}</div>
-                    {% endif %}
                     <div class="plan__name">{{ tier.name }}</div>
                     <div class="plan__desc">{{ tier.desc }}</div>
                     <div class="plan__price">{{ tier.price }}</div>

@@ -7,15 +7,15 @@
     },
     "info": {
       "heading": "Contact sales",
-      "body": "Fill out the form and tell us about your needs. We'll get back to you within 24 hours.",
+      "body": "Fill out the form and tell us about your needs. We'll reply within one working day.",
       "bullet1": "Free and non-binding consultation",
       "bullet2": "Tailored demo of relevant modules",
-      "bullet3": "Response within 24 hours",
-      "bullet4": "No credit card required",
+      "bullet3": "Reply within one working day",
+      "bullet4": "A paid pilot after the demo",
       "card_email": "Email",
       "card_phone": "Phone",
       "card_hours": "Office hours",
-      "card_hours_value": "Mon - Fri, 08-17 CET",
+      "card_hours_value": "Weekdays 8–16",
       "card_company": "Company"
     },
     "form": {
@@ -49,15 +49,15 @@
     },
     "info": {
       "heading": "Kontakt salg",
-      "body": "Udfyld formularen og fortæl os om jeres behov. Vi vender tilbage inden for 24 timer.",
+      "body": "Udfyld formularen og fortæl os om jeres behov. Vi svarer inden for 1 arbejdsdag.",
       "bullet1": "Gratis og uforpligtende rådgivning",
       "bullet2": "Skræddersyet demo af relevante moduler",
-      "bullet3": "Svar inden for 24 timer",
-      "bullet4": "Intet kreditkort påkrævet",
+      "bullet3": "Svar inden for 1 arbejdsdag",
+      "bullet4": "En betalt pilot efter demoen",
       "card_email": "E-mail",
       "card_phone": "Telefon",
       "card_hours": "Åbningstider",
-      "card_hours_value": "Man - fre, 08-17 CET",
+      "card_hours_value": "Hverdage 8–16",
       "card_company": "Virksomhed"
     },
     "form": {

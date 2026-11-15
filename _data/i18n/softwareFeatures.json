@@ -29,13 +29,12 @@
         "reverse": true,
         "subtitle": "Run the visit",
         "title": "Today's work on every phone",
-        "body": "The employee app shows each person their own visits and the whole team's schedule. They check in when they arrive, check out when they leave, and message the office from the same app. It runs in the browser and on iPhone.",
+        "body": "The employee app shows each person their own visits and the whole team's schedule. They check in when they arrive, check out when they leave, and message the office from the same app. It runs in the phone's browser.",
         "badges": [
           "Employee app",
           "Check-in and check-out",
           "Team schedule",
-          "Chat",
-          "iPhone app"
+          "Chat"
         ],
         "image": "/images/platform/app-schedule-phone.webp",
         "imageAlt": "The employee app on a phone: this week's visits, each marked done",
@@ -148,13 +147,12 @@
         "reverse": true,
         "subtitle": "Kør besøget",
         "title": "Dagens arbejde på hver telefon",
-        "body": "Medarbejder-appen viser hver person deres egne besøg og hele holdets vagtplan. De checker ind, når de kommer, checker ud, når de går, og skriver til kontoret fra samme app. Den kører i browseren og på iPhone.",
+        "body": "Medarbejder-appen viser hver person deres egne besøg og hele holdets vagtplan. De checker ind, når de kommer, checker ud, når de går, og skriver til kontoret fra samme app. Den kører i telefonens browser.",
         "badges": [
           "Medarbejder-app",
           "Check-in og check-ud",
           "Holdets vagtplan",
-          "Chat",
-          "iPhone-app"
+          "Chat"
         ],
         "image": "/images/platform/app-schedule-phone.webp",
         "imageAlt": "Medarbejder-appen på en telefon: ugens besøg, hver markeret som udført",

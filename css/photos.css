@@ -47,20 +47,6 @@
     max-width: 300px;
 }
 
-/* ── Placeholder Icons ── */
-.placeholder-icon {
-    font-size: var(--text-4xl);
-    margin-bottom: var(--space-sm);
-    display: block;
-    color: var(--primary);
-}
-
-.placeholder-list-icon {
-    color: var(--primary);
-    margin-right: var(--space-2xs);
-    width: 16px;
-}
-
 /* ── Photos Grid ── */
 .photos-grid {
     display: grid;
