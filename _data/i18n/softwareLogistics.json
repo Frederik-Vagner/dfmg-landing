@@ -1,0 +1,110 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "LOGISTICS",
+      "title": "Know what is in every storage before you run out",
+      "body": "Products and equipment by storage, every movement in and out, and a level that warns you when something runs low.",
+      "jump_label": "Jump to"
+    },
+    "sections": [
+      {
+        "id": "storage",
+        "jump": "Storage",
+        "eyebrow": "BY STORAGE",
+        "title": "Every storage on its own, with its value",
+        "body": "Keep products and equipment by type and by the place they are kept, with quantity, price and value.",
+        "illustration": "i14-storages",
+        "illustrationAlt": "An illustration of three storages, a van, a cupboard and a room, each with its own boxes"
+      },
+      {
+        "id": "movements",
+        "jump": "Movements",
+        "eyebrow": "MOVEMENTS",
+        "title": "Every item in and out, on record",
+        "body": "Each movement is logged, so the count you see is the count you have.",
+        "illustration": "i38-movements",
+        "illustrationAlt": "An illustration of a box with one arrow in and one arrow out"
+      },
+      {
+        "id": "low-stock",
+        "jump": "Low stock",
+        "eyebrow": "LOW STOCK",
+        "title": "A warning before the shelf is empty",
+        "body": "Set a level for each item. When stock falls under it, you see it in the platform.",
+        "illustration": "i15-low-stock",
+        "illustrationAlt": "An illustration of two stock levels, one under its line, with a warning"
+      }
+    ],
+    "faq": {
+      "title": "Questions about stock",
+      "items": [
+        {
+          "q": "Can each item have its own low-stock level?",
+          "a": "Yes. You set the level item by item."
+        },
+        {
+          "q": "Can we keep stock in several places?",
+          "a": "Yes. Every storage is kept on its own, with its own movements."
+        },
+        {
+          "q": "Which plans include stock?",
+          "a": "Professional and Enterprise."
+        }
+      ]
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "LOGISTIK",
+      "title": "Vid, hvad der er på hvert lager, før det slipper op",
+      "body": "Produkter og udstyr efter lager, hver bevægelse ind og ud, og et niveau, der advarer jer, når noget er ved at slippe op.",
+      "jump_label": "Gå til"
+    },
+    "sections": [
+      {
+        "id": "storage",
+        "jump": "Lager",
+        "eyebrow": "EFTER LAGER",
+        "title": "Hvert lager for sig, med sin værdi",
+        "body": "Hold produkter og udstyr efter type og efter det sted, de opbevares, med antal, pris og værdi.",
+        "illustration": "i14-storages",
+        "illustrationAlt": "En illustration af tre lagre, en varevogn, et skab og et rum, hver med sine egne kasser"
+      },
+      {
+        "id": "movements",
+        "jump": "Bevægelser",
+        "eyebrow": "BEVÆGELSER",
+        "title": "Hver vare ind og ud, registreret",
+        "body": "Hver bevægelse logges, så det antal, I ser, er det antal, I har.",
+        "illustration": "i38-movements",
+        "illustrationAlt": "En illustration af en kasse med én pil ind og én pil ud"
+      },
+      {
+        "id": "low-stock",
+        "jump": "Lav beholdning",
+        "eyebrow": "LAV BEHOLDNING",
+        "title": "En advarsel, før hylden er tom",
+        "body": "Sæt et niveau for hver vare. Når beholdningen kommer under det, ser I det i platformen.",
+        "illustration": "i15-low-stock",
+        "illustrationAlt": "En illustration af to lagerniveauer, det ene under sin linje, med en advarsel"
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål om lager",
+      "items": [
+        {
+          "q": "Kan hver vare have sit eget minimumsniveau?",
+          "a": "Ja. I sætter niveauet vare for vare."
+        },
+        {
+          "q": "Kan vi have lager flere steder?",
+          "a": "Ja. Hvert lager holdes for sig, med sine egne bevægelser."
+        },
+        {
+          "q": "Hvilke planer har lager?",
+          "a": "Professional og Enterprise."
+        }
+      ]
+    }
+  }
+}
