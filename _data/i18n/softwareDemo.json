@@ -9,9 +9,18 @@
     "next": {
       "title": "What happens next",
       "steps": [
-        { "title": "We reply", "text": "Within one working day, with a time that suits you." },
-        { "title": "The demo", "text": "The schedule, the employee app and a finished visit with photos, using made-up data. Bring the questions you'd ask any new system." },
-        { "title": "A paid pilot", "text": "If it fits, we set up your company in the platform and import your employees and clients from a spreadsheet. Your team starts in the app." }
+        {
+          "title": "Book a demo",
+          "text": "We reply within one working day with a time that suits you. In 30 minutes online we show you the schedule, the employee app and a finished visit with photos, on our test company. Bring the questions you'd ask any new system."
+        },
+        {
+          "title": "Bring your week",
+          "text": "Bring your clients, your rhythms and your team, and we put your own week into the platform with you."
+        },
+        {
+          "title": "Paid pilot",
+          "text": "If it fits, your team runs its real weeks on the platform before you decide."
+        }
       ]
     },
     "details": {
@@ -35,9 +44,20 @@
       "placeholder_phone": "+45 12 34 56 78",
       "label_size": "Employees in the field",
       "option_default": "Select…",
-      "size_options": ["1–5", "6–15", "16–50", "More than 50"],
+      "size_options": [
+        "1–10",
+        "11–25",
+        "26–75",
+        "76–150",
+        "More than 150"
+      ],
       "label_today": "How do you plan the week today?",
-      "today_options": ["Spreadsheet", "Paper or whiteboard", "Another system", "Something else"],
+      "today_options": [
+        "Spreadsheet",
+        "Paper or whiteboard",
+        "Another system",
+        "Something else"
+      ],
       "label_message": "What would you like to see or ask? (optional)",
       "placeholder_message": "E.g. the schedule, the employee app, photos from every visit, the pilot…",
       "submit": "Request a demo",
@@ -55,9 +75,18 @@
     "next": {
       "title": "Det sker der nu",
       "steps": [
-        { "title": "Vi svarer", "text": "Inden for 1 arbejdsdag, med et tidspunkt, der passer jer." },
-        { "title": "Demoen", "text": "Vagtplanen, medarbejder-appen og et færdigt besøg med billeder, vist med opdigtede data. Tag de spørgsmål med, I ville stille til ethvert nyt system." },
-        { "title": "En betalt pilot", "text": "Hvis det passer, opretter vi jeres virksomhed i platformen og importerer jeres medarbejdere og kunder fra et regneark. Holdet starter i appen." }
+        {
+          "title": "Book en demo",
+          "text": "Vi svarer inden for 1 arbejdsdag med et tidspunkt, der passer jer. På 30 minutter online viser vi jer vagtplanen, medarbejder-appen og et færdigt besøg med billeder i vores testvirksomhed. Tag de spørgsmål med, I ville stille til ethvert nyt system."
+        },
+        {
+          "title": "Kom med jeres uge",
+          "text": "Kom med jeres kunder, jeres rytmer og jeres hold, så lægger vi jeres egen uge ind i platformen sammen med jer."
+        },
+        {
+          "title": "Betalt pilot",
+          "text": "Hvis det passer, kører jeres hold sine rigtige uger i platformen, før I beslutter jer."
+        }
       ]
     },
     "details": {
@@ -81,9 +110,20 @@
       "placeholder_phone": "+45 12 34 56 78",
       "label_size": "Medarbejdere ude hos kunderne",
       "option_default": "Vælg…",
-      "size_options": ["1–5", "6–15", "16–50", "Over 50"],
+      "size_options": [
+        "1–10",
+        "11–25",
+        "26–75",
+        "76–150",
+        "Over 150"
+      ],
       "label_today": "Hvordan planlægger I ugen i dag?",
-      "today_options": ["Regneark", "Papir eller whiteboard", "Et andet system", "Noget andet"],
+      "today_options": [
+        "Regneark",
+        "Papir eller whiteboard",
+        "Et andet system",
+        "Noget andet"
+      ],
       "label_message": "Hvad vil I gerne se eller spørge om? (valgfrit)",
       "placeholder_message": "Fx vagtplanen, medarbejder-appen, billeder fra hvert besøg, piloten…",
       "submit": "Bestil en demo",
