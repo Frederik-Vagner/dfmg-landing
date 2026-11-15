@@ -1,0 +1,216 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "OPERATIONS",
+      "title": "Plan the week, run every visit and prove the work",
+      "body": "The schedule in the office, the visit on the phone and the proof on the visit, connected: what you plan is what your team sees, and what they do is what you can show.",
+      "jump_label": "Jump to"
+    },
+    "sections": [
+      {
+        "id": "plan",
+        "jump": "Plan",
+        "eyebrow": "PLAN",
+        "title": "Every visit on one calendar",
+        "body": "See the month by client, employee and time, with the hours per week beside it, so an overloaded week shows before it happens.",
+        "image": "/images/platform/schedule-month.webp",
+        "imageAlt": "The schedule for a month: every visit by client and time, with the hours per week beside it"
+      },
+      {
+        "id": "recurring",
+        "eyebrow": "RECURRING TASKS",
+        "title": "Each task at a client with its own rhythm",
+        "body": "A client can have several recurring tasks, each with its own rule, and the coming weeks are planned from them.",
+        "points": [
+          "Daily, weekly or every two weeks",
+          "Chosen weekdays, monthly (or \"the first Monday\") and yearly",
+          "Planned six weeks ahead"
+        ],
+        "shot": { "id": "S03", "what": "A recurring rule and the visits it made" }
+      },
+      {
+        "id": "crews",
+        "eyebrow": "CREWS AND TEMPLATES",
+        "title": "Several people on one visit, each with their own time",
+        "body": "Put a crew on a visit and each person checks in and out on their own. Task templates carry the method, the products and the time for each client.",
+        "shot": { "id": "S04", "what": "A visit with a crew of three, each with their own time" }
+      },
+      {
+        "id": "map",
+        "eyebrow": "THE MAP",
+        "title": "The day's visits on a map",
+        "body": "See every visit and site on a map, beside the calendar.",
+        "shot": { "id": "S30", "what": "The map with the day's visits" }
+      },
+      {
+        "id": "run",
+        "jump": "Run",
+        "eyebrow": "RUN",
+        "title": "Today's work on every phone",
+        "body": "Each person sees their own visits first, then the team's week.",
+        "appLine": true,
+        "image": "/images/platform/app-schedule-phone.webp",
+        "imageAlt": "The employee app on a phone: this week's visits, each marked done",
+        "phone": true
+      },
+      {
+        "id": "check-in",
+        "eyebrow": "CHECK-IN AND CHECK-OUT",
+        "title": "Every person checks in and out, on every visit",
+        "body": "One tap on arrival, one on leaving. On a crew, each person keeps their own time, and the office sees it on the visit straight away.",
+        "shot": { "id": "S07", "what": "A visit in progress on the phone, checked in" }
+      },
+      {
+        "id": "on-site",
+        "eyebrow": "ON SITE",
+        "title": "The site's floor plan, and the work in the order you walk it",
+        "body": "Each site can have its floor plan in the app, and the visit's tasks come in route order.",
+        "shot": { "id": "S32", "what": "A site's floor plan and its checklist in route order" }
+      },
+      {
+        "id": "prove",
+        "jump": "Prove",
+        "eyebrow": "PROVE",
+        "title": "Before and after photos from every visit",
+        "body": "Employees take the photos in the app during the visit. The office sees them on the visit, and your client sees them in the client portal.",
+        "shot": { "id": "S10", "what": "Before and after photos of one visit" }
+      },
+      {
+        "id": "time-on-site",
+        "eyebrow": "TIME ON SITE",
+        "title": "Time on site, person by person, against the plan",
+        "body": "Every check-in and check-out is on the visit: who was there, for how long, and how that compares with the time planned.",
+        "image": "/images/platform/task-visit-proof.webp",
+        "imageAlt": "A completed visit: the crew with their check-in and check-out times, and a time report against the estimate"
+      },
+      {
+        "id": "over-under",
+        "eyebrow": "THE WEEK IN TIME",
+        "title": "See which visits run over",
+        "body": "Planned against actual time for the week, so you can fix a visit plan or a price before it becomes a problem.",
+        "shot": { "id": "S12", "what": "Planned against actual time for a week" }
+      }
+    ],
+    "faq": {
+      "title": "Questions about operations",
+      "items": [
+        { "q": "Can one client have several recurring tasks?", "a": "Yes, each with its own rule, planned six weeks ahead." },
+        { "q": "Can several people be on one visit?", "a": "Yes. Each person on a crew has their own check-in and check-out." },
+        { "q": "Does the client see the photos?", "a": "Yes, in the client portal, when you give them a login." }
+      ]
+    },
+    "cta": {
+      "title": "Tell us how your week runs",
+      "body": "In the demo we show you what it looks like in the platform. We reply within one working day.",
+      "cta_demo": "Book a demo",
+      "cta_overview": "See the whole platform"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "DRIFT",
+      "title": "Planlæg ugen, kør hvert besøg og dokumentér arbejdet",
+      "body": "Vagtplanen på kontoret, besøget på telefonen og dokumentationen på besøget hænger sammen: det, I planlægger, er det, holdet ser, og det, de gør, er det, I kan vise.",
+      "jump_label": "Gå til"
+    },
+    "sections": [
+      {
+        "id": "plan",
+        "jump": "Planlæg",
+        "eyebrow": "PLANLÆG",
+        "title": "Hvert besøg i én kalender",
+        "body": "Se måneden efter kunde, medarbejder og tidspunkt med timerne pr. uge ved siden af, så en overbooket uge ses, før den sker.",
+        "image": "/images/platform/schedule-month.webp",
+        "imageAlt": "Vagtplanen for en måned: hvert besøg efter kunde og tidspunkt, med timerne pr. uge ved siden af"
+      },
+      {
+        "id": "recurring",
+        "eyebrow": "FASTE OPGAVER",
+        "title": "Hver opgave hos en kunde med sin egen rytme",
+        "body": "En kunde kan have flere faste opgaver, hver med sin egen regel, og de kommende uger planlægges ud fra dem.",
+        "points": [
+          "Dagligt, ugentligt eller hver anden uge",
+          "Valgte ugedage, månedligt (eller \"den første mandag\") og årligt",
+          "Planlagt seks uger frem"
+        ],
+        "shot": { "id": "S03", "what": "En fast regel og de besøg, den har lagt ind" }
+      },
+      {
+        "id": "crews",
+        "eyebrow": "HOLD OG SKABELONER",
+        "title": "Flere personer på ét besøg, hver med sin egen tid",
+        "body": "Sæt et hold på et besøg, og hver person checker ind og ud for sig selv. Opgaveskabeloner bærer metoden, produkterne og tiden for hver kunde.",
+        "shot": { "id": "S04", "what": "Et besøg med et hold på tre, hver med sin egen tid" }
+      },
+      {
+        "id": "map",
+        "eyebrow": "KORTET",
+        "title": "Dagens besøg på et kort",
+        "body": "Se hvert besøg og hver adresse på et kort ved siden af kalenderen.",
+        "shot": { "id": "S30", "what": "Kortet med dagens besøg" }
+      },
+      {
+        "id": "run",
+        "jump": "Kør",
+        "eyebrow": "KØR",
+        "title": "Dagens arbejde på hver telefon",
+        "body": "Hver person ser først sine egne besøg, derefter holdets uge.",
+        "appLine": true,
+        "image": "/images/platform/app-schedule-phone.webp",
+        "imageAlt": "Medarbejder-appen på en telefon: ugens besøg, hver markeret som udført",
+        "phone": true
+      },
+      {
+        "id": "check-in",
+        "eyebrow": "CHECK-IND OG CHECK-UD",
+        "title": "Hver person checker ind og ud på hvert besøg",
+        "body": "Ét tryk ved ankomst, ét ved afgang. På et hold har hver person sin egen tid, og kontoret ser det på besøget med det samme.",
+        "shot": { "id": "S07", "what": "Et besøg i gang på telefonen, checket ind" }
+      },
+      {
+        "id": "on-site",
+        "eyebrow": "PÅ STEDET",
+        "title": "Stedets plantegning og arbejdet i den rækkefølge, I går rundt",
+        "body": "Hver adresse kan have sin plantegning i appen, og besøgets opgaver kommer i rutens rækkefølge.",
+        "shot": { "id": "S32", "what": "En adresses plantegning og dens tjekliste i rutens rækkefølge" }
+      },
+      {
+        "id": "prove",
+        "jump": "Dokumentér",
+        "eyebrow": "DOKUMENTÉR",
+        "title": "Før- og efterbilleder fra hvert besøg",
+        "body": "Medarbejderne tager billederne i appen under besøget. Kontoret ser dem på besøget, og jeres kunde ser dem i kundeportalen.",
+        "shot": { "id": "S10", "what": "Før- og efterbilleder fra ét besøg" }
+      },
+      {
+        "id": "time-on-site",
+        "eyebrow": "TID PÅ STEDET",
+        "title": "Tid på stedet, person for person, mod planen",
+        "body": "Hver check-ind og check-ud står på besøget: hvem der var der, hvor længe, og hvordan det passer med den planlagte tid.",
+        "image": "/images/platform/task-visit-proof.webp",
+        "imageAlt": "Et udført besøg: holdet med tider for check-ind og check-ud og en tidsrapport mod estimatet"
+      },
+      {
+        "id": "over-under",
+        "eyebrow": "UGEN I TID",
+        "title": "Se, hvilke besøg der løber over",
+        "body": "Planlagt mod faktisk tid for ugen, så I kan rette en besøgsplan eller en pris, før det bliver et problem.",
+        "shot": { "id": "S12", "what": "Planlagt mod faktisk tid for en uge" }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål om driften",
+      "items": [
+        { "q": "Kan én kunde have flere faste opgaver?", "a": "Ja, hver med sin egen regel, planlagt seks uger frem." },
+        { "q": "Kan flere personer være på ét besøg?", "a": "Ja. Hver person på et hold har sin egen check-ind og check-ud." },
+        { "q": "Kan kunden se billederne?", "a": "Ja, i kundeportalen, når I giver kunden et login." }
+      ]
+    },
+    "cta": {
+      "title": "Fortæl os, hvordan jeres uge kører",
+      "body": "I demoen viser vi, hvordan det ser ud i platformen. Vi svarer inden for 1 arbejdsdag.",
+      "cta_demo": "Book en demo",
+      "cta_overview": "Se hele platformen"
+    }
+  }
+}

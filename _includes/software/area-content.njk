@@ -1,0 +1,92 @@
+{#
+  One area of the platform (Operations, Sales & CRM, Logistics, …): a page per
+  area, in the order of the platform's own sidebar. The page sets `t` to its
+  i18n file (en or da) and `prefix`; everything else comes from `t`:
+
+    hero      subtitle, title, body, jump_label
+    sections  id, eyebrow, title, body, points[] (optional),
+              appLine (adds where the employee app runs, see employee-app-line.njk),
+              jump (a label: the section gets a link in the hero),
+              then either image + imageAlt (+ phone) for a real shot,
+              or shot { id, what } for a placeholder (partials/shot.njk)
+    faq       title, items[] { q, a }
+    cta       title, body, cta_demo, cta_overview
+
+  Sections alternate background and side by themselves.
+#}
+{% from "partials/shot.njk" import shot %}
+    <!-- Hero -->
+    <section class="hero hero--primary hero--compact">
+        <div class="container">
+            <div class="subtitle">{{ t.hero.subtitle }}</div>
+            <h1 class="title">{{ t.hero.title }}</h1>
+            <p class="body">{{ t.hero.body }}</p>
+            <nav class="cluster cluster--center" aria-label="{{ t.hero.jump_label }}">
+                {% for section in t.sections %}{% if section.jump %}
+                <a href="#{{ section.id }}" class="btn btn--ghost btn--sm">{{ section.jump }}</a>
+                {% endif %}{% endfor %}
+            </nav>
+        </div>
+    </section>
+
+    <!-- Sections -->
+    {% for section in t.sections %}
+    <section class="section{% if loop.index is even %} section--light{% endif %}" id="{{ section.id }}">
+        <div class="container">
+            <div class="row row--center row--wide{% if loop.index is even %} row--reverse{% endif %}">
+                <div class="feature">
+                    <div class="feature__eyebrow">{{ section.eyebrow }}</div>
+                    <h2 class="feature__title">{{ section.title }}</h2>
+                    <p class="feature__text">{{ section.body }}{% if section.appLine %} {% include "software/employee-app-line.njk" %}{% endif %}</p>
+                    {% if section.points %}
+                    <ul class="checklist checklist--success">
+                        {% for point in section.points %}
+                        <li><iconify-icon icon="fluent:checkmark-20-filled" inline></iconify-icon> <span>{{ point }}</span></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div>
+                    {% if section.image %}
+                    <img src="{{ section.image }}" width="{{ section.image | imgWidth }}" height="{{ section.image | imgHeight }}" alt="{{ section.imageAlt }}" class="screenshot{% if section.phone %} screenshot--phone{% endif %}" loading="lazy" decoding="async">
+                    {% elif section.shot %}
+                    {{ shot(section.shot.id, section.shot.what, lang) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+    <!-- Questions -->
+    {% if t.faq %}
+    <section class="section">
+        <div class="container">
+            <div class="intro intro--spaced">
+                <h2 class="title intro__title">{{ t.faq.title }}</h2>
+            </div>
+            <div class="grid grid--3 grid--loose">
+                {% for item in t.faq.items %}
+                <div class="card card--soft card--accent-left card--accent-primary">
+                    <h3 class="heading heading--sm">{{ item.q }}</h3>
+                    <p>{{ item.a }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="cta cta--center cta--primary">
+                <div class="cta__title">{{ t.cta.title }}</div>
+                <div class="cta__text">{{ t.cta.body }}</div>
+                <div class="cluster cluster--center">
+                    <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ t.cta.cta_demo }}</a>
+                    <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ t.cta.cta_overview }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
