@@ -49,7 +49,7 @@
         { "service": "Amazon Web Services", "purpose": "Photos and files", "where": "Frankfurt, Germany" },
         { "service": "Google", "purpose": "Maps, routes and travel times, calendar sync, push notifications to the app", "where": "Not limited to the EU" },
         { "service": "OpenAI", "purpose": "Meeting summaries, voice memos, help writing emails", "where": "US" },
-        { "service": "Simply.com", "purpose": "Sending and receiving email", "where": "Denmark" },
+        { "service": "Simply.com", "purpose": "Sending and receiving email", "where": "EU" },
         { "service": "VirusTotal", "purpose": "Checking email attachments for viruses", "where": "Not limited to the EU" }
       ],
       "note": "The main services, read from the platform's own setup on 15 November 2026. The full list comes with the data processing agreement."
@@ -123,7 +123,7 @@
         { "service": "Amazon Web Services", "purpose": "Billeder og filer", "where": "Frankfurt, Tyskland" },
         { "service": "Google", "purpose": "Kort, ruter og køretider, kalendersynkronisering, notifikationer til appen", "where": "Ikke begrænset til EU" },
         { "service": "OpenAI", "purpose": "Mødereferater, talememoer, hjælp til at skrive mails", "where": "USA" },
-        { "service": "Simply.com", "purpose": "Afsendelse og modtagelse af mail", "where": "Danmark" },
+        { "service": "Simply.com", "purpose": "Afsendelse og modtagelse af mail", "where": "EU" },
         { "service": "VirusTotal", "purpose": "Virustjek af vedhæftede filer i mails", "where": "Ikke begrænset til EU" }
       ],
       "note": "De vigtigste tjenester, aflæst i platformens egen opsætning den 15. november 2026. Den fulde liste følger med databehandleraftalen."
