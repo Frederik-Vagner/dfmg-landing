@@ -10,9 +10,7 @@
       "title": "From spreadsheets to one system",
       "body1": "DFMG started as a facility service company in Denmark. Like every small service business, we managed schedules in spreadsheets, tracked invoices in one system, payroll in another, and client communication through a mix of email and phone calls.",
       "body2": "We started building tools to solve our own problems. A task scheduler. A time tracker. One tool led to another, and before we knew it, we had built the system that plans and runs our week: the schedule, the team on site and the proof of every visit.",
-      "body3": "Today, we use DFMG Platform to run our own cleaning business — and we're making it available to other Danish service companies who face the same challenges we did.",
-      "placeholder_text": "Team photo or founder at work",
-      "placeholder_hint": "Best: candid shot, not staged corporate portrait"
+      "body3": "Today, we use DFMG Platform to run our own cleaning business — and we're making it available to other Danish service companies who face the same challenges we did."
     },
     "philosophy": {
       "subtitle": "PHILOSOPHY",
@@ -27,8 +25,6 @@
     "tech": {
       "subtitle": "TECHNOLOGY",
       "title": "Modern, secure, scalable",
-      "placeholder_text": "Architecture diagram: Multi-tenant with isolated schemas",
-      "placeholder_hint": "Show: Tenant A/B/C → shared app → isolated DB schemas",
       "item1_strong": "Multi-tenant architecture",
       "item1_text": "each company gets its own isolated database schema",
       "item2_strong": "Hosted in the EU",
@@ -60,9 +56,7 @@
       "title": "Fra regneark til ét system",
       "body1": "DFMG startede som en facility service-virksomhed i Danmark. Som enhver lille servicevirksomhed styrede vi vagtplaner i regneark, holdt styr på fakturaer i ét system, løn i et andet, og kundekommunikation via en blanding af e-mail og telefonopkald.",
       "body2": "Vi begyndte at bygge værktøjer til at løse vores egne udfordringer. En opgaveplanlægger. Et tidsregistreringssystem. Ét værktøj førte til det næste, og inden vi vidste af det, havde vi bygget det system, der planlægger og driver vores uge: vagtplanen, holdet ude hos kunden og dokumentationen af hvert besøg.",
-      "body3": "I dag bruger vi DFMG Platform til at drive vores egen rengøringsvirksomhed — og nu gør vi den tilgængelig for andre danske servicevirksomheder, der står med de samme udfordringer, som vi selv gjorde.",
-      "placeholder_text": "Teamfoto eller grundlægger på arbejde",
-      "placeholder_hint": "Bedst: naturligt billede, ikke et opstillet firmaportræt"
+      "body3": "I dag bruger vi DFMG Platform til at drive vores egen rengøringsvirksomhed — og nu gør vi den tilgængelig for andre danske servicevirksomheder, der står med de samme udfordringer, som vi selv gjorde."
     },
     "philosophy": {
       "subtitle": "FILOSOFI",
@@ -77,8 +71,6 @@
     "tech": {
       "subtitle": "TEKNOLOGI",
       "title": "Moderne, sikker, skalerbar",
-      "placeholder_text": "Arkitekturdiagram: Multi-tenant med isolerede skemaer",
-      "placeholder_hint": "Vis: Virksomhed A/B/C → delt applikation → isolerede DB-skemaer",
       "item1_strong": "Multi-tenant arkitektur",
       "item1_text": "hver virksomhed får sit eget isolerede databaseskema",
       "item2_strong": "Hostet i EU",
