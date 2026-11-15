@@ -393,7 +393,7 @@ color: var(--charcoal);
 @layer components {
 
 /* Photo behind each service tile (services.html and facility.html). */
-.panels__bg--cleaning { background-image: url('/images/service/cleaning.webp'); }
+.panels__bg--wiping { background-image: url('/images/service/cleaning.webp'); }
 .panels__bg--janitor { background-image: url('/images/service/janitor.webp'); }
 .panels__bg--handyman { background-image: url('/images/service/handyman.webp'); }
 .panels__bg--delivery { background-image: url('/images/service/delivery.webp'); }
