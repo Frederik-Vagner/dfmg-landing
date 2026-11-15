@@ -12,8 +12,9 @@
               { icon, text } (an icon and one line, where a picture adds
               nothing), or shot { id, what } for a placeholder (partials/shot.njk)
     faq       title, items[] { q, a }
-    cta       title, body, cta_demo, cta_overview; without it the page gets
-              the shared "Bring your week" offer (_data/i18n/softwareOffer.json)
+    cta       title, body, steps[] (optional), cta_demo, cta_overview; without
+              it the page gets the shared "Bring your week" offer
+              (_data/i18n/softwareOffer.json): demo → Bring your week → pilot
 
   No screenshots of the platform: see docs/brief-platform.md.
 
@@ -95,6 +96,11 @@
             <div class="cta cta--center cta--primary">
                 <div class="cta__title">{{ cta.title }}</div>
                 <div class="cta__text">{{ cta.body }}</div>
+                {% if cta.steps %}
+                <ol class="cta__steps">
+                    {% for step in cta.steps %}<li class="cta__step">{{ step }}</li>{% endfor %}
+                </ol>
+                {% endif %}
                 <div class="cluster cluster--center">
                     <a href="{{ prefix }}/demo.html" class="btn btn--success btn--md">{{ cta.cta_demo }}</a>
                     <a href="{{ prefix }}/features.html" class="btn btn--ghost btn--md">{{ cta.cta_overview }}</a>

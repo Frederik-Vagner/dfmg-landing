@@ -193,6 +193,39 @@
     margin-right: auto;
 }
 
+/* The path in numbered steps (Book a demo → Bring your week → paid pilot). */
+.cta__steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm) var(--space-lg);
+    margin: 0 0 var(--space-lg);
+    padding: 0;
+    list-style: none;
+    counter-reset: cta-step;
+}
+
+.cta__step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    counter-increment: cta-step;
+    font-weight: var(--font-weight-medium);
+}
+
+.cta__step::before {
+    content: counter(cta-step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--space-lg);
+    height: var(--space-lg);
+    border-radius: var(--radius-round);
+    background: var(--white);
+    color: var(--primary-text);
+    font-weight: var(--font-weight-bold);
+}
+
 /* On a phone the right third squeezed the text into a column a few words
    wide and the buttons onto three lines each. */
 @media (max-width: 768px) {

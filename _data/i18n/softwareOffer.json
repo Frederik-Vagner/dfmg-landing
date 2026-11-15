@@ -1,13 +1,15 @@
 {
   "en": {
     "title": "Bring your week",
-    "body": "Bring your clients, your rhythms and your team, and we put your own week into the platform with you. You see your week run in it, and it leads into the paid pilot. We reply within one working day.",
+    "body": "After the demo, bring your clients, your rhythms and your team, and we put your own week into the platform with you. You see your week run in it, and it leads into the paid pilot. We reply within one working day.",
+    "steps": ["Book a demo", "Bring your week", "Paid pilot"],
     "cta_demo": "Book a demo",
     "cta_overview": "See the whole platform"
   },
   "da": {
-    "title": "Tag jeres uge med",
-    "body": "Tag jeres kunder, jeres rytmer og jeres hold med, så lægger vi jeres egen uge ind i platformen sammen med jer. I ser jeres uge køre i den, og det fører videre til den betalte pilot. Vi svarer inden for 1 arbejdsdag.",
+    "title": "Kom med jeres uge",
+    "body": "Efter demoen kommer I med jeres kunder, jeres rytmer og jeres hold, så lægger vi jeres egen uge ind i platformen sammen med jer. I ser jeres uge køre i den, og det fører videre til den betalte pilot. Vi svarer inden for 1 arbejdsdag.",
+    "steps": ["Book en demo", "Kom med jeres uge", "Betalt pilot"],
     "cta_demo": "Book en demo",
     "cta_overview": "Se hele platformen"
   }
