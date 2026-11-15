@@ -13,7 +13,8 @@
         "eyebrow": "YOU DECIDE",
         "title": "A person approves every step",
         "body": "Everything an assistant proposes waits in one list for a person in the office: a reply, a lead, a tender. Nothing goes out until someone approves it.",
-        "shot": { "id": "S23", "what": "Three items waiting for approval" }
+        "illustration": "i23-approvals",
+        "illustrationAlt": "An illustration of three proposals in a list, each with an approve and a reject mark"
       },
       {
         "id": "call-briefs",
@@ -21,7 +22,8 @@
         "eyebrow": "CALL BRIEFS",
         "title": "A brief on the lead, before you pick up the phone",
         "body": "An assistant gathers what you already know about the lead into a short brief, so the call starts where the last one ended.",
-        "shot": { "id": "S28", "what": "A call brief for a lead" }
+        "illustration": "i28-call-brief",
+        "illustrationAlt": "An illustration of a short brief on a lead beside a phone"
       },
       {
         "id": "tenders",
@@ -29,7 +31,8 @@
         "eyebrow": "TENDERS",
         "title": "Public tenders found and analysed",
         "body": "An assistant looks for public tenders that fit your work and analyses each one, so you can decide quickly whether to bid.",
-        "shot": { "id": "S29", "what": "A public tender with the assistant's analysis" }
+        "illustration": "i29-tender",
+        "illustrationAlt": "An illustration of a tender document under a magnifier, with a bar for how well it fits"
       },
       {
         "id": "advisory-board",
@@ -37,36 +40,44 @@
         "eyebrow": "ADVISORY BOARD",
         "title": "A second opinion on a decision",
         "body": "Put a decision to the advisory board and get several views on it before you choose.",
-        "shot": { "id": "S37", "what": "The advisory board's views on a decision" }
+        "illustration": "i37-advisory-board",
+        "illustrationAlt": "An illustration of three speech bubbles around one decision"
       },
       {
         "id": "setup",
         "eyebrow": "SETUP ASSISTANT",
         "title": "Change how the assistants work, in plain words",
         "body": "Tell the setup assistant what should change. You see the change before it is applied.",
-        "shot": { "id": "S39", "what": "The setup assistant's proposed change, before and after" }
+        "illustration": "i39-setup-before-after",
+        "illustrationAlt": "An illustration of a setting before and after a change"
       },
       {
         "id": "flows",
         "eyebrow": "FLOWS, LESSONS AND REPORTS",
         "title": "Assistants that follow your steps and learn from a no",
         "body": "Build step-by-step flows from templates. When a person rejects a proposal, the assistant learns from it. Assistants work from facts a person has verified, and report back to a person.",
-        "shot": { "id": "S22", "what": "An assistant's task with its log" }
+        "outcome": {
+          "icon": "fluent:history-20-filled",
+          "text": "Every step logged, and a person can undo it"
+        }
       }
     ],
     "faq": {
       "title": "Questions about the assistants",
       "items": [
-        { "q": "Can an assistant email a client by itself?", "a": "No. It proposes; a person in the office approves before anything is sent." },
-        { "q": "Can we undo what an assistant did?", "a": "What an assistant does inside the platform is logged, and a person can undo it." },
-        { "q": "Which plans include the assistants?", "a": "Professional and Enterprise." }
+        {
+          "q": "Can an assistant email a client by itself?",
+          "a": "No. It proposes; a person in the office approves before anything is sent."
+        },
+        {
+          "q": "Can we undo what an assistant did?",
+          "a": "What an assistant does inside the platform is logged, and a person can undo it."
+        },
+        {
+          "q": "Which plans include the assistants?",
+          "a": "Professional and Enterprise."
+        }
       ]
-    },
-    "cta": {
-      "title": "See what an assistant prepares for you",
-      "body": "In the demo we show you an assistant's work and the list a person approves from. We reply within one working day.",
-      "cta_demo": "Book a demo",
-      "cta_overview": "See the whole platform"
     }
   },
   "da": {
@@ -83,7 +94,8 @@
         "eyebrow": "I BESTEMMER",
         "title": "Et menneske godkender hvert trin",
         "body": "Alt, hvad en assistent foreslår, venter på én liste hos en person på kontoret: et svar, et lead, et udbud. Intet går ud, før nogen har godkendt det.",
-        "shot": { "id": "S23", "what": "Tre forslag, der venter på godkendelse" }
+        "illustration": "i23-approvals",
+        "illustrationAlt": "En illustration af tre forslag på en liste, hver med et mærke for godkend og afvis"
       },
       {
         "id": "call-briefs",
@@ -91,7 +103,8 @@
         "eyebrow": "OVERBLIK FØR OPKALD",
         "title": "Et overblik over leadet, før I tager telefonen",
         "body": "En assistent samler det, I allerede ved om leadet, i et kort overblik, så samtalen starter, hvor den sidste sluttede.",
-        "shot": { "id": "S28", "what": "Et overblik før et opkald til et lead" }
+        "illustration": "i28-call-brief",
+        "illustrationAlt": "En illustration af et kort overblik over et lead ved siden af en telefon"
       },
       {
         "id": "tenders",
@@ -99,7 +112,8 @@
         "eyebrow": "UDBUD",
         "title": "Offentlige udbud fundet og analyseret",
         "body": "En assistent leder efter offentlige udbud, der passer til jeres arbejde, og analyserer hvert enkelt, så I hurtigt kan beslutte, om I vil byde.",
-        "shot": { "id": "S29", "what": "Et offentligt udbud med assistentens analyse" }
+        "illustration": "i29-tender",
+        "illustrationAlt": "En illustration af et udbudsdokument under et forstørrelsesglas med en bjælke for, hvor godt det passer"
       },
       {
         "id": "advisory-board",
@@ -107,36 +121,44 @@
         "eyebrow": "RÅDGIVENDE BESTYRELSE",
         "title": "En second opinion på en beslutning",
         "body": "Læg en beslutning frem for den rådgivende bestyrelse, og få flere synspunkter, før I vælger.",
-        "shot": { "id": "S37", "what": "Den rådgivende bestyrelses synspunkter på en beslutning" }
+        "illustration": "i37-advisory-board",
+        "illustrationAlt": "En illustration af tre talebobler omkring én beslutning"
       },
       {
         "id": "setup",
         "eyebrow": "OPSÆTNINGSASSISTENT",
         "title": "Ændr, hvordan assistenterne arbejder, med almindelige ord",
         "body": "Fortæl opsætningsassistenten, hvad der skal ændres. I ser ændringen, før den træder i kraft.",
-        "shot": { "id": "S39", "what": "Opsætningsassistentens forslag, før og efter" }
+        "illustration": "i39-setup-before-after",
+        "illustrationAlt": "En illustration af en indstilling før og efter en ændring"
       },
       {
         "id": "flows",
         "eyebrow": "FORLØB, LÆRING OG RAPPORTER",
         "title": "Assistenter, der følger jeres trin og lærer af et nej",
         "body": "Byg trinvise forløb ud fra skabeloner. Når en person afviser et forslag, lærer assistenten af det. Assistenterne arbejder ud fra fakta, som en person har bekræftet, og rapporterer tilbage til en person.",
-        "shot": { "id": "S22", "what": "En assistents opgave med dens log" }
+        "outcome": {
+          "icon": "fluent:history-20-filled",
+          "text": "Hvert trin logget, og en person kan fortryde det"
+        }
       }
     ],
     "faq": {
       "title": "Spørgsmål om assistenterne",
       "items": [
-        { "q": "Kan en assistent selv sende en mail til en kunde?", "a": "Nej. Den foreslår; en person på kontoret godkender, før noget bliver sendt." },
-        { "q": "Kan vi fortryde, hvad en assistent har gjort?", "a": "Det, en assistent gør i platformen, bliver logget, og en person kan fortryde det." },
-        { "q": "Hvilke planer har assistenterne?", "a": "Professional og Enterprise." }
+        {
+          "q": "Kan en assistent selv sende en mail til en kunde?",
+          "a": "Nej. Den foreslår; en person på kontoret godkender, før noget bliver sendt."
+        },
+        {
+          "q": "Kan vi fortryde, hvad en assistent har gjort?",
+          "a": "Det, en assistent gør i platformen, bliver logget, og en person kan fortryde det."
+        },
+        {
+          "q": "Hvilke planer har assistenterne?",
+          "a": "Professional og Enterprise."
+        }
       ]
-    },
-    "cta": {
-      "title": "Se, hvad en assistent forbereder for jer",
-      "body": "I demoen viser vi en assistents arbejde og den liste, en person godkender fra. Vi svarer inden for 1 arbejdsdag.",
-      "cta_demo": "Book en demo",
-      "cta_overview": "Se hele platformen"
     }
   }
 }
