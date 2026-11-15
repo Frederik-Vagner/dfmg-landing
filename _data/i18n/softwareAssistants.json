@@ -1,0 +1,142 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "AI ASSISTANTS",
+      "title": "Assistants prepare the work; a person approves every step",
+      "body": "Before a call, a brief is ready. Public tenders are found and analysed. Nothing reaches a client until someone in the office approves it.",
+      "jump_label": "Jump to"
+    },
+    "sections": [
+      {
+        "id": "approve",
+        "jump": "You decide",
+        "eyebrow": "YOU DECIDE",
+        "title": "A person approves every step",
+        "body": "Everything an assistant proposes waits in one list for a person in the office: a reply, a lead, a tender. Nothing goes out until someone approves it.",
+        "shot": { "id": "S23", "what": "Three items waiting for approval" }
+      },
+      {
+        "id": "call-briefs",
+        "jump": "Call briefs",
+        "eyebrow": "CALL BRIEFS",
+        "title": "A brief on the lead, before you pick up the phone",
+        "body": "An assistant gathers what you already know about the lead into a short brief, so the call starts where the last one ended.",
+        "shot": { "id": "S28", "what": "A call brief for a lead" }
+      },
+      {
+        "id": "tenders",
+        "jump": "Tenders",
+        "eyebrow": "TENDERS",
+        "title": "Public tenders found and analysed",
+        "body": "An assistant looks for public tenders that fit your work and analyses each one, so you can decide quickly whether to bid.",
+        "shot": { "id": "S29", "what": "A public tender with the assistant's analysis" }
+      },
+      {
+        "id": "advisory-board",
+        "jump": "More",
+        "eyebrow": "ADVISORY BOARD",
+        "title": "A second opinion on a decision",
+        "body": "Put a decision to the advisory board and get several views on it before you choose.",
+        "shot": { "id": "S37", "what": "The advisory board's views on a decision" }
+      },
+      {
+        "id": "setup",
+        "eyebrow": "SETUP ASSISTANT",
+        "title": "Change how the assistants work, in plain words",
+        "body": "Tell the setup assistant what should change. You see the change before it is applied.",
+        "shot": { "id": "S39", "what": "The setup assistant's proposed change, before and after" }
+      },
+      {
+        "id": "flows",
+        "eyebrow": "FLOWS, LESSONS AND REPORTS",
+        "title": "Assistants that follow your steps and learn from a no",
+        "body": "Build step-by-step flows from templates. When a person rejects a proposal, the assistant learns from it. Assistants work from facts a person has verified, and report back to a person.",
+        "shot": { "id": "S22", "what": "An assistant's task with its log" }
+      }
+    ],
+    "faq": {
+      "title": "Questions about the assistants",
+      "items": [
+        { "q": "Can an assistant email a client by itself?", "a": "No. It proposes; a person in the office approves before anything is sent." },
+        { "q": "Can we undo what an assistant did?", "a": "What an assistant does inside the platform is logged, and a person can undo it." },
+        { "q": "Which plans include the assistants?", "a": "Professional and Enterprise." }
+      ]
+    },
+    "cta": {
+      "title": "See what an assistant prepares for you",
+      "body": "In the demo we show you an assistant's work and the list a person approves from. We reply within one working day.",
+      "cta_demo": "Book a demo",
+      "cta_overview": "See the whole platform"
+    }
+  },
+  "da": {
+    "hero": {
+      "subtitle": "AI-ASSISTENTER",
+      "title": "Assistenterne forbereder arbejdet; et menneske godkender hvert trin",
+      "body": "Før et opkald ligger et overblik klar. Offentlige udbud bliver fundet og analyseret. Intet når frem til en kunde, før nogen på kontoret har godkendt det.",
+      "jump_label": "Gå til"
+    },
+    "sections": [
+      {
+        "id": "approve",
+        "jump": "I bestemmer",
+        "eyebrow": "I BESTEMMER",
+        "title": "Et menneske godkender hvert trin",
+        "body": "Alt, hvad en assistent foreslår, venter på én liste hos en person på kontoret: et svar, et lead, et udbud. Intet går ud, før nogen har godkendt det.",
+        "shot": { "id": "S23", "what": "Tre forslag, der venter på godkendelse" }
+      },
+      {
+        "id": "call-briefs",
+        "jump": "Opkaldsoverblik",
+        "eyebrow": "OVERBLIK FØR OPKALD",
+        "title": "Et overblik over leadet, før I tager telefonen",
+        "body": "En assistent samler det, I allerede ved om leadet, i et kort overblik, så samtalen starter, hvor den sidste sluttede.",
+        "shot": { "id": "S28", "what": "Et overblik før et opkald til et lead" }
+      },
+      {
+        "id": "tenders",
+        "jump": "Udbud",
+        "eyebrow": "UDBUD",
+        "title": "Offentlige udbud fundet og analyseret",
+        "body": "En assistent leder efter offentlige udbud, der passer til jeres arbejde, og analyserer hvert enkelt, så I hurtigt kan beslutte, om I vil byde.",
+        "shot": { "id": "S29", "what": "Et offentligt udbud med assistentens analyse" }
+      },
+      {
+        "id": "advisory-board",
+        "jump": "Mere",
+        "eyebrow": "RÅDGIVENDE BESTYRELSE",
+        "title": "En second opinion på en beslutning",
+        "body": "Læg en beslutning frem for den rådgivende bestyrelse, og få flere synspunkter, før I vælger.",
+        "shot": { "id": "S37", "what": "Den rådgivende bestyrelses synspunkter på en beslutning" }
+      },
+      {
+        "id": "setup",
+        "eyebrow": "OPSÆTNINGSASSISTENT",
+        "title": "Ændr, hvordan assistenterne arbejder, med almindelige ord",
+        "body": "Fortæl opsætningsassistenten, hvad der skal ændres. I ser ændringen, før den træder i kraft.",
+        "shot": { "id": "S39", "what": "Opsætningsassistentens forslag, før og efter" }
+      },
+      {
+        "id": "flows",
+        "eyebrow": "FORLØB, LÆRING OG RAPPORTER",
+        "title": "Assistenter, der følger jeres trin og lærer af et nej",
+        "body": "Byg trinvise forløb ud fra skabeloner. Når en person afviser et forslag, lærer assistenten af det. Assistenterne arbejder ud fra fakta, som en person har bekræftet, og rapporterer tilbage til en person.",
+        "shot": { "id": "S22", "what": "En assistents opgave med dens log" }
+      }
+    ],
+    "faq": {
+      "title": "Spørgsmål om assistenterne",
+      "items": [
+        { "q": "Kan en assistent selv sende en mail til en kunde?", "a": "Nej. Den foreslår; en person på kontoret godkender, før noget bliver sendt." },
+        { "q": "Kan vi fortryde, hvad en assistent har gjort?", "a": "Det, en assistent gør i platformen, bliver logget, og en person kan fortryde det." },
+        { "q": "Hvilke planer har assistenterne?", "a": "Professional og Enterprise." }
+      ]
+    },
+    "cta": {
+      "title": "Se, hvad en assistent forbereder for jer",
+      "body": "I demoen viser vi en assistents arbejde og den liste, en person godkender fra. Vi svarer inden for 1 arbejdsdag.",
+      "cta_demo": "Book en demo",
+      "cta_overview": "Se hele platformen"
+    }
+  }
+}
