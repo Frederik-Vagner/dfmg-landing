@@ -13,7 +13,8 @@
         "eyebrow": "EMAIL",
         "title": "Your mailbox inside the platform",
         "body": "Read and answer email where the client, the visits and the proposals already are, with each mail beside the client it belongs to.",
-        "shot": { "id": "S34", "what": "The email inbox, with a mail linked to a client" }
+        "illustration": "i34-email-client",
+        "illustrationAlt": "An illustration of an email linked to a client card"
       },
       {
         "id": "whatsapp",
@@ -21,7 +22,10 @@
         "eyebrow": "WHATSAPP",
         "title": "WhatsApp with your employees, from the office",
         "body": "Reach employees on WhatsApp from the platform, with the conversation kept beside the rest of their work.",
-        "shot": { "id": "S35", "what": "A WhatsApp conversation with an employee" }
+        "outcome": {
+          "icon": "fluent:chat-multiple-20-filled",
+          "text": "WhatsApp with your employees, from the office"
+        }
       },
       {
         "id": "chat",
@@ -29,29 +33,36 @@
         "eyebrow": "CHAT IN THE APP",
         "title": "One conversation per person and per visit",
         "body": "The office and each employee chat in the app. A question about a visit stays with that visit, with a photo when that is quicker than words.",
-        "shot": { "id": "S08", "what": "A chat about a visit, with a photo, on the phone" }
+        "illustration": "i08-phone-chat",
+        "illustrationAlt": "An illustration of a phone with chat messages and a photo in one of them"
       },
       {
         "id": "notifications",
         "eyebrow": "NOTIFICATIONS",
         "title": "Tell the team once, in one place",
         "body": "Send a message to the people who need it, from the office, instead of a text to each phone.",
-        "shot": { "id": "S09", "what": "Notifications on the phone" }
+        "outcome": {
+          "icon": "fluent:megaphone-20-filled",
+          "text": "Tell the team once, in one place"
+        }
       }
     ],
     "faq": {
       "title": "Questions about communication",
       "items": [
-        { "q": "Does it replace our group chat?", "a": "For work, yes: messages about visits and the week live in the platform." },
-        { "q": "Is email linked to the client?", "a": "Yes. Each mail sits beside the client it belongs to." },
-        { "q": "Who do we reach on WhatsApp?", "a": "Your own employees, from the office." }
+        {
+          "q": "Does it replace our group chat?",
+          "a": "For work, yes: messages about visits and the week live in the platform."
+        },
+        {
+          "q": "Is email linked to the client?",
+          "a": "Yes. Each mail sits beside the client it belongs to."
+        },
+        {
+          "q": "Who do we reach on WhatsApp?",
+          "a": "Your own employees, from the office."
+        }
       ]
-    },
-    "cta": {
-      "title": "See the office and the phone side by side",
-      "body": "In the demo we show you a conversation from both ends. We reply within one working day.",
-      "cta_demo": "Book a demo",
-      "cta_overview": "See the whole platform"
     }
   },
   "da": {
@@ -68,7 +79,8 @@
         "eyebrow": "MAIL",
         "title": "Jeres mailboks inde i platformen",
         "body": "Læs og besvar mail der, hvor kunden, besøgene og tilbuddene allerede er, med hver mail ved den kunde, den hører til.",
-        "shot": { "id": "S34", "what": "Indbakken med en mail knyttet til en kunde" }
+        "illustration": "i34-email-client",
+        "illustrationAlt": "En illustration af en mail knyttet til et kundekort"
       },
       {
         "id": "whatsapp",
@@ -76,7 +88,10 @@
         "eyebrow": "WHATSAPP",
         "title": "WhatsApp med jeres medarbejdere, fra kontoret",
         "body": "Nå medarbejderne på WhatsApp fra platformen, med samtalen ved siden af resten af deres arbejde.",
-        "shot": { "id": "S35", "what": "En WhatsApp-samtale med en medarbejder" }
+        "outcome": {
+          "icon": "fluent:chat-multiple-20-filled",
+          "text": "WhatsApp med jeres medarbejdere, fra kontoret"
+        }
       },
       {
         "id": "chat",
@@ -84,29 +99,36 @@
         "eyebrow": "CHAT I APPEN",
         "title": "Én samtale pr. person og pr. besøg",
         "body": "Kontoret og hver medarbejder chatter i appen. Et spørgsmål om et besøg bliver ved det besøg, med et billede, når det er hurtigere end ord.",
-        "shot": { "id": "S08", "what": "En chat om et besøg med et billede, på telefonen" }
+        "illustration": "i08-phone-chat",
+        "illustrationAlt": "En illustration af en telefon med chatbeskeder og et billede i den ene"
       },
       {
         "id": "notifications",
         "eyebrow": "BESKEDER",
         "title": "Sig det til holdet én gang, ét sted",
         "body": "Send en besked til dem, der skal have den, fra kontoret, i stedet for en sms til hver telefon.",
-        "shot": { "id": "S09", "what": "Beskeder på telefonen" }
+        "outcome": {
+          "icon": "fluent:megaphone-20-filled",
+          "text": "Sig det til holdet én gang, ét sted"
+        }
       }
     ],
     "faq": {
       "title": "Spørgsmål om kommunikation",
       "items": [
-        { "q": "Erstatter det vores gruppechat?", "a": "Til arbejdet, ja: beskeder om besøg og ugen ligger i platformen." },
-        { "q": "Er mail knyttet til kunden?", "a": "Ja. Hver mail ligger ved den kunde, den hører til." },
-        { "q": "Hvem når vi på WhatsApp?", "a": "Jeres egne medarbejdere, fra kontoret." }
+        {
+          "q": "Erstatter det vores gruppechat?",
+          "a": "Til arbejdet, ja: beskeder om besøg og ugen ligger i platformen."
+        },
+        {
+          "q": "Er mail knyttet til kunden?",
+          "a": "Ja. Hver mail ligger ved den kunde, den hører til."
+        },
+        {
+          "q": "Hvem når vi på WhatsApp?",
+          "a": "Jeres egne medarbejdere, fra kontoret."
+        }
       ]
-    },
-    "cta": {
-      "title": "Se kontoret og telefonen side om side",
-      "body": "I demoen viser vi en samtale fra begge ender. Vi svarer inden for 1 arbejdsdag.",
-      "cta_demo": "Book en demo",
-      "cta_overview": "Se hele platformen"
     }
   }
 }
