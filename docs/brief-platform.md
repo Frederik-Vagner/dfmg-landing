@@ -62,3 +62,5 @@ The security page (`pages/software/security.html`, copy in `_data/i18n/softwareS
 - **After the demo**: a paid pilot. There is no free trial.
 - **"40+ modules"**: removed. Don't count modules.
 - **Floor plans**: the page was removed (its URLs redirect to features) until the feature is LIVE.
+- **Contact**: the demo page is also the contact page (one form for a demo or a question, with phone, email and hours). `contact.html` redirects there.
+- **Lead with plan, run and prove** on the overview and features pages; team, stock and sales follow.

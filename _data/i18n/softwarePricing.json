@@ -46,8 +46,8 @@
           "Everything in Professional",
           "Terms agreed with you"
         ],
-        "ctaText": "Contact sales",
-        "ctaHref": "/pages/software/contact.html",
+        "ctaText": "Talk to us",
+        "ctaHref": "/pages/software/demo.html#request",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       }
     ],
@@ -120,7 +120,7 @@
       "title": "Not sure which plan?",
       "body": "Book a call and we'll walk you through the right fit for your company — based on what you actually need, not what we want to sell.",
       "cta_demo": "Book a demo",
-      "cta_sales": "Contact sales"
+      "cta_sales": "Ask a question"
     }
   },
   "da": {
@@ -170,8 +170,8 @@
           "Alt i Professional",
           "Vilkår aftalt med jer"
         ],
-        "ctaText": "Kontakt salg",
-        "ctaHref": "/pages/software/da/contact.html",
+        "ctaText": "Tal med os",
+        "ctaHref": "/pages/software/da/demo.html#request",
         "ctaClass": "btn btn--secondary btn--md btn--full"
       }
     ],
@@ -244,7 +244,7 @@
       "title": "Ikke sikker på hvilken plan?",
       "body": "Book et opkald, så gennemgår vi den rette løsning til jeres virksomhed — baseret på hvad I faktisk har brug for, ikke hvad vi gerne vil sælge.",
       "cta_demo": "Book en demo",
-      "cta_sales": "Kontakt salg"
+      "cta_sales": "Stil et spørgsmål"
     }
   }
 }

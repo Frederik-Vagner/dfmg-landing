@@ -3,12 +3,28 @@
     "formAction": "/pages/software/tak.html",
     "hero": {
       "subtitle": "BOOK A DEMO",
-      "title": "See the platform in action",
-      "body": "30 minutes. No commitment. We'll walk you through the modules that matter most to your business."
+      "title": "See your week in DFMG Platform",
+      "body": "30 minutes, online, with someone who uses the system every day. We show you the parts that fit how your company works, on our test company. A question instead? Use the same form."
+    },
+    "next": {
+      "title": "What happens next",
+      "steps": [
+        { "title": "We reply", "text": "Within one working day, with a time that suits you." },
+        { "title": "The demo", "text": "The schedule, the employee app and a finished visit with photos, using made-up data. Bring the questions you'd ask any new system." },
+        { "title": "A paid pilot", "text": "If it fits, we set up your company in the platform and import your employees and clients from a spreadsheet. Your team starts in the app." }
+      ]
+    },
+    "details": {
+      "title": "Or reach us directly",
+      "card_email": "Email",
+      "card_phone": "Phone",
+      "card_hours": "Hours",
+      "card_hours_value": "Weekdays 8–16",
+      "card_company": "Company"
     },
     "form": {
       "heading": "Request a demo",
-      "intro": "Fill in your details and we'll reply within one working day to find a time.",
+      "intro": "Tell us a little about your company, and we'll reply within one working day.",
       "label_name": "Full name",
       "placeholder_name": "Anders Jensen",
       "label_company": "Company",
@@ -17,48 +33,44 @@
       "placeholder_email": "anders@example.dk",
       "label_phone": "Phone",
       "placeholder_phone": "+45 12 34 56 78",
-      "label_size": "Company size",
-      "option_default": "Select...",
-      "option_1_5": "1-5 employees",
-      "option_6_15": "6-15 employees",
-      "option_16_50": "16-50 employees",
-      "option_50plus": "50+ employees",
-      "label_message": "What are you most interested in?",
-      "placeholder_message": "E.g. the schedule, the employee app, photos from every visit...",
+      "label_size": "Employees in the field",
+      "option_default": "Select…",
+      "size_options": ["1–5", "6–15", "16–50", "More than 50"],
+      "label_today": "How do you plan the week today?",
+      "today_options": ["Spreadsheet", "Paper or whiteboard", "Another system", "Something else"],
+      "label_message": "What would you like to see or ask? (optional)",
+      "placeholder_message": "E.g. the schedule, the employee app, photos from every visit, the pilot…",
       "submit": "Request a demo",
+      "privacy": "We use your details only to answer you.",
       "email_subject": "Demo request - DFMG Platform"
-    },
-    "visual": {
-      "placeholder_text": "Product preview video or dashboard screenshot",
-      "placeholder_hint": "Recommended: 90s Loom showing calendar → task → check-in → photos"
-    },
-    "trust": {
-      "no_commitment": "No commitment required",
-      "session_length": "30-minute session",
-      "danish_support": "Danish-language support",
-      "eu_hosting": "Hosted in the EU"
-    },
-    "steps": {
-      "subtitle": "HOW IT WORKS",
-      "title": "What to expect",
-      "step1_title": "Book",
-      "step1_desc": "Fill in the form above. We'll reply within one working day to find a time that works.",
-      "step2_title": "Demo",
-      "step2_desc": "30-minute walkthrough of the modules relevant to your business. Bring your questions.",
-      "step3_title": "Paid pilot",
-      "step3_desc": "If it fits, you start with a paid pilot: we set up your company in the platform and import your employees and clients from a spreadsheet."
     }
   },
   "da": {
     "formAction": "/pages/software/da/tak.html",
     "hero": {
       "subtitle": "BOOK EN DEMO",
-      "title": "Se platformen i praksis",
-      "body": "30 minutter. Ingen forpligtelse. Vi gennemgår de moduler, der er mest relevante for din virksomhed."
+      "title": "Se jeres uge i DFMG Platform",
+      "body": "30 minutter, online, med en, der bruger systemet hver dag. Vi viser jer de dele, der passer til den måde, jeres virksomhed arbejder på, i vores testvirksomhed. Har I hellere et spørgsmål? Brug samme formular."
+    },
+    "next": {
+      "title": "Det sker der nu",
+      "steps": [
+        { "title": "Vi svarer", "text": "Inden for 1 arbejdsdag, med et tidspunkt, der passer jer." },
+        { "title": "Demoen", "text": "Vagtplanen, medarbejder-appen og et færdigt besøg med billeder, vist med opdigtede data. Tag de spørgsmål med, I ville stille til ethvert nyt system." },
+        { "title": "En betalt pilot", "text": "Hvis det passer, opretter vi jeres virksomhed i platformen og importerer jeres medarbejdere og kunder fra et regneark. Holdet starter i appen." }
+      ]
+    },
+    "details": {
+      "title": "Eller kontakt os direkte",
+      "card_email": "E-mail",
+      "card_phone": "Telefon",
+      "card_hours": "Åbningstid",
+      "card_hours_value": "Hverdage 8–16",
+      "card_company": "Virksomhed"
     },
     "form": {
       "heading": "Bestil en demo",
-      "intro": "Udfyld dine oplysninger, så svarer vi inden for 1 arbejdsdag og aftaler et tidspunkt.",
+      "intro": "Fortæl os lidt om jeres virksomhed, så svarer vi inden for 1 arbejdsdag.",
       "label_name": "Fulde navn",
       "placeholder_name": "Anders Jensen",
       "label_company": "Virksomhed",
@@ -67,36 +79,16 @@
       "placeholder_email": "anders@example.dk",
       "label_phone": "Telefon",
       "placeholder_phone": "+45 12 34 56 78",
-      "label_size": "Virksomhedsstørrelse",
-      "option_default": "Vælg...",
-      "option_1_5": "1-5 medarbejdere",
-      "option_6_15": "6-15 medarbejdere",
-      "option_16_50": "16-50 medarbejdere",
-      "option_50plus": "50+ medarbejdere",
-      "label_message": "Hvad er du mest interesseret i?",
-      "placeholder_message": "F.eks. vagtplanen, medarbejder-appen, billeder fra hvert besøg...",
-      "submit": "Bestil demo",
+      "label_size": "Medarbejdere ude hos kunderne",
+      "option_default": "Vælg…",
+      "size_options": ["1–5", "6–15", "16–50", "Over 50"],
+      "label_today": "Hvordan planlægger I ugen i dag?",
+      "today_options": ["Regneark", "Papir eller whiteboard", "Et andet system", "Noget andet"],
+      "label_message": "Hvad vil I gerne se eller spørge om? (valgfrit)",
+      "placeholder_message": "Fx vagtplanen, medarbejder-appen, billeder fra hvert besøg, piloten…",
+      "submit": "Bestil en demo",
+      "privacy": "Vi bruger kun jeres oplysninger til at svare jer.",
       "email_subject": "Demoforespørgsel - DFMG Platform"
-    },
-    "visual": {
-      "placeholder_text": "Produktvideo eller skærmbillede af dashboardet",
-      "placeholder_hint": "Anbefalet: 90s Loom der viser kalender → opgave → check-in → billeder"
-    },
-    "trust": {
-      "no_commitment": "Ingen forpligtelse",
-      "session_length": "30 minutters session",
-      "danish_support": "Support på dansk",
-      "eu_hosting": "Hostet i EU"
-    },
-    "steps": {
-      "subtitle": "SÅDAN FUNGERER DET",
-      "title": "Hvad du kan forvente",
-      "step1_title": "Book",
-      "step1_desc": "Udfyld formularen ovenfor. Vi svarer inden for 1 arbejdsdag og finder et tidspunkt, der passer dig.",
-      "step2_title": "Demo",
-      "step2_desc": "30 minutters gennemgang af de moduler, der er relevante for din virksomhed. Tag dine spørgsmål med.",
-      "step3_title": "Betalt pilot",
-      "step3_desc": "Hvis det passer, starter I med en betalt pilot: vi opretter jeres virksomhed i platformen og importerer jeres medarbejdere og kunder fra et regneark."
     }
   }
 }

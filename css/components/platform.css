@@ -37,22 +37,9 @@
     margin-bottom: var(--space-2xs);
 }
 
-.screenshot-placeholder--tall {
-    min-height: 400px;
-}
-
-.screenshot-placeholder--tall .screenshot-placeholder__icon {
-    font-size: var(--icon-display);
-    margin-bottom: var(--space-xs);
-}
-
 /* ── Section titles a step below the default size ── */
 .title--compact { font-size: var(--heading-2); }
 .title--small { font-size: var(--text-2xl); }
-
-/* ── Phone field: the country code beside the number ── */
-.form-group--code { flex: 0 0 30%; }
-.form-group--phone { flex: 1; }
 
 /* ── Plans: the pricing plans side by side ──
    Three plans stay side by side on tablets: two plus a lone third card

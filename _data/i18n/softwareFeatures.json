@@ -3,7 +3,8 @@
     "hero": {
       "subtitle": "FEATURES",
       "title": "What DFMG Platform does for a service company",
-      "body": "Plan the week, run every visit, prove the work and win new clients, from the office and from the phone in your team's pocket."
+      "body": "Plan the week, run every visit, prove the work and win new clients, from the office and from the phone in your team's pocket.",
+      "jump_label": "Jump to"
     },
     "sections": [
       {
@@ -13,12 +14,11 @@
         "subtitle": "Plan the week",
         "title": "Every visit on one calendar",
         "body": "See the month by client, employee and time, with the hours per week beside it. Recurring visits are planned weeks ahead from each client's rules, so next week is never empty. Employees ask for time off in the app, and the office answers there.",
-        "badges": [
-          "Schedule",
-          "Recurring visits",
-          "Crews",
-          "Time off",
-          "Hours per week"
+        "points": [
+          "Recurring visits: daily, weekly, every two weeks, chosen weekdays, monthly (or \"the first Monday\") and yearly, planned six weeks ahead",
+          "Crews: several people on one visit, each with their own time",
+          "Task templates that carry the method, the products and the time per client",
+          "Time off asked for in the app and answered by the office"
         ],
         "image": "/images/platform/schedule-month.webp",
         "imageAlt": "The schedule for a month: every visit by client and time, with the hours per week beside it"
@@ -30,11 +30,11 @@
         "subtitle": "Run the visit",
         "title": "Today's work on every phone",
         "body": "The employee app shows each person their own visits and the whole team's schedule. They check in when they arrive, check out when they leave, and message the office from the same app. It runs in the phone's browser.",
-        "badges": [
-          "Employee app",
-          "Check-in and check-out",
-          "Team schedule",
-          "Chat"
+        "points": [
+          "Mine, team and available views, as a list or a month",
+          "Check-in and check-out per person, per visit",
+          "The checklist and the method for each task on the visit",
+          "Chat with the office from the same app"
         ],
         "image": "/images/platform/app-schedule-phone.webp",
         "imageAlt": "The employee app on a phone: this week's visits, each marked done",
@@ -47,11 +47,10 @@
         "subtitle": "Prove the work",
         "title": "Know what was done, by whom and when",
         "body": "Every visit keeps its before and after photos and each person's real time on site, set against the planned time. When a client asks whether a visit happened, the answer is on the visit.",
-        "badges": [
-          "Before and after photos",
-          "Time on site per person",
-          "Planned and actual time",
-          "Visit history"
+        "points": [
+          "Before and after photos, required per client if you want them",
+          "Time on site per person against the planned time",
+          "The full history of a client's visits in one place"
         ],
         "image": "/images/platform/task-visit-proof.webp",
         "imageAlt": "A completed visit: the crew with their check-in and check-out times, a time report against the estimate, and the checklist"
@@ -63,11 +62,10 @@
         "subtitle": "Know your stock",
         "title": "Every product and machine, by storage",
         "body": "Keep track of cleaning products, equipment, textiles and workwear, in the company storage and at your clients. See what each storage holds and what it is worth, record what moves, and spot what is running low.",
-        "badges": [
-          "Items",
-          "Storages",
-          "Stock movements",
-          "Low-stock levels"
+        "points": [
+          "Items and storages, with quantity, price and value",
+          "Stock movements on record",
+          "Low-stock levels per item"
         ],
         "image": "/images/platform/inventory-stock.webp",
         "imageAlt": "The inventory list: items by type and storage, with quantity, price and value"
@@ -79,10 +77,10 @@
         "subtitle": "Keep your team on board",
         "title": "Instructions that reach the people doing the work",
         "body": "Notifications tell each employee what changed. Chat keeps questions in one thread instead of on private phones. Short tests in the app check that training has landed.",
-        "badges": [
-          "Notifications",
-          "Chat",
-          "Tests"
+        "points": [
+          "Notifications when a visit or a plan changes",
+          "Chat between the office and employees",
+          "Tests taken in the app, with the results for the office"
         ],
         "image": "/images/platform/app-home-phone.webp",
         "imageAlt": "The employee app's home screen: the next visits and a guide to read",
@@ -95,21 +93,31 @@
         "subtitle": "Win new work",
         "title": "From the first call to a signed document",
         "body": "Keep your lead lists in one place and every call on record. Record a meeting and get the summary and notes written for you. Send a proposal as a link, see when the client opens it, and have documents signed electronically.",
-        "badges": [
-          "Leads",
-          "Call log",
-          "Meeting notes",
-          "Proposals",
-          "E-signatures"
+        "points": [
+          "Lead lists, with company details looked up in the CVR register",
+          "A call log: who called whom, and what was said",
+          "Meeting recordings turned into a summary and notes",
+          "Proposals sent as a link, seen when opened",
+          "Electronic signatures, confirmed by a code sent by email"
         ],
         "screenshot": "Screenshot: a proposal sent as a link",
         "screenshotAlt": "A proposal as the client sees it"
       }
     ],
-    "admin": {
-      "title": "Shown with made-up data",
-      "body": "Every screenshot on these pages comes from a test company with invented clients and employees, marked (FAKE). Your company sees its own data, and only its own."
-    },
+    "notes": [
+      {
+        "title": "What it does not do",
+        "text": "DFMG Platform does not keep your books or run payroll. Keep your accounting and payroll systems as they are."
+      },
+      {
+        "title": "Languages",
+        "text": "The system is in English today, and the Danish translation is under way. Support is in Danish."
+      },
+      {
+        "title": "Shown with made-up data",
+        "text": "Every screenshot on these pages comes from a test company with invented clients and employees, marked (FAKE). Your company sees its own data, and only its own."
+      }
+    ],
     "cta": {
       "title": "See it in action",
       "body": "Book a 30-minute demo and we'll walk you through the parts that matter most to your company.",
@@ -121,7 +129,8 @@
     "hero": {
       "subtitle": "FUNKTIONER",
       "title": "Det gør DFMG Platform for en servicevirksomhed",
-      "body": "Planlæg ugen, kør hvert besøg, dokumentér arbejdet og vind nye kunder, fra kontoret og fra telefonen i holdets lomme."
+      "body": "Planlæg ugen, kør hvert besøg, dokumentér arbejdet og vind nye kunder, fra kontoret og fra telefonen i holdets lomme.",
+      "jump_label": "Gå til"
     },
     "sections": [
       {
@@ -131,12 +140,11 @@
         "subtitle": "Planlæg ugen",
         "title": "Alle besøg i én kalender",
         "body": "Se måneden efter kunde, medarbejder og tidspunkt, med timerne pr. uge ved siden af. Faste besøg planlægges uger frem ud fra hver kundes aftale, så næste uge aldrig står tom. Medarbejderne søger fravær i appen, og kontoret svarer samme sted.",
-        "badges": [
-          "Vagtplan",
-          "Faste besøg",
-          "Hold",
-          "Fravær",
-          "Timer pr. uge"
+        "points": [
+          "Faste besøg: dagligt, ugentligt, hver anden uge, valgte ugedage, månedligt (eller \"første mandag\") og årligt, planlagt seks uger frem",
+          "Hold: flere personer på ét besøg, hver med sin egen tid",
+          "Opgaveskabeloner med metode, midler og tid pr. kunde",
+          "Fravær søges i appen og besvares af kontoret"
         ],
         "image": "/images/platform/schedule-month.webp",
         "imageAlt": "Vagtplanen for en måned: hvert besøg efter kunde og tidspunkt, med timerne pr. uge ved siden af"
@@ -148,11 +156,11 @@
         "subtitle": "Kør besøget",
         "title": "Dagens arbejde på hver telefon",
         "body": "Medarbejder-appen viser hver person deres egne besøg og hele holdets vagtplan. De checker ind, når de kommer, checker ud, når de går, og skriver til kontoret fra samme app. Den kører i telefonens browser.",
-        "badges": [
-          "Medarbejder-app",
-          "Check-in og check-ud",
-          "Holdets vagtplan",
-          "Chat"
+        "points": [
+          "Mine, holdets og ledige vagter, som liste eller måned",
+          "Check-ind og check-ud pr. person, pr. besøg",
+          "Tjeklisten og metoden for hver opgave på besøget",
+          "Chat med kontoret fra samme app"
         ],
         "image": "/images/platform/app-schedule-phone.webp",
         "imageAlt": "Medarbejder-appen på en telefon: ugens besøg, hver markeret som udført",
@@ -165,11 +173,10 @@
         "subtitle": "Dokumentér arbejdet",
         "title": "Vid, hvad der blev gjort, af hvem og hvornår",
         "body": "Hvert besøg gemmer sine før- og efterbilleder og hver persons faktiske tid hos kunden, holdt op mod den planlagte tid. Når en kunde spørger, om et besøg blev udført, står svaret på besøget.",
-        "badges": [
-          "Før- og efterbilleder",
-          "Tid hos kunden pr. person",
-          "Planlagt og faktisk tid",
-          "Besøgshistorik"
+        "points": [
+          "Før- og efterbilleder, påkrævet pr. kunde, hvis I vil",
+          "Tid på stedet pr. person mod den planlagte tid",
+          "Hele historikken for en kundes besøg ét sted"
         ],
         "image": "/images/platform/task-visit-proof.webp",
         "imageAlt": "Et udført besøg: holdet med tider for check-in og check-ud, en tidsrapport mod estimatet og tjeklisten"
@@ -181,11 +188,10 @@
         "subtitle": "Hold styr på lageret",
         "title": "Hvert produkt og hver maskine, pr. lager",
         "body": "Hold styr på rengøringsmidler, udstyr, tekstiler og arbejdstøj, på firmaets lager og ude hos kunderne. Se hvad hvert lager rummer, og hvad det er værd, registrér hvad der flyttes, og se hvad der er ved at slippe op.",
-        "badges": [
-          "Varer",
-          "Lagre",
-          "Lagerbevægelser",
-          "Minimumsbeholdning"
+        "points": [
+          "Varer og lagre, med antal, pris og værdi",
+          "Lagerbevægelser registreret",
+          "Minimumsbeholdning pr. vare"
         ],
         "image": "/images/platform/inventory-stock.webp",
         "imageAlt": "Lagerlisten: varer efter type og lager, med antal, pris og værdi"
@@ -197,10 +203,10 @@
         "subtitle": "Hold holdet opdateret",
         "title": "Instruktioner, der når frem til dem, der gør arbejdet",
         "body": "Notifikationer fortæller hver medarbejder, hvad der er ændret. Chatten samler spørgsmålene ét sted i stedet for på private telefoner. Korte tests i appen viser, om oplæringen har sat sig.",
-        "badges": [
-          "Notifikationer",
-          "Chat",
-          "Tests"
+        "points": [
+          "Notifikationer, når et besøg eller en plan ændres",
+          "Chat mellem kontoret og medarbejderne",
+          "Tests i appen, med resultaterne til kontoret"
         ],
         "image": "/images/platform/app-home-phone.webp",
         "imageAlt": "Medarbejder-appens forside: de næste besøg og en vejledning, der skal læses",
@@ -213,21 +219,31 @@
         "subtitle": "Vind nye opgaver",
         "title": "Fra det første opkald til et underskrevet dokument",
         "body": "Hav jeres leadlister ét sted og alle opkald registreret. Optag et møde, og få resumé og noter skrevet for jer. Send et tilbud som et link, se hvornår kunden åbner det, og få dokumenter underskrevet digitalt.",
-        "badges": [
-          "Leads",
-          "Opkaldslog",
-          "Mødenoter",
-          "Tilbud",
-          "Digital underskrift"
+        "points": [
+          "Leadlister, med virksomhedsoplysninger slået op i CVR",
+          "En opkaldslog: hvem ringede til hvem, og hvad blev der sagt",
+          "Mødeoptagelser omsat til referat og noter",
+          "Tilbud sendt som link, set når de åbnes",
+          "Elektronisk underskrift, bekræftet med en kode sendt på mail"
         ],
         "screenshot": "Skærmbillede: et tilbud sendt som et link",
         "screenshotAlt": "Et tilbud, som kunden ser det"
       }
     ],
-    "admin": {
-      "title": "Vist med opdigtede data",
-      "body": "Alle skærmbilleder på disse sider kommer fra en testvirksomhed med opdigtede kunder og medarbejdere, markeret (FAKE). Jeres virksomhed ser sine egne data, og kun dem."
-    },
+    "notes": [
+      {
+        "title": "Det gør den ikke",
+        "text": "DFMG Platform fører ikke regnskab og kører ikke løn. Behold jeres regnskabs- og lønsystem, som de er."
+      },
+      {
+        "title": "Sprog",
+        "text": "Systemet er på engelsk i dag, og den danske oversættelse er i gang. Support foregår på dansk."
+      },
+      {
+        "title": "Vist med opdigtede data",
+        "text": "Alle skærmbilleder på disse sider kommer fra en testvirksomhed med opdigtede kunder og medarbejdere, markeret (FAKE). Jeres virksomhed ser sine egne data og kun dem."
+      }
+    ],
     "cta": {
       "title": "Se det i praksis",
       "body": "Book en demo på 30 minutter, så viser vi jer de dele, der betyder mest for jeres virksomhed.",

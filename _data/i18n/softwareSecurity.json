@@ -69,7 +69,7 @@
     "cta": {
       "title": "Questions from your IT or your lawyer?",
       "body": "Send them to us before the demo, and we'll answer them in writing.",
-      "cta_contact": "Contact us",
+      "cta_contact": "Send us your questions",
       "cta_demo": "Book a demo"
     }
   },
@@ -143,7 +143,7 @@
     "cta": {
       "title": "Spørgsmål fra jeres IT eller jeres advokat?",
       "body": "Send dem til os før demoen, så svarer vi skriftligt.",
-      "cta_contact": "Kontakt os",
+      "cta_contact": "Send os jeres spørgsmål",
       "cta_demo": "Book en demo"
     }
   }

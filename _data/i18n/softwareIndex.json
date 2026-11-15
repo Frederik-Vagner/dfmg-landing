@@ -3,26 +3,33 @@
     "hero": {
       "subtitle": "DFMG PLATFORM",
       "title": "Plan the week, run every visit and prove the work, in one system",
-      "body": "Built for Danish cleaning and service companies by one that runs on it every day. The schedule, the employee app and the photos from every visit sit in one place, so you know what was done, by whom and when.",
+      "body": "For cleaning and facility service companies with a team in the field and an office that plans the work. Built by DFMG, a cleaning company that runs its own week on it. The schedule, the employee app and the photos from every visit sit in one place.",
       "cta_demo": "Book a demo",
-      "cta_features": "See all features",
+      "cta_features": "See what it does",
       "image_alt": "The schedule for a month: every visit by client and time, with the hours per week beside it"
     },
-    "why": {
-      "subtitle": "WHY DFMG",
-      "title": "Built by a cleaning company, not a software company",
-      "body": "We run our own cleaning business on this platform every day. Each feature exists because we needed it on a real Monday morning, not because someone imagined it. When you call with a question, you talk to people who use the same screens.",
-      "card1_title": "Made for Danish teams",
-      "card1_desc": "Built around how Danish cleaning companies plan and run their week. The system is in English today, and the Danish translation is under way.",
-      "card2_title": "Modular",
-      "card2_desc": "Start with the schedule and the employee app. Turn on more areas when you need them.",
-      "card3_title": "Everything connected",
-      "card3_desc": "A check-in or a photo from the site lands on the visit straight away. The office sees it without a phone call."
+    "audience": {
+      "subtitle": "WHO IT IS FOR",
+      "title": "Service companies that work at their clients' sites",
+      "items": [
+        {
+          "title": "Recurring visits",
+          "text": "Offices, stairwells, shops and institutions cleaned on a fixed rhythm, plus the extra jobs in between."
+        },
+        {
+          "title": "A team on the move",
+          "text": "Employees who start the day from a phone, not from a desk."
+        },
+        {
+          "title": "An office that answers",
+          "text": "Someone who plans, checks and replies when a client asks what happened."
+        }
+      ]
     },
     "modules": {
       "subtitle": "WHAT IT DOES",
-      "title": "One platform for the work your team does every day",
-      "body": "Six jobs every service company has, done in one place instead of in spreadsheets and group chats.",
+      "title": "Plan the week, run the visit, prove the work",
+      "body": "The three jobs at the heart of a service company, in one place instead of in spreadsheets and group chats.",
       "plan_title": "Plan the week",
       "plan_desc": "Every visit on one calendar. Recurring visits plan themselves weeks ahead, and time off is asked for and answered in the app.",
       "visit_title": "Run the visit",
@@ -34,13 +41,47 @@
       "stock_title": "Know your stock",
       "stock_desc": "Cleaning products, equipment and workwear by storage, with what each holds and what is running low.",
       "sell_title": "Win new work",
-      "sell_desc": "Lead lists, every call on record, meeting notes written for you, proposals your client opens online and documents signed electronically."
+      "sell_desc": "Lead lists, every call on record, meeting notes written for you, proposals your client opens online and documents signed electronically.",
+      "more_title": "Also in the platform"
     },
     "walkthrough": {
+      "subtitle": "ONE VISIT, START TO FINISH",
       "title": "From the plan to the proof",
-      "body": "Your team opens the app and sees where they are going today. When they check in, take photos and check out, the office sees it on the visit. The screens on this page are the system we run our own company on, shown with made-up data.",
+      "steps": [
+        {
+          "title": "Planned",
+          "text": "The visit is on the schedule, with the crew and the planned time, because the client's rules put it there."
+        },
+        {
+          "title": "Checked in",
+          "text": "Each person on the crew checks in from the app when they arrive."
+        },
+        {
+          "title": "Photographed",
+          "text": "Before and after photos go straight onto the visit."
+        },
+        {
+          "title": "On record",
+          "text": "The office sees who was there, for how long against the plan, and what it looked like. When a client asks, the answer is on the visit."
+        }
+      ],
       "cta": "Book a demo",
       "image_alt": "The employee app on a phone: the next visits with time, client and who is on the crew"
+    },
+    "why": {
+      "subtitle": "WHY DFMG",
+      "title": "Built by a cleaning company, not a software company",
+      "body": "We run our own cleaning business on this platform every day. Each feature exists because we needed it on a real Monday morning, not because someone imagined it. When you call with a question, you talk to people who use the same screens.",
+      "cta": "Meet the company behind it"
+    },
+    "security": {
+      "title": "Your data, kept apart",
+      "items": [
+        "Each company in its own database schema, its files under its own key",
+        "Two-step login with an authenticator app, or a passkey",
+        "Access set per position: none, view or edit, area by area"
+      ],
+      "link": "How we handle your data"
     },
     "comparison": {
       "title": "Stop holding the week together by hand",
@@ -78,26 +119,33 @@
     "hero": {
       "subtitle": "DFMG PLATFORM",
       "title": "Planlæg ugen, kør hvert besøg og dokumentér arbejdet, i ét system",
-      "body": "Bygget til danske rengørings- og servicevirksomheder af en, der selv kører på det hver dag. Vagtplanen, medarbejder-appen og billederne fra hvert besøg samlet ét sted, så I ved, hvad der blev gjort, af hvem og hvornår.",
+      "body": "Til rengørings- og facility-virksomheder med et hold ude hos kunderne og et kontor, der planlægger arbejdet. Bygget af DFMG, en rengøringsvirksomhed, der selv driver sin uge på det. Vagtplanen, medarbejder-appen og billederne fra hvert besøg samlet ét sted.",
       "cta_demo": "Book en demo",
-      "cta_features": "Se alle funktioner",
+      "cta_features": "Se hvad den kan",
       "image_alt": "Vagtplanen for en måned: hvert besøg efter kunde og tidspunkt, med timerne pr. uge ved siden af"
     },
-    "why": {
-      "subtitle": "HVORFOR DFMG",
-      "title": "Bygget af en rengøringsvirksomhed, ikke et softwarefirma",
-      "body": "Vi driver vores egen rengøringsvirksomhed på denne platform hver dag. Hver funktion findes, fordi vi selv manglede den en helt almindelig mandag morgen, ikke fordi nogen forestillede sig den. Når I ringer med et spørgsmål, taler I med folk, der bruger de samme skærmbilleder.",
-      "card1_title": "Lavet til danske hold",
-      "card1_desc": "Bygget efter hvordan danske rengøringsvirksomheder planlægger og driver deres uge. Systemet er på engelsk i dag, og den danske oversættelse er i gang.",
-      "card2_title": "Modulært",
-      "card2_desc": "Start med vagtplanen og medarbejder-appen. Slå flere områder til, når I får brug for dem.",
-      "card3_title": "Alt hænger sammen",
-      "card3_desc": "Et check-in eller et billede fra kunden lander på besøget med det samme. Kontoret ser det uden at ringe."
+    "audience": {
+      "subtitle": "HVEM DEN ER TIL",
+      "title": "Servicevirksomheder, der arbejder ude hos kunderne",
+      "items": [
+        {
+          "title": "Faste besøg",
+          "text": "Kontorer, opgange, butikker og institutioner, der rengøres i en fast rytme, plus de ekstra opgaver ind imellem."
+        },
+        {
+          "title": "Et hold på farten",
+          "text": "Medarbejdere, der starter dagen fra en telefon, ikke fra et skrivebord."
+        },
+        {
+          "title": "Et kontor, der svarer",
+          "text": "En, der planlægger, følger op og svarer, når en kunde spørger, hvad der skete."
+        }
+      ]
     },
     "modules": {
       "subtitle": "DET KAN DEN",
-      "title": "Én platform til det arbejde, jeres hold udfører hver dag",
-      "body": "Seks opgaver, som enhver servicevirksomhed har, løst ét sted i stedet for i regneark og gruppechats.",
+      "title": "Planlæg ugen, kør besøget, dokumentér arbejdet",
+      "body": "De tre opgaver i hjertet af en servicevirksomhed, samlet ét sted i stedet for i regneark og gruppechats.",
       "plan_title": "Planlæg ugen",
       "plan_desc": "Alle besøg i én kalender. Faste besøg planlægger sig selv uger frem, og fravær søges og besvares i appen.",
       "visit_title": "Kør besøget",
@@ -109,13 +157,47 @@
       "stock_title": "Hold styr på lageret",
       "stock_desc": "Rengøringsmidler, udstyr og arbejdstøj pr. lager, med hvad hvert lager rummer, og hvad der er ved at slippe op.",
       "sell_title": "Vind nye opgaver",
-      "sell_desc": "Leadlister, alle opkald registreret, mødenoter skrevet for jer, tilbud kunden åbner online og dokumenter underskrevet digitalt."
+      "sell_desc": "Leadlister, alle opkald registreret, mødenoter skrevet for jer, tilbud kunden åbner online og dokumenter underskrevet digitalt.",
+      "more_title": "Også i platformen"
     },
     "walkthrough": {
+      "subtitle": "ÉT BESØG, FRA START TIL SLUT",
       "title": "Fra planen til dokumentationen",
-      "body": "Holdet åbner appen og ser, hvor de skal hen i dag. Når de checker ind, tager billeder og checker ud, ser kontoret det på besøget. Skærmbillederne på denne side er det system, vi selv driver virksomhed på, vist med opdigtede data.",
+      "steps": [
+        {
+          "title": "Planlagt",
+          "text": "Besøget står på vagtplanen med holdet og den planlagte tid, fordi kundens regler satte det der."
+        },
+        {
+          "title": "Checket ind",
+          "text": "Hver person på holdet checker ind i appen, når de kommer."
+        },
+        {
+          "title": "Fotograferet",
+          "text": "Før- og efterbilleder lander direkte på besøget."
+        },
+        {
+          "title": "Dokumenteret",
+          "text": "Kontoret ser, hvem der var der, hvor længe i forhold til planen, og hvordan det så ud. Når kunden spørger, står svaret på besøget."
+        }
+      ],
       "cta": "Book en demo",
       "image_alt": "Medarbejder-appen på en telefon: de næste besøg med tidspunkt, kunde og hvem der er på holdet"
+    },
+    "why": {
+      "subtitle": "HVORFOR DFMG",
+      "title": "Bygget af en rengøringsvirksomhed, ikke et softwarefirma",
+      "body": "Vi driver vores egen rengøringsvirksomhed på denne platform hver dag. Hver funktion findes, fordi vi selv manglede den en helt almindelig mandag morgen, ikke fordi nogen forestillede sig den. Når I ringer med et spørgsmål, taler I med folk, der bruger de samme skærmbilleder.",
+      "cta": "Mød virksomheden bag"
+    },
+    "security": {
+      "title": "Jeres data, holdt adskilt",
+      "items": [
+        "Hver virksomhed i sit eget databaseskema, dens filer under sin egen nøgle",
+        "Totrinslogin med en godkendelsesapp eller en adgangsnøgle",
+        "Adgang efter stilling: intet, se eller redigere, område for område"
+      ],
+      "link": "Sådan håndterer vi jeres data"
     },
     "comparison": {
       "title": "Stop med at holde ugen sammen i hånden",

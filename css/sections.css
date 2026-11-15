@@ -230,12 +230,6 @@
     margin-bottom: var(--space-md);
 }
 
-.feature__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2xs);
-}
-
 /* ── Trust row: short facts with a tick, centred in a line ──
    No margin of its own: a .stack or the section around it spaces it. */
 .trust-row {

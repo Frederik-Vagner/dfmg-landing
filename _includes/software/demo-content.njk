@@ -7,46 +7,88 @@
         </div>
     </section>
 
-    <!-- Demo form + visual -->
-    <section class="section">
+    <!-- What happens next and how to reach us; the form beside it.
+         This page is also the platform's contact page (contact.html redirects here). -->
+    <section class="section section--light">
         <div class="container">
             <div class="row row--wide row--top">
-                <div class="intro intro--start">
-                    <h2 class="title title--small">{{ t.form.heading }}</h2>
-                    <p class="body intro__text intro__text--tight">{{ t.form.intro }}</p>
+                <div class="stack stack--loose">
+                    <div class="intro intro--start">
+                        <h2 class="title title--small">{{ t.next.title }}</h2>
+                        <ul class="checklist checklist--success checklist--spaced">
+                            {% for step in t.next.steps %}
+                            <li><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> <span><strong>{{ loop.index }}. {{ step.title }}.</strong> {{ step.text }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="intro intro--start">
+                        <h2 class="title title--small">{{ t.details.title }}</h2>
+                        <div class="grid grid--2 grid--tight">
+                            <div class="card">
+                                <h3 class="heading heading--sm"><iconify-icon icon="fluent:mail-20-filled" inline></iconify-icon> {{ t.details.card_email }}</h3>
+                                <p><a href="mailto:{{ site.platformEmail }}">{{ site.platformEmail }}</a></p>
+                            </div>
+                            <div class="card">
+                                <h3 class="heading heading--sm"><iconify-icon icon="fluent:call-20-filled" inline></iconify-icon> {{ t.details.card_phone }}</h3>
+                                <p><a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a></p>
+                            </div>
+                            <div class="card">
+                                <h3 class="heading heading--sm"><iconify-icon icon="fluent:clock-20-filled" inline></iconify-icon> {{ t.details.card_hours }}</h3>
+                                <p>{{ t.details.card_hours_value }}</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="heading heading--sm"><iconify-icon icon="fluent:building-20-filled" inline></iconify-icon> {{ t.details.card_company }}</h3>
+                                <p>{{ site.legalName }}<br>CVR: {{ site.cvr }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="card" id="request">
+                    <h2 class="title title--small">{{ t.form.heading }}</h2>
+                    <p class="body">{{ t.form.intro }}</p>
                     <form class="stacked-form" action="{{ site.formEndpoint if isProduction else '#preview' }}" method="POST">
                         <input type="hidden" name="_subject" value="{{ t.form.email_subject }}">
                         <input type="hidden" name="_next" value="https://dfmg.dk{{ t.formAction }}">
                         <div class="grid grid--2 grid--tight">
                             <div class="form-group">
                                 <label for="demo-name">{{ t.form.label_name }}</label>
-                                <input type="text" id="demo-name" name="name" placeholder="{{ t.form.placeholder_name }}" required>
+                                <input type="text" id="demo-name" name="name" autocomplete="name" placeholder="{{ t.form.placeholder_name }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="demo-company">{{ t.form.label_company }}</label>
-                                <input type="text" id="demo-company" name="company" placeholder="{{ t.form.placeholder_company }}">
+                                <input type="text" id="demo-company" name="company" autocomplete="organization" placeholder="{{ t.form.placeholder_company }}">
                             </div>
                         </div>
                         <div class="grid grid--2 grid--tight">
                             <div class="form-group">
                                 <label for="demo-email">{{ t.form.label_email }}</label>
-                                <input type="email" id="demo-email" name="email" placeholder="{{ t.form.placeholder_email }}" required>
+                                <input type="email" id="demo-email" name="email" autocomplete="email" placeholder="{{ t.form.placeholder_email }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="demo-phone">{{ t.form.label_phone }}</label>
-                                <input type="tel" id="demo-phone" name="phone" placeholder="{{ t.form.placeholder_phone }}">
+                                <input type="tel" id="demo-phone" name="phone" autocomplete="tel" placeholder="{{ t.form.placeholder_phone }}">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="demo-size">{{ t.form.label_size }}</label>
-                            <select id="demo-size" name="size">
-                                <option value="">{{ t.form.option_default }}</option>
-                                <option value="1-5">{{ t.form.option_1_5 }}</option>
-                                <option value="6-15">{{ t.form.option_6_15 }}</option>
-                                <option value="16-50">{{ t.form.option_16_50 }}</option>
-                                <option value="50+">{{ t.form.option_50plus }}</option>
-                            </select>
+                        <div class="grid grid--2 grid--tight">
+                            <div class="form-group">
+                                <label for="demo-size">{{ t.form.label_size }}</label>
+                                <select id="demo-size" name="size">
+                                    <option value="">{{ t.form.option_default }}</option>
+                                    {% for option in t.form.size_options %}
+                                    <option value="{{ option }}">{{ option }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-today">{{ t.form.label_today }}</label>
+                                <select id="demo-today" name="planning_today">
+                                    <option value="">{{ t.form.option_default }}</option>
+                                    {% for option in t.form.today_options %}
+                                    <option value="{{ option }}">{{ option }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="demo-message">{{ t.form.label_message }}</label>
@@ -55,54 +97,8 @@
                         <button type="submit" class="btn btn--success btn--md btn--full">
                             <iconify-icon icon="fluent:calendar-checkmark-20-filled" inline></iconify-icon> {{ t.form.submit }}
                         </button>
+                        <p class="body">{{ t.form.privacy }}</p>
                     </form>
-                </div>
-                <div class="stack">
-                    <!-- TODO: Replace with embedded product video or interactive tour -->
-                    <div class="screenshot-placeholder screenshot-placeholder--light screenshot-placeholder--tall" data-photo-slot="demo-visual" data-photo-status="missing" data-photo-brief="{{ t.visual.placeholder_text | escape }}. {{ t.visual.placeholder_hint | escape }}">
-                        <div>
-                            <iconify-icon icon="fluent:play-circle-20-filled" inline class="screenshot-placeholder__icon"></iconify-icon>
-                            <span>{{ t.visual.placeholder_text }}</span><br>
-                            {# note to self (not rendered): {{ t.visual.placeholder_hint }} #}
-                        </div>
-                    </div>
-
-                    <div class="trust-row">
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.no_commitment }}</div>
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.session_length }}</div>
-                    </div>
-                    <div class="trust-row">
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.danish_support }}</div>
-                        <div class="trust-item"><iconify-icon icon="fluent:checkmark-circle-20-filled" inline></iconify-icon> {{ t.trust.eu_hosting }}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What to expect -->
-    <section class="section section--light">
-        <div class="container">
-            <div class="intro intro--spaced">
-                <div class="subtitle intro__eyebrow intro__eyebrow--primary">{{ t.steps.subtitle }}</div>
-                <div class="title">{{ t.steps.title }}</div>
-            </div>
-
-            <div class="row">
-                <div class="card card--center">
-                    <div class="icon-badge icon-badge--round">1</div>
-                    <div class="card__title">{{ t.steps.step1_title }}</div>
-                    <div class="card__text">{{ t.steps.step1_desc }}</div>
-                </div>
-                <div class="card card--center">
-                    <div class="icon-badge icon-badge--round">2</div>
-                    <div class="card__title">{{ t.steps.step2_title }}</div>
-                    <div class="card__text">{{ t.steps.step2_desc }}</div>
-                </div>
-                <div class="card card--center">
-                    <div class="icon-badge icon-badge--round">3</div>
-                    <div class="card__title">{{ t.steps.step3_title }}</div>
-                    <div class="card__text">{{ t.steps.step3_desc }}</div>
                 </div>
             </div>
         </div>
