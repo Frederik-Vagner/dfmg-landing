@@ -2,15 +2,17 @@
   "en": {
     "hero": {
       "subtitle": "ABOUT",
-      "title": "Built by a service company, for service companies",
-      "body": "DFMG Platform wasn't designed in a vacuum. It was built from the inside — by people who run a cleaning business every day."
+      "title": "Built inside a facility service company that runs on it every day",
+      "body": "DFMG Platform was not designed from the outside. It was built by people who run a facility service company, and it is how we plan, run and prove our own week at our clients' sites."
     },
     "story": {
       "subtitle": "OUR STORY",
       "title": "From spreadsheets to one system",
-      "body1": "DFMG started as a facility service company in Denmark. Like every small service business, we managed schedules in spreadsheets, tracked invoices in one system, payroll in another, and client communication through a mix of email and phone calls.",
-      "body2": "We started building tools to solve our own problems. A task scheduler. A time tracker. One tool led to another, and before we knew it, we had built the system that plans and runs our week: the schedule, the team on site and the proof of every visit.",
-      "body3": "Today, we use DFMG Platform to run our own cleaning business — and we're making it available to other Danish service companies who face the same challenges we did."
+      "body1": "DFMG started as a facility service company in Denmark, with the week in spreadsheets, the team on a group chat and the proof in everyone's own phone.",
+      "body2": "We built a scheduler for ourselves, then the app for the team on site, then the photos and times that prove every visit. One tool led to the next, until our week ran in one system: the office, the employee app and the client portal.",
+      "body3": "Today we run our own facility service company on it, and we offer it to other Danish service companies whose people work at their clients' sites.",
+      "vision_label": "Where we are going:",
+      "vision": "one system to run the whole business."
     },
     "philosophy": {
       "subtitle": "PHILOSOPHY",
@@ -48,15 +50,17 @@
   "da": {
     "hero": {
       "subtitle": "OM OS",
-      "title": "Bygget af en servicevirksomhed, til servicevirksomheder",
-      "body": "DFMG Platform er ikke designet i et vakuum. Det er bygget indefra — af mennesker, der driver en rengøringsvirksomhed hver eneste dag."
+      "title": "Bygget i en facility service-virksomhed, der selv kører på den hver dag",
+      "body": "DFMG Platform er ikke designet udefra. Den er bygget af folk, der driver en facility service-virksomhed, og det er der, vi planlægger, kører og dokumenterer vores egen uge hos vores kunder."
     },
     "story": {
       "subtitle": "VORES HISTORIE",
       "title": "Fra regneark til ét system",
-      "body1": "DFMG startede som en facility service-virksomhed i Danmark. Som enhver lille servicevirksomhed styrede vi vagtplaner i regneark, holdt styr på fakturaer i ét system, løn i et andet, og kundekommunikation via en blanding af e-mail og telefonopkald.",
-      "body2": "Vi begyndte at bygge værktøjer til at løse vores egne udfordringer. En opgaveplanlægger. Et tidsregistreringssystem. Ét værktøj førte til det næste, og inden vi vidste af det, havde vi bygget det system, der planlægger og driver vores uge: vagtplanen, holdet ude hos kunden og dokumentationen af hvert besøg.",
-      "body3": "I dag bruger vi DFMG Platform til at drive vores egen rengøringsvirksomhed — og nu gør vi den tilgængelig for andre danske servicevirksomheder, der står med de samme udfordringer, som vi selv gjorde."
+      "body1": "DFMG startede som en facility service-virksomhed i Danmark, med ugen i regneark, holdet i en gruppechat og dokumentationen i hver enkelts egen telefon.",
+      "body2": "Vi byggede en vagtplan til os selv, derefter appen til holdet ude hos kunden, derefter billederne og tiderne, der dokumenterer hvert besøg. Ét værktøj førte til det næste, indtil vores uge kørte i ét system: kontoret, medarbejder-appen og kundeportalen.",
+      "body3": "I dag driver vi vores egen facility service-virksomhed på den, og vi tilbyder den til andre danske servicevirksomheder, hvis folk arbejder hos deres kunder.",
+      "vision_label": "Hvor vi er på vej hen:",
+      "vision": "ét system til at drive hele virksomheden."
     },
     "philosophy": {
       "subtitle": "FILOSOFI",
